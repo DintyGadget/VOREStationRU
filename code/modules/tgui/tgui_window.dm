@@ -65,9 +65,9 @@
 		for(var/name in mappings)
 			var/url = mappings[name]
 			// Not urlencoding since asset strings are considered safe
-			if(copytext(name, -4) == ".css")
+			if(copytext_char(name, -4) == ".css")
 				inline_styles += "<link rel=\"stylesheet\" type=\"text/css\" href=\"[url]\">\n"
-			else if(copytext(name, -3) == ".js")
+			else if(copytext_char(name, -3) == ".js")
 				inline_scripts += "<script type=\"text/javascript\" defer src=\"[url]\"></script>\n"
 		asset.send()
 	html = replacetextEx(html, "<!-- tgui:styles -->\n", inline_styles)

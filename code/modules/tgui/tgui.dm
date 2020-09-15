@@ -293,9 +293,9 @@
  */
 /datum/tgui/proc/on_message(type, list/payload, list/href_list)
 	// Pass act type messages to tgui_act
-	if(type && copytext(type, 1, 5) == "act/")
+	if(type && copytext_char(type, 1, 5) == "act/")
 		process_status()
-		if(src_object.tgui_act(copytext(type, 5), payload, src, state))
+		if(src_object.tgui_act(copytext_char(type, 5), payload, src, state))
 			SStgui.update_uis(src_object)
 		return FALSE
 	switch(type)

@@ -64,9 +64,9 @@ datum/preferences/proc/set_biological_gender(var/gender)
 
 /datum/category_item/player_setup_item/general/basic/content()
 	. = list()
-	. += "<b>Name:</b> "
+	. += "<b>Имя:</b> "
 	. += "<a href='?src=\ref[src];rename=1'><b>[pref.real_name]</b></a><br>"
-	. += "<a href='?src=\ref[src];random_name=1'>Randomize Name</A><br>"
+	. += "<a href='?src=\ref[src];random_name=1'>Рандом имя</A><br>"
 	. += "<a href='?src=\ref[src];always_random_name=1'>Always Random Name: [pref.be_random_name ? "Yes" : "No"]</a><br>"
 	. += "<b>Nickname:</b> "
 	. += "<a href='?src=\ref[src];nickname=1'><b>[pref.nickname]</b></a>"
