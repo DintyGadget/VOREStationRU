@@ -70,8 +70,8 @@ var/global/datum/controller/subsystem/ticker/ticker
 			post_game_tick()
 
 /datum/controller/subsystem/ticker/proc/pregame_welcome()
-	to_world("<span class='boldannounce notice'><em>Welcome to the pregame lobby!</em></span>")
-	to_world("<span class='boldannounce notice'>Please set up your character and select ready. The round will start in [pregame_timeleft] seconds.</span>")
+	to_world("<span class='boldannounce notice'><em>Добро пожаловать в предыгровое лобби!</em></span>")
+	to_world("<span class='boldannounce notice'>Пожалуйста, настройте своего персонажа и выберите \"Готов\". Раунд начнется через [pregame_timeleft] секунд.</span>")
 	world << sound('sound/misc/server-ready.ogg', volume = 100)
 
 // Called during GAME_STATE_PREGAME (RUNLEVEL_LOBBY)
@@ -148,14 +148,14 @@ var/global/datum/controller/subsystem/ticker/ticker
 		return 0
 
 	if(hide_mode)
-		to_world("<span class='notice'><B>The current game mode is - Secret!</B></span>")
+		to_world("<span class='notice'><B>Текущий режим игры - Секретный!</B></span>")
 		if(runnable_modes.len)
 			var/list/tmpmodes = new
 			for (var/datum/game_mode/M in runnable_modes)
 				tmpmodes+=M.name
 			tmpmodes = sortList(tmpmodes)
 			if(tmpmodes.len)
-				to_world("<span class='info'><B>Possibilities:</B> [english_list(tmpmodes, and_text= "; ", comma_text = "; ")]</span>")
+				to_world("<span class='info'><B>Возможно:</B> [english_list(tmpmodes, and_text= "; ", comma_text = "; ")]</span>")
 	else
 		src.mode.announce()
 	return 1
@@ -177,14 +177,14 @@ var/global/datum/controller/subsystem/ticker/ticker
 			//Deleting Startpoints but we need the ai point to AI-ize people later
 			if (S.name != "AI")
 				qdel(S)
-		to_world("<span class='boldannounce notice'><em>Enjoy the game!</em></span>")
+		to_world("<span class='boldannounce notice'><em>Приятной игры!</em></span>")
 		world << sound('sound/AI/welcome.ogg') // Skie
 		//Holiday Round-start stuff	~Carn
 		Holiday_Game_Start()
 
 	var/list/adm = get_admin_counts()
 	if(adm["total"] == 0)
-		send2adminirc("A round has started with no admins online.")
+		send2adminirc("Раунд начался без администраторов.")
 
 /*	supply_controller.process() 		//Start the supply shuttle regenerating points -- TLE // handled in scheduler
 	master_controller.process()		//Start master_controller.process()
@@ -226,7 +226,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 		end_game_state = END_GAME_MODE_FINISHED // Only do this cleanup once!
 		mode.cleanup()
 		//call a transfer shuttle vote
-		to_world("<span class='danger'>The round has ended!</span>")
+		to_world("<span class='danger'>Раунд окончен!</span>")
 		SSvote.autotransfer()
 
 // Called during GAME_STATE_FINISHED (RUNLEVEL_POSTGAME)
@@ -253,7 +253,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 		if(END_GAME_ENDING)
 			restart_timeleft -= (world.time - last_fire)
 			if(delay_end)
-				to_world("<span class='notice'><b>An admin has delayed the round end.</b></span>")
+				to_world("<span class='notice'><b>Администратор отложил завершение раунда.</b></span>")
 				end_game_state = END_GAME_DELAYED
 			else if(restart_timeleft <= 0)
 				to_world("<span class='warning'><b>Restarting world!</b></span>")
@@ -439,7 +439,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	if(captainless)
 		for(var/mob/M in player_list)
 			if(!istype(M,/mob/new_player))
-				to_chat(M, "<span class='notice'>Site Management is not forced on anyone.</span>")
+				to_chat(M, "<span class='notice'>Директор на данный момент отсутствует.</span>")
 
 
 /datum/controller/subsystem/ticker/proc/declare_completion()
@@ -450,22 +450,22 @@ var/global/datum/controller/subsystem/ticker/ticker
 				var/turf/playerTurf = get_turf(Player)
 				if(emergency_shuttle.departed && emergency_shuttle.evac)
 					if(isNotAdminLevel(playerTurf.z))
-						to_chat(Player, "<span class='filter_system'><font color='blue'><b>You survived the round, but remained on [station_name()] as [Player.real_name].</b></font></span>")
+						to_chat(Player, "<span class='filter_system'><font color='blue'><b>Вы выжили, но остались на [station_name()] будучи [Player.real_name].</b></font></span>")
 					else
-						to_chat(Player, "<span class='filter_system'><font color='green'><b>You managed to survive the events on [station_name()] as [Player.real_name].</b></font></span>")
+						to_chat(Player, "<span class='filter_system'><font color='green'><b>Вам удалось пережить события на [station_name()] будучи [Player.real_name].</b></font></span>")
 				else if(isAdminLevel(playerTurf.z))
-					to_chat(Player, "<span class='filter_system'><font color='green'><b>You successfully underwent crew transfer after events on [station_name()] as [Player.real_name].</b></font></span>")
+					to_chat(Player, "<span class='filter_system'><font color='green'><b>Вы успешно пережили эвакуацию экипажа после событий на [station_name()] будучи [Player.real_name].</b></font></span>")
 				else if(issilicon(Player))
-					to_chat(Player, "<span class='filter_system'><font color='green'><b>You remain operational after the events on [station_name()] as [Player.real_name].</b></font></span>")
+					to_chat(Player, "<span class='filter_system'><font color='green'><b>Вы остались целым после событий на [station_name()] будучи [Player.real_name].</b></font></span>")
 				else
-					to_chat(Player, "<span class='filter_system'><font color='blue'><b>You missed the crew transfer after the events on [station_name()] as [Player.real_name].</b></font></span>")
+					to_chat(Player, "<span class='filter_system'><font color='blue'><b>Вы пропустили эвакуацию экипажа после событий на [station_name()] будучи [Player.real_name].</b></font></span>")
 			else
 				if(istype(Player,/mob/observer/dead))
 					var/mob/observer/dead/O = Player
 					if(!O.started_as_observer)
-						to_chat(Player, "<span class='filter_system'><font color='red'><b>You did not survive the events on [station_name()]...</b></font></span>")
+						to_chat(Player, "<span class='filter_system'><font color='red'><b>Вы не пережили события на [station_name()]...</b></font></span>")
 				else
-					to_chat(Player, "<span class='filter_system'><font color='red'><b>You did not survive the events on [station_name()]...</b></font></span>")
+					to_chat(Player, "<span class='filter_system'><font color='red'><b>Вы не пережили события на [station_name()]...</b></font></span>")
 	to_world("<br>")
 
 	for (var/mob/living/silicon/ai/aiPlayer in mob_list)
@@ -476,7 +476,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 		aiPlayer.show_laws(1)
 
 		if (aiPlayer.connected_robots.len)
-			var/robolist = "<b>The AI's loyal minions were:</b> "
+			var/robolist = "<b>Верными приспешниками ИИ были:</b> "
 			for(var/mob/living/silicon/robot/robo in aiPlayer.connected_robots)
 				robolist += "[robo.name][robo.stat?" (Deactivated) (Played by: [robo.key]), ":" (Played by: [robo.key]), "]"
 			to_world("<span class='filter_system'>[robolist]</span>")

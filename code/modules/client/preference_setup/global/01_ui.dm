@@ -41,10 +41,10 @@
 /datum/category_item/player_setup_item/player_global/ui/content(var/mob/user)
 	. = "<b>UI Style:</b> <a href='?src=\ref[src];select_style=1'><b>[pref.UI_style]</b></a><br>"
 	. += "<b>Custom UI</b> (recommended for White UI):<br>"
-	. += "-Color: <a href='?src=\ref[src];select_color=1'><b>[pref.UI_style_color]</b></a>�[color_square(hex = pref.UI_style_color)]�<a href='?src=\ref[src];reset=ui'>reset</a><br>"
-	. += "-Alpha(transparency): <a href='?src=\ref[src];select_alpha=1'><b>[pref.UI_style_alpha]</b></a>�<a href='?src=\ref[src];reset=alpha'>reset</a><br>"
+	. += "-Цвет: <a href='?src=\ref[src];select_color=1'><b>[pref.UI_style_color]</b></a> [color_square(hex = pref.UI_style_color)] <a href='?src=\ref[src];reset=ui'>сброс</a><br>"
+	. += "-Alpha(transparency): <a href='?src=\ref[src];select_alpha=1'><b>[pref.UI_style_alpha]</b></a> <a href='?src=\ref[src];reset=alpha'>сброс</a><br>"
 	. += "<b>Tooltip Style:</b> <a href='?src=\ref[src];select_tooltip_style=1'><b>[pref.tooltipstyle]</b></a><br>"
-	. += "<b>Client FPS:</b> <a href='?src=\ref[src];select_client_fps=1'><b>[pref.client_fps]</b></a><br>"
+	. += "<b>Клиент FPS:</b> <a href='?src=\ref[src];select_client_fps=1'><b>[pref.client_fps]</b></a><br>"
 	. += "<b>Random Ambience Frequency:</b> <a href='?src=\ref[src];select_ambience_freq=1'><b>[pref.ambience_freq]</b></a><br>"
 	. += "<b>Ambience Chance:</b> <a href='?src=\ref[src];select_ambience_chance=1'><b>[pref.ambience_chance]</b></a><br>"
 	. += "<b>tgui Window Mode:</b> <a href='?src=\ref[src];tgui_fancy=1'><b>[(pref.tgui_fancy) ? "Fancy (default)" : "Compatible (slower)"]</b></a><br>"
@@ -95,14 +95,14 @@
 		if(pref.client)
 			pref.client.fps = fps_new
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["select_ambience_freq"])
 		var/ambience_new = input(user, "Input how often you wish to hear ambience repeated! (1-60 MINUTES, 0 for disabled)", "Global Preference", pref.ambience_freq) as null|num
 		if(isnull(ambience_new) || !CanUseTopic(user)) return TOPIC_NOACTION
 		if(ambience_new < 0 || ambience_new > 60) return TOPIC_NOACTION
 		pref.ambience_freq = ambience_new
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["select_ambience_chance"])
 		var/ambience_chance_new = input(user, "Input the chance you'd like to hear ambience played to you (On area change, or by random ambience). 35 means a 35% chance to play ambience. This is a range from 0-100. 0 disables ambience playing entirely. This is also affected by Ambience Frequency.", "Global Preference", pref.ambience_freq) as null|num
 		if(isnull(ambience_chance_new) || !CanUseTopic(user)) return TOPIC_NOACTION
@@ -113,7 +113,7 @@
 	else if(href_list["tgui_fancy"])
 		pref.tgui_fancy = !pref.tgui_fancy
 		return TOPIC_REFRESH
-		
+
 	else if(href_list["tgui_lock"])
 		pref.tgui_lock = !pref.tgui_lock
 		return TOPIC_REFRESH

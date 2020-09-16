@@ -75,7 +75,7 @@
 
 	. = list()
 	. += "<tt><center>"
-	. += "<b>Choose occupation chances</b><br>Unavailable occupations are crossed out.<br>"
+	. += "<b>Вы берите интересующую вас профессию, назначив уровень важности</b><br>Недоступные профессии перечеркнуты.<br>"
 	. += "<script type='text/javascript'>function setJobPrefRedirect(level, rank) { window.location.href='?src=\ref[src];level=' + level + ';set_job=' + encodeURIComponent(rank); return false; }</script>"
 	. += "<table width='100%' cellpadding='1' cellspacing='0'><tr><td width='20%' valign='top'>" // Table within a table for alignment, also allows you to easily add more columns.
 	. += "<table width='100%' cellpadding='1' cellspacing='0'>"
@@ -138,7 +138,7 @@
 		lastJob = job
 		. += "<a href='?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
-			. += "<del>[rank]</del></td></a><td><b> \[BANNED]</b></td></tr>"
+			. += "<del>[rank]</del></td></a><td><b> \[БЛОК]</b></td></tr>"
 			continue
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
@@ -151,7 +151,7 @@
 			continue
 		//VOREStation Add End
 		if(job.minimum_character_age && user.client && (user.client.prefs.age < job.minimum_character_age))
-			. += "<del>[rank]</del></td></a><td> \[MINIMUM CHARACTER AGE: [job.minimum_character_age]]</td></tr>"
+			. += "<del>[rank]</del></td></a><td> \[МИНИМАЛЬНЫЙ ВОЗРАСТ: [job.minimum_character_age]]</td></tr>"
 			continue
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
 			. += "<font color=grey>[rank]</font></a></td><td></td></tr>"
@@ -163,27 +163,27 @@
 
 		. += "</td><td width='40%'>"
 
-		var/prefLevelLabel = "ERROR"
+		var/prefLevelLabel = "ОШИБКА"
 		var/prefLevelColor = "pink"
 		var/prefUpperLevel = -1 // level to assign on left click
 		var/prefLowerLevel = -1 // level to assign on right click
 		if(pref.GetJobDepartment(job, 1) & job.flag)
-			prefLevelLabel = "High"
+			prefLevelLabel = "Выс."
 			prefLevelColor = "55cc55"
 			prefUpperLevel = 4
 			prefLowerLevel = 2
 		else if(pref.GetJobDepartment(job, 2) & job.flag)
-			prefLevelLabel = "Medium"
+			prefLevelLabel = "Сред."
 			prefLevelColor = "eecc22"
 			prefUpperLevel = 1
 			prefLowerLevel = 3
 		else if(pref.GetJobDepartment(job, 3) & job.flag)
-			prefLevelLabel = "Low"
+			prefLevelLabel = "Низ."
 			prefLevelColor = "cc5555"
 			prefUpperLevel = 2
 			prefLowerLevel = 4
 		else
-			prefLevelLabel = "NEVER"
+			prefLevelLabel = "Никогда"
 			prefLevelColor = "black"
 			prefUpperLevel = 3
 			prefLowerLevel = 1
@@ -192,9 +192,9 @@
 
 		if(job.type == /datum/job/assistant)//Assistant is special
 			if(pref.job_civilian_low & ASSISTANT)
-				. += " <font color=55cc55>\[Yes]</font>"
+				. += " <font color=55cc55>\[Да]</font>"
 			else
-				. += " <font color=black>\[No]</font>"
+				. += " <font color=black>\[Нет]</font>"
 			if(LAZYLEN(job.alt_titles)) //Blatantly cloned from a few lines down.
 				. += "</a></td></tr><tr bgcolor='[lastJob.selection_color]'><td width='60%' align='center'>&nbsp</td><td><a href='?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"
 			. += "</a></td></tr>"
@@ -209,11 +209,11 @@
 
 	switch(pref.alternate_option)
 		if(GET_RANDOM_JOB)
-			. += "<u><a href='?src=\ref[src];job_alternative=1'>Get random job if preferences unavailable</a></u>"
+			. += "<u><a href='?src=\ref[src];job_alternative=1'>Получить случайную работу, если профессии недоступны.</a></u>"
 		if(BE_ASSISTANT)
-			. += "<u><a href='?src=\ref[src];job_alternative=1'>Be assistant if preference unavailable</a></u>"
+			. += "<u><a href='?src=\ref[src];job_alternative=1'>Стать ассистентом, если профессии недоступны</a></u>"
 		if(RETURN_TO_LOBBY)
-			. += "<u><a href='?src=\ref[src];job_alternative=1'>Return to lobby if preference unavailable</a></u>"
+			. += "<u><a href='?src=\ref[src];job_alternative=1'>Вернуться в лобби, если профессии недоступны</a></u>"
 
 	. += "<a href='?src=\ref[src];reset_jobs=1'>\[Reset\]</a></center>"
 	. += "</tt>"
@@ -235,7 +235,7 @@
 		var/datum/job/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
-			var/choice = input("Choose a title for [job.title].", "Choose Title", pref.GetPlayerAltTitle(job)) as anything in choices|null
+			var/choice = input("Выберите подтип для [job.title].", "Choose Title", pref.GetPlayerAltTitle(job)) as anything in choices|null
 			if(choice && CanUseTopic(user))
 				SetPlayerAltTitle(job, choice)
 				return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
@@ -251,19 +251,19 @@
 
 		dat += "<p style='background-color: [job.selection_color]'><br><br><p>"
 		if(job.alt_titles)
-			dat += "<i><b>Alternate titles:</b> [english_list(job.alt_titles)].</i>"
+			dat += "<i><b>Другое название:</b> [english_list(job.alt_titles)].</i>"
 		send_rsc(user, job.get_job_icon(), "job[ckey(rank)].png")
 		dat += "<img src=job[ckey(rank)].png width=96 height=96 style='float:left;'>"
 		if(job.departments)
-			dat += "<b>Departments:</b> [english_list(job.departments)]."
+			dat += "<b>Департамент:</b> [english_list(job.departments)]."
 			if(LAZYLEN(job.departments_managed))
-				dat += "You manage these departments: [english_list(job.departments_managed)]"
+				dat += "Вы руководите отделом: [english_list(job.departments_managed)]"
 
-		dat += "You answer to <b>[job.supervisors]</b> normally."
+		dat += "Вы отвечаете перед <b>[job.supervisors]</b> всегда."
 
 		dat += "<hr style='clear:left;'>"
 		if(config.wikiurl)
-			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Open wiki page in browser</a>"
+			dat += "<a href='?src=\ref[src];job_wiki=[rank]'>Открыть вики</a>"
 
 		var/alt_title = pref.GetPlayerAltTitle(job)
 		var/list/description = job.get_description_blurb(alt_title)

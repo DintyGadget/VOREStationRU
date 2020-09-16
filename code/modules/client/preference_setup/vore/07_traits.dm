@@ -101,12 +101,12 @@
 			log_game("TRAITS [pref.client_ckey]/([character]) with: [english_traits]") //Terrible 'fake' key_name()... but they aren't in the same entity yet
 
 /datum/category_item/player_setup_item/vore/traits/content(var/mob/user)
-	. += "<b>Custom Species Name:</b> "
-	. += "<a href='?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Input Name-"]</a><br>"
+	. += "<b>Имя кастомной расы:</b> "
+	. += "<a href='?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Введите название-"]</a><br>"
 
 	var/datum/species/selected_species = GLOB.all_species[pref.species]
 	if(selected_species.selects_bodytype)
-		. += "<b>Icon Base: </b> "
+		. += "<b>Иконка для отображениея: </b> "
 		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	if(pref.species == SPECIES_CUSTOM)
@@ -116,34 +116,34 @@
 			points_left -= traits_costs[T]
 			traits_left--
 
-		. += "<b>Points Left:</b> [points_left]<br>"
-		. += "<b>Traits Left:</b> [traits_left]<br>"
+		. += "<b>Осталось очков:</b> [points_left]<br>"
+		. += "<b>Черт осталось:</b> [traits_left]<br>"
 		if(points_left < 0 || traits_left < 0 || !pref.custom_species)
-			. += "<span style='color:red;'><b>^ Fix things! ^</b></span><br>"
+			. += "<span style='color:red;'><b>^ Требуется исправление! ^</b></span><br>"
 
-		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Positive Trait +</a><br>"
+		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Позитивные черты +</a><br>"
 		. += "<ul>"
 		for(var/T in pref.pos_traits)
 			var/datum/trait/trait = positive_traits[T]
 			. += "<li>- <a href='?src=\ref[src];clicked_pos_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 		. += "</ul>"
 
-		. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Neutral Trait +</a><br>"
+		. += "<a href='?src=\ref[src];add_trait=[NEUTRAL_MODE]'>Нейтральные черты +</a><br>"
 		. += "<ul>"
 		for(var/T in pref.neu_traits)
 			var/datum/trait/trait = neutral_traits[T]
 			. += "<li>- <a href='?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 		. += "</ul>"
 
-		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Negative Trait +</a><br>"
+		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Негативные черты +</a><br>"
 		. += "<ul>"
 		for(var/T in pref.neg_traits)
 			var/datum/trait/trait = negative_traits[T]
 			. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 		. += "</ul>"
 	. += "<b>Blood Color: </b>" //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
-	. += "<a href='?src=\ref[src];blood_color=1'>Set Color</a>"
-	. += "<a href='?src=\ref[src];blood_reset=1'>R</a><br>"
+	. += "<a href='?src=\ref[src];blood_color=1'>Изм</a>"
+	. += "<a href='?src=\ref[src];blood_reset=1'>Сбрс</a><br>"
 
 /datum/category_item/player_setup_item/vore/traits/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(!CanUseTopic(user))
@@ -156,8 +156,8 @@
 			Trait system was implemented. If you wish to change it, set your species to 'Custom Species' and configure \
 			the species completely.")
 			return TOPIC_REFRESH*/ //There was no reason to have this.
-		var/raw_choice = sanitize(input(user, "Input your custom species name:",
-			"Character Preference", pref.custom_species) as null|text, MAX_NAME_LEN)
+		var/raw_choice = sanitize(input(user, "Введите свое собственное название расы:",
+			"Настройка персонажа", pref.custom_species) as null|text, MAX_NAME_LEN)
 		if (CanUseTopic(user))
 			pref.custom_species = raw_choice
 		return TOPIC_REFRESH
@@ -166,41 +166,41 @@
 		var/list/choices = custom_species_bases
 		if(pref.species != SPECIES_CUSTOM)
 			choices = (choices | pref.species)
-		var/text_choice = input("Pick an icon set for your species:","Icon Base") in choices
+		var/text_choice = input("Выберите иконку для вашего вида:","Icon Base") in choices
 		if(text_choice in choices)
 			pref.custom_base = text_choice
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["blood_color"])
-		var/color_choice = input("Pick a blood color (does not apply to synths)","Blood Color",pref.blood_color) as color
+		var/color_choice = input("Выберите цвет крови (не относится к синтам)","Blood Color",pref.blood_color) as color
 		if(color_choice)
 			pref.blood_color = sanitize_hexcolor(color_choice, default="#A10808")
 		return TOPIC_REFRESH
 
 	else if(href_list["blood_reset"])
-		var/choice = alert("Reset blood color to human default (#A10808)?","Reset Blood Color","Reset","Cancel")
-		if(choice == "Reset")
+		var/choice = alert("Сбросить цвет крови до человеческого значения по умолчанию (#A10808)?","Сброс цвета крови","Сброс","Отмена")
+		if(choice == "Сброс")
 			pref.blood_color = "#A10808"
 		return TOPIC_REFRESH
 
 	else if(href_list["clicked_pos_trait"])
 		var/datum/trait/trait = text2path(href_list["clicked_pos_trait"])
-		var/choice = alert("Remove [initial(trait.name)] and regain [initial(trait.cost)] points?","Remove Trait","Remove","Cancel")
-		if(choice == "Remove")
+		var/choice = alert("Убрать [initial(trait.name)] и вернуть [initial(trait.cost)] очков?","Удалить черту","Удалить","Отмена")
+		if(choice == "Удалить")
 			pref.pos_traits -= trait
 		return TOPIC_REFRESH
 
 	else if(href_list["clicked_neu_trait"])
 		var/datum/trait/trait = text2path(href_list["clicked_neu_trait"])
-		var/choice = alert("Remove [initial(trait.name)]?","Remove Trait","Remove","Cancel")
-		if(choice == "Remove")
+		var/choice = alert("Удалить [initial(trait.name)]?","Удалить черту","Удалить","Отмена")
+		if(choice == "Удалить")
 			pref.neu_traits -= trait
 		return TOPIC_REFRESH
 
 	else if(href_list["clicked_neg_trait"])
 		var/datum/trait/trait = text2path(href_list["clicked_neg_trait"])
-		var/choice = alert("Remove [initial(trait.name)] and lose [initial(trait.cost)] points?","Remove Trait","Remove","Cancel")
-		if(choice == "Remove")
+		var/choice = alert("Убрать [initial(trait.name)] и потерять [initial(trait.cost)] очков?","Удалить черту","Удалить","Отмена")
+		if(choice == "Удалить")
 			pref.neg_traits -= trait
 		return TOPIC_REFRESH
 
@@ -240,16 +240,16 @@
 		var/trait_choice
 		var/done = FALSE
 		while(!done)
-			var/message = "\[Remaining: [points_left] points, [traits_left] traits\] Select a trait to read the description and see the cost."
+			var/message = "\[Осталось: [points_left] очков, [traits_left] черт] Выберите черту, чтобы прочитать описание и посмотреть стоимость."
 			trait_choice = input(message,"Trait List") as null|anything in nicelist
 			if(!trait_choice)
 				done = TRUE
 			if(trait_choice in nicelist)
 				var/datum/trait/path = nicelist[trait_choice]
-				var/choice = alert("\[Cost:[initial(path.cost)]\] [initial(path.desc)]",initial(path.name),"Take Trait","Cancel","Go Back")
-				if(choice == "Cancel")
+				var/choice = alert("\[Цена:[initial(path.cost)]\] [initial(path.desc)]",initial(path.name),"Взять черту","Отмена","Назад")
+				if(choice == "Отмена")
 					trait_choice = null
-				if(choice != "Go Back")
+				if(choice != "Назад")
 					done = TRUE
 
 		if(!trait_choice)
@@ -284,8 +284,8 @@
 							break varconflict
 
 			if(conflict)
-				alert("You cannot take this trait and [conflict] at the same time. \
-				Please remove that trait, or pick another trait to add.","Error")
+				alert("Вы не можете взять эту черту и [conflict] одновременно. \
+				Пожалуйста, удалите эту черту или выберите другую черту, чтобы добавить ее.","Error")
 				return TOPIC_REFRESH
 
 			mylist += path

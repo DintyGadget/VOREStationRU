@@ -4,16 +4,11 @@
 	set desc = "Type what you want to know about.  This will open the wiki on your web browser."
 	set category = "OOC"
 	if(config.wikiurl)
-		if(query)
-			if(config.wikisearchurl)
-				var/output = replacetext(config.wikisearchurl, "%s", url_encode(query))
-				src << link(output)
-			else
-				to_chat(src, "<span class='warning'> The wiki search URL is not set in the server configuration.</span>")
-		else
-			src << link(config.wikiurl)
+		if(alert("Это действите откроет Вики сервера в вашем браузере. Вы уверены, что хотите продолжить?",,"Да","Нет")=="Нет")
+			return
+		src << link(config.wikiurl)
 	else
-		to_chat(src, "<span class='warning'>The wiki URL is not set in the server configuration.</span>")
+		to_chat(src, "<span class='warning'>URL Вики не задан в конфигурации сервера.</span>")
 		return
 
 /client/verb/forum()
@@ -28,20 +23,27 @@
 		to_chat(src, "<span class='warning'>The forum URL is not set in the server configuration.</span>")
 		return
 
+/client/verb/discordurl()
+	set name = "discordurl"
+	set desc = "Посетить сервер Discord."
+	set hidden = 1
+	if( config.discordurl )
+		if(alert("Данное действие откроет приглашение на сервер Discord XenosStation в вашем браузере. Вы уверены, что хотите продолжить?",,"Да","Нет")=="Нет")
+			return
+		src << link(config.discordurl)
+	else
+		to_chat(src, "<span class='warning'>Сервер Discord не задан в конфигурации.</span>")
+		return
+
+#define RULES_FILE "config/rules.html"
 /client/verb/rules()
 	set name = "Rules"
-	set desc = "Show Server Rules."
+	set desc = "Показать правила сервера."
 	set hidden = 1
+	show_browser(src, file(RULES_FILE), "window=rules;size=1270x720")
+#undef RULES_FILE
 
-	if(config.rulesurl)
-		if(alert("This will open the rules in your browser. Are you sure?",,"Yes","No")=="No")
-			return
-		src << link(config.rulesurl)
-	else
-		to_chat(src, "<span class='danger'>The rules URL is not set in the server configuration.</span>")
-	return
-
-/client/verb/map()
+/*/client/verb/map()
 	set name = "Map"
 	set desc = "See the map."
 	set hidden = 1
@@ -53,6 +55,7 @@
 	else
 		to_chat(src, "<span class='danger'>The map URL is not set in the server configuration.</span>")
 	return
+	*/
 
 /client/verb/github()
 	set name = "GitHub"
@@ -60,11 +63,11 @@
 	set hidden = 1
 
 	if(config.githuburl)
-		if(alert("This will open the GitHub in your browser. Are you sure?",,"Yes","No")=="No")
+		if(alert("Это действие откроет GitHub в вашем браузере. Вы уверены?",,"Да","Нет")=="Нет")
 			return
 		src << link(config.githuburl)
 	else
-		to_chat(src, "<span class='danger'>The GitHub URL is not set in the server configuration.</span>")
+		to_chat(src, "<span class='danger'>URL-адрес GitHub не задан в конфигурации сервера.</span>")
 	return
 
 /client/verb/hotkeys_help()
@@ -72,7 +75,7 @@
 	set category = "OOC"
 
 	var/admin = {"<font color='purple'>
-Admin:
+Админ:
 \tF5 = Aghost (admin-ghost)
 \tF6 = player-panel-new
 \tF7 = admin-pm
@@ -80,28 +83,28 @@ Admin:
 </font>"}
 
 	var/hotkey_mode = {"<font color='purple'>
-Hotkey-Mode: (hotkey-mode must be on)
-\tTAB = toggle hotkey-mode
-\ta = left
-\ts = down
-\td = right
-\tw = up
-\tq = drop
-\te = equip
-\tr = throw
-\tt = say
-\t5 = emote
-\tx = swap-hand
-\tz = activate held object (or y)
-\tj = toggle-aiming-mode
+Режим Хоткей: (когда хоткей включен)
+\tTAB = включение режима хоткей (при запуске на англ раскладке. иначе не будет работать)
+\ta = влево
+\ts = назад
+\td = вправо
+\tw = вперед
+\tq = бросить
+\te = снарядить
+\tr = кинуть
+\tt = сказать
+\t5 = эмоция
+\tx = сменить руку
+\tz = активировать удерживаемый объект (или Y)
+\tj = переключить режим прицеливания
 \tf = cycle-intents-left
 \tg = cycle-intents-right
-\t1 = help-intent
-\t2 = disarm-intent
-\t3 = grab-intent
-\t4 = harm-intent
-\tCtrl+Click = pull
-\tShift+Click = examine
+\t1 = режим помощи
+\t2 = режим разоружения
+\t3 = режим захвата
+\t4 = режим вреда
+\tCtrl+ЛКМ = тащить
+\tShift+ЛКМ = изучить
 </font>"}
 
 	var/other = {"<font color='purple'>
@@ -134,25 +137,25 @@ Any-Mode: (hotkey doesn't need to be on)
 </font>"}
 
 	var/robot_hotkey_mode = {"<font color='purple'>
-Hotkey-Mode: (hotkey-mode must be on)
-\tTAB = toggle hotkey-mode
-\ta = left
-\ts = down
-\td = right
-\tw = up
-\tq = unequip active module
-\tt = say
-\tx = cycle active modules
-\tz = activate held object (or y)
+Режим Хоткей: (когда хоткей включен)
+\tTAB = включение режима хоткей (при запуске на англ раскладке. иначе не будет работать)
+\ta = влево
+\ts = назад
+\td = вправо
+\tw = вперед
+\tq = убрать активный модуль
+\tt = сказать
+\tx = сменить активный модуль
+\tz = активировать удерживаемый объект (или Y)
 \tf = cycle-intents-left
 \tg = cycle-intents-right
-\t1 = activate module 1
-\t2 = activate module 2
-\t3 = activate module 3
-\t4 = toggle intents
-\t5 = emote
-\tCtrl+Click = pull
-\tShift+Click = examine
+\t1 = включить модуль 1
+\t2 = включить модуль 2
+\t3 = включить модуль 3
+\t4 = переключение режима
+\t5 = эмоции
+\tCtrl+ЛКМ = тащить
+\tShift+ЛКМ = изучить
 </font>"}
 
 	var/robot_other = {"<font color='purple'>
