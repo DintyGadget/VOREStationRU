@@ -192,11 +192,11 @@ SUBSYSTEM_DEF(supply)
 		if(!SP.contraband)
 			slip = new /obj/item/weapon/paper/manifest(A)
 			slip.is_copy = 0
-			slip.info = "<h3>[command_name()] Shipping Manifest</h3><hr><br>"
-			slip.info +="Order #[SO.ordernum]<br>"
-			slip.info +="Destination: [station_name()]<br>"
-			slip.info +="[orderedamount] PACKAGES IN THIS SHIPMENT<br>"
-			slip.info +="CONTENTS:<br><ul>"
+			slip.info = "<meta charset=\"UTF-8\"><h3>Путевой Лист [command_name()]</h3><hr><br>"
+			slip.info +="Номер заказа #[SO.ordernum]<br>"
+			slip.info +="Пункт назначения: [station_name()]<br>"
+			slip.info +="[orderedamount] УПАКОВАНО В ЭТОЙ ПАРТИИ<br>"
+			slip.info +="СОДЕРЖИМОЕ:<br><ul>"
 
 		//spawn the stuff, finish generating the manifest while you're at it
 		if(SP.access)
@@ -235,7 +235,7 @@ SUBSYSTEM_DEF(supply)
 		//manifest finalisation
 		if(slip)
 			slip.info += "</ul><br>"
-			slip.info += "CHECK CONTENTS AND STAMP BELOW THE LINE TO CONFIRM RECEIPT OF GOODS<hr>"
+			slip.info += "ПРОВЕРЬТЕ СОДЕРЖИМОЕ И ПОСТАВЬТЕ ШТАМП ПОД СТРОКОЙ, ЧТОБЫ ПОДТВЕРДИТЬ ПОЛУЧЕНИЕ ТОВАРА.<hr>"
 
 	log_game(shopping_log)
 	return
@@ -308,8 +308,8 @@ SUBSYSTEM_DEF(supply)
 // Will delete the specified order from the user-side list
 /datum/controller/subsystem/supply/proc/delete_order(var/datum/supply_order/O, var/mob/user)
 	// Making sure they know what they're doing
-	if(alert(user, "Are you sure you want to delete this record? If it has been approved, cargo points will NOT be refunded!", "Delete Record","No","Yes") == "Yes")
-		if(alert(user, "Are you really sure? There is no way to recover the order once deleted.", "Delete Record", "No", "Yes") == "Yes")
+	if(alert(user, "Вы уверены, что хотите удалить эту запись? Если он был одобрен, то очки поставок не будут возвращены!", "Delete Record","Нет","Да") == "Да")
+		if(alert(user, "Вы действительно уверены? Способа восстановить заказ после удаления нет.", "Delete Record", "Нет", "Да") == "Да")
 			log_admin("[key_name(user)] has deleted supply order \ref[O] [O] from the user-side order history.")
 			order_history -= O
 	return
@@ -352,23 +352,23 @@ SUBSYSTEM_DEF(supply)
 // Will delete the specified export receipt from the user-side list
 /datum/controller/subsystem/supply/proc/delete_export(var/datum/exported_crate/E, var/mob/user)
 	// Making sure they know what they're doing
-	if(alert(user, "Are you sure you want to delete this record?", "Delete Record","No","Yes") == "Yes")
-		if(alert(user, "Are you really sure? There is no way to recover the receipt once deleted.", "Delete Record", "No", "Yes") == "Yes")
+	if(alert(user, "Вы уверены, что хотите удалить эту запись?", "Delete Record","Нет","Да") == "Да")
+		if(alert(user, "Вы действительно уверены? Способа восстановить квитанцию после удаления нет.", "Delete Record", "Нет", "Да") == "Да")
 			log_admin("[key_name(user)] has deleted export receipt \ref[E] [E] from the user-side export history.")
 			exported_crates -= E
 	return
 
 // Will add an item entry to the specified export receipt on the user-side list
 /datum/controller/subsystem/supply/proc/add_export_item(var/datum/exported_crate/E, var/mob/user)
-	var/new_name = input(user, "Name", "Please enter the name of the item.") as null|text
+	var/new_name = input(user, "Name", "Пожалуйста, введите название товара.") as null|text
 	if(!new_name)
 		return
 
-	var/new_quantity = input(user, "Name", "Please enter the quantity of the item.") as null|num
+	var/new_quantity = input(user, "Name", "Пожалуйста, введите количество товара.") as null|num
 	if(!new_quantity)
 		return
 
-	var/new_value = input(user, "Name", "Please enter the value of the item.") as null|num
+	var/new_value = input(user, "Name", "Пожалуйста, введите стоимость товара.") as null|num
 	if(!new_value)
 		return
 

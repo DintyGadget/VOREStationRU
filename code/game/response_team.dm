@@ -9,7 +9,7 @@ var/silent_ert = 0
 
 /client/proc/response_team()
 	set name = "Dispatch Emergency Response Team"
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set desc = "Send an emergency response team to the station"
 
 	if(!holder)

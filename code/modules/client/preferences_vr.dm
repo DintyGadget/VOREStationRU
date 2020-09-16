@@ -9,7 +9,7 @@
 //Why weren't these in game toggles already?
 /client/verb/toggle_eating_noises()
 	set name = "Eating Noises"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles Vore Eating noises."
 
 	var/pref_path = /datum/client_preference/eating_noises
@@ -25,7 +25,7 @@
 
 /client/verb/toggle_digestion_noises()
 	set name = "Digestion Noises"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles Vore Digestion noises."
 
 	var/pref_path = /datum/client_preference/digestion_noises
@@ -41,7 +41,7 @@
 
 /client/verb/toggle_emote_noises()
 	set name = "Emote Noises"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles emote noises."
 
 	var/pref_path = /datum/client_preference/emote_noises
@@ -56,7 +56,7 @@
 
 /client/verb/toggle_ghost_quiets()
 	set name = "Toggle Whisper/Subtle Vis"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggle ghosts viewing your subtles/whispers."
 
 	var/pref_path = /datum/client_preference/whisubtle_vis

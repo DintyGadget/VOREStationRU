@@ -199,7 +199,7 @@
 	feedback_add_details("admin_verb","MPWN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_debug_tog_aliens()
-	set category = "Server"
+	set category = "Сервер"
 	set name = "Toggle Aliens"
 
 	config.aliens_allowed = !config.aliens_allowed

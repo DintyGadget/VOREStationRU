@@ -137,15 +137,15 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 /obj/machinery/requests_console/tgui_act(action, list/params)
 	if(..())
 		return TRUE
-	
+
 	add_fingerprint(usr)
-	
+
 	switch(action)
 		if("write")
 			if(reject_bad_text(params["write"]))
 				recipient = params["write"] //write contains the string of the receiving department's name
 
-				var/new_message = sanitize(input("Write your message:", "Awaiting Input", ""))
+				var/new_message = sanitize(input("Наберите сообщение:", "Awaiting Input", ""))
 				if(new_message)
 					message = new_message
 					screen = RCS_MESSAUTH
@@ -161,7 +161,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				. = TRUE
 
 		if("writeAnnouncement")
-			var/new_message = sanitize(input("Write your message:", "Awaiting Input", ""))
+			var/new_message = sanitize(input("Наберите сообщение:", "Awaiting Input", ""))
 			if(new_message)
 				message = new_message
 			else
@@ -188,21 +188,21 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				pass = 1
 			if(pass)
 				screen = RCS_SENTPASS
-				message_log += list(list("Message sent to [recipient]", "[message]"))
+				message_log += list(list("Сообщение отправлено в [recipient]", "[message]"))
 			else
-				audible_message(text("[bicon(src)] *The Requests Console beeps: 'NOTICE: No server detected!'"),,4)
+				audible_message(text("[bicon(src)] *Консоль запросов попискивает: 'ВНИМАНИЕ: сервер не обнаружен!'"),,4)
 			. = TRUE
 
 		//Handle printing
 		if("print")
 			var/msg = message_log[text2num(params["print"])];
 			if(msg)
-				msg = "<b>[msg[1]]:</b><br>[msg[2]]"
+				msg = "<meta charset=\"utf-8\"><b>[msg[1]]:</b><br>[msg[2]]"
 				msg = replacetext(msg, "<BR>", "\n")
 				msg = strip_html_properly(msg)
 				var/obj/item/weapon/paper/R = new(src.loc)
 				R.name = "[department] Message"
-				R.info = "<H3>[department] Requests Console</H3><div>[msg]</div>"
+				R.info = "<H3>Консоль запросов - [department]</H3><div>[msg]</div>"
 				. = TRUE
 
 		//Handle screen switching
@@ -231,15 +231,15 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 	if(computer_deconstruction_screwdriver(user, O))
 		return
 	if(istype(O, /obj/item/device/multitool))
-		var/input = sanitize(input(usr, "What Department ID would you like to give this request console?", "Multitool-Request Console Interface", department))
+		var/input = sanitize(input(usr, "Какой ID отдела вы хотели бы дать этой консоли запроса?", "Multitool-Request Console Interface", department))
 		if(!input)
 			to_chat(usr, "No input found. Please hang up and try your call again.")
 			return
 		department = input
-		announcement.title = "[department] announcement"
+		announcement.title = "Сообщение от [department]"
 		announcement.newscast = 1
 
-		name = "[department] Requests Console"
+		name = "Консоль запросов - [department]"
 		allConsoles += src
 		if(departmentType & RC_ASSIST)
 			req_console_assistance |= department
@@ -253,7 +253,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 		if(inoperable(MAINT)) return
 		if(screen == RCS_MESSAUTH)
 			var/obj/item/weapon/card/id/T = O
-			msgVerified = text("<font color='green'><b>Verified by [T.registered_name] ([T.assignment])</b></font>")
+			msgVerified = text("<meta charset=\"utf-8\"><font color='green'><b>Заверено [T.registered_name] ([T.assignment])</b></font>")
 			SStgui.update_uis(src)
 		if(screen == RCS_ANNOUNCE)
 			var/obj/item/weapon/card/id/ID = O
@@ -262,13 +262,13 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 				announcement.announcer = ID.assignment ? "[ID.assignment] [ID.registered_name]" : ID.registered_name
 			else
 				reset_message()
-				to_chat(user, "<span class='warning'>You are not authorized to send announcements.</span>")
+				to_chat(user, "<span class='warning'>Вы не имеете права отправлять объявления.</span>")
 			SStgui.update_uis(src)
 	if(istype(O, /obj/item/weapon/stamp))
 		if(inoperable(MAINT)) return
 		if(screen == RCS_MESSAUTH)
 			var/obj/item/weapon/stamp/T = O
-			msgStamped = text("<font color='blue'><b>Stamped with the [T.name]</b></font>")
+			msgStamped = text("<font color='blue'><b>Проштамповано [T.name]</b></font>")
 			SStgui.update_uis(src)
 	return
 

@@ -1,7 +1,7 @@
 //Toggles for preferences, normal clients
 /client/verb/toggle_ghost_ears()
 	set name = "Show/Hide Ghost Ears"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles between seeing all mob speech and nearby mob speech."
 
 	var/pref_path = /datum/client_preference/ghost_ears
@@ -16,7 +16,7 @@
 
 /client/verb/toggle_ghost_vision()
 	set name = "Show/Hide Ghost Vision"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles between seeing all mob emotes and nearby mob emotes."
 
 	var/pref_path = /datum/client_preference/ghost_sight
@@ -31,7 +31,7 @@
 
 /client/verb/toggle_ghost_radio()
 	set name = "Show/Hide Radio Chatter"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles between seeing all radio chat and nearby radio chatter."
 
 	var/pref_path = /datum/client_preference/ghost_radio
@@ -46,7 +46,7 @@
 
 /client/verb/toggle_deadchat()
 	set name = "Show/Hide Deadchat"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the dead chat channel."
 
 	var/pref_path = /datum/client_preference/show_dsay
@@ -61,7 +61,7 @@
 
 /client/verb/toggle_ooc()
 	set name = "Show/Hide OOC"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles global out of character chat."
 
 	var/pref_path = /datum/client_preference/show_ooc
@@ -76,7 +76,7 @@
 
 /client/verb/toggle_looc()
 	set name = "Show/Hide LOOC"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles local out of character chat."
 
 	var/pref_path = /datum/client_preference/show_looc
@@ -91,7 +91,7 @@
 
 /client/verb/toggle_precision_placement()
 	set name = "Enable/Disable Precision Placement"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles precise placement of objects on tables."
 
 	var/pref_path = /datum/client_preference/precision_placement
@@ -106,7 +106,7 @@
 
 /client/verb/toggle_typing()
 	set name = "Show/Hide Typing Indicator"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the speech bubble typing indicator."
 
 	var/pref_path = /datum/client_preference/show_typing_indicator
@@ -121,7 +121,7 @@
 
 /client/verb/toggle_ahelp_sound()
 	set name = "Toggle Admin Help Sound"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the ability to hear a noise broadcasted when you get an admin message."
 
 	var/pref_path = /datum/client_preference/holder/play_adminhelp_ping
@@ -136,7 +136,7 @@
 
 /client/verb/toggle_lobby_music()
 	set name = "Toggle Lobby Music"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the music in the lobby."
 
 	var/pref_path = /datum/client_preference/play_lobby_music
@@ -151,7 +151,7 @@
 
 /client/verb/toggle_admin_midis()
 	set name = "Toggle Admin MIDIs"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the music in the lobby."
 
 	var/pref_path = /datum/client_preference/play_admin_midis
@@ -166,7 +166,7 @@
 
 /client/verb/toggle_ambience()
 	set name = "Toggle Ambience"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the playing of ambience."
 
 	var/pref_path = /datum/client_preference/play_ambiance
@@ -181,7 +181,7 @@
 
 /client/verb/toggle_weather_sounds()
 	set name = "Toggle Weather Sounds"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the ability to hear weather sounds while on a planet."
 
 	var/pref_path = /datum/client_preference/weather_sounds
@@ -196,7 +196,7 @@
 
 /client/verb/toggle_supermatter_hum()
 	set name = "Toggle SM Hum" // Avoiding using the full 'Supermatter' name to not conflict with the Setup-Supermatter adminverb.
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the ability to hear supermatter hums."
 
 	var/pref_path = /datum/client_preference/supermatter_hum
@@ -211,7 +211,7 @@
 
 /client/verb/toggle_jukebox()
 	set name = "Toggle Jukebox"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles the playing of jukebox music."
 
 	var/pref_path = /datum/client_preference/play_jukebox
@@ -226,7 +226,7 @@
 
 /client/verb/toggle_be_special(role in be_special_flags)
 	set name = "Toggle SpecialRole Candidacy"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles which special roles you would like to be a candidate for, during events."
 
 	var/role_flag = be_special_flags[role]
@@ -241,7 +241,7 @@
 
 /client/verb/toggle_air_pump_hum()
 	set name = "Toggle Air Pump Noise"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles Air Pumps humming"
 
 	var/pref_path = /datum/client_preference/air_pump_noise
@@ -253,10 +253,10 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TAirPumpNoise")
-	
+
 /client/verb/toggle_old_door_sounds()
 	set name = "Toggle Old Door Sounds"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles New/Old Door Sounds"
 
 	var/pref_path = /datum/client_preference/old_door_sounds
@@ -268,10 +268,10 @@
 	SScharacter_setup.queue_preferences_save(prefs)
 
 	feedback_add_details("admin_verb","TOldDoorSounds")
-	
+
 /client/verb/toggle_department_door_sounds()
 	set name = "Toggle Department Door Sounds"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles Department-Specific Door Sounds"
 
 	var/pref_path = /datum/client_preference/department_door_sounds
@@ -286,7 +286,7 @@
 
 /client/verb/toggle_pickup_sounds()
 	set name = "Toggle Picked Up Item Sounds"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles sounds when items are picked up or thrown."
 
 	var/pref_path = /datum/client_preference/pickup_sounds
@@ -301,7 +301,7 @@
 
 /client/verb/toggle_drop_sounds()
 	set name = "Toggle Dropped Item Sounds"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles sounds when items are dropped or thrown."
 
 	var/pref_path = /datum/client_preference/drop_sounds
@@ -316,7 +316,7 @@
 
 /client/verb/toggle_safe_firing()
 	set name = "Toggle Gun Firing Intent Requirement"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles between safe and dangerous firing. Safe requires a non-help intent to fire, dangerous can be fired on help intent."
 
 	var/pref_path = /datum/client_preference/safefiring
@@ -329,7 +329,7 @@
 
 /client/verb/toggle_mob_tooltips()
 	set name = "Toggle Mob Tooltips"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles displaying name/species over mobs when moused over."
 
 	var/pref_path = /datum/client_preference/mob_tooltips
@@ -342,7 +342,7 @@
 
 /client/verb/toggle_inv_tooltips()
 	set name = "Toggle Item Tooltips"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles displaying name/desc over items when moused over (only applies in inventory)."
 
 	var/pref_path = /datum/client_preference/inv_tooltips
@@ -355,7 +355,7 @@
 
 /client/verb/toggle_hear_instruments()
 	set name = "Toggle Hear/Ignore Instruments"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Hear In-game Instruments"
 
 	var/pref_path = /datum/client_preference/instrument_toggle
@@ -368,7 +368,7 @@
 
 /client/verb/toggle_vchat()
 	set name = "Toggle VChat"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Enable/Disable VChat. Reloading VChat and/or reconnecting required to affect changes."
 
 	var/pref_path = /datum/client_preference/vchat_enable
@@ -381,7 +381,7 @@
 
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Enable/Disable seeing status indicators over peoples' heads."
 
 	var/pref_path = /datum/client_preference/status_indicators
@@ -396,7 +396,7 @@
 // Not attached to a pref datum because those are strict binary toggles
 /client/verb/toggle_examine_mode()
 	set name = "Toggle Examine Mode"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Control the additional behaviour of examining things"
 
 	prefs.examine_text_mode++
@@ -413,7 +413,7 @@
 
 /client/verb/toggle_multilingual_mode()
 	set name = "Toggle Multilingual Mode"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Control the behaviour of multilingual speech parsing"
 
 	prefs.multilingual_mode++
@@ -434,7 +434,7 @@
 
 /client/proc/toggle_debug_logs()
 	set name = "Toggle Debug Logs"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles debug logs."
 
 	var/pref_path = /datum/client_preference/debug/show_debug_logs
@@ -449,7 +449,7 @@
 //Mods
 /client/proc/toggle_attack_logs()
 	set name = "Toggle Attack Logs"
-	set category = "Preferences"
+	set category = "Настройки"
 	set desc = "Toggles attack logs."
 
 	var/pref_path = /datum/client_preference/mod/show_attack_logs

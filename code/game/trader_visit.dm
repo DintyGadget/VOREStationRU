@@ -5,7 +5,7 @@ var/can_call_traders = 1
 
 /client/proc/trader_ship()
 	set name = "Dispatch Beruang Trader Ship"
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set desc = "Invite players to join the Beruang."
 
 	if(!holder)

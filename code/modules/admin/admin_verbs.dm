@@ -234,7 +234,7 @@
 #undef AUTOBANTIME
 
 /client/proc/drop_bomb() // Some admin dickery that can probably be done better -- TLE
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Drop Bomb"
 	set desc = "Cause an explosion of varying strength at your location."
 
@@ -317,7 +317,7 @@
 	log_and_message_admins("has given [key_name(L)] the modifer [new_modifier_type], with a duration of [duration ? "[duration / 600] minutes" : "forever"].")
 
 /client/proc/make_sound(var/obj/O in world) // -- TLE
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Make Sound"
 	set desc = "Display a message to everyone who can hear the target"
 	if(O)
@@ -333,13 +333,13 @@
 
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	if(src.mob)
 		togglebuildmode(src.mob)
 	feedback_add_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/object_talk(var/msg as text) // -- TLE
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "oSay"
 	set desc = "Display a message to everyone who can hear the target"
 	if(mob.control_object)
@@ -385,7 +385,7 @@
 
 /client/proc/toggle_log_hrefs()
 	set name = "Toggle href logging"
-	set category = "Server"
+	set category = "Сервер"
 	if(!holder)	return
 	if(config)
 		config.log_hrefs = !config.log_hrefs
@@ -474,7 +474,7 @@
 
 /client/proc/toggleghostwriters()
 	set name = "Toggle ghost writers"
-	set category = "Server"
+	set category = "Сервер"
 	if(!holder)	return
 	if(config)
 		config.cult_ghostwriter = !config.cult_ghostwriter
@@ -482,7 +482,7 @@
 
 /client/proc/toggledrones()
 	set name = "Toggle maintenance drones"
-	set category = "Server"
+	set category = "Сервер"
 	if(!holder)	return
 	if(config)
 		config.allow_drone_spawn = !config.allow_drone_spawn

@@ -639,7 +639,7 @@ proc/admin_notice(var/message, var/rights)
 
 
 /datum/admins/proc/restart()
-	set category = "Server"
+	set category = "Сервер"
 	set name = "Restart"
 	set desc="Restarts the world"
 	if (!usr.client.holder)
@@ -662,7 +662,7 @@ proc/admin_notice(var/message, var/rights)
 
 
 /datum/admins/proc/announce()
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Announce"
 	set desc="Announce your desires to the world"
 	if(!check_rights(0))	return
@@ -785,7 +785,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 			sleep(this_wait SECONDS)
 
 /datum/admins/proc/toggleooc()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Globally Toggles OOC"
 	set name="Toggle OOC"
 
@@ -801,7 +801,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/togglelooc()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Globally Toggles LOOC"
 	set name="Toggle LOOC"
 
@@ -818,7 +818,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 
 /datum/admins/proc/toggledsay()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Globally Toggles DSAY"
 	set name="Toggle DSAY"
 
@@ -835,7 +835,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TDSAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc
 
 /datum/admins/proc/toggleoocdead()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle Dead OOC."
 	set name="Toggle Dead OOC"
 
@@ -848,7 +848,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TDOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/togglehubvisibility()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Globally Toggles Hub Visibility"
 	set name="Toggle Hub Visibility"
 
@@ -861,7 +861,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","THUB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc
 
 /datum/admins/proc/toggletraitorscaling()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle traitor scaling"
 	set name="Toggle Traitor Scaling"
 	config.traitor_scaling = !config.traitor_scaling
@@ -870,7 +870,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TTS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/startnow()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Start the round ASAP"
 	set name="Start Now"
 
@@ -893,7 +893,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 		log_and_message_admins("cancelled immediate game start.")
 
 /datum/admins/proc/toggleenter()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="People can't enter"
 	set name="Toggle Entering"
 	config.enter_allowed = !(config.enter_allowed)
@@ -907,7 +907,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TE") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleAI()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="People can't be AI"
 	set name="Toggle AI"
 	config.allow_ai = !( config.allow_ai )
@@ -920,7 +920,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleaban()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Respawn basically"
 	set name="Toggle Respawn"
 	config.abandon_allowed = !(config.abandon_allowed)
@@ -934,7 +934,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/togglepersistence()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Whether persistent data will be saved from now on."
 	set name="Toggle Persistent Data"
 	config.persistence_disabled = !(config.persistence_disabled)
@@ -946,9 +946,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	log_admin("[key_name(usr)] toggled persistence to [config.persistence_disabled ? "Off" : "On"].")
 	world.update_status()
 	feedback_add_details("admin_verb","TPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	
+
 /datum/admins/proc/togglemaploadpersistence()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Whether mapload persistent data will be saved from now on."
 	set name="Toggle Mapload Persistent Data"
 	config.persistence_ignore_mapload = !(config.persistence_ignore_mapload)
@@ -962,7 +962,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TMPD") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggle_aliens()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle alien mobs"
 	set name="Toggle Aliens"
 	config.aliens_allowed = !config.aliens_allowed
@@ -971,7 +971,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggle_space_ninja()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle space ninjas spawning."
 	set name="Toggle Space Ninjas"
 	config.ninjas_allowed = !config.ninjas_allowed
@@ -980,7 +980,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TSN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/delay()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Delay the game start/end"
 	set name="Delay"
 
@@ -1000,7 +1000,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","DELAY") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/adjump()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle admin jumping"
 	set name="Toggle Jump"
 	config.allow_admin_jump = !(config.allow_admin_jump)
@@ -1008,7 +1008,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TJ") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/adspawn()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle admin spawning"
 	set name="Toggle Spawn"
 	config.allow_admin_spawning = !(config.allow_admin_spawning)
@@ -1016,7 +1016,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/adrev()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Toggle admin revives"
 	set name="Toggle Revive"
 	config.allow_admin_rev = !(config.allow_admin_rev)
@@ -1024,7 +1024,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TAR") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/immreboot()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Reboots the server post haste"
 	set name="Immediate Reboot"
 	if(!usr.client.holder)	return
@@ -1287,7 +1287,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	feedback_add_details("admin_verb","TTWH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /datum/admins/proc/toggleguests()
-	set category = "Server"
+	set category = "Сервер"
 	set desc="Guests can't enter"
 	set name="Toggle guests"
 	config.guests_allowed = !(config.guests_allowed)
@@ -1525,7 +1525,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 
 /datum/admins/proc/sendFax()
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Send Fax"
 	set desc = "Sends a fax to this machine"
 	var/department = input("Choose a fax", "Fax") as null|anything in alldepartments

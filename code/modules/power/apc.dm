@@ -135,7 +135,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	var/global/list/status_overlays_lighting
 	var/global/list/status_overlays_environ
 	var/alarms_hidden = FALSE //If power alarms from this APC are visible on consoles
-	
+
 	var/nightshift_lights = FALSE
 	var/nightshift_setting = NIGHTSHIFT_AUTO
 	var/last_nightshift_switch = 0
@@ -830,7 +830,7 @@ GLOBAL_LIST_EMPTY(apcs)
 
 		"powerChannels" = list(
 			list(
-				"title" = "Equipment",
+				"title" = "Оборудование",
 				"powerLoad" = lastused_equip,
 				"status" = equipment,
 				"topicParams" = list(
@@ -840,7 +840,7 @@ GLOBAL_LIST_EMPTY(apcs)
 				)
 			),
 			list(
-				"title" = "Lighting",
+				"title" = "Освещение",
 				"powerLoad" = round(lastused_light),
 				"status" = lighting,
 				"topicParams" = list(
@@ -850,7 +850,7 @@ GLOBAL_LIST_EMPTY(apcs)
 				)
 			),
 			list(
-				"title" = "Environment",
+				"title" = "Системы",
 				"powerLoad" = round(lastused_environ),
 				"status" = environ,
 				"topicParams" = list(

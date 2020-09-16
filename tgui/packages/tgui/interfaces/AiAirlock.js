@@ -6,15 +6,15 @@ import { Window } from '../layouts';
 const dangerMap = {
   2: {
     color: 'good',
-    localStatusText: 'Optimal',
+    localStatusText: 'Оптимально',
   },
   1: {
     color: 'average',
-    localStatusText: 'Caution',
+    localStatusText: 'Осторожно!',
   },
   0: {
     color: 'bad',
-    localStatusText: 'Offline',
+    localStatusText: 'Выкл',
   },
 };
 

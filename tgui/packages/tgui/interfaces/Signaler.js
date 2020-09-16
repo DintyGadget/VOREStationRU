@@ -19,7 +19,7 @@ export const Signaler = (props, context) => {
         <Section>
           <Grid>
             <Grid.Column size={1.4} color="label">
-              Frequency:
+              Частота:
             </Grid.Column>
             <Grid.Column>
               <NumberInput
@@ -40,7 +40,7 @@ export const Signaler = (props, context) => {
               <Button
                 ml={1.3}
                 icon="sync"
-                content="Reset"
+                content="Сброс"
                 onClick={() => act('reset', {
                   reset: "freq",
                 })} />
@@ -67,7 +67,7 @@ export const Signaler = (props, context) => {
               <Button
                 ml={1.3}
                 icon="sync"
-                content="Reset"
+                content="Сброс"
                 onClick={() => act('reset', {
                   reset: "code",
                 })} />
@@ -79,7 +79,7 @@ export const Signaler = (props, context) => {
                 mb={-0.1}
                 fluid
                 icon="arrow-up"
-                content="Send Signal"
+                content="Отпр. сигнал"
                 textAlign="center"
                 onClick={() => act('signal')} />
             </Grid.Column>

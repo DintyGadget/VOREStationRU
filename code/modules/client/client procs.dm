@@ -88,7 +88,7 @@
 					return
 				sane = TRUE
 				break
-		
+
 		if(!sane)
 			to_chat(src, "<span class='warning'>Sorry, that link doesn't appear to be valid. Please try again.</span>")
 			return
@@ -446,7 +446,7 @@ client/proc/MayRespawn()
 
 client/verb/character_setup()
 	set name = "Character Setup"
-	set category = "Preferences"
+	set category = "Настройки"
 	if(prefs)
 		prefs.ShowChoices(usr)
 

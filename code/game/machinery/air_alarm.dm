@@ -511,14 +511,14 @@
 	data["environment_data"] = list()
 	var/pressure = environment.return_pressure()
 	data["environment_data"] += list(list(
-		"name" = "Pressure",
+		"name" = "Давление",
 		"value" = pressure,
 		"unit" = "kPa",
 		"danger_level" = get_danger_level(pressure, TLV["pressure"])
 	))
 	var/temperature = environment.temperature
 	data["environment_data"] += list(list(
-		"name" = "Temperature",
+		"name" = "Температура",
 		"value" = temperature,
 		"unit" = "K ([round(temperature - T0C, 0.1)]C)",
 		"danger_level" = get_danger_level(temperature, TLV["temperature"])
@@ -535,7 +535,7 @@
 			"unit" = "%",
 			"danger_level" = get_danger_level(environment.gas[gas_id] * partial_pressure, TLV[gas_id])
 		))
-	
+
 	if(!locked || issilicon(user) || data["remoteUser"])
 		data["vents"] = list()
 		for(var/id_tag in A.air_vent_names)
@@ -599,12 +599,12 @@
 				thresholds[thresholds.len]["settings"] += list(list("env" = g, "val" = i, "selected" = selected[i]))
 
 		selected = TLV["pressure"]
-		thresholds[++thresholds.len] = list("name" = "Pressure", "settings" = list())
+		thresholds[++thresholds.len] = list("name" = "Давление", "settings" = list())
 		for(var/i = 1, i <= 4, i++)
 			thresholds[thresholds.len]["settings"] += list(list("env" = "pressure", "val" = i, "selected" = selected[i]))
 
 		selected = TLV["temperature"]
-		thresholds[++thresholds.len] = list("name" = "Temperature", "settings" = list())
+		thresholds[++thresholds.len] = list("name" = "Температура", "settings" = list())
 		for(var/i = 1, i <= 4, i++)
 			thresholds[thresholds.len]["settings"] += list(list("env" = "temperature", "val" = i, "selected" = selected[i]))
 
@@ -638,7 +638,7 @@
 			else
 				target_temperature = input_temperature + T0C
 		return TRUE
-	
+
 	// Account for remote users here.
 	// Yes, this is kinda snowflaky; however, I would argue it would be far more snowflakey
 	// to include "custom hrefs" and all the other bullshit that nano states have just for the

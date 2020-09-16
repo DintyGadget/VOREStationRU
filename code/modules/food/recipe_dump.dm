@@ -1,6 +1,6 @@
 /client/proc/recipe_dump()
 	set name = "Generate Recipe Dump"
-	set category = "Server"
+	set category = "Сервер"
 	set desc = "Dumps food and drink recipe info and images for wiki or other use."
 
 	if(!holder)
@@ -87,7 +87,7 @@
 			var/amt = drink_recipes[Rp]["Reagents"][rid]
 			drink_recipes[Rp]["Reagents"] -= rid
 			drink_recipes[Rp]["Reagents"][R_name] = amt
-			
+
 	//We can also change the appliance to its proper name.
 	for(var/Rp in food_recipes)
 		switch(food_recipes[Rp]["Appliance"])
@@ -158,7 +158,7 @@
 
 		//Name
 		html += "<td><b>[food_recipes[Rp]["Result"]]</b></td>"
-		
+
 		//Appliance
 		html += "<td><b>[food_recipes[Rp]["Appliance"]]</b></td>"
 

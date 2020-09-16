@@ -77,7 +77,7 @@
 		to_chat(src, "No matches for that age range found.")
 
 /client/proc/cmd_admin_subtle_message(mob/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Subtle Message"
 
 	if(!ismob(M))	return
@@ -100,7 +100,7 @@
 	feedback_add_details("admin_verb","SMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_world_narrate() // Allows administrators to fluff events a little easier -- TLE
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Global Narrate"
 
 	if (!holder)
@@ -118,7 +118,7 @@
 	feedback_add_details("admin_verb","GLN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_direct_narrate(var/mob/M)	// Targetted narrate -- TLE
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Direct Narrate"
 
 	if(!holder)
@@ -145,7 +145,7 @@
 	feedback_add_details("admin_verb","DIRN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_godmode(mob/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Godmode"
 
 	if(!holder)
@@ -263,7 +263,7 @@ Ccomp's first proc.
 
 
 /client/proc/allow_character_respawn()
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Allow player to respawn"
 	set desc = "Let a player bypass the wait to respawn or allow them to re-enter their corpse."
 
@@ -273,12 +273,12 @@ Ccomp's first proc.
 	var/target = input("Select a ckey to allow to rejoin", "Allow Respawn Selector") as null|anything in GLOB.respawn_timers
 	if(!target)
 		return
-	
+
 	if(GLOB.respawn_timers[target] == -1) // Their respawn timer is set to -1, which is 'not allowed to respawn'
 		var/response = alert(src, "Are you sure you wish to allow this individual to respawn? They would normally not be able to.","Allow impossible respawn?","No","Yes")
 		if(response == "No")
 			return
-	
+
 	GLOB.respawn_timers -= target
 
 	var/found_client = FALSE
@@ -295,13 +295,13 @@ Ccomp's first proc.
 
 	if(!found_client)
 		to_chat(src, "<span class='notice'>The associated client didn't appear to be connected, so they couldn't be notified, but they can now respawn if they reconnect.</span>")
-	
+
 	log_admin("[key_name(usr)] allowed [found_client ? key_name(found_client) : target] to bypass the respawn time limit")
 	message_admins("Admin [key_name_admin(usr)] allowed [found_client ? key_name_admin(found_client) : target] to bypass the respawn time limit", 1)
 
 
 /client/proc/toggle_antagHUD_use()
-	set category = "Server"
+	set category = "Сервер"
 	set name = "Toggle antagHUD usage"
 	set desc = "Toggles antagHUD usage for observers"
 
@@ -336,7 +336,7 @@ Ccomp's first proc.
 
 
 /client/proc/toggle_antagHUD_restrictions()
-	set category = "Server"
+	set category = "Сервер"
 	set name = "Toggle antagHUD Restrictions"
 	set desc = "Restricts players that have used antagHUD from being able to join this round."
 
@@ -369,7 +369,7 @@ Works kind of like entering the game with a new character. Character receives a 
 Traitors and the like can also be revived with the previous role mostly intact.
 /N */
 /client/proc/respawn_character()
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Spawn Character"
 	set desc = "(Re)Spawn a client's loaded character."
 
@@ -483,7 +483,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		return
 
 	new_character = new(spawnloc)
-	
+
 	if(sparks)
 		anim(spawnloc,new_character,'icons/mob/mob.dmi',,"phasein",,new_character.dir)
 		playsound(spawnloc, "sparks", 50, 1)
@@ -573,7 +573,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","IONC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_rejuvenate(mob/living/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Rejuvenate"
 
 	if(!holder)
@@ -596,7 +596,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","REJU") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_create_centcom_report()
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Create Command Report"
 
 	if(!holder)
@@ -645,7 +645,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	feedback_add_details("admin_verb","LFS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/cmd_admin_explosion(atom/O as obj|mob|turf in world)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Explosion"
 
 	if(!check_rights(R_DEBUG|R_FUN))	return //VOREStation Edit
@@ -673,7 +673,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		return
 
 /client/proc/cmd_admin_emp(atom/O as obj|mob|turf in world)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "EM Pulse"
 
 	if(!check_rights(R_DEBUG|R_FUN))	return //VOREStation Edit
@@ -699,7 +699,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		return
 
 /client/proc/cmd_admin_gib(mob/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Gib"
 
 	if(!check_rights(R_ADMIN|R_FUN))	return //VOREStation Edit
@@ -739,7 +739,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 /*
 /client/proc/cmd_manual_ban()
 	set name = "Manual Ban"
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	if(!authenticated || !holder)
 		to_chat(src, "Only administrators may use this command.")
 		return
@@ -799,7 +799,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	return
 
 /client/proc/cmd_admin_check_contents(mob/living/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Check Contents"
 	set popup_menu = FALSE //VOREStation Edit - Declutter.
 
@@ -843,7 +843,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 */
 
 /client/proc/toggle_view_range()
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Change View Range"
 	set desc = "switches between 1x and custom views"
 
@@ -927,7 +927,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	message_admins("[key_name_admin(usr)] has [emergency_shuttle.deny_shuttle ? "denied" : "allowed"] the shuttle to be called.")
 
 /client/proc/cmd_admin_attack_log(mob/M as mob in mob_list)
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Attack Log"
 
 	to_chat(usr, "<font color='red'><b>Attack Log for [mob]</b></font>")
@@ -971,7 +971,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 
 
 /client/proc/toggle_random_events()
-	set category = "Server"
+	set category = "Сервер"
 	set name = "Toggle random events on/off"
 	set desc = "Toggles random events such as meteors, black holes, blob (but not space dust) on/off"
 
