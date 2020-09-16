@@ -171,7 +171,7 @@ export const ExosuitFabricator = (props, context) => {
               basis="75%"
               grow={1}>
               <Section
-                title="Materials">
+                title="Материалы">
                 <Materials displayAllMat={displayAllMat} />
               </Section>
             </Flex.Item>
@@ -179,21 +179,21 @@ export const ExosuitFabricator = (props, context) => {
               mt={1}
               mr={1}>
               <Section
-                title="Settings"
+                title="Настройки"
                 height="100%">
                 <Button.Checkbox
                   onClick={() => setDisplayMatCost(!displayMatCost)}
                   checked={displayMatCost}>
-                  Display Material Costs
+                  Показ. стоимость материалов
                 </Button.Checkbox>
                 <Button.Checkbox
                   onClick={() => setDisplayAllMat(!displayAllMat)}
                   checked={displayAllMat}>
-                  Display All Materials
+                  Показ. все материалы
                 </Button.Checkbox>
                 {data.species_types && (
                   <Box color="label">
-                    Species:
+                    Раса:
                     <Button
                       onClick={() => act("species")}>
                       {data.species}
@@ -202,7 +202,7 @@ export const ExosuitFabricator = (props, context) => {
                 ) || null}
                 {data.manufacturers && (
                   <Box color="label">
-                    Manufacturer:
+                    Производитель:
                     <Button
                       onClick={() => act("manufacturer")}>
                       {data.manufacturer}
@@ -224,10 +224,10 @@ export const ExosuitFabricator = (props, context) => {
                 <Section
                   height="100%"
                   overflowY="auto"
-                  title="Categories"
+                  title="Категории"
                   buttons={(
                     <Button
-                      content="R&D Sync"
+                      content="Синхр. R&D"
                       onClick={() => act("sync_rnd")} />
                   )}>
                   <PartSets />
@@ -461,11 +461,11 @@ const PartLists = (props, context) => {
   let partsList;
   // Build list of sub-categories if not using a search filter.
   if (!searchText) {
-    partsList = { "Parts": [] };
+    partsList = { "Части": [] };
     buildableParts[selectedPartTab].forEach(part => {
       part["format"] = partCondFormat(materials, queueMaterials, part);
       if (!part.subCategory) {
-        partsList["Parts"].push(part);
+        partsList["Части"].push(part);
         return;
       }
       if (!(part.subCategory in partsList)) {
@@ -544,7 +544,7 @@ const PartCategory = (props, context) => {
           <Button
             disabled={!parts.length}
             color="good"
-            content="Queue All"
+            content="Добавить все"
             icon="plus-circle"
             onClick={() => act("add_queue_set", {
               part_list: parts.map(part => part.id),
@@ -589,7 +589,7 @@ const PartCategory = (props, context) => {
                   transparent
                   height="20px"
                   tooltip={
-                    "Build Time: "
+                    "Время сборки: "
                   + part.printTime + "s. "
                   + (part.desc || "")
                   }
@@ -645,7 +645,7 @@ const Queue = (props, context) => {
         grow={1}>
         <Section
           height="100%"
-          title="Queue"
+          title="Очередь"
           overflowY="auto"
           buttons={
             <Fragment>
@@ -653,18 +653,18 @@ const Queue = (props, context) => {
                 disabled={!queue.length}
                 color="bad"
                 icon="minus-circle"
-                content="Clear Queue"
+                content="Очистить"
                 onClick={() => act("clear_queue")} />
               {(!!isProcessingQueue && (
                 <Button
                   disabled={!queue.length}
-                  content="Stop"
+                  content="Стоп"
                   icon="stop"
                   onClick={() => act("stop_queue")} />
               )) || (
                 <Button
                   disabled={!queue.length}
-                  content="Build Queue"
+                  content="Запустить"
                   icon="play"
                   onClick={() => act("build_queue")} />
               )}
@@ -686,7 +686,7 @@ const Queue = (props, context) => {
       {!!queue.length && (
         <Flex.Item mt={1}>
           <Section
-            title="Material Cost">
+            title="Стоимость">
             <QueueMaterials
               queueMaterials={queueMaterials}
               missingMaterials={missingMaterials} />
@@ -738,7 +738,7 @@ const QueueList = (props, context) => {
   if (!queue.length) {
     return (
       <Fragment>
-        No parts in queue.
+        Нет деталей в очереди.
       </Fragment>
     );
   }

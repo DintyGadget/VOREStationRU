@@ -272,13 +272,13 @@ const GeneralRecordsNavigation = (_properties, context) => {
         selected={screen === 2}
         onClick={() => act('screen', { screen: 2 })}>
         <Icon name="list" />
-        List Records
+        Список экипажа
       </Tabs.Tab>
       <Tabs.Tab
         selected={screen === 3}
         onClick={() => act('screen', { screen: 3 })}>
         <Icon name="wrench" />
-        Record Maintenance
+        Ведение Документации
       </Tabs.Tab>
     </Tabs>
   );

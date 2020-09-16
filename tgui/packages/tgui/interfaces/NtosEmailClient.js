@@ -87,7 +87,7 @@ const NtosEmailClientContent = (props, context) => {
   }
 
   return (
-    <Section title={"Logged in as: " + current_account} buttons={
+    <Section title={"Вошел в систему как: " + current_account} buttons={
       <Fragment>
         <Button
           icon="plus"

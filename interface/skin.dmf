@@ -880,28 +880,28 @@ menu "menu"
 		category = "&Icons"
 		can-check = true
 		saved-params = "is-checked"
-	elem
-		name = "&Scaling"
+	elem 
+		name = "Scaling"
 		command = ""
 		saved-params = "is-checked"
-	elem "nearest-neighbor"
+	elem "NN"
 		name = "&Nearest Neighbor"
 		command = ".winset \"mapwindow.map.zoom-mode=distort\""
-		category = "&Scaling"
+		category = "Scaling"
 		can-check = true
 		group = "scale"
 		saved-params = "is-checked"
-	elem "point-sample"
+	elem "PS"
 		name = "&Point Sampling"
 		command = ".winset \"mapwindow.map.zoom-mode=normal\""
-		category = "&Scaling"
+		category = "Scaling"
 		can-check = true
 		group = "scale"
 		saved-params = "is-checked"
-	elem "blur"
-		name = "&Blur"
+	elem "BL"
+		name = "&Bilinear"
 		command = ".winset \"mapwindow.map.zoom-mode=blur\""
-		category = "&Scaling"
+		category = "Scaling"
 		can-check = true
 		group = "scale"
 		saved-params = "is-checked"
@@ -1133,7 +1133,7 @@ window "mainwindow"
 		anchor2 = none
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "VOREStation"
+		title = "VoreStationRU"
 		is-maximized = true
 		icon = 'icons\\virgoicon.png'
 		macro = "macro"
@@ -1145,47 +1145,16 @@ window "mainwindow"
 		anchor1 = none
 		anchor2 = none
 		is-visible = false
-		auto-format = false
 		saved-params = ""
-	elem "hotkey_toggle"
-		type = BUTTON
-		pos = 560,420
-		size = 80x20
-		anchor1 = 100,100
-		anchor2 = none
-		saved-params = ""
-		text = "Hotkey Toggle"
-		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true\""
-		button-type = pushbox
 	elem "mainvsplit"
 		type = CHILD
 		pos = 3,0
-		size = 634x416
+		size = 640x440
 		anchor1 = 0,0
 		anchor2 = 100,100
 		saved-params = "splitter"
 		right = "rpane"
 		is-vert = true
-	elem "input"
-		type = INPUT
-		pos = 3,420
-		size = 517x20
-		anchor1 = 0,100
-		anchor2 = 100,100
-		background-color = #d3b5b5
-		is-default = true
-		border = sunken
-		saved-params = "command"
-	elem "saybutton"
-		type = BUTTON
-		pos = 520,420
-		size = 40x20
-		anchor1 = 100,100
-		anchor2 = none
-		saved-params = "is-checked"
-		text = "Chat"
-		command = ".winset \"saybutton.is-checked=true?input.command=\"!say \\\"\" macrobutton.is-checked=false:input.command=\""
-		button-type = pushbox
 	elem "tooltip"
 		type = BROWSER
 		pos = 0,0
@@ -1239,10 +1208,40 @@ window "outputwindow"
 		can-resize = false
 		is-pane = true
 		outer-size = 654x494
+	elem "hotkey_toggle"
+		type = BUTTON
+		pos = 560,460
+		size = 80x20
+		anchor1 = 100,100
+		anchor2 = none
+		saved-params = ""
+		text = "Горячие кл."
+		command = ".winset \"mainwindow.macro!=macro ? mainwindow.macro=macro hotkey_toggle.is-checked=false input.focus=true : mainwindow.macro=hotkeymode hotkey_toggle.is-checked=true mapwindow.map.focus=true\""
+		button-type = pushbox
+	elem "saybutton"
+		type = BUTTON
+		pos = 520,460
+		size = 40x20
+		anchor1 = 100,100
+		anchor2 = none
+		saved-params = "is-checked"
+		text = "Чат"
+		command = ".winset \"saybutton.is-checked=true?input.command=\"Say\"\" macrobutton.is-checked=false:input.command=\""
+		button-type = pushbox
+	elem "input"
+		type = INPUT
+		pos = 0,460
+		size = 517x20
+		anchor1 = 0,100
+		anchor2 = 100,100
+		background-color = #d3b5b5
+		is-default = true
+		border = sunken
+		saved-params = "command"
 	elem "chatloadlabel"
 		type = LABEL
 		pos = 0,0
-		size = 640x480
+		size = 640x460
 		anchor1 = 0,0
 		anchor2 = 100,100
 		font-family = "sans-serif"
@@ -1252,11 +1251,11 @@ window "outputwindow"
 		background-color = #222222
 		is-visible = true
 		saved-params = ""
-		text = "Chat is loading.\nIf nothing happens after 20s,\nuse OOC > \"Reload VChat\"."
+		text = "Чат загружается.\nЕсли ничего не произойдет через 20s,\нажмите в OOC > \"Reload VChat\"."
 	elem "htmloutput"
 		type = BROWSER
 		pos = 0,0
-		size = 640x480
+		size = 640x460
 		anchor1 = 0,0
 		anchor2 = 100,100
 		background-color = none
@@ -1266,10 +1265,10 @@ window "outputwindow"
 	elem "oldoutput"
 		type = OUTPUT
 		pos = 0,0
-		size = 640x480
+		size = 640x460
 		anchor1 = 0,0
 		anchor2 = 100,100
-		background-color = none
+		background-color = none	
 		text-color = #000000
 		background-color = #ffffff
 		is-visible = false
@@ -1297,9 +1296,19 @@ window "rpane"
 		saved-params = "splitter"
 		right = "outputwindow"
 		is-vert = false
+	elem "discordurl"
+		type = BUTTON
+		pos = 424,-4
+		size = 60x20
+		anchor1 = none
+		anchor2 = none
+		saved-params = "is-checked"
+		text = "Discord"
+		command = "discordurl"
+		group = "rpanemode"
 	elem "github"
 		type = BUTTON
-		pos = 392,0
+		pos = 356,0
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
@@ -1309,43 +1318,23 @@ window "rpane"
 		group = "rpanemode"
 	elem "mapb"
 		type = BUTTON
-		pos = 332,0
+		pos = 288,0
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
 		saved-params = "is-checked"
-		text = "Map"
+		text = "Карта"
 		command = "map"
 		group = "rpanemode"
 	elem "rulesb"
 		type = BUTTON
-		pos = 272,0
+		pos = 220,0
 		size = 60x16
 		anchor1 = none
 		anchor2 = none
 		saved-params = "is-checked"
-		text = "Rules"
+		text = "Правила"
 		command = "rules"
-		group = "rpanemode"
-	elem "changelog"
-		type = BUTTON
-		pos = 488,0
-		size = 67x16
-		anchor1 = none
-		anchor2 = none
-		saved-params = "is-checked"
-		text = "Changelog"
-		command = "Changelog"
-		group = "rpanemode"
-	elem "forumb"
-		type = BUTTON
-		pos = 212,0
-		size = 60x16
-		anchor1 = none
-		anchor2 = none
-		saved-params = "is-checked"
-		text = "Forum"
-		command = "forum"
 		group = "rpanemode"
 	elem "wikib"
 		type = BUTTON
@@ -1449,6 +1438,7 @@ window "preferences_window"
 		anchor1 = 80,0
 		anchor2 = 100,100
 		right-click = true
+		saved-params = "zoom;letterbox;zoom-mode"
 
 window "infowindow"
 	elem "infowindow"

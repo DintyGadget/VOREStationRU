@@ -28,7 +28,7 @@ export const AiAirlock = (props, context) => {
       width={500}
       height={390}>
       <Window.Content>
-        <Section title="Power Status">
+        <Section title="Состояние сети">
           <LabeledList>
             <LabeledList.Item
               label="Main"
@@ -65,7 +65,7 @@ export const AiAirlock = (props, context) => {
                   && `[${data.power.backup_timeleft}s]`)}
             </LabeledList.Item>
             <LabeledList.Item
-              label="Electrify"
+              label="Электрофикация"
               color={statusElectrify.color}
               buttons={(
                 <Fragment>
@@ -97,15 +97,15 @@ export const AiAirlock = (props, context) => {
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <Section title="Access and Door Control">
+        <Section title="Доступ и контроль">
           <LabeledList>
             <LabeledList.Item
-              label="ID Scan"
+              label="ID Сканер"
               color="bad"
               buttons={(
                 <Button
                   icon={data.id_scanner ? 'power-off' : 'times'}
-                  content={data.id_scanner ? 'Enabled' : 'Disabled'}
+                  content={data.id_scanner ? 'Вкл' : 'Выкл'}
                   selected={data.id_scanner}
                   disabled={!data.wires.id_scanner}
                   onClick={() => act('idscan-toggle')} />
@@ -114,30 +114,30 @@ export const AiAirlock = (props, context) => {
             </LabeledList.Item>
             <LabeledList.Divider />
             <LabeledList.Item
-              label="Door Bolts"
+              label="Болты шлюза"
               color="bad"
               buttons={(
                 <Button
                   icon={data.locked ? 'lock' : 'unlock'}
-                  content={data.locked ? 'Lowered' : 'Raised'}
+                  content={data.locked ? 'Опущены' : 'Подняты'}
                   selected={data.locked}
                   disabled={!data.wires.bolts}
                   onClick={() => act('bolt-toggle')} />
               )}>
-              {!data.wires.bolts && '[Wires have been cut!]'}
+              {!data.wires.bolts && '[Провода были перерезаны!]'}
             </LabeledList.Item>
             <LabeledList.Item
-              label="Door Bolt Lights"
+              label="Свет шлюза"
               color="bad"
               buttons={(
                 <Button
                   icon={data.lights ? 'power-off' : 'times'}
-                  content={data.lights ? 'Enabled' : 'Disabled'}
+                  content={data.lights ? 'Вкл' : 'Выкл'}
                   selected={data.lights}
                   disabled={!data.wires.lights}
                   onClick={() => act('light-toggle')} />
               )}>
-              {!data.wires.lights && '[Wires have been cut!]'}
+              {!data.wires.lights && '[Провода были перерезаны!]'}
             </LabeledList.Item>
             <LabeledList.Item
               label="Door Force Sensors"
@@ -145,12 +145,12 @@ export const AiAirlock = (props, context) => {
               buttons={(
                 <Button
                   icon={data.safe ? 'power-off' : 'times'}
-                  content={data.safe ? 'Enabled' : 'Disabled'}
+                  content={data.safe ? 'Вкл' : 'Выкл'}
                   selected={data.safe}
                   disabled={!data.wires.safe}
                   onClick={() => act('safe-toggle')} />
               )}>
-              {!data.wires.safe && '[Wires have been cut!]'}
+              {!data.wires.safe && '[Провода были перерезаны!]'}
             </LabeledList.Item>
             <LabeledList.Item
               label="Door Timing Safety"
@@ -158,21 +158,21 @@ export const AiAirlock = (props, context) => {
               buttons={(
                 <Button
                   icon={data.speed ? 'power-off' : 'times'}
-                  content={data.speed ? 'Enabled' : 'Disabled'}
+                  content={data.speed ? 'Вкл' : 'Выкл'}
                   selected={data.speed}
                   disabled={!data.wires.timing}
                   onClick={() => act('speed-toggle')} />
               )}>
-              {!data.wires.timing && '[Wires have been cut!]'}
+              {!data.wires.timing && '[Провода были перерезаны!]'}
             </LabeledList.Item>
             <LabeledList.Divider />
             <LabeledList.Item
-              label="Door Control"
+              label="С"
               color="bad"
               buttons={(
                 <Button
                   icon={data.opened ? 'sign-out-alt' : 'sign-in-alt'}
-                  content={data.opened ? 'Open' : 'Closed'}
+                  content={data.opened ? 'Откр.' : 'Закр.'}
                   selected={data.opened}
                   disabled={(data.locked || data.welded)}
                   onClick={() => act('open-close')} />

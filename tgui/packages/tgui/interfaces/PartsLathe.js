@@ -73,7 +73,7 @@ export const PartsLathe = (props, context) => {
             )}
           </Section>
         )}
-        <Section title="Queue">
+        <Section title="Очередь">
           {queue.length && queue.map((item, i) => (
             <Box key={item} color="label">
               #{i + 1}: {toTitleCase(item)}
@@ -82,10 +82,10 @@ export const PartsLathe = (props, context) => {
                 || null}
             </Box>
           )) || (
-            <NoticeBox info>Queue Empty</NoticeBox>
+            <NoticeBox info>Очередь пуста</NoticeBox>
           )}
         </Section>
-        <Section title="Recipes">
+        <Section title="Рецепты">
           {recipies.length && recipies.map(recipe => (
             <Box key={recipe.name}>
               <Button

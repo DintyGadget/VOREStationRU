@@ -934,8 +934,8 @@ function get_cookie(key, deffo) {
 
 // Button Controls that need background-color and text-color set.
 var SKIN_BUTTONS = [
-	/* Rpane */ "rpane.textb", "rpane.infob", "rpane.wikib", "rpane.forumb", "rpane.rulesb", "rpane.github", "rpane.mapb", "rpane.changelog",
-	/* Mainwindow */ "mainwindow.saybutton", "mainwindow.mebutton", "mainwindow.hotkey_toggle"
+	/* Rpane */ "rpane.textb", "rpane.infob", "rpane.wikib", "rpane.forumb", "rpane.discordurl", "rpane.rulesb", "rpane.github", "rpane.mapb", "rpane.changelog",
+	/* Mainwindow */ "outputwindow.saybutton", "mainwindow.mebutton", "outputwindow.hotkey_toggle"
 	
 ];
 // Windows or controls that need background-color set.

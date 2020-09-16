@@ -365,7 +365,7 @@ const MedicalRecordsMedbots = (_properties, context) => {
   if (medbots.length === 0) {
     return (
       <Box color="label">
-        There are no Medbots.
+        Медботов не найдено.
       </Box>
     );
   }
@@ -415,25 +415,25 @@ const MedicalRecordsNavigation = (_properties, context) => {
         selected={screen === 2}
         onClick={() => act('screen', { screen: 2 })}>
         <Icon name="list" />
-        List Records
+        Список экипажа
       </Tabs.Tab>
       <Tabs.Tab
         selected={screen === 5}
         onClick={() => act('screen', { screen: 5 })}>
         <Icon name="database" />
-        Virus Database
+        БД Вирусов
       </Tabs.Tab>
       <Tabs.Tab
         selected={screen === 6}
         onClick={() => act('screen', { screen: 6 })}>
         <Icon name="plus-square" />
-        Medbot Tracking
+        Трекер медбота
       </Tabs.Tab>
       <Tabs.Tab
         selected={screen === 3}
         onClick={() => act('screen', { screen: 3 })}>
         <Icon name="wrench" />
-        Record Maintenance
+        Ведение Документации
       </Tabs.Tab>
     </Tabs>
   );

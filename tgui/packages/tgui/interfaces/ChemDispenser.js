@@ -28,9 +28,9 @@ const ChemDispenserSettings = (properties, context) => {
     amount,
   } = data;
   return (
-    <Section title="Settings" flex="content">
+    <Section title="Настройки" flex="content">
       <LabeledList>
-        <LabeledList.Item label="Dispense" verticalAlign="middle">
+        <LabeledList.Item label="Дозировка" verticalAlign="middle">
           <Flex direction="row" wrap="wrap" spacing="1">
             {dispenseAmounts.map((a, i) => (
               <Flex.Item key={i} grow="1">
@@ -48,7 +48,7 @@ const ChemDispenserSettings = (properties, context) => {
             ))}
           </Flex>
         </LabeledList.Item>
-        <LabeledList.Item label="Custom Amount">
+        <LabeledList.Item label="Кастом. количество">
           <Slider
             step={1}
             stepPixelSize={5}
@@ -75,7 +75,7 @@ const ChemDispenserChemicals = (properties, context) => {
   }
   return (
     <Section
-      title={data.glass ? 'Drink Dispenser' : 'Chemical Dispenser'}
+      title={data.glass ? 'Дозатор Напитков' : 'Дозатор Химикатов'}
       flexGrow="1">
       <Flex
         direction="row"
@@ -116,7 +116,7 @@ const ChemDispenserBeaker = (properties, context) => {
   } = data;
   return (
     <Section
-      title="Beaker"
+      title="Стойка"
       flex="content"
       minHeight="25%"
       buttons={(
@@ -128,7 +128,7 @@ const ChemDispenserBeaker = (properties, context) => {
           )}
           <Button
             icon="eject"
-            content="Eject"
+            content="Извлечь"
             disabled={!isBeakerLoaded}
             onClick={() => act('ejectBeaker')}
           />
@@ -140,7 +140,7 @@ const ChemDispenserBeaker = (properties, context) => {
         buttons={chemical => (
           <Fragment>
             <Button
-              content="Isolate"
+              content="Изолировать"
               icon="compress-arrows-alt"
               onClick={() => act('remove', {
                 reagent: chemical.id,
@@ -158,7 +158,7 @@ const ChemDispenserBeaker = (properties, context) => {
               />
             ))}
             <Button
-              content="ALL"
+              content="ВСЕ"
               onClick={() => act('remove', {
                 reagent: chemical.id,
                 amount: chemical.volume,

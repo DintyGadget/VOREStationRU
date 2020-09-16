@@ -1,8 +1,8 @@
 /client/proc/spawn_character_mob()
-	set category = "Special Verbs"
+	set category = "Спец. команды"
 	set name = "Spawn Character As Mob"
 	set desc = "Spawn a specified ckey as a chosen mob."
-	
+
 	if(!holder)
 		return
 

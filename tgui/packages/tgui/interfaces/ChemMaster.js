@@ -249,7 +249,7 @@ const ChemMasterProduction = (props, context) => {
   if (!props.bufferNonEmpty) {
     return (
       <Section
-        title="Production"
+        title="Производство"
         flexGrow="1"
         buttons={
           <Button
@@ -281,7 +281,7 @@ const ChemMasterProduction = (props, context) => {
               mb="0.5rem"
               size="5"
             /><br />
-            Buffer is empty.
+            Буфер пуст.
           </Flex.Item>
         </Flex>
       </Section>

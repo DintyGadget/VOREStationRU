@@ -41,13 +41,13 @@ export const CrewMonitorContent = (props, context) => {
       <Table>
         <Table.Row header>
           <Table.Cell>
-            Name
+            Ф.И
           </Table.Cell>
           <Table.Cell>
-            Status
+            Состояние
           </Table.Cell>
           <Table.Cell>
-            Location
+            Местоположение
           </Table.Cell>
         </Table.Row>
         {crew.map(cm => (
@@ -58,7 +58,7 @@ export const CrewMonitorContent = (props, context) => {
             <TableCell>
               <Box inline
                 color={cm.dead ? 'red' : 'green'}>
-                {cm.dead ? 'Deceased' : 'Living'}
+                {cm.dead ? 'Нет признаков жизни' : 'В норме'}
               </Box>
               {cm.sensor_type >= 2 ? (
                 <Box inline>
@@ -100,7 +100,7 @@ export const CrewMonitorContent = (props, context) => {
                 ) : (
                   cm.area+" ("+cm.x+", "+cm.y+", "+cm.z+")"
                 )
-              ) : "Not Available"}
+              ) : "Недоступно"}
             </TableCell>
           </Table.Row>
         ))}
@@ -112,7 +112,7 @@ export const CrewMonitorContent = (props, context) => {
     // and change the @for scss to match.
     body = (
       <Box textAlign="center">
-        Zoom Level:
+        Приближение:
         <NumberInput
           animated
           width="40px"
@@ -122,7 +122,7 @@ export const CrewMonitorContent = (props, context) => {
           minValue={1}
           maxValue={8} 
           onChange={(e, value) => setZoom(value)} />
-        Z-Level:
+        Уровень:
         {data.map_levels
           .sort((a, b) => Number(a) - Number(b))
           .map(level => (
@@ -169,7 +169,7 @@ export const CrewMonitorContent = (props, context) => {
           key="MapView"
           selected={1 === tabIndex}
           onClick={() => setTabIndex(1)}>
-          <Icon name="map-marked-alt" /> Map View
+          <Icon name="map-marked-alt" /> Карта
         </Tabs.Tab>
       </Tabs>
       <Box m={2}>

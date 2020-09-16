@@ -6,22 +6,22 @@ import { Window } from "../layouts";
 
 /* Helpers */
 const getDockingStatus = (docking_status, docking_override) => {
-  let main = "ERROR";
+  let main = "ОШИБКА";
   let color = "bad";
   let showsOverride = false;
   if (docking_status === "docked") {
-    main = "DOCKED";
+    main = "ПРИСТЫКОВАН";
     color = "good";
   } else if (docking_status === "docking") {
-    main = "DOCKING";
+    main = "СТЫКОВКА";
     color = "average";
     showsOverride = true;
   } else if (docking_status === "undocking") {
-    main = "UNDOCKING";
+    main = "ОТСТЫКОВКА";
     color = "average";
     showsOverride = true;
   } else if (docking_status === "undocked") {
-    main = "UNDOCKED";
+    main = "ОТСТЫКОВАН";
     color = "#676767";
   }
 
@@ -40,7 +40,7 @@ const getDockingStatus = (docking_status, docking_override) => {
 const ShuttleControlSharedShuttleStatus = (props, context) => {
   const { act, data } = useBackend(context);
   const {
-    engineName = "Bluespace Drive",
+    engineName = "Двигатель Bluespace",
   } = props;
   const {
     shuttle_status,
@@ -51,34 +51,34 @@ const ShuttleControlSharedShuttleStatus = (props, context) => {
     docking_codes,
   } = data;
   return (
-    <Section title="Shuttle Status">
+    <Section title="Состояние шаттла">
       <Box color="label" mb={1}>{shuttle_status}</Box>
       <LabeledList>
         <LabeledList.Item label={engineName}>
           {shuttle_state === "idle" && (
             <Box color="#676767" bold>
-              IDLE
+              БЕЗДЕЙСТВ.
             </Box>
           ) || shuttle_state === "warmup" && (
             <Box color="#336699">
-              SPINNING UP
+              РАЗОГРЕВ
             </Box>
           ) || shuttle_state === "in_transit" && (
             <Box color="#336699">
-              ENGAGED
+              В ПУТИ
             </Box>
           ) || (
             <Box color="bad">
-              ERROR
+              ОШИБКА
             </Box>
           )}
         </LabeledList.Item>
         {has_docking && (
           <Fragment>
-            <LabeledList.Item label="Docking Status">
+            <LabeledList.Item label="Статус стыковки">
               {getDockingStatus(docking_status, docking_override)}
             </LabeledList.Item>
-            <LabeledList.Item label="Docking Codes">
+            <LabeledList.Item label="Код стыковки">
               <Button
                 icon="pen"
                 onClick={() => act("set_codes")}>
@@ -102,7 +102,7 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
   } = data;
 
   return (
-    <Section title="Controls">
+    <Section title="Управление">
       <Flex spacing={1}>
         <Flex.Item grow={1}>
           <Button
@@ -110,7 +110,7 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
             disabled={!can_launch}
             icon="rocket"
             fluid>
-            Launch Shuttle
+            Запустить шаттл
           </Button>
         </Flex.Item>
         <Flex.Item grow={1}>
@@ -119,7 +119,7 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
             disabled={!can_cancel}
             icon="ban"
             fluid>
-            Cancel Launch
+            Отменить запуск
           </Button>
         </Flex.Item>
         <Flex.Item grow={1}>
@@ -129,7 +129,7 @@ const ShuttleControlSharedShuttleControls = (props, context) => {
             disabled={!can_force}
             icon="exclamation-triangle"
             fluid>
-            Force Launch
+            Принудительно
           </Button>
         </Flex.Item>
       </Flex>

@@ -25,22 +25,22 @@ export const ICPrinter = (props, context) => {
       <Window.Content scrollable>
         <Section title="Status">
           <LabeledList>
-            <LabeledList.Item label="Metal">
+            <LabeledList.Item label="Метал">
               <ProgressBar
                 value={metal}
                 maxValue={max_metal}>
                 {metal / metal_per_sheet} / {max_metal / metal_per_sheet} sheets
               </ProgressBar>
             </LabeledList.Item>
-            <LabeledList.Item label="Circuits Available">
-              {upgraded ? "Advanced" : "Regular"}
+            <LabeledList.Item label="Доступные Схемы">
+              {upgraded ? "Расширенные" : "Обычные"}
             </LabeledList.Item>
-            <LabeledList.Item label="Assembly Cloning">
-              {can_clone ? "Available" : "Unavailable"}
+            <LabeledList.Item label="Клонирование Сборки">
+              {can_clone ? "Доступно" : "Недоступно"}
             </LabeledList.Item>
           </LabeledList>
           <Box mt={1}>
-            Note: A red component name means that the printer must be upgraded to create that component.
+            Примечание: красное имя компонента означает, что принтер должен быть обновлен для создания этого компонента.
           </Box>
         </Section>
         <ICPrinterCategories />
@@ -75,7 +75,7 @@ const ICPrinterCategories = (props, context) => {
   const selectedCategory = filter(cat => cat.name === categoryTarget)(categories)[0];
 
   return (
-    <Section title="Circuits">
+    <Section title="Схемы">
       <Tabs>
         {sortBy(cat => cat.name)(categories).map(cat => (
           <Tabs.Tab
@@ -99,7 +99,7 @@ const ICPrinterCategories = (props, context) => {
                     disabled={!canBuild(item, data)}
                     icon="print"
                     onClick={() => act("build", { build: item.path })}>
-                    Print
+                    Печать
                   </Button>
                 }>
                 {item.desc}
@@ -107,7 +107,7 @@ const ICPrinterCategories = (props, context) => {
             ))}
           </LabeledList>
         </Section>
-      ) || "No category selected."}
+      ) || "Категория не выбрана."}
     </Section>
   );
 };
