@@ -27,27 +27,27 @@
 /datum/job/janitor //Lots of janitor substations on station.
 	total_positions = 3
 	spawn_positions = 3
-	alt_titles = list("Custodian" = /datum/alt_title/custodian, "Sanitation Technician" = /datum/alt_title/sanitation_tech, "Maid" = /datum/alt_title/maid)
+	alt_titles = list("Дворник" = /datum/alt_title/custodian, "Сантехник" = /datum/alt_title/sanitation_tech, "Горничная" = /datum/alt_title/maid)
 	pto_type = PTO_CIVILIAN
 
 /datum/alt_title/sanitation_tech
-	title = "Sanitation Technician"
+	title = "Сантехник"
 
 /datum/alt_title/maid
-	title = "Maid"
+	title = "Горничная"
 
 /datum/job/librarian
 	total_positions = 2
 	spawn_positions = 2
-	alt_titles = list("Journalist" = /datum/alt_title/journalist, "Writer" = /datum/alt_title/writer, "Historian" = /datum/alt_title/historian, "Professor" = /datum/alt_title/professor)
+	alt_titles = list("Журналист" = /datum/alt_title/journalist, "Писатель" = /datum/alt_title/writer, "Историк" = /datum/alt_title/historian, "Профессор" = /datum/alt_title/professor)
 	pto_type = PTO_CIVILIAN
 
 /datum/alt_title/historian
-	title = "Historian"
+	title = "Историк"
 	title_blurb = "The Historian uses the Library as a base of operation to record any important events occuring on station."
 
 /datum/alt_title/professor
-	title = "Professor"
+	title = "Профессор"
 	title_blurb = "The Professor uses the Library as a base of operations to share their vast knowledge with the crew."
 
 /datum/job/lawyer
@@ -64,14 +64,14 @@
 //////////////////////////////////
 
 /datum/job/entertainer
-	title = "Entertainer"
+	title = "Артист"
 	flag = ENTERTAINER
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Head of Personnel"
+	supervisors = "Главой Персонала"
 	selection_color = "#515151"
 	access = list(access_entertainment)
 	minimal_access = list(access_entertainment)
@@ -79,17 +79,17 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/assistant
 	job_description = "An entertainer does just that, entertains! Put on plays, play music, sing songs, tell stories, or read your favorite fanfic."
-	alt_titles = list("Performer" = /datum/alt_title/performer, "Musician" = /datum/alt_title/musician, "Stagehand" = /datum/alt_title/stagehand)
+	alt_titles = list("Вокалист" = /datum/alt_title/performer, "Музыкант" = /datum/alt_title/musician, "Рабочий сцены" = /datum/alt_title/stagehand)
 
 // Entertainer Alt Titles
 /datum/alt_title/performer
-	title = "Performer"
+	title = "Вокалист"
 	title_blurb = "A Performer is someone who performs! Acting, dancing, wrestling, etc!"
 
 /datum/alt_title/musician
-	title = "Musician"
+	title = "Музыкант"
 	title_blurb = "A Musician is someone who makes music! Singing, playing instruments, slam poetry, it's your call!"
 
 /datum/alt_title/stagehand
-	title = "Stagehand"
+	title = "Рабочий сцены"
 	title_blurb = "A Stagehand typically performs everything the rest of the entertainers don't. Operate lights, shutters, windows, or narrate through your voicebox!"

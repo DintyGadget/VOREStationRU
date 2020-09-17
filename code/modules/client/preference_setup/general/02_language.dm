@@ -24,7 +24,7 @@
 			pref.language_prefixes -= prefix
 
 /datum/category_item/player_setup_item/general/language/content()
-	. += "<b>Languages</b><br>"
+	. += "<b>Языки</b><br>"
 	var/datum/species/S = GLOB.all_species[pref.species]
 	if(S.language)
 		. += "- [S.language]<br>"

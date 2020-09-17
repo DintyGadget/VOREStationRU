@@ -640,8 +640,8 @@
 
 /obj/machinery/suit_cycler/pilot
 	name = "Pilot suit cycler"
-	model_text = "Pilot"
-	departments = list("Pilot Blue","Pilot","No Change")
+	model_text = "Пилот"
+	departments = list("Pilot Blue","Пилот","No Change")
 
 /obj/machinery/suit_cycler/vintage
 	name = "Vintage Crew suit cycler"
@@ -1216,9 +1216,9 @@
 		var/suit_check = ((suit!=null && (initial(parent_suit.icon_state) in icon_states(suit.sprite_sheets_obj[target_species],1))) || suit==null)
 		var/suit_helmet_check = ((suit.helmet!=null && (initial(parent_helmet.icon_state) in icon_states(suit.helmet.sprite_sheets_obj[target_species],1))) || suit.helmet==null)
 		if(helmet_check && suit_check && suit_helmet_check)
-			if(helmet) 
+			if(helmet)
 				helmet.refit_for_species(target_species)
-			if(suit) 
+			if(suit)
 				suit.refit_for_species(target_species)
 				if(suit.helmet)
 					suit.helmet.refit_for_species(target_species)

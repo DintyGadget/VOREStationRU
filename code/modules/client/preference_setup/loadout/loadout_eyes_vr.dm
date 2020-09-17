@@ -1,9 +1,9 @@
 /datum/gear/eyes/medical
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
+	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
 
 /datum/gear/eyes/meson
 	display_name = "Optical Meson Scanners (Engineering, Science)"
-	allowed_roles = list("Station Engineer","Chief Engineer","Atmospheric Technician", "Scientist", "Research Director", "Explorer", "Pathfinder")
+	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник", "Ученый", "Директор исследований", "Искатель", "Первопроходец")
 
 /datum/gear/eyes/arglasses
 	display_name = "AR glasses"
@@ -16,28 +16,28 @@
 /datum/gear/eyes/arglasses/sec
 	display_name = "AR-S glasses (Sec)"
 	path = /obj/item/clothing/glasses/omnihud/sec
-	allowed_roles = list("Security Officer","Head of Security","Warden","Detective")
+	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель","Детектив")
 
 /datum/gear/eyes/arglasses/sci
 	display_name = "AR-R glasses (Sci)"
 	path = /obj/item/clothing/glasses/omnihud/rnd
-	allowed_roles = list("Research Director","Scientist","Xenobiologist","Xenobotanist","Roboticist")
+	allowed_roles = list("Директор исследований","Ученый","Ксенобиолог","Ксеноботаник","Роботехник")
 
 /datum/gear/eyes/arglasses/eng
 	display_name = "AR-E glasses (Eng)"
 	path = /obj/item/clothing/glasses/omnihud/eng
-	allowed_roles = list("Station Engineer","Chief Engineer","Atmospheric Technician")
+	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник")
 
 /datum/gear/eyes/arglasses/med
 	display_name = "AR-M glasses (Medical)"
 	path = /obj/item/clothing/glasses/omnihud/med
-	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist", "Field Medic")
+	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
 
 /datum/gear/eyes/arglasses/all
 	display_name = "AR-B glasses (SM, HoP)"
 	path = /obj/item/clothing/glasses/omnihud/all
 	cost = 2
-	allowed_roles = list("Site Manager","Head of Personnel")
+	allowed_roles = list("Директор колонии","Глава персонала")
 
 /datum/gear/eyes/spiffygogs
 	display_name = "slick orange goggles"

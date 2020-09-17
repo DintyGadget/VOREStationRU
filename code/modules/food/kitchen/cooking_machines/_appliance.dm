@@ -16,7 +16,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 5			// Power used when turned on, but not processing anything
 	active_power_usage = 1000		// Power used when turned on and actively cooking something
-	
+
 	var/cooking_power = 0			// Effectiveness/speed at cooking
 	var/cooking_coeff = 0			// Optimal power * proximity to optimal temp; used to calc. cooking power.
 	var/heating_power = 1000		// Effectiveness at heating up; not used for mixers, should be equal to active_power_usage
@@ -44,9 +44,9 @@
 
 /obj/machinery/appliance/Initialize()
 	. = ..()
-	
+
 	default_apply_parts()
-	
+
 	if(output_options.len)
 		verbs += /obj/machinery/appliance/proc/choose_output
 
@@ -83,7 +83,7 @@
 
 /obj/machinery/appliance/proc/report_progress_tgui(datum/cooking_item/CI)
 	if(!CI || !CI.max_cookwork)
-		return list("average", "Not Cooking.")
+		return list("average", "Не готовится.")
 
 	if(!CI.cookwork)
 		return list("blue", "Cold.")
@@ -91,19 +91,19 @@
 	var/progress = CI.cookwork / CI.max_cookwork
 
 	if (progress < 0.25)
-		return list("blue", "It's barely started cooking.")
+		return list("blue", "Только началось готовиться.")
 	if (progress < 0.75)
-		return list("average", "It's cooking away nicely.")
+		return list("average", "Выглядит как минимум аппетитно.")
 	if (progress < 1)
-		return list("good", "It's almost ready!")
+		return list("good", "Почти готово!")
 
 	var/half_overcook = (CI.overcook_mult - 1)*0.5
 	if (progress < 1+half_overcook)
-		return list("good", "It's done!")
+		return list("good", "Готово!")
 	if (progress < CI.overcook_mult)
-		return list("bad", "It looks overcooked, get it out!")
+		return list("bad", "Выглядит слегка испорчено!")
 	else
-		return list("bad", "It is burning!")
+		return list("bad", "Загорелось!")
 
 /obj/machinery/appliance/proc/report_progress(var/datum/cooking_item/CI)
 	if (!CI || !CI.max_cookwork)
@@ -114,19 +114,19 @@
 	var/progress = CI.cookwork / CI.max_cookwork
 
 	if (progress < 0.25)
-		return "It's barely started cooking."
+		return "Только началось готовиться."
 	if (progress < 0.75)
-		return "<span class='notice'>It's cooking away nicely.</span>"
+		return "<span class='notice'>Выглядит как минимум аппетитно.</span>"
 	if (progress < 1)
-		return "<span class='notice'><b>It's almost ready!</b></span>"
+		return "<span class='notice'><b>Почти готово!</b></span>"
 
 	var/half_overcook = (CI.overcook_mult - 1)*0.5
 	if (progress < 1+half_overcook)
-		return "<span class='soghun'><b>It is done !</b></span>"
+		return "<span class='soghun'><b>Готово!</b></span>"
 	if (progress < CI.overcook_mult)
-		return "<span class='warning'>It looks overcooked, get it out!</span>"
+		return "<span class='warning'>Выглядит слегка испорчено!</span>"
 	else
-		return "<span class='danger'>It is burning!</span>"
+		return "<span class='danger'>Загорелось!</span>"
 
 /obj/machinery/appliance/update_icon()
 	if (!stat && cooking_objs.len)
@@ -147,25 +147,25 @@
 		return
 
 	if (!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You lack the dexterity to do that!</span>")
+		to_chat(user, "<span class='warning'>Вам не хватает ловкости, чтобы сделать это!</span>")
 		return
 
 	if (user.stat || user.restrained() || user.incapacitated())
 		return
 
 	if (!Adjacent(user) && !issilicon(user))
-		to_chat(user, "<span class='warning'>You can't reach [src] from here!</span>")
+		to_chat(user, "<span class='warning'>Отсюда до [src] не добраться!</span>")
 		return
 
 	if (stat & POWEROFF)//Its turned off
 		stat &= ~POWEROFF
 		use_power = 1
-		user.visible_message("[user] turns [src] on.", "You turn on [src].")
+		user.visible_message("[user] включает [src].", "Вы включили [src].")
 
 	else //Its on, turn it off
 		stat |= POWEROFF
 		use_power = 0
-		user.visible_message("[user] turns [src] off.", "You turn off [src].")
+		user.visible_message("[user] выключает [src].", "Вы выключили [src].")
 		cooking = FALSE // Stop cooking here, too, just in case.
 
 	playsound(src, 'sound/machines/click.ogg', 40, 1)
@@ -183,23 +183,23 @@
 		return
 
 	if (!usr.IsAdvancedToolUser())
-		to_chat(usr, "You lack the dexterity to do that!")
+		to_chat(usr, "Вам не хватает ловкости, чтобы сделать это!")
 		return
 
 	if (usr.stat || usr.restrained() || usr.incapacitated())
 		return
 
 	if (!Adjacent(usr) && !issilicon(usr))
-		to_chat(usr, "You can't adjust the [src] from this distance, get closer!")
+		to_chat(usr, "Вы не можете настроить [src] с такого расстояния, подойдите ближе!")
 		return
 
 	if(output_options.len)
-		var/choice = input("What specific food do you wish to make with \the [src]?") as null|anything in output_options+"Default"
+		var/choice = input("Какую конкретную еду вы хотите приготовить с помощью [src]?") as null|anything in output_options+"Default"
 		if(!choice)
 			return
 		if(choice == "Default")
 			selected_option = null
-			to_chat(usr, "<span class='notice'>You decide not to make anything specific with \the [src].</span>")
+			to_chat(usr, "<span class='notice'>Вы решаете не делать ничего конкретного с [src].</span>")
 		else
 			selected_option = choice
 			to_chat(usr, "<span class='notice'>You prepare \the [src] to make \a [selected_option] with the next thing you put in. Try putting several ingredients in a container!</span>")
@@ -216,18 +216,18 @@
 	if(istype(G))
 
 		if(!can_cook_mobs)
-			to_chat(user, "<span class='warning'>That's not going to fit.</span>")
+			to_chat(user, "<span class='warning'>Это вам не подойдет.</span>")
 			return 0
 
 		if(!isliving(G.affecting))
-			to_chat(user, "<span class='warning'>You can't cook that.</span>")
+			to_chat(user, "<span class='warning'>Вы не можете это приготовить.</span>")
 			return 0
 
 		return 2
 
 
 	if (!has_space(I))
-		to_chat(user, "<span class='warning'>There's no room in [src] for that!</span>")
+		to_chat(user, "<span class='warning'>В [src] для этого нет места!</span>")
 		return 0
 
 
@@ -458,7 +458,7 @@
 	//Final step. Cook function just cooks batter for now.
 	for (var/obj/item/weapon/reagent_containers/food/snacks/S in CI.container)
 		S.cook()
-		
+
 
 //Combination cooking involves combining the names and reagents of ingredients into a predefined output object
 //The ingredients represent flavours or fillings. EG: donut pizza, cheese bread
@@ -566,7 +566,7 @@
 	smoke.attach(src)
 	smoke.set_up(10, 0, get_turf(src), 300)
 	smoke.start()
-	
+
 	// Set off fire alarms!
 	var/obj/machinery/firealarm/FA = locate() in get_area(src)
 	if(FA)
@@ -575,7 +575,7 @@
 /obj/machinery/appliance/attack_hand(var/mob/user)
 	if(..())
 		return
-	
+
 	if(cooking_objs.len)
 		removal_menu(user)
 

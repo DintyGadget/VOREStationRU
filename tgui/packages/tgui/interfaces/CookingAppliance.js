@@ -19,9 +19,9 @@ export const CookingAppliance = (props, context) => {
   return (
     <Window width={600} height={600} resizable>
       <Window.Content scrollable>
-        <Section title="Status">
+        <Section title="Статус">
           <LabeledList>
-            <LabeledList.Item label="Temperature">
+            <LabeledList.Item label="Температура">
               <ProgressBar
                 color={temperatureEnough ? "good" : "blue"}
                 value={temperature}
@@ -29,17 +29,17 @@ export const CookingAppliance = (props, context) => {
                 <AnimatedNumber value={temperature} />&deg;C / {optimalTemp}&deg;C
               </ProgressBar>
             </LabeledList.Item>
-            <LabeledList.Item label="Efficiency">
+            <LabeledList.Item label="Эффективность">
               <AnimatedNumber value={efficiency} />%
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <Section title="Containers">
+        <Section title="Содержимое">
           <LabeledList>
             {our_contents.map((content, i) => {
               if (content.empty) {
                 return (
-                  <LabeledList.Item label={"Slot #" + (i + 1)} >
+                  <LabeledList.Item label={"Слот #" + (i + 1)} >
                     <Button
                       onClick={() => act("slot", { slot: i + 1 })}>
                       Empty
@@ -49,13 +49,13 @@ export const CookingAppliance = (props, context) => {
               }
 
               return (
-                <LabeledList.Item label={"Slot #" + (i + 1)} verticalAlign="middle" key={i}>
+                <LabeledList.Item label={"Слот #" + (i + 1)} verticalAlign="middle" key={i}>
                   <Flex spacing={1}>
                     <Flex.Item>
                       <Button
                         disabled={!containersRemovable}
                         onClick={() => act("slot", { slot: i + 1 })}>
-                        {content.container || "No Container"}
+                        {content.container || "Нет контейнера"}
                       </Button>
                     </Flex.Item>
                     <Flex.Item grow={1}>

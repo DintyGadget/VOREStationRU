@@ -94,9 +94,9 @@ obj/machinery/scanner/attack_hand(mob/living/carbon/human/user)
 	S.fields["name"] = G.fields["name"]
 	S.fields["id"] = G.fields["id"]
 	if(gender == FEMALE)
-		G.fields["sex"] = "Female"
+		G.fields["sex"] = "Женский"
 	else
-		G.fields["sex"] = "Male"
+		G.fields["sex"] = "Мужской"
 	G.fields["age"] = text("[]", age)
 	G.fields["fingerprint"] = text("[]", fingerprint)
 	G.fields["p_stat"] = "Active"

@@ -137,7 +137,7 @@ const OperatingComputerPatient = (props, context) => {
                   {occupant.bloodPercent}%, {occupant.bloodLevel}cl
                 </ProgressBar>
               </LabeledList.Item>
-              <LabeledList.Item label="Pulse">
+              <LabeledList.Item label="Пульс">
                 {occupant.pulse} BPM
               </LabeledList.Item>
             </Fragment>
@@ -183,7 +183,7 @@ const OperatingComputerUnoccupied = () => {
           mb="0.5rem"
           size="5"
         /><br />
-        No patient detected.
+        Пациент не обнаружен.
       </Flex.Item>
     </Flex>
   );

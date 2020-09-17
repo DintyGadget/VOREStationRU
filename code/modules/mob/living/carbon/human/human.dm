@@ -210,7 +210,7 @@
 		return
 
 	spread_fire(AM)
-	
+
 	..() // call parent because we moved behavior to parent
 
 // Get rank from ID, ID inside PDA, PDA, ID in wallet, etc.
@@ -776,18 +776,18 @@
 	if(new_style)
 		f_style = new_style
 
-	var/new_gender = alert(usr, "Please select gender.", "Character Generation", "Male", "Female", "Neutral")
+	var/new_gender = alert(usr, "Please select gender.", "Character Generation", "Мужской", "Женский", "Бесполый")
 	if (new_gender)
-		if(new_gender == "Male")
+		if(new_gender == "Мужской")
 			gender = MALE
-		else if(new_gender == "Female")
+		else if(new_gender == "Женский")
 			gender = FEMALE
 		else
 			gender = NEUTER
 	regenerate_icons()
 	check_dna()
-	var/datum/gender/T = gender_datums[get_visible_gender()]
-	visible_message("<font color='blue'>\The [src] morphs and changes [T.his] appearance!</font>", "<font color='blue'>You change your appearance!</font>", "<font color='red'>Oh, god!  What the hell was that?  It sounded like flesh getting squished and bone ground into a different shape!</font>")
+	//var/datum/gender/T = gender_datums[get_visible_gender()]
+	visible_message("<font color='blue'>\The [src] трансформируется и меняет внешний вид!</font>", "<font color='blue'>Вы меняете свою внешность!</font>", "<font color='red'>О Боже! Что, черт побери, это было? Это звучало так, будто плоть раздавливается, а кости измельчаются в другую форму!</font>")
 
 /mob/living/carbon/human/proc/remotesay()
 	set name = "Project mind"

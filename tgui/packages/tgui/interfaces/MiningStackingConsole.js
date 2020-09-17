@@ -16,9 +16,9 @@ export const MiningStackingConsole = (props, context) => {
   return (
     <Window width={400} height={500} resizable>
       <Window.Content>
-        <Section title="Stacker Controls">
+        <Section title="Управление Укладчиком">
           <LabeledList>
-            <LabeledList.Item label="Stacking">
+            <LabeledList.Item label="Укладка">
               <NumberInput
                 fluid
                 value={stackingAmt}
@@ -33,14 +33,14 @@ export const MiningStackingConsole = (props, context) => {
                 <Button
                   icon="eject"
                   onClick={() => act("release_stack", { stack: stack.type })}>
-                  Eject
+                  Извлечь
                 </Button>
               }>
                 <AnimatedNumber value={stack.amt} />
               </LabeledList.Item>
             )) || (
-              <LabeledList.Item label="Empty" color="average">
-                No stacks in machine.
+              <LabeledList.Item label="Пространство" color="average">
+                Стаков в машине нет.
               </LabeledList.Item>
             )}
           </LabeledList>

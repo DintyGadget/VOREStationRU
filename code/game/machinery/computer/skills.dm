@@ -175,7 +175,7 @@
 				screen = GENERAL_RECORD_LIST
 		else
 			. = FALSE
-	
+
 	if(.)
 		return
 
@@ -346,7 +346,7 @@
 				if(1)
 					R.fields["name"] = "[pick(pick(first_names_male), pick(first_names_female))] [pick(last_names)]"
 				if(2)
-					R.fields["sex"]	= pick("Male", "Female")
+					R.fields["sex"]	= pick("Мужской", "Женский")
 				if(3)
 					R.fields["age"] = rand(5, 85)
 				if(4)

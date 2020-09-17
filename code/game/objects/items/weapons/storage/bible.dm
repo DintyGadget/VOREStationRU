@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		icon_state = GLOB.bible_icon_state
 		item_state = GLOB.bible_item_state
 		return FALSE
-	if(user?.mind?.assigned_role != "Chaplain")
+	if(user?.mind?.assigned_role != "Священник")
 		return FALSE
 
 	var/list/skins = list()
@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 		return FALSE
 	if(user.incapacitated())
 		return FALSE
-	if(user.mind.assigned_role != "Chaplain")
+	if(user.mind.assigned_role != "Священник")
 		return FALSE
 	return TRUE
 
@@ -97,7 +97,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 
 /obj/item/weapon/storage/bible/afterattack(atom/A, mob/user as mob, proximity)
 	if(!proximity) return
-	if(user.mind && (user.mind.assigned_role == "Chaplain"))
+	if(user.mind && (user.mind.assigned_role == "Священник"))
 		if(A.reagents && A.reagents.has_reagent("water")) //blesses all the water in the holder
 			to_chat(user, "<span class='notice'>You bless [A].</span>")
 			var/water2holy = A.reagents.get_reagent_amount("water")

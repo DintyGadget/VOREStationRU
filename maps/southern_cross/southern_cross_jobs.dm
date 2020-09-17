@@ -9,12 +9,12 @@ var/const/access_explorer = 43
 
 /datum/access/pilot
 	id = access_pilot
-	desc = "Pilot"
+	desc = "Пилот"
 	region = ACCESS_REGION_SUPPLY
 
 /datum/access/explorer
 	id = access_explorer
-	desc = "Explorer"
+	desc = "Искатель"
 	region = ACCESS_REGION_GENERAL
 
 //SC Jobs
@@ -44,7 +44,7 @@ var/const/access_explorer = 43
 	ideal_character_age = 50 // Because 70 is a tad on the old side
 
 	outfit_type = /decl/hierarchy/outfit/job/captain
-	alt_titles = list("Site Manager", "Overseer")
+	alt_titles = list("Директор колонии", "Overseer")
 
 /datum/job/captain/get_access()
 	return get_all_station_access()
@@ -56,7 +56,7 @@ var/const/access_explorer = 43
 	sorting_order = 2 // Same as cargo in importance.
 
 /datum/job/pilot
-	title = "Pilot"
+	title = "Пилот"
 	flag = PILOT
 	departments = list(DEPARTMENT_PLANET)
 	department_flag = CIVILIAN
@@ -73,7 +73,7 @@ var/const/access_explorer = 43
 	job_description = "A Pilot flies one of the shuttles between the Southern Cross and the outpost on Sif."
 
 /datum/job/explorer
-	title = "Explorer"
+	title = "Искатель"
 	flag = EXPLORER
 	departments = list(DEPARTMENT_PLANET)
 	department_flag = CIVILIAN

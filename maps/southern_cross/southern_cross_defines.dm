@@ -323,6 +323,6 @@
 
 /obj/machinery/suit_cycler/pilot
 	name = "Pilot suit cycler"
-	model_text = "Pilot"
+	model_text = "Пилот"
 	req_access = null
 	req_one_access = list(access_pilot,access_explorer)

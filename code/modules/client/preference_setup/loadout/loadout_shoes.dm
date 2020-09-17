@@ -170,7 +170,7 @@
 /datum/gear/shoes/boots/winter/security
 	display_name = "security winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
+	allowed_roles = list("Офицер безопасности", "Глава безопасности", "Надзиратель", "Детектив")
 
 /datum/gear/shoes/boots/winter/science
 	display_name = "science winter boots"
@@ -179,7 +179,7 @@
 /datum/gear/shoes/boots/winter/command
 	display_name = "site manager's winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/command
-	allowed_roles = list("Site Manager")
+	allowed_roles = list("Директор колонии")
 
 /datum/gear/shoes/boots/winter/engineering
 	display_name = "engineering winter boots"

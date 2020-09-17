@@ -696,7 +696,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 			if(message) //They put a message
 				message = sanitize(message, 500, extra = 0)
-				global_announcer.autosay("[message]", "[sender]", "[channel == "Common" ? null : channel]") //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.
+				global_announcer.autosay("[message]", "[sender]", "[channel == "Îáùèé" ? null : channel]") //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.
 				log_admin("Intercom: [key_name(usr)] : [sender]:[message]")
 
 	feedback_add_details("admin_verb","IN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
@@ -781,11 +781,11 @@ var/datum/announcement/minor/admin_min_announcer = new
 			var/this_sender = decomposed[i]
 			var/this_message = decomposed[++i]
 			var/this_wait = decomposed[++i]
-			global_announcer.autosay("[this_message]", "[this_sender]", "[channel == "Common" ? null : channel]") //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.
+			global_announcer.autosay("[this_message]", "[this_sender]", "[channel == "Îáùèé" ? null : channel]") //Common is a weird case, as it's not a "channel", it's just talking into a radio without a channel set.
 			sleep(this_wait SECONDS)
 
 /datum/admins/proc/toggleooc()
-	set category = "Ğ¡ĞµÑ€Ğ²ĞµÑ€"
+	set category = "Îáùèé"
 	set desc="Globally Toggles OOC"
 	set name="Toggle OOC"
 

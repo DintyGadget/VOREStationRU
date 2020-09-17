@@ -218,7 +218,7 @@ var/global/list/PDA_Manifest = list()
 			heads[++heads.len] = list("name" = name, "rank" = rank, "active" = isactive)
 			department = 1
 			depthead = 1
-			if(rank=="Site Manager" && heads.len != 1)
+			if(rank=="Директор колонии" && heads.len != 1)
 				heads.Swap(1,heads.len)
 
 		if(SSjob.is_job_in_department(real_rank, DEPARTMENT_SECURITY))
@@ -332,7 +332,7 @@ var/global/list/PDA_Manifest = list()
 		var/datum/job/J = SSjob.get_job(assignment)
 		hidden = J?.offmap_spawn
 
-		/* Note: Due to cached_character_icon, a number of emergent properties occur due to the initialization 
+		/* Note: Due to cached_character_icon, a number of emergent properties occur due to the initialization
 		* order of readied-up vs latejoiners. Namely, latejoiners will get a uniform in their datacore picture, but readied-up will
 		* not. This is due to the fact that SSticker calls data_core.manifest_inject() inside of ticker/proc/create_characters(),
 		* but does not equip them until ticker/proc/equip_characters(), which is called later. So, this proc is literally called before

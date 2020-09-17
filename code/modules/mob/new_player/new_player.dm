@@ -29,19 +29,19 @@
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = "<div align='center'>"
 	output +="<hr>"
-	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>РќР°СЃС‚СЂРѕРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°</A></p>"
+	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Настроить персонажа</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <span class='linkOn'><b>Р“РѕС‚РѕРІ</b></span> | <a href='byond://?src=\ref[src];ready=0'>РќРµ РіРѕС‚РѕРІ</a> \]</p>"
+			output += "<p>\[ <span class='linkOn'><b>Готов</b></span> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Р“РѕС‚РѕРІ</a> | <span class='linkOn'><b>РќРµ РіРѕС‚РѕРІ</b></span> \]</p>"
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Готов</a> | <span class='linkOn'><b>Не готов</b></span> \]</p>"
 
 	else
-		output += "<a href='byond://?src=\ref[src];manifest=1'>РўРµРєСѓС‰РёР№ СЌРєРёРїР°Р¶</A><br><br>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Р’СЃС‚СѓРїРёС‚СЊ РІ РёРіСЂСѓ!</A></p>"
+		output += "<a href='byond://?src=\ref[src];manifest=1'>Текущий экипаж</A><br><br>"
+		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Вступить в игру!</A></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>РќР°Р±Р»СЋРґР°С‚СЊ</A></p>"
+	output += "<p><a href='byond://?src=\ref[src];observe=1'>Наблюдать</A></p>"
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -63,9 +63,9 @@
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
 
 	if(client.check_for_new_server_news())
-		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>РџРѕРєР°Р·Р°С‚СЊ РЅРѕРІРѕСЃС‚Рё</A> (NEW!)</b></p>"
+		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Показать новости</A> (NEW!)</b></p>"
 	else
-		output += "<p><a href='byond://?src=\ref[src];shownews=1'>РџРѕРєР°Р·Р°С‚СЊ РЅРѕРІРѕСЃС‚Рё</A></p>"
+		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Показать новости</A></p>"
 
 	if(SSsqlite.can_submit_feedback(client))
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
@@ -81,23 +81,23 @@
 	..()
 
 	if(statpanel("Lobby") && SSticker)
-		stat("Р РµР¶РёРј:", SSticker.hide_mode ? "РЎРµРєСЂРµС‚РЅС‹Р№" : "[config.mode_names[master_mode]]")
+		stat("Режим:", SSticker.hide_mode ? "Секретный" : "[config.mode_names[master_mode]]")
 
 		if(SSvote.mode)
-			stat("Р“РѕР»РѕСЃРѕРІР°РЅРёРµ: [capitalize(SSvote.mode)]", "Р’СЂРµРјРµРЅРё РѕСЃС‚Р°Р»РѕСЃСЊ: [SSvote.time_remaining] s")
+			stat("Голосование: [capitalize(SSvote.mode)]", "Времени осталось: [SSvote.time_remaining] s")
 
 		if(SSticker.current_state == GAME_STATE_INIT)
-			stat("Р”Рѕ РЅР°С‡Р°Р»Р° РёРіСЂС‹:", "РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РЎРµСЂРІРµСЂР°")
+			stat("До начала игры:", "Инициализация Сервера")
 
 		else if(SSticker.current_state == GAME_STATE_PREGAME)
-			stat("Р”Рѕ РЅР°С‡Р°Р»Р° РёРіСЂС‹:", "[round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (РћРўР›РћР–Р•РќРћ)"]")
-			stat("РРіСЂРѕРєРё: [totalPlayers]", "Р“РѕС‚РѕРІС‹Рµ РёРіСЂРѕРєРё: [totalPlayersReady]")
+			stat("До начала игры:", "[round(SSticker.pregame_timeleft,1)][round_progressing ? "" : " (ОТЛОЖЕНО)"]")
+			stat("Игроки: [totalPlayers]", "Готовые игроки: [totalPlayersReady]")
 			totalPlayers = 0
 			totalPlayersReady = 0
 			var/datum/job/refJob = null
 			for(var/mob/new_player/player in player_list)
 				refJob = player.client.prefs.get_highest_job()
-				stat("[player.key]", (player.ready)?("(РРіСЂР°РµС‚ Р·Р°: [(refJob)?(refJob.title):("Unknown")])"):(null))
+				stat("[player.key]", (player.ready)?("(Играет за: [(refJob)?(refJob.title):("Unknown")])"):(null))
 				totalPlayers++
 				if(player.ready)totalPlayersReady++
 
@@ -122,7 +122,7 @@
 	if(href_list["observe"])
 		var/alert_time = ticker?.current_state <= GAME_STATE_SETTING_UP ? 1 : round(config.respawn_time/10/60)
 
-		if(alert(src,"Р’С‹ СѓРІРµСЂРµРЅС‹, С‡С‚Рѕ С…РѕС‚РёС‚Рµ РЅР°Р±Р»СЋРґР°С‚СЊ? Р’Р°Рј РїСЂРёРґРµС‚СЃСЏ РїРѕРґРѕР¶РґР°С‚СЊ [alert_time] РјРёРЅСѓС‚, РїСЂРµР¶РґРµ С‡РµРј РІС‹ СЃРјРѕР¶РµС‚Рµ РІРѕР№С‚Рё РІ РёРіСЂСѓ!","Player Setup","Р”Р°","РќРµС‚") == "Р”Р°")
+		if(alert(src,"Вы уверены, что хотите наблюдать? Вам придется подождать [alert_time] минут, прежде чем вы сможете войти в игру!","Player Setup","Да","Нет") == "Да")
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
@@ -140,10 +140,10 @@
 			close_spawn_windows()
 			var/obj/O = locate("landmark*Observer-Start")
 			if(istype(O))
-				to_chat(src, "<span class='notice'>РџРµСЂРµС…РѕРґРёРј.</span>")
+				to_chat(src, "<span class='notice'>Переходим.</span>")
 				observer.forceMove(O.loc)
 			else
-				to_chat(src, "<span class='danger'>РќРµ СѓРґР°Р»РѕСЃСЊ РЅР°Р№С‚Рё С‚РѕС‡РєСѓ РїРѕСЏРІР»РµРЅРёСЏ РЅР°Р±Р»СЋРґР°С‚РµР»СЏ. РСЃРїРѕР»СЊР·СѓР№С‚Рµ РєРѕРјР°РЅРґСѓ *Teleport, С‡С‚РѕР±С‹ РїРµСЂРµР№С‚Рё Рє РєР°СЂС‚Рµ СЃС‚Р°РЅС†РёРё.</span>")
+				to_chat(src, "<span class='danger'>Не удалось найти точку появления наблюдателя. Используйте команду *Teleport, чтобы перейти к карте станции.</span>")
 
 			announce_ghost_joinleave(src)
 
@@ -162,14 +162,14 @@
 	if(href_list["late_join"])
 
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-			to_chat(usr, "<font color='red'>Р Р°СѓРЅРґ Р»РёР±Рѕ РµС‰Рµ РЅРµ РЅР°С‡Р°Р»СЃСЏ, Р»РёР±Рѕ СѓР¶Рµ Р·Р°РєРѕРЅС‡РёР»СЃСЏ...</font>")
+			to_chat(usr, "<font color='red'>Раунд либо еще не начался, либо уже закончился...</font>")
 			return
 
 		var/time_till_respawn = time_till_respawn()
 		if(time_till_respawn == -1) // Special case, never allowed to respawn
-			to_chat(usr, "<span class='warning'>Р’РѕР·СЂРѕР¶РґРµРЅРёРµ РЅРµ РґРѕРїСѓСЃРєР°РµС‚СЃСЏ!</span>")
+			to_chat(usr, "<span class='warning'>Возрождение не допускается!</span>")
 		else if(time_till_respawn) // Nonzero time to respawn
-			to_chat(usr, "<span class='warning'>Р’С‹ РЅРµ РјРѕР¶РµС‚Рµ РІРѕР·СЂРѕРґРёС‚СЊСЃСЏ! Р’Р°Рј РЅСѓР¶РЅРѕ РїРѕРґРѕР¶РґР°С‚СЊ РµС‰Рµ [round(time_till_respawn/10/60, 0.1)] РјРёРЅСѓС‚.</span>")
+			to_chat(usr, "<span class='warning'>Вы не можете возродиться! Вам нужно подождать еще [round(time_till_respawn/10/60, 0.1)] минут.</span>")
 			return
 /*
 		if(client.prefs.species != "Human" && !check_rights(R_ADMIN, 0)) //VORESTATION EDITS: THE COMMENTED OUT AREAS FROM LINE 154 TO 178
@@ -198,17 +198,17 @@
 			to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 			return
 		else if(ticker && ticker.mode && ticker.mode.explosion_in_progress)
-			to_chat(usr, "<span class='danger'>РЎС‚Р°РЅС†РёСЏ РІ РЅР°СЃС‚РѕСЏС‰РµРµ РІСЂРµРјСЏ РІР·СЂС‹РІР°РµС‚СЃСЏ. РџСЂРёСЃРѕРµРґРёРЅСЏС‚СЊСЃСЏ СЏРІРЅРѕ РЅРµ СЃС‚РѕРёС‚.</span>")
+			to_chat(usr, "<span class='danger'>Станция в настоящее время взрывается. Присоединяться явно не стоит.</span>")
 			return
 
 		if(!is_alien_whitelisted(src, GLOB.all_species[client.prefs.species]))
-			alert(src, "Р’ РЅР°СЃС‚РѕСЏС‰РµРµ РІСЂРµРјСЏ РІС‹ РЅРµ РЅР°С…РѕРґРёС‚РµСЃСЊ РІ Р±РµР»РѕРј СЃРїРёСЃРєРµ, Рё РјРѕР¶РµС‚Рµ РёРіСЂР°С‚СЊ Р·Р° [client.prefs.species].")
+			alert(src, "В настоящее время вы не находитесь в белом списке, и можете играть за [client.prefs.species].")
 			return 0
 
 		var/datum/species/S = GLOB.all_species[client.prefs.species]
 
 		if(!(S.spawn_flags & SPECIES_CAN_JOIN))
-			alert(src,"Р’Р°С€Р° С‚РµРєСѓС‰Р°СЏ СЂР°СЃС‚Р°, [client.prefs.species], РЅРµРґРѕСЃС‚СѓРїРЅР° РґР»СЏ РёРіСЂС‹ РЅР° СЃС‚Р°РЅС†РёРё.")
+			alert(src,"Ваша текущая раста, [client.prefs.species], недоступна для игры на станции.")
 			return 0
 
 		AttemptLateSpawn(href_list["SelectedJob"],client.prefs.spawnpoint)
@@ -249,7 +249,7 @@
 			var/sql = "INSERT INTO erro_privacy VALUES (null, Now(), '[src.ckey]', '[option]')"
 			var/DBQuery/query_insert = dbcon.NewQuery(sql)
 			query_insert.Execute()
-			to_chat(usr, "<b>РЎРїР°СЃРёР±Рѕ Р·Р° РІР°С€ РіРѕР»РѕСЃ!</b>")
+			to_chat(usr, "<b>Спасибо за ваш голос!</b>")
 			usr << browse(null,"window=privacypoll")
 
 	if(!ready && href_list["preference"])
@@ -385,13 +385,13 @@
 	if (src != usr)
 		return 0
 	if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
-		to_chat(usr, "<font color='red'>Р Р°СѓРЅРґ Р»РёР±Рѕ РµС‰Рµ РЅРµ РЅР°С‡Р°Р»СЃСЏ, Р»РёР±Рѕ СѓР¶Рµ Р·Р°РєРѕРЅС‡РёР»СЃСЏ...</font>")
+		to_chat(usr, "<font color='red'>Раунд либо еще не начался, либо уже закончился...</font>")
 		return 0
 	if(!config.enter_allowed)
 		to_chat(usr, "<span class='notice'>There is an administrative lock on entering the game!</span>")
 		return 0
 	if(!IsJobAvailable(rank))
-		alert(src,"[rank] РЅРµРґРѕСЃС‚СѓРїРµРЅ РІ С‚РµРєСѓС‰РµР№ РјРѕРјРµРЅС‚. РџРѕРїСЂРѕР±СѓР№С‚Рµ РїРѕР·Р¶Рµ.")
+		alert(src,"[rank] недоступен в текущей момент. Попробуйте позже.")
 		return 0
 	if(!spawn_checks_vr(rank)) return 0 // VOREStation Insert
 	if(!client)
@@ -405,7 +405,7 @@
 
 	var/turf/T = join_props["turf"]
 	var/join_message = join_props["msg"]
-	var/announce_channel = join_props["channel"] || "Common"
+	var/announce_channel = join_props["channel"] || "Общий"
 
 	if(!T || !join_message)
 		return 0
@@ -476,20 +476,20 @@
 	var/name = client.prefs.be_random_name ? "friend" : client.prefs.real_name
 
 	var/dat = "<html><meta charset=\"utf-8\"><body><center>"
-	dat += "<b>РџСЂРёРІРµС‚, [name].<br></b>"
-	dat += "Р Р°СѓРЅРґ РґР»РёС‚СЃСЏ: [roundduration2text()]<br>"
+	dat += "<b>Привет, [name].<br></b>"
+	dat += "Раунд длится: [roundduration2text()]<br>"
 
 	if(emergency_shuttle) //In case NanoTrasen decides reposess CentCom's shuttles.
 		if(emergency_shuttle.going_to_centcom()) //Shuttle is going to CentCom, not recalled
-			dat += "<font color='red'><b>РЎС‚Р°РЅС†РёСЏ Р±С‹Р»Р° СЌРІР°РєСѓРёСЂРѕРІР°РЅР°.</b></font><br>"
+			dat += "<font color='red'><b>Станция была эвакуирована.</b></font><br>"
 		if(emergency_shuttle.online())
 			if (emergency_shuttle.evac)	// Emergency shuttle is past the point of no recall
-				dat += "<font color='red'>Р’ РЅР°СЃС‚РѕСЏС‰РµРµ РІСЂРµРјСЏ СЃС‚Р°РЅС†РёСЏ РїСЂРѕС…РѕРґРёС‚ РїСЂРѕС†РµРґСѓСЂСѓ СЌРІР°РєСѓР°С†РёРё.</font><br>"
+				dat += "<font color='red'>В настоящее время станция проходит процедуру эвакуации.</font><br>"
 			else						// Crew transfer initiated
-				dat += "<font color='red'>Р’ РЅР°СЃС‚РѕСЏС‰РµРµ РІСЂРµРјСЏ РЅР° СЃС‚Р°РЅС†РёРё РїСЂРѕС…РѕРґРёС‚ РїСЂРѕС†РµРґСѓСЂР° С‚СЂР°РЅСЃС„РµСЂР° СЌРєРёРїР°Р¶Р°.</font><br>"
+				dat += "<font color='red'>В настоящее время на станции проходит процедура трансфера экипажа.</font><br>"
 
-	dat += "Р’С‹Р±РµСЂРёС‚Рµ РїСЂРѕС„РµСЃСЃРёСЋ (РµСЃР»Рё РІРѕР·РјРѕР¶РЅРѕ):<br>"
-	dat += "<a href='byond://?src=\ref[src];hidden_jobs=1'>[show_hidden_jobs ? "РЎРєСЂС‹С‚СЊ":"РџРѕРєР°Р·Р°С‚СЊ"] РїСЂРѕС„РµСЃСЃРёРё.</a><br>"
+	dat += "Выберите профессию (если возможно):<br>"
+	dat += "<a href='byond://?src=\ref[src];hidden_jobs=1'>[show_hidden_jobs ? "Скрыть":"Показать"] профессии.</a><br>"
 
 	var/deferred = ""
 	for(var/datum/job/job in job_master.occupations)
@@ -501,14 +501,14 @@
 			if(!(client.prefs.GetJobDepartment(job, 1) & job.flag))
 				if(!(client.prefs.GetJobDepartment(job, 2) & job.flag))
 					if(!(client.prefs.GetJobDepartment(job, 3) & job.flag))
-						if(!show_hidden_jobs && job.title != "Assistant")	// Assistant is always an option
+						if(!show_hidden_jobs && job.title != "Ассистент")	// Assistant is always an option
 							continue
 			var/active = 0
 			// Only players with the job assigned and AFK for less than 10 minutes count as active
 			for(var/mob/M in player_list) if(M.mind && M.client && M.mind.assigned_role == job.title && M.client.inactivity <= 10 MINUTES)
 				active++
 
-			var/string = "<a href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions]) (РђРєС‚РёРІРЅРѕ: [active])</a><br>"
+			var/string = "<a href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions]) (Активно: [active])</a><br>"
 
 			if(job.offmap_spawn) //At the bottom
 				deferred += string

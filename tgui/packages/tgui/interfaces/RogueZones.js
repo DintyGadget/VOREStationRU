@@ -22,33 +22,33 @@ export const RogueZones = (props, context) => {
       <Window.Content>
         <Section title="Current Area">
           <LabeledList>
-            <LabeledList.Item label="Mineral Content">
+            <LabeledList.Item label="Содержание руды">
               {difficulty}
             </LabeledList.Item>
-            <LabeledList.Item label="Shuttle Location" buttons={
+            <LabeledList.Item label="Местополежние шаттла" buttons={
               can_recall_shuttle && (
                 <Button
                   color="bad"
                   icon="rocket"
                   onClick={() => act("recall_shuttle")}>
-                  Recall Shuttle
+                  Вызвать шаттл
                 </Button>
               ) || null
             }>
               {shuttle_location}
             </LabeledList.Item>
             {occupied && (
-              <LabeledList.Item color="bad" labelColor="bad" label="Personnel">
-                WARNING: Area occupied by {occupied} personnel!
+              <LabeledList.Item color="bad" labelColor="bad" label="Персонал">
+                ВНИМАНИЕ: Зона занята персоналом {occupied}!
               </LabeledList.Item>
             ) || (
-              <LabeledList.Item label="Personnel" color="good">
-                No personnel detected.
+              <LabeledList.Item label="Персонал" color="good">
+                Персонал не обнаружен.
               </LabeledList.Item>
             )}
           </LabeledList>
         </Section>
-        <Section title="Scanner" buttons={
+        <Section title="Сканер" buttons={
           <Button
             disabled={!scan_ready}
             fluid
@@ -69,13 +69,13 @@ export const RogueZones = (props, context) => {
                 }} />
             </LabeledList.Item>
             {scanning && (
-              <LabeledList.Item label="Scanning">
-                In progress.
+              <LabeledList.Item label="Сканер">
+                В ходе выполнения.
               </LabeledList.Item>
             ) || null}
             {(updated && !scanning) && (
               <LabeledList.Item label="Info">
-                Updated shuttle destination!
+                Обновлено направление шаттла!
               </LabeledList.Item>
             ) || null}
             {debug && (

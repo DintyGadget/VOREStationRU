@@ -15,8 +15,8 @@
 /datum/job/scientist
 	spawn_positions = 5
 	pto_type = PTO_SCIENCE
-	alt_titles = list("Xenoarchaeologist" = /datum/alt_title/xenoarch, "Anomalist" = /datum/alt_title/anomalist, \
-						"Phoron Researcher" = /datum/alt_title/phoron_research, "Circuit Designer" = /datum/alt_title/circuit_designer)
+	alt_titles = list("Ксеноархеолог" = /datum/alt_title/xenoarch, "Аномалист" = /datum/alt_title/anomalist, \
+						"Исследователь Форона" = /datum/alt_title/phoron_research, "Конструктор схем" = /datum/alt_title/circuit_designer)
 
 
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch, access_xenobotany)
@@ -24,7 +24,7 @@
 
 
 /datum/alt_title/circuit_designer
-	title = "Circuit Designer"
+	title = "Конструктор схем"
 	title_blurb = "A Circuit Designer is a Scientist whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
 				   They work to create various useful devices using the capabilities of integrated circuitry."
 
@@ -40,14 +40,14 @@
 //			Xenobotanist
 //////////////////////////////////
 /datum/job/xenobotanist
-	title = "Xenobotanist"
+	title = "Ксеноботаник"
 	flag = XENOBOTANIST
 	departments = list(DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Research Director"
+	supervisors = "Директором Исследований"
 	selection_color = "#633D63"
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobotany, access_hydroponics)

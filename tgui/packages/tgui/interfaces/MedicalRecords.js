@@ -129,7 +129,7 @@ const MedicalRecordsList = (_properties, context) => {
     <Fragment>
       <Input
         fluid
-        placeholder="Search by Name, DNA, or ID"
+        placeholder="Поиск по Ф.И, ДНК, или ID"
         onChange={(_event, value) => act('search', { t1: value })}
       />
       <Box mt="0.5rem">
@@ -153,18 +153,18 @@ const MedicalRecordsMaintenance = (_properties, context) => {
     <Fragment>
       <Button
         icon="download"
-        content="Backup to Disk"
+        content="Резервное копирование на диск"
         disabled
       /><br />
       <Button
         icon="upload"
-        content="Upload from Disk"
+        content="Загрузить с диска"
         my="0.5rem"
         disabled
       /> <br />
       <Button.Confirm
         icon="trash"
-        content="Delete All Medical Records"
+        content="Удалить все записи мед."
         onClick={() => act('del_all')}
       />
     </Fragment>
@@ -179,17 +179,17 @@ const MedicalRecordsView = (_properties, context) => {
   } = data;
   return (
     <Fragment>
-      <Section title="General Data" level={2} mt="-6px">
+      <Section title="Общие данные" level={2} mt="-6px">
         <MedicalRecordsViewGeneral />
       </Section>
-      <Section title="Medical Data" level={2}>
+      <Section title="Медицинские данные" level={2}>
         <MedicalRecordsViewMedical />
       </Section>
-      <Section title="Actions" level={2}>
+      <Section title="Действия" level={2}>
         <Button.Confirm
           icon="trash"
           disabled={!!medical.empty}
-          content="Delete Medical Record"
+          content="Удалить запись"
           color="bad"
           onClick={() => act('del_r')}
         />
@@ -197,13 +197,13 @@ const MedicalRecordsView = (_properties, context) => {
           icon={printing ? 'spinner' : 'print'}
           disabled={printing}
           iconSpin={!!printing}
-          content="Print Entry"
+          content="Печать страницы"
           ml="0.5rem"
           onClick={() => act('print_p')}
         /><br />
         <Button
           icon="arrow-left"
-          content="Back"
+          content="Назад"
           mt="0.5rem"
           onClick={() => act('screen', { screen: 2 })}
         />
@@ -220,7 +220,7 @@ const MedicalRecordsViewGeneral = (_properties, context) => {
   if (!general || !general.fields) {
     return (
       <Box color="bad">
-        General records lost!
+        Общие записи утеряны!
       </Box>
     );
   }
@@ -260,7 +260,7 @@ const MedicalRecordsViewGeneral = (_properties, context) => {
                   '-ms-interpolation-mode': 'nearest-neighbor',
                 }}
               /><br />
-              Photo #{i + 1}
+              Фото #{i + 1}
             </Box>
           ))
         )}
@@ -280,7 +280,7 @@ const MedicalRecordsViewMedical = (_properties, context) => {
         Medical records lost!
         <Button
           icon="pen"
-          content="New Record"
+          content="Новая запись"
           ml="0.5rem"
           onClick={() => act('new')}
         />
@@ -304,7 +304,7 @@ const MedicalRecordsViewMedical = (_properties, context) => {
           </LabeledList.Item>
         ))}
       </LabeledList>
-      <Section title="Comments/Log" level={2}>
+      <Section title="Комментирование/Логирование" level={2}>
         {medical.comments.length === 0 ? (
           <Box color="label">
             No comments found.
@@ -327,7 +327,7 @@ const MedicalRecordsViewMedical = (_properties, context) => {
 
         <Button
           icon="comment-medical"
-          content="Add Entry"
+          content="Добавить запись"
           color="good"
           mt="0.5rem"
           mb="0"

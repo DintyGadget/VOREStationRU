@@ -34,7 +34,7 @@ var/list/event_last_fired = list()
 	//var/security_count = number_active_with_role("Security")
 	//var/medical_count = number_active_with_role("Medical")
 	//var/AI_count = number_active_with_role("AI")
-	//var/janitor_count = number_active_with_role("Janitor")
+	//var/janitor_count = number_active_with_role("Уборщик")
 
 	// Maps event names to event chances
 	// For each chance, 100 represents "normal likelihood", anything below 100 is "reduced likelihood", anything above 100 is "increased likelihood"
@@ -57,16 +57,16 @@ var/list/event_last_fired = list()
 
 
 	possibleEvents[/datum/event/carp_migration] = 20 + 10 * active_with_role["Engineer"]
-	possibleEvents[/datum/event/brand_intelligence] = 20 + 25 * active_with_role["Janitor"]
+	possibleEvents[/datum/event/brand_intelligence] = 20 + 25 * active_with_role["Уборщик"]
 
 	possibleEvents[/datum/event/rogue_drone] = 5 + 25 * active_with_role["Engineer"] + 25 * active_with_role["Security"]
-	possibleEvents[/datum/event/infestation] = 100 + 100 * active_with_role["Janitor"]
+	possibleEvents[/datum/event/infestation] = 100 + 100 * active_with_role["Уборщик"]
 
-	possibleEvents[/datum/event/communications_blackout] = 50 + 25 * active_with_role["AI"] + active_with_role["Scientist"] * 25
-	possibleEvents[/datum/event/ionstorm] = active_with_role["AI"] * 25 + active_with_role["Cyborg"] * 25 + active_with_role["Engineer"] * 10 + active_with_role["Scientist"] * 5
+	possibleEvents[/datum/event/communications_blackout] = 50 + 25 * active_with_role["AI"] + active_with_role["Ученый"] * 25
+	possibleEvents[/datum/event/ionstorm] = active_with_role["AI"] * 25 + active_with_role["Cyborg"] * 25 + active_with_role["Engineer"] * 10 + active_with_role["Ученый"] * 5
 	possibleEvents[/datum/event/grid_check] = 25 + 10 * active_with_role["Engineer"]
-	possibleEvents[/datum/event/electrical_storm] = 15 * active_with_role["Janitor"] + 5 * active_with_role["Engineer"]
-	possibleEvents[/datum/event/wallrot] = 30 * active_with_role["Engineer"] + 50 * active_with_role["Gardener"]
+	possibleEvents[/datum/event/electrical_storm] = 15 * active_with_role["Уборщик"] + 5 * active_with_role["Engineer"]
+	possibleEvents[/datum/event/wallrot] = 30 * active_with_role["Engineer"] + 50 * active_with_role["Садовник"]
 
 	if(!spacevines_spawned)
 		possibleEvents[/datum/event/spacevine] = 10 + 5 * active_with_role["Engineer"]
@@ -182,11 +182,11 @@ var/list/event_last_fired = list()
 	active_with_role["Engineer"] = 0
 	active_with_role["Medical"] = 0
 	active_with_role["Security"] = 0
-	active_with_role["Scientist"] = 0
+	active_with_role["Ученый"] = 0
 	active_with_role["AI"] = 0
 	active_with_role["Cyborg"] = 0
-	active_with_role["Janitor"] = 0
-	active_with_role["Gardener"] = 0
+	active_with_role["Уборщик"] = 0
+	active_with_role["Садовник"] = 0
 
 	for(var/mob/M in player_list)
 		if(!M.mind || !M.client || M.client.is_afk(10 MINUTES)) // longer than 10 minutes AFK counts them as inactive
@@ -204,7 +204,7 @@ var/list/event_last_fired = list()
 				else if(istype(R.module, /obj/item/weapon/robot_module/robot/medical))
 					active_with_role["Medical"]++
 				else if(istype(R.module, /obj/item/weapon/robot_module/robot/research))
-					active_with_role["Scientist"]++
+					active_with_role["Ученый"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING))
 			active_with_role["Engineer"]++
@@ -216,7 +216,7 @@ var/list/event_last_fired = list()
 			active_with_role["Security"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH))
-			active_with_role["Scientist"]++
+			active_with_role["Ученый"]++
 
 		if(M.mind.assigned_role == "AI")
 			active_with_role["AI"]++
@@ -224,10 +224,10 @@ var/list/event_last_fired = list()
 		if(M.mind.assigned_role == "Cyborg")
 			active_with_role["Cyborg"]++
 
-		if(M.mind.assigned_role == "Janitor")
-			active_with_role["Janitor"]++
+		if(M.mind.assigned_role == "Уборщик")
+			active_with_role["Уборщик"]++
 
-		if(M.mind.assigned_role == "Gardener")
-			active_with_role["Gardener"]++
+		if(M.mind.assigned_role == "Садовник")
+			active_with_role["Садовник"]++
 
 	return active_with_role

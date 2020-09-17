@@ -107,7 +107,7 @@ const MessageMonitorLogin = (props, context) => {
   } = data;
 
   return (
-    <FullscreenNotice title="Welcome">
+    <FullscreenNotice title="Добро пожаловать">
       <Box fontSize="1.5rem" bold>
         <Icon
           name="exclamation-triangle"
@@ -118,9 +118,9 @@ const MessageMonitorLogin = (props, context) => {
         Unauthorized
       </Box>
       <Box color="label" my="1rem">
-        Decryption Key:
+        Ключ расшифровки:
         <Input
-          placeholder="Decryption Key"
+          placeholder="Ключ расшифровки"
           ml="0.5rem"
           onChange={(e, val) => act("auth", { key: val })}
         />
@@ -133,8 +133,8 @@ const MessageMonitorLogin = (props, context) => {
         />
       )}
       <Box color="label">
-        Please authenticate with the server
-        in order to show additional options.
+        Пожалуйста, аутентифицируйтесь на сервере,
+        чтобы показать дополнительные опции.
       </Box>
     </FullscreenNotice>
   );

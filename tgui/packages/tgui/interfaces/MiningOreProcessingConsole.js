@@ -26,26 +26,26 @@ export const MiningOreProcessingConsole = (props, context) => {
               icon="arrow-right"
               mr={1}
               onClick={() => act("insert")}>
-              Insert ID
+              Вставьте ID
             </Button>
-            in order to claim points.
+            для того чтобы претендовать на очки.
           </Box>
         )} />
-        <Section title="Status" buttons={
+        <Section title="Состояние" buttons={
           <Button
             icon="power-off"
             selected={power}
             onClick={() => act("power")}>
-            {power ? "Smelting" : "Not Smelting"}
+            {power ? "Плавка" : "Ничего"}
           </Button>
         }>
           <LabeledList>
-            <LabeledList.Item label="Current unclaimed points" buttons={
+            <LabeledList.Item label="Текущие невостреб. баллы" buttons={
               <Button
                 disabled={unclaimedPoints < 1}
                 icon="download"
                 onClick={() => act("claim")}>
-                Claim
+                Получить
               </Button>
             }>
               <AnimatedNumber value={unclaimedPoints} />
@@ -60,10 +60,10 @@ export const MiningOreProcessingConsole = (props, context) => {
 
 // ORDER IS IMPORTANT HERE.
 const processingOptions = [
-  "Not Processing",
-  "Smelting",
-  "Compressing",
-  "Alloying",
+  "Не обрабатывая",
+  "Плавление",
+  "Компрессия",
+  "Сплавление",
 ];
 
 // Higher in the list == closer to top
@@ -104,12 +104,12 @@ const MOPCOres = (props, context) => {
     power,
   } = data;
   return (
-    <Section title="Ore Processing Controls" buttons={
+    <Section title="Управление переработкой руды" buttons={
       <Button
         icon={showAllOres ? "toggle-on" : "toggle-off"}
         selected={showAllOres}
         onClick={() => act("showAllOres")}>
-        {showAllOres ? "All Ores" : "Ores in Machine"}
+        {showAllOres ? "Все руды" : "Руды в машине"}
       </Button>
     }>
       <LabeledList>
@@ -136,7 +136,7 @@ const MOPCOres = (props, context) => {
           </LabeledList.Item>
         )) || (
           <Box color="bad" textAlign="center">
-            No ores in machine.
+            Руд в машине нет.
           </Box>
         )}
       </LabeledList>

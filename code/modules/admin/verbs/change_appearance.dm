@@ -90,12 +90,12 @@
 	if(new_fstyle)
 		M.f_style = new_fstyle
 
-	var/new_gender = alert(usr, "Please select gender.", "Character Generation", "Male", "Female", "Neuter")
+	var/new_gender = alert(usr, "Please select gender.", "Character Generation", "Мужской", "Женский", "Бесполый")
 	if (new_gender)
-		if(new_gender == "Male")
+		if(new_gender == "Мужской")
 			M.gender = MALE
 			M.dna.SetUIState(DNA_UI_GENDER, FALSE)
-		else if (new_gender == "Female")
+		else if (new_gender == "Женский")
 			M.gender = FEMALE
 			M.dna.SetUIState(DNA_UI_GENDER, TRUE)
 		else

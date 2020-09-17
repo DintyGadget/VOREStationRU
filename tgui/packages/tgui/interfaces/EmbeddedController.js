@@ -223,28 +223,28 @@ const EscapePodStatus = (props, context) => {
 
   const statusToHtml = {
     "docked": <Armed />,
-    "undocking": <Box color="average">EJECTING-STAND CLEAR!</Box>,
-    "undocked": <Box color="grey">POD EJECTED</Box>,
-    "docking": <Box color="good">INITIALIZING...</Box>,
+    "undocking": <Box color="average">ОТПРАВКА-ЗАЙМИТЕ МЕСТА!</Box>,
+    "undocked": <Box color="grey">КАПСУЛА ОТПРАВИЛАСЬ</Box>,
+    "docking": <Box color="good">ИНИЦИАЛИЗАЦИЯ...</Box>,
   };
 
-  let dockHatch = <Box color="bad">ERROR</Box>;
+  let dockHatch = <Box color="bad">ОШИБКА</Box>;
 
   if (data.exterior_status.state === "open") {
-    dockHatch = <Box color="average">OPEN</Box>;
+    dockHatch = <Box color="average">ОТКРЫТ</Box>;
   } else if (data.exterior_status.lock === "unlocked") {
-    dockHatch = <Box color="average">UNSECURED</Box>;
+    dockHatch = <Box color="average">НЕ ЗАКРЕПЛЕН</Box>;
   } else if (data.exterior_status.lock === "locked") {
-    dockHatch = <Box color="good">SECURED</Box>;
+    dockHatch = <Box color="good">ЗАКРЕПЛЕН</Box>;
   }
 
   return (
     <Section>
       <LabeledList>
-        <LabeledList.Item label="Escape Pod Status">
+        <LabeledList.Item label="Статус шаттла">
           {statusToHtml[data.docking_status]}
         </LabeledList.Item>
-        <LabeledList.Item label="Docking Hatch">
+        <LabeledList.Item label="Стык. Люк">
           {dockHatch}
         </LabeledList.Item>
       </LabeledList>
@@ -262,7 +262,7 @@ const Armed = (props, context) => {
   return (
     data.armed
       ? <Box color="average">ARMED</Box>
-      : <Box color="good">SYSTEMS OK</Box>
+      : <Box color="good">СИСТЕМА В НОРМЕ</Box>
   );
 };
 
@@ -341,7 +341,7 @@ const AirlockConsoleAdvanced = (props, context) => {
       minValue: 0,
       maxValue: 202,
       value: data.external_pressure,
-      label: "External Pressure",
+      label: "Внешнее давление",
       textValue: data.external_pressure + " kPa",
       color: color,
     },
@@ -349,7 +349,7 @@ const AirlockConsoleAdvanced = (props, context) => {
       minValue: 0,
       maxValue: 202,
       value: data.chamber_pressure,
-      label: "Chamber Pressure",
+      label: "Давление в камере",
       textValue: data.chamber_pressure + " kPa",
       color: color,
     },
@@ -357,7 +357,7 @@ const AirlockConsoleAdvanced = (props, context) => {
       minValue: 0,
       maxValue: 202,
       value: data.internal_pressure,
-      label: "Internal Pressure",
+      label: "Внутреннее давление",
       textValue: data.internal_pressure + " kPa",
       color: color,
     },
@@ -366,12 +366,12 @@ const AirlockConsoleAdvanced = (props, context) => {
   return (
     <Fragment>
       <StatusDisplay bars={bars} />
-      <Section title="Controls">
+      <Section title="Контроль">
         <StandardControls />
         <Box>
           <Button
             icon="sync"
-            content="Purge"
+            content="Очистка"
             onClick={() => act('purge')} />
           <Button
             icon="lock-open"
@@ -406,7 +406,7 @@ const AirlockConsoleSimple = (props, context) => {
       minValue: 0,
       maxValue: 202,
       value: data.chamber_pressure,
-      label: "Chamber Pressure",
+      label: "Давление в камере",
       textValue: data.chamber_pressure + " kPa",
       color: (value => {
         return (value < 80 || value > 120) ? 'bad'
@@ -419,14 +419,14 @@ const AirlockConsoleSimple = (props, context) => {
   return (
     <Fragment>
       <StatusDisplay bars={bars} />
-      <Section title="Controls">
+      <Section title="Контроль">
         <StandardControls />
         <Box>
           <Button
             disabled={!data.processing}
             icon="ban"
             color="bad"
-            content="Abort"
+            content="Прервать"
             onClick={() => act('abort')} />
         </Box>
       </Section>
@@ -449,7 +449,7 @@ const AirlockConsolePhoron = (props, context) => {
       minValue: 0,
       maxValue: 202,
       value: data.chamber_pressure,
-      label: "Chamber Pressure",
+      label: "Давление в камере",
       textValue: data.chamber_pressure + " kPa",
       color: (value => {
         return (value < 80 || value > 120) ? 'bad'
@@ -461,7 +461,7 @@ const AirlockConsolePhoron = (props, context) => {
       minValue: 0,
       maxValue: 100,
       value: data.chamber_phoron,
-      label: "Chamber Phoron",
+      label: "Форона внутри",
       textValue: data.chamber_phoron + " mol",
       color: (value => {
         return (value > 5) ? 'bad'
@@ -474,14 +474,14 @@ const AirlockConsolePhoron = (props, context) => {
   return (
     <Fragment>
       <StatusDisplay bars={bars} />
-      <Section title="Controls">
+      <Section title="Контроль">
         <StandardControls />
         <Box>
           <Button
             disabled={!data.processing}
             icon="ban"
             color="bad"
-            content="Abort"
+            content="Прервать"
             onClick={() => act('abort')} />
         </Box>
       </Section>
@@ -503,7 +503,7 @@ const AirlockConsoleDocking = (props, context) => {
       minValue: 0,
       maxValue: 202,
       value: data.chamber_pressure,
-      label: "Chamber Pressure",
+      label: "Давление в камере",
       textValue: data.chamber_pressure + " kPa",
       color: (value => {
         return (value < 80 || value > 120) ? 'bad'
@@ -515,7 +515,7 @@ const AirlockConsoleDocking = (props, context) => {
 
   return (
     <Fragment>
-      <Section title="Dock" buttons={
+      <Section title="Стык" buttons={
         (data.airlock_disabled || data.override_enabled)
           ? <Button
             icon="exclamation-triangle"
@@ -527,14 +527,14 @@ const AirlockConsoleDocking = (props, context) => {
         <DockStatus />
       </Section>
       <StatusDisplay bars={bars} />
-      <Section title="Controls">
+      <Section title="Контроль">
         <StandardControls />
         <Box>
           <Button
             disabled={!data.processing}
             icon="ban"
             color="bad"
-            content="Abort"
+            content="Прервать"
             onClick={() => act('abort')} />
         </Box>
       </Section>
@@ -552,18 +552,18 @@ primaryRoutes["AirlockConsoleDocking"] = AirlockConsoleDocking;
 const DockingConsoleSimple = (props, context) => {
   const { act, data } = useBackend(context);
  
-  let dockHatch = <Box color="bad">ERROR</Box>;
+  let dockHatch = <Box color="bad">ОШИБКА</Box>;
 
   if (data.exterior_status.state === "open") {
-    dockHatch = <Box color="average">OPEN</Box>;
+    dockHatch = <Box color="average">ОТКРЫТО</Box>;
   } else if (data.exterior_status.lock === "unlocked") {
-    dockHatch = <Box color="average">UNSECURED</Box>;
+    dockHatch = <Box color="average">НЕЗАЩИЩЕНО</Box>;
   } else if (data.exterior_status.lock === "locked") {
-    dockHatch = <Box color="good">SECURED</Box>;
+    dockHatch = <Box color="good">ЗАЩИЩЕНО</Box>;
   }
 
   return (
-    <Section title="Status" buttons={
+    <Section title="Состояние" buttons={
       <Fragment>
         <Button
           icon="exclamation-triangle"

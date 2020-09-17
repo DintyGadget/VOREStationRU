@@ -1,13 +1,13 @@
 //Due to how large this one is it gets its own file
 /datum/job/chaplain
-	title = "Chaplain"
+	title = "Священник"
 	flag = CHAPLAIN
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Head of Personnel"
+	supervisors = "Главой Персонала"
 	selection_color = "#515151"
 	access = list(access_morgue, access_chapel_office, access_crematorium, access_maint_tunnels)
 	minimal_access = list(access_chapel_office, access_crematorium)
@@ -39,7 +39,7 @@
 		B.item_state = GLOB.bible_item_state
 		to_chat(H, "<span class='boldnotice'>There is already an established religion onboard the station. You are an acolyte of [GLOB.deity]. Defer to the [title].</span>")
 		return
-	
+
 	INVOKE_ASYNC(src, .proc/religion_prompts, H, B)
 
 /datum/job/chaplain/proc/religion_prompts(mob/living/carbon/human/H, obj/item/weapon/storage/bible/B)
@@ -96,5 +96,5 @@
 	GLOB.bible_name = B.name
 	GLOB.deity = B.deity_name
 	feedback_set_details("religion_deity","[new_deity]")
-	
+
 

@@ -489,9 +489,9 @@ var/global/datum/controller/occupations/job_master
 				return H
 
 			// TWEET PEEP
-			if(rank == "Site Manager")
+			if(rank == "Директор колонии")
 				var/sound/announce_sound = (ticker.current_state <= GAME_STATE_SETTING_UP) ? null : sound('sound/misc/boatswain.ogg', volume=20)
-				captain_announcement.Announce("Всему персоналу, [alt_title ? alt_title : "Site Manager"] [H.real_name] вновь на станции!", new_sound = announce_sound, zlevel = H.z)
+				captain_announcement.Announce("Всему персоналу, [alt_title ? alt_title : "Директор колонии"] [H.real_name] вновь на станции!", new_sound = announce_sound, zlevel = H.z)
 
 			//Deferred item spawning.
 			if(spawn_in_storage && spawn_in_storage.len)

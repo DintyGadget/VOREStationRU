@@ -214,7 +214,7 @@ const SupplyConsoleMenuOrder = (props, context) => {
     <Section level={2}>
       <Flex spacing={1}>
         <Flex.Item basis="25%">
-          <Section title="Categories" scrollable fill height="290px">
+          <Section title="Категории" scrollable fill height="290px">
             {categories.map(category => (
               <Button
                 key={category}
@@ -226,7 +226,7 @@ const SupplyConsoleMenuOrder = (props, context) => {
           </Section>
         </Flex.Item>
         <Flex.Item grow={1}>
-          <Section title="Contents" scrollable fill height="290px">
+          <Section title="Содержимое" scrollable fill height="290px">
             {viewingPacks.map(pack => (
               <Box key={pack.name}>
                 <Flex align="center" justify="flex-start" spacing={1}>

@@ -16,32 +16,32 @@ export const PrisonerManagement = (props, context) => {
     <Window width={500} height={400} resizable>
       <Window.Content scrollable>
         {locked && (
-          <Section title="Locked" textAlign="center">
-            This interface is currently locked.
+          <Section title="Блокировка" textAlign="center">
+            Этот интерфейс в настоящее время заблокирован.
             <Box>
               <Button
                 icon="unlock"
                 onClick={() => act("lock")}>
-                Unlock
+                Открыть
               </Button>
             </Box>
           </Section>
         ) || (
           <Fragment>
-            <Section title="Interface Lock" buttons={
+            <Section title="Блокировка" buttons={
               <Button
                 icon="lock"
                 onClick={() => act("lock")}>
-                Lock Interface
+                Заблокировать
               </Button>
             } />
-            <Section title="Chemical Implants">
+            <Section title="Химические имплантаты">
               {chemImplants.length && (
                 <Table>
                   <Table.Row header>
-                    <Table.Cell textAlign="center">Host</Table.Cell>
-                    <Table.Cell textAlign="center">Units Remaining</Table.Cell>
-                    <Table.Cell textAlign="center">Inject</Table.Cell>
+                    <Table.Cell textAlign="center">Хозяин</Table.Cell>
+                    <Table.Cell textAlign="center">Осталось единиц</Table.Cell>
+                    <Table.Cell textAlign="center">Ввести</Table.Cell>
                   </Table.Row>
                   {chemImplants.map(chem => (
                     <Table.Row key={chem.ref}>
@@ -61,17 +61,17 @@ export const PrisonerManagement = (props, context) => {
                 </Table>
               ) || (
                 <Box color="average">
-                  No chemical implants found.
+                  Химические имплантаты не обнаружены.
                 </Box>
               )}
             </Section>
-            <Section title="Tracking Implants">
+            <Section title="Отслеживаемые имплантаты">
               {trackImplants.length && (
                 <Table>
                   <Table.Row header>
-                    <Table.Cell textAlign="center">Host</Table.Cell>
-                    <Table.Cell textAlign="center">Location</Table.Cell>
-                    <Table.Cell textAlign="center">Message</Table.Cell>
+                    <Table.Cell textAlign="center">Хозяин</Table.Cell>
+                    <Table.Cell textAlign="center">Положение</Table.Cell>
+                    <Table.Cell textAlign="center">Сообщение</Table.Cell>
                   </Table.Row>
                   {trackImplants.map(track => (
                     <Table.Row key={track.ref}>
@@ -82,14 +82,14 @@ export const PrisonerManagement = (props, context) => {
                         {track.loc}
                       </Table.Cell>
                       <Table.Cell textAlign="center">
-                        <Button onClick={() => act("warn", { imp: track.ref })}>Message</Button>
+                        <Button onClick={() => act("warn", { imp: track.ref })}>Сообщение</Button>
                       </Table.Cell>
                     </Table.Row>
                   ))}
                 </Table>
               ) || (
                 <Box color="average">
-                  No chemical implants found.
+                  Химические имплантаты не обнаружены.
                 </Box>
               )}
             </Section>
