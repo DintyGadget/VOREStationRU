@@ -277,7 +277,7 @@
 			visible_message("<font color='blue'>\The [O] misses [src] narrowly!</font>")
 			return
 
-		src.visible_message("<font color='red'>[src] has been hit by [O].</font>")
+		src.visible_message("<font color='red'>[src] ударил [O].</font>")
 		var/armor = run_armor_check(null, "melee")
 		var/soaked = get_armor_soak(null, "melee")
 

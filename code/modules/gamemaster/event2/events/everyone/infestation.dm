@@ -26,7 +26,7 @@
 	var/list/turfs = list()
 
 /datum/event2/event/infestation/rodents
-	vermin_string = "rodents"
+	vermin_string = "грызуны"
 	max_vermin = 12
 	things_to_spawn = list(
 		/mob/living/simple_mob/animal/passive/mouse/gray,
@@ -36,7 +36,7 @@
 	)
 
 /datum/event2/event/infestation/lizards
-	vermin_string = "lizards"
+	vermin_string = "ящерицы"
 	max_vermin = 6
 	things_to_spawn = list(
 		/mob/living/simple_mob/animal/passive/lizard,
@@ -45,7 +45,7 @@
 	)
 
 /datum/event2/event/infestation/spiderlings
-	vermin_string = "spiders"
+	vermin_string = "пауки"
 	max_vermin = 3
 	things_to_spawn = list(/obj/effect/spider/spiderling/non_growing)
 
@@ -59,8 +59,8 @@
 
 /datum/event2/event/infestation/announce()
 	var/turf/T = turfs[1]
-	command_announcement.Announce("Bioscans indicate that [vermin_string] have been breeding \
-	in \the [T.loc]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
+	command_announcement.Announce("Биосканы показывают, что [vermin_string] размножаются \
+	в [T.loc]. Избавьтесь от них, прежде чем они нанесут ущерб станции.", "Заражение паразитами")
 
 
 /datum/event2/event/infestation/start()

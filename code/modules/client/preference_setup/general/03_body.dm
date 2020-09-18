@@ -275,41 +275,41 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				R = all_robolimbs[pref.rlimb_data[name]]
 			else
 				R = basic_robolimb
-			. += "\t[R.company] [organ_name] prosthesis"
+			. += "\t[organ_name] протезировано [R.company] "
 		else if(status == "amputated")
 			++ind
 			if(ind > 1)
 				. += ", "
-			. += "\tAmputated [organ_name]"
+			. += "\t[organ_name] ампутировано"
 		else if(status == "mechanical")
 			++ind
 			if(ind > 1)
 				. += ", "
 			switch(organ_name)
 				if ("brain")
-					. += "\tPositronic [organ_name]"
+					. += "\tПозитронный [organ_name]"
 				else
-					. += "\tSynthetic [organ_name]"
+					. += "\tСинтетический [organ_name]"
 		else if(status == "digital")
 			++ind
 			if(ind > 1)
 				. += ", "
-			. += "\tDigital [organ_name]"
+			. += "\tЦифровым [organ_name]"
 		else if(status == "assisted")
 			++ind
 			if(ind > 1)
 				. += ", "
 			switch(organ_name)
 				if("heart")
-					. += "\tPacemaker-assisted [organ_name]"
+					. += "\tКардиостимулятор [organ_name]"
 				if("lungs")
-					. += "\tAssisted [organ_name]"
+					. += "\tВспомог. [organ_name]"
 				if("voicebox") //on adding voiceboxes for speaking skrell/similar replacements
-					. += "\tSurgically altered [organ_name]"
+					. += "\tХирургически измененная [organ_name]"
 				if("eyes")
-					. += "\tRetinal overlayed [organ_name]"
+					. += "\t[organ_name] покрытые сетчаткой"
 				if("brain")
-					. += "\tAssisted-interface [organ_name]"
+					. += "\tВспом. интерфейс [organ_name]"
 				else
 					. += "\tMechanically assisted [organ_name]"
 	if(!ind)
@@ -769,7 +769,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	else if(href_list["organs"])
 
-		var/organ_name = input(user, "Какой орган вы хотите изменить?") as null|anything in list("Heart", "Eyes","Larynx", "Lungs", "Liver", "Kidneys", "Spleen", "Intestines", "Stomach", "Brain")
+		var/organ_name = input(user, "Какой орган вы хотите изменить?") as null|anything in list("Сердце", "Глаза","Гортань", "Легкие", "Печень", "Почки", "Селезенка", "Кишечник", "Желудок", "Мозг")
 		if(!organ_name) return
 
 		var/organ = null

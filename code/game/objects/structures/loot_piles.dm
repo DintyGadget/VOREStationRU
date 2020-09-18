@@ -50,10 +50,10 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 		var/mob/living/L = user
 
 		if(busy)
-			to_chat(L, "<span class='warning'>\The [src] is already being searched.</span>")
+			to_chat(L, "<span class='warning'>[src] уже обыскивается.</span>")
 			return
 
-		L.visible_message("[user] searches through \the [src].","<span class='notice'>You search through \the [src].</span>")
+		L.visible_message("[user] копается в [src].","<span class='notice'>Вы копаетесь в [src].</span>")
 
 		//Do the searching
 		busy = TRUE
@@ -66,13 +66,13 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 
 			//You already searched this one
 			if( (user.ckey in searched_by) && !allow_multiple_looting)
-				to_chat(L, "<span class='warning'>You can't find anything else vaguely useful in \the [src].  Another set of eyes might, however.</span>")
+				to_chat(L, "<span class='warning'>Вы не можете найти ничего более полезного в [src]. Another set of eyes might, however.</span>")
 				busy = FALSE
 				return
 
 			// You got unlucky.
 			if(chance_nothing && prob(chance_nothing))
-				to_chat(L, "<span class='warning'>Nothing in this pile really catches your eye...</span>")
+				to_chat(L, "<span class='warning'>Ничто в этой куче не бросается в глаза ...</span>")
 				searched_by |= user.ckey
 				busy = FALSE
 				return
@@ -95,11 +95,11 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 			if(loot)
 				searched_by |= user.ckey
 				loot.forceMove(get_turf(src))
-				to_chat(L, "<span class='[span]'>You found \a [loot]!</span>")
+				to_chat(L, "<span class='[span]'>Вы находите [loot]!</span>")
 				if(loot_depletion)
 					loot_left--
 					if(loot_left <= 0)
-						to_chat(L, "<span class='warning'>You seem to have gotten the last of the spoils inside \the [src].</span>")
+						to_chat(L, "<span class='warning'>Похоже, вы нашли последнюю вещь внутри [src].</span>")
 						if(delete_on_depletion)
 							qdel(src)
 
@@ -127,7 +127,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 // Has large amounts of possible items, most of which may or may not be useful.
 /obj/structure/loot_pile/maint/junk
 	name = "pile of junk"
-	desc = "Lots of junk lying around.  They say one man's trash is another man's treasure."
+	desc = "Вокруг валяется куча всякого хлама. Кто-то говорит, что мусор одного человека - это сокровище другого."
 	icon_states_to_use = list("junk_pile1", "junk_pile2", "junk_pile3", "junk_pile4", "junk_pile5")
 
 	common_loot = list(
@@ -220,7 +220,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 // Contains mostly useless garbage.
 /obj/structure/loot_pile/maint/trash
 	name = "pile of trash"
-	desc = "Lots of garbage in one place.  Might be able to find something if you're in the mood for dumpster diving."
+	desc = "Куча мусора в одном месте.  Может быть, удастся что-нибудь найти, если вы в настроении для погружения в отходы."
 	icon_states_to_use = list("trash_pile1", "trash_pile2")
 
 	common_loot = list(

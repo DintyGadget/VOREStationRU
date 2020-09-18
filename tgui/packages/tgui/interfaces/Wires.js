@@ -27,17 +27,17 @@ export const Wires = (props, context) => {
                 buttons={(
                   <Fragment>
                     <Button
-                      content={wire.cut ? 'Mend' : 'Cut'}
+                      content={wire.cut ? 'Почин.' : 'Рез.'}
                       onClick={() => act('cut', {
                         wire: wire.color,
                       })} />
                     <Button
-                      content="Pulse"
+                      content="Пульс"
                       onClick={() => act('pulse', {
                         wire: wire.color,
                       })} />
                     <Button
-                      content={wire.attached ? 'Detach' : 'Attach'}
+                      content={wire.attached ? 'Отсоед.' : 'Прикреп.'}
                       onClick={() => act('attach', {
                         wire: wire.color,
                       })} />

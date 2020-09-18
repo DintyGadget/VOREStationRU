@@ -326,7 +326,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	Broadcast_Message(connection, GLOB.autospeaker,
 						0, "*garbled automated announcement*", src,
 						message_to_multilingual(message), from, "Automated Announcement", from, "synthesized voice",
-						DATA_FAKE, 0, zlevels, connection.frequency, "states")
+						DATA_FAKE, 0, zlevels, connection.frequency, "докладывает")
 
 // Interprets the message mode when talking into a radio, possibly returning a connection datum
 /obj/item/device/radio/proc/handle_message_mode(mob/living/M as mob, list/message_pieces, message_mode)
@@ -515,7 +515,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		else if(adhoc_fallback) //Less huzzah, we have to fallback
 			to_chat(loc, "<span class='warning'>\The [src] pings as it falls back to local radio transmission.</span>")
 			subspace_transmission = FALSE
-		
+
 		else //Oh well
 			return FALSE
 
@@ -602,7 +602,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/device/radio/examine(mob/user)
 	. = ..()
-	
+
 	if((in_range(src, user) || loc == user))
 		if(b_stat)
 			. += "<span class='notice'>\The [src] can be attached and modified!</span>"

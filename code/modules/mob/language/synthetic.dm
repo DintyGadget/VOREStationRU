@@ -2,7 +2,7 @@
 	name = "Robot Talk"
 	desc = "Most human stations support free-use communications protocols and routing hubs for synthetic use."
 	colour = "say_quote"
-	speech_verb = "states"
+	speech_verb = "докладывает"
 	ask_verb = "queries"
 	exclaim_verb = "declares"
 	key = "b"

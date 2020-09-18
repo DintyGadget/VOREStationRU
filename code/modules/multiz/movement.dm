@@ -499,9 +499,9 @@
 				var/turf/T = get_turf(landing)
 				explosion(T, 0, 1, 2)
 			else
-				visible_message("<span class='warning'>\The [src] falls from above and slams into \the [landing]!</span>", \
-					"<span class='danger'>You fall off and hit \the [landing]!</span>", \
-					"You hear something slam into \the [landing].")
+				visible_message("<span class='warning'>[src] падает сверху и приземляется на [landing]!</span>", \
+					"<span class='danger'>Вы падаете на [landing] и ударяетесь!</span>", \
+					"Вы слышите, как что-то грохнулось на [landing].")
 			playsound(src, "punch", 25, 1, -1)
 
 		// Because wounds heal rather quickly, 10 (the default for this proc) should be enough to discourage jumping off but not be enough to ruin you, at least for the first time.
@@ -560,7 +560,7 @@
 	var/obj/structure/lattice/lattice = locate(/obj/structure/lattice, loc)
 	if(lattice)
 		// Lattices seem a bit too flimsy to hold up a massive exosuit.
-		lattice.visible_message("<span class='danger'>\The [lattice] collapses under the weight of \the [src]!</span>")
+		lattice.visible_message("<span class='danger'>[lattice] разрушается под весом [src]!</span>")
 		qdel(lattice)
 
 	// Then call parent to have us actually fall
@@ -577,28 +577,28 @@
 
 	if(planetary && src.CanParachute())
 		if(!silent)
-			visible_message("<span class='warning'>\The [src] glides in from above and lands on \the [landing]!</span>", \
-				"<span class='danger'>You land on \the [landing]!</span>", \
-				"You hear something land \the [landing].")
+			visible_message("<span class='warning'>[src] спускается сверху и приземляется на [landing]!</span>", \
+				"<span class='danger'>Вы приземляетесь на [landing]!</span>", \
+				"Вы слышите, как что-то приземляется на [landing].")
 		return
 	else if(!planetary && src.softfall) // Falling one floor and falling one atmosphere are very different things
 		if(!silent)
 			visible_message("<span class='warning'>\The [src] falls from above and lands on \the [landing]!</span>", \
 				"<span class='danger'>You land on \the [landing]!</span>", \
-				"You hear something land \the [landing].")
+				"Вы слышите, как что-то приземляется на [landing].")
 		return
 	else
 		if(!silent)
 			if(planetary)
 				visible_message("<span class='danger'><font size='3'>\A [src] falls out of the sky and crashes into \the [landing]!</font></span>", \
 					"<span class='danger'><font size='3'> You fall out of the skiy and crash into \the [landing]!</font></span>", \
-					"You hear something slam into \the [landing].")
+					"Вы слышите, как что-то грохнулось на [landing].")
 				var/turf/T = get_turf(landing)
 				explosion(T, 0, 1, 2)
 			else
 				visible_message("<span class='warning'>\The [src] falls from above and slams into \the [landing]!</span>", \
 					"<span class='danger'>You fall off and hit \the [landing]!</span>", \
-					"You hear something slam into \the [landing].")
+					"Вы слышите, как что-то грохнулось на [landing].")
 			playsound(src, "punch", 25, 1, -1)
 
 	// And now to hurt the mech.

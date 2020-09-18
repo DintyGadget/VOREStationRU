@@ -67,15 +67,15 @@
 		if(VERM_MICE)
 			spawn_types = list(/mob/living/simple_mob/animal/passive/mouse/gray, /mob/living/simple_mob/animal/passive/mouse/brown, /mob/living/simple_mob/animal/passive/mouse/white)
 			max_number = 12
-			vermstring = "mice"
+			vermstring = "мыши"
 		if(VERM_LIZARDS)
 			spawn_types = list(/mob/living/simple_mob/animal/passive/lizard)
 			max_number = 6
-			vermstring = "lizards"
+			vermstring = "ящерицы"
 		if(VERM_SPIDERS)
 			spawn_types = list(/obj/effect/spider/spiderling)
 			max_number = 3
-			vermstring = "spiders"
+			vermstring = "пауки"
 
 	spawn(0)
 		var/num = rand(2,max_number)
@@ -93,7 +93,7 @@
 
 
 /datum/event/infestation/announce()
-	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
+	command_announcement.Announce("Биосканы показывают, что [vermstring] размножаются в [locstring]. Избавьтесь от них, прежде чем они нанесут ущерб станции.", "Заражение паразитами")
 
 #undef LOC_KITCHEN
 #undef LOC_ATMOS

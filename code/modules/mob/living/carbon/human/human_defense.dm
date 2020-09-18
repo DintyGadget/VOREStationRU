@@ -391,7 +391,7 @@ emp_act
 				if(isturf(O.loc))
 					if(can_catch(O))
 						put_in_active_hand(O)
-						visible_message("<span class='warning'>[src] catches [O]!</span>")
+						visible_message("<span class='warning'>[src] ловит [O]!</span>")
 						throw_mode_off()
 						return
 
