@@ -120,14 +120,14 @@ const ActiveConversation = (props, context) => {
               style={{
                 "word-break": "break-all",
               }}>
-              {im.sent ? "You:" : "Them:"} <Box inline color={useRetro ? "black" : null}>{im.message}</Box>
+              {im.sent ? "Вы:" : "Им:"} <Box inline color={useRetro ? "black" : null}>{im.message}</Box>
             </Box>
           ))}
         </Section>
         <Button
           icon="comment"
           onClick={() => act("Message", { "target": active_conversation })}
-          content="Reply" />
+          content="Ответить" />
       </Section>
     );
   }
@@ -135,7 +135,7 @@ const ActiveConversation = (props, context) => {
   return (
     <Box>
       <LabeledList>
-        <LabeledList.Item label="Messenger Functions">
+        <LabeledList.Item label="Функции месседжера">
           <Button
             icon="trash"
             color="bad"
@@ -165,23 +165,23 @@ const MessengerList = (props, context) => {
   return (
     <Box>
       <LabeledList>
-        <LabeledList.Item label="Messenger Functions">
+        <LabeledList.Item label="Функции месседжера">
           <Button
             selected={!silent}
             icon={silent ? "volume-mute" : "volume-up"}
             onClick={() => act("Toggle Ringer")}>
-            Ringer: {silent ? "Off" : "On"}
+            Звук: {silent ? "Выкл" : "Вкл"}
           </Button>
           <Button
             color={toff ? "bad" : "green"}
             icon="power-off"
             onClick={() => act("Toggle Messenger")}>
-            Messenger: {toff ? "Off" : "On"}
+            Месседжер: {toff ? "Выкл" : "Вкл"}
           </Button>
           <Button
             icon="bell"
             onClick={() => act("Ringtone")}>
-            Set Ringtone
+            Рингтон
           </Button>
           <Button
             icon="trash"
@@ -204,8 +204,8 @@ const MessengerList = (props, context) => {
             </Box>
           ) || (
             <Box>
-              <PDAList title="Current Conversations" pdas={convopdas} msgAct="Select Conversation" />
-              <PDAList title="Other PDAs" pdas={pdas} msgAct="Message" />
+              <PDAList title="Текущие разговоры" pdas={convopdas} msgAct="Select Conversation" />
+              <PDAList title="Другие PDAs" pdas={pdas} msgAct="Message" />
             </Box>
           )}
         </Box>

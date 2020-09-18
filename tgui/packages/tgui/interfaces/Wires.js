@@ -27,17 +27,17 @@ export const Wires = (props, context) => {
                 buttons={(
                   <Fragment>
                     <Button
-                      content={wire.cut ? 'Ïî÷èí.' : 'Ðåç.'}
+                      content={wire.cut ? 'ÐŸÐ¾Ñ‡Ð¸Ð½Ð¸Ñ‚ÑŒ' : 'Ð ÐµÐ·Ð°Ñ‚ÑŒ'}
                       onClick={() => act('cut', {
                         wire: wire.color,
                       })} />
                     <Button
-                      content="Ïóëüñ"
+                      content="ÐŸÑƒÐ»ÑŒÑ"
                       onClick={() => act('pulse', {
                         wire: wire.color,
                       })} />
                     <Button
-                      content={wire.attached ? 'Îòñîåä.' : 'Ïðèêðåï.'}
+                      content={wire.attached ? 'ÐžÑ‚ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ñ‚ÑŒ' : 'ÐŸÑ€Ð¸ÐºÑ€ÐµÐ¿Ð¸Ñ‚ÑŒ'}
                       onClick={() => act('attach', {
                         wire: wire.color,
                       })} />

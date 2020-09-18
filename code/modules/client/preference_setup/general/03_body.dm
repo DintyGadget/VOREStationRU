@@ -275,12 +275,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				R = all_robolimbs[pref.rlimb_data[name]]
 			else
 				R = basic_robolimb
-			. += "\t[organ_name] протезировано [R.company] "
+			. += "\t[organ_name] протез [R.company] "
 		else if(status == "amputated")
 			++ind
 			if(ind > 1)
 				. += ", "
-			. += "\t[organ_name] ампутировано"
+			. += "\t[organ_name] отсутствует"
 		else if(status == "mechanical")
 			++ind
 			if(ind > 1)
@@ -289,7 +289,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				if ("brain")
 					. += "\tПозитронный [organ_name]"
 				else
-					. += "\tСинтетический [organ_name]"
+					. += "\tСинтетика: [organ_name]"
 		else if(status == "digital")
 			++ind
 			if(ind > 1)
@@ -349,7 +349,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		. += "<a href='?src=\ref[src];eye_color=1'>Изм. цвет</a> [color_square(pref.r_eyes, pref.g_eyes, pref.b_eyes)]<br>"
 
 	if(has_flag(mob_species, HAS_SKIN_COLOR))
-		. += "<br><b>Body Color</b><br>"
+		. += "<br><b>Цвет тела</b><br>"
 		. += "<a href='?src=\ref[src];skin_color=1'>Изм. цвет</a> [color_square(pref.r_skin, pref.g_skin, pref.b_skin)]<br>"
 
 	. += "<br><a href='?src=\ref[src];marking_style=1'>Таттуировки +</a><br>"
@@ -359,8 +359,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	. += "</table>"
 	. += "<br>"
-	. += "<b>Allow Synth markings:</b> <a href='?src=\ref[src];synth_markings=1'><b>[pref.synth_markings ? "Да" : "Нет"]</b></a><br>"
-	. += "<b>Allow Synth color:</b> <a href='?src=\ref[src];synth_color=1'><b>[pref.synth_color ? "Да" : "Нет"]</b></a><br>"
+	. += "<b>Разрешить таттуирование синтов:</b> <a href='?src=\ref[src];synth_markings=1'><b>[pref.synth_markings ? "Да" : "Нет"]</b></a><br>"
+	. += "<b>Разрешить выбор цвета синтам:</b> <a href='?src=\ref[src];synth_color=1'><b>[pref.synth_color ? "Да" : "Нет"]</b></a><br>"
 	if(pref.synth_color)
 		. += "<a href='?src=\ref[src];synth2_color=1'>Изм. цвет</a> [color_square(pref.r_synth, pref.g_synth, pref.b_synth)]"
 

@@ -19,11 +19,11 @@ export const IDCard = (props, context) => {
   } = data;
 
   const dataIter = [
-    { name: "Sex", val: sex },
-    { name: "Age", val: age },
-    { name: "Blood Type", val: blood_type },
-    { name: "Fingerprint", val: fingerprint_hash },
-    { name: "DNA Hash", val: dna_hash },
+    { name: "Пол", val: sex },
+    { name: "Возраст", val: age },
+    { name: "Группа крови", val: blood_type },
+    { name: "Отпечаток", val: fingerprint_hash },
+    { name: "ДНК", val: dna_hash },
   ];
 
   return (

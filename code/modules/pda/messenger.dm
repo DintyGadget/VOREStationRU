@@ -1,5 +1,5 @@
 /datum/data/pda/app/messenger
-	name = "Messenger"
+	name = "Месседжер"
 	icon = "comments-o"
 	notify_icon = "comments"
 	title = "SpaceMessenger V4.1.0"
@@ -119,7 +119,7 @@
 			create_message(usr, P)
 			if(href_list["target"] in conversations)            // Need to make sure the message went through, if not welp.
 				active_conversation = href_list["target"]
-	
+
 
 /datum/data/pda/app/messenger/proc/create_message(var/mob/living/U, var/obj/item/device/pda/P)
 	var/t = input(U, "Please enter message", name, null) as text|null
@@ -171,10 +171,10 @@
 
 	if(useMS && useTC) // only send the message if it's stable
 		if(useTC != 2) // Does our recipient have a broadcaster on their level?
-			to_chat(U, "ERROR: Cannot reach recipient.")
+			to_chat(U, "ОШИБКА: невозможно связаться с получателем.")
 			return
 		useMS.send_pda_message("[P.owner]","[pda.owner]","[t]")
-		pda.investigate_log("<span class='game say'>PDA Message - <span class='name'>[U.key] - [pda.owner]</span> -> <span class='name'>[P.owner]</span>: <span class='message'>[t]</span></span>", "pda")
+		pda.investigate_log("<span class='game say'>Сообщение ПДА - <span class='name'>[U.key] - [pda.owner]</span> -> <span class='name'>[P.owner]</span>: <span class='message'>[t]</span></span>", "pda")
 
 		receive_message(list("sent" = 1, "owner" = "[P.owner]", "job" = "[P.ownjob]", "message" = "[t]", "target" = "\ref[P]"), "\ref[P]")
 		PM.receive_message(list("sent" = 0, "owner" = "[pda.owner]", "job" = "[pda.ownjob]", "message" = "[t]", "target" = "\ref[pda]"), "\ref[pda]")
@@ -182,7 +182,7 @@
 		SStgui.update_user_uis(U, P) // Update the sending user's PDA UI so that they can see the new message
 		log_pda("(PDA: [src.name]) sent \"[t]\" to [P.name]", usr)
 	else
-		to_chat(U, "<span class='notice'>ERROR: Messaging server is not responding.</span>")
+		to_chat(U, "<span class='notice'>ОШИБКА: сервер обмена сообщениями не отвечает.</span>")
 
 /datum/data/pda/app/messenger/proc/available_pdas()
 	var/list/names = list()
@@ -190,7 +190,7 @@
 	var/list/namecounts = list()
 
 	if(toff)
-		to_chat(usr, "Turn on your receiver in order to send messages.")
+		to_chat(usr, "Включите приемник, чтобы отправлять сообщения.")
 		return
 
 	for(var/A in PDAs)
@@ -222,12 +222,12 @@
 		var/owner = data["owner"]
 		var/job = data["job"]
 		var/message = data["message"]
-		notify("<b>Message from [owner] ([job]), </b>\"[message]\" (<a href='?src=\ref[src];choice=Message;target=[ref]'>Reply</a>)")
+		notify("<b>Сообщение от [owner] ([job]), </b>\"[message]\" (<a href='?src=\ref[src];choice=Message;target=[ref]'>Ответить</a>)")
 
 /datum/data/pda/app/messenger/multicast
 /datum/data/pda/app/messenger/multicast/receive_message(list/data, ref)
 	. = ..()
-	
+
 	var/obj/item/device/pda/multicaster/M = pda
 	if(!istype(M))
 		return

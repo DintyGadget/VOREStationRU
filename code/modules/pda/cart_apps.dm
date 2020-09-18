@@ -61,7 +61,7 @@
 	name = "Signaler System"
 	icon = "rss"
 	template = "pda_signaller"
-	category = "Utilities"
+	category = "Утилиты"
 
 /datum/data/pda/app/signaller/update_ui(mob/user as mob, list/data)
 	if(pda.cartridge && istype(pda.cartridge.radio, /obj/item/radio/integrated/signal))
@@ -97,10 +97,10 @@
 				. = TRUE
 
 /datum/data/pda/app/power
-	name = "Power Monitor"
+	name = "Монитор мощности"
 	icon = "exclamation-triangle"
 	template = "pda_power"
-	category = "Engineering"
+	category = "Инженерия"
 
 	var/datum/tgui_module/power_monitor/power_monitor
 
@@ -163,10 +163,10 @@
 	has_back = 1
 
 /datum/data/pda/app/crew_records/medical
-	name = "Medical Records"
+	name = "Медицинские записи"
 	icon = "heartbeat"
 	template = "pda_medical"
-	category = "Medical"
+	category = "Медицина"
 
 	var/datum/data/record/medical_records = null
 
@@ -189,10 +189,10 @@
 			break
 
 /datum/data/pda/app/crew_records/security
-	name = "Security Records"
+	name = "Записи СБ"
 	icon = "tags"
 	template = "pda_security"
-	category = "Security"
+	category = "СБ"
 
 	var/datum/data/record/security_records = null
 
@@ -215,10 +215,10 @@
 			break
 
 /datum/data/pda/app/supply
-	name = "Supply Records"
+	name = "Записи поставок"
 	icon = "file-word-o"
 	template = "pda_supply"
-	category = "Quartermaster"
+	category = "Интендант"
 
 /datum/data/pda/app/supply/update_ui(mob/user as mob, list/data)
 	var/supplyData[0]
@@ -257,7 +257,7 @@
 	name = "Custodial Locator"
 	icon = "trash-alt-o"
 	template = "pda_janitor"
-	category = "Utilities"
+	category = "Утилиты"
 
 /datum/data/pda/app/janitor/update_ui(mob/user as mob, list/data)
 	var/JaniData[0]

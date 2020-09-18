@@ -40,7 +40,7 @@ export const Smes = (props, context) => {
       height={350}
       resizable>
       <Window.Content>
-        <Section title="Энергии в хранилище">
+        <Section title="Р­РЅРµСЂРіРёРё РІ С…СЂР°РЅРёР»РёС‰Рµ">
           <ProgressBar
             value={capacityPercent * 0.01}
             ranges={{
@@ -52,25 +52,25 @@ export const Smes = (props, context) => {
             ({capacityPercent}%)
           </ProgressBar>
         </Section>
-        <Section title="Вход">
+        <Section title="Р’С…РѕРґ">
           <LabeledList>
             <LabeledList.Item
-              label="Режим зарядки"
+              label="Р РµР¶РёРј Р·Р°СЂСЏРґРєРё"
               buttons={
                 <Button
                   icon={inputAttempt ? 'sync-alt' : 'times'}
                   selected={inputAttempt}
                   onClick={() => act('tryinput')}>
-                  {inputAttempt ? 'Вкл' : 'Выкл'}
+                  {inputAttempt ? 'Р’РєР»' : 'Р’С‹РєР»'}
                 </Button>
               }>
               <Box color={inputState}>
-                {capacityPercent >= 100 && 'Полный заряд'
-                  || inputting && 'Заряжается'
-                  || 'Не заряжается'}
+                {capacityPercent >= 100 && 'РџРѕР»РЅС‹Р№ Р·Р°СЂСЏРґ'
+                  || inputting && 'Р—Р°СЂСЏР¶Р°РµС‚СЃСЏ'
+                  || 'РќРµ Р·Р°СЂСЏР¶Р°РµС‚СЃСЏ'}
               </Box>
             </LabeledList.Item>
-            <LabeledList.Item label="Входная мощн.">
+            <LabeledList.Item label="Р’С…РѕРґРЅР°СЏ РјРѕС‰РЅ.">
               <Flex inline width="100%">
                 <Flex.Item>
                   <Button
@@ -115,32 +115,32 @@ export const Smes = (props, context) => {
                 </Flex.Item>
               </Flex>
             </LabeledList.Item>
-            <LabeledList.Item label="Доступно">
+            <LabeledList.Item label="Р”РѕСЃС‚СѓРїРЅРѕ">
               {formatPower(inputAvailable)}
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <Section title="Выход">
+        <Section title="Р’С‹С…РѕРґ">
           <LabeledList>
             <LabeledList.Item
-              label="Режим выхода"
+              label="Р РµР¶РёРј РІС‹С…РѕРґР°"
               buttons={
                 <Button
                   icon={outputAttempt ? 'power-off' : 'times'}
                   selected={outputAttempt}
                   onClick={() => act('tryoutput')}>
-                  {outputAttempt ? 'Вкл' : 'Выкл'}
+                  {outputAttempt ? 'Р’РєР»' : 'Р’С‹РєР»'}
                 </Button>
               }>
               <Box color={outputState}>
                 {outputting
-                  ? 'Отдача'
+                  ? 'РћС‚РґР°С‡Р°'
                   : charge > 0
-                    ? 'Ничего'
-                    : 'Нет заряда'}
+                    ? 'РќРёС‡РµРіРѕ'
+                    : 'РќРµС‚ Р·Р°СЂСЏРґР°'}
               </Box>
             </LabeledList.Item>
-            <LabeledList.Item label="Выходящая мощн.">
+            <LabeledList.Item label="Р’С‹С…РѕРґСЏС‰Р°СЏ РјРѕС‰РЅ.">
               <Flex inline width="100%">
                 <Flex.Item>
                   <Button
@@ -184,7 +184,7 @@ export const Smes = (props, context) => {
                 </Flex.Item>
               </Flex>
             </LabeledList.Item>
-            <LabeledList.Item label="Выход мощн.">
+            <LabeledList.Item label="Р’С‹С…РѕРґ РјРѕС‰РЅ.">
               {formatPower(outputUsed)}
             </LabeledList.Item>
           </LabeledList>

@@ -5,7 +5,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 
 /obj/item/device/pda
 	name = "\improper PDA"
-	desc = "A portable microcomputer by Thinktronic Systems, LTD. Functionality determined by a preprogrammed ROM cartridge."
+	desc = "Портативный микрокомпьютер от Thinktronic Systems, LTD. Функциональность определяется предварительно запрограммированным картриджем ПЗУ."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda"
 	item_state = "electronic"
@@ -65,7 +65,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/examine(mob/user)
 	. = ..()
 	if(Adjacent(user))
-		. += "The time [stationtime2text()] is displayed in the corner of the screen."
+		. += "Время [stationtime2text()] отображается в углу экрана."
 
 /obj/item/device/pda/CtrlClick()
 	if(issilicon(usr))
@@ -84,7 +84,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		if(id)
 			remove_id()
 		else
-			to_chat(usr, "<span class='notice'>This PDA does not have an ID in it.</span>")
+			to_chat(usr, "<span class='notice'>В этом ПДА нет ID.</span>")
 
 /obj/item/device/pda/proc/play_ringtone()
 	var/S
@@ -98,11 +98,11 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		O.show_message(text("[bicon(src)] *[ttone]*"))
 
 /obj/item/device/pda/proc/set_ringtone()
-	var/t = input("Please enter new ringtone", name, ttone) as text
+	var/t = input("Пожалуйста, введите новый рингтон", name, ttone) as text
 	if(in_range(src, usr) && loc == usr)
 		if(t)
 			if(hidden_uplink && hidden_uplink.check_trigger(usr, lowertext(t), lowertext(lock_code)))
-				to_chat(usr, "The PDA softly beeps.")
+				to_chat(usr, "ПДА тихонько пищит.")
 				close(usr)
 			else
 				t = sanitize(copytext(t, 1, 20))
@@ -136,7 +136,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				slot_wear_id_str = 'icons/mob/pda_wrist.dmi',
 				slot_gloves_str = 'icons/mob/pda_wrist.dmi'
 			)
-			desc = "A portable microcomputer by Thinktronic Systems, LTD. This model is a wrist-bound version."
+			desc = "Портативный микрокомпьютер от Thinktronic Systems, LTD. Эта модель более компактная."
 			slot_flags = SLOT_ID | SLOT_BELT | SLOT_GLOVES
 			sprite_sheets = list(
 				SPECIES_TESHARI = 'icons/mob/species/seromi/pda_wrist.dmi',
@@ -222,52 +222,52 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if(i<=10) //The traditional explosion
 		P.explode()
 		j=1
-		message += "Your [P] suddenly explodes!"
+		message += "Ващ [P] внезапно взрывается!"
 	if(i>=10 && i<= 20) //The PDA burns a hole in the holder.
 		j=1
 		if(M && isliving(M))
 			M.apply_damage( rand(30,60) , BURN)
-		message += "You feel a searing heat! Your [P] is burning!"
+		message += "Вы жжение! Ваш [P] горит!"
 	if(i>=20 && i<=25) //EMP
 		empulse(P.loc, 1, 2, 4, 6, 1)
-		message += "Your [P] emits a wave of electromagnetic energy!"
+		message += "Ваш [P] излучает волну электромагнитной энергии!"
 	if(i>=25 && i<=40) //Smoke
 		var/datum/effect/effect/system/smoke_spread/chem/S = new /datum/effect/effect/system/smoke_spread/chem
 		S.attach(P.loc)
 		S.set_up(P, 10, 0, P.loc)
 		playsound(P, 'sound/effects/smoke.ogg', 50, 1, -3)
 		S.start()
-		message += "Large clouds of smoke billow forth from your [P]!"
+		message += "Большие облака дыма поднимаются от вашего [P]!"
 	if(i>=40 && i<=45) //Bad smoke
 		var/datum/effect/effect/system/smoke_spread/bad/B = new /datum/effect/effect/system/smoke_spread/bad
 		B.attach(P.loc)
 		B.set_up(P, 10, 0, P.loc)
 		playsound(P, 'sound/effects/smoke.ogg', 50, 1, -3)
 		B.start()
-		message += "Large clouds of noxious smoke billow forth from your [P]!"
+		message += "Большие облака ядовитого дыма поднимаются от вашего [P]!"
 	if(i>=65 && i<=75) //Weaken
 		if(M && isliving(M))
 			M.apply_effects(0,1)
-		message += "Your [P] flashes with a blinding white light! You feel weaker."
+		message += "Ваш [P] мигает ослепляющим белым светом! Вы чувствуете слабость."
 	if(i>=75 && i<=85) //Stun and stutter
 		if(M && isliving(M))
 			M.apply_effects(1,0,0,0,1)
-		message += "Your [P] flashes with a blinding white light! You feel weaker."
+		message += "Ваш [P] мигает ослепляющим белым светом! Вы чувствуете слабость."
 	if(i>=85) //Sparks
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(2, 1, P.loc)
 		s.start()
-		message += "Your [P] begins to spark violently!"
+		message += "Ваш [P] начинает яростно искриться!"
 	if(i>45 && i<65 && prob(50)) //Nothing happens
-		message += "Your [P] bleeps loudly."
+		message += "Ваш [P] громко пищит."
 		j = prob(10)
 
 	if(j && detonate) //This kills the PDA
 		qdel(P)
 		if(message)
-			message += "It melts in a puddle of plastic."
+			message += "Он плавится в лужице пластика."
 		else
-			message += "Your [P] shatters in a thousand pieces!"
+			message += "Ваш [P] разлетается в цепки!"
 
 	if(M && isliving(M))
 		message = "<span class='warning'>[message]</span>"
@@ -278,7 +278,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		if (ismob(loc))
 			var/mob/M = loc
 			M.put_in_hands(id)
-			to_chat(usr, "<span class='notice'>You remove the ID from the [name].</span>")
+			to_chat(usr, "<span class='notice'>Вы удаляете ID карту из [name].</span>")
 			playsound(src, 'sound/machines/id_swipe.ogg', 100, 1)
 		else
 			id.loc = get_turf(src)
@@ -295,7 +295,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 				return
 		O.loc = get_turf(src)
 	else
-		to_chat(usr, "<span class='notice'>This PDA does not have a pen in it.</span>")
+		to_chat(usr, "<span class='notice'>В этом ПДА нет ручки.</span>")
 
 /obj/item/device/pda/verb/verb_reset_pda()
 	set category = "Object"
@@ -309,13 +309,13 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		start_program(find_program(/datum/data/pda/app/main_menu))
 		notifying_programs.Cut()
 		overlays -= image('icons/obj/pda.dmi', "pda-r")
-		to_chat(usr, "<span class='notice'>You press the reset button on \the [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы нажимаете кнопку сброса на [src].</span>")
 	else
-		to_chat(usr, "<span class='notice'>You cannot do this while restrained.</span>")
+		to_chat(usr, "<span class='notice'>Вы не можете этого сделать, пока вас сдерживают.</span>")
 
 /obj/item/device/pda/verb/verb_remove_id()
 	set category = "Object"
-	set name = "Remove id"
+	set name = "Вытащить ID карту"
 	set src in usr
 
 	if(issilicon(usr))
@@ -325,14 +325,14 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		if(id)
 			remove_id()
 		else
-			to_chat(usr, "<span class='notice'>This PDA does not have an ID in it.</span>")
+			to_chat(usr, "<span class='notice'>В этом ПДА нет ID карты.</span>")
 	else
-		to_chat(usr, "<span class='notice'>You cannot do this while restrained.</span>")
+		to_chat(usr, "<span class='notice'>Вы не можете этого сделать, пока вас сдерживают.</span>")
 
 
 /obj/item/device/pda/verb/verb_remove_pen()
 	set category = "Object"
-	set name = "Remove pen"
+	set name = "Вытащить ручку"
 	set src in usr
 
 	if(issilicon(usr))
@@ -341,22 +341,22 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if ( can_use(usr) )
 		remove_pen()
 	else
-		to_chat(usr, "<span class='notice'>You cannot do this while restrained.</span>")
+		to_chat(usr, "<span class='notice'>Вы не можете этого сделать, пока вас сдерживают.</span>")
 
 /obj/item/device/pda/verb/verb_remove_cartridge()
 	set category = "Object"
-	set name = "Remove cartridge"
+	set name = "Вытащить картридж"
 	set src in usr
 
 	if(issilicon(usr))
 		return
 
 	if(!can_use(usr))
-		to_chat(usr, "<span class='notice'>You cannot do this while restrained.</span>")
+		to_chat(usr, "<span class='notice'>Вы не можете этого сделать, пока вас сдерживают.</span>")
 		return
 
 	if(isnull(cartridge))
-		to_chat(usr, "<span class='notice'>There's no cartridge to eject.</span>")
+		to_chat(usr, "<span class='notice'>Нет картриджа, который можно было бы вытащить.</span>")
 		return
 
 	cartridge.forceMove(get_turf(src))
@@ -367,7 +367,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	// scanmode = 0
 	if (cartridge.radio)
 		cartridge.radio.hostpda = null
-	to_chat(usr, "<span class='notice'>You remove \the [cartridge] from the [name].</span>")
+	to_chat(usr, "<span class='notice'>Вы извлекаете [cartridge] из [name].</span>")
 	playsound(src, 'sound/machines/id_swipe.ogg', 100, 1)
 	cartridge = null
 	update_programs()
@@ -405,26 +405,26 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		cartridge.loc = src
 		cartridge.update_programs(src)
 		update_shortcuts()
-		to_chat(usr, "<span class='notice'>You insert [cartridge] into [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы вставляете [cartridge] в [src].</span>")
 		if(cartridge.radio)
 			cartridge.radio.hostpda = src
 
 	else if(istype(C, /obj/item/weapon/card/id))
 		var/obj/item/weapon/card/id/idcard = C
 		if(!idcard.registered_name)
-			to_chat(user, "<span class='notice'>\The [src] rejects the ID.</span>")
+			to_chat(user, "<span class='notice'>[src] отклоняет ID карту.</span>")
 			return
 		if(!owner)
 			owner = idcard.registered_name
 			ownjob = idcard.assignment
 			ownrank = idcard.rank
 			name = "PDA-[owner] ([ownjob])"
-			to_chat(user, "<span class='notice'>Card scanned.</span>")
+			to_chat(user, "<span class='notice'>Карта отсканирована.</span>")
 		else
 			//Basic safety check. If either both objects are held by user or PDA is on ground and card is in hand.
 			if(((src in user.contents) && (C in user.contents)) || (istype(loc, /turf) && in_range(src, user) && (C in user.contents)) )
 				if(id_check(user, 2))
-					to_chat(user, "<span class='notice'>You put the ID into \the [src]'s slot.</span>")
+					to_chat(user, "<span class='notice'>Вы вставляете ID карту в слот [src].</span>")
 					updateSelfDialog()//Update self dialog on success.
 			return	//Return in case of failed check or when successful.
 		updateSelfDialog()//For the non-input related code.
@@ -432,16 +432,16 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		user.drop_item()
 		C.loc = src
 		pai = C
-		to_chat(user, "<span class='notice'>You slot \the [C] into \the [src].</span>")
+		to_chat(user, "<span class='notice'>Вы вставляете [C] в [src].</span>")
 		SStgui.update_uis(src) // update all UIs attached to src
 	else if(istype(C, /obj/item/weapon/pen))
 		var/obj/item/weapon/pen/O = locate() in src
 		if(O)
-			to_chat(user, "<span class='notice'>There is already a pen in \the [src].</span>")
+			to_chat(user, "<span class='notice'>В [src] уже есть ручка.</span>")
 		else
 			user.drop_item()
 			C.loc = src
-			to_chat(user, "<span class='notice'>You slot \the [C] into \the [src].</span>")
+			to_chat(user, "<span class='notice'>Вы вставляете [C] в [src].</span>")
 	return
 
 /obj/item/device/pda/attack(mob/living/C as mob, mob/living/user as mob)
@@ -477,7 +477,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 //Some spare PDAs in a box
 /obj/item/weapon/storage/box/PDAs
 	name = "box of spare PDAs"
-	desc = "A box of spare PDA microcomputers."
+	desc = "Коробка запасных микрокомпьютеров ПДА."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pdabox"
 

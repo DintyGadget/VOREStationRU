@@ -25,10 +25,10 @@
 		return
 	var/datum/data/pda/app/messenger/M = find_program(/datum/data/pda/app/messenger)
 	if(!M)
-		to_chat(usr, "<span class='warning'>Cannot use messenger!</span>")
+		to_chat(usr, "<span class='warning'>Невозможно использовать мессенджер!</span>")
 	var/list/plist = M.available_pdas()
 	if(plist)
-		var/c = input(usr, "Please select a PDA") as null|anything in sortList(plist)
+		var/c = input(usr, "Пожалуйста, выберите ПДА") as null|anything in sortList(plist)
 		if(!c) // if the user hasn't selected a PDA file we can't send a message
 			return
 		var/selected = plist[c]

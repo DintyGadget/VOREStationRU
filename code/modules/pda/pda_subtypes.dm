@@ -36,7 +36,7 @@
 /obj/item/device/pda/clown
 	default_cartridge = /obj/item/weapon/cartridge/clown
 	icon_state = "pda-clown"
-	desc = "A portable microcomputer by Thinktronic Systems, LTD. The surface is coated with polytetrafluoroethylene and banana drippings."
+	desc = "Портативный микрокомпьютер от Thinktronic Systems, LTD. Поверхность покрыта политетрафторэтиленом и банановыми каплями."
 	ttone = "honk"
 
 /obj/item/device/pda/mime
@@ -125,7 +125,7 @@
 /obj/item/device/pda/librarian
 	default_cartridge = /obj/item/weapon/cartridge/service
 	icon_state = "pda-libb"
-	desc = "A portable microcomputer by Thinktronic Systems, LTD. This is model is a WGW-11 series e-reader."
+	desc = "Портативный микрокомпьютер от Thinktronic Systems, LTD. Данная модель представляет собой электронную книгу серии WGW-11."
 	model_name = "Thinktronic 5290 WGW-11 Series E-reader and Personal Data Assistant"
 
 /obj/item/device/pda/librarian/New()
@@ -136,7 +136,7 @@
 
 /obj/item/device/pda/clear
 	icon_state = "pda-transp"
-	desc = "A portable microcomputer by Thinktronic Systems, LTD. This is model is a special edition with a transparent case."
+	desc = "Портативный микрокомпьютер от Thinktronic Systems, LTD. Это модель специального выпуска с прозрачным корпусом."
 	model_name = "Thinktronic 5230 Personal Data Assistant Deluxe Special Max Turbo Limited Edition"
 
 /obj/item/device/pda/chef
@@ -226,7 +226,7 @@
 //Some spare PDAs in a box
 /obj/item/weapon/storage/box/PDAs
 	name = "box of spare PDAs"
-	desc = "A box of spare PDA microcomputers."
+	desc = "Коробка запасных микрокомпьютеров ПДА."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pdabox"
 

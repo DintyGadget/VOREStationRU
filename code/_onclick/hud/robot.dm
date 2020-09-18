@@ -11,7 +11,7 @@ var/obj/screen/robot_inventory
 
 	var/list/adding = list()
 	var/list/other = list()
-	
+
 	HUD.adding = adding
 	HUD.other = other
 
@@ -186,11 +186,11 @@ var/obj/screen/robot_inventory
 		//r.client.screen += robot_inventory	//"store" icon
 
 		if(!r.module)
-			to_chat(usr, "<span class='danger'>No module selected</span>")
+			to_chat(usr, "<span class='danger'>Модуль не выбран</span>")
 			return
 
 		if(!r.module.modules)
-			to_chat(usr, "<span class='danger'>Selected module has no modules to select</span>")
+			to_chat(usr, "<span class='danger'>Выбранный модуль не имеет модулей для выбора</span>")
 			return
 
 		if(!r.robot_modules_background)

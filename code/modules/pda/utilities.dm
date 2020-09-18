@@ -7,7 +7,7 @@
 
 /datum/data/pda/utility/flashlight/start()
 	fon = !fon
-	name = fon ? "Disable Flashlight" : "Enable Flashlight"
+	name = fon ? "Выключить свет" : "Включить свет"
 	pda.update_shortcuts()
 	pda.set_light(fon ? f_lum : 0)
 
@@ -37,46 +37,46 @@
 // 				M.close()
 
 /datum/data/pda/utility/scanmode/medical
-	base_name = "Med Scanner"
+	base_name = "Мед. сканер"
 	icon = "heart-o"
 
 /datum/data/pda/utility/scanmode/medical/scan_mob(mob/living/C as mob, mob/living/user as mob)
-	C.visible_message("<span class=warning>[user] has analyzed [C]'s vitals!</span>")
+	C.visible_message("<span class=warning>[user] проанализировал жизненно важные органы [C]!</span>")
 
-	user.show_message("<span class='notice'>Analyzing Results for [C]:</span>")
-	user.show_message("<span class='notice'>    Overall Status: [C.stat > 1 ? "dead" : "[C.health - C.halloss]% healthy"]</span>", 1)
-	user.show_message(text("<span class='notice'>    Damage Specifics:</span> <span class='[]'>[]</span>-<span class='[]'>[]</span>-<span class='[]'>[]</span>-<span class='[]'>[]</span>",
+	user.show_message("<span class='notice'>Анализ результатов для [C]:</span>")
+	user.show_message("<span class='notice'>    Общий статус: [C.stat > 1 ? "dead" : "[C.health - C.halloss]% healthy"]</span>", 1)
+	user.show_message(text("<span class='notice'>    Особенности повреждений:</span> <span class='[]'>[]</span>-<span class='[]'>[]</span>-<span class='[]'>[]</span>-<span class='[]'>[]</span>",
 			(C.getOxyLoss() > 50) ? "warning" : "", C.getOxyLoss(),
 			(C.getToxLoss() > 50) ? "warning" : "", C.getToxLoss(),
 			(C.getFireLoss() > 50) ? "warning" : "", C.getFireLoss(),
 			(C.getBruteLoss() > 50) ? "warning" : "", C.getBruteLoss()
 			), 1)
 	user.show_message("<span class='notice'>    Key: Suffocation/Toxin/Burns/Brute</span>", 1)
-	user.show_message("<span class='notice'>    Body Temperature: [C.bodytemperature-T0C]&deg;C ([C.bodytemperature*1.8-459.67]&deg;F)</span>", 1)
+	user.show_message("<span class='notice'>    Темп. тела: [C.bodytemperature-T0C]&deg;C ([C.bodytemperature*1.8-459.67]&deg;F)</span>", 1)
 	if(C.tod && (C.stat == DEAD || (C.status_flags & FAKEDEATH)))
-		user.show_message("<span class='notice'>    Time of Death: [C.tod]</span>")
+		user.show_message("<span class='notice'>    Время смерти: [C.tod]</span>")
 	if(istype(C, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = C
 		var/list/damaged = H.get_damaged_organs(1,1)
-		user.show_message("<span class='notice'>Localized Damage, Brute/Burn:</span>",1)
+		user.show_message("<span class='notice'>Локальный урон, грубый/ожоги:</span>",1)
 		if(length(damaged)>0)
 			for(var/obj/item/organ/external/org in damaged)
 				user.show_message(text("<span class='notice'>     []: <span class='[]'>[]</span>-<span class='[]'>[]</span></span>",
 						capitalize(org.name), (org.brute_dam > 0) ? "warning" : "notice", org.brute_dam, (org.burn_dam > 0) ? "warning" : "notice", org.burn_dam),1)
 		else
-			user.show_message("<span class='notice'>    Limbs are OK.</span>",1)
+			user.show_message("<span class='notice'>    Конечности в порядке.</span>",1)
 
 /datum/data/pda/utility/scanmode/dna
-	base_name = "DNA Scanner"
+	base_name = "Сканер ДНК"
 	icon = "link"
 
 /datum/data/pda/utility/scanmode/dna/scan_mob(mob/living/C as mob, mob/living/user as mob)
 	if(istype(C, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = C
 		if(!istype(H.dna, /datum/dna))
-			to_chat(user, "<span class=notice>No fingerprints found on [H]</span>")
+			to_chat(user, "<span class=notice>На [H] отпечатков пальцев не найдено</span>")
 		else
-			to_chat(user, "<span class=notice>[H]'s Fingerprints: [md5(H.dna.uni_identity)]</span>")
+			to_chat(user, "<span class=notice>Отпечаток [H]: [md5(H.dna.uni_identity)]</span>")
 	scan_blood(C, user)
 
 /datum/data/pda/utility/scanmode/dna/scan_atom(atom/A as mob|obj|turf|area, mob/user as mob)
@@ -91,23 +91,23 @@
 		to_chat(user, "<span class=notice>Blood found on [A]. Analysing...</span>")
 		spawn(15)
 			for(var/blood in A.blood_DNA)
-				to_chat(user, "<span class=notice>Blood type: [A.blood_DNA[blood]]\nDNA: [blood]</span>")
+				to_chat(user, "<span class=notice>Группа крови: [A.blood_DNA[blood]]\nДНК: [blood]</span>")
 
 /datum/data/pda/utility/scanmode/halogen
-	base_name = "Halogen Counter"
+	base_name = "Галогенный счетчик"
 	icon = "exclamation-circle"
 
 /datum/data/pda/utility/scanmode/halogen/scan_mob(mob/living/C as mob, mob/living/user as mob)
-	C.visible_message("<span class=warning>[user] has analyzed [C]'s radiation levels!</span>")
+	C.visible_message("<span class=warning>[user] измеряет уровень радиации [C]!</span>")
 
-	user.show_message("<span class=notice>Analyzing Results for [C]:</span>")
+	user.show_message("<span class=notice>Анализ результатов для [C]:</span>")
 	if(C.radiation)
-		user.show_message("<span class=notice>Radiation Level: [C.radiation > 0 ? "</span><span class=danger>[C.radiation]" : "0"]</span>")
+		user.show_message("<span class=notice>Уровень радиации: [C.radiation > 0 ? "</span><span class=danger>[C.radiation]" : "0"]</span>")
 	else
-		user.show_message("<span class=notice>No radiation detected.</span>")
+		user.show_message("<span class=notice>Радиация не обнаружена.</span>")
 
 /datum/data/pda/utility/scanmode/reagent
-	base_name = "Reagent Scanner"
+	base_name = "Сканер реагентов"
 	icon = "flask"
 
 /datum/data/pda/utility/scanmode/reagent/scan_atom(atom/A as mob|obj|turf|area, mob/user as mob)
@@ -118,12 +118,12 @@
 			for(var/re in A.reagents.reagent_list)
 				to_chat(user, "<span class='notice'>\t [re]</span>")
 		else
-			to_chat(user, "<span class='notice'>No active chemical agents found in [A].</span>")
+			to_chat(user, "<span class='notice'>В [A] нет активных химических веществ.</span>")
 	else
-		to_chat(user, "<span class='notice'>No significant chemical agents found in [A].</span>")
+		to_chat(user, "<span class='notice'>В [A] не обнаружено значительных химических веществ..</span>")
 
 /datum/data/pda/utility/scanmode/gas
-	base_name = "Gas Scanner"
+	base_name = "Газометр"
 	icon = "tachometer-alt"
 
 /datum/data/pda/utility/scanmode/gas/scan_atom(atom/A as mob|obj|turf|area, mob/user as mob)
@@ -174,7 +174,7 @@
 		if(length(notes.note) > 0)
 			notes.note += "<br><br>"
 		// Store the scanned document to the notes
-		notes.note += "Scanned Document. Edit to restore previous notes/delete scan.<br>----------<br>" + formatted_scan + "<br>"
+		notes.note += "Документ просканирован. Edit to restore previous notes/delete scan.<br>----------<br>" + formatted_scan + "<br>"
 		// notehtml ISN'T set to allow user to get their old notes back. A better implementation would add a "scanned documents"
 		// feature to the PDA, which would better convey the availability of the feature, but this will work for now.
 		// Inform the user

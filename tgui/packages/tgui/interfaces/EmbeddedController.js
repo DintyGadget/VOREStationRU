@@ -185,12 +185,12 @@ const StandardControls = (props, context) => {
         <Button
           disabled={data.airlock_disabled}
           icon="arrow-left"
-          content="Cycle to Exterior"
+          content="Цикл наружу"
           onClick={() => act('cycle_ext')} />
         <Button
           disabled={data.airlock_disabled}
           icon="arrow-right"
-          content="Cycle to Interior"
+          content="Цикл внутрь"
           onClick={() => act('cycle_int')} />
       </Box>
       <Box>
@@ -199,14 +199,14 @@ const StandardControls = (props, context) => {
           color={externalForceSafe ? '' : 'bad'}
           icon="exclamation-triangle"
           confirmIcon="exclamation-triangle"
-          content="Force Exterior Door"
+          content="Внешее открытие"
           onClick={() => act('force_ext')} />
         <Button.Confirm
           disabled={data.airlock_disabled}
           color={internalForceSafe ? '' : 'bad'}
           icon="exclamation-triangle"
           confirmIcon="exclamation-triangle"
-          content="Force Interior Door"
+          content="Внутренее открытие"
           onClick={() => act('force_int')} />
       </Box>
     </Fragment>

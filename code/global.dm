@@ -136,9 +136,9 @@ var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J
 
 // Used by robots and robot preferences.
 var/list/robot_module_types = list(
-	"Standard", "Engineering", "Surgeon",  "Crisis",
-	"Miner",    "Уборщик",     "Service",      "Clerical", "Security",
-	"Research"
+	"Стандарт", "Инженер", "Хирург",  "Медик",
+	"Шахтер",    "Уборщик",     "Сервис",      "Клерк", "Охрана",
+	"Ученый"
 )
 
 // Some scary sounds.
