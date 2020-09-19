@@ -80,12 +80,12 @@
 	name = "Supermatter Engine Operating Manual"
 	icon_state = "bookSupermatter"
 	item_state = "book15"
-	author = "Central Engineering Division"
-	title = "Supermatter Engine Operating Manual"
+	author = "Центральный Инженерный Отдел"
+	title = "Суперматерия для чайников"
 
 /obj/item/weapon/book/manual/supermatter_engine/New()
 	..()
-	dat = {"<html>
+	dat = {"<html><meta charset=\"utf-8\">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -97,63 +97,63 @@
 				</style>
 				</head>
 				<body>
-				<h1>OPERATING MANUAL FOR MK 1 PROTOTYPE THERMOELECTRIC SUPERMATTER ENGINE 'TOMBOLA'</h1>
+				<h1>РУКОВОДСТВО ПО ЭКСПЛУАТАЦИИ ПРОТОТИПА ТЕРМОЭЛЕКТРИЧЕСКОГО ДВИГАТЕЛЯ MK 1 «ТОМБОЛА»</h1>
 				<br>
-				<h2>OPERATING PRINCIPLES</h2>
+				<h2>ПРИНЦИП ДЕЙСТВИЯ</h2>
 				<br>
-				<li>The supermatter crystal serves as the fundamental power source of the engine. Upon being charged, it begins to emit large amounts of heat and radiation, as well and oxygen and phoron gas. As oxygen accelerates the reaction and reacts with phoron to start a fire, it must be filtered out. It's recommended to filter out all gases besides nitrogen for standard operation. </li>
+				<li>Кристалл суперматерии служит основным источником энергии двигателя. После зарядки он начинает излучать большое количество тепла и излучения, а также кислород и форон. Поскольку кислород ускоряет реакцию и вступает в реакцию с фороном, вызывая пожар, его необходимо отфильтровать. Для стандартной работы рекомендуется отфильтровать все газы, кроме азота. </li>
 				<br>
-				<li>Gas in the reactor chamber housing the supermatter is circulated through the reactor loop, which passes through the filters and thermoelectric generators. The thermoelectric generators transfer heat from the reactor loop to the colder radiator loop, thereby generating power. Additional power is generated from internal turbines in the circulators.</li>
+				<li>Газ в камере реактора, содержащей сверхматерию, циркулирует по контуру реактора, который проходит через фильтры и термоэлектрические генераторы. Термоэлектрические генераторы передают тепло от контура реактора к более холодному контуру радиатора, тем самым вырабатывая энергию. Дополнительная мощность вырабатывается внутренними турбинами циркуляционных насосов.</li>
 				<br>
-				<li>Gas in the radiator loop is circulated through the radiator bank, located in space. This rapidly cools the air, preserving the temperature differential needed for power generation.</li>
+				<li>Газ в радиаторном контуре циркулирует через радиаторную батарею, расположенную в пространстве. Это быстро охлаждает воздух, сохраняя разницу температур, необходимую для выработки электроэнергии.</li>
 				<br>
-				<li>The MK 1 Prototype Thermoelectric Supermatter Engine is designed to operate at reactor temperatures of 3000K to 4000K and generate up to 1MW of power. Beyond 1MW, the thermoelectric generators will begin to lose power through electrical discharge, reducing efficiency, but additional power generation remains feasible.</li>
+				<li>Прототип термоэлектрического двигателя на сверхматериях МК 1 разработан для работы при температурах реактора от 3000К до 4000К и генерирует до 1 МВт мощности. При мощности свыше 1 МВт термоэлектрические генераторы начнут терять мощность из-за электрического разряда, снижая эффективность, но дополнительная выработка энергии остается возможной.</li>
 				<br>
-				<li>The crystal structure of the supermatter will begin to liquefy if its temperature exceeds 5000K. This eventually results in a massive release of light, heat and radiation, disintegration of both the supermatter crystal and most of the surrounding area, and as as-of-yet poorly documented psychological effects on all animals within a 2km radius. Appropriate action should be taken to stabilize or eject the supermatter before such occurs.</li>
+				<li>Кристаллическая структура суперматериала начнет разжижаться, если ее температура превысит 5000К. В конечном итоге это приводит к массовому высвобождению света, тепла и излучения, распаду кристалла суперматерии и большей части окружающей области, а также к еще плохо задокументированным психологическим воздействиям на всех животных в радиусе 2 км. До того, как это произойдет, необходимо предпринять соответствующие действия для стабилизации или изгнания суперматерии.</li>
 				<br>
-				<h2>SUPERMATTER HANDLING</h2>
-				<li>Do not expose supermatter to oxygen.</li>
-				<li>Do not allow supermatter to contact any solid object apart from specially-designed supporting pallet.</li>
-				<li>Do not directly view supermatter without meson goggles.</li>
-				<li>While handles on pallet allow moving the supermatter via pulling, pushing should not be attempted.</li>
-				<li>Note that prosthetics do not protect against radiation or viewing the supermatter.</li>
+				<h2>ОБРАЩЕНИЕ С СУПЕРМАТЕРИЕЙ</h2>
+				<li>Не подвергайте суперматерию воздействию кислорода.</li>
+				<li>Не допускайте контакта суперматерии с каким-либо твердым предметом, кроме специально разработанного опорного поддона.</li>
+				<li>Не смотрите на сверхматерию без мезонных очков.</li>
+				<li>Хотя ручки на поддоне позволяют перемещать суперматерию путем вытягивания, толкать ее не следует.</li>
+				<li>Обратите внимание, что протезирование не защищает от излучения или наблюдения за сверхматерией.</li>
 				<br>
-				<h2>STANDARD STARTUP PROCEDURE</h2>
+				<h2>СТАНДАРТНАЯ ПРОЦЕДУРА ЗАПУСКА</h2>
 				<ol>
-				<li>Fill reactor loop and radiator loop with three (3) standard canisters of nitrogen gas each.</li>
-				<li>Fill the waste handling radiator loop with one (1) standard canister of carbon dioxide gas.</li>
-				<li>Enable both the high power gas pumps near the thermo-electric generators and maximize the desired output.</li>
-				<li>Enable both the omni-filters and ensure they are set to filter nitrogen back into the system.</li>
-				<li>Enable the gas pump from the filters to waste handling and maximize the desired output.</li>
-				<li>Close the monitoring room blast doors and open the reactor blast doors,</li>
-				<li>Fire 8-9 pulses from emitter at supermatter crystal. The expected power output is around a megawatt. NOTE: It will take a few minutes to heat up.</li>
-				<li>Close the reactor blast doors and keep the monitoring room blast doors closed to prevent radiation leaking.</li>
+				<li>Заполните контур реактора и контур радиатора тремя (3) стандартными канистрами газообразного азота каждый.</li>
+				<li>Заполните контур радиатора для обращения с отходами одной (1) стандартной канистрой с газообразным диоксидом углерода.</li>
+				<li>Включите оба мощных газовых насоса рядом с термоэлектрическими генераторами и увеличьте желаемую мощность до максимума.</li>
+				<li>Включите оба омни-фильтра и убедитесь, что они настроены на фильтрацию азота обратно в систему.</li>
+				<li>Включите газовый насос от фильтров для обработки отходов и максимизируйте желаемую производительность.</li>
+				<li>Закройте противовзрывные двери комнаты наблюдения и откройте противовзрывные двери реактора.</li>
+				<li>Выстрелите 8-9 импульсами из эмиттера в кристалл суперматерии. Ожидаемая выходная мощность составляет около мегаватта. ПРИМЕЧАНИЕ. Для нагрева потребуется несколько минут.</li>
+				<li>Закройте противовзрывные двери реактора и держите противовзрывные двери комнаты мониторинга закрытыми, чтобы предотвратить утечку радиации.</li>
 				</ol>
 				<br>
-				<h2>OPERATION AND MAINTENANCE</h2>
+				<h2>ЭКСПЛУАТАЦИЯ И ОБСЛУЖИВАНИЕ</h2>
 				<ol>
-				<li>Ensure that radiation protection and meson goggles are worn at all times while working in the engine room.</li>
-				<li>Ensure that reactor and radiator loops are undamaged and unobstructed.</li>
-				<li>Ensure that, in a standard setup, only nitrogen is being filtered back into the system. Do not allow exhaust pressure to exceed 4500 kPa.</li>
-				<li>Ensure that engine room Area Power Controller (APC) and engine Superconducting Magnetic Energy Storage unit (SMES) are properly charged.</li>
-				<li>Ensure that reactor temperature does not exceed 5000K. In event of reactor temperature exceeding 5000K, see EMERGENCY COOLING PROCEDURE.</li>
-				<li>In event of imminent and/or unavoidable delamination, see EJECTION PROCEDURE.</li>
+				<li>Убедитесь, что во время работы в машинном отделении вы носите радиационную защиту и защитные очки.</li>
+				<li>Убедитесь, что контуры реактора и радиатора не повреждены и не заблокированы.</li>
+				<li>Убедитесь, что при стандартной установке только азот фильтруется обратно в систему. Не допускайте превышения давления на выхлопе 4500 кПа.</li>
+				<li>Убедитесь, что контроллер мощности (APC) машинного отделения и сверхпроводящий накопитель магнитной энергии (SMES) двигателя должным образом заряжены.</li>
+				<li>Убедитесь, что температура реактора не превышает 5000К. Если температура реактора превышает 5000K, см. ПРОЦЕДУРА АВАРИЙНОГО ОХЛАЖДЕНИЯ.</li>
+				<li>В случае неминуемого и/или неизбежного отслоения см. ПРОЦЕДУРА ИЗВЛЕЧЕНИЯ.</li>
 				</ol>
 				<br>
-				<h2>EMERGENCY COOLING PROCEDURE</h2>
+				<h2>ПРОЦЕДУРА АВАРИЙНОГО ОХЛАЖДЕНИЯ</h2>
 				<ol>
-				<li>Open Emergency Cooling Valve 1 and Emergency Cooling Valve 2.</li>
-				<li>When reactor temperature returns to safe operating levels, close Emergency Cooling Valve 1 and Emergency Cooling Valve 2.</li>
-				<li>Adding additional gas to the loops can have a positive effect in reducing reactor temperature.</li>
-				<li>If reactor temperature does not return to safe operating levels, see EJECTION PROCEDURE.</li>
+				<li>Откройте клапан аварийного охлаждения 1 и клапан аварийного охлаждения 2.</li>
+				<li>Когда температура реактора вернется к безопасному рабочему уровню, закройте клапан аварийного охлаждения 1 и клапан аварийного охлаждения 2.</li>
+				<li>Добавление дополнительного газа в контуры может оказать положительное влияние на снижение температуры реактора.</li>
+				<li>Если температура реактора не возвращается к безопасным рабочим уровням, см. ПРОЦЕДУРА ИЗВЛЕЧЕНИЯ.</li>
 				</ol>
 				<br>
-				<h2>EJECTION PROCEDURE</h2>
+				<h2>ПРОЦЕДУРА ИЗВЛЕЧЕНИЯ</h2>
 				<ol>
-				<li>Ensure the engine room has power. The blast doors and ejection platform are unresponsive without power.</li>
-				<li>Press Engine Ventilatory Control button to open engine core blast door to space.</li>
-				<li>Press Emergency Core Eject button to eject supermatter crystal. NOTE: Attempting crystal ejection while engine core vent is closed will result in ejection failure.</li>
-				<li>In event of ejection failure, <i>pending</i></li>
+				<li>Убедитесь, что в машинном отделении есть питание. Противовзрывные двери и платформа для катапультирования не работают без питания.</li>
+				<li>Нажмите кнопку управления вентиляцией двигателя, чтобы открыть противовзрывную дверь активной зоны реактора в космос.</li>
+				<li>Нажмите кнопку Emergency Core Eject, чтобы выбросить кристалл суперматерии. ПРИМЕЧАНИЕ: Попытка выброса кристаллов при закрытом вентиляционном отверстии двигателя приведет к сбою выброса.</li>
+				<li>В случае отказа выброса, <i>ожидайте</i></li>
 				</ol>
 				</body>
 			</html>"}
@@ -234,12 +234,12 @@
 	name = "R-UST Operating Manual"
 	icon_state = "bookSupermatter"
 	item_state = "book15"
-	author = "Cindy Crawfish"
-	title = "R-UST Operating Manual"
+	author = "Синди Кравфиш"
+	title = "R-UST Руководство по эксплуатации"
 
 /obj/item/weapon/book/manual/rust_engine/New()
 	..()
-	dat = {"<html>
+	dat = {"<html><meta charset=\"utf-8\">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -253,21 +253,21 @@
 				<body>
 				<br><br>
 				<ol>
-				<li>Put uranium in the portable generator near the gyrotron and turn it to full. This is to provide initial power to the core.</li>
-				<li>Enable and max output on the SMES in the engine room. This is to power the gyrotron.</li>
-				<li>Go into the control room, interact with the fusion core control console. Turn the field on and raise size to 501. Any bigger and it will start EMPing the doors. Any smaller and the fuel pellets might miss.</li>
-				<li>Interact with the gyrotron control computer, set power as high as the SMES can support, usually around 4, and turn it on. This will start increasing the plasma temperature to the point where reactions can occur.</li>
-				<li>Go into the engine room and insert a deuterium fuel assembly and a tritium fuel assembly into two of the fuel injectors. You can make deuterium rods in the fuel compressor if you want to play it safe.</li>
-				<li>Go back to the control room and turn the fuel injectors on. This will start firing pellets into the field.</li>
-				<li>Wait for reactions to start (plasma temperature will spike and fuel amounts will drop). Turn the gyrotron power down until it's keeping up with field instability. This will prevent cumulative instability from the deuterium-tritium reaction fucking up the field. If you're using straight deuterium instability isn't a problem and you can turn the gyrotron off.</li>
-				<li>Configure the SMES, turn the PACMAN off before it explodes.</li>
+				<li>Поместите уран в переносной генератор рядом с гиротроном и включите его на полную мощность. Это должно обеспечить начальное питание ядра.</li>
+				<li>Включение и выставите максимальную мощность в SMES для машинного отделения. Это необходимо для питания гиротрона.</li>
+				<li>Войдите в диспетчерскую, взаимодействуйте с консолью управления ядром синтеза. Включите поле и увеличьте размер до 501. Если вы поставите больше, оно начнет ЭМИНИРОВАТЬ двери. Слишком мало - и топливные элементы могут ***.</li>
+				<li>Взаимодействуйте с управляющим компьютером гиротрона, установите мощность настолько высокую, насколько могут поддерживать SMES, обычно около 4, и включите его. Это приведет к увеличению температуры плазмы до точки, где могут происходить реакции.</li>
+				<li>Пройдите в машинное отделение и вставьте дейтериевую топливную сборку и тритиевую топливную сборку в две топливные форсунки. Вы можете сделать дейтериевые стержни в топливном компрессоре, если хотите перестраховаться.</li>
+				<li>Вернитесь в диспетчерскую и включите топливные форсунки. Это начнет стрелять в поле гранулами.</li>
+				<li>Подождите, пока начнутся реакции (температура плазмы резко возрастет, а количество топлива упадет). Уменьшите мощность гиротрона, пока он не начнет поспевать за нестабильностью поля. Это предотвратит кумулятивную нестабильность из-за дейтерий-тритиевой реакции, разрушающей поле. Если вы используете прямой дейтерий, нестабильность не проблема, и вы можете выключить гиротрон.</li>
+				<li>Настройте SMES, выключите PACMAN, прежде чем он взорвется.</li>
 				</ol>
 				<br>
-				<b>NOTES FOR NEWBIES</b>
+				<b>ЗАМЕТКИ ДЛЯ НОВИЧКОВ</b>
 				<br>
-				Anything touching the field will mess with its stability and eventually cause it to rupture. Rupturing is bad. Use the gyrotron to keep instability down if you're running the engine on unstable fuel.
+				Все, что касается поля, нарушает его устойчивость и в конечном итоге приводит к его разрыву. Разрыв - это плохо. Используйте гиротрон, чтобы снизить нестабильность, если вы работаете с реактором на нестабильном топливе.
 				<br><br>
-				Likewise, no matter how sad the core seems, don't fucking hug it, you'll blow the field out and set the engine room on fire.
+				Точно так же, независимо от того, насколько грустным кажется ядро, не обнимайте его, черт возьми, вы взорвете поле и подожжете машинное отделение.
 				</body>
 			</html>"}
 
@@ -298,10 +298,10 @@
 	name = "Singularity Safety in Special Circumstances"
 	icon_state ="bookEngineeringSingularitySafety"
 	item_state = "book15"
-	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
-	title = "Singularity Safety in Special Circumstances"
+	author = "Инженерная энциклопедия"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
+	title = "Безопасность сингулярности в особых обстоятельствах"
 
-	dat = {"<html>
+	dat = {"<html><meta charset=\"utf-8\">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -313,34 +313,34 @@
 				</style>
 				</head>
 				<body>
-				<h1>Singularity Safety in Special Circumstances</h1>
+				<h1>Безопасность сингулярности в особых обстоятельствах</h1>
 
-				<h2>Power outage</h2>
+				<h2>Отключение электричества</h2>
 
-				A power problem has made the entire station lose power? Could be station-wide wiring problems or syndicate power sinks. In any case follow these steps:
+				Проблема с питанием привела к потере мощности всей станции? В таком случае могут быть проблемы с проводкой на всей станции или потребителями энергии. В любом случае выполните следующие действия:
 
 				<ol>
-					<li><b><font color='red'>PANIC!</font></b></li>
-					<li>Get your ass over to engineering! <b>QUICKLY!!!</b></li>
-					<li>Get to the <b>Area Power Controller</b> which controls the power to the emitters.</li>
-					<li>Swipe it with your <b>ID card</b> - if it doesn't unlock, continue with step 15.</li>
-					<li>Open the console and disengage the cover lock.</li>
-					<li>Pry open the APC with a <b>Crowbar.</b></li>
-					<li>Take out the empty <b>power cell.</b></li>
-					<li>Put in the new, <b>full power cell</b> - if you don't have one, continue with step 15.</li>
-					<li>Quickly put on a <b>Radiation suit.</b></li>
-					<li>Check if the <b>singularity field generators</b> withstood the down-time - if they didn't, continue with step 15.</li>
-					<li>Since disaster was averted you now have to ensure it doesn't repeat. If it was a powersink which caused it and if the engineering APC is wired to the same powernet, which the powersink is on, you have to remove the piece of wire which links the APC to the powernet. If it wasn't a powersink which caused it, then skip to step 14.</li>
-					<li>Grab your crowbar and pry away the tile closest to the APC.</li>
-					<li>Use the wirecutters to cut the wire which is connecting the grid to the terminal. </li>
-					<li>Go to the bar and tell the guys how you saved them all. Stop reading this guide here.</li>
-					<li><b>GET THE FUCK OUT OF THERE!!!</b></li>
+					<li><b><font color='red'>ПАНИКУЙТЕ!</font></b></li>
+					<li>Перенесите свою задницу в инженерное дело! <b>БЫСТРО!!!</b></li>
+					<li>Доберитесь до <b>APC</b> который регулирует мощность излучателей.</li>
+					<li>Проведите по нему своей <b>ID картой</b> - если он не разблокируется, перейдите к шагу 15.</li>
+					<li>Откройте консоль и снимите замок крышки.</li>
+					<li>Вскройте APC с помощью <b>Лома.</b></li>
+					<li>Вытащите пустую <b>энергоячейку.</b></li>
+					<li>Вставьте новую, <b>заряженную энергоячейку</b> - если у вас ее нет, продолжайте с шага 15.</li>
+					<li>Быстро наденьте <b>Радиационный костюм.</b></li>
+					<li>Проверьте, выдержали ли <b>енераторы поля сингулярности</b> время простоя - если нет, продолжайте с шага 15.</li>
+					<li>Поскольку катастрофу удалось предотвратить, вы должны убедиться, что она не повторится. Если причиной этого был источник питания, и если инженерный APC подключен к той же сети питания, в которой включен модуль питания, необходимо удалить кусок провода, который соединяет APC с сетью питания. Если причиной этого был не Powerink, перейдите к шагу 14.</li>
+					<li>Хватайте лом и оторвите плитку, ближайшую к APC.</li>
+					<li>Используйте кусачки, чтобы перерезать провод, соединяющий сеть с терминалом. </li>
+					<li>Сходи в бар и расскажи ребятам, как ты их всех спас. Прекратите читать это руководство сейчас же.</li>
+					<li><b>А ТЕПЕРЬ ИДИ В ХУЙ!!!</b></li>
 				</ol>
 
-				<h2>Shields get damaged</h2>
+				<h2>Щиты повреждились</h2>
 
 				<ol>
-					<li><b>GET THE FUCK OUT OF THERE!!! FORGET THE WOMEN AND CHILDREN, SAVE YOURSELF!!!</b></li>
+					<li><b>СПАСАЙСЯ К ХУЯМ ОТСЮДА!!! ЗАБУДЬТЕ ЖЕНЩИН И ДЕТЕЙ, СПАСИТЕ СЕБЯ !!!</b></li>
 				</ol>
 				</body>
 			</html>

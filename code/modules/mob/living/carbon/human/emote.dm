@@ -299,6 +299,10 @@
 				if(!muzzled)
 					message = "задыхается!"
 					m_type = 2
+					if(get_gender() == FEMALE)
+						playsound(src, pick(species.female_gasp_sound), 80, 1)
+					else
+						playsound(src, pick(species.male_gasp_sound), 80, 1) //default to male screams if no gender is present.
 				else
 					message = "издает слабый звук."
 					m_type = 2
@@ -315,6 +319,10 @@
 				if(!muzzled)
 					message = "хихикает."
 					m_type = 2
+					if(get_gender() == FEMALE)
+						playsound(src, pick(species.female_giggle_sounds), 80, 1)
+					else
+						playsound(src, pick(species.male_giggle_sounds), 80, 1) //default to male screams if no gender is present.
 				else
 					message = "makes a noise."
 					m_type = 2
@@ -372,36 +380,48 @@
 
 		if("cry")
 			if(miming)
-				message = "cries."
+				message = "плачет."
 				m_type = 1
 			else
 				if(!muzzled)
-					message = "cries."
+					message = "плачет."
 					m_type = 2
+					if(get_gender() == FEMALE)
+						playsound(src, pick(species.female_cry_sounds), 80, 1)
+					else
+						playsound(src, pick(species.male_cry_sounds), 80, 1) //default to male crys if no gender is present.
 				else
 					message = "makes a weak noise. [T.he] [get_visible_gender() == NEUTER ? "frown" : "frowns"]." // no good, non-unwieldy alternative to this ternary at the moment
 					m_type = 2
 
 		if("sigh")
 			if(miming)
-				message = "sighs."
+				message = "вздыхает."
 				m_type = 1
 			else
 				if(!muzzled)
-					message = "sighs."
+					message = "вздыхает."
 					m_type = 2
+					if(get_gender() == FEMALE)
+						playsound(src, pick(species.female_sigh_sounds), 80, 1)
+					else
+						playsound(src, pick(species.male_sigh_sounds), 80, 1) //default to male sighs if no gender is present.
 				else
 					message = "makes a weak noise."
 					m_type = 2
 
 		if("laugh")
 			if(miming)
-				message = "acts out a laugh."
+				message = "разрывается смехом."
 				m_type = 1
 			else
 				if(!muzzled)
-					message = "laughs."
+					message = "смеется."
 					m_type = 2
+					if(get_gender() == FEMALE)
+						playsound(src, pick(species.female_laugh_sounds), 80, 1)
+					else
+						playsound(src, pick(species.male_laugh_sounds), 80, 1) //default to male laughs if no gender is present.
 				else
 					message = "makes a noise."
 					m_type = 2
@@ -437,11 +457,15 @@
 
 		if("moan")
 			if(miming)
-				message = "appears to moan!"
+				message = "стонет!"
 				m_type = 1
 			else
-				message = "moans!"
+				message = "стонет!"
 				m_type = 2
+				if(get_gender() == FEMALE)
+					playsound(src, pick(species.female_moan_sounds), 80, 1)
+				else
+					playsound(src, pick(species.male_moan_sounds), 80, 1) //default to male moans if no gender is present.
 
 		if("johnny")
 			var/M
@@ -566,8 +590,12 @@
 				m_type = 1
 			else
 				if(!muzzled)
-					message = "snores."
+					message = "храпит."
 					m_type = 2
+					if(get_gender() == FEMALE)
+						playsound(src, pick(species.female_snore_sounds), 80, 1)
+					else
+						playsound(src, pick(species.male_snore_sounds), 80, 1) //default to male moans if no gender is present.
 				else
 					message = "makes a noise."
 					m_type = 2
@@ -590,8 +618,12 @@
 
 		if("yawn")
 			if(!muzzled)
-				message = "yawns."
+				message = "зевает."
 				m_type = 2
+				if(get_gender() == FEMALE)
+					playsound(src, pick(species.female_yawn_sounds), 80, 1)
+				else
+					playsound(src, pick(species.male_yawn_sounds), 80, 1) //default to male yawns if no gender is present.
 				if(miming)
 					m_type = 1
 
@@ -615,9 +647,9 @@
 					M = null
 
 				if(M)
-					message = "hugs [M]."
+					message = "обнимает [M]."
 				else
-					message = "hugs [T.himself]."
+					message = "Обнимает себя."
 
 		if("handshake")
 			m_type = 1
@@ -679,12 +711,11 @@
 				if(!muzzled)
 					message = "[species.scream_verb]!"
 					m_type = 2
-					/* Removed, pending the location of some actually good, properly licensed sounds.
+					// Removed, pending the location of some actually good, properly licensed sounds.
 					if(get_gender() == FEMALE)
 						playsound(src, "[species.female_scream_sound]", 80, 1)
 					else
 						playsound(src, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
-					*/
 				else
 					message = "makes a very loud noise."
 					m_type = 2
@@ -767,7 +798,7 @@
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC"
 
-	var/HTML = "<body>"
+	var/HTML = "<meta charset=\"utf-8\"><body>"
 	HTML += "<tt><center>"
 	HTML += "<b>Update Flavour Text</b> <hr />"
 	HTML += "<br></center>"

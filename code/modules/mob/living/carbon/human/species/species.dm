@@ -72,10 +72,26 @@
 
 	//Soundy emotey things.
 	var/scream_verb = "screams"
-	var/male_scream_sound		//= 'sound/goonstation/voice/male_scream.ogg' Removed due to licensing, replace!
-	var/female_scream_sound		//= 'sound/goonstation/voice/female_scream.ogg' Removed due to licensing, replace!
+	var/male_scream_sound		= 'sound/voice/human/man_scream.ogg' //Removed due to licensing, replace!
+	var/female_scream_sound		= 'sound/voice/human/woman_scream.ogg' //Removed due to licensing, replace!
+	var/male_gasp_sound = list('sound/voice/gasp_male1.ogg','sound/voice/gasp_male2.ogg','sound/voice/gasp_male3.ogg','sound/voice/gasp_male4.ogg','sound/voice/gasp_male5.ogg','sound/voice/gasp_male6.ogg','sound/voice/gasp_male7.ogg')
+	var/female_gasp_sound = list('sound/voice/gasp_female1.ogg','sound/voice/gasp_female2.ogg','sound/voice/gasp_female3.ogg','sound/voice/gasp_female4.ogg','sound/voice/gasp_female5.ogg','sound/voice/gasp_female6.ogg','sound/voice/gasp_female7.ogg')
 	var/male_cough_sounds = list('sound/effects/mob_effects/m_cougha.ogg','sound/effects/mob_effects/m_coughb.ogg', 'sound/effects/mob_effects/m_coughc.ogg')
 	var/female_cough_sounds = list('sound/effects/mob_effects/f_cougha.ogg','sound/effects/mob_effects/f_coughb.ogg')
+	var/female_giggle_sounds = list('sound/voice/human/giggle_female_1.ogg', 'sound/voice/human/giggle_female_2.ogg', 'sound/voice/human/giggle_female_3.ogg')
+	var/male_giggle_sounds = list('sound/voice/human/giggle_male_1.ogg', 'sound/voice/human/giggle_male_2.ogg')
+	var/female_cry_sounds = list('sound/voice/human/cry_female_1.ogg', 'sound/voice/human/cry_female_2.ogg', 'sound/voice/human/cry_female_3.ogg')
+	var/male_cry_sounds = list('sound/voice/human/cry_male_1.ogg', 'sound/voice/human/cry_male_2.ogg')
+	var/female_laugh_sounds = list('sound/voice/human/laugh_female_1.ogg', 'sound/voice/human/laugh_female_2.ogg', 'sound/voice/human/laugh_female_3.ogg')
+	var/male_laugh_sounds = list('sound/voice/human/laugh_male_1.ogg', 'sound/voice/human/laugh_male_2.ogg', 'sound/voice/human/laugh_male_3.ogg')
+	var/female_moan_sounds = list('sound/voice/human/moan_female_1.ogg', 'sound/voice/human/moan_female_2.ogg', 'sound/voice/human/moan_female_3.ogg')
+	var/male_moan_sounds = list('sound/voice/human/moan_male_1.ogg', 'sound/voice/human/moan_male_2.ogg', 'sound/voice/human/moan_male_3.ogg')
+	var/female_sigh_sounds = 'sound/voice/human/sigh_female.ogg'
+	var/male_sigh_sounds = 'sound/voice/human/sigh_male.ogg'
+	var/female_snore_sounds = list('sound/voice/human/snore_1.ogg', 'sound/voice/human/snore_2.ogg', 'sound/voice/human/snore_3.ogg', 'sound/voice/human/snore_4.ogg', 'sound/voice/human/snore_5.ogg', 'sound/voice/human/snore_6.ogg', 'sound/voice/human/snore_7.ogg')
+	var/male_snore_sounds = list('sound/voice/human/snore_1.ogg', 'sound/voice/human/snore_2.ogg', 'sound/voice/human/snore_3.ogg', 'sound/voice/human/snore_4.ogg', 'sound/voice/human/snore_5.ogg', 'sound/voice/human/snore_6.ogg', 'sound/voice/human/snore_7.ogg')
+	var/female_yawn_sounds = list('sound/voice/human/yawn_female_1.ogg', 'sound/voice/human/yawn_female_2.ogg', 'sound/voice/human/yawn_female_3.ogg')
+	var/male_yawn_sounds = list('sound/voice/human/yawn_male_1.ogg', 'sound/voice/human/yawn_male_2.ogg')
 	var/male_sneeze_sound = 'sound/effects/mob_effects/sneeze.ogg'
 	var/female_sneeze_sound = 'sound/effects/mob_effects/f_sneeze.ogg'
 

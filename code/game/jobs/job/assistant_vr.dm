@@ -42,26 +42,22 @@
 
 /datum/alt_title/intern_sci
 	title = "Лаборант"
-	title_blurb = "A Lab Assistant attempts to provide whatever the Research department needs. They are not proper Scientists, and are \
-					often in training to become a Scientist. A Lab Assistant has no real authority."
+	title_blurb = "Лаборант пытается предоставить все, что нужно исследовательскому отделу. Они не являются настоящими учеными и часто проходят обучение, чтобы стать учеными. Лаборант не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/scientist
 
 /datum/alt_title/intern_sec
 	title = "Кадет СБ"
-	title_blurb = "A Security Cadet attempts to provide whatever the Security department needs. They are not proper Officers, and are \
-					often in training to become an Officer. A Security Cadet has no real authority."
+	title_blurb = "Кадет службы безопасности пытается предоставить все, что нужно отделу безопасности. Они не настоящие Офицеры и часто проходят подготовку, чтобы стать Офицерами. Кадет службы безопасности не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/officer
 
 /datum/alt_title/intern_crg
 	title = "Млад. Грузчик"
-	title_blurb = "A Jr. Cargo Tech attempts to provide whatever the Cargo department needs. They are not proper Cargo Technicians, and are \
-					often in training to become a Cargo Technician. A Jr. Cargo Tech has no real authority."
+	title_blurb = "Млад. Грузчик пытается предоставить все, что нужно грузовому отделу. Они не являются надлежащими специалистами по грузовым перевозкам и часто проходят обучение, чтобы стать техниками по грузовым перевозкам. Млад. Грузчик не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/cargo
 
 /datum/alt_title/intern_exp
 	title = "Млад. Исследователь"
-	title_blurb = "A Jr. Explorer attempts to provide whatever the Exploration department needs. They are not proper Explorers, and are \
-					often in training to become an Explorer. A Jr. Explorer has no real authority."
+	title_blurb = "Младший исследователь пытается предоставить все, что нужно отделу разведки. Они не являются настоящими исследователями и часто проходят обучение, чтобы стать исследователями. У младшего исследователя нет настоящего авторитета."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/explorer
 
 /datum/alt_title/server

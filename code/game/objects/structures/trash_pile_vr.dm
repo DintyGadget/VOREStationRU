@@ -53,7 +53,7 @@
 /obj/structure/trash_pile/attackby(obj/item/W as obj, mob/user as mob)
 	var/w_type = W.type
 	if(w_type in allocated_gamma)
-		to_chat(user,"<span class='notice'>You feel \the [W] slip from your hand, and disappear into the trash pile.</span>")
+		to_chat(user,"<span class='notice'>Вы чувствуете, как [W] ускользает из вашей руки и исчезает в кучке мусора.</span>")
 		user.unEquip(W)
 		W.forceMove(src)
 		allocated_gamma -= w_type
@@ -86,23 +86,23 @@
 	//Human mob
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		H.visible_message("[user] searches through \the [src].","<span class='notice'>You search through \the [src].</span>")
+		H.visible_message("[user] роется в [src].","<span class='notice'>Вы роетесь в [src].</span>")
 		if(hider)
-			to_chat(hider,"<span class='warning'>[user] is searching the trash pile you're in!</span>")
+			to_chat(hider,"<span class='warning'>[user] ищет в куче мусора, в котором вы сидите!</span>")
 
 		//Do the searching
 		if(do_after(user,rand(4 SECONDS,6 SECONDS),src))
 
 			//If there was a hider, chance to reveal them
 			if(hider && prob(50))
-				to_chat(hider,"<span class='danger'>You've been discovered!</span>")
+				to_chat(hider,"<span class='danger'>Вас обнаружили!</span>")
 				hider.forceMove(get_turf(src))
 				hider = null
-				to_chat(user,"<span class='danger'>Some sort of creature leaps out of \the [src]!</span>")
+				to_chat(user,"<span class='danger'>Какое-то существо выпрыгивает из [src]!</span>")
 
 			//You already searched this one bruh
 			else if(user.ckey in searchedby)
-				to_chat(H,"<span class='warning'>There's nothing else for you in \the [src]!</span>")
+				to_chat(H,"<span class='warning'>В [src] для вас больше ничего нет!!</span>")
 
 			//You found an item!
 			else
@@ -119,7 +119,7 @@
 				if(I)
 					searchedby += user.ckey
 					I.forceMove(get_turf(src))
-					to_chat(H,"<span class='notice'>You found \a [I]!</span>")
+					to_chat(H,"<span class='notice'>Вы нашли [I]!</span>")
 
 	else
 		return ..()
