@@ -1,15 +1,15 @@
 var/global/list/robot_modules = list(
-	"Standard"		= /obj/item/weapon/robot_module/robot/standard,
-	"Service" 		= /obj/item/weapon/robot_module/robot/clerical/butler,
-	"Clerical" 		= /obj/item/weapon/robot_module/robot/clerical/general,
-	"Research" 		= /obj/item/weapon/robot_module/robot/research,
-	"Miner" 		= /obj/item/weapon/robot_module/robot/miner,
-	"Crisis" 		= /obj/item/weapon/robot_module/robot/medical/crisis,
-	"Surgeon" 		= /obj/item/weapon/robot_module/robot/medical/surgeon,
-	"Security" 		= /obj/item/weapon/robot_module/robot/security/general,
+	"Стандарт"		= /obj/item/weapon/robot_module/robot/standard,
+	"Сервис" 		= /obj/item/weapon/robot_module/robot/clerical/butler,
+	"Клерк" 		= /obj/item/weapon/robot_module/robot/clerical/general,
+	"Ученый" 		= /obj/item/weapon/robot_module/robot/research,
+	"Шахтер" 		= /obj/item/weapon/robot_module/robot/miner,
+	"Медик" 		= /obj/item/weapon/robot_module/robot/medical/crisis,
+	"Хирург" 		= /obj/item/weapon/robot_module/robot/medical/surgeon,
+	"Охрана" 		= /obj/item/weapon/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/weapon/robot_module/robot/security/combat,
-	"Engineering"	= /obj/item/weapon/robot_module/robot/engineering/general,
-	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor
+	"Инженер"	= /obj/item/weapon/robot_module/robot/engineering/general,
+	"Уборщик" 		= /obj/item/weapon/robot_module/robot/janitor
 	)
 
 /obj/item/weapon/robot_module

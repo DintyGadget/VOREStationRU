@@ -59,7 +59,7 @@
 		switch(href_list["flavor_text"])
 			if("open")
 			if("general")
-				var/msg = sanitize(input(usr,"Дайте общее описание вашего характера. Оно будет показано независимо от одежды.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]])) as message, extra = 0)	//VOREStation Edit: separating out OOC notes
+				var/msg = sanitize(input(usr,"Дайте общее описание вашего персонажа. Оно будет показано независимо от одежды.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]])) as message, extra = 0)	//VOREStation Edit: separating out OOC notes
 				if(CanUseTopic(user))
 					pref.flavor_texts[href_list["flavor_text"]] = msg
 			else
@@ -123,9 +123,9 @@
 	return
 
 /datum/category_item/player_setup_item/general/flavor/proc/SetFlavourTextRobot(mob/user)
-	var/HTML = "<body>"
+	var/HTML = "<meta charset=\"utf-8\"><body>"
 	HTML += "<tt><center>"
-	HTML += "<b>Set Robot Flavour Text</b> <hr />"
+	HTML += "<b>Установить текст описания робота</b> <hr />"
 	HTML += "<br></center>"
 	HTML += "<a href='?src=\ref[src];flavour_text_robot=Default'>Default:</a> "
 	HTML += TextPreview(pref.flavour_texts_robot["Default"])

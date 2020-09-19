@@ -95,7 +95,7 @@
 	data["real_name"] = user.real_name
 	data["allow_items"] = allow_items
 	data["crew"] = frozen_crew
-	
+
 	data["items"] = list()
 	if(allow_items)
 		for(var/F in frozen_items)
@@ -197,12 +197,12 @@
 
 	var/base_icon_state = "cryopod_0" //VOREStation Edit - New Icon
 	var/occupied_icon_state = "cryopod_1" //VOREStation Edit - New Icon
-	var/on_store_message = "has entered long-term storage."
+	var/on_store_message = "поступает на длительное хранение."
 	var/on_store_name = "Cryogenic Oversight"
 	var/on_enter_visible_message = "starts climbing into the"
-	var/on_enter_occupant_message = "You feel cool air surround you. You go numb as your senses turn inward."
-	var/on_store_visible_message_1 = "hums and hisses as it moves" //We need two variables because byond doesn't let us have variables inside strings at compile-time.
-	var/on_store_visible_message_2 = "into storage."
+	var/on_enter_occupant_message = "Вы чувствуете, что вас окружает прохладный воздух. Вы медленно начинаете неметь."
+	var/on_store_visible_message_1 = "гудит и шипит при движении" //We need two variables because byond doesn't let us have variables inside strings at compile-time.
+	var/on_store_visible_message_2 = "в хранилище."
 	var/announce_channel = "Общий"
 	var/allow_occupant_types = list(/mob/living/carbon/human)
 	var/disallow_occupant_types = list()
@@ -225,7 +225,7 @@
 	occupied_icon_state = "pod_1"
 	on_store_message = "has entered robotic storage."
 	on_store_name = "Robotic Storage Oversight"
-	on_enter_occupant_message = "The storage unit broadcasts a sleep signal to you. Your systems start to shut down, and you enter low-power mode."
+	on_enter_occupant_message = "Блок хранения передает вам сигнал сна. Ваши системы начинают отключаться, и вы переходите в режим пониженного энергопотребления."
 	allow_occupant_types = list(/mob/living/silicon/robot)
 	//disallow_occupant_types = list(/mob/living/silicon/robot/drone) //VOREStation Removal - Why? How else do they leave?
 	applies_stasis = 0
@@ -247,21 +247,21 @@
 
 /obj/machinery/cryopod/robot/door/dorms
 	name = "Residential District Elevator"
-	desc = "A small elevator that goes down to the deeper section of the colony."
-	on_store_message = "has departed for the residential district."
+	desc = "Небольшой лифт, спускающийся в более глубокую часть колонии."
+	on_store_message = "отбыл в свой микрорайон."
 	on_store_name = "Residential Oversight"
-	on_enter_occupant_message = "The elevator door closes slowly, ready to bring you down to the residential district."
-	on_store_visible_message_1 = "makes a ding as it moves"
-	on_store_visible_message_2 = "to the residential district."
+	on_enter_occupant_message = "Двери лифта медленно закрываются, готовые доставить вас в жилой район."
+	on_store_visible_message_1 = "издает звон, когда движется"
+	on_store_visible_message_2 = "в жилой район."
 
 /obj/machinery/cryopod/robot/door/travel
 	name = "Passenger Elevator"
-	desc = "A small elevator that goes down to the passenger section of the vessel."
+	desc = "Небольшой лифт, который спускается в пассажирский отсек судна."
 	on_store_message = "is slated to depart from the colony."
 	on_store_name = "Travel Oversight"
-	on_enter_occupant_message = "The elevator door closes slowly, ready to bring you down to the hell that is economy class travel."
-	on_store_visible_message_1 = "makes a ding as it moves"
-	on_store_visible_message_2 = "to the passenger deck."
+	on_enter_occupant_message = "Двери лифта медленно закрываются, готовые доставить вас в ад, который является путешествием эконом-класса."
+	on_store_visible_message_1 = "издает звон, когда движется"
+	on_store_visible_message_2 = "на пассажирскую палубу."
 
 /obj/machinery/cryopod/robot/door/gateway
 	name = "Gateway"
@@ -453,7 +453,7 @@
 		// them win or lose based on cryo is silly so we remove the objective.
 		if(O.target == to_despawn.mind)
 			if(O.owner && O.owner.current)
-				to_chat(O.owner.current, "<span class='warning'>You get the feeling your target is no longer within your reach...</span>")
+				to_chat(O.owner.current, "<span class='warning'>Вы чувствуете, что ваша цель больше не находится в пределах вашей досягаемости...</span>")
 			qdel(O)
 
 	//VOREStation Edit - Resleeving.
@@ -578,7 +578,7 @@
 	if(isliving(usr))
 		var/mob/living/L = usr
 		if(L.has_buckled_mobs())
-			to_chat(L, span("warning", "You have other entities attached to yourself. Remove them first."))
+			to_chat(L, span("warning", "У вас есть другие сущности, привязанные к вам. Сначала уберите их."))
 			return
 
 	visible_message("[usr] [on_enter_visible_message] [src].", 3)
@@ -606,7 +606,7 @@
 		icon_state = occupied_icon_state
 
 		to_chat(usr, "<span class='notice'>[on_enter_occupant_message]</span>")
-		to_chat(usr, "<span class='notice'><b>If you ghost, log out or close your client now, your character will shortly be permanently removed from the round.</b></span>")
+		to_chat(usr, "<span class='notice'><b>Если вы выйдете в режим призрака, выйдете из системы или закроете свой клиент, и ваш персонаж вскоре будет навсегда удален из раунда.</b></span>")
 
 		time_entered = world.time
 
@@ -667,7 +667,7 @@
 	var/willing = null //We don't want to allow people to be forced into despawning.
 
 	if(M.client)
-		if(alert(M,"Would you like to enter long-term storage?",,"Yes","No") == "Yes")
+		if(alert(M,"Вы хотели бы ввести долгосрочное хранение?",,"Да","Нет") == "Да")
 			if(!M) return
 			willing = 1
 	else
@@ -681,7 +681,7 @@
 
 		if(do_after(user, 20))
 			if(occupant)
-				to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
+				to_chat(user, "<span class='warning'>[src] уже занят.</span>")
 				return
 			M.forceMove(src)
 
@@ -693,7 +693,7 @@
 		icon_state = occupied_icon_state
 
 		to_chat(M, "<span class='notice'>[on_enter_occupant_message]</span>")
-		to_chat(M, "<span class='notice'><b>If you ghost, log out or close your client now, your character will shortly be permanently removed from the round.</b></span>")
+		to_chat(M, "<span class='notice'><b>Если вы выйдете в режим призрака, выйдете из системы или закроете свой клиент, и ваш персонаж вскоре будет навсегда удален из раунда.</b></span>")
 		set_occupant(M)
 		time_entered = world.time
 		if(ishuman(M) && applies_stasis)

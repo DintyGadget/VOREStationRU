@@ -1,11 +1,11 @@
 /hook/startup/proc/modules_vr()
-	robot_module_types += "Medihound"
-	robot_module_types += "K9"
-	robot_module_types += "Janihound"
-	robot_module_types += "Sci-borg"
-	robot_module_types += "Pupdozer"
-	robot_module_types += "Service-Hound"
-	robot_module_types += "KMine"
+	robot_module_types += "Соб-медик"
+	robot_module_types += "Соб-охраны"
+	robot_module_types += "Соб-уборщик"
+	robot_module_types += "Соб-науч"
+	robot_module_types += "Соб-инженер"
+	robot_module_types += "Соб-сервис"
+	robot_module_types += "Соб-шахтер"
 	return 1
 
 var/list/shell_module_types = list(

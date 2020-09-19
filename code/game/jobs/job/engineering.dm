@@ -50,7 +50,7 @@
 	selection_color = "#5B4D20"
 	economic_modifier = 5
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics)
-	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction)
+	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_emergency_storage)
 	alt_titles = list("Ремонтник" = /datum/alt_title/maint_tech,
 						"Инженер двигателей" = /datum/alt_title/engine_tech, "Электрик" = /datum/alt_title/electrician)
 

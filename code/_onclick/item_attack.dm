@@ -39,7 +39,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 
 /atom/movable/attackby(obj/item/W, mob/user, var/attack_modifier, var/click_parameters)
 	if(!(W.flags & NOBLUDGEON))
-		visible_message("<span class='danger'>[src] наносит удар [user] с помощью [W].</span>")
+		visible_message("<span class='danger'>[user] наносит удар [src] с помощью [W].</span>")
 
 /mob/living/attackby(obj/item/I, mob/user, var/attack_modifier, var/click_parameters)
 	if(!ismob(user))

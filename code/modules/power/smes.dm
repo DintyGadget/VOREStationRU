@@ -275,7 +275,7 @@ GLOBAL_LIST_EMPTY(smeses)
 		return FALSE
 
 	if (!panel_open)
-		to_chat(user, "<span class='filter_notice'><span class='warning'>You need to open access hatch on [src] first!</span></span>")
+		to_chat(user, "<span class='filter_notice'><span class='warning'>Сначала нужно открыть люк доступа на [src]!</span></span>")
 		return FALSE
 
 	if(istype(W, /obj/item/weapon/weldingtool))

@@ -28,31 +28,31 @@
 	switch(location)
 		if(LOC_KITCHEN)
 			spawn_area_type = /area/crew_quarters/kitchen
-			locstring = "the kitchen"
+			locstring = "кухне"
 		if(LOC_ATMOS)
 			spawn_area_type = /area/engineering/atmos
-			locstring = "atmospherics"
+			locstring = "системе АТМОС"
 		if(LOC_CHAPEL)
 			spawn_area_type = /area/chapel/main
-			locstring = "the chapel"
+			locstring = "часовне"
 		if(LOC_LIBRARY)
 			spawn_area_type = /area/library
-			locstring = "the library"
+			locstring = "библиотеке"
 		if(LOC_HYDRO)
 			spawn_area_type = /area/hydroponics
-			locstring = "hydroponics"
+			locstring = "гидропонике"
 		if(LOC_VAULT)
 			spawn_area_type = /area/security/nuke_storage
-			locstring = "the vault"
+			locstring = "хранилище"
 		if(LOC_CONSTR)
 			spawn_area_type = /area/construction
-			locstring = "the construction area"
+			locstring = "зоне постройки"
 		if(LOC_TECH)
 			spawn_area_type = /area/storage/tech
-			locstring = "technical storage"
+			locstring = "хранилище техники"
 		if(LOC_GARDEN)
 			spawn_area_type = /area/hydroponics/garden
-			locstring = "the public garden"
+			locstring = "общем саду"
 
 	for(var/areapath in typesof(spawn_area_type))
 		var/area/A = locate(areapath)

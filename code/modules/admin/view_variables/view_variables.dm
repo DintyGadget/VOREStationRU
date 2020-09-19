@@ -70,7 +70,7 @@
 		for (var/name in dropdownoptions)
 			var/link = dropdownoptions[name]
 			if (link)
-				dropdownoptions_html += "<option value='[link]'>[name]</option>"
+				dropdownoptions_html += "<meta charset=\"utf-8\"><option value='[link]'>[name]</option>"
 			else
 				dropdownoptions_html += "<option value>[name]</option>"
 	else
@@ -99,7 +99,7 @@
 				variable_html += D.vv_get_var(V)
 
 	var/html = {"
-<html>
+<html><meta charset=\"utf-8\">
 	<head>
 		<title>[title]</title>
 		<style>

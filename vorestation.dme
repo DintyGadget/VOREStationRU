@@ -3743,7 +3743,6 @@
 #include "maps\southern_cross\loadout\loadout_suit.dm"
 #include "maps\southern_cross\loadout\loadout_uniform.dm"
 #include "maps\submaps\_helpers.dm"
-#include "maps\submaps\_readme.dm"
 #include "maps\submaps\engine_submaps\engine.dm"
 #include "maps\submaps\engine_submaps\engine_areas.dm"
 #include "maps\submaps\engine_submaps_vr\tether\_engine_submaps.dm"
@@ -3757,5 +3756,6 @@
 #include "maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "maps\tether\tether.dm"
+#include "maps\tether\tether_turfs.dm"
 #include "maps\~map_system\maps.dm"
 // END_INCLUDE

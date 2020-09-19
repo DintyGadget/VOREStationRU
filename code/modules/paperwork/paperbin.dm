@@ -1,6 +1,6 @@
 /obj/item/weapon/paper_bin
 	name = "paper bin"
-	desc = "A plastic bin full of paper. It seems to have both regular and carbon-copy paper to choose from."
+	desc = "Пластиковая корзина с бумагой. Вроде бы есть и обычная, и копировальная бумага на выбор."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "paper_bin1"
 	item_icons = list(
@@ -30,10 +30,10 @@
 				if (H.hand)
 					temp = H.organs_by_name["l_hand"]
 				if(temp && !temp.is_usable())
-					to_chat(user, "<span class='notice'>You try to move your [temp.name], but cannot!</span>")
+					to_chat(user, "<span class='notice'>Вы пытаетесь переместить [temp.name], но не можете!</span>")
 					return
 
-				to_chat(user, "<span class='notice'>You pick up the [src].</span>")
+				to_chat(user, "<span class='notice'>Вы берете [src].</span>")
 				user.put_in_hands(src)
 
 	return
@@ -49,8 +49,8 @@
 			return
 	var/response = ""
 	if(!papers.len > 0)
-		response = alert(user, "Do you take regular paper, or Carbon copy paper?", "Paper type request", "Regular", "Carbon-Copy", "Cancel")
-		if (response != "Regular" && response != "Carbon-Copy")
+		response = alert(user, "Вы берете обычную бумагу или копировальную бумагу?", "Paper type request", "Обычная", "Копировальная", "Отмена")
+		if (response != "Обычная" && response != "Копировальная")
 			add_fingerprint(user)
 			return
 	if(amount >= 1)
@@ -63,21 +63,21 @@
 			P = papers[papers.len]
 			papers.Remove(P)
 		else
-			if(response == "Regular")
+			if(response == "Обычная")
 				P = new /obj/item/weapon/paper
 				if(Holiday == "April Fool's Day")
 					if(prob(30))
 						P.info = "<font face=\"[P.crayonfont]\" color=\"red\"><b>HONK HONK HONK HONK HONK HONK HONK<br>HOOOOOOOOOOOOOOOOOOOOOONK<br>APRIL FOOLS</b></font>"
 						P.rigged = 1
 						P.updateinfolinks()
-			else if (response == "Carbon-Copy")
+			else if (response == "Копировальная")
 				P = new /obj/item/weapon/paper/carbon
 
 		P.loc = user.loc
 		user.put_in_hands(P)
-		to_chat(user, "<span class='notice'>You take [P] out of the [src].</span>")
+		to_chat(user, "<span class='notice'>Вы взяли [P] из [src].</span>")
 	else
-		to_chat(user, "<span class='notice'>[src] is empty!</span>")
+		to_chat(user, "<span class='notice'>[src] пуст!</span>")
 
 	add_fingerprint(user)
 	return
@@ -89,7 +89,7 @@
 
 	user.drop_item()
 	i.loc = src
-	to_chat(user, "<span class='notice'>You put [i] in [src].</span>")
+	to_chat(user, "<span class='notice'>Вы положили [i] в [src].</span>")
 	papers.Add(i)
 	update_icon()
 	amount++
@@ -99,9 +99,9 @@
 	. = ..()
 	if(Adjacent(user))
 		if(amount)
-			. += "<span class='notice'>There " + (amount > 1 ? "are [amount] papers" : "is one paper") + " in the bin.</span>"
+			. += "<span class='notice'>В корзине осталось " + (amount > 1 ? "[amount] листов бугами" : "ровно на один раз") + ".</span>"
 		else
-			. += "<span class='notice'>There are no papers in the bin.</span>"
+			. += "<span class='notice'>В корзине нет бумаг.</span>"
 
 /obj/item/weapon/paper_bin/update_icon()
 	if(amount < 1)

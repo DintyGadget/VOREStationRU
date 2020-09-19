@@ -293,14 +293,14 @@
 
 		if("gasp")
 			if(miming)
-				message = "appears to be gasping!"
+				message = "кажется, задыхается!"
 				m_type = 1
 			else
 				if(!muzzled)
-					message = "gasps!"
+					message = "задыхается!"
 					m_type = 2
 				else
-					message = "makes a weak noise."
+					message = "издает слабый звук."
 					m_type = 2
 
 		if("deathgasp")
@@ -309,11 +309,11 @@
 
 		if("giggle")
 			if(miming)
-				message = "giggles silently!"
+				message = "тихо хихикает!"
 				m_type = 1
 			else
 				if(!muzzled)
-					message = "giggles."
+					message = "хихикает."
 					m_type = 2
 				else
 					message = "makes a noise."
@@ -475,7 +475,7 @@
 					message = "points to [M]."
 				else
 			m_type = 1
-			
+
 		if("crack")
 			if(!restrained())
 				message = "cracks [T.his] knuckles."

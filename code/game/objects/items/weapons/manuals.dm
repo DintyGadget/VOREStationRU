@@ -164,9 +164,9 @@
 	name = "Tesla Operating Manual"
 	icon_state ="bookTesla"
 	item_state = "book15"
-	author = "Engineering Encyclopedia"
-	title = "Tesla Engine User's Guide"
-	dat = {"<html>
+	author = "Инженерная энциклопедия"
+	title = "Двигатель Тесла для чайников"
+	dat = {"<html><meta charset=\"utf-8\">
 				<head>
 				<style>
 				h1 {font-size: 18px; margin: 15px 0px 5px;}
@@ -178,53 +178,53 @@
 				</style>
 				</head>
 				<body>
-				<h1>OPERATING MANUAL FOR MK 2 PROTOTYPE TESLA ENGINE &apos;EDISON&apos;S BANE&apos;</h1>
+				<h1>РУКОВОДСТВО ПО ЭКСПЛУАТАЦИИ ПРОТОТИПА ДВИГАТЕЛЯ TESLA MK 2 &apos;EDISON&apos;S BANE&apos;</h1>
 				<br>
-				<h2>OPERATING PRINCIPLES</h2>
-				<p>This big floaty ball of pure electricity can only be contained by the containment field. It periodically will discharge energy in the form of an electric shock which can be harvested for energy.</p>
-				<p>When you shoot the energy ball with the Particle Accelerator, it gains energy, and when enough energy is accumulated a mini-energy ball that orbits the big energy ball will be formed. This can happen as many times as you let it, each mini-ball will send off an extra shock when the energy ball pulses. Be warned, the more mini-balls the energy ball has, the more shocks it sends out at once and the further it can travel each move.</p>
-				<p>An energy ball will shoot bolts of electricity off at conductors, which it prioritizes in this order:
+				<h2>ПРИНЦИП ДЕЙСТВИЯ</h2>
+				<p>Этот большой плавучий шар чистого электричества может быть удержан только сдерживающим полем. Он периодически будет разряжать энергию в виде электрического удара, который может быть собран для получения энергии.</p>
+				<p>Когда вы стреляете в энергетический шар с помощью ускорителя частиц, он набирает энергию, и когда накопится достаточно энергии, образуется мини-энергетический шар, который вращается вокруг большого энергетического шара. Это может произойти столько раз, сколько вы позволите, каждый мини-шар будет посылать дополнительный удар, когда энергетический шар пульсирует. Имейте в виду, чем больше мини-шаров имеет энергетический шар, тем больше ударов он посылает сразу и тем дальше он может путешествовать с каждым движением.</p>
+				<p>Энергетический шар будет стрелять разрядами электричества в проводники, которым он расставляет приоритеты в следующем порядке:
 				<ol>
-					<li>Tesla coils</li>
-					<li>Grounding rods</li>
-					<li>People and animals</li>
-					<li>Machines</li>
+					<li>Катушки Теслы</li>
+					<li>Заземляющие стержни</li>
+					<li>Люди и животные</li>
+					<li>Машины</li>
 				</ol>
 				</p>
-				<p>Tesla Coils will attract the energy ball&apos;s bolts. They will take half the power of the bolt (if they are connected to a wire node), pump it into the powernet it is hooked to, and then will send the other half of the power to the next available conductor, which follows the criteria listed above. Preferably, this will be another coil to harness more of the power and pump it into the grid.</p>
-				<p>Grounding Rods are safety precautions to prevent the tesla bolts from hitting machinery or personnel. If the tesla is loose, being near one will usually keep you safe from direct shocks.</p>
+				<p>Катушки Тесла притягивают болты энергетического шара. Они возьмут половину мощности болта (если они подключены к узлу проводов), закачивают ее в сеть, к которой он подключен, а затем отправят вторую половину мощности на следующий доступный проводник, который соответствует критериям вышеперечисленное. Желательно, чтобы это была другая катушка, чтобы использовать больше энергии и перекачивать ее в сеть.</p>
+				<p>Заземляющие стержни - это меры предосторожности для предотвращения ударов болтов тесла в оборудование или персонал. Если тесла движется, нахождение рядом с ним обычно предохраняет вас от прямых ударов.</p>
 				<br>
-				<h2>STARTUP PROCEDURE</h2>
+				<h2>ПРОЦЕДУРА ЗАПУСКА</h2>
 				<ol>
-				<li>Bolt and weld down the Field Generators, ensuring they form a complete rectangle.</li>
-				<li>Bolt and weld down the Emitters, ensuring their fire will strike the corner Field Generators</li>
-				<li>Bolt down the Tesla Generator inside the rectangle formed by the Field Generators in a spot where it will be struck by fire from the Particle Accelerator</li>
-				<li>Bolt down Telsa Coils and Grounding Rods</li>
-				<li>Activate the Emitters</li>
-				<li>Activate each of the Field Generators, then wait until the containment field has completely formed.</li>
-				<li>Setup the Particle Accelerator (see our best seller <i>&quot;Particle Accelerator User&apos;s Guide&quot;</i>!) and activate it.</li>
-				<li>After a short time the Telsa Generator will create an energy ball, being consumed in the process.</li>
+				<li>Прикрутите и приварите генераторы поля, убедившись, что они образуют полный прямоугольник.</li>
+				<li>Прикрутите и приварите излучатели, чтобы их огонь попадал в угловые генераторы поля.</li>
+				<li>Закрепите Генератор Тесла внутри прямоугольника, образованного Генераторами поля, в месте, где он будет поражен огнем Ускорителя частиц.</li>
+				<li>Прикрутите катушки Тесла и заземляющие стержни</li>
+				<li>Активируйте излучатели</li>
+				<li>Активируйте каждый из генераторов поля, затем дождитесь полного формирования поля сдерживания.</li>
+				<li>Настройте ускоритель частиц (см. Руководство <i>&quot;пользователя ускорителя частиц&quot;</i>!) и активируйте его.</li>
+				<li>Через короткое время генератор Telsa создаст энергетический шар, который будет потребляться в процессе.</li>
 				</ol>
 				<br>
-				<h2>OPERATION AND MAINTENANCE</h2>
+				<h2>ЭКСПЛУАТАЦИЯ И ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ</h2>
 				<ol>
-				<li>Ensure that electrical protection and meson goggles are worn at all times while working in the engine room.</li>
-				<li>Ensure that Telsa Coils and/or Grounding Rods are placed to safely collect or ground any and all shock.</li>
-				<li>Ensure that all Emitters remain activated and have unobstructed lines of fire to the Field Generators.</li>
-				<li>Do <b>not</b> let the Emitters run out of power.</li>
+				<li>Убедитесь, что во время работы в машинном отделении всегда носите электрическую защиту и защитные очки.</li>
+				<li>Убедитесь, что катушки Тесла и заземляющие стержни размещены для безопасного сбора или заземления любых ударов.</li>
+				<li>Убедитесь, что все излучатели остаются активными и имеют беспрепятственные линии огня к генераторам поля.</li>
+				<li><b>Не позволяйте</b> излучателям выходить из строя.</li>
 				</ol>
 				<br>
-				<h2>SHUTDOWN PROCEDURE</h2>
+				<h2>ПРОЦЕДУРА ВЫКЛЮЧЕНИЯ</h2>
 				<ol>
-				<li>De-activate the Particle Accelerator.  The energy ball will begin to shrink and lose mini-balls.</li>
-				<li>When the energy ball has completely dissipated, the Emitters can be de-activated.</li>
+				<li>Отключите ускоритель частиц. Энергетический шар начнет сжиматься и терять мини-шары.</li>
+				<li>Когда энергетический шар полностью рассеялся, Излучатели можно отключить.</li>
 				</ol>
 				<br>
-				<h2>ENERGY BALL ESCAPE PROCEDURE</h2>
+				<h2>ПРОЦЕДУРА ВЫХОДА ЭНЕРГЕТИЧЕСКОГО ШАРА</h2>
 				<ol>
-				<li>Do not let it escape.</li>
-				<li>Have someone ready to blame when it does escape.</li>
-				<li>Buy our forthcoming manual &quot;<i>Celebrity Grounding Rod Shelters of the Galaxy</i>&quot;</li>
+				<li>Не позволяйте ему убежать.</li>
+				<li>Пусть кто-нибудь будет готов обвинить вас, когда он ускользнет.</li>
+				<li>Купите наше готовящееся к выпуску руководство &quot;<i>Знаменитые заземляющие стержни - Укрытия галактики</i>&quot;</li>
 				</ol>
 				</body>
 			</html>"}
