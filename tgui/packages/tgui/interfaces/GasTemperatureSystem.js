@@ -24,15 +24,15 @@ export const GasTemperatureSystem = (props, context) => {
       height={270}
       resizeable>
       <Window.Content>
-        <Section title="Controls" buttons={
+        <Section title="Управление" buttons={
           <Button
             icon="power-off"
-            content={on ? "On" : "Off"}
+            content={on ? "Вкл" : "Выкл"}
             selected={on}
             onClick={() => act("toggleStatus")} />
         }>
           <LabeledControls>
-            <LabeledControls.Item label="Power Level">
+            <LabeledControls.Item label="Уровень мощности">
               <Knob
                 minValue="0"
                 maxValue="100"
@@ -41,17 +41,17 @@ export const GasTemperatureSystem = (props, context) => {
                 onChange={(e, val) => act("setPower", { value: val })}
               />
             </LabeledControls.Item>
-            <LabeledControls.Item label="Gas Pressure">
+            <LabeledControls.Item label="Давление газа">
               {gasPressure} kPa
             </LabeledControls.Item>
           </LabeledControls>
         </Section>
-        <Section title="Gas Temperature">
+        <Section title="Температура газа">
           <LabeledList>
-            <LabeledList.Item label="Current Temperature">
+            <LabeledList.Item label="Текущая температура">
               <AnimatedNumber value={gasTemperature} /> K
             </LabeledList.Item>
-            <LabeledList.Item label="Target Temperature">
+            <LabeledList.Item label="Целевая температура">
               <AnimatedNumber value={targetGasTemperature} /> K
             </LabeledList.Item>
           </LabeledList>

@@ -43,22 +43,22 @@ const NTNetRelayContent = (props, context) => {
 
   return (
     <Section
-      title="Status"
+      title="Состояние"
       buttons={
         <Button
           icon="power-off"
           selected={enabled}
-          content={"Relay " + (enabled ? "On" : "Off")}
+          content={"Реле " + (enabled ? "Вкл" : "Выкл")}
           onClick={() => act("toggle")} />
       }>
       <LabeledList>
-        <LabeledList.Item label="Network Buffer Status">
+        <LabeledList.Item label="Состояние сетевого буфера">
           {dos_overload} / {dos_capacity} GQ
         </LabeledList.Item>
-        <LabeledList.Item label="Options">
+        <LabeledList.Item label="Настройки">
           <Button
             icon="exclamation-triangle"
-            content="Purge network blacklist"
+            content="Очистить черный список сети"
             onClick={() => act("purge")} />
         </LabeledList.Item>
       </LabeledList>
@@ -70,7 +70,7 @@ const NTNetRelayCrash = (props, context) => {
   const { act, data } = useBackend(context);
   
   return (
-    <FullscreenNotice title="ERROR">
+    <FullscreenNotice title="ОШИБКА">
       <Box fontSize="1.5rem" bold color="bad">
         <Icon
           name="exclamation-triangle"
@@ -78,21 +78,21 @@ const NTNetRelayCrash = (props, context) => {
           size={3}
           mr="1rem"
         />
-        <h2>NETWORK BUFFERS OVERLOADED</h2>
-        <h3>Overload Recovery Mode</h3>
+        <h2>СЕТЕВЫЕ БУФЕРЫ ПЕРЕГРУЖЕНЫ</h2>
+        <h3>Режим восстановления после перегрузки</h3>
         <i>
-          This system is suffering temporary outage due to overflow of traffic buffers.
-          Until buffered traffic is processed, all further requests will be dropped.
-          Frequent occurences of this error may indicate insufficient hardware capacity of your network.
-          Please contact your network planning department for instructions on how to resolve this issue.
+          Эта система временно не работает из-за переполнения буферов трафика.
+          Пока буферизованный трафик не будет обработан, все последующие запросы будут отброшены.
+          Частые появления этой ошибки могут указывать на недостаточную аппаратную мощность вашей сети.
+          За инструкциями по решению этой проблемы обратитесь в отдел планирования сети.
         </i>
-        <h3>ADMINISTRATIVE OVERRIDE</h3>
-        <b> CAUTION - Data loss may occur </b>
+        <h3>АДМИНИСТРАТИВНОЕ ПЕРЕНАПРАВЛЕНИЕ</h3>
+        <b> ВНИМАНИЕ! Возможна потеря данных. </b>
       </Box>
       <Box>
         <Button
           icon="exclamation-triangle"
-          content="Purge buffered traffic"
+          content="Очистить буферизованный трафик"
           onClick={() => act("restart")} />
       </Box>
     </FullscreenNotice>

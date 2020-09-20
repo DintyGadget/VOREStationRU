@@ -197,10 +197,10 @@ const ShuttleControlConsoleExploration = (props, context) => {
   } = data;
   return (
     <Fragment>
-      <ShuttleControlSharedShuttleStatus engineName="Engines" />
-      <Section title="Jump Controls">
+      <ShuttleControlSharedShuttleStatus engineName="Двигатели" />
+      <Section title="Управление прыжком">
         <LabeledList>
-          <LabeledList.Item label="Current Destination">
+          <LabeledList.Item label="Место назначения">
             <Button
               icon="taxi"
               disabled={!can_pick}

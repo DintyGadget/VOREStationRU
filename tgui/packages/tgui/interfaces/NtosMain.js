@@ -34,8 +34,8 @@ export const NtosMain = (props, context) => {
   return (
     <NtosWindow
       title={device_theme === 'syndicate'
-        && 'Syndix Main Menu'
-        || 'NtOS Main Menu'}
+        && 'Главное меню Syndix'
+        || 'Главное меню NtOS'}
       theme={device_theme}
       width={400}
       height={500}
@@ -48,37 +48,37 @@ export const NtosMain = (props, context) => {
               icon="lightbulb"
               selected={light_on}
               onClick={() => act('PC_toggle_light')}>
-              Flashlight: {light_on ? 'ON' : 'OFF'}
+              Фонарик: {light_on ? 'ВКЛ' : 'ВЫКЛ'}
             </Button>
             <Button
               ml={1}
               onClick={() => act('PC_light_color')}>
-              Color:
+              Цвет:
               <ColorBox ml={1} color={comp_light_color} />
             </Button>
           </Section>
         )}
         <Section
-          title="User Login"
+          title="Авторизация"
           buttons={(
             <Button
               icon="eject"
-              content="Eject ID"
+              content="Извлечь ID карту"
               disabled={!login.IDName}
               onClick={() => act('PC_Eject_Disk', { name: "ID" })}
             />
           )}>
           <Table>
             <Table.Row>
-              ID Name: {login.IDName}
+              Имя владельцы: {login.IDName}
             </Table.Row>
             <Table.Row>
-              Assignment: {login.IDJob}
+              Должность: {login.IDJob}
             </Table.Row>
           </Table>
         </Section>
         {!!removable_media.length && (
-          <Section title="Media Eject">
+          <Section title="Извлечь медиа">
             <Table>
               {removable_media.map(device => (
                 <Table.Row key={device}>
@@ -96,7 +96,7 @@ export const NtosMain = (props, context) => {
             </Table>
           </Section>
         )}
-        <Section title="Programs">
+        <Section title="Программы">
           <Table>
             {programs.map(program => (
               <Table.Row key={program.name}>

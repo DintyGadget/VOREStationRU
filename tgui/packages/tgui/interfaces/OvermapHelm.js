@@ -58,13 +58,13 @@ const OvermapManualControl = (props, context) => {
       </Flex>
       <Box textAlign="center" mt={1}>
         <Box bold underline>
-          Direct Control
+          Ручное управление
         </Box>
         <Button
           selected={manual_control}
           onClick={() => act("manual")}
           icon="compass">
-          {manual_control ? "Enabled" : "Disabled"}
+          {manual_control ? "Вкл" : "Выкл"}
         </Button>
       </Box>
     </fieldset>
@@ -87,20 +87,20 @@ const OvermapAutopilot = (props, context) => {
       <fieldset style={{ height: "100%", border: "1px solid #4972a1" }} className="Section">
         <legend>Autopilot</legend>
         <Box textAlign="center" color="bad" fontSize={1.2}>
-          AUTOPILOT DISABLED
+          АВТОПИЛОТ ОТКЛЮЧЕН
         </Box>
         <Box textAlign="center" color="average">
-          Warning: This vessel is equipped with a class I autopilot.
-          Class I autopilots are unable to do anything but fly in a
-          straight line directly towards the target, and may result in
-          collisions.
+          Предупреждение: это судно оборудовано автопилотом класса I.
+          Автопилоты класса I не могут ничего делать, кроме как
+          лететь по прямой прямо к цели, что может привести к 
+          столкновениям.
         </Box>
         <Box textAlign="center">
           <Button.Confirm
             mt={1}
             color="bad"
-            content="Unlock Autopilot"
-            confirmContent="ACCEPT RISKS?"
+            content="Разблок. автопилот"
+            confirmContent="ПРИНЯТЬ РИСКИ?"
             icon="exclamation-triangle"
             confirmIcon="exclamation-triangle"
             onClick={() => act("apilot_lock")} />
@@ -111,9 +111,9 @@ const OvermapAutopilot = (props, context) => {
 
   return (
     <fieldset style={{ height: "100%", border: "1px solid #4972a1" }} className="Section">
-      <legend>Autopilot</legend>
+      <legend>Автопилот</legend>
       <LabeledList>
-        <LabeledList.Item label="Target">
+        <LabeledList.Item label="Цель">
           {dest && (
             <Fragment>
               <Button onClick={() => act("setcoord", { setx: true })}>
@@ -125,11 +125,11 @@ const OvermapAutopilot = (props, context) => {
             </Fragment>
           ) || (
             <Button icon="pen" onClick={() => act("setcoord", { setx: true, sety: true })}>
-              None
+              Нет
             </Button>
           )}
         </LabeledList.Item>
-        <LabeledList.Item label="Speed Limit">
+        <LabeledList.Item label="Огран. скорости">
           <Button
             icon="tachometer-alt"
             onClick={() => act("speedlimit")}>
@@ -144,14 +144,14 @@ const OvermapAutopilot = (props, context) => {
         disabled={!dest}
         icon="robot"
         onClick={() => act("apilot")}>
-        {autopilot ? "Engaged" : "Disengaged"}
+        {autopilot ? "Включен" : "Выключен"}
       </Button>
       <Button
         fluid
         color="good"
         icon="exclamation-triangle"
         onClick={() => act("apilot_lock")}>
-        Lock Autopilot
+        Блокировка автопилота
       </Button>
     </fieldset>
   );
@@ -170,18 +170,18 @@ const OvermapNavComputer = (props, context) => {
   } = data;
 
   return (
-    <Section title="Navigation Data" m={0.3} mt={1}>
+    <Section title="Данные навигации" m={0.3} mt={1}>
       <LabeledList>
-        <LabeledList.Item label="Location">
+        <LabeledList.Item label="Текущее положение">
           {sector}
         </LabeledList.Item>
-        <LabeledList.Item label="Coordinates">
+        <LabeledList.Item label="Координаты">
           {s_x} : {s_y}
         </LabeledList.Item>
-        <LabeledList.Item label="Scan Data">
+        <LabeledList.Item label="Данные сканирования">
           {sector_info}
         </LabeledList.Item>
-        <LabeledList.Item label="Status">
+        <LabeledList.Item label="Состояние">
           {landed}
         </LabeledList.Item>
       </LabeledList>
@@ -191,7 +191,7 @@ const OvermapNavComputer = (props, context) => {
             fluid
             icon="save"
             onClick={() => act("add", { add: "current" })}>
-            Save Current Position
+            Сохранить текущую позицию
           </Button>
         </Flex.Item>
         <Flex.Item basis="50%">
@@ -199,16 +199,16 @@ const OvermapNavComputer = (props, context) => {
             fluid
             icon="sticky-note"
             onClick={() => act("add", { add: "new" })}>
-            Add New Entry
+            Добавить новую запись
           </Button>
         </Flex.Item>
       </Flex>
       <Section mt={1} scrollable height="130px">
         <Table>
           <Table.Row header>
-            <Table.Cell>Name</Table.Cell>
-            <Table.Cell>Coordinates</Table.Cell>
-            <Table.Cell>Actions</Table.Cell>
+            <Table.Cell>Название</Table.Cell>
+            <Table.Cell>Координаты</Table.Cell>
+            <Table.Cell>Действия</Table.Cell>
           </Table.Row>
           {locations.map(loc => (
             <Table.Row key={loc.name}>
@@ -218,12 +218,12 @@ const OvermapNavComputer = (props, context) => {
                 <Button
                   icon="rocket"
                   onClick={() => act("setds", { x: loc.x, y: loc.y })}>
-                  Plot Course
+                  Задать курс
                 </Button>
                 <Button
                   icon="trash"
                   onClick={() => act("remove", { remove: loc.reference })}>
-                  Remove
+                  Удалить
                 </Button>
               </Table.Cell>
             </Table.Row>

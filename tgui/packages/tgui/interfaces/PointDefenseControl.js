@@ -13,31 +13,31 @@ export const PointDefenseControl = (props, context) => {
   return (
     <Window width={400} height={600}>
       <Window.Content scrollable>
-        <Section title={"Fire Assist Mainframe: " + (id || "[no tag]")}>
+        <Section title={"Базовый блок огневой поддержки: " + (id || "[no tag]")}>
           {turrets.length && turrets.map(pd => (
             <Section level={2} title={pd.id} key={pd.id} buttons={
               <Button
                 selected={pd.active}
                 icon="power-off"
                 onClick={() => act("toggle_active", { target: pd.ref })}>
-                {pd.active ? "Online" : "Offline"}
+                {pd.active ? "Включен" : "Выключен"}
               </Button>
             }>
               <LabeledList>
-                <LabeledList.Item label="Effective range">
+                <LabeledList.Item label="Рабочий диапазон">
                   {pd.effective_range}
                 </LabeledList.Item>
-                <LabeledList.Item label="Reaction wheel delay">
+                <LabeledList.Item label="Задержка колеса реакции">
                   {pd.reaction_wheel_delay}
                 </LabeledList.Item>
-                <LabeledList.Item label="Recharge time">
+                <LabeledList.Item label="Время перезарядки">
                   {pd.recharge_time}
                 </LabeledList.Item>
               </LabeledList>
             </Section>
           )) || (
             <Box color="bad">
-              Error: No weapon systems detected. Please check network connection.
+              Ошибка: системы вооружения не обнаружены. Пожалуйста, проверьте сетевое соединение.
             </Box>
           )}
         </Section>
