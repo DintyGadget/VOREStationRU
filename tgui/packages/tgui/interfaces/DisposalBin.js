@@ -33,7 +33,7 @@ export const DisposalBin = (props, context) => {
               {stateText}
             </LabeledList.Item>
             <LabeledList.Item
-              label="Pressure">
+              label="Давление">
               <ProgressBar
                 ranges={{
                   bad: [-Infinity, 0],
