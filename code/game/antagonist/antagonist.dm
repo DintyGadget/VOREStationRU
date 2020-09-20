@@ -7,7 +7,7 @@
 	var/avoid_silicons = FALSE				// If we won't hand this antag role to silicons (AI, borg, etc)
 
 	// Strings.
-	var/welcome_text = "Cry havoc and let slip the dogs of war!"
+	var/welcome_text = "Планируйте хаос и позвольте собакам войны ускользнуть!"
 	var/antag_sound = 'sound/effects/antag_notice/general_baddie_alert.ogg' // The sound file to play when someone gets this role. Only they can hear it.
 	var/leader_welcome_text                 // Text shown to the leader, if any.
 	var/victory_text                        // World output at roundend for victory.
@@ -74,12 +74,12 @@
 	var/default_access = list()
 	var/id_type = /obj/item/weapon/card/id
 
-	var/antag_text = "You are an antagonist! Within the rules, \
-		try to act as an opposing force to the crew. Further RP and try to make sure \
-		other players have <i>fun</i>! If you are confused or at a loss, always adminhelp, \
-		and before taking extreme actions, please try to also contact the administration! \
-		Think through your actions and make the roleplay immersive! <b>Please remember all \
-		rules aside from those without explicit exceptions apply to antagonists.</b>"
+	var/antag_text = "YВы антагонист! В рамках правил, \
+		постарайтесь действовать как противодействующая сила экипажа. Продолжайте РП и постарайтесь, \
+		чтобы другие игроки тоже <i>получали удовольсвтие от игры</i>! Если вы запутались или растерялись, всегда обращайтесь за помощью к администратору, \
+		а прежде чем предпринимать крайние меры, попробуйте также связаться с администрацией! \
+		Продумайте свои действия и сделайте ролевую игру захватывающей! <b>Пожалуйста, помните, что все правила, \
+		кроме некоторых, без явных исключений, применяются к антагонистам.</b>"
 
 //	var/can_use_aooc = TRUE                // If true, will be given the AOOC verb, along with the ability to use it.
 	var/can_hear_aooc = TRUE		// If FALSE, the antag can neither speak nor hear AOOC. If TRUE, they can at least hear it.

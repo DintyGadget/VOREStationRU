@@ -11,7 +11,7 @@
 		for(var/client/C in GLOB.clients)
 			var/entry = "\t[C.key]"
 			if(C.holder && C.holder.fakekey)
-				entry += " <i>(as [C.holder.fakekey])</i>"
+				entry += " <i><meta charset=\"utf-8\">(as [C.holder.fakekey])</i>"
 			entry += " - Playing as [C.mob.real_name]"
 			switch(C.mob.stat)
 				if(UNCONSCIOUS)
@@ -80,7 +80,7 @@
 	var/num_admins_online = 0
 	var/num_devs_online = 0
 	var/num_event_managers_online = 0
-	
+
 	if(holder)
 		for(var/client/C in GLOB.admins)
 			if(R_ADMIN & C.holder.rights && R_BAN & C.holder.rights)

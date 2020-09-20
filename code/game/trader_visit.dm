@@ -6,7 +6,7 @@ var/can_call_traders = 1
 /client/proc/trader_ship()
 	set name = "Dispatch Beruang Trader Ship"
 	set category = "Спец. команды"
-	set desc = "Invite players to join the Beruang."
+	set desc = "Пригласите игроков присоединиться к Беруангу."
 
 	if(!holder)
 		to_chat(usr, "<span class='danger'>Only administrators may use this command.</span>")

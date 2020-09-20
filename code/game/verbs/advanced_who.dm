@@ -3,13 +3,13 @@
 	set name = "Advanced Who"
 	set category = "OOC"
 
-	var/msg = "<b>Current Players:</b>\n"
+	var/msg = "<meta charset=\"utf-8\"><b>Current Players:</b>\n"
 
 	var/list/Lines = list()
 
 	if(holder)
 		for(var/client/C in GLOB.clients)
-			var/entry = "<tr><td>[C.key]"
+			var/entry = "<meta charset=\"utf-8\"><tr><td>[C.key]"
 			if(C.holder && C.holder.fakekey)
 				entry += " <i>(as [C.holder.fakekey])</i>"
 

@@ -21,34 +21,34 @@ export const OvermapShipSensors = (props, context) => {
   return (
     <Window width={375} height={545} resizable>
       <Window.Content>
-        <Section title="Состояние" buttons={(
+        <Section title="РЎРѕСЃС‚РѕСЏРЅРёРµ" buttons={(
           <Fragment>
             <Button
               icon="eye"
               selected={viewing}
               onClick={() => act("viewing")}>
-              Смотреть карту
+              РЎРјРѕС‚СЂРµС‚СЊ РєР°СЂС‚Сѓ
             </Button>
             <Button
               icon="power-off"
               selected={on}
               onClick={() => act("toggle")}>
-              {on ? "Сенсоры вкл" : "Сенсоры выкл"}
+              {on ? "РЎРµРЅСЃРѕСЂС‹ РІРєР»" : "РЎРµРЅСЃРѕСЂС‹ РІС‹РєР»"}
             </Button>
           </Fragment>
         )}>
           <LabeledList>
-            <LabeledList.Item label="Состояние">
+            <LabeledList.Item label="РЎРѕСЃС‚РѕСЏРЅРёРµ">
               {status}
             </LabeledList.Item>
-            <LabeledList.Item label="Диапазон">
+            <LabeledList.Item label="Р”РёР°РїР°Р·РѕРЅ">
               <Button
                 icon="signal"
                 onClick={() => act("range")}>
                 {range}
               </Button>
             </LabeledList.Item>
-            <LabeledList.Item label="Целостность">
+            <LabeledList.Item label="Р¦РµР»РѕСЃС‚РЅРѕСЃС‚СЊ">
               <ProgressBar
                 ranges={{
                   good: [max_health * 0.75, Infinity],
@@ -60,7 +60,7 @@ export const OvermapShipSensors = (props, context) => {
                 {health} / {max_health}
               </ProgressBar>
             </LabeledList.Item>
-            <LabeledList.Item label="Температура">
+            <LabeledList.Item label="РўРµРјРїРµСЂР°С‚СѓСЂР°">
               <ProgressBar
                 ranges={{
                   bad: [critical_heat * 0.75, Infinity],
@@ -70,24 +70,24 @@ export const OvermapShipSensors = (props, context) => {
                 value={heat}
                 maxValue={critical_heat}>
                 {heat < critical_heat * 0.5 && (
-                  <Box>Температура низкая.</Box>
+                  <Box>РўРµРјРїРµСЂР°С‚СѓСЂР° РЅРёР·РєР°СЏ.</Box>
                 ) || heat < critical_heat * 0.75 && (
-                  <Box>Температура сенсоров высокая!</Box>
+                  <Box>РўРµРјРїРµСЂР°С‚СѓСЂР° СЃРµРЅСЃРѕСЂРѕРІ РІС‹СЃРѕРєР°СЏ!</Box>
                 ) || (
-                  <Box>КРИТИЧЕСКАЯ ТЕМПЕРАТУРА: немедленно уменьшите мощность!</Box>
+                  <Box>РљР РРўРР§Р•РЎРљРђРЇ РўР•РњРџР•Р РђРўРЈР Рђ: РЅРµРјРµРґР»РµРЅРЅРѕ СѓРјРµРЅСЊС€РёС‚Рµ РјРѕС‰РЅРѕСЃС‚СЊ!</Box>
                 )}
               </ProgressBar>
             </LabeledList.Item>
           </LabeledList>
         </Section>
-        <Section title="Связь">
+        <Section title="РЎРІСЏР·СЊ">
           {contacts.length && contacts.map(alien => (
             <Button
               key={alien.ref}
               fluid
               icon="search"
               onClick={() => act("scan", { scan: alien.ref })}>
-              <Box bold inline>Скан: {alien.name}</Box>
+              <Box bold inline>РЎРєР°РЅ: {alien.name}</Box>
               <Box inline>, bearing: {alien.bearing}&deg;</Box>
             </Button>
           )) || (
@@ -97,11 +97,11 @@ export const OvermapShipSensors = (props, context) => {
           )}
         </Section>
         {data.status === "MISSING" && (
-          <Section title="Ошибка">
+          <Section title="РћС€РёР±РєР°">
             <Button
               icon="wifi"
               onClick={() => act("link")}>
-              Подключиться к комплекту датчиков?
+              РџРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє РєРѕРјРїР»РµРєС‚Сѓ РґР°С‚С‡РёРєРѕРІ?
             </Button>
           </Section>
         ) || null}
