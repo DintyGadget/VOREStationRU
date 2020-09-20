@@ -11,7 +11,7 @@ var/global/list/positive_traits = list()	// Positive custom species traits, inde
 var/global/list/traits_costs = list()		// Just path = cost list, saves time in char setup
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 
-var/global/list/sensorpreflist = list("Off", "Binary", "Vitals", "Tracking", "No Preference")	//TFF 5/8/19 - Suit Sensors global list
+var/global/list/sensorpreflist = list("Выкл", "Двоичный", "Жизненно важные органы", "Отслеживание", "Нет предпочтений")	//TFF 5/8/19 - Suit Sensors global list
 
 var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
 
@@ -25,10 +25,10 @@ var/global/list/player_sizes_list = list(
 
 //stores vantag settings indexed by name
 var/global/list/vantag_choices_list = list(
-		VANTAG_NONE		=	"No Involvement",
-		VANTAG_VORE		=	"Be Prey",
-		VANTAG_KIDNAP	=	"Be Kidnapped",
-		VANTAG_KILL		=	"Be Killed")
+		VANTAG_NONE		=	"Без участия",
+		VANTAG_VORE		=	"Быть добычей",
+		VANTAG_KIDNAP	=	"Быть похищенным",
+		VANTAG_KILL		=	"Быть убитым")
 
 //Blacklist to exclude items from object ingestion. Digestion blacklist located in digest_act_vr.dm
 var/global/list/item_vore_blacklist = list(

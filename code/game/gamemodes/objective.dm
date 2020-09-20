@@ -42,7 +42,7 @@ datum/objective/assassinate
 	find_target()
 		..()
 		if(target && target.current)
-			explanation_text = "Ассимилировать [target.current.real_name], роль цели [target.assigned_role]."
+			explanation_text = "Уничтожить [target.current.real_name], роль цели [target.assigned_role]."
 		else
 			explanation_text = "Свободная цель"
 		return target
@@ -51,7 +51,7 @@ datum/objective/assassinate
 	find_target_by_role(role, role_type=0)
 		..(role, role_type)
 		if(target && target.current)
-			explanation_text = "Ассимилировать [target.current.real_name], роль цели [!role_type ? target.assigned_role : target.special_role]."
+			explanation_text = "Уничтожить [target.current.real_name], роль цели [!role_type ? target.assigned_role : target.special_role]."
 		else
 			explanation_text = "Свободная цель"
 		return target

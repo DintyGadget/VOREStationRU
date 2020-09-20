@@ -131,19 +131,19 @@
 							accessories_visible.Add(A)
 
 				if(accessories_visible.len)
-					tie_msg += " Attached to it is [english_list(accessories_visible)]."
+					tie_msg += " К нему прилагается [english_list(accessories_visible)]."
 
 		if(w_uniform.blood_DNA)
-			msg += "<span class='warning'>[T.He] [T.is] wearing [bicon(w_uniform)] [w_uniform.gender==PLURAL?"some":"a"] [(w_uniform.blood_color != SYNTH_BLOOD_COLOUR) ? "blood" : "oil"]-stained [w_uniform.name]![tie_msg]</span>"
+			msg += "<span class='warning'>Носит [bicon(w_uniform)] [w_uniform.gender==PLURAL?",которая очень":",которая очень"] [(w_uniform.blood_color != SYNTH_BLOOD_COLOUR) ? "кровавая" : "маслянистая"] [w_uniform.name]![tie_msg]</span>"
 		else
-			msg += "[T.He] [T.is] wearing [bicon(w_uniform)] \a [w_uniform].[tie_msg]"
+			msg += "Носит [bicon(w_uniform)], [w_uniform].[tie_msg]"
 
 	//head
 	if(head && !(skip_gear & EXAMINE_SKIPHELMET) && head.show_examine)
 		if(head.blood_DNA)
-			msg += "<span class='warning'>[T.He] [T.is] wearing [bicon(head)] [head.gender==PLURAL?"some":"a"] [(head.blood_color != SYNTH_BLOOD_COLOUR) ? "blood" : "oil"]-stained [head.name] on [T.his] head!</span>"
+			msg += "<span class='warning'>Носит [bicon(head)] [head.gender==PLURAL?",которая очень":",которая очень"] [(head.blood_color != SYNTH_BLOOD_COLOUR) ? "кровавая" : "маслянистая"], [head.name] на голове!</span>"
 		else
-			msg += "[T.He] [T.is] wearing [bicon(head)] \a [head] on [T.his] head."
+			msg += "Носит [bicon(head)] [head] на голове."
 
 	//suit/armour
 	if(wear_suit)
@@ -151,19 +151,19 @@
 		if(istype(wear_suit,/obj/item/clothing/suit))
 			var/obj/item/clothing/suit/U = wear_suit
 			if(LAZYLEN(U.accessories))
-				tie_msg += " Attached to it is [english_list(U.accessories)]."
+				tie_msg += " К нему прилагается [english_list(U.accessories)]."
 
 		if(wear_suit.blood_DNA)
-			msg += "<span class='warning'>[T.He] [T.is] wearing [bicon(wear_suit)] [wear_suit.gender==PLURAL?"some":"a"] [(wear_suit.blood_color != SYNTH_BLOOD_COLOUR) ? "blood" : "oil"]-stained [wear_suit.name][tie_msg]!</span>"
+			msg += "<span class='warning'>Носит [bicon(wear_suit)] [wear_suit.gender==PLURAL?",которая очень":",которая очень"] [(wear_suit.blood_color != SYNTH_BLOOD_COLOUR) ? "кровавая" : "маслянистая"] [wear_suit.name][tie_msg]!</span>"
 		else
-			msg += "[T.He] [T.is] wearing [bicon(wear_suit)] \a [wear_suit].[tie_msg]"
+			msg += "Носит [bicon(wear_suit)], [wear_suit].[tie_msg]"
 
 		//suit/armour storage
 		if(s_store && !(skip_gear & EXAMINE_SKIPSUITSTORAGE) && s_store.show_examine)
 			if(s_store.blood_DNA)
-				msg += "<span class='warning'>[T.He] [T.is] carrying [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] [(s_store.blood_color != SYNTH_BLOOD_COLOUR) ? "blood" : "oil"]-stained [s_store.name] on [T.his] [wear_suit.name]!</span>"
+				msg += "<span class='warning'>Несет [bicon(s_store)] [s_store.gender==PLURAL?"some":"a"] [(s_store.blood_color != SYNTH_BLOOD_COLOUR) ? "blood" : "oil"]-stained [s_store.name] on [T.his] [wear_suit.name]!</span>"
 			else
-				msg += "[T.He] [T.is] carrying [bicon(s_store)] \a [s_store] on [T.his] [wear_suit.name]."
+				msg += "Несет [bicon(s_store)] \a [s_store] on [T.his] [wear_suit.name]."
 
 	//back
 	if(back && !(skip_gear & EXAMINE_SKIPBACKPACK) && back.show_examine)
@@ -265,11 +265,11 @@
 	//Jitters
 	if(is_jittery)
 		if(jitteriness >= 300)
-			msg += "<span class='warning'><B>[T.He] [T.is] convulsing violently!</B></span>"
+			msg += "<span class='warning'><B>Бьется в конвульсиях!</B></span>"
 		else if(jitteriness >= 200)
-			msg += "<span class='warning'>[T.He] [T.is] extremely jittery.</span>"
+			msg += "<span class='warning'>На нервах.</span>"
 		else if(jitteriness >= 100)
-			msg += "<span class='warning'>[T.He] [T.is] twitching ever so slightly.</span>"
+			msg += "<span class='warning'>Слегка дергается.</span>"
 
 	//splints
 	for(var/organ in BP_ALL)
@@ -278,7 +278,7 @@
 			msg += "<span class='warning'>[T.He] [T.has] \a [o.splinted] on [T.his] [o.name]!</span>"
 
 	if(suiciding)
-		msg += "<span class='warning'>[T.He] appears to have commited suicide... there is no hope of recovery.</span>"
+		msg += "<span class='warning'> похоже, кончает жизнь самоубийством ... надежды на выздоровление нет.</span>"
 
 	//VOREStation Add
 	var/list/vorestrings = list()

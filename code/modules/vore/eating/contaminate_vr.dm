@@ -38,7 +38,7 @@ var/list/gurgled_overlays = list(
 		cleanname = src.name
 		cleandesc = src.desc
 		name = "[gurgleflavor] [cleanname]"
-		desc = "[cleandesc] It seems to be covered in ominously foul residue and needs a wash."
+		desc = "[cleandesc] Он, кажется, покрыт зловеще грязными остатками и нуждается в мытье."
 //		for(var/obj/item/O in contents)			//Yeah, no. This contaminates stuff that should never be contaminated in places that should not be reached. Handle it for specific cases instead.
 //			O.gurgle_contaminate(item_storage, contamination_flavor, contamination_color)
 		return TRUE
@@ -67,13 +67,13 @@ var/list/gurgled_overlays = list(
 
 /obj/structure/sink/attackby(obj/item/I, mob/user) //Wash the soggy item before it can interact with the sink.
 	if(istype(I) && I.gurgled)
-		to_chat(user, "<span class='notice'>You start washing [I].</span>")
+		to_chat(user, "<span class='notice'>Вы начинаете мыть [I].</span>")
 
 		busy = TRUE
 		if(do_after(user, 40, src))
 			I.clean_blood()
-			user.visible_message("<span class='notice'>[user] washes [I] using [src].</span>",
-				"<span class='notice'>You wash [I] using [src].</span>")
+			user.visible_message("<span class='notice'>[user] моет [I] используя [src].</span>",
+				"<span class='notice'>Вы моете [I] используя [src].</span>")
 		busy = FALSE
 	else
 		..()
@@ -83,7 +83,7 @@ var/list/gurgled_overlays = list(
 //////////////
 /obj/item/weapon/storage/box/open(mob/user as mob)
 	if(gurgled)
-		to_chat(usr, "The soggy box falls apart in your hands.")
+		to_chat(usr, "Мокрая коробка разваливается у вас в руках.")
 		var/turf/T = get_turf(src)
 		for(var/obj/item/I in contents)
 			remove_from_storage(I, T)
@@ -124,7 +124,7 @@ var/list/gurgled_overlays = list(
 /obj/item/weapon/storage/box/gurgle_contaminate(var/atom/movable/item_storage = null)
 	if((. = ..()))
 		name = "soggy [cleanname]"
-		desc = "This soggy box is about to fall apart any time."
+		desc = "Эта мокрая коробка может развалиться в любой момент."
 
 //Storages that contaminate contents
 /obj/item/weapon/storage/backpack/gurgle_contaminate(var/atom/movable/item_storage = null, var/contamination_flavor = "Generic", var/contamination_color = "green")

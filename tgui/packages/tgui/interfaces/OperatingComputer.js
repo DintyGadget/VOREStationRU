@@ -5,16 +5,16 @@ import { Window } from "../layouts";
 import { Box, Button, Flex, Icon, Knob, LabeledList, Section, Tabs, ProgressBar } from "../components";
 
 const stats = [
-  ['good', 'Conscious'],
-  ['average', 'Unconscious'],
-  ['bad', 'DEAD'],
+  ['good', 'В сознании'],
+  ['average', 'Без сознания'],
+  ['bad', 'СМЕРТЬ'],
 ];
 
 const damages = [
-  ['Resp.', 'oxyLoss'],
-  ['Toxin', 'toxLoss'],
-  ['Brute', 'bruteLoss'],
-  ['Burn', 'fireLoss'],
+  ['Дых.', 'oxyLoss'],
+  ['Токсины', 'toxLoss'],
+  ['Повреж.', 'bruteLoss'],
+  ['Ожоги', 'fireLoss'],
 ];
 
 const damageRange = {
@@ -57,13 +57,13 @@ export const OperatingComputer = (props, context) => {
             selected={!choice}
             icon="user"
             onClick={() => act('choiceOff')}>
-            Patient
+            Пациент
           </Tabs.Tab>
           <Tabs.Tab
             selected={!!choice}
             icon="cog"
             onClick={() => act('choiceOn')}>
-            Options
+            Настройки
           </Tabs.Tab>
         </Tabs>
         <Section flexGrow="1">
@@ -81,15 +81,15 @@ const OperatingComputerPatient = (props, context) => {
   } = data;
   return (
     <Fragment>
-      <Section title="Patient" level="2">
+      <Section title="Пациент" level="2">
         <LabeledList>
-          <LabeledList.Item label="Name">
+          <LabeledList.Item label="Ф.И">
             {occupant.name}
           </LabeledList.Item>
-          <LabeledList.Item label="Status" color={stats[occupant.stat][0]}>
+          <LabeledList.Item label="Состояние" color={stats[occupant.stat][0]}>
             {stats[occupant.stat][1]}
           </LabeledList.Item>
-          <LabeledList.Item label="Health">
+          <LabeledList.Item label="Здоровье">
             <ProgressBar
               min="0"
               max={occupant.maxHealth}
@@ -102,7 +102,7 @@ const OperatingComputerPatient = (props, context) => {
             />
           </LabeledList.Item>
           {damages.map((d, i) => (
-            <LabeledList.Item key={i} label={d[0] + " Damage"}>
+            <LabeledList.Item key={i} label={d[0] + " Урон"}>
               <ProgressBar
                 key={i}
                 min="0"
@@ -113,7 +113,7 @@ const OperatingComputerPatient = (props, context) => {
               </ProgressBar>
             </LabeledList.Item>
           ))}
-          <LabeledList.Item label="Temperature">
+          <LabeledList.Item label="Температура">
             <ProgressBar
               min="0"
               max={occupant.maxTemp}
@@ -124,7 +124,7 @@ const OperatingComputerPatient = (props, context) => {
           </LabeledList.Item>
           {!!occupant.hasBlood && (
             <Fragment>
-              <LabeledList.Item label="Blood Level">
+              <LabeledList.Item label="Уровень крови">
                 <ProgressBar
                   min="0"
                   max={occupant.bloodMax}
@@ -144,16 +144,16 @@ const OperatingComputerPatient = (props, context) => {
           )}
         </LabeledList>
       </Section>
-      <Section title="Current Procedure" level="2">
+      <Section title="Текущая процедура" level="2">
         {(occupant.surgery && occupant.surgery.length) ? (
           <LabeledList>
             {occupant.surgery.map(limb => (
               <LabeledList.Item key={limb.name} label={limb.name}>
                 <LabeledList>
-                  <LabeledList.Item label="Current State">
+                  <LabeledList.Item label="Текущее состояние">
                     {limb.currentStage}
                   </LabeledList.Item>
-                  <LabeledList.Item label="Possible Next Steps">
+                  <LabeledList.Item label="Возможные следующие шаги">
                     {limb.nextSteps.map(step => (
                       <div key={step}>
                         {step}
@@ -166,7 +166,7 @@ const OperatingComputerPatient = (props, context) => {
           </LabeledList>
         ) : (
           <Box color="label">
-            No procedure ongoing.
+            Никаких процедур не проводится.
           </Box>
         )}
       </Section>
@@ -201,23 +201,23 @@ const OperatingComputerOptions = (props, context) => {
   } = data;
   return (
     <LabeledList>
-      <LabeledList.Item label="Loudspeaker">
+      <LabeledList.Item label="Громкоговоритель">
         <Button
           selected={verbose}
           icon={verbose ? "toggle-on" : "toggle-off"}
-          content={verbose ? "On" : "Off"}
+          content={verbose ? "Вкл" : "Выкл"}
           onClick={() => act(verbose ? 'verboseOff' : 'verboseOn')}
         />
       </LabeledList.Item>
-      <LabeledList.Item label="Health Announcer">
+      <LabeledList.Item label="Диктор здоровья">
         <Button
           selected={health}
           icon={health ? "toggle-on" : "toggle-off"}
-          content={health ? "On" : "Off"}
+          content={health ? "Вкл" : "Выкл"}
           onClick={() => act(health ? 'healthOff' : 'healthOn')}
         />
       </LabeledList.Item>
-      <LabeledList.Item label="Health Announcer Threshold">
+      <LabeledList.Item label="Порог для диктора здоровья">
         <Knob
           bipolar
           minValue="-100"
@@ -231,15 +231,15 @@ const OperatingComputerOptions = (props, context) => {
           })}
         />
       </LabeledList.Item>
-      <LabeledList.Item label="Oxygen Alarm">
+      <LabeledList.Item label="Кислородная тревога">
         <Button
           selected={oxy}
           icon={oxy ? "toggle-on" : "toggle-off"}
-          content={oxy ? "On" : "Off"}
+          content={oxy ? "Вкл" : "Выкл"}
           onClick={() => act(oxy ? 'oxyOff' : 'oxyOn')}
         />
       </LabeledList.Item>
-      <LabeledList.Item label="Oxygen Alarm Threshold">
+      <LabeledList.Item label="Порог тревоги по кислороду">
         <Knob
           bipolar
           minValue="-100"
@@ -252,11 +252,11 @@ const OperatingComputerOptions = (props, context) => {
           })}
         />
       </LabeledList.Item>
-      <LabeledList.Item label="Critical Alert">
+      <LabeledList.Item label="Крит. предупреждение">
         <Button
           selected={crit}
           icon={crit ? "toggle-on" : "toggle-off"}
-          content={crit ? "On" : "Off"}
+          content={crit ? "Вкл" : "Выкл"}
           onClick={() => act(crit ? 'critOff' : 'critOn')}
         />
       </LabeledList.Item>

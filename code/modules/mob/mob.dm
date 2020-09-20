@@ -214,7 +214,7 @@
 	to_chat(src, jointext(results, "<br>"))
 
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
-	set name = "Point To"
+	set name = "Указать на"
 	set category = "Object"
 
 	if(!src || !isturf(src.loc) || !(A in view(src.loc)))
@@ -259,15 +259,15 @@
 */
 
 /mob/verb/memory()
-	set name = "Notes"
+	set name = "Заметки"
 	set category = "IC"
 	if(mind)
 		mind.show_memory(src)
 	else
-		to_chat(src, "The game appears to have misplaced your mind datum, so we can't show you your notes.")
+		to_chat(src, "Игра, похоже, неуместна для вашего разума, поэтому мы не можем показать вам ваши заметки.")
 
 /mob/verb/add_memory(msg as message)
-	set name = "Add Note"
+	set name = "Доб. Заметку"
 	set category = "IC"
 
 	msg = sanitize(msg)
@@ -355,7 +355,7 @@
 		return // Don't set it, no need
 
 /mob/verb/abandon_mob()
-	set name = "Return to Menu"
+	set name = "Вернуться в меню"
 	set category = "OOC"
 
 	if(stat != DEAD || !ticker)
@@ -394,7 +394,7 @@
 	return
 
 /client/verb/changes()
-	set name = "Changelog"
+	set name = "Изменения"
 	set category = "OOC"
 	src << browse('html/changelog.html', "window=changes;size=675x650")
 	if(prefs.lastchangelog != changelog_hash)
@@ -403,14 +403,14 @@
 		winset(src, "rpane.changelog", "background-color=none;font-style=;")
 
 /mob/verb/observe()
-	set name = "Observe"
+	set name = "Наблюдать"
 	set category = "OOC"
 	var/is_admin = 0
 
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
 		is_admin = 1
 	else if(stat != DEAD || istype(src, /mob/new_player))
-		to_chat(usr, "<font color='blue'>You must be observing to use this!</font>")
+		to_chat(usr, "<font color='blue'>Вы должны наблюдать, чтобы использовать это!</font>")
 		return
 
 	if(is_admin && stat == DEAD)
@@ -470,7 +470,7 @@
 
 /mob/verb/stop_pulling()
 
-	set name = "Stop Pulling"
+	set name = "Перестать тянуть"
 	set category = "IC"
 
 	if(pulling)
@@ -855,8 +855,8 @@
 
 mob/proc/yank_out_object()
 	set category = "Object"
-	set name = "Yank out object"
-	set desc = "Remove an embedded item at the cost of bleeding and pain."
+	set name = "Выдернуть инородный объект"
+	set desc = "Удалите внедренный элемент ценой кровотечения и боли."
 	set src in view(1)
 
 	if(!isliving(usr) || !usr.checkClickCooldown())
@@ -864,11 +864,11 @@ mob/proc/yank_out_object()
 	usr.setClickCooldown(20)
 
 	if(usr.stat == 1)
-		to_chat(usr, "You are unconcious and cannot do that!")
+		to_chat(usr, "Вы без сознательния и не можете этого сделать!")
 		return
 
 	if(usr.restrained())
-		to_chat(usr, "You are restrained and cannot do that!")
+		to_chat(usr, "Вы ограничены и не можете этого сделать!")
 		return
 
 	var/mob/S = src
@@ -882,17 +882,17 @@ mob/proc/yank_out_object()
 	valid_objects = get_visible_implants(0)
 	if(!valid_objects.len)
 		if(self)
-			to_chat(src, "You have nothing stuck in your body that is large enough to remove.")
+			to_chat(src, "У вас нет ничего застрявшего в вашем теле, что было бы достаточно большим, чтобы удалить.")
 		else
-			to_chat(U, "[src] has nothing stuck in their wounds that is large enough to remove.")
+			to_chat(U, "[src] не имеет ничего застрявшего в ранах, что было бы достаточно большим, чтобы удалить.")
 		return
 
-	var/obj/item/weapon/selection = input("What do you want to yank out?", "Embedded objects") in valid_objects
+	var/obj/item/weapon/selection = input("Что вы хотите вытащить?", "Embedded objects") in valid_objects
 
 	if(self)
-		to_chat(src, "<span class='warning'>You attempt to get a good grip on [selection] in your body.</span>")
+		to_chat(src, "<span class='warning'>Вы пытаетесь крепко ухватиться за [selection] в своем теле.</span>")
 	else
-		to_chat(U, "<span class='warning'>You attempt to get a good grip on [selection] in [S]'s body.</span>")
+		to_chat(U, "<span class='warning'>Вы пытаетесь как следует ухватиться за [selection] в теле [S].</span>")
 
 	if(!do_after(U, 30))
 		return
@@ -900,9 +900,9 @@ mob/proc/yank_out_object()
 		return
 
 	if(self)
-		visible_message("<span class='warning'><b>[src] rips [selection] out of their body.</b></span>","<span class='warning'><b>You rip [selection] out of your body.</b></span>")
+		visible_message("<span class='warning'><b>[src] вырывает [selection] из их тела.</b></span>","<span class='warning'><b>Вы вырываете [selection] из своего тела.</b></span>")
 	else
-		visible_message("<span class='warning'><b>[usr] rips [selection] out of [src]'s body.</b></span>","<span class='warning'><b>[usr] rips [selection] out of your body.</b></span>")
+		visible_message("<span class='warning'><b>[usr] вырывает [selection] из тела [src].</b></span>","<span class='warning'><b>[usr] вырывает [selection] из вашего тела.</b></span>")
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
 		src.verbs -= /mob/proc/yank_out_object
@@ -924,7 +924,7 @@ mob/proc/yank_out_object()
 		if(prob(selection.w_class * 5) && (affected.robotic < ORGAN_ROBOT)) //I'M SO ANEMIC I COULD JUST -DIE-.
 			var/datum/wound/internal_bleeding/I = new (min(selection.w_class * 5, 15))
 			affected.wounds += I
-			H.custom_pain("Something tears wetly in your [affected] as [selection] is pulled free!", 50)
+			H.custom_pain("Что-то мягко рвется в: [affected], когда [selection] извлекается!", 50)
 
 		if (ishuman(U))
 			var/mob/living/carbon/human/human_user = U
@@ -972,9 +972,9 @@ mob/proc/yank_out_object()
 	set_face_dir()
 
 	if(!facing_dir)
-		to_chat(usr, "You are now not facing anything.")
+		to_chat(usr, "Теперь вы никуда не смотрите.")
 	else
-		to_chat(usr, "You are now facing [dir2text(facing_dir)].")
+		to_chat(usr, "Теперь вы смотрите [dir2text(facing_dir)].")
 
 /mob/proc/set_face_dir(var/newdir)
 	if(newdir == facing_dir)
