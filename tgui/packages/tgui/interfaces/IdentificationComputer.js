@@ -5,6 +5,7 @@ import { Box, Button, Flex, Input, LabeledList, Section, Table, Tabs } from "../
 import { Window } from "../layouts";
 import { decodeHtmlEntities } from 'common/string';
 import { COLORS } from "../constants";
+import { CrewManifestContent } from './CrewManifest';
 
 export const IdentificationComputer = (props, context) => {
   const { act, data } = useBackend(context);
@@ -33,11 +34,11 @@ export const IdentificationComputerContent = (props, context) => {
   
   let body = <IdentificationComputerAccessModification ntos={ntos} />;
   if (ntos && !data.have_id_slot) {
-    body = <IdentificationComputerCrewManifest />;
+    body = <CrewManifestContent />;
   } else if (printing) {
     body = <IdentificationComputerPrinting />;
   } else if (mode === 1) {
-    body = <IdentificationComputerCrewManifest />;
+    body = <CrewManifestContent />;
   }
 
   return (
@@ -45,15 +46,15 @@ export const IdentificationComputerContent = (props, context) => {
       <Tabs>
         {(!ntos || !!data.have_id_slot) && (
           <Tabs.Tab icon="home" selected={mode === 0} onClick={() => act("mode", { "mode_target": 0 })}>
-            Модификация Доступа
+            Access Modification
           </Tabs.Tab>
         )}
         <Tabs.Tab icon="home" selected={mode === 1} onClick={() => act("mode", { "mode_target": 1 })}>
-          Манифест экипажа
+          Crew Manifest
         </Tabs.Tab>
         {!ntos || !!data.have_printer && (
           <Tabs.Tab float="right" icon="print" onClick={() => act("print")} disabled={!mode && !has_modify} color="">
-            Печать
+            Print
           </Tabs.Tab>
         )}
       </Tabs>
@@ -93,14 +94,14 @@ export const IdentificationComputerAccessModification = (props, context) => {
   } = data;
 
   return (
-    <Section title="Модификация Доступа">
+    <Section title="Access Modification">
       {!authenticated && (
         <Box italic mb={1}>
-          Пожалуйста, вставьте ID карту в терминал, чтобы продолжить работу.
+          Please insert the IDs into the terminal to proceed.
         </Box>
       )}
       <LabeledList>
-        <LabeledList.Item label="Владелец карты">
+        <LabeledList.Item label="Target Identitity">
           <Button
             icon="eject"
             fluid
@@ -108,7 +109,7 @@ export const IdentificationComputerAccessModification = (props, context) => {
             onClick={() => act("modify")} />
         </LabeledList.Item>
         {!ntos && (
-          <LabeledList.Item label="Авторизатор">
+          <LabeledList.Item label="Authorized Identitity">
             <Button
               icon="eject"
               fluid
@@ -119,33 +120,33 @@ export const IdentificationComputerAccessModification = (props, context) => {
       </LabeledList>
       {!!authenticated && !!has_modify && (
         <Fragment>
-          <Section title="Детали" level={2}>
+          <Section title="Details" level={2}>
             <LabeledList>
-              <LabeledList.Item label="Зарег. имя"> 
+              <LabeledList.Item label="Registered Name"> 
                 <Input
                   value={target_owner}
                   fluid
                   onInput={(e, val) => act("reg", { reg: val })} />
               </LabeledList.Item>
-              <LabeledList.Item label="Номер аккаунта"> 
+              <LabeledList.Item label="Account Number"> 
                 <Input
                   value={account_number}
                   fluid
                   onInput={(e, val) => act("account", { account: val })} />
               </LabeledList.Item>
-              <LabeledList.Item label="Увольнение"> 
+              <LabeledList.Item label="Dismissals"> 
                 <Button.Confirm
                   color="bad"
                   icon="exclamation-triangle"
                   confirmIcon="fire"
                   fluid
                   content={"Dismiss " + target_owner}
-                  confirmContent={"Вы увольняете " + target_owner + ", подтвердить?"}
+                  confirmContent={"You are dismissing " + target_owner + ", confirm?"}
                   onClick={() => act("terminate")} />
               </LabeledList.Item>
             </LabeledList>
           </Section>
-          <Section title="Присвоение" level={2}>
+          <Section title="Assignment" level={2}>
             <Table>
               {departments.map(dept => (
                 <Fragment key={dept.department_name}>
@@ -232,46 +233,5 @@ export const IdentificationComputerRegions = (props, context) => {
         </Flex.Item>
       ))}
     </Flex>
-  );
-};
-
-
-export const IdentificationComputerCrewManifest = (props, context) => {
-  const { act, data } = useBackend(context);
-
-  const {
-    manifest,
-  } = data;
-
-  return (
-    <Section title="Манифест экипажа" noTopPadding>
-      {manifest.map(cat => !!cat.elems.length && (
-        <Section
-          title={(
-            <Box backgroundColor={COLORS.manifest[cat.cat.toLowerCase()]} m={-1} pt={1} pb={1}>
-              <Box ml={1} textAlign="center" fontSize={1.4}>
-                {cat.cat}
-              </Box>
-            </Box>
-          )}
-          key={cat.cat}
-          level={2}>
-          <Table>
-            <Table.Row header color="white">
-              <Table.Cell>Ф.И</Table.Cell>
-              <Table.Cell>Должность</Table.Cell>
-              <Table.Cell>Активность</Table.Cell>
-            </Table.Row>
-            {cat.elems.map(person => (
-              <Table.Row color="average" key={person.name + person.rank}>
-                <Table.Cell>{person.name}</Table.Cell>
-                <Table.Cell>{person.rank}</Table.Cell>
-                <Table.Cell>{person.active}</Table.Cell>
-              </Table.Row>
-            ))}
-          </Table>
-        </Section>
-      ))}
-    </Section>
   );
 };
