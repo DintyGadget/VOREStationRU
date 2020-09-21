@@ -23,7 +23,7 @@ export const OvermapFlightData = (props, context) => {
   // just look at how pretty the legend is, sticking partially through the border ;///;
   return (
     <LabeledList>
-      <LabeledList.Item label="Времени до прибытия:">
+      <LabeledList.Item label="Прибытие через">
         {ETAnext}
       </LabeledList.Item>
       <LabeledList.Item label="Скорость" color={speed_color}>
@@ -36,7 +36,7 @@ export const OvermapFlightData = (props, context) => {
         {heading}&deg;
       </LabeledList.Item>
       {!disableLimiterControls && (
-        <LabeledList.Item label="Ограничитель ускорения">
+        <LabeledList.Item label="Ограничитель">
           <Button onClick={() => act("accellimit")}>
             {accellimit} Gm/h
           </Button>

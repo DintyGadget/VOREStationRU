@@ -34,7 +34,7 @@ export const OvermapFlightDataWrap = (props, context) => {
   // just look at how pretty the legend is, sticking partially through the border ;///;
   return (
     <fieldset style={{ height: "100%", border: "1px solid #4972a1", margin: 'none' }} className="Section">
-      <legend>Flight Data</legend>
+      <legend>Данные полета</legend>
       <OvermapFlightData />
     </fieldset>
   );
@@ -50,7 +50,7 @@ const OvermapManualControl = (props, context) => {
 
   return (
     <fieldset style={{ height: "100%", border: "1px solid #4972a1" }} className="Section">
-      <legend>Manual Control</legend>
+      <legend>Управление</legend>
       <Flex align="center" justify="center">
         <Flex.Item>
           <OvermapPanControls disabled={!canburn} actToDo="move" />
@@ -85,15 +85,14 @@ const OvermapAutopilot = (props, context) => {
   if (autopilot_disabled) {
     return (
       <fieldset style={{ height: "100%", border: "1px solid #4972a1" }} className="Section">
-        <legend>Autopilot</legend>
+        <legend>Автопилот</legend>
         <Box textAlign="center" color="bad" fontSize={1.2}>
           АВТОПИЛОТ ОТКЛЮЧЕН
         </Box>
         <Box textAlign="center" color="average">
           Предупреждение: это судно оборудовано автопилотом класса I.
-          Автопилоты класса I не могут ничего делать, кроме как
-          лететь по прямой прямо к цели, что может привести к 
-          столкновениям.
+          Он ничего не делает, кроме того, что летит напрямую к цели,
+          что может привести к столкновениям.
         </Box>
         <Box textAlign="center">
           <Button.Confirm
@@ -129,7 +128,7 @@ const OvermapAutopilot = (props, context) => {
             </Button>
           )}
         </LabeledList.Item>
-        <LabeledList.Item label="Огран. скорости">
+        <LabeledList.Item label="Ограничитель">
           <Button
             icon="tachometer-alt"
             onClick={() => act("speedlimit")}>

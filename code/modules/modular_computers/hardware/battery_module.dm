@@ -2,7 +2,7 @@
 // have tremendeous capacity in comparsion. Higher tier cells would provide your device with nearly infinite battery life, which is something i want to avoid.
 /obj/item/weapon/computer_hardware/battery_module
 	name = "standard battery"
-	desc = "A standard power cell, commonly seen in high-end portable microcomputers or low-end laptops. It's rating is 750."
+	desc = "Стандартный элемент питания, обычно встречающийся в портативных микрокомпьютерах высокого класса или ноутбуках низкого уровня. Его вместимость 750."
 	icon_state = "battery_normal"
 	critical = 1
 	malfunction_probability = 1
@@ -12,7 +12,7 @@
 
 /obj/item/weapon/computer_hardware/battery_module/advanced
 	name = "advanced battery"
-	desc = "An advanced power cell, often used in most laptops. It is too large to be fitted into smaller devices. It's rating is 1100."
+	desc = "Продвинутая ячейка питания, часто используемая в большинстве ноутбуков. Он слишком велик для установки в устройства меньшего размера. Его вместимость 1100."
 	icon_state = "battery_advanced"
 	origin_tech = list(TECH_POWER = 2, TECH_ENGINEERING = 2)
 	hardware_size = 2
@@ -20,7 +20,7 @@
 
 /obj/item/weapon/computer_hardware/battery_module/super
 	name = "super battery"
-	desc = "A very advanced power cell, often used in high-end devices, or as uninterruptable power supply for important consoles or servers. It's rating is 1500."
+	desc = "Очень продвинутый блок питания, часто используемый в высокопроизводительных устройствах или в качестве источника бесперебойного питания для важных консолей или серверов. Его вместимость 1500."
 	icon_state = "battery_super"
 	origin_tech = list(TECH_POWER = 3, TECH_ENGINEERING = 3)
 	hardware_size = 2
@@ -28,7 +28,7 @@
 
 /obj/item/weapon/computer_hardware/battery_module/ultra
 	name = "ultra battery"
-	desc = "A very advanced large power cell. It's often used as uninterruptable power supply for critical consoles or servers. It's rating is 2000."
+	desc = "Очень продвинутый большой силовой элемент. Его часто используют в качестве источника бесперебойного питания для критически важных консолей или серверов. Его вместимость 2000."
 	icon_state = "battery_ultra"
 	origin_tech = list(TECH_POWER = 5, TECH_ENGINEERING = 4)
 	hardware_size = 3
@@ -36,14 +36,14 @@
 
 /obj/item/weapon/computer_hardware/battery_module/micro
 	name = "micro battery"
-	desc = "A small power cell, commonly seen in most portable microcomputers. It's rating is 500."
+	desc = "Небольшая ячейка питания, обычно встречающаяся в большинстве портативных микрокомпьютеров. Вместимость 500."
 	icon_state = "battery_micro"
 	origin_tech = list(TECH_POWER = 2, TECH_ENGINEERING = 2)
 	battery_rating = 500
 
 /obj/item/weapon/computer_hardware/battery_module/nano
 	name = "nano battery"
-	desc = "A tiny power cell, commonly seen in low-end portable microcomputers. It's rating is 300."
+	desc = "Крошечный элемент питания, обычно встречающийся в портативных микрокомпьютерах низкого уровня. Вместимость 300."
 	icon_state = "battery_nano"
 	origin_tech = list(TECH_POWER = 1, TECH_ENGINEERING = 1)
 	battery_rating = 300
@@ -51,7 +51,7 @@
 // This is not intended to be obtainable in-game. Intended for adminbus and debugging purposes.
 /obj/item/weapon/computer_hardware/battery_module/lambda
 	name = "lambda coil"
-	desc = "A very complex power source compatible with various computers. It is capable of providing power for nearly unlimited duration."
+	desc = "Очень сложный источник питания, совместимый с различными компьютерами. Он способен обеспечивать питание почти неограниченное время."
 	icon_state = "battery_lambda"
 	hardware_size = 1
 	battery_rating = 30000
@@ -62,7 +62,7 @@
 
 /obj/item/weapon/computer_hardware/battery_module/diagnostics(var/mob/user)
 	..()
-	to_chat(user, "Internal battery charge: [battery.charge]/[battery.maxcharge] CU")
+	to_chat(user, "Заряд внутренней батареи: [battery.charge]/[battery.maxcharge] CU")
 
 /obj/item/weapon/computer_hardware/battery_module/New()
 	battery = new/obj/item/weapon/cell(src)

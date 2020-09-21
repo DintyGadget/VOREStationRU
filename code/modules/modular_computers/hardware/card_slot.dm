@@ -1,6 +1,6 @@
 /obj/item/weapon/computer_hardware/card_slot
 	name = "RFID card slot"
-	desc = "Slot that allows this computer to write data on RFID cards. Necessary for some programs to run properly."
+	desc = "Слот, позволяющий этому компьютеру записывать данные на RFID-карты. Необходимо для правильной работы некоторых программ."
 	power_usage = 10 //W
 	critical = 0
 	icon_state = "cardreader"

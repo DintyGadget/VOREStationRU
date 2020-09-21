@@ -1,6 +1,6 @@
 /obj/item/weapon/computer_hardware/tesla_link
 	name = "tesla link"
-	desc = "An advanced tesla link that wirelessly recharges connected device from nearby area power controller."
+	desc = "Усовершенствованный канал тесла, который заряжает подключенное устройство по беспроводной сети от ближайшего контроллера мощности."
 	critical = 0
 	enabled = 1
 	icon_state = "teslalink"

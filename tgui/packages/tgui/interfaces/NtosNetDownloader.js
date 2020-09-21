@@ -27,13 +27,13 @@ export const NtosNetDownloader = (props, context) => {
               {error}
             </Box>
             <Button
-              content="Reset"
+              content="Сброс"
               onClick={() => act('PRG_reseterror')} />
           </NoticeBox>
         )}
         <Section>
           <LabeledList>
-            <LabeledList.Item label="Disk usage">
+            <LabeledList.Item label="Использование диска">
               <ProgressBar
                 value={disk_used}
                 minValue={0}
@@ -51,10 +51,10 @@ export const NtosNetDownloader = (props, context) => {
           ))}
         </Section>
         {!!hackedavailable && (
-          <Section title="UNKNOWN Software Repository">
+          <Section title="НЕИЗВЕСТНЫЙ репозиторий программного обеспечения">
             <NoticeBox mb={1}>
-              Please note that Nanotrasen does not recommend download
-              of software from non-official servers.
+              Обратите внимание, что Nanotrasen не рекомендует скачивать
+              программное обеспечение с неофициальных серверов.
             </NoticeBox>
             {hacked_programs.map(program => (
               <Program
@@ -107,13 +107,13 @@ const Program = (props, context) => {
               onClick={() => act("PRG_removequeued", {
                 filename: program.filename,
               })}>
-              Queued...
+              В очереди ...
             </Button>
           ) || (
             <Button
               fluid
               icon="download"
-              content="Download"
+              content="Скачать"
               disabled={program.size > disk_free}
               onClick={() => act('PRG_downloadfile', {
                 filename: program.filename,
@@ -124,13 +124,13 @@ const Program = (props, context) => {
       {program.compatibility !== 'Compatible' && (
         <Box mt={1} italic fontSize="12px" position="relative">
           <Icon mx={1} color="red" name="times" />
-          Incompatible!
+          Несовместимо!
         </Box>
       )}
       {program.size > disk_free && (
         <Box mt={1} italic fontSize="12px" position="relative">
           <Icon mx={1} color="red" name="times" />
-          Not enough disk space!
+          Не достаточно места на диске!
         </Box>
       )}
       <Box mt={1} italic color="label" fontSize="12px">

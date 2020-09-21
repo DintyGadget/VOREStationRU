@@ -145,7 +145,7 @@
 	selection_color = "#7a4f33"
 	economic_modifier = 5
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
-	minimal_access = list(access_mining, access_mining_station, access_mailsorting)
+	minimal_access = list(access_mining, access_cargo, access_mining_station, access_mailsorting)
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
 	job_description = "A Shaft Miner mines and processes minerals to be delivered to departments that need them."

@@ -12,7 +12,7 @@ var/global/list/latejoin_talon = list()
 /datum/spawnpoint/talon
 	display_name = "ITV Talon Cryo"
 	restrict_job = list("Talon Captain", "Talon Pilot", "Talon Engineer", "Talon Doctor", "Talon Guard")
-	msg = "has come out of cryostasis"
+	msg = "выходит из криостазиса"
 	announce_channel = "Talon"
 
 /datum/spawnpoint/talon/New()
@@ -21,12 +21,12 @@ var/global/list/latejoin_talon = list()
 
 /obj/machinery/cryopod/talon
 	announce_channel = "Talon"
-	on_store_message = "has entered cryogenic storage."
+	on_store_message = "входит в криогенный сон."
 	on_store_name = "ITV Talon Cryo"
 	on_enter_visible_message = "starts climbing into the"
-	on_enter_occupant_message = "You feel cool air surround you. You go numb as your senses turn inward."
-	on_store_visible_message_1 = "hums and hisses as it moves"
-	on_store_visible_message_2 = "into cryogenic storage."
+	on_enter_occupant_message = "Вы чувствуете, что вас окружает прохладный воздух. Ваше сознание медленно покидает вас."
+	on_store_visible_message_1 = "гудит и шипит при движении"
+	on_store_visible_message_2 = "в криогенном хранилище."
 
 /obj/machinery/cryopod/robot/talon
 	announce_channel = "Talon"
@@ -39,10 +39,10 @@ var/global/list/latejoin_talon = list()
 //// The Talon
 /obj/effect/overmap/visitable/ship/talon
 	scanner_name = "ITV Talon"
-	scanner_desc = @{"[i]Registration[/i]: ITV Talon
-[i]Class[/i]: Frigate
-[i]Transponder[/i]: Transmitting (CIV)
-[b]Notice[/b]: Independent trader vessel"}
+	scanner_desc = @{"[i]Регистрация[/i]: ITV Talon
+[i]Класс[/i]: Фригат
+[i]Транспондер[/i]: Transmitting (CIV)
+[b]Уведомление[/b]: Независимое торговое судно"}
 	color = "#aacccc"
 	vessel_mass = 10000
 	vessel_size = SHIP_SIZE_LARGE
@@ -85,7 +85,7 @@ var/global/list/latejoin_talon = list()
 //// The Lifeboat
 /obj/effect/overmap/visitable/ship/landable/talon_lifeboat
 	name = "Talon lifeboat"
-	desc = "A tiny engineless lifeboat from the ITV Talon."
+	desc = "Крошечная безмоторная спасательная шлюпка от ITV Talon."
 	vessel_mass = 1000
 	vessel_size = SHIP_SIZE_TINY
 	shuttle = "Talon lifeboat"

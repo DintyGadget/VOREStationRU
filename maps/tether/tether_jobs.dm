@@ -13,8 +13,8 @@
 	flag = TALCAP
 	department_flag = TALON
 	departments_managed = list(DEPARTMENT_TALON)
-	job_description = "The captain's job is to generate profit through trade or other means such as salvage or even privateering."
-	supervisors = "yourself"
+	job_description = "Работа капитана - получать прибыль за счет торговли или других средств, таких как спасение или даже каперство."
+	supervisors = "самим собой"
 	outfit_type = /decl/hierarchy/outfit/job/talon_captain
 
 	offmap_spawn = TRUE
@@ -33,8 +33,8 @@
 	title = "Talon Doctor"
 	flag = TALDOC
 	department_flag = TALON
-	job_description = "The doctor's job is to make sure the crew of the ITV Talon remain in good health and to monitor them when away from the ship."
-	supervisors = "the ITV Talon's captain"
+	job_description = "Работа врача - следить за тем, чтобы экипаж ITV Talon оставался в хорошем состоянии, и следить за ним, когда он находится вдали от корабля."
+	supervisors = "Капитаном корабля"
 	outfit_type = /decl/hierarchy/outfit/job/talon_doctor
 
 	offmap_spawn = TRUE
@@ -53,8 +53,8 @@
 	title = "Talon Engineer"
 	flag = TALENG
 	department_flag = TALON
-	job_description = "The engineer's job is to ensure the ITV Talon remains in tip-top shape and to repair any damage as well as manage the shields."
-	supervisors = "the ITV Talon's captain"
+	job_description = "Задача инженера - следить за тем, чтобы ITV Talon оставалась в отличной форме, и устранять любые повреждения, а также управлять щитами."
+	supervisors = "Капитаном корабля"
 	outfit_type = /decl/hierarchy/outfit/job/talon_engineer
 
 	offmap_spawn = TRUE
@@ -73,8 +73,8 @@
 	title = "Talon Pilot"
 	flag = TALPIL
 	department_flag = TALON
-	job_description = "The pilot's job is to fly the ITV Talon in the most efficient and profitable way possible."
-	supervisors = "the ITV Talon's captain"
+	job_description = "Задача пилота - управлять ITV Talon наиболее эффективным и прибыльным способом."
+	supervisors = "Капитаном корабля"
 	outfit_type = /decl/hierarchy/outfit/job/talon_pilot
 
 	offmap_spawn = TRUE
@@ -93,8 +93,8 @@
 	title = "Talon Guard"
 	flag = TALSEC
 	department_flag = TALON
-	job_description = "The guard's job is to keep the crew of the ITV Talon safe and ensure the captain's wishes are carried out."
-	supervisors = "the ITV Talon's captain"
+	job_description = "Работа охранника заключается в обеспечении безопасности экипажа ITV Talon и обеспечении исполнения желаний капитана."
+	supervisors = "Капитаном корабля"
 	outfit_type = /decl/hierarchy/outfit/job/talon_security
 
 	offmap_spawn = TRUE

@@ -1,6 +1,6 @@
 /obj/item/weapon/computer_hardware/nano_printer
 	name = "nano printer"
-	desc = "Small integrated printer with paper recycling module."
+	desc = "Небольшой встроенный принтер с модулем переработки бумаги."
 	power_usage = 50
 	origin_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 	critical = 0
@@ -11,7 +11,7 @@
 
 /obj/item/weapon/computer_hardware/nano_printer/diagnostics(var/mob/user)
 	..()
-	to_chat(user, "Paper buffer level: [stored_paper]/[max_paper]")
+	to_chat(user, "Уровень буфера бумаги: [stored_paper]/[max_paper]")
 
 /obj/item/weapon/computer_hardware/nano_printer/proc/print_text(var/text_to_print, var/paper_title = null)
 	if(!stored_paper)
@@ -53,17 +53,17 @@
 /obj/item/weapon/computer_hardware/nano_printer/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/paper))
 		if(stored_paper >= max_paper)
-			to_chat(user, "You try to add \the [W] into \the [src], but its paper bin is full.")
+			to_chat(user, "Вы пытаетесь добавить [W] в [src], но его лоток для бумаги заполнен.")
 			return
 
-		to_chat(user, "You insert \the [W] into [src].")
+		to_chat(user, "Вы добавляете [W] в [src].")
 		qdel(W)
 		stored_paper++
 	else if(istype(W, /obj/item/weapon/paper_bundle))
 		var/obj/item/weapon/paper_bundle/B = W
 		var/num_of_pages_added = 0
 		if(stored_paper >= max_paper)
-			to_chat(user, "You try to add \the [W] into \the [src], but its paper bin is full.")
+			to_chat(user, "Вы пытаетесь добавить [W] в [src], но его лоток для бумаги заполнен.")
 			return
 		for(var/obj/item/weapon/bundleitem in B) //loop through items in bundle
 			if(istype(bundleitem, /obj/item/weapon/paper)) //if item is paper (and not photo), add into the bin
@@ -72,7 +72,7 @@
 				num_of_pages_added++
 				stored_paper++
 			if(stored_paper >= max_paper) //check if the printer is full yet
-				to_chat(user, "The printer has been filled to full capacity.")
+				to_chat(user, "Принтер заполнен до отказа.")
 				break
 		if(B.pages.len == 0) //if all its papers have been put into the printer, delete bundle
 			qdel(W)
@@ -82,7 +82,7 @@
 			qdel(B)
 		else //if at least two items remain, just update the bundle icon
 			B.update_icon()
-		to_chat(user, "You add [num_of_pages_added] papers from \the [W] into \the [src].")
+		to_chat(user, "Вы добавляете [num_of_pages_added] листов бумаги [W] в [src].")
 	return
 
 /obj/item/weapon/computer_hardware/nano_printer/Destroy()

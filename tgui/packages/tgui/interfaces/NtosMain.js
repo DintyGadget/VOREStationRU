@@ -70,7 +70,7 @@ export const NtosMain = (props, context) => {
           )}>
           <Table>
             <Table.Row>
-              Имя владельцы: {login.IDName}
+              Имя владельца: {login.IDName}
             </Table.Row>
             <Table.Row>
               Должность: {login.IDJob}

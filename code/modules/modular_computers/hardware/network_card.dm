@@ -2,7 +2,7 @@ var/global/ntnet_card_uid = 1
 
 /obj/item/weapon/computer_hardware/network_card/
 	name = "basic NTNet network card"
-	desc = "A basic network card for usage with standard NTNet frequencies."
+	desc = "Базовая сетевая карта для использования со стандартными частотами NTNet."
 	power_usage = 50
 	origin_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 1)
 	critical = 0
@@ -18,7 +18,7 @@ var/global/ntnet_card_uid = 1
 	..()
 	to_chat(user, "NIX Unique ID: [identification_id]")
 	to_chat(user, "NIX User Tag: [identification_string]")
-	to_chat(user, "Supported protocols:")
+	to_chat(user, "Поддерживаемые протоколы:")
 	to_chat(user, "511.m SFS (Subspace) - Standard Frequency Spread")
 	if(long_range)
 		to_chat(user, "511.n WFS/HB (Subspace) - Wide Frequency Spread/High Bandiwdth")
@@ -32,7 +32,7 @@ var/global/ntnet_card_uid = 1
 
 /obj/item/weapon/computer_hardware/network_card/advanced
 	name = "advanced NTNet network card"
-	desc = "An advanced network card for usage with standard NTNet frequencies. It's transmitter is strong enough to connect even when far away."
+	desc = "Усовершенствованная сетевая карта для использования со стандартными частотами NTNet. Его передатчик достаточно силен, чтобы подключиться даже на большом расстоянии."
 	long_range = 1
 	origin_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 2)
 	power_usage = 100 // Better range but higher power usage.
@@ -41,7 +41,7 @@ var/global/ntnet_card_uid = 1
 
 /obj/item/weapon/computer_hardware/network_card/quantum
 	name = "quantum NTNet network card"
-	desc = "A network card that can connect to NTnet from anywhere, using quantum entanglement."
+	desc = "Сетевая карта, которая может подключаться к NTnet из любого места с помощью квантовой запутанности."
 	long_range = 1
 	origin_tech = list(TECH_DATA = 6, TECH_ENGINEERING = 7)
 	power_usage = 200 // Infinite range but higher power usage.
@@ -62,7 +62,7 @@ var/global/ntnet_card_uid = 1
 
 /obj/item/weapon/computer_hardware/network_card/wired
 	name = "wired NTNet network card"
-	desc = "An advanced network card for usage with standard NTNet frequencies. This one also supports wired connection."
+	desc = "Усовершенствованная сетевая карта для использования со стандартными частотами NTNet. Он также поддерживает проводное соединение."
 	ethernet = 1
 	origin_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 3)
 	power_usage = 100 // Better range but higher power usage.
