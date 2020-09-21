@@ -1,6 +1,6 @@
 /obj/item/clothing/accessory
 	name = "tie"
-	desc = "A neosilk clip-on tie."
+	desc = "Галстук-клипса из неосилка."
 	icon = 'icons/obj/clothing/ties.dmi'
 	icon_state = "bluetie"
 	item_state_slots = list(slot_r_hand_str = "", slot_l_hand_str = "")
@@ -83,7 +83,7 @@
 	has_suit.add_overlay(get_inv_overlay())
 
 	if(user)
-		to_chat(user, "<span class='notice'>You attach \the [src] to \the [has_suit].</span>")
+		to_chat(user, "<span class='notice'>Вы прикрепляете [src] к [has_suit].</span>")
 		add_fingerprint(user)
 
 /obj/item/clothing/accessory/proc/on_removed(var/mob/user)
@@ -154,12 +154,12 @@
 
 /obj/item/clothing/accessory/tie/horrible
 	name = "horrible tie"
-	desc = "A neosilk clip-on tie. This one is disgusting."
+	desc = "Галстук-клипса из неосилка. Выглядит отвратительно."
 	icon_state = "horribletie"
 
 /obj/item/clothing/accessory/stethoscope
 	name = "stethoscope"
-	desc = "An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
+	desc = "Устаревший медицинский аппарат для прослушивания звуков человеческого тела. А еще вы выглядите так, словно знаете что делаете."
 	icon_state = "stethoscope"
 	slot = ACCESSORY_SLOT_TIE
 
@@ -221,7 +221,7 @@
 //Medals
 /obj/item/clothing/accessory/medal
 	name = "bronze medal"
-	desc = "A bronze medal."
+	desc = "Бронзовая медаль."
 	icon_state = "bronze"
 	slot = ACCESSORY_SLOT_MEDAL
 	drop_sound = 'sound/items/drop/accessory.ogg'
@@ -229,56 +229,56 @@
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is most basic award on offer. It is often awarded by a captain to a member of their crew."
+	desc = "Бронзовая медаль присуждается за выдающееся поведение. Хотя это большая честь, это самая основная награда, которую мы предлагаем. Она часто вручается капитаном члену их экипажа."
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"
-	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
+	desc = "Бронзовая медаль в форме сердца, вручаемая за жертвоприношение. Она часто присуждается посмертно или за тяжелое увечье при исполнении служебных обязанностей."
 	icon_state = "bronze_heart"
 
 /obj/item/clothing/accessory/medal/nobel_science
 	name = "nobel sciences award"
-	desc = "A bronze medal which represents significant contributions to the field of science or engineering."
+	desc = "Бронзовая медаль, которая представляет значительный вклад в области науки или техники."
 
 /obj/item/clothing/accessory/medal/silver
 	name = "silver medal"
-	desc = "A silver medal."
+	desc = "Серебряная медаль."
 	icon_state = "silver"
 
 /obj/item/clothing/accessory/medal/silver/valor
 	name = "medal of valor"
-	desc = "A silver medal awarded for acts of exceptional valor."
+	desc = "Серебряная медаль за особые подвиги."
 
 /obj/item/clothing/accessory/medal/silver/security
 	name = "robust security award"
-	desc = "An award for distinguished combat and sacrifice in defence of corporate commercial interests. Often awarded to security staff."
+	desc = "Награда за выдающиеся боевые заслуги и самопожертвование в защите корпоративных коммерческих интересов. Часто присуждается сотрудникам Службы безопасности."
 
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
-	desc = "A prestigious golden medal."
+	desc = "Престижная золотая медаль."
 	icon_state = "gold"
 
 /obj/item/clothing/accessory/medal/gold/captain
 	name = "medal of captaincy"
-	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain, and their undisputable authority over their crew."
+	desc = "Золотая медаль присуждается исключительно тем, кто был повышен до директора/капитана. Это означает систематизированные обязанности директора/капитана и их неоспоримую власть над своей командой."
 
 /obj/item/clothing/accessory/medal/gold/heroism
 	name = "medal of exceptional heroism"
-	desc = "An extremely rare golden medal awarded only by high ranking officials. To recieve such a medal is the highest honor and as such, very few exist. This medal is almost never awarded to anybody but distinguished veteran staff."
+	desc = "Чрезвычайно редкая золотая медаль, вручаемая только высокопоставленным чиновникам. Получить такую медаль-это высшая честь, и как таковая существует в очень малом количестве. Эта медаль почти никогда не вручается никому, кроме заслуженных ветеранов."
 
 // Base type for 'medals' found in a "dungeon" submap, as a sort of trophy to celebrate the player's conquest.
 /obj/item/clothing/accessory/medal/dungeon
 
 /obj/item/clothing/accessory/medal/dungeon/alien_ufo
 	name = "alien captain's medal"
-	desc = "It vaguely like a star. It looks like something an alien captain might've worn. Probably."
+	desc = "Она смутно напоминала звезду. Похоже, что-то такое носил капитан пришельцев. Возможно."
 	icon_state = "alien_medal"
 
 //Scarves
 
 /obj/item/clothing/accessory/scarf
 	name = "green scarf"
-	desc = "A stylish scarf. The perfect winter accessory for those with a keen fashion sense, and those who just can't handle a cold breeze on their necks."
+	desc = "Стильный шарф. Идеальный зимний аксессуар для тех, кто обладает острым чувством моды, и тех, кто просто не может справиться с холодным ветерком на шее."
 	icon_state = "greenscarf"
 	slot = ACCESSORY_SLOT_DECOR
 
@@ -336,7 +336,7 @@
 
 /obj/item/clothing/accessory/scarf/teshari/neckscarf
 	name = "small neckscarf"
-	desc = "a neckscarf that is too small for a human's neck"
+	desc = "шейный платок, который слишком мал для шеи человека"
 	icon_state = "tesh_neckscarf"
 	species_restricted = list(SPECIES_TESHARI)
 
@@ -344,7 +344,7 @@
 
 /obj/item/clothing/accessory/bracelet
 	name = "bracelet"
-	desc = "A simple silver bracelet with a clasp."
+	desc = "Простой серебряный браслет с застежкой."
 	icon = 'icons/obj/clothing/ties.dmi'
 	icon_state = "bracelet"
 	w_class = ITEMSIZE_TINY
@@ -353,22 +353,22 @@
 
 /obj/item/clothing/accessory/bracelet/friendship
 	name = "friendship bracelet"
-	desc = "A beautiful friendship bracelet in all the colors of the rainbow."
+	desc = "Красивый браслет дружбы во всех цветах радуги."
 	icon_state = "friendbracelet"
 
 /obj/item/clothing/accessory/bracelet/friendship/verb/dedicate_bracelet()
 	set name = "Dedicate Bracelet"
 	set category = "Object"
-	set desc = "Dedicate your friendship bracelet to a special someone."
+	set desc = "Посвятите свой браслет дружбы особенному человеку."
 	var/mob/M = usr
 	if(!M.mind)
 		return 0
 
-	var/input = sanitizeSafe(input("Who do you want to dedicate the bracelet to?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(input("Кому вы хотите посвятить браслет?", ,""), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
-		desc = "A beautiful friendship bracelet in all the colors of the rainbow. It's dedicated to [input]."
-		to_chat(M, "You dedicate the bracelet to [input], remembering the times you've had together.")
+		desc = "Красивый браслет дружбы во всех цветах радуги. Он посвящен [input]."
+		to_chat(M, "Вы посвящаете браслет [input], вспоминая времена, которые вы провели вместе.")
 		return 1
 
 
@@ -384,7 +384,7 @@
 		qdel(src)
 		return
 	name = "[material.display_name] bracelet"
-	desc = "A bracelet made from [material.display_name]."
+	desc = "Браслет сделанный из [material.display_name]."
 	color = material.icon_colour
 
 /obj/item/clothing/accessory/bracelet/material/get_material()
@@ -421,18 +421,18 @@
 
 /obj/item/clothing/accessory/halfcape
 	name = "half cape"
-	desc = "A tasteful half-cape, suitible for European nobles and retro anime protagonists."
+	desc = "Со вкусом подобранный полупальто, подходящий для европейских аристократов и главных героев ретро-аниме."
 	icon_state = "halfcape"
 	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/fullcape
 	name = "full cape"
-	desc = "A gaudy full cape. You're thinking about wearing it, aren't you?"
+	desc = "Кричащий полный плащ. Ты ведь подумываешь надеть его, не так ли?"
 	icon_state = "fullcape"
 	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/sash
 	name = "sash"
-	desc = "A plain, unadorned sash."
+	desc = "Простой, ничем не украшенный пояс."
 	icon_state = "sash"
 	slot = ACCESSORY_SLOT_OVER

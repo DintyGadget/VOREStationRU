@@ -10,7 +10,7 @@
 	icon_state = "c-4small_0"
 	item_state = "radio"
 	name = "normal-sized package"
-	desc = "A small wrapped package."
+	desc = "Маленький завернутый пакет."
 	w_class = ITEMSIZE_NORMAL
 
 	var/devastate = 1
@@ -22,7 +22,7 @@
 /obj/item/weapon/syndie/c4explosive/heavy
 	icon_state = "c-4large_0"
 	item_state = "radio"
-	desc = "A mysterious package, it's quite heavy."
+	desc = "Загадочная упаковка, довольно тяжелая."
 	devastate = 1
 	heavy_impact = 3
 	light_impact = 5
@@ -31,7 +31,7 @@
 
 /obj/item/weapon/syndie/c4explosive/heavy/super_heavy
 	name = "large-sized package"
-	desc = "A mysterious package, it's quite exceptionally heavy."
+	desc = "Загадочная упаковка, она исключительно тяжелая."
 	devastate = 2
 	heavy_impact = 5
 	light_impact = 7

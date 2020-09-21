@@ -1,7 +1,7 @@
 //replaces our stun baton code with /tg/station's code
 /obj/item/weapon/melee/baton
 	name = "stunbaton"
-	desc = "A stun baton for incapacitating people with."
+	desc = "Электрошоковая дубинка для выведения из строя людей."
 	icon_state = "stunbaton"
 	item_state = "baton"
 	slot_flags = SLOT_BELT
@@ -33,7 +33,7 @@
 
 /obj/item/weapon/melee/baton/suicide_act(mob/user)
 	var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-	user.visible_message("<span class='suicide'>\The [user] is putting the live [name] in [TU.his] mouth! It looks like [TU.he] [TU.is] trying to commit suicide.</span>")
+	user.visible_message("<span class='suicide'>\The [user] is putting the live [name] in [TU.his] mouth! И похоже, пытается покончить жизнь самоубийством.</span>")
 	return (FIRELOSS)
 
 /obj/item/weapon/melee/baton/MouseDrop(obj/over_object as obj)
@@ -107,9 +107,9 @@
 
 	if(Adjacent(user, src))
 		if(bcell)
-			. += "<span class='notice'>The baton is [round(bcell.percent())]% charged.</span>"
+			. += "<span class='notice'>Дубинка заряжена на [round(bcell.percent())]%.</span>"
 		if(!bcell)
-			. += "<span class='warning'>The baton does not have a power source installed.</span>"
+			. += "<span class='warning'>На дубинке не установлен источник питания.</span>"
 
 /obj/item/weapon/melee/baton/attackby(obj/item/weapon/W, mob/user)
 	if(use_external_power)
@@ -120,12 +120,12 @@
 				user.drop_item()
 				W.loc = src
 				bcell = W
-				to_chat(user, "<span class='notice'>You install a cell in [src].</span>")
+				to_chat(user, "<span class='notice'>Вы вставили батарейку в [src].</span>")
 				update_icon()
 			else
-				to_chat(user, "<span class='notice'>[src] already has a cell.</span>")
+				to_chat(user, "<span class='notice'>[src] уже имеет батарейку.</span>")
 		else
-			to_chat(user, "<span class='notice'>This cell is not fitted for [src].</span>")
+			to_chat(user, "<span class='notice'>Эта батарейка не подходит для [src].</span>")
 
 /obj/item/weapon/melee/baton/attack_hand(mob/user as mob)
 	if(user.get_inactive_hand() == src)
@@ -133,7 +133,7 @@
 			bcell.update_icon()
 			user.put_in_hands(bcell)
 			bcell = null
-			to_chat(user, "<span class='notice'>You remove the cell from the [src].</span>")
+			to_chat(user, "<span class='notice'>Вы извлекаете батарейку из [src].</span>")
 			status = 0
 			update_icon()
 			return
@@ -149,20 +149,20 @@
 			bcell = R.cell
 	if(bcell && bcell.charge > hitcost)
 		status = !status
-		to_chat(user, "<span class='notice'>[src] is now [status ? "on" : "off"].</span>")
+		to_chat(user, "<span class='notice'>[src] теперь [status ? "включена" : "выключена"].</span>")
 		playsound(src, "sparks", 75, 1, -1)
 		update_icon()
 	else
 		status = 0
 		if(!bcell)
-			to_chat(user, "<span class='warning'>[src] does not have a power source!</span>")
+			to_chat(user, "<span class='warning'>[src] не имеет источника питания!</span>")
 		else
-			to_chat(user, "<span class='warning'>[src] is out of charge.</span>")
+			to_chat(user, "<span class='warning'>[src] не имеет заряда.</span>")
 	add_fingerprint(user)
 
 /obj/item/weapon/melee/baton/attack(mob/M, mob/user)
 	if(status && (CLUMSY in user.mutations) && prob(50))
-		to_chat(user, "<span class='danger'>You accidentally hit yourself with the [src]!</span>")
+		to_chat(user, "<span class='danger'>Вы случайно попали в себя [src]!</span>")
 		user.Weaken(30)
 		deductcharge(hitcost)
 		return
@@ -220,7 +220,7 @@
 //Makeshift stun baton. Replacement for stun gloves.
 /obj/item/weapon/melee/baton/cattleprod
 	name = "stunprod"
-	desc = "An improvised stun baton."
+	desc = "Импровизированная электрошоковая дубинка."
 	icon_state = "stunprod_nocell"
 	item_state = "prod"
 	force = 3
@@ -260,7 +260,7 @@
 // Rare version of a baton that causes lesser lifeforms to really hate the user and attack them.
 /obj/item/weapon/melee/baton/shocker
 	name = "shocker"
-	desc = "A device that appears to arc electricity into a target to incapacitate or otherwise hurt them, similar to a stun baton.  It looks inefficent."
+	desc = "Устройство, которое, кажется, поджигает цель электричеством, чтобы вывести ее из строя или иным образом повредить ее, подобно оглушающей дубинке. Это выглядит неэффективно."
 	description_info = "Hitting a lesser lifeform with this while it is on will compel them to attack you above other nearby targets.  Otherwise \
 	it works like a regular stun baton, just less effectively."
 	icon_state = "shocker"

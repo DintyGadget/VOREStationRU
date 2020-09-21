@@ -36,7 +36,7 @@
 
 /datum/gear/suit/old_poncho //This is made from an old sprite which has been here for quite some time. Called old poncho because duplicates
 	display_name = "Colorful poncho"
-	description = "A mexican looking poncho. It look like it fits wolf taurs as well."
+	description = "Пончо мексиканского типа. Похоже, он подходит и волчьим таурам."
 	path = /obj/item/clothing/suit/poncho
 
 //Detective alternative

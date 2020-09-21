@@ -3,7 +3,7 @@
 /datum/gear/ears
 	display_name = "earmuffs"
 	path = /obj/item/clothing/ears/earmuffs
-	sort_category = "Earwear"
+	sort_category = "Ухо"
 
 /datum/gear/ears/headphones
 	display_name = "headphones"
@@ -12,11 +12,11 @@
 /datum/gear/ears/circuitry
 	display_name = "earwear, circuitry (empty)"
 	path = /obj/item/clothing/ears/circuitry
-	
+
 
 /datum/gear/ears/earrings
 	display_name = "earring selection"
-	description = "A selection of eye-catching earrings."
+	description = "Подборка эффектных сережек."
 	path = /obj/item/clothing/ears/earring
 
 /datum/gear/ears/earrings/New()

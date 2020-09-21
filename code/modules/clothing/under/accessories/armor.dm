@@ -4,7 +4,7 @@
 
 /obj/item/clothing/accessory/armor
 	name = "armor accessory"
-	desc = "You should never see this description. Ahelp this, please."
+	desc = "Вы никогда не должны видеть это описание. Ах да, помогите мне, пожалуйста."
 	icon_override = 'icons/mob/modular_armor.dmi'
 	icon = 'icons/obj/clothing/modular_armor.dmi'
 	icon_state = "pouches"
@@ -33,7 +33,7 @@
 ///////////
 /obj/item/clothing/accessory/storage/pouches
 	name = "storage pouches"
-	desc = "A collection of black pouches that can be attached to a plate carrier. Carries up to two items."
+	desc = "Коллекция черных мешочков, которые можно прикрепить к пластинчатому носителю. Перевозит до двух предметов."
 	icon_override = 'icons/mob/modular_armor.dmi'
 	icon = 'icons/obj/clothing/modular_armor.dmi'
 	icon_state = "pouches"
@@ -43,7 +43,7 @@
 	slots = 2
 
 /obj/item/clothing/accessory/storage/pouches/blue
-	desc = "A collection of blue pouches that can be attached to a plate carrier. Carries up to two items."
+	desc = "Коллекция синих мешочков, которые можно прикрепить к пластинчатому носителю. Перевозит до двух предметов."
 	icon_state = "pouches_blue"
 
 /obj/item/clothing/accessory/storage/pouches/navy

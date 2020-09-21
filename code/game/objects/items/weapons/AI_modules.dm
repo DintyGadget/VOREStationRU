@@ -10,7 +10,7 @@ AI MODULES
 	name = "\improper AI module"
 	icon = 'icons/obj/module.dmi'
 	icon_state = "std_mod"
-	desc = "An AI Module for transmitting encrypted instructions to the AI."
+	desc = "Модуль ИИ для передачи зашифрованных инструкций ИИ."
 	force = 5.0
 	w_class = ITEMSIZE_SMALL
 	throwforce = 5.0

@@ -1,6 +1,6 @@
 /obj/item/weapon/card/id
 	name = "identification card"
-	desc = "A card used to provide ID and determine access across the station."
+	desc = "Карта, используемая для удостоверения личности и определения доступа через станцию."
 	icon_state = "id"
 	item_state = "card-id"
 
@@ -35,7 +35,7 @@
 	if(in_range(user, src))
 		tgui_interact(user) //Not chat related
 	else
-		. += "<span class='warning'>It is too far away to read.</span>"
+		. += "<span class='warning'>Слишком далеко, чтобы прочитать.</span>"
 
 /obj/item/weapon/card/id/proc/prevent_tracking()
 	return 0
@@ -126,13 +126,13 @@
 
 /obj/item/weapon/card/id/silver
 	name = "identification card"
-	desc = "A silver card which shows honour and dedication."
+	desc = "Серебряная карточка, которая показывает честь и преданность."
 	icon_state = "silver"
 	item_state = "silver_id"
 
 /obj/item/weapon/card/id/gold
 	name = "identification card"
-	desc = "A golden card which shows power and might."
+	desc = "Золотая карта, которая показывает силу и мощь."
 	icon_state = "gold"
 	item_state = "gold_id"
 	preserve_item = 1
@@ -143,12 +143,12 @@
 
 /obj/item/weapon/card/id/gold/captain/spare
 	name = "\improper Site Manager's spare ID"
-	desc = "The spare ID of the High Lord himself."
+	desc = "Запасной ID самого Верховного Лорда."
 	registered_name = "Директор колонии"
 
 /obj/item/weapon/card/id/synthetic
 	name = "\improper Synthetic ID"
-	desc = "Access module for NanoTrasen Synthetics"
+	desc = "Модуль доступа для NanoTrasen Synthetics"
 	icon_state = "id-robot"
 	item_state = "tdgreen"
 	assignment = "Synthetic"
@@ -159,7 +159,7 @@
 
 /obj/item/weapon/card/id/centcom
 	name = "\improper CentCom. ID"
-	desc = "An ID straight from Central Command."
+	desc = "ID прямо из Центрального командования."
 	icon_state = "nanotrasen"
 	registered_name = "Central Command"
 	assignment = "General"
@@ -184,14 +184,14 @@
 // Department-flavor IDs
 /obj/item/weapon/card/id/medical
 	name = "identification card"
-	desc = "A card issued to station medical staff."
+	desc = "Карта выдается медперсоналу станции."
 	icon_state = "med"
 	primary_color = rgb(189,237,237)
 	secondary_color = rgb(223,255,255)
 
 /obj/item/weapon/card/id/medical/head
 	name = "identification card"
-	desc = "A card which represents care and compassion."
+	desc = "Карта, олицетворяющая заботу и сострадание."
 	icon_state = "medGold"
 	primary_color = rgb(189,237,237)
 	secondary_color = rgb(255,223,127)
@@ -200,14 +200,14 @@
 
 /obj/item/weapon/card/id/security
 	name = "identification card"
-	desc = "A card issued to station security staff."
+	desc = "Карточка, выданная сотрудникам службы безопасности станции."
 	icon_state = "sec"
 	primary_color = rgb(189,47,0)
 	secondary_color = rgb(223,127,95)
 
 /obj/item/weapon/card/id/security/head
 	name = "identification card"
-	desc = "A card which represents honor and protection."
+	desc = "Карта, представляющая честь и защиту."
 	icon_state = "secGold"
 	primary_color = rgb(189,47,0)
 	secondary_color = rgb(255,223,127)
@@ -216,14 +216,14 @@
 
 /obj/item/weapon/card/id/engineering
 	name = "identification card"
-	desc = "A card issued to station engineering staff."
+	desc = "Карта выдается инженерному составу станции."
 	icon_state = "eng"
 	primary_color = rgb(189,94,0)
 	secondary_color = rgb(223,159,95)
 
 /obj/item/weapon/card/id/engineering/head
 	name = "identification card"
-	desc = "A card which represents creativity and ingenuity."
+	desc = "Карта, олицетворяющая креативность и изобретательность."
 	icon_state = "engGold"
 	primary_color = rgb(189,94,0)
 	secondary_color = rgb(255,223,127)
@@ -232,14 +232,14 @@
 
 /obj/item/weapon/card/id/science
 	name = "identification card"
-	desc = "A card issued to station science staff."
+	desc = "Карточка, выданная научным сотрудникам станции."
 	icon_state = "sci"
 	primary_color = rgb(142,47,142)
 	secondary_color = rgb(191,127,191)
 
 /obj/item/weapon/card/id/science/head
 	name = "identification card"
-	desc = "A card which represents knowledge and reasoning."
+	desc = "Карта, представляющая знания и рассуждения."
 	icon_state = "sciGold"
 	primary_color = rgb(142,47,142)
 	secondary_color = rgb(255,223,127)
@@ -248,14 +248,14 @@
 
 /obj/item/weapon/card/id/cargo
 	name = "identification card"
-	desc = "A card issued to station cargo staff."
+	desc = "Карточка, выдаваемая сотрудникам грузового отдела."
 	icon_state = "cargo"
 	primary_color = rgb(142,94,0)
 	secondary_color = rgb(191,159,95)
 
 /obj/item/weapon/card/id/cargo/head
 	name = "identification card"
-	desc = "A card which represents service and planning."
+	desc = "Карта, представляющая обслуживание и планирование."
 	icon_state = "cargoGold"
 	primary_color = rgb(142,94,0)
 	secondary_color = rgb(255,223,127)
@@ -268,7 +268,7 @@
 
 /obj/item/weapon/card/id/civilian
 	name = "identification card"
-	desc = "A card issued to station civilian staff."
+	desc = "Карточка, выданная гражданскому персоналу станции."
 	icon_state = "civ"
 	primary_color = rgb(0,94,142)
 	secondary_color = rgb(95,159,191)
@@ -277,14 +277,14 @@
 
 /obj/item/weapon/card/id/civilian/head //This is not the HoP. There's no position that uses this right now.
 	name = "identification card"
-	desc = "A card which represents common sense and responsibility."
+	desc = "Карта, олицетворяющая здравый смысл и ответственность."
 	icon_state = "civGold"
 	primary_color = rgb(0,94,142)
 	secondary_color = rgb(255,223,127)
 
 /obj/item/weapon/card/id/external
 	name = "identification card"
-	desc = "An identification card of some sort. It does not look like it is issued by NT."
+	desc = "Какое-то удостоверение личности. Не похоже, что оно выпущено NT."
 	icon_state = "permit"
 	primary_color = rgb(142,94,0)
 	secondary_color = rgb(191,159,95)

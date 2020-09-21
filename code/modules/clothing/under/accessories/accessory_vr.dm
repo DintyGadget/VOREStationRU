@@ -5,7 +5,7 @@
 /obj/item/clothing/accessory/choker //A colorable, tagless choker
 	name = "plain choker"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
-	desc = "A simple, plain choker. Or maybe it's a collar? Use in-hand to customize it."
+	desc = "Простое, незамысловатое колье. А может, это ошейник? Используйте in-hand, чтобы настроить его."
 	icon = 'icons/obj/clothing/ties_vr.dmi'
 	icon_override = 'icons/mob/ties_vr.dmi'
 	icon_state = "choker_cst"
@@ -34,21 +34,21 @@
 
 /obj/item/clothing/accessory/collar/silver
 	name = "Silver tag collar"
-	desc = "A collar for your little pets... or the big ones."
+	desc = "Ошейник для ваших маленьких питомцев... или тех, что побольше."
 	icon_state = "collar_blk"
 	item_state = "collar_blk"
 	overlay_state = "collar_blk"
 
 /obj/item/clothing/accessory/collar/gold
 	name = "Golden tag collar"
-	desc = "A collar for your little pets... or the big ones."
+	desc = "Ошейник для ваших маленьких питомцев... или тех, что побольше."
 	icon_state = "collar_gld"
 	item_state = "collar_gld"
 	overlay_state = "collar_gld"
 
 /obj/item/clothing/accessory/collar/bell
 	name = "Bell collar"
-	desc = "A collar with a tiny bell hanging from it, purrfect furr kitties."
+	desc = "Ошейник с крошечным колокольчиком, свисающим с него."
 	icon_state = "collar_bell"
 	item_state = "collar_bell"
 	overlay_state = "collar_bell"
@@ -73,7 +73,7 @@
 
 /obj/item/clothing/accessory/collar/shock
 	name = "Shock collar"
-	desc = "A collar used to ease hungry predators."
+	desc = "Ошейник, используемый для облегчения голодных хищников."
 	icon_state = "collar_shk0"
 	item_state = "collar_shk"
 	overlay_state = "collar_shk"
@@ -188,28 +188,28 @@
 
 /obj/item/clothing/accessory/collar/spike
 	name = "Spiked collar"
-	desc = "A collar with spikes that look as sharp as your teeth."
+	desc = "Ошейник с шипами, которые выглядит таким же острыми, как ваши зубы."
 	icon_state = "collar_spik"
 	item_state = "collar_spik"
 	overlay_state = "collar_spik"
 
 /obj/item/clothing/accessory/collar/pink
 	name = "Pink collar"
-	desc = "This collar will make your pets look FA-BU-LOUS."
+	desc = "Этот ошейник заставит ваших питомцев выглядеть потрясающе."
 	icon_state = "collar_pnk"
 	item_state = "collar_pnk"
 	overlay_state = "collar_pnk"
 
 /obj/item/clothing/accessory/collar/holo
 	name = "Holo-collar"
-	desc = "An expensive holo-collar for the modern day pet."
+	desc = "Дорогой Голо-ошейник для современного питомца."
 	icon_state = "collar_holo"
 	item_state = "collar_holo"
 	overlay_state = "collar_holo"
 	matter = list(DEFAULT_WALL_MATERIAL = 50)
 
 /obj/item/clothing/accessory/collar/holo/indigestible
-	desc = "A special variety of the holo-collar that seems to be made of a very durable fabric that fits around the neck."
+	desc = "Особая разновидность Голо-ошейника, который, кажется, сделан из очень прочной ткани, которая подходит вокруг шеи."
 //Make indigestible
 /obj/item/clothing/accessory/collar/holo/indigestible/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
@@ -283,7 +283,7 @@
 //Machete Holsters
 /obj/item/clothing/accessory/holster/machete
 	name = "machete sheath"
-	desc = "A handsome synthetic leather sheath with matching belt."
+	desc = "Красивые ножны из искусственной кожи с соответствующим поясом."
 	icon_state = "holster_machete"
 	slot = ACCESSORY_SLOT_WEAPON
 	concealed_holster = 0
@@ -295,7 +295,7 @@
 
 /obj/item/clothing/accessory/medal/silver/unity
 	name = "medal of unity"
-	desc = "A silver medal awarded to a group which has demonstrated exceptional teamwork to achieve a notable feat."
+	desc = "Серебряная медаль присуждается группе, которая продемонстрировала исключительную командную работу для достижения заметного подвига."
 
 /obj/item/clothing/accessory/medal/silver/unity/tabiranth
 	icon = 'icons/obj/clothing/ties_vr.dmi'
@@ -303,4 +303,4 @@
 	icon_state = "silverthree"
 	item_state = "silverthree"
 	overlay_state = "silverthree"
-	desc = "A silver medal awarded to a group which has demonstrated exceptional teamwork to achieve a notable feat. This one has two bronze service stars, denoting that it has been awarded three times."
+	desc = "Серебряная медаль присуждается группе, которая продемонстрировала исключительную командную работу для достижения заметного подвига. У этого есть две бронзовые служебные звезды, означающие, что он был награжден трижды."

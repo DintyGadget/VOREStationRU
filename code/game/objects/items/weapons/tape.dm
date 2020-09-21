@@ -1,6 +1,6 @@
 /obj/item/weapon/tape_roll
 	name = "tape roll"
-	desc = "A roll of sticky tape. Possibly for taping ducks... or was that ducts?"
+	desc = "Рулон липкой ленты. Возможно, для записи уток на пленку... или это были протоки?"
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "taperoll"
 	w_class = ITEMSIZE_TINY
@@ -12,11 +12,11 @@
 /obj/item/weapon/tape_roll/proc/can_place(var/mob/living/carbon/human/H, var/mob/user)
 	if(istype(user, /mob/living/silicon/robot) || user == H)
 		return TRUE
-		
+
 	for (var/obj/item/weapon/grab/G in H.grabbed_by)
 		if (G.loc == user && G.state >= GRAB_AGGRESSIVE)
 			return TRUE
-			
+
 	return FALSE
 
 /obj/item/weapon/tape_roll/attack(var/mob/living/carbon/human/H, var/mob/user)
@@ -112,7 +112,7 @@
 
 /obj/item/weapon/ducttape
 	name = "tape"
-	desc = "A piece of sticky tape."
+	desc = "Кусок липкой ленты."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "tape"
 	w_class = ITEMSIZE_TINY

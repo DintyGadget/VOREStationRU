@@ -3,7 +3,7 @@
 	display_name = "apron, blue"
 	path = /obj/item/clothing/suit/storage/apron
 	slot = slot_wear_suit
-	sort_category = "Suits and Overwear"
+	sort_category = "Костюмы и вверх"
 	cost = 2
 
 /datum/gear/suit/apron_white

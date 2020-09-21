@@ -1,12 +1,12 @@
 //Material earrings
 /obj/item/clothing/ears/earring
 	name = "earring"
-	desc = "An earring of some kind."
+	desc = "Какая-то серьга."
 	icon = 'icons/obj/clothing/ears.dmi'
 
 /obj/item/clothing/ears/earring/stud
 	name = "pearl stud earrings"
-	desc = "A pair of small stud earrings."
+	desc = "Пара маленьких сережек-гвоздиков."
 	icon_state = "ear_stud"
 	color = "#eae0c8"
 

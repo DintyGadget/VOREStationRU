@@ -4,7 +4,7 @@
 
 /obj/item/weapon/autopsy_scanner
 	name = "biopsy scanner"
-	desc = "Extracts information on wounds."
+	desc = "Извлекает информацию о ранах."
 	icon = 'icons/obj/autopsy_scanner.dmi'
 	icon_state = ""
 	item_state = "autopsy_scanner"

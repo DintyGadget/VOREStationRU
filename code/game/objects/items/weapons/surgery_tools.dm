@@ -10,7 +10,7 @@
 
 /obj/item/weapon/surgical
 	name = "Surgical tool"
-	desc = "This shouldn't be here, ahelp it."
+	desc = "Этого здесь быть не должно, помогите."
 	icon = 'icons/obj/surgery.dmi'
 	w_class = ITEMSIZE_SMALL
 	drop_sound = 'sound/items/drop/weldingtool.ogg'
@@ -28,7 +28,7 @@
 
 /obj/item/weapon/surgical/retractor
 	name = "retractor"
-	desc = "Retracts stuff."
+	desc = "Убирает вещи."
 	icon_state = "retractor"
 	matter = list(DEFAULT_WALL_MATERIAL = 10000, "glass" = 5000)
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
@@ -39,7 +39,7 @@
  */
 /obj/item/weapon/surgical/hemostat
 	name = "hemostat"
-	desc = "You think you have seen this before."
+	desc = "Вы думаете, что видели это раньше."
 	icon_state = "hemostat"
 	matter = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 2500)
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
@@ -51,7 +51,7 @@
  */
 /obj/item/weapon/surgical/cautery
 	name = "cautery"
-	desc = "This stops bleeding."
+	desc = "Это останавливает кровотечение."
 	icon_state = "cautery"
 	matter = list(DEFAULT_WALL_MATERIAL = 5000, "glass" = 2500)
 	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
@@ -63,7 +63,7 @@
  */
 /obj/item/weapon/surgical/surgicaldrill
 	name = "surgical drill"
-	desc = "You can drill using this item. You dig?"
+	desc = "Вы можете сверлить с помощью этого предмета. Вы копаете?"
 	icon_state = "drill"
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	matter = list(DEFAULT_WALL_MATERIAL = 15000, "glass" = 10000)
@@ -84,7 +84,7 @@
  */
 /obj/item/weapon/surgical/scalpel
 	name = "scalpel"
-	desc = "Cut, cut, and once more cut."
+	desc = "Режьте, режьте и еще раз режьте."
 	icon_state = "scalpel"
 	force = 10.0
 	sharp = 1
@@ -111,33 +111,33 @@
  */
 /obj/item/weapon/surgical/scalpel/laser1
 	name = "laser scalpel"
-	desc = "A scalpel augmented with a directed laser, for more precise cutting without blood entering the field.  This one looks basic and could be improved."
+	desc = "Скальпель с направленным лазером для более точной резки без попадания крови на поле. Это выглядит просто и может быть улучшено."
 	icon_state = "scalpel_laser1_on"
 	damtype = "fire"
 
 /obj/item/weapon/surgical/scalpel/laser2
 	name = "laser scalpel"
-	desc = "A scalpel augmented with a directed laser, for more precise cutting without blood entering the field.  This one looks somewhat advanced."
+	desc = "Скальпель с направленным лазером для более точной резки без попадания крови на поле. Этот выглядит несколько продвинутым."
 	icon_state = "scalpel_laser2_on"
 	damtype = "fire"
 	force = 12.0
 
 /obj/item/weapon/surgical/scalpel/laser3
 	name = "laser scalpel"
-	desc = "A scalpel augmented with a directed laser, for more precise cutting without blood entering the field.  This one looks to be the pinnacle of precision energy cutlery!"
+	desc = "Скальпель с направленным лазером для более точной резки без попадания крови на поле. Этот выглядит как вершина точных энергетических столовых приборов!"
 	icon_state = "scalpel_laser3_on"
 	damtype = "fire"
 	force = 15.0
 
 /obj/item/weapon/surgical/scalpel/manager
 	name = "incision management system"
-	desc = "A true extension of the surgeon's body, this marvel instantly and completely prepares an incision allowing for the immediate commencement of therapeutic steps."
+	desc = "Настоящее расширение тела хирурга, это чудо мгновенно и полностью подготавливает разрез, позволяя немедленно приступить к терапевтическим этапам."
 	icon_state = "scalpel_manager_on"
 	force = 7.5
 
 /obj/item/weapon/surgical/scalpel/ripper
 	name = "organ pincers"
-	desc = "A horrifying bladed tool with a large metal spike in its center. The tool is used for rapidly removing organs from hopefully willing patients."
+	desc = "Ужасающий клинок с большим металлическим шипом в центре. Инструмент используется для быстрого удаления органов у пациентов, которые, мы надеемся, этого захотят."
 	icon_state = "organ_ripper"
 	item_state = "bone_setter"
 	force = 15.0
@@ -149,7 +149,7 @@
  */
 /obj/item/weapon/surgical/circular_saw
 	name = "circular saw"
-	desc = "For heavy duty cutting."
+	desc = "Для резки в тяжелых условиях."
 	icon_state = "saw3"
 	hitsound = 'sound/weapons/circsawhit.ogg'
 	drop_sound = 'sound/items/drop/accessory.ogg'
@@ -166,7 +166,7 @@
 
 /obj/item/weapon/surgical/circular_saw/manager
 	name = "energetic bone diverter"
-	desc = "For heavy duty cutting (and sealing), with science!"
+	desc = "Для тяжелой резки (и запечатывания) с помощью науки!"
 	icon_state = "adv_saw"
 	item_state = "saw3"
 	hitsound = 'sound/weapons/emitter2.ogg'
@@ -180,7 +180,7 @@
 //misc, formerly from code/defines/weapons.dm
 /obj/item/weapon/surgical/bonegel
 	name = "bone gel"
-	desc = "For fixing bones."
+	desc = "Для фиксации костей."
 	icon_state = "bone-gel"
 	force = 0
 	throwforce = 1.0
@@ -209,7 +209,7 @@
 
 /obj/item/weapon/surgical/bone_clamp
 	name = "bone clamp"
-	desc = "The best way to get a bone fixed fast."
+	desc = "Лучший способ быстро исправить кость."
 	icon_state = "bone_clamp"
 	force = 8
 	throwforce = 9

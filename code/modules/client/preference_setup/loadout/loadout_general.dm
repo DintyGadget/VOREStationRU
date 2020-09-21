@@ -73,7 +73,7 @@
 
 /datum/gear/toy
 	display_name = "toy selection"
-	description = "Choose from a number of toys."
+	description = "Выбирайте из множества игрушек."
 	path = /obj/item/toy/
 
 /datum/gear/toy/New()
@@ -106,7 +106,7 @@
 
 /datum/gear/lunchbox
 	display_name = "lunchbox"
-	description = "A little lunchbox."
+	description = "Маленькая коробочка для завтрака."
 	cost = 2
 	path = /obj/item/weapon/storage/toolbox/lunchbox
 
@@ -131,9 +131,9 @@
 /datum/gear/cahwhite
 	display_name = "Cards Against The Galaxy (white deck)"
 	path = /obj/item/weapon/deck/cah
-	description = "The ever-popular Cards Against The Galaxy word game. Warning: may include traces of broken fourth wall. This is the white deck."
+	description = "Популярная игра в слова: Карты против галактики. Предупреждение: могут быть следы сломанной четвертой стены. Это белая колода."
 
 /datum/gear/cahblack
 	display_name = "Cards Against The Galaxy (black deck)"
 	path = /obj/item/weapon/deck/cah/black
-	description = "The ever-popular Cards Against The Galaxy word game. Warning: may include traces of broken fourth wall. This is the black deck."
+	description = "Популярная игра в слова: Карты против галактики. Предупреждение: могут быть следы сломанной четвертой стены. Это черная колода."
