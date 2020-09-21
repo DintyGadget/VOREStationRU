@@ -53,8 +53,8 @@
 	desc = "Изящная золотая цепочка, которую женщины-скреллы носят для украшения своих хвостов."
 	icon_state = "skrell_chain"
 	item_state_slots = list(slot_r_hand_str = "egg5", slot_l_hand_str = "egg5")
-	drop_sound = 'sound/items/drop/accessory.ogg'
-	pickup_sound = 'sound/items/pickup/accessory.ogg'
+	drop_sound = 'sound/items/drop/ring.ogg'
+	pickup_sound = 'sound/items/pickup/ring.ogg'
 
 /obj/item/clothing/ears/skrell/chain/silver
 	name = "Silver headtail chains"
@@ -85,8 +85,8 @@
 	desc = "Золотые металлические ленты, которые носят самцы скреллов, чтобы украсить их головные хвосты."
 	icon_state = "skrell_band"
 	item_state_slots = list(slot_r_hand_str = "egg5", slot_l_hand_str = "egg5")
-	drop_sound = 'sound/items/drop/accessory.ogg'
-	pickup_sound = 'sound/items/pickup/accessory.ogg'
+	drop_sound = 'sound/items/drop/ring.ogg'
+	pickup_sound = 'sound/items/pickup/ring.ogg'
 
 /obj/item/clothing/ears/skrell/band/silver
 	name = "Silver headtail bands"
