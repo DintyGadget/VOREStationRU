@@ -54,6 +54,7 @@
 	supervisors = "Главой Безопасности"
 	selection_color = "#601C1C"
 	economic_modifier = 5
+	whitelist_only = 1
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 5

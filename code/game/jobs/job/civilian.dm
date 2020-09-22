@@ -102,7 +102,7 @@
 	ideal_character_age = 40
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/qm
-	job_description = "The Quartermaster manages the Supply department, checking cargo orders and ensuring supplies get to where they are needed."
+	job_description = "Интендант управляет отделом снабжения, проверяя заказы на грузы и обеспечивая доставку товаров туда, где они необходимы."
 	alt_titles = list("Начальник снабжения" = /datum/alt_title/supply_chief)
 
 // Quartermaster Alt Titles
@@ -126,8 +126,8 @@
 	minimal_access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting)
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/cargo_tech
-	job_description = "A Cargo Technician fills and delivers cargo orders. They are encouraged to return delivered crates to the Cargo Shuttle, \
-						because Central Command gives a partial refund."
+	job_description = "Грузчик заполняет и доставляет заказы на груз. Им рекомендуется вернуть доставленные ящики в грузовой шаттл, \
+						потому что Центральное командование дает частичный возврат денег."
 
 //////////////////////////////////
 //			Shaft Miner
@@ -148,12 +148,12 @@
 	minimal_access = list(access_mining, access_cargo, access_mining_station, access_mailsorting)
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/mining
-	job_description = "A Shaft Miner mines and processes minerals to be delivered to departments that need them."
+	job_description = "Шахтер добывает и перерабатывает полезные ископаемые для доставки в те отделы, которые в них нуждаются."
 	alt_titles = list("Бурильщик" = /datum/alt_title/drill_tech)
 
 /datum/alt_title/drill_tech
 	title = "Бурильщик"
-	title_blurb = "A Drill Technician specializes in operating and maintaining the machinery needed to extract ore from veins deep below the surface."
+	title_blurb = "Бурильщик специализируется на эксплуатации и обслуживании оборудования, необходимого для извлечения руды из жил глубоко под поверхностью."
 
 //Service
 //////////////////////////////////
@@ -173,7 +173,7 @@
 	minimal_access = list(access_janitor, access_maint_tunnels)
 
 	outfit_type = /decl/hierarchy/outfit/job/service/janitor
-	job_description = "A Janitor keeps the station clean, as long as it doesn't interfere with active crime scenes."
+	job_description = "Уборщик следит за чистотой участка до тех пор, пока это не мешает активным местам преступления."
 	alt_titles = list("Дворник" = /datum/alt_title/custodian)
 
 // Janitor Alt Titles
@@ -198,17 +198,17 @@
 	minimal_access = list(access_library)
 
 	outfit_type = /decl/hierarchy/outfit/job/librarian
-	job_description = "The Librarian curates the book selection in the Library, so the crew might enjoy it."
+	job_description = "Библиотекарь курирует выбор книг в библиотеке, так, чтобы экипаж мог наслаждаться ими."
 	alt_titles = list("Журналист" = /datum/alt_title/journalist, "Писатель" = /datum/alt_title/writer)
 
 // Librarian Alt Titles
 /datum/alt_title/journalist
 	title = "Журналист"
-	title_blurb = "The Journalist uses the Library as a base of operations, from which they can report the news and goings-on on the station with their camera."
+	title_blurb = "Журналист использует библиотеку как оперативную базу, откуда он может сообщать новости происходящее на станции с помощью своей камеры."
 
 /datum/alt_title/writer
 	title = "Писатель"
-	title_blurb = "The Writer uses the Library as a quiet place to write whatever it is they choose to write."
+	title_blurb = "Писатель использует библиотеку как тихое место, чтобы написать все, что он решит написать."
 
 //////////////////////////////////
 //		Internal Affairs Agent
@@ -231,9 +231,9 @@
 	minimal_player_age = 7
 
 	outfit_type = /decl/hierarchy/outfit/job/internal_affairs_agent
-	job_description = "An Internal Affairs Agent makes sure that the crew is following Standard Operating Procedure. They also \
-						handle complaints against crew members, and can have issues brought to the attention of Central Command, \
-						assuming their paperwork is in order."
+	job_description = "Агент внутренних дел следит за тем, чтобы экипаж следовал стандартной рабочей процедуре. Они также \
+						обрабатывают жалобы на членов экипажа и могут доводить проблемы до сведения Центрального командования, \
+						предполагая, что их документы в порядке."
 
 /*
 /datum/job/lawyer/equip(var/mob/living/carbon/human/H)

@@ -138,7 +138,7 @@
 		lastJob = job
 		. += "<a href='?src=\ref[src];job_info=[rank]'>"
 		if(jobban_isbanned(user, rank))
-			. += "<del>[rank]</del></td></a><td><b> \[БЛОК]</b></td></tr>"
+			. += "<del>[rank]</del></td></a><td><b> \[НЕДОСТУПНО]</b></td></tr>"
 			continue
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
@@ -168,17 +168,17 @@
 		var/prefUpperLevel = -1 // level to assign on left click
 		var/prefLowerLevel = -1 // level to assign on right click
 		if(pref.GetJobDepartment(job, 1) & job.flag)
-			prefLevelLabel = "Выс."
+			prefLevelLabel = "Высокий"
 			prefLevelColor = "55cc55"
 			prefUpperLevel = 4
 			prefLowerLevel = 2
 		else if(pref.GetJobDepartment(job, 2) & job.flag)
-			prefLevelLabel = "Сред."
+			prefLevelLabel = "Средний"
 			prefLevelColor = "eecc22"
 			prefUpperLevel = 1
 			prefLowerLevel = 3
 		else if(pref.GetJobDepartment(job, 3) & job.flag)
-			prefLevelLabel = "Низ."
+			prefLevelLabel = "Низкий"
 			prefLevelColor = "cc5555"
 			prefUpperLevel = 2
 			prefLowerLevel = 4
@@ -215,7 +215,7 @@
 		if(RETURN_TO_LOBBY)
 			. += "<u><a href='?src=\ref[src];job_alternative=1'>Вернуться в лобби, если профессии недоступны</a></u>"
 
-	. += "<a href='?src=\ref[src];reset_jobs=1'>\[Reset\]</a></center>"
+	. += "<a href='?src=\ref[src];reset_jobs=1'>\[Сброс\]</a></center>"
 	. += "</tt>"
 	. = jointext(.,null)
 
@@ -259,7 +259,7 @@
 			if(LAZYLEN(job.departments_managed))
 				dat += "Вы руководите отделом: [english_list(job.departments_managed)]"
 
-		dat += "Вы отвечаете перед <b>[job.supervisors]</b> всегда."
+		dat += "Вы отвечаете перед <b>[job.supervisors]</b>."
 
 		dat += "<hr style='clear:left;'>"
 		if(config.wikiurl)

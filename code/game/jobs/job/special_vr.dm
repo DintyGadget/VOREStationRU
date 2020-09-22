@@ -14,7 +14,7 @@
 	whitelist_only = 1
 	latejoin_only = 1
 	outfit_type = /decl/hierarchy/outfit/job/centcom_officer
-	job_description = "A Central Command Officer is there on official business. Most of time. Whatever it is, they're a VIP."
+	job_description = "Офицер Центрального командования находится здесь по служебным делам. Большую часть времени. Как бы то ни было, он VIP."
 
 	minimum_character_age = 25
 	ideal_character_age = 40

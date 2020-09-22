@@ -21,7 +21,7 @@
 /datum/category_item/player_setup_item/volume_sliders/media/content(var/mob/user)
 	. += "<b>Громкость музыки:</b>"
 	. += "<a href='?src=\ref[src];change_media_volume=1'><b>[round(pref.media_volume * 100)]%</b></a><br>"
-	. += "<b>Тип медиаплеера:</b> Depending on you operating system, one of these might work better. "
+	. += "<b>Тип медиаплеера:</b> В зависимости от вашей операционной системы один из них может работать лучше. "
 	. += "Используйте HTML5, если он работает у вас. Если ни HTML5, ни WMP не работают, вам придется вернуться к использованию VLC, "
 	. += "но для этого необходимо, чтобы на вашем компьютере был установлен сам VLC."
 	. += "Попробуйте другие проигрыватели, если хотите, но вы, вероятно, перестанете слышать музыку.<br>"

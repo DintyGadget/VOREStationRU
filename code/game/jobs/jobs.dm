@@ -57,8 +57,11 @@ var/const/TALSEC			=(1<<3)
 var/const/TALENG			=(1<<4)
 //VOREStation Add End
 
+//Whitelist надеюсь кодер который написал это уебище горит в аду
+
 /proc/guest_jobbans(var/job)
-	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )
+	return ( (job == "Директор колонии") || (job == "Глава персонала") || (job == "Секретарь") || (job == "Интендант") || (job == "Агент внутренних дел") || (job == "Главный инженер") || (job == "Первопроходец") || (job == "Главврач") || (job == "Директор исследований") || (job == "Глава безопасности") || (job == "Надзиратель") || (job in SSjob.get_job_titles_in_department(DEPARTMENT_TALON)) || (job == "AI") )
+	//return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )
 
 /proc/get_job_datums()
 	var/list/occupations = list()

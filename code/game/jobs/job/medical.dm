@@ -112,7 +112,7 @@
 // Chemist Alt Titles
 /datum/alt_title/pharmacist
 	title = "Фармацевт"
-	title_blurb = "A Pharmacist focuses on the chemical needs of the Medical Department, and often offers to fill crew prescriptions at their discretion."
+	title_blurb = "Фармацевт уделяет внимание химическим потребностям медицинского отдела и часто предлагает заполнить рецепты бригады по их усмотрению."
 
 /* I'm commenting out Geneticist so you can't actually see it in the job menu, given that you can't play as one - Jon.
 //////////////////////////////////

@@ -12,14 +12,14 @@ var/const/SAR 				=(1<<14)
 
 /obj/item/weapon/card/id/explorer
 	name = "identification card"
-	desc = "A card issued to station exploration staff."
+	desc = "Карта, выданная геологоразведочным работникам станции."
 	icon_state = "cyan"
 	primary_color = rgb(47,189,189)
 	secondary_color = rgb(127,223,223)
 
 /obj/item/weapon/card/id/explorer/head
 	name = "identification card"
-	desc = "A card which represents discovery of the unknown."
+	desc = "Карта, которая представляет открытие неизвестного."
 	icon_state = "cyanGold"
 	primary_color = rgb(47,189,189)
 	secondary_color = rgb(127,223,223)
@@ -33,7 +33,7 @@ var/const/SAR 				=(1<<14)
 	title = "Первопроходец"
 	flag = PATHFINDER
 	departments = list(DEPARTMENT_PLANET)
-	departments_managed = list(DEPARTMENT_PLANET)
+	departments_managed = list(DEPARTMENT_PLANET, DEPARTMENT_COMMAND)
 	sorting_order = 1 // above the other explorers
 	department_flag = MEDSCI
 	faction = "Station"
@@ -49,7 +49,7 @@ var/const/SAR 				=(1<<14)
 	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
 	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
-	job_description = "The Pathfinder's job is to lead and manage expeditions, and is the primary authority on all off-station expeditions."
+	job_description = "Работа Первопроходца заключается в том, чтобы руководить и управлять экспедициями, и он является главным руководителем всех выездных экспедиций."
 
 /datum/alt_title/pathfinder
 	title = "Первопроходец"
@@ -70,7 +70,7 @@ var/const/SAR 				=(1<<14)
 	access = list(access_pilot)
 	minimal_access = list(access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
-	job_description = "A Pilot flies the various shuttles in the Virgo-Erigone System."
+	job_description = "Пилот управляет различными шаттлами в системе Дева-Эригон."
 
 /datum/alt_title/pilot
 	title = "Пилот"
@@ -90,7 +90,7 @@ var/const/SAR 				=(1<<14)
 	access = list(access_explorer, access_external_airlocks, access_eva)
 	minimal_access = list(access_explorer, access_external_airlocks, access_eva)
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
-	job_description = "An Explorer searches for interesting things, and returns them to the station."
+	job_description = "Искатель ищет интересные вещи и возвращает их на станцию."
 
 /datum/alt_title/explorer
 	title = "Искатель"
@@ -103,7 +103,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Pathfinder and the Chief Medical Officer"
+	supervisors = "Первопроходцем и Главврачом"
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3
@@ -111,7 +111,7 @@ var/const/SAR 				=(1<<14)
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_eva, access_maint_tunnels, access_external_airlocks, access_pilot)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
-	job_description = "A Field medic works as the field doctor of expedition teams."
+	job_description = "Военврач работает полевым врачом экспедиционных отрядов."
 
 /datum/alt_title/field_medic
 	title = "Военврач"

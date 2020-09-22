@@ -13,13 +13,13 @@
 	minimal_access = list(access_chapel_office, access_crematorium)
 
 	outfit_type = /decl/hierarchy/outfit/job/chaplain
-	job_description = "The Chaplain ministers to the spiritual needs of the crew."
-	alt_titles = list("Counselor" = /datum/alt_title/counselor)
+	job_description = "Священник служит духовным нуждам экипажа."
+	alt_titles = list("Советник" = /datum/alt_title/counselor)
 
 // Chaplain Alt Titles
 /datum/alt_title/counselor
-	title = "Counselor"
-	title_blurb = "The Counselor attends to the emotional needs of the crew, without a specific medicinal or spiritual focus."
+	title = "Советник"
+	title_blurb = "Советник заботится об эмоциональных потребностях экипажа, не уделяя особого внимания медицинским или духовным вопросам."
 
 /datum/job/chaplain/equip(var/mob/living/carbon/human/H, var/alt_title, var/ask_questions = TRUE)
 	. = ..()

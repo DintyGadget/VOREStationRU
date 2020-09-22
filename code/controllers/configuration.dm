@@ -523,6 +523,9 @@ var/list/gamemode_cache = list()
 				if ("wikiurl")
 					config.wikiurl = value
 
+				if ("discordurl")
+					config.discordurl = value
+
 				if ("wikisearchurl")
 					config.wikisearchurl = value
 

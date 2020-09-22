@@ -11,7 +11,7 @@
 	total_positions = 0 // Not used for AI, see is_position_available below and modules/mob/living/silicon/ai/latejoin.dm
 	spawn_positions = 1
 	selection_color = "#3F823F"
-	supervisors = "your Laws"
+	supervisors = "вашими законами"
 	req_admin_notify = 1
 	minimal_player_age = 7
 	account_allowed = 0
@@ -20,9 +20,9 @@
 	assignable = FALSE
 	mob_type = JOB_SILICON_AI
 	outfit_type = /decl/hierarchy/outfit/job/silicon/ai
-	job_description = "The AI oversees the operation of the station and its crew, but has no real authority over them. \
-						The AI is required to follow its Laws, and Lawbound Synthetics that are linked to it are expected to follow \
-						the AI's commands, and their own Laws."
+	job_description = "ИИ наблюдает за работой станции и ее экипажа, но не имеет над ними реальной власти. \
+						ИИ должен следовать своим законам, а связанные с ним синтетики, \
+						связанные с законом, должны следовать командам ИИ и своим собственным законам."
 
 // AI procs
 /datum/job/ai/equip(var/mob/living/carbon/human/H)
@@ -48,7 +48,7 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "your Laws and the AI"	//Nodrak
+	supervisors = "вашими законами и ИИ"	//Nodrak
 	selection_color = "#254C25"
 	minimal_player_age = 1
 	account_allowed = 0

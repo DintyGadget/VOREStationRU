@@ -10,6 +10,7 @@ SUBSYSTEM_DEF(vote)
 	var/initiator
 	var/started_time
 	var/time_remaining
+	var/time_set
 	var/duration
 	var/mode
 	var/question
@@ -262,7 +263,9 @@ SUBSYSTEM_DEF(vote)
 			round_progressing = 0
 			to_world("<font color='red'><b>Начало раунда было отложено.</b></font>")
 
-		time_remaining = round(config.vote_period / 10)
+		time_set = (time_set ? time_set : config.vote_period) SECONDS
+		time_remaining = time_set
+		//time_remaining = round(config.vote_period / 10)
 		return 1
 	return 0
 

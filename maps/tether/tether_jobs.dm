@@ -25,6 +25,7 @@
 	selection_color = "#999999"
 	economic_modifier = 7
 	minimal_player_age = 14
+	whitelist_only = 1
 	pto_type = null
 	access = list(access_talon)
 	minimal_access = list(access_talon)
@@ -45,6 +46,7 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
+	whitelist_only = 1
 	pto_type = null
 	access = list(access_talon)
 	minimal_access = list(access_talon)
@@ -65,6 +67,7 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
+	whitelist_only = 1
 	pto_type = null
 	access = list(access_talon)
 	minimal_access = list(access_talon)
@@ -85,6 +88,7 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
+	whitelist_only = 1
 	pto_type = null
 	access = list(access_talon)
 	minimal_access = list(access_talon)
@@ -105,6 +109,7 @@
 	selection_color = "#aaaaaa"
 	economic_modifier = 5
 	minimal_player_age = 14
+	whitelist_only = 1
 	pto_type = null
 	access = list(access_talon)
 	minimal_access = list(access_talon)

@@ -78,18 +78,18 @@
 	pto_type = PTO_CIVILIAN
 
 	outfit_type = /decl/hierarchy/outfit/job/assistant
-	job_description = "An entertainer does just that, entertains! Put on plays, play music, sing songs, tell stories, or read your favorite fanfic."
+	job_description = "Артист делает именно это, развлекает! Ставьте спектакли, играйте музыку, пойте песни, рассказывайте истории или читайте свои любимые фанфики."
 	alt_titles = list("Вокалист" = /datum/alt_title/performer, "Музыкант" = /datum/alt_title/musician, "Рабочий сцены" = /datum/alt_title/stagehand)
 
 // Entertainer Alt Titles
 /datum/alt_title/performer
 	title = "Вокалист"
-	title_blurb = "A Performer is someone who performs! Acting, dancing, wrestling, etc!"
+	title_blurb = "Вокалист - это тот, кто поет! Актерское мастерство, танцы и так далее!"
 
 /datum/alt_title/musician
 	title = "Музыкант"
-	title_blurb = "A Musician is someone who makes music! Singing, playing instruments, slam poetry, it's your call!"
+	title_blurb = "Музыкант - это тот, кто создает музыку! Петь, играть на музыкальных инструментах, слогать стихами - это ваше дело!"
 
 /datum/alt_title/stagehand
 	title = "Рабочий сцены"
-	title_blurb = "A Stagehand typically performs everything the rest of the entertainers don't. Operate lights, shutters, windows, or narrate through your voicebox!"
+	title_blurb = "Рабочий сцены обычно выполняет все, что не делают остальные артисты: управляет светом, ставнями, окнами или рассказывает что-либо через микрофон на сцену!"
