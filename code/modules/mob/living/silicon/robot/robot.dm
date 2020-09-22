@@ -1097,7 +1097,7 @@
 			laws = new /datum/ai_laws/syndicate_override
 			var/time = time2text(world.realtime,"hh:mm:ss")
 			lawchanges.Add("[time] <B>:</B> [user.name]([user.key]) emagged [name]([key])")
-			var/datum/gender/TU = gender_datums[user.get_visible_gender()]
+			//var/datum/gender/TU = gender_datums[user.get_visible_gender()]
 			set_zeroth_law("Только [user.real_name] и люди, которых он назвал таковыми, являются оперативниками.")
 			. = 1
 			spawn()
