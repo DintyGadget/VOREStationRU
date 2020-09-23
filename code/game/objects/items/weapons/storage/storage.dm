@@ -313,24 +313,24 @@
 		return 0 //Means the item is already in the storage item
 	if(storage_slots != null && contents.len >= storage_slots)
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] is full, make some space.</span>")
+			to_chat(usr, "<span class='notice'>[src] полон, освободите немного места.</span>")
 		return 0 //Storage item is full
 
 	if(can_hold.len && !is_type_in_list(W, can_hold))
 		if(!stop_messages)
 			if (istype(W, /obj/item/weapon/hand_labeler))
 				return 0
-			to_chat(usr, "<span class='notice'>[src] cannot hold [W].</span>")
+			to_chat(usr, "<span class='notice'>[src] не может содержать [W].</span>")
 		return 0
 
 	if(cant_hold.len && is_type_in_list(W, cant_hold))
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] cannot hold [W].</span>")
+			to_chat(usr, "<span class='notice'>[src] не может содержать [W].</span>")
 		return 0
 
 	if (max_w_class != null && W.w_class > max_w_class)
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[W] is too long for \the [src].</span>")
+			to_chat(usr, "<span class='notice'>[W] слишком длинный для [src].</span>")
 		return 0
 
 	var/total_storage_space = W.get_storage_cost()
@@ -339,12 +339,12 @@
 
 	if(total_storage_space > max_storage_space)
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] is too full, make some space.</span>")
+			to_chat(usr, "<span class='notice'>[src] полон, освободите немного места.</span>")
 		return 0
 
 	if(W.w_class >= src.w_class && (istype(W, /obj/item/weapon/storage)))
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] cannot hold [W] as it's a storage item of the same size.</span>")
+			to_chat(usr, "<span class='notice'>[src] не может содержать [W], так как это элемент хранения того же размера.</span>")
 		return 0 //To prevent the stacking of same sized storage items.
 
 	return 1
@@ -368,11 +368,11 @@
 		if(!prevent_warning)
 			for(var/mob/M in viewers(usr, null))
 				if (M == usr)
-					to_chat(usr, "<span class='notice'>You put \the [W] into [src].</span>")
+					to_chat(usr, "<span class='notice'>Вы помещаете [W] в [src].</span>")
 				else if (M in range(1)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>\The [usr] puts [W] into [src].</span>")
+					M.show_message("<span class='notice'>[usr] помещает [W] в [src].</span>")
 				else if (W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>\The [usr] puts [W] into [src].</span>")
+					M.show_message("<span class='notice'>[usr] помещает [W] в [src].</span>")
 
 		src.orient2hud(usr)
 		if(usr.s_active)
@@ -447,14 +447,14 @@
 		var/obj/item/weapon/tray/T = W
 		if(T.calc_carry() > 0)
 			if(prob(85))
-				to_chat(user, "<span class='warning'>The tray won't fit in [src].</span>")
+				to_chat(user, "<span class='warning'>Лоток не поместится в [src].</span>")
 				return
 			else
 				W.forceMove(get_turf(user))
 				if ((user.client && user.s_active != src))
 					user.client.screen -= W
 				W.dropped(user)
-				to_chat(user, "<span class='warning'>God damn it!</span>")
+				to_chat(user, "<span class='warning'>Черт побери!</span>")
 
 	W.add_fingerprint(user)
 	return handle_item_insertion(W)
@@ -499,11 +499,11 @@
 		success = 1
 		handle_item_insertion(I, 1)	//The 1 stops the "You put the [src] into [S]" insertion message from being displayed.
 	if(success && !failure)
-		to_chat(user, "<span class='notice'>You put everything in [src].</span>")
+		to_chat(user, "<span class='notice'>Вы кладете все в [src].</span>")
 	else if(success)
-		to_chat(user, "<span class='notice'>You put some things in [src].</span>")
+		to_chat(user, "<span class='notice'>Вы кладете некоторые вещи в [src].</span>")
 	else
-		to_chat(user, "<span class='notice'>You fail to pick anything up with \the [src].</span>")
+		to_chat(user, "<span class='notice'>Вы не можете ничего подобрать с помощью [src].</span>")
 
 /obj/item/weapon/storage/verb/toggle_gathering_mode()
 	set name = "Switch Gathering Method"
@@ -512,9 +512,9 @@
 	collection_mode = !collection_mode
 	switch (collection_mode)
 		if(1)
-			to_chat(usr, "[src] now picks up all items on a tile at once.")
+			to_chat(usr, "[src] теперь поднимает все предметы на плитке сразу.")
 		if(0)
-			to_chat(usr, "[src] now picks up one item at a time.")
+			to_chat(usr, "[src] теперь поднимает по одному предмету за раз.")
 
 
 /obj/item/weapon/storage/verb/quick_empty()
@@ -680,7 +680,7 @@
  */
 /obj/item/weapon/storage/trinketbox
 	name = "trinket box"
-	desc = "A box that can hold small trinkets, such as a ring."
+	desc = "Шкатулка, в которой можно хранить маленькие безделушки, например кольцо."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "trinketbox"
 	var/open = 0

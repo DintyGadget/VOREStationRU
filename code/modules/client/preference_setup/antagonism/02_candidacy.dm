@@ -1,7 +1,7 @@
 var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 // Change these to 0 if the equivalent mode is disabled for whatever reason!
-	"traitor" = 1,										// 0
+	"убийца" = 1,										// 0
 	"operative" = 1,									// 1
 	"changeling" = 1,									// 2
 	"wizard" = 1,										// 3
@@ -46,9 +46,9 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 		for (var/i in special_roles)
 			if(special_roles[i]) //if mode is available on the server
 				if(jobban_isbanned(user, i) || (i == "positronic brain" && jobban_isbanned(user, "AI") && jobban_isbanned(user, "Cyborg")) || (i == "pAI candidate" && jobban_isbanned(user, "pAI")))
-					. += "<b>Стать [i]:</b> <font color=red><b> \[БЛОК]</b></font><br>"
+					. += "<b>появиться как: [i]:</b> <font color=red><b> \[БЛОК]</b></font><br>"
 				else
-					. += "<b>Стать [i]:</b> <a href='?src=\ref[src];be_special=[n]'><b>[pref.be_special&(1<<n) ? "Да" : "Нет"]</b></a><br>"
+					. += "<b>появиться как: [i]:</b> <a href='?src=\ref[src];be_special=[n]'><b>[pref.be_special&(1<<n) ? "Да" : "Нет"]</b></a><br>"
 			n++
 
 /datum/category_item/player_setup_item/antagonism/candidacy/OnTopic(var/href,var/list/href_list, var/mob/user)

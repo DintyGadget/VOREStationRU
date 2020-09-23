@@ -42,7 +42,7 @@ datum/objective/assassinate
 	find_target()
 		..()
 		if(target && target.current)
-			explanation_text = "Уничтожить [target.current.real_name], роль цели [target.assigned_role]."
+			explanation_text = "Устранить [target.current.real_name], [target.assigned_role]."
 		else
 			explanation_text = "Свободная цель"
 		return target
@@ -51,7 +51,7 @@ datum/objective/assassinate
 	find_target_by_role(role, role_type=0)
 		..(role, role_type)
 		if(target && target.current)
-			explanation_text = "Уничтожить [target.current.real_name], роль цели [!role_type ? target.assigned_role : target.special_role]."
+			explanation_text = "Устранить [target.current.real_name], [!role_type ? target.assigned_role : target.special_role]."
 		else
 			explanation_text = "Свободная цель"
 		return target
@@ -427,26 +427,26 @@ datum/objective/steal
 	var/target_name
 
 	var/global/possible_items[] = list(
-		"the Site Manager's antique laser gun" = /obj/item/weapon/gun/energy/captain,
-		"a hand teleporter" = /obj/item/weapon/hand_tele,
-		"an RCD" = /obj/item/weapon/rcd,
-		"a jetpack" = /obj/item/weapon/tank/jetpack,
-		"a site manager's jumpsuit" = /obj/item/clothing/under/rank/captain,
-		"a functional AI" = /obj/item/device/aicard,
-		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
-		"the station blueprints" = /obj/item/blueprints,
-		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
-		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
-		"a sample of slime extract" = /obj/item/slime_extract,
-		"a piece of corgi meat" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
-		"a research director's jumpsuit" = /obj/item/clothing/under/rank/research_director,
-		"a chief engineer's jumpsuit" = /obj/item/clothing/under/rank/chief_engineer,
-		"a chief medical officer's jumpsuit" = /obj/item/clothing/under/rank/chief_medical_officer,
-		"a head of security's jumpsuit" = /obj/item/clothing/under/rank/head_of_security,
-		"a head of personnel's jumpsuit" = /obj/item/clothing/under/rank/head_of_personnel,
-		"the hypospray" = /obj/item/weapon/reagent_containers/hypospray/vial,
-		"the site manager's pinpointer" = /obj/item/weapon/pinpointer,
-		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
+		"старинный лазерный пистолет Директора колонии" = /obj/item/weapon/gun/energy/captain,
+		"ручной телепорт" = /obj/item/weapon/hand_tele,
+		"RCD" = /obj/item/weapon/rcd,
+		"реактивный ранец" = /obj/item/weapon/tank/jetpack,
+		"комбинезон Директора колонии" = /obj/item/clothing/under/rank/captain,
+		"функциональный ИИ" = /obj/item/device/aicard,
+		"пара маг-ботинок" = /obj/item/clothing/shoes/magboots,
+		"чертежи станции" = /obj/item/blueprints,
+		"костюм НАСА" = /obj/item/clothing/suit/space/void,
+		"28 молей форона (полный бак)" = /obj/item/weapon/tank,
+		"образец экстракта слизи" = /obj/item/slime_extract,
+		"кусок мяса корги" = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi,
+		"комбинезон Директора исследований" = /obj/item/clothing/under/rank/research_director,
+		"комбинезон Главного инженера" = /obj/item/clothing/under/rank/chief_engineer,
+		"комбинезон Главврача" = /obj/item/clothing/under/rank/chief_medical_officer,
+		"комбинезон Главы безопасности" = /obj/item/clothing/under/rank/head_of_security,
+		"комбинезон Глава персонала" = /obj/item/clothing/under/rank/head_of_personnel,
+		"гипоспрей" = /obj/item/weapon/reagent_containers/hypospray/vial,
+		"пинпоинтер Директора колонии" = /obj/item/weapon/pinpointer,
+		"абляционный бронежилет" = /obj/item/clothing/suit/armor/laserproof,
 	)
 
 	var/global/possible_items_special[] = list(
@@ -466,7 +466,7 @@ datum/objective/steal
 		steal_target = possible_items[target_name]
 		if (!steal_target )
 			steal_target = possible_items_special[target_name]
-		explanation_text = "Steal [target_name]."
+		explanation_text = "Стащить [target_name]."
 		return steal_target
 
 
@@ -498,7 +498,7 @@ datum/objective/steal
 		if(!isliving(owner.current))	return 0
 		var/list/all_items = owner.current.get_contents()
 		switch (target_name)
-			if("28 moles of phoron (full tank)","10 diamonds","50 gold bars","25 refined uranium bars")
+			if("28 молей форона (полный бак)","10 diamonds","50 gold bars","25 refined uranium bars")
 				var/target_amount = text2num(target_name)//Non-numbers are ignored.
 				var/found_amount = 0.0//Always starts as zero.
 
@@ -517,7 +517,7 @@ datum/objective/steal
 						found_amount++
 					return found_amount>=target
 
-			if("a functional AI")
+			if("функциональный ИИ")
 
 				for(var/obj/item/device/aicard/C in all_items) //Check for ai card
 					for(var/mob/living/silicon/ai/M in C)

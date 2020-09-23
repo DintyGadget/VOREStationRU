@@ -21,7 +21,7 @@
 
 /obj/item/weapon/storage/box
 	name = "box"
-	desc = "It's just an ordinary box."
+	desc = "Это просто обычная коробка."
 	icon_state = "box"
 	item_state = "syringe_kit"
 	center_of_mass = list("x" = 13,"y" = 10)
@@ -71,20 +71,20 @@
 
 /obj/item/weapon/storage/box/survival
 	name = "emergency supply box"
-	desc = "A survival box issued to crew members for use in emergency situations."
+	desc = "Спасательный набор, выдаваемый членам экипажа для использования в чрезвычайных ситуациях."
 	starts_with = list(
 		/obj/item/clothing/mask/breath
 	)
 
 /obj/item/weapon/storage/box/survival/synth
 	name = "synthetic supply box"
-	desc = "A survival box issued to synthetic crew members for use in emergency situations."
+	desc = "Набор выживания, выдаваемая синтетическим членам экипажа для использования в чрезвычайных ситуациях."
 	starts_with = list(
 	)
 
 /obj/item/weapon/storage/box/survival/comp
 	name = "emergency supply box"
-	desc = "A comprehensive survival box issued to crew members for use in emergency situations. Contains additional supplies."
+	desc = "Комплексный набор выживания, выдаваемый членам экипажа для использования в чрезвычайных ситуациях. Содержит дополнительные материалы."
 	icon_state = "survival"
 	starts_with = list(
 		/obj/item/weapon/reagent_containers/hypospray/autoinjector,
@@ -96,37 +96,37 @@
 
 /obj/item/weapon/storage/box/gloves
 	name = "box of latex gloves"
-	desc = "Contains white gloves."
+	desc = "Содержит белые перчатки."
 	icon_state = "latex"
 	starts_with = list(/obj/item/clothing/gloves/sterile/latex = 7)
 
 /obj/item/weapon/storage/box/masks
 	name = "box of sterile masks"
-	desc = "This box contains masks of sterility."
+	desc = "Эта коробка содержит стерильные маски."
 	icon_state = "sterile"
 	starts_with = list(/obj/item/clothing/mask/surgical = 7)
 
 /obj/item/weapon/storage/box/syringes
 	name = "box of syringes"
-	desc = "A box full of syringes."
+	desc = "Коробка, полная шприцов."
 	icon_state = "syringe"
 	starts_with = list(/obj/item/weapon/reagent_containers/syringe = 7)
 
 /obj/item/weapon/storage/box/syringegun
 	name = "box of syringe gun cartridges"
-	desc = "A box full of compressed gas cartridges."
+	desc = "Коробка, полная баллончиков со сжатым газом."
 	icon_state = "syringe"
 	starts_with = list(/obj/item/weapon/syringe_cartridge = 7)
 
 /obj/item/weapon/storage/box/beakers
 	name = "box of beakers"
-	desc = "A box full of beakers."
+	desc = "Коробка, полная мензурок."
 	icon_state = "beaker"
 	starts_with = list(/obj/item/weapon/reagent_containers/glass/beaker = 7)
 
 /obj/item/weapon/storage/box/injectors
 	name = "box of DNA injectors"
-	desc = "This box contains injectors it seems."
+	desc = "Кажется, в этой коробке находятся форсунки."
 	starts_with = list(
 		/obj/item/weapon/dnainjector/h2m = 3,
 		/obj/item/weapon/dnainjector/m2h = 3
@@ -134,7 +134,7 @@
 
 /obj/item/weapon/storage/box/blanks
 	name = "box of blank shells"
-	desc = "It has a picture of a gun and several warning symbols on the front."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков."
 	icon_state = "blankshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/blank = 8)
@@ -146,7 +146,7 @@
 
 /obj/item/weapon/storage/box/beanbags
 	name = "box of beanbag shells"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	icon_state = "beanshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 8)
@@ -158,7 +158,7 @@
 
 /obj/item/weapon/storage/box/shotgunammo
 	name = "box of shotgun slugs"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	icon_state = "lethalshellshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g = 8)
@@ -170,7 +170,7 @@
 
 /obj/item/weapon/storage/box/shotgunshells
 	name = "box of shotgun shells"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	icon_state = "lethalslug_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/pellet = 8)
@@ -182,7 +182,7 @@
 
 /obj/item/weapon/storage/box/flashshells
 	name = "box of illumination shells"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	icon_state = "illumshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/flash = 8)
@@ -194,7 +194,7 @@
 
 /obj/item/weapon/storage/box/stunshells
 	name = "box of stun shells"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	icon_state = "stunshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/stunshell = 8)
@@ -206,7 +206,7 @@
 
 /obj/item/weapon/storage/box/practiceshells
 	name = "box of practice shells"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	icon_state = "blankshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/practice = 8)
@@ -218,7 +218,7 @@
 
 /obj/item/weapon/storage/box/empshells
 	name = "box of emp shells"
-	desc = "It has a picture of a gun and several warning symbols on the front."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков."
 	icon_state = "empshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/emp = 8)
@@ -230,7 +230,7 @@
 
 /obj/item/weapon/storage/box/flechetteshells
 	name = "box of shotgun flechettes"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	icon_state = "lethalslug_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/flechette = 8)
@@ -242,19 +242,19 @@
 
 /obj/item/weapon/storage/box/sniperammo
 	name = "box of 14.5mm shells"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	starts_with = list(/obj/item/ammo_casing/a145 = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/sniperammo/highvel
 	name = "box of 14.5mm sabot shells"
-	desc = "It has a picture of a gun and several warning symbols on the front.<br>WARNING: Live ammunition. Misuse may result in serious injury or death."
+	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
 	starts_with = list(/obj/item/ammo_casing/a145/highvel = 7)
 
 /obj/item/weapon/storage/box/flashbangs
 	name = "box of flashbangs (WARNING)"
-	desc = "<B>WARNING: These devices are extremely dangerous and can cause blindness or deafness in repeated use.</B>"
+	desc = "<B>ВНИМАНИЕ: Эти устройства чрезвычайно опасны и могут вызвать слепоту или глухоту при повторном использовании.</B>"
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/flashbang = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
@@ -262,7 +262,7 @@
 
 /obj/item/weapon/storage/box/emps
 	name = "box of emp grenades"
-	desc = "A box containing 5 military grade EMP grenades.<br> WARNING: Do not use near unshielded electronics or biomechanical augmentations, death or permanent paralysis may occur."
+	desc = "Коробка с 5 ЭМИ гранатами военного класса.<br> ВНИМАНИЕ: Не используйте рядом с неэкранированной электроникой или биомеханическими аугментациями, это может привести к смерти или необратимому параличу."
 	icon_state = "emp"
 	starts_with = list(/obj/item/weapon/grenade/empgrenade = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
@@ -270,7 +270,7 @@
 
 /obj/item/weapon/storage/box/empslite
 	name = "box of low yield emp grenades"
-	desc = "A box containing 5 low yield EMP grenades.<br> WARNING: Do not use near unshielded electronics or biomechanical augmentations, death or permanent paralysis may occur."
+	desc = "Коробка, содержащий 5 ЭМИ-гранат малой мощности.<br> WARNING: Do not use near unshielded electronics or biomechanical augmentations, death or permanent paralysis may occur."
 	icon_state = "emp"
 	starts_with = list(/obj/item/weapon/grenade/empgrenade/low_yield = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
@@ -278,7 +278,7 @@
 
 /obj/item/weapon/storage/box/smokes
 	name = "box of smoke bombs"
-	desc = "A box containing 7 smoke bombs."
+	desc = "Коробка с 7 дымовыми шашками."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/smokebomb = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
@@ -286,7 +286,7 @@
 
 /obj/item/weapon/storage/box/anti_photons
 	name = "box of anti-photon grenades"
-	desc = "A box containing 7 experimental photon disruption grenades."
+	desc = "Коробка с 7 экспериментальными фотонными гранатами."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/anti_photon = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
@@ -294,7 +294,7 @@
 
 /obj/item/weapon/storage/box/frags
 	name = "box of fragmentation grenades (WARNING)"
-	desc = "A box containing 7 military grade fragmentation grenades.<br> WARNING: These devices are extremely dangerous and can cause limb loss or death in repeated use."
+	desc = "Коробка с 7 осколочными гранатами военного назначения.<br> ВНИМАНИЕ: Эти устройства чрезвычайно опасны и могут привести к потере конечности или смерти при повторном использовании."
 	icon_state = "frag"
 	starts_with = list(/obj/item/weapon/grenade/explosive = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
@@ -302,7 +302,7 @@
 
 /obj/item/weapon/storage/box/frags_half_box
 	name = "box of fragmentation grenades (WARNING)"
-	desc = "A box containing 4 military grade fragmentation grenades.<br> WARNING: These devices are extremely dangerous and can cause limb loss or death in repeated use."
+	desc = "Коробка с 4-мя осколочными гранатами военного назначения.<br> ВНИМАНИЕ: Эти устройства чрезвычайно опасны и могут привести к потере конечности или смерти при повторном использовании."
 	icon_state = "frag"
 	starts_with = list(/obj/item/weapon/grenade/explosive = 4)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
@@ -310,24 +310,24 @@
 
 /obj/item/weapon/storage/box/metalfoam
 	name = "box of metal foam grenades."
-	desc = "A box containing 7 metal foam grenades."
+	desc = "Коробка с 7 гранатами из пенопласта."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/chem_grenade/metalfoam = 7)
 
 /obj/item/weapon/storage/box/teargas
 	name = "box of teargas grenades"
-	desc = "A box containing 7 teargas grenades."
+	desc = "Коробка с 7 гранатами со слезоточивым газом."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/chem_grenade/teargas = 7)
 
 /obj/item/weapon/storage/box/flare
 	name = "box of flares"
-	desc = "A box containing 4 flares."
+	desc = "Коробка с 4 ракетами."
 	starts_with = list(/obj/item/device/flashlight/flare = 4)
 
 /obj/item/weapon/storage/box/trackimp
 	name = "boxed tracking implant kit"
-	desc = "Box full of scum-bag tracking utensils."
+	desc = "Коробка, полная вещей для слежения за подонками."
 	icon_state = "implant"
 	starts_with = list(
 		/obj/item/weapon/implantcase/tracking = 4,
@@ -338,7 +338,7 @@
 
 /obj/item/weapon/storage/box/chemimp
 	name = "boxed chemical implant kit"
-	desc = "Box of stuff used to implant chemicals."
+	desc = "Коробка с вещами, используемыми для имплантации химикатов."
 	icon_state = "implant"
 	starts_with = list(
 		/obj/item/weapon/implantcase/chem = 5,
@@ -348,7 +348,7 @@
 
 /obj/item/weapon/storage/box/camerabug
 	name = "mobile camera pod box"
-	desc = "A box containing some mobile camera pods."
+	desc = "Коробка с мобильными камерами."
 	icon_state = "pda"
 	starts_with = list(
 		/obj/item/device/camerabug = 6,
@@ -357,13 +357,13 @@
 
 /obj/item/weapon/storage/box/rxglasses
 	name = "box of prescription glasses"
-	desc = "This box contains nerd glasses."
+	desc = "В этой коробке находятся очки для задротов."
 	icon_state = "glasses"
 	starts_with = list(/obj/item/clothing/glasses/regular = 7)
 
 /obj/item/weapon/storage/box/cdeathalarm_kit
 	name = "death alarm kit"
-	desc = "Box of stuff used to implant death alarms."
+	desc = "Коробка с вещами, которые используются для установки сигналов о смерти."
 	icon_state = "implant"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(
@@ -373,36 +373,36 @@
 
 /obj/item/weapon/storage/box/condimentbottles
 	name = "box of condiment bottles"
-	desc = "It has a large ketchup smear on it."
+	desc = "На ней большой мазок кетчупа."
 	starts_with = list(/obj/item/weapon/reagent_containers/food/condiment = 7)
 
 /obj/item/weapon/storage/box/cups
 	name = "box of paper cups"
-	desc = "It has pictures of paper cups on the front."
+	desc = "На лицевой стороне изображены бумажные стаканчики."
 	starts_with = list(/obj/item/weapon/reagent_containers/food/drinks/sillycup = 7)
 
 /obj/item/weapon/storage/box/donkpockets
 	name = "box of donk-pockets"
-	desc = "<B>Instructions:</B> <I>Heat in microwave. Product will cool if not eaten within seven minutes.</I>"
+	desc = "<B>Инструкция:</B> <I>Нагрейте в микроволновой печи. Продукт остынет, если его не съесть в течение семи минут.</I>"
 	icon_state = "donk_kit"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/donkpocket = 7)
 
 /obj/item/weapon/storage/box/sinpockets
 	name = "box of sin-pockets"
-	desc = "<B>Instructions:</B> <I>Crush bottom of package to initiate chemical heating. Wait for 20 seconds before consumption. Product will cool if not eaten within seven minutes.</I>"
+	desc = "<B>Инструкция:</B> <I>Раздавите нижнюю часть упаковки, чтобы вызвать химический нагрев. Подождите 20 секунд перед употреблением. Продукт остынет, если его не съесть в течение семи минут.</I>"
 	icon_state = "donk_kit"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/donkpocket/sinpocket = 7)
 
 /obj/item/weapon/storage/box/buns
 	name = "box of bread buns"
-	desc = "Freshly baked at some point in the past few months."
+	desc = "Свежеиспеченный в какой-то момент хлеб, за последние несколько месяцев."
 	icon_state = "bun_box"
 	max_storage_space = ITEMSIZE_COST_NORMAL * 5
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/bun = 12)
 
 /obj/item/weapon/storage/box/monkeycubes
 	name = "monkey cube box"
-	desc = "Drymate brand monkey cubes. Just add water!"
+	desc = "Кубики обезьяны бренда Drymate. Просто добавьте воды!"
 	icon = 'icons/obj/food.dmi'
 	icon_state = "monkeycubebox"
 	can_hold = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube)
@@ -410,51 +410,51 @@
 
 /obj/item/weapon/storage/box/monkeycubes/farwacubes
 	name = "farwa cube box"
-	desc = "Drymate brand farwa cubes, shipped from Meralar. Just add water!"
+	desc = "Кубики фарвы марки Drymate, поставляемые с Мералара. Просто добавьте воды!"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube = 4)
 
 /obj/item/weapon/storage/box/monkeycubes/stokcubes
 	name = "stok cube box"
-	desc = "Drymate brand stok cubes, shipped from Moghes. Just add water!"
+	desc = "Кубики кочегарки марки Drymate, отгруженные с Могеса. Просто добавьте воды!"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube = 4)
 
 /obj/item/weapon/storage/box/monkeycubes/neaeracubes
 	name = "neaera cube box"
-	desc = "Drymate brand neaera cubes, shipped from Qerr'balak. Just add water!"
+	desc = "Кубики neaera марки Drymate, поставляемые с Керр'Балака. Просто добавьте воды!"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube = 4)
 
 /obj/item/weapon/storage/box/ids
 	name = "box of spare IDs"
-	desc = "Has so many empty IDs."
+	desc = "Внутри много пустых ID."
 	icon_state = "id"
 	starts_with = list(/obj/item/weapon/card/id = 7)
 
 /obj/item/weapon/storage/box/seccarts
 	name = "box of spare R.O.B.U.S.T. Cartridges"
-	desc = "A box full of R.O.B.U.S.T. Cartridges, used by Security."
+	desc = "Коробка с R.O.B.U.S.T. Картриджами, используемые службой безопасности."
 	icon_state = "pda"
 	starts_with = list(/obj/item/weapon/cartridge/security = 7)
 
 /obj/item/weapon/storage/box/handcuffs
 	name = "box of spare handcuffs"
-	desc = "A box full of handcuffs."
+	desc = "Коробка с наручниками."
 	icon_state = "handcuff"
 	starts_with = list(/obj/item/weapon/handcuffs = 7)
 
 /obj/item/weapon/storage/box/mousetraps
 	name = "box of Pest-B-Gon mousetraps"
-	desc = "<B><FONT color='red'>WARNING:</FONT></B> <I>Keep out of reach of children</I>."
+	desc = "<B><FONT color='red'>ВНИМАНИЕ:</FONT></B> <I>Храните в недоступном для детей месте</I>."
 	icon_state = "mousetraps"
 	starts_with = list(/obj/item/device/assembly/mousetrap = 7)
 
 /obj/item/weapon/storage/box/pillbottles
 	name = "box of pill bottles"
-	desc = "It has pictures of pill bottles on its front."
+	desc = "На передней панели изображены баночки с таблетками."
 	starts_with = list(/obj/item/weapon/storage/pill_bottle = 7)
 
 /obj/item/weapon/storage/box/snappops
 	name = "snap pop box"
-	desc = "Eight wrappers of fun! Ages 8 and up. Not suitable for children."
+	desc = "Восемь фантиков веселья! Возраст от 8 лет и старше. Не подходит для детей."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "spbox"
 	can_hold = list(/obj/item/toy/snappop)
@@ -462,7 +462,7 @@
 
 /obj/item/weapon/storage/box/matches
 	name = "matchbox"
-	desc = "A small box of 'Space-Proof' premium matches."
+	desc = "Небольшая коробка спичек премиум-класса Space-Proof."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	w_class = ITEMSIZE_TINY
@@ -484,7 +484,7 @@
 
 /obj/item/weapon/storage/box/autoinjectors
 	name = "box of injectors"
-	desc = "Contains autoinjectors."
+	desc = "Содержит автоинжекторы."
 	icon_state = "syringe"
 	starts_with = list(/obj/item/weapon/reagent_containers/hypospray/autoinjector = 7)
 
@@ -492,7 +492,7 @@
 	name = "box of replacement bulbs"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "light"
-	desc = "This box is shaped on the inside so that only light tubes and bulbs fit."
+	desc = "Эта коробка имеет форму внутри, так что туда подходят только световые трубки и лампочки."
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	storage_slots = 24
 	can_hold = list(/obj/item/weapon/light/tube, /obj/item/weapon/light/bulb)
@@ -517,7 +517,7 @@
 
 /obj/item/weapon/storage/box/freezer
 	name = "portable freezer"
-	desc = "This nifty shock-resistant device will keep your 'groceries' nice and non-spoiled."
+	desc = "Это изящное ударопрочное устройство сохранит ваши \"продукты\" красивыми и не испорченными."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "portafreezer"
 	item_state_slots = list(slot_r_hand_str = "medicalpack", slot_l_hand_str = "medicalpack")
@@ -545,10 +545,10 @@
 
 /obj/item/weapon/storage/box/ambrosia
 	name = "ambrosia seeds box"
-	desc = "Contains the seeds you need to get a little high."
+	desc = "Содержит семена, которые вам нужны, чтобы получить немного кайфа."
 	starts_with = list(/obj/item/seeds/ambrosiavulgarisseed = 7)
 
 /obj/item/weapon/storage/box/ambrosiadeus
 	name = "ambrosia deus seeds box"
-	desc = "Contains the seeds you need to get a proper healthy high."
+	desc = "Содержит семена, необходимые для получения правильного здорового кайфа."
 	starts_with = list(/obj/item/seeds/ambrosiadeusseed = 7)

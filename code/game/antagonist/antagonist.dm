@@ -7,7 +7,7 @@
 	var/avoid_silicons = FALSE				// If we won't hand this antag role to silicons (AI, borg, etc)
 
 	// Strings.
-	var/welcome_text = "Планируйте хаос и позвольте собакам войны ускользнуть!"
+	var/welcome_text = "Планируйте и выполняйте, и не позвольте шавкам из СБ поймать вас!"
 	var/antag_sound = 'sound/effects/antag_notice/general_baddie_alert.ogg' // The sound file to play when someone gets this role. Only they can hear it.
 	var/leader_welcome_text                 // Text shown to the leader, if any.
 	var/victory_text                        // World output at roundend for victory.
@@ -18,7 +18,7 @@
 	// Role data.
 	var/id = "traitor"                      // Unique datum identifier.
 	var/role_type = BE_TRAITOR              // Preferences option for this role.
-	var/role_text = "Traitor"               // special_role text.
+	var/role_text = "Убийца"               // special_role text.
 	var/role_text_plural = "Traitors"       // As above but plural.
 
 	// Visual references.
@@ -74,7 +74,7 @@
 	var/default_access = list()
 	var/id_type = /obj/item/weapon/card/id
 
-	var/antag_text = "YВы антагонист! В рамках правил, \
+	var/antag_text = "Вы антагонист! В рамках правил, \
 		постарайтесь действовать как противодействующая сила экипажа. Продолжайте РП и постарайтесь, \
 		чтобы другие игроки тоже <i>получали удовольсвтие от игры</i>! Если вы запутались или растерялись, всегда обращайтесь за помощью к администратору, \
 		а прежде чем предпринимать крайние меры, попробуйте также связаться с администрацией! \
@@ -143,10 +143,10 @@
 		if(players && players.len)
 			player = pick(players)
 	if(!istype(player))
-		message_admins("[uppertext(ticker.mode.name)]: Failed to find a candidate for [role_text].")
+		message_admins("[uppertext(ticker.mode.name)]: Не удалось найти кандидата на [role_text].")
 		return 0
-	to_chat(player.current, "<span class='danger'><i>You have been selected this round as an antagonist!</i></span>")
-	message_admins("[uppertext(ticker.mode.name)]: Selected [player] as a [role_text].")
+	to_chat(player.current, "<span class='danger'><i>Вы были выбраны в этом раунде в качестве антагониста!</i></span>")
+	message_admins("[uppertext(ticker.mode.name)]: Выбран [player], на роль [role_text].")
 	if(istype(player.current, /mob/observer/dead))
 		create_default(player.current)
 	else
