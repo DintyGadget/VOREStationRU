@@ -44,7 +44,7 @@
 //VOREStation Add End
 
 var/list/be_special_flags = list(
-	"Traitor"          = BE_TRAITOR,
+	"Убийца"          = BE_TRAITOR,
 	"Operative"        = BE_OPERATIVE,
 	"Changeling"       = BE_CHANGELING,
 	"Wizard"           = BE_WIZARD,

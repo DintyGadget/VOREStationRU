@@ -34,7 +34,7 @@ export const CrewManifestContent = (props, context) => {
   } = data;
 
   return (
-    <Section title="Crew Manifest" noTopPadding>
+    <Section title="Манифест экипажа" noTopPadding>
       {manifest.map(cat => !!cat.elems.length && (
         <Section
           title={(
@@ -48,9 +48,9 @@ export const CrewManifestContent = (props, context) => {
           level={2}>
           <Table>
             <Table.Row header color="white">
-              <Table.Cell>Name</Table.Cell>
-              <Table.Cell>Rank</Table.Cell>
-              <Table.Cell>Active</Table.Cell>
+              <Table.Cell>Ф.И</Table.Cell>
+              <Table.Cell>Должность</Table.Cell>
+              <Table.Cell>Активность</Table.Cell>
             </Table.Row>
             {cat.elems.map(person => (
               <Table.Row color="average" key={person.name + person.rank}>

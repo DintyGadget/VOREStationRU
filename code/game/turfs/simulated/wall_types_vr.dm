@@ -1,6 +1,6 @@
 /turf/simulated/shuttle/wall/alien/blue
 	name = "hybrid wall"
-	desc = "Seems slightly more friendly than if the wall were ominous purple."
+	desc = "Кажется немного более дружелюбным, чем если бы стена была зловеще фиолетовой."
 	icon = 'icons/turf/shuttle_alien_blue.dmi'
 	light_color = "#1fdbf4" // Cyan-ish
 
@@ -16,7 +16,7 @@
 
 /turf/simulated/flesh
 	name = "flesh wall"
-	desc = "The fleshy surface of this wall squishes nicely under your touch but looks and feels extremly strong"
+	desc = "Мясистая поверхность этой стены приятно хлюпает под вашим прикосновением но выглядит и чувствует себя чрезвычайно сильной."
 	icon = 'icons/turf/stomach_vr.dmi'
 	icon_state = "flesh"
 	opacity = 1
@@ -25,7 +25,7 @@
 
 /turf/simulated/flesh/colour
 	name = "flesh wall"
-	desc = "The fleshy surface of this wall squishes nicely under your touch but looks and feels extremly strong"
+	desc = "Мясистая поверхность этой стены приятно хлюпает под вашим прикосновением но выглядит и чувствует себя чрезвычайно сильной."
 	icon = 'icons/turf/stomach_vr.dmi'
 	icon_state = "colorable-wall"
 	opacity = 1
@@ -63,7 +63,7 @@ var/list/flesh_overlay_cache = list()
 
 /turf/simulated/gore
 	name = "wall of viscera"
-	desc = "Its veins pulse in a sickeningly rapid fashion, while certain spots of the wall rise and fall gently, much like slow, deliberate breathing."
+	desc = "Его вены пульсируют тошнотворно быстро, в то время как некоторые участки стены поднимаются и опускаются мягко, очень похоже на медленное, осознанное дыхание."
 	icon = 'icons/goonstation/turf/meatland.dmi'
 	icon_state = "bloodwall_2"
 	opacity = 1
@@ -72,7 +72,7 @@ var/list/flesh_overlay_cache = list()
 
 /turf/simulated/goreeyes
 	name = "wall of viscera"
-	desc = "Strangely observant eyes dot the wall. Getting too close has the eyes fixate on you, while their pupils shake violently. Each socket is connected by a series of winding, writhing veins."
+	desc = "Странные глаза усеивают стену. Когда вы подходите слишком близко, глаза фиксируются на вас, в то время как их зрачки сильно дрожат. Каждая розетка соединена серией извивающихся жил."
 	icon = 'icons/goonstation/turf/meatland.dmi'
 	icon_state = "bloodwall_4"
 	opacity = 1

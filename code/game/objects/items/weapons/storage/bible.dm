@@ -21,7 +21,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 
 /obj/item/weapon/storage/bible
 	name = "bible"
-	desc = "Apply to head repeatedly."
+	desc = "Вдолбите в голову несколько раз."
 	icon_state ="bible"
 	item_state = "bible"
 	item_icons = list(
@@ -83,7 +83,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 
 /obj/item/weapon/storage/bible/booze
 	name = "bible"
-	desc = "To be applied to the head repeatedly."
+	desc = "Вдолбите в голову повторно."
 	icon_state ="bible"
 
 /obj/item/weapon/storage/bible/booze/New()
@@ -99,7 +99,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	if(!proximity) return
 	if(user.mind && (user.mind.assigned_role == "Священник"))
 		if(A.reagents && A.reagents.has_reagent("water")) //blesses all the water in the holder
-			to_chat(user, "<span class='notice'>You bless [A].</span>")
+			to_chat(user, "<span class='notice'>Вы благословляете [A].</span>")
 			var/water2holy = A.reagents.get_reagent_amount("water")
 			A.reagents.del_reagent("water")
 			A.reagents.add_reagent("holywater",water2holy)

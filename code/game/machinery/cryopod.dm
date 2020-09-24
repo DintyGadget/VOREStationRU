@@ -272,8 +272,8 @@
 	occupied_icon_state = "oncenter"
 	on_store_message = "has departed from the colony."
 	on_store_name = "Travel Oversight"
-	on_enter_occupant_message = "The gateway activates, and you step into the swirling portal."
-	on_store_visible_message_1 = "'s portal disappears just after"
+	on_enter_occupant_message = "Врата активируются, и вы входите в крутящийся портал."
+	on_store_visible_message_1 = "портал исчезает сразу после этого"
 	on_store_visible_message_2 = "finishes walking across it."
 
 	time_till_despawn = 60 //1 second, because gateway.
@@ -667,7 +667,7 @@
 	var/willing = null //We don't want to allow people to be forced into despawning.
 
 	if(M.client)
-		if(alert(M,"Вы хотели бы ввести долгосрочное хранение?",,"Да","Нет") == "Да")
+		if(alert(M,"Вы хотели бы лечь долгосрочное хранение?",,"Да","Нет") == "Да")
 			if(!M) return
 			willing = 1
 	else

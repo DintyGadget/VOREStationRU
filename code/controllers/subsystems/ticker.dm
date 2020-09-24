@@ -119,7 +119,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	var/list/runnable_modes = config.get_runnable_modes()
 	if((master_mode == "random") || (master_mode == "secret"))
 		if(!runnable_modes.len)
-			to_world("<span class='danger'><B>Unable to choose playable game mode.</B> Reverting to pregame lobby.</span>")
+			to_world("<span class='danger'><B>Невозможно выбрать игровой режим.</B> Возврат к предигровому лобби.</span>")
 			return 0
 		if(secret_force_mode != "secret")
 			src.mode = config.pick_mode(secret_force_mode)
@@ -132,7 +132,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 		src.mode = config.pick_mode(master_mode)
 
 	if(!src.mode)
-		to_world("<span class='danger'>Serious error in mode setup! Reverting to pregame lobby.</span>") //Uses setup instead of set up due to computational context.
+		to_world("<span class='danger'>Серьезная ошибка в настройке режима! Возврат к предигровому лобби.</span>") //Uses setup instead of set up due to computational context.
 		return 0
 
 	job_master.ResetOccupations()
@@ -141,7 +141,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 	job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
 
 	if(!src.mode.can_start())
-		to_world("<span class='danger'><B>Unable to start [mode.name].</B> Not enough players readied, [config.player_requirements[mode.config_tag]] players needed. Reverting to pregame lobby.</span>")
+		to_world("<span class='danger'><B>Невозможно запустить [mode.name].</B> Недостаточно игроков наготове, нужно еще игроков: [config.player_requirements[mode.config_tag]]. Возврат к предигровому лобби.</span>")
 		mode.fail_setup()
 		mode = null
 		job_master.ResetOccupations()

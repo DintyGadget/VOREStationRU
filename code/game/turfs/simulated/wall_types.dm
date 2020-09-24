@@ -42,7 +42,7 @@
 	. = ..(mapload, "cult","cult2","cult")
 /turf/unsimulated/wall/cult
 	name = "cult wall"
-	desc = "Hideous images dance beneath the surface."
+	desc = "Ужасные образы танцуют под поверхностью."
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "cult"
 

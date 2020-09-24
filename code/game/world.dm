@@ -507,9 +507,9 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.gg/mbmYyeu\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Наш дискорд"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -524,17 +524,17 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (!config.enter_allowed)
 		features += "closed"
 
-	features += config.abandon_allowed ? "respawn" : "no respawn"
+	features += config.abandon_allowed ? "возрождения разрешены" : "возрождения запрещены"
 
 	features += config.persistence_disabled ? "persistence disabled" : "persistence enabled"
 
 	features += config.persistence_ignore_mapload ? "persistence mapload disabled" : "persistence mapload enabled"
 
 	if (config && config.allow_vote_mode)
-		features += "vote"
+		features += "голосование"
 
 	if (config && config.allow_ai)
-		features += "AI allowed"
+		features += "ИИ включен"
 
 	var/n = 0
 	for (var/mob/M in player_list)
@@ -542,13 +542,13 @@ var/world_topic_spam_protect_time = world.timeofday
 			n++
 
 	if (n > 1)
-		features += "~[n] players"
+		features += "~[n] игроков"
 	else if (n > 0)
-		features += "~[n] player"
+		features += "~[n] игрок"
 
 
 	if (config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
+		features += "хостит <b>[config.hostedby]</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"
