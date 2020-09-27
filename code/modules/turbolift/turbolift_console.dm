@@ -26,7 +26,7 @@
 		if(user.a_intent == I_HURT)
 			user.visible_message("<span class='danger'>[user] бьет по кнопке лифта!</span>")
 		else
-			user.visible_message("<span class='notice'>[user] нажимается на кнопку лифта.</span>")
+			user.visible_message("<span class='notice'>[user] нажимает на кнопку лифта.</span>")
 
 
 /obj/structure/lift/New(var/newloc, var/datum/turbolift/_lift)

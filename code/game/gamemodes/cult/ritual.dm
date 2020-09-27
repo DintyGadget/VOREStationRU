@@ -7,7 +7,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 
 /client/proc/check_words() // -- Urist
 	set category = "Спец. команды"
-	set name = "Check Rune Words"
+	set name = "Проверить рунические слова"
 	set desc = "Check the rune-word meaning"
 	if(!cultwords["travel"])
 		runerandom()
@@ -21,7 +21,7 @@ var/global/list/rnwords = list("ire","ego","nahlizet","certum","veri","jatkaa","
 		runewords-=cultwords[word]
 
 /obj/effect/rune
-	desc = "A strange collection of symbols drawn in blood."
+	desc = "Странная коллекция символов, нарисованных кровью."
 	anchored = 1
 	icon = 'icons/obj/rune.dmi'
 	icon_state = "1"

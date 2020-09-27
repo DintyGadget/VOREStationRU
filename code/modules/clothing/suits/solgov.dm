@@ -8,7 +8,7 @@
 
 /obj/item/clothing/suit/storage/solgov/service
 	name = "service jacket"
-	desc = "A uniform service jacket, plain and undecorated."
+	desc = "Френч форменный, однотонный, без украшений."
 	icon_state = "blackservice"
 	item_state = "blackservice"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
@@ -22,7 +22,7 @@
 
 /obj/item/clothing/suit/storage/solgov/service/sifguard
 	name = "\improper SifGuard jacket"
-	desc = "A uniform service jacket belonging to the Sif Defense Force."
+	desc = "Форменный френч, принадлежащий Силам обороны Сиф."
 	icon_state = "ecservice_crew"
 
 /obj/item/clothing/suit/storage/solgov/service/sifguard/medical
@@ -70,13 +70,13 @@
 
 /obj/item/clothing/suit/storage/solgov/service/fleet
 	name = "fleet service jacket"
-	desc = "A navy blue SCG Fleet service jacket."
+	desc = "Темно-синий френч от SCG Fleet."
 	icon_state = "blueservice"
 	item_state = "blueservice"
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/snco
 	name = "fleet SNCO service jacket"
-	desc = "A navy blue SCG Fleet service jacket with silver cuffs."
+	desc = "Темно-синий френч SCG Fleet с серебряными манжетами."
 	icon_state = "blueservice_snco"
 	item_state = "blueservice_snco"
 
@@ -88,7 +88,7 @@
 
 /obj/item/clothing/suit/storage/solgov/service/fleet/command
 	name = "fleet senior officer's service jacket"
-	desc = "A navy blue SCG Fleet dress jacket with gold accents."
+	desc = "Темно-синяя классическая куртка SCG Fleet с золотыми вставками."
 	icon_state = "blueservice_comm"
 	item_state = "blueservice_comm"
 

@@ -59,8 +59,8 @@
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])
-		var/new_size = input(user, "Выберите размер вашего персонажа, в пределах от 25% до 200%", "Set Size") as num|null
-		if (!ISINRANGE(new_size,25,200))
+		var/new_size = input(user, "Выберите размер вашего персонажа, в пределах от 50% до 140%", "Set Size") as num|null
+		if (!ISINRANGE(new_size,50,140))
 			pref.size_multiplier = 1
 			to_chat(user, "<span class='notice'>Invalid size.</span>")
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -73,10 +73,10 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["weight"])
-		var/new_weight = input(user, "Choose your character's relative body weight.\n\
-			This measurement should be set relative to a normal 5'10'' person's body and not the actual size of your character.\n\
-			If you set your weight to 500 because you're a naga or have metal implants then complain that you're a blob I\n\
-			swear to god I will find you and I will punch you for not reading these directions!\n\
+		var/new_weight = input(user, "Выберите относительную массу тела вашего персонажа.\n\
+			Это измерение должно быть установлено относительно тела обычного человека 5 футов 10 дюймов, а не фактического размера вашего персонажа.\n\
+			Если вы установите свой вес на 500, потому что вы нага или у вас металлические имплантаты, тогда вы будете жаловаться на то, что вы капля, клянусь богом,\n\
+			я найду вас и ударю вас за то, что вы не прочитали эти указания!\n\
 			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference") as num|null
 		if(new_weight)
 			var/unit_of_measurement = alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", "Pounds", "Kilograms")

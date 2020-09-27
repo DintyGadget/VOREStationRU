@@ -60,7 +60,7 @@ var/const/TALENG			=(1<<4)
 //Whitelist надеюсь кодер который написал это уебище горит в аду
 
 /proc/guest_jobbans(var/job)
-	return ( (job == "Директор колонии") || (job == "Глава персонала") || (job == "Секретарь") || (job == "Интендант") || (job == "Агент внутренних дел") || (job == "Главный инженер") || (job == "Первопроходец") || (job == "Главврач") || (job == "Директор исследований") || (job == "Глава безопасности") || (job == "Надзиратель") || (job in SSjob.get_job_titles_in_department(DEPARTMENT_TALON)) || (job == "AI") )
+	return ( (job == "Директор колонии") || (job == "Глава персонала") || (job == "Секретарь") || (job == "Интендант") || (job == "Агент внутренних дел") || (job == "Главный инженер") || (job == "Первопроходец") || (job == "Главврач") || (job == "Директор исследований") || (job == "Глава безопасности") || (job == "Надзиратель") || (job in SSjob.get_job_titles_in_department(DEPARTMENT_TALON)) || (job == "AI") || (job == "positronic brain") || (job == "malf AI") )
 	//return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )
 
 /proc/get_job_datums()

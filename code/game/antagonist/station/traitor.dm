@@ -11,6 +11,7 @@ var/datum/antagonist/traitor/traitors
 /datum/antagonist/traitor/auto
 	id = MODE_AUTOTRAITOR
 	allow_latejoin = 1
+	protected_jobs = list("Офицер безопасности", "Надзиратель", "Детектив", "Агент внутренних дел", "Глава безопасности", "Директор колонии")
 	hard_cap = 4
 	initial_spawn_target = 4
 
@@ -160,7 +161,7 @@ var/datum/antagonist/traitor/traitors
 		target_radio.hidden_uplink = T
 		target_radio.traitor_frequency = freq
 		to_chat(traitor_mob, "Портативный ретранслятор телепортации объектов был установлен в вашем [R.name] [loc]. Просто наберите частоту [format_frequency(freq)] чтобы разблокировать его скрытые функции.")
-		traitor_mob.mind.store_memory("<B>Radio Freq:</B> [format_frequency(freq)] ([R.name] [loc]).")
+		traitor_mob.mind.store_memory("<B>Частота связи:</B> [format_frequency(freq)] ([R.name] [loc]).")
 
 	else if (istype(R, /obj/item/device/pda))
 		// generate a passcode if the uplink is hidden in a PDA

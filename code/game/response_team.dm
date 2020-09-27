@@ -8,7 +8,7 @@ var/can_call_ert
 var/silent_ert = 0
 
 /client/proc/response_team()
-	set name = "Dispatch Emergency Response Team"
+	set name = "Диспетчерская группа аварийного реагирования"
 	set category = "Спец. команды"
 	set desc = "Send an emergency response team to the station"
 
@@ -42,7 +42,7 @@ var/silent_ert = 0
 
 client/verb/JoinResponseTeam()
 
-	set name = "Join Response Team"
+	set name = "Присоединиться к группе реагирования"
 	set category = "IC"
 
 	if(!MayRespawn(1))

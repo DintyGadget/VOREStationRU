@@ -31,7 +31,7 @@
 	var/list/misc = new()
 	var/list/isactive = new()
 	var/dat = {"
-	<head><style>
+	<head><meta charset=\"utf-8\"><style>
 		.manifest {border-collapse:collapse;}
 		.manifest td, th {border:1px solid [monochrome?"black":"[OOC?"black; background-color:#272727; color:white":"#DEF; background-color:white; color:black"]"]; padding:.25em}
 		.manifest th {height: 2em; [monochrome?"border-top-width: 3px":"background-color: [OOC?"#40628A":"#48C"]; color:white"]}
@@ -40,7 +40,7 @@
 		.manifest tr.alt td {[monochrome?"border-top-width: 2px":"background-color: [OOC?"#373737; color:white":"#DEF"]"]}
 	</style></head>
 	<table class="manifest" width='350px'>
-	<tr class='head'><th>Name</th><th>Rank</th><th>Activity</th></tr>
+	<tr class='head'><th>Ф.И</th><th>Должность</th><th>Активность</th></tr>
 	"}
 	var/even = 0
 	// sort mobs
@@ -55,7 +55,7 @@
 				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
 					active = 1
 					break
-			isactive[name] = active ? "Active" : "Inactive"
+			isactive[name] = active ? "Активен" : "Неактивен"
 		else
 			isactive[name] = t.fields["p_stat"]
 			//to_world("[name]: [rank]")
@@ -102,7 +102,7 @@
 				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
 					active = 1
 					break
-			isactive[name] = active ? "Active" : "Inactive"
+			isactive[name] = active ? "Активен" : "Неактивен"
 
 			var/datum/job/J = SSjob.get_job(real_rank)
 			if(J?.offmap_spawn)
@@ -119,50 +119,50 @@
 
 
 	if(heads.len > 0)
-		dat += "<tr><th colspan=3>Heads</th></tr>"
+		dat += "<tr><meta charset=\"utf-8\"><th colspan=3>Главный отдел</th></tr>"
 		for(name in heads)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[heads[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	if(sec.len > 0)
-		dat += "<tr><th colspan=3>Security</th></tr>"
+		dat += "<tr><th colspan=3>Безопасность</th></tr>"
 		for(name in sec)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[sec[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	if(eng.len > 0)
-		dat += "<tr><th colspan=3>Engineering</th></tr>"
+		dat += "<tr><th colspan=3>Инженерный отдел</th></tr>"
 		for(name in eng)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[eng[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	if(med.len > 0)
-		dat += "<tr><th colspan=3>Medical</th></tr>"
+		dat += "<tr><th colspan=3>Медицинский отдел</th></tr>"
 		for(name in med)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[med[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	if(sci.len > 0)
-		dat += "<tr><th colspan=3>Science</th></tr>"
+		dat += "<tr><th colspan=3>Научный отдел</th></tr>"
 		for(name in sci)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[sci[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	if(car.len > 0)
-		dat += "<tr><th colspan=3>Cargo</th></tr>"
+		dat += "<tr><th colspan=3>Отдел снабжения</th></tr>"
 		for(name in car)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[car[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	//VOREStation Edit Begin
 	if(pla.len > 0)
-		dat += "<tr><th colspan=3>Exploration</th></tr>"
+		dat += "<tr><th colspan=3>Исследователи</th></tr>"
 		for(name in pla)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[pla[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	//VOREStation Edit End
 	if(civ.len > 0)
-		dat += "<tr><th colspan=3>Civilian</th></tr>"
+		dat += "<tr><th colspan=3>Гражданские</th></tr>"
 		for(name in civ)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[civ[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even
 	// in case somebody is insane and added them to the manifest, why not
 	if(bot.len > 0)
-		dat += "<tr><th colspan=3>Silicon</th></tr>"
+		dat += "<tr><th colspan=3>ИИ</th></tr>"
 		for(name in bot)
 			dat += "<tr[even ? " class='alt'" : ""]><td>[name]</td><td>[bot[name]]</td><td>[isactive[name]]</td></tr>"
 			even = !even

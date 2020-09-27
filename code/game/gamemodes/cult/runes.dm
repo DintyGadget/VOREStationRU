@@ -29,7 +29,7 @@ var/list/sacrificed = list()
 					allrunesloc.len = index
 					allrunesloc[index] = R.loc
 			if(index >= 5)
-				to_chat(user, "<span class='danger'>You feel pain, as rune disappears in reality shift caused by too much wear of space-time fabric.</span>")
+				to_chat(user, "<span class='danger'>Вы чувствуете боль, так как руна исчезает в реальности сдвига, вызванного слишком большим износом пространственно-временной ткани.</span>")
 				if (istype(user, /mob/living))
 					user.take_overall_damage(5, 0)
 				qdel(src)
@@ -39,8 +39,8 @@ var/list/sacrificed = list()
 				else
 					user.whisper("Sas[pick("'","`")]so c'arta forbici!")
 				user.visible_message("<span class='danger'>[user] disappears in a flash of red light!</span>", \
-				"<span class='danger'>You feel as your body gets dragged through the dimension of Nar-Sie!</span>", \
-				"<span class='danger'>You hear a sickening crunch and sloshing of viscera.</span>")
+				"<span class='danger'>Вы чувствуете, как ваше тело протаскивают через измерение Нар-Си!</span>", \
+				"<span class='danger'>Вы слышите тошнотворный хруст и хлюпанье внутренностей.</span>")
 				user.loc = allrunesloc[rand(1,index)]
 				return
 			if(istype(src,/obj/effect/rune))

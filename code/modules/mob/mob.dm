@@ -65,11 +65,11 @@
 					return
 	// Added voice muffling for Issue 41.
 	if(stat == UNCONSCIOUS || sleeping > 0)
-		to_chat(src, "<I>... You can almost hear someone talking ...</I>")
+		to_chat(src, "<I>... Вы слышите, как кто-то тихо говорит ...</I>")
 	else
 		to_chat(src,msg)
 		if(teleop)
-			to_chat(teleop, create_text_tag("body", "BODY:", teleop) + "[msg]")
+			to_chat(teleop, create_text_tag("body", "ТЕЛО:", teleop) + "[msg]")
 	return
 
 // Show a message to all mobs and objects in sight of this one
@@ -200,7 +200,7 @@
 	set category = "IC"
 
 	if((is_blind(src) || usr.stat) && !isobserver(src))
-		to_chat(src, "<span class='notice'>Something is there but you can't see it.</span>")
+		to_chat(src, "<span class='notice'>Тут что-то есть, но вы этого не видите.</span>")
 		return 1
 
 	//Could be gone by the time they finally pick something
@@ -210,7 +210,7 @@
 	face_atom(A)
 	var/list/results = A.examine(src)
 	if(!results || !results.len)
-		results = list("You were unable to examine that. Tell a developer!")
+		results = list("Вы не смогли это изучить. Скажите разработчику!")
 	to_chat(src, jointext(results, "<br>"))
 
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
@@ -275,7 +275,7 @@
 	if(mind)
 		mind.store_memory(msg)
 	else
-		to_chat(src, "The game appears to have misplaced your mind datum, so we can't show you your notes.")
+		to_chat(src, "Похоже, что игра потеряла ваши мысленные данные, поэтому мы не можем показать вам ваши заметки.")
 
 /mob/proc/store_memory(msg as message, popup, sane = 1)
 	msg = copytext_char(msg, 1, MAX_MESSAGE_LEN)
@@ -303,7 +303,7 @@
 /mob/proc/warn_flavor_changed()
 	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
 		to_chat(src, "<h2 class='alert'>OOC Warning:</h2>")
-		to_chat(src, "<span class='alert'>Your flavor text is likely out of date! <a href='byond://?src=\ref[src];flavor_change=1'>Change</a></span>")
+		to_chat(src, "<span class='alert'>Ваше описание персонажа, вероятно, устарело! <a href='byond://?src=\ref[src];flavor_change=1'>Изменить</a></span>")
 
 /mob/proc/print_flavor_text()
 	if (flavor_text && flavor_text != "")
@@ -311,7 +311,7 @@
 		if(length(msg) <= 40)
 			return "<span class='notice'>[msg]</span>"
 		else
-			return "<span class='notice'>[copytext_char_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</span></a>"
+			return "<span class='notice'>[copytext_char_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>Еще...</span></a>"
 
 /*
 /mob/verb/help()
@@ -359,13 +359,13 @@
 	set category = "OOC"
 
 	if(stat != DEAD || !ticker)
-		to_chat(usr, "<span class='notice'><B>You must be dead to use this!</B></span>")
+		to_chat(usr, "<span class='notice'><B>Вы должны быть мертвы, чтобы использовать это!</B></span>")
 		return
 
 	// Final chance to abort "respawning"
 	if(mind && timeofdeath) // They had spawned before
-		var/choice = alert(usr, "Returning to the menu will prevent your character from being revived in-round. Are you sure?", "Confirmation", "No, wait", "Yes, leave")
-		if(choice == "No, wait")
+		var/choice = alert(usr, "Возврат в меню предотвратит возрождение вашего персонажа в раунде. Вы уверены?", "Confirmation", "Нет", "Да")
+		if(choice == "Нет")
 			return
 
 	// Beyond this point, you're going to respawn
@@ -430,7 +430,7 @@
 	var/eye_name = null
 
 	var/ok = "[is_admin ? "Admin Observe" : "Observe"]"
-	eye_name = input("Please, select a player!", ok, null, null) as null|anything in targets
+	eye_name = input("Выберите игрока!", ok, null, null) as null|anything in targets
 
 	if (!eye_name)
 		return
@@ -457,7 +457,7 @@
 		src << browse(null, t1)
 
 	if(href_list["flavor_more"])
-		usr << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", name, replacetext(flavor_text, "\n", "<BR>")), text("window=[];size=500x200", name))
+		usr << browse(text("<HTML><meta charset=\"utf-8\"><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", name, replacetext(flavor_text, "\n", "<BR>")), text("window=[];size=500x200", name))
 		onclose(usr, "[name]")
 	if(href_list["flavor_change"])
 		update_flavor_text()
