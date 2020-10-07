@@ -122,7 +122,7 @@
 		pda.ownjob = "Personal Assistant"
 		pda.owner = text("[]", src)
 		pda.name = pda.owner + " (" + pda.ownjob + ")"
-		
+
 		var/datum/data/pda/app/messenger/M = pda.find_program(/datum/data/pda/app/messenger)
 		if(M)
 			M.toff = TRUE
@@ -364,7 +364,7 @@
 	speak_query = sayverbs[(sayverbs.len>2 ? 3 : sayverbs.len)]
 
 /mob/living/silicon/pai/lay_down()
-	set name = "Rest"
+	set name = "Отдохнуть"
 	set category = "IC"
 
 	// Pass lying down or getting up to our pet human, if we're in a rig.

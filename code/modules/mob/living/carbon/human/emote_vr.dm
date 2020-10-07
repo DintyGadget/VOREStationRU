@@ -47,7 +47,7 @@
 			message = "lets out a woof."
 			playsound(src, 'sound/voice/woof2.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("nya")
-			message = "lets out a nya."
+			message = "някает."
 			m_type = 2
 			playsound(src, 'sound/voice/nya.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("mrowl")
@@ -95,7 +95,7 @@
 			message = "lets out a mystifying tone."
 			playsound(src, 'sound/voice/hypno.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("hiss")
-			message = "lets out a hiss."
+			message = "шипит."
 			m_type = 2
 			playsound(src, 'sound/voice/hiss.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("rattle")

@@ -388,7 +388,7 @@
 	soulcatcher.emote_into(message,src,eyeobj)
 
 /mob/living/carbon/brain/caught_soul/resist()
-	set name = "Resist"
+	set name = "Сопротивляться"
 	set category = "IC"
 
 	to_chat(src,"<span class='warning'>There's no way out! You're stuck in VR.</span>")

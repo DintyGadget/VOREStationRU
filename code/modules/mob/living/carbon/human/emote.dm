@@ -789,7 +789,7 @@
 	set desc = "Устанавливает описание, которое будет отображаться, когда кто-то вас осмотрит."
 	set category = "IC"
 
-	var/datum/gender/T = gender_datums[get_visible_gender()]
+	//var/datum/gender/T = gender_datums[get_visible_gender()]
 
 	pose = sanitize(input(usr, "Это [src]...", "Pose", null)  as text)
 
