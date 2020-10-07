@@ -17,6 +17,36 @@ var/list/sounded_species = null
 	sounded_species = null
 	emote("nya")
 
+/mob/living/verb/laugh1()
+	set name = "Кричать"
+	set category = "Эмоции"
+	sounded_species = null
+	emote("scream")
+
+/mob/living/verb/laugh1()
+	set name = "Щелкнуть пальцами"
+	set category = "Эмоции"
+	sounded_species = null
+	emote("snap")
+
+/mob/living/verb/laugh1()
+	set name = "Блевануть"
+	set category = "Эмоции"
+	sounded_species = null
+	emote("vomit")
+
+/mob/living/verb/laugh1()
+	set name = "Пожать руку"
+	set category = "Эмоции"
+	sounded_species = null
+	emote("handshake")
+
+/mob/living/verb/laugh1()
+	set name = "Обнять"
+	set category = "Эмоции"
+	sounded_species = null
+	emote("hug")
+
 /mob/living/verb/laugh4()
 	set name = "Рычать"
 	set category = "Эмоции"
@@ -97,3 +127,38 @@ mob/living/verb/laugh18()
 	set name = "Зевнуть"
 	set category = "Эмоции"
 	emote("yawn")
+
+/mob/living/verb/yawn()
+	set name = "Улыбнуться"
+	set category = "Эмоции"
+	emote("smile")
+
+/mob/living/verb/yawn()
+	set name = "Трясти головой"
+	set category = "Эмоции"
+	emote("shake")
+
+/mob/living/verb/yawn()
+	set name = "Хрустеть пальцами"
+	set category = "Эмоции"
+	emote("crack")
+
+/mob/living/verb/yawn()
+	set name = "Бормотать"
+	set category = "Эмоции"
+	emote("mumble")
+
+/mob/living/verb/yawn()
+	set name = "Ворчать"
+	set category = "Эмоции"
+	emote("grumble")
+
+/mob/living/verb/yawn()
+	set name = "Кашлять"
+	set category = "Эмоции"
+	emote("cough")
+
+/mob/living/verb/yawn()
+	set name = "Отдать честь"
+	set category = "Эмоции"
+	emote("salute")

@@ -826,7 +826,7 @@
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
 	if(showvoreprefs)
-		. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
+		. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Мех. настройки Vore\]</a></span>"
 
 /mob/living/Topic(href, href_list)	//Can't find any instances of Topic() being overridden by /mob/living in polaris' base code, even though /mob/living/carbon/human's Topic() has a ..() call
 	if(href_list["vore_prefs"])
@@ -836,22 +836,22 @@
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument
 	if(!user)
 		CRASH("display_voreprefs() was called without an associated user.")
-	var/dispvoreprefs = "<b>[src]'s vore preferences</b><br><br><br>"
+	var/dispvoreprefs = "<b>Настройки vore [src]</b><br><br><br>"
 	if(client && client.prefs)
 		if("CHAT_OOC" in client.prefs.preferences_disabled)
-			dispvoreprefs += "<font color='red'><b>OOC DISABLED</b></font><br>"
+			dispvoreprefs += "<font color='red'><b>OOC ОТКЛЮЧЕНО</b></font><br>"
 		if("CHAT_LOOC" in client.prefs.preferences_disabled)
-			dispvoreprefs += "<font color='red'><b>LOOC DISABLED</b></font><br>"
-	dispvoreprefs += "<b>Digestable:</b> [digestable ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Devourable:</b> [devourable ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Feedable:</b> [feeding ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Absorption Permission:</b> [absorbable ? "Allowed" : "Disallowed"]<br>"
-	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Mob Vore:</b> [allowmobvore ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Healbelly permission:</b> [permit_healbelly ? "Allowed" : "Disallowed"]<br>"
-	dispvoreprefs += "<b>Spontaneous vore prey:</b> [can_be_drop_prey ? "Enabled" : "Disabled"]<br>"
-	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
-	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=200x300;can_resize=0;can_minimize=0")
+			dispvoreprefs += "<font color='red'><b>LOOC ОТКЛЮЧЕНО</b></font><br>"
+	dispvoreprefs += "<b>Усваивание:</b> [digestable ? "Вкл" : "Выкл"]<br>"
+	dispvoreprefs += "<b>Пожирание:</b> [devourable ? "Вкл" : "Выкл"]<br>"
+	dispvoreprefs += "<b>Питаемость:</b> [feeding ? "Вкл" : "Выкл"]<br>"
+	dispvoreprefs += "<b>Разрешение на поглощение:</b> [absorbable ? "Разрешено" : "Запрещено"]<br>"
+	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Вкл" : "Выкл"]<br>"
+	dispvoreprefs += "<b>Vore для мобов:</b> [allowmobvore ? "Вкл" : "Выкл"]<br>"
+	dispvoreprefs += "<b>Разрешение на лечение:</b> [permit_healbelly ? "Разрешено" : "Запрещено"]<br>"
+	dispvoreprefs += "<b>Спонтанная добыча vore:</b> [can_be_drop_prey ? "Вкл" : "Выкл"]<br>"
+	dispvoreprefs += "<b>Спонтанный хищник vore:</b> [can_be_drop_pred ? "Вкл" : "Выкл"]<br>"
+	user << browse("<html><meta charset=\"utf-8\"><head><title>Ваши предпочтения VORE: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x350;can_resize=0;can_minimize=0")
 	onclose(user, "[name]")
 	return
 

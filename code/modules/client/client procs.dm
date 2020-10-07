@@ -161,7 +161,7 @@
 		return null
 
 	if(!config.guests_allowed && IsGuestKey(key))
-		alert(src,"This server doesn't allow guest accounts to play. Please go to http://www.byond.com/ and register for a key.","Guest","OK")
+		alert(src,"Этот сервер не позволяет играть гостевым учетным записям. Пожалуйста, зайдите на http://www.byond.com/ и зарегистрируйтесь для получения ключа.","Гость","OK")
 		del(src)
 		return
 
@@ -172,7 +172,7 @@
 
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
-		to_chat(src, "<font color='red'>If the title screen is black, resources are still downloading. Please be patient until the title screen appears.</font>")
+		to_chat(src, "<font color='red'>Если экран заголовка черный, ресурсы все еще загружаются. Пожалуйста, подождите.</font>")
 
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
@@ -349,8 +349,8 @@
 	//Panic bunker code
 	if (isnum(player_age) && player_age == 0) //first connection
 		if (config.panic_bunker && !holder && !deadmin_holder)
-			log_adminwarn("Failed Login: [key] - New account attempting to connect during panic bunker")
-			message_admins("<span class='adminnotice'>Failed Login: [key] - New account attempting to connect during panic bunker</span>")
+			log_adminwarn("Ошибка входа: [key] - Впервые заходит на сервер!")
+			message_admins("<span class='adminnotice'>Ошибка входа: [key] - Впервые заходит на сервер!</span>")
 			disconnect_with_message("Sorry but the server is currently not accepting connections from never before seen players.")
 			return 0
 

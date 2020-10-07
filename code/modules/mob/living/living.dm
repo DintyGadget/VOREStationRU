@@ -55,7 +55,7 @@
 	if(!..())
 		return 0
 
-	usr.visible_message("<b>[src]</b> points to [A]")
+	usr.visible_message("<b>[src]</b> указывает на [A]")
 	return 1
 
 /*one proc, four uses
@@ -133,21 +133,21 @@ default behaviour is:
 		if((tmob.mob_always_swap || (tmob.a_intent == I_HELP || tmob.restrained()) && (a_intent == I_HELP || src.restrained())) && tmob.canmove && canmove && !tmob.buckled && !buckled && can_swap && can_move_mob(tmob, 1, 0)) // mutual brohugs all around!
 			var/turf/oldloc = loc
 			//VOREstation Edit - Begin
-			
+
 			//check bumpnom chance, if it's a simplemob that's doing the bumping
 			var/mob/living/simple_mob/srcsimp = src
 			if(istype(srcsimp))
 				if(srcsimp.tryBumpNom(tmob))
 					now_pushing = 0
 					return
-			
+
 			//if it's a simplemob being bumped, and the above didn't make them start getting bumpnommed, they get a chance to bumpnom
 			var/mob/living/simple_mob/tmobsimp = tmob
 			if(istype(tmobsimp))
 				if(tmobsimp.tryBumpNom(src))
 					now_pushing = 0
 					return
-					
+
 			//VOREstation Edit - End
 			forceMove(tmob.loc)
 			//VOREstation Edit - Begin
@@ -178,7 +178,7 @@ default behaviour is:
 		if(ishuman(tmob))
 			var/mob/living/carbon/human/H = tmob
 			if(H.species.lightweight == 1 && prob(50))
-				H.visible_message("<span class='warning'>[src] bumps into [H], knocking them off balance!</span>")
+				H.visible_message("<span class='warning'>[src] врезается в [H], сбивая с ног!</span>")
 				H.Weaken(5)
 				now_pushing = 0
 				return
@@ -187,7 +187,7 @@ default behaviour is:
 		// VOREStation Edit - End
 		if(istype(tmob, /mob/living/carbon/human) && (FAT in tmob.mutations))
 			if(prob(40) && !(FAT in src.mutations))
-				to_chat(src, "<span class='danger'>You fail to push [tmob]'s fat ass out of the way.</span>")
+				to_chat(src, "<span class='danger'>Вы не можете оттолкнуть жирную задницу [tmob], чтобы пройти.</span>")
 				now_pushing = 0
 				return
 		if(tmob.r_hand && istype(tmob.r_hand, /obj/item/weapon/shield/riot))
@@ -270,9 +270,9 @@ default behaviour is:
 	set hidden = 1
 	if ((src.health < 0 && src.health > (5-src.getMaxHealth()))) // Health below Zero but above 5-away-from-death, as before, but variable
 		src.death()
-		to_chat(src, "<font color='blue'>You have given up life and succumbed to death.</font>")
+		to_chat(src, "<font color='blue'>Вы отказались от жизни и поддались смерти.</font>")
 	else
-		to_chat(src, "<font color='blue'>You are not injured enough to succumb to death!</font>")
+		to_chat(src, "<font color='blue'>Вы не настолько сильно ранены, чтобы умереть!</font>")
 
 /mob/living/proc/updatehealth()
 	if(status_flags & GODMODE)
@@ -979,7 +979,7 @@ default behaviour is:
 	return FALSE
 
 /mob/living/verb/resist()
-	set name = "Resist"
+	set name = "Сопротивляться"
 	set category = "IC"
 
 	if(!incapacitated(INCAPACITATION_KNOCKOUT) && checkClickCooldown())
@@ -1030,11 +1030,11 @@ default behaviour is:
 	return
 
 /mob/living/verb/lay_down()
-	set name = "Rest"
+	set name = "Отдохнуть"
 	set category = "IC"
 
 	resting = !resting
-	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
+	to_chat(src, "<span class='notice'>Вы [resting ? "отдыхаете" : "поднимаетесь"]</span>")
 	update_canmove()
 
 //called when the mob receives a bright flash
@@ -1048,7 +1048,7 @@ default behaviour is:
 
 /mob/living/proc/cannot_use_vents()
 	if(mob_size > MOB_SMALL)
-		return "You can't fit into that vent."
+		return "Вы не можете пролезть в это отверстие"
 	return null
 
 /mob/living/proc/has_brain()
@@ -1108,10 +1108,10 @@ default behaviour is:
 			src.Weaken(5)
 		else
 			if (nutrition <= 100)
-				to_chat(src, "<span class='danger'>You gag as you want to throw up, but there's nothing in your stomach!</span>")
+				to_chat(src, "<span class='danger'>Вы пытаетесь блевануть, но в желудке ничего нет!</span>")
 				src.Weaken(10)
 			else
-				to_chat(src, "<span class='warning'>You feel nauseous...</span>")
+				to_chat(src, "<span class='warning'>Вас тошнит...</span>")
 
 				if(ishuman(src))
 					var/mob/living/carbon/human/Hu = src
@@ -1124,7 +1124,7 @@ default behaviour is:
 				spawn()
 					if(!skip_wait)
 						sleep(150)	//15 seconds until second warning
-						to_chat(src, "<span class='warning'>You feel like you are about to throw up!</span>")
+						to_chat(src, "<span class='warning'>Вы чувствуете, что вас вот-вот вырвет!</span>")
 						sleep(100)	//and you have 10 more for mad dash to the bucket
 
 					//Damaged livers cause you to vomit blood.
@@ -1137,7 +1137,7 @@ default behaviour is:
 									blood_vomit = 1
 
 					Stun(5)
-					src.visible_message("<span class='warning'>[src] throws up!</span>","<span class='warning'>You throw up!</span>")
+					src.visible_message("<span class='warning'>[src] блюет!</span>","<span class='warning'>Вы блеванули!</span>")
 					playsound(src, 'sound/effects/splat.ogg', 50, 1)
 
 					var/turf/simulated/T = get_turf(src)	//TODO: Make add_blood_floor remove blood from human mobs

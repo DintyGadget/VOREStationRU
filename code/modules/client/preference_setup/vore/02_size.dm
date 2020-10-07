@@ -51,7 +51,7 @@
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
 	. += "<b>Размер:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
-	. += "<b>Масштанбирование внешности:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Fuzzy" : "Sharp"]</b></a><br>"
+	. += "<b>Масштанбирование:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Нечеткое" : "Резкое"]</b></a><br>"
 	. += "<br>"
 	. += "<b>Относительный вес:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Скорость увеличения веса:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -59,10 +59,10 @@
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])
-		var/new_size = input(user, "Выберите размер вашего персонажа, в пределах от 50% до 140%", "Set Size") as num|null
-		if (!ISINRANGE(new_size,50,140))
+		var/new_size = input(user, "Выберите размер вашего персонажа, в пределах от 50% до 200%", "Set Size") as num|null
+		if (!ISINRANGE(new_size,50,200))
 			pref.size_multiplier = 1
-			to_chat(user, "<span class='notice'>Invalid size.</span>")
+			to_chat(user, "<span class='notice'>Неизвестный размер.</span>")
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 		else if(new_size)
 			pref.size_multiplier = (new_size/100)

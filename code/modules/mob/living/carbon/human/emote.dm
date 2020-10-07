@@ -94,7 +94,7 @@
 		//Skrell-only emotes
 		if("warble")
 			if(species.name != SPECIES_SKRELL)
-				to_chat(src, "<span class='warning'>You are not a Skrell!</span>")
+				to_chat(src, "<span class='warning'>Вы не Скрелл!</span>")
 				return
 
 			playsound(src, 'sound/effects/warble.ogg', 50, 0, preference = /datum/client_preference/emote_noises) //VOREStation Add // Copyright CC BY 3.0 alienistcog (freesound.org) for the sound.
@@ -169,9 +169,9 @@
 					param = null
 
 				if(param)
-					message = "salutes to [param]."
+					message = "отдает честь [param]."
 				else
-					message = "salutes."
+					message = "отдает честь."
 			m_type = 1
 
 		if("choke")
@@ -245,7 +245,7 @@
 
 		if("cough", "coughs")
 			if(miming)
-				message = "appears to cough!"
+				message = "кажется, кашляет!"
 				m_type = 1
 			else
 				if(!muzzled)
@@ -256,7 +256,7 @@
 						if(L && L.robotic == 2)	//Hard-coded to 2, incase we add lifelike robotic lungs
 							robotic = 1
 					if(!robotic)
-						message = "coughs!"
+						message = "кашляет!"
 						if(get_gender() == FEMALE)
 							if(species.female_cough_sounds)
 								playsound(src, pick(species.female_cough_sounds), 120, preference = /datum/client_preference/emote_noises) //VOREStation Add
@@ -427,20 +427,20 @@
 					m_type = 2
 
 		if("mumble")
-			message = "mumbles!"
+			message = "бормочет!"
 			m_type = 2
 			if(miming)
 				m_type = 1
 
 		if("grumble")
 			if(miming)
-				message = "grumbles!"
+				message = "ворчит!"
 				m_type = 1
 			if(!muzzled)
-				message = "grumbles!"
+				message = "ворчит!"
 				m_type = 2
 			else
-				message = "makes a noise."
+				message = "издает звук."
 				m_type = 2
 
 		if("groan")
@@ -502,7 +502,7 @@
 
 		if("crack")
 			if(!restrained())
-				message = "cracks [T.his] knuckles."
+				message = "хрустит костяшками пальцев."
 				playsound(src, 'sound/voice/knuckles.ogg', 50, 1, preference = /datum/client_preference/emote_noises)
 				m_type = 1
 
@@ -512,7 +512,7 @@
 			m_type = 1
 
 		if("shake")
-			message = "shakes [T.his] head."
+			message = "трясет головой."
 			m_type = 1
 
 		if("shrug")
@@ -530,7 +530,7 @@
 			m_type = 1
 
 		if("smile")
-			message = "smiles."
+			message = "улыбается."
 			m_type = 1
 
 		if("shiver")
@@ -665,9 +665,9 @@
 
 				if(M)
 					if(M.canmove && !M.r_hand && !M.restrained())
-						message = "shakes hands with [M]."
+						message = "жмет руку [M]."
 					else
-						message = "holds out [T.his] hand to [M]."
+						message = "протягивает руку [M]."
 
 		if("dap")
 			m_type = 1
@@ -693,19 +693,19 @@
 							M = A
 							break
 				if(M)
-					message = "<span class='danger'>slaps [M] across the face. Ouch!</span>"
+					message = "<span class='danger'>шлепает [M] по лицу. Ауч!</span>"
 					playsound(src, 'sound/effects/snap.ogg', 50, 1, preference = /datum/client_preference/emote_noises) //VOREStation Add
 					if(ishuman(M)) //Snowflakey!
 						var/mob/living/carbon/human/H = M
 						if(istype(H.wear_mask,/obj/item/clothing/mask/smokable))
 							H.drop_from_inventory(H.wear_mask)
 				else
-					message = "<span class='danger'>slaps [T.himself]!</span>"
+					message = "<span class='danger'>шлепает себя по лицу!</span>"
 					playsound(src, 'sound/effects/snap.ogg', 50, 1, preference = /datum/client_preference/emote_noises) //VOREStation Add
 
 		if("scream", "screams")
 			if(miming)
-				message = "acts out a scream!"
+				message = "издает крик!"
 				m_type = 1
 			else
 				if(!muzzled)
@@ -717,7 +717,7 @@
 					else
 						playsound(src, "[species.male_scream_sound]", 80, 1) //default to male screams if no gender is present.
 				else
-					message = "makes a very loud noise."
+					message = "издает очень громкий шум."
 					m_type = 2
 
 		if("snap", "snaps")
@@ -733,10 +733,10 @@
 				right_hand_good = 1
 
 			if(!left_hand_good && !right_hand_good)
-				to_chat(usr, "You need at least one hand in good working order to snap your fingers.")
+				to_chat(usr, "У вас должна быть хотя бы одна рука в исправном состоянии, чтобы щелкнуть пальцами.")
 				return
 
-			message = "snaps [T.his] fingers."
+			message = "щелкает пальцами."
 			playsound(src, 'sound/effects/fingersnap.ogg', 50, 1, -3, preference = /datum/client_preference/emote_noises) //VOREStation Add
 
 		if("swish")
@@ -753,24 +753,24 @@
 
 		if("vomit")
 			if(isSynthetic())
-				to_chat(src, "<span class='warning'>You are unable to vomit.</span>")
+				to_chat(src, "<span class='warning'>Вы не можете блевануть.</span>")
 				return
 			vomit()
 			return
 
 		if("whistle" || "whistles")
 			if(!muzzled)
-				message = "whistles a tune."
+				message = "насвистывает мелодию."
 				playsound(src, 'sound/misc/longwhistle.ogg', preference = /datum/client_preference/emote_noises) //VOREStation Add
 			else
-				message = "makes a light spitting noise, a poor attempt at a whistle."
+				message = "издает легкий гул, попытавшись свистнуть."
 
 		if("qwhistle")
 			if(!muzzled)
-				message = "whistles quietly."
+				message = "тихонько свистит."
 				playsound(src, 'sound/misc/shortwhistle.ogg', preference = /datum/client_preference/emote_noises) //VOREStation Add
 			else
-				message = "makes a light spitting noise, a poor attempt at a whistle."
+				message = "издает легкий гул, попытавшись свистнуть."
 
 		if("help")
 			to_chat(src, "<span class='filter_say'>blink, blink_r, blush, bow-(none)/mob, burp, choke, chuckle, clap, collapse, cough, cry, custom, deathgasp, drool, eyebrow, fastsway/qwag, \
@@ -785,51 +785,51 @@
 		custom_emote(m_type,message)
 
 /mob/living/carbon/human/verb/pose()
-	set name = "Set Pose"
-	set desc = "Sets a description which will be shown when someone examines you."
+	set name = "Установить описание"
+	set desc = "Устанавливает описание, которое будет отображаться, когда кто-то вас осмотрит."
 	set category = "IC"
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
-	pose = sanitize(input(usr, "This is [src]. [T.he]...", "Pose", null)  as text)
+	pose = sanitize(input(usr, "Это [src]...", "Pose", null)  as text)
 
 /mob/living/carbon/human/verb/set_flavor()
-	set name = "Set Flavour Text"
+	set name = "Установить описание персонажа"
 	set desc = "Sets an extended description of your character's features."
 	set category = "IC"
 
 	var/HTML = "<meta charset=\"utf-8\"><body>"
 	HTML += "<tt><center>"
-	HTML += "<b>Update Flavour Text</b> <hr />"
+	HTML += "<b>Обновить описание персонажа</b> <hr />"
 	HTML += "<br></center>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=general'>General:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=general'>Общая:</a> "
 	HTML += TextPreview(flavor_texts["general"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=head'>Head:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=head'>Голова:</a> "
 	HTML += TextPreview(flavor_texts["head"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=face'>Face:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=face'>Лицо:</a> "
 	HTML += TextPreview(flavor_texts["face"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=eyes'>Eyes:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=eyes'>Глаза:</a> "
 	HTML += TextPreview(flavor_texts["eyes"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=torso'>Body:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=torso'>Тело:</a> "
 	HTML += TextPreview(flavor_texts["torso"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=arms'>Arms:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=arms'>Руки:</a> "
 	HTML += TextPreview(flavor_texts["arms"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=hands'>Hands:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=hands'>Кисти:</a> "
 	HTML += TextPreview(flavor_texts["hands"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=legs'>Legs:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=legs'>Ноги:</a> "
 	HTML += TextPreview(flavor_texts["legs"])
 	HTML += "<br>"
-	HTML += "<a href='byond://?src=\ref[src];flavor_change=feet'>Feet:</a> "
+	HTML += "<a href='byond://?src=\ref[src];flavor_change=feet'>Стопы:</a> "
 	HTML += TextPreview(flavor_texts["feet"])
 	HTML += "<br>"
 	HTML += "<hr />"
-	HTML +="<a href='?src=\ref[src];flavor_change=done'>\[Done\]</a>"
+	HTML +="<a href='?src=\ref[src];flavor_change=done'>\[Готово\]</a>"
 	HTML += "<tt>"
 	src << browse(HTML, "window=flavor_changes;size=430x300")
