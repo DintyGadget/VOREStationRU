@@ -29,7 +29,7 @@
 			pref.volume_channels["[channel]"] = clamp(pref.volume_channels["[channel]"], 0, 2)
 
 /datum/category_item/player_setup_item/volume_sliders/volume/content(var/mob/user)
-	. += "<b>Настройки звуки</b><br>"
+	. += "<b>Настройки звука</b><br>"
 	for(var/channel in pref.volume_channels)
 		. += "[channel]: <a href='?src=\ref[src];change_volume=[channel];'><b>[pref.volume_channels[channel] * 100]%</b></a><br>"
 	. += "<br>"
@@ -40,7 +40,7 @@
 			var/channel = href_list["change_volume"]
 			if(!(channel in pref.volume_channels))
 				pref.volume_channels["[channel]"] = 1
-			var/value = input("Настройте звук для [channel] (0-200%)", "[channel] volume", (pref.volume_channels[channel] * 100))
+			var/value = input("Настройте звук для канала [channel] (0-200%)", "[channel] volume", (pref.volume_channels[channel] * 100))
 			if(isnum(value))
 				value = CLAMP(value, 0, 200)
 				pref.volume_channels["[channel]"] = (value / 100)

@@ -28,7 +28,7 @@
 	candidate.savefile_save(preference_mob())
 
 /datum/category_item/player_setup_item/player_global/pai/content(var/mob/user)
-	. += "<b>pAI:</b><br>"
+	. += "<b>пИИ:</b><br>"
 	if(!candidate)
 		log_debug("[user] pAI prefs have a null candidate var.")
 		return .
@@ -42,19 +42,19 @@
 		var/t
 		switch(href_list["option"])
 			if("name")
-				t = sanitizeName(input(user, "Enter a name for your pAI", "Global Preference", candidate.name) as text|null, MAX_NAME_LEN, 1)
+				t = sanitizeName(input(user, "Введите имя Вашего пИИ", "Global Preference", candidate.name) as text|null, MAX_NAME_LEN, 1)
 				if(t && CanUseTopic(user))
 					candidate.name = t
 			if("desc")
-				t = input(user, "Enter a description for your pAI", "Global Preference", html_decode(candidate.description)) as message|null
+				t = input(user, "Введите описание Вашего пИИ", "Global Preference", html_decode(candidate.description)) as message|null
 				if(!isnull(t) && CanUseTopic(user))
 					candidate.description = sanitize(t)
 			if("role")
-				t = input(user, "Enter a role for your pAI", "Global Preference", html_decode(candidate.role)) as text|null
+				t = input(user, "Введите роль Вашего пИИ", "Global Preference", html_decode(candidate.role)) as text|null
 				if(!isnull(t) && CanUseTopic(user))
 					candidate.role = sanitize(t)
 			if("ooc")
-				t = input(user, "Enter any OOC comments", "Global Preference", html_decode(candidate.comments)) as message
+				t = input(user, "Введите ООС комментарии", "Global Preference", html_decode(candidate.comments)) as message
 				if(!isnull(t) && CanUseTopic(user))
 					candidate.comments = sanitize(t)
 		return TOPIC_REFRESH

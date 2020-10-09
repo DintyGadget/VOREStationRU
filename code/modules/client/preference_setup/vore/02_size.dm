@@ -51,7 +51,7 @@
 /datum/category_item/player_setup_item/vore/size/content(var/mob/user)
 	. += "<br>"
 	. += "<b>Размер:</b> <a href='?src=\ref[src];size_multiplier=1'>[round(pref.size_multiplier*100)]%</a><br>"
-	. += "<b>Масштанбирование:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Нечеткое" : "Резкое"]</b></a><br>"
+	. += "<b>Масштабирование:</b> <a [pref.fuzzy ? "" : ""] href='?src=\ref[src];toggle_fuzzy=1'><b>[pref.fuzzy ? "Нечеткое" : "Резкое"]</b></a><br>"
 	. += "<br>"
 	. += "<b>Относительный вес:</b>  <a href='?src=\ref[src];weight=1'>[pref.weight_vr]</a><br>"
 	. += "<b>Скорость увеличения веса:</b> <a href='?src=\ref[src];weight_gain=1'>[pref.weight_gain]</a><br>"
@@ -59,10 +59,10 @@
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])
-		var/new_size = input(user, "Выберите размер вашего персонажа, в пределах от 50% до 200%", "Set Size") as num|null
+		var/new_size = input(user, "Выберите размер Вашего персонажа в пределах от 50% до 200%", "Set Size") as num|null
 		if (!ISINRANGE(new_size,50,200))
 			pref.size_multiplier = 1
-			to_chat(user, "<span class='notice'>Неизвестный размер.</span>")
+			to_chat(user, "<span class='notice'>Недопустимый размер.</span>")
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 		else if(new_size)
 			pref.size_multiplier = (new_size/100)
@@ -73,10 +73,10 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["weight"])
-		var/new_weight = input(user, "Выберите относительную массу тела вашего персонажа.\n\
-			Это измерение должно быть установлено относительно тела обычного человека 5 футов 10 дюймов, а не фактического размера вашего персонажа.\n\
-			Если вы установите свой вес на 500, потому что вы нага или у вас металлические имплантаты, тогда вы будете жаловаться на то, что вы капля, клянусь богом,\n\
-			я найду вас и ударю вас за то, что вы не прочитали эти указания!\n\
+		var/new_weight = input(user, "Выберите относительную массу тела Вашего персонажа.\n\
+			Это измерение должно быть установлено относительно тела обычного человека ростом 175 см, а не фактического размера вашего персонажа.\n\
+			Если Вы установите свой вес на 500, потому что Вы нага или у Вас металлические имплантаты, и начнёте жаловаться на то, что не можете ходить, клянусь богом,\n\
+			я найду Вас и вмажу Вас за то, что не прочитали инструкцию!\n\
 			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference") as num|null
 		if(new_weight)
 			var/unit_of_measurement = alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", "Pounds", "Kilograms")
@@ -88,18 +88,18 @@
 			return TOPIC_REFRESH
 
 	else if(href_list["weight_gain"])
-		var/weight_gain_rate = input(user, "Choose your character's rate of weight gain between 100% \
-			(full realism body fat gain) and 0% (no body fat gain).\n\
-			(If you want to disable weight gain, set this to 0.01 to round it to 0%.)\
+		var/weight_gain_rate = input(user, "Выберите скорость набора веса Вашим персонажем \
+			от 100% (реалистично) до 0% (не набирается).\n\
+			(для отключения, выставьте 0.01, округлится до 0)\
 			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference") as num|null
 		if(weight_gain_rate)
 			pref.weight_gain = round(text2num(weight_gain_rate),1)
 			return TOPIC_REFRESH
 
 	else if(href_list["weight_loss"])
-		var/weight_loss_rate = input(user, "Choose your character's rate of weight loss between 100% \
-			(full realism body fat loss) and 0% (no body fat loss).\n\
-			(If you want to disable weight loss, set this to 0.01 round it to 0%.)\
+		var/weight_loss_rate = input(user, "Выберите скорость потери веса Вами персонажем \
+			от 100% (реалистично) до 0% (нет потери).\n\
+			(для отключения, выставьте 0.01,округлится до 0)\
 			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference") as num|null
 		if(weight_loss_rate)
 			pref.weight_loss = round(text2num(weight_loss_rate),1)

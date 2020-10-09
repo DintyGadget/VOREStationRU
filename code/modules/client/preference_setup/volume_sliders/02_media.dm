@@ -21,10 +21,9 @@
 /datum/category_item/player_setup_item/volume_sliders/media/content(var/mob/user)
 	. += "<b>Громкость музыки:</b>"
 	. += "<a href='?src=\ref[src];change_media_volume=1'><b>[round(pref.media_volume * 100)]%</b></a><br>"
-	. += "<b>Тип медиаплеера:</b> В зависимости от вашей операционной системы один из них может работать лучше. "
-	. += "Используйте HTML5, если он работает у вас. Если ни HTML5, ни WMP не работают, вам придется вернуться к использованию VLC, "
-	. += "но для этого необходимо, чтобы на вашем компьютере был установлен сам VLC."
-	. += "Попробуйте другие проигрыватели, если хотите, но вы, вероятно, перестанете слышать музыку.<br>"
+	. += "<b>Тип медиаплеера:</b> В зависимости от Вашей операционной системы один из типов может работать лучше."
+	. += "По возможности используйте HTML5. Если ни HTML5, ни WMP не работают, придется использовать VLC, "
+	. += "однако для работы он должен быть установлен на компьютере.<br>"
 	. += (pref.media_player == 2) ? "<span class='linkOn'><b>HTML5</b></span> " : "<a href='?src=\ref[src];set_media_player=2'>HTML5</a> "
 	. += (pref.media_player == 1) ? "<span class='linkOn'><b>WMP</b></span> " : "<a href='?src=\ref[src];set_media_player=1'>WMP</a> "
 	. += (pref.media_player == 0) ? "<span class='linkOn'><b>VLC</b></span> " : "<a href='?src=\ref[src];set_media_player=0'>VLC</a> "
