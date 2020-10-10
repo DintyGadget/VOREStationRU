@@ -68,7 +68,7 @@
 			if(!available_languages.len)
 				alert(user, "Нет дополнительных языков, доступных для выбора.")
 			else
-				var/new_lang = input(user, "Выберите дополнительный язык", "Character Generation", null) as null|anything in available_languages
+				var/new_lang = input(user, "Выберите дополнительный язык:", "Character Generation", null) as null|anything in available_languages
 				if(new_lang && pref.alternate_languages.len < S.num_alternate_languages)
 					pref.alternate_languages |= new_lang
 					return TOPIC_REFRESH
@@ -77,16 +77,16 @@
 		var/char
 		var/keys[0]
 		do
-			char = input("Введите один специальный символ.\nВы можете повторно выбрать те же символы.\nСледующие символы уже используются по радио: ; : .\nСледующие символы уже используются специальными командами say: ! * ^", "Enter Character - [3 - keys.len] remaining") as null|text
+			char = input("Введите один специальный символ.\nВы можете повторно выбрать те же символы.\nСимволы, уже используемые для радио: ; : .\nСимволы, уже используемые для спец. команд Say: ! * ^", "Enter Character - [3 - keys.len] remaining") as null|text
 			if(char)
 				if(length(char) > 1)
 					alert(user, "Разрешены только одиночные символы.", "Error", "Ok")
 				else if(char in list(";", ":", "."))
-					alert(user, "Символ радио. Отклонено.", "Error", "Ok")
+					alert(user, "Этот символ уже используется радио.", "Error", "Ok")
 				else if(char in list("!","*","^","-"))
-					alert(user, "Символ say. Отклонено.", "Error", "Ok")
+					alert(user, "Этот символ уже используется Say.", "Error", "Ok")
 				else if(contains_az09(char))
-					alert(user, "Non-special character. Rejected.", "Error", "Ok")
+					alert(user, "Этот символ не является специальным.", "Error", "Ok")
 				else
 					keys.Add(char)
 		while(char && keys.len < 3)

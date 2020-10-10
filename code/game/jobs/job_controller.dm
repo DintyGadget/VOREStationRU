@@ -387,7 +387,7 @@ var/global/datum/controller/occupations/job_master
 		if(job)
 
 			//Equip custom gear loadout.
-			var/list/custom_equip_slots = list() //If more than one item takes the same slot, all after the first one spawn in storage.
+			var/list/custom_equip_slots = list()
 			var/list/custom_equip_leftovers = list()
 			if(H.client.prefs.gear && H.client.prefs.gear.len && !(job.mob_type & JOB_SILICON))
 				for(var/thing in H.client.prefs.gear)
@@ -420,14 +420,15 @@ var/global/datum/controller/occupations/job_master
 						I.implant_loadout(H)
 						continue
 
-					// Try desperately (and sorta poorly) to equip the item
+					// Try desperately (and sorta poorly) to equip the item. Now with increased desperation!
 					if(G.slot && !(G.slot in custom_equip_slots))
 						var/metadata = H.client.prefs.gear[G.display_name]
 						if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
 							custom_equip_leftovers += thing
 						else if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
 							to_chat(H, "<span class='notice'>[thing] была одета на вас!</span>")
-							custom_equip_slots.Add(G.slot)
+							if(G.slot != slot_tie)
+								custom_equip_slots.Add(G.slot)
 						else
 							custom_equip_leftovers.Add(thing)
 					else
@@ -454,7 +455,7 @@ var/global/datum/controller/occupations/job_master
 				else
 					var/metadata = H.client.prefs.gear[G.display_name]
 					if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
-						to_chat(H, "<span class='notice'>[thing] была одета на вас!</span>")
+						to_chat(H, "<span class='notice'>Equipping you with \the [thing]!</span>")
 						custom_equip_slots.Add(G.slot)
 					else
 						spawn_in_storage += thing
@@ -471,9 +472,9 @@ var/global/datum/controller/occupations/job_master
 			for(var/D in job.department_accounts)
 				var/datum/money_account/department_account = department_accounts[D]
 				if(department_account)
-					remembered_info += "<b>Номер профиля отдела ([D]):</b> #[department_account.account_number]<br>"
-					remembered_info += "<b>Пароль профиля отдела ([D]):</b> [department_account.remote_access_pin]<br>"
-					remembered_info += "<b>Денег у отдела ([D]):</b> $[department_account.money]<br>"
+					remembered_info += "<b>Номер аккаунта отдела ([D]):</b> #[department_account.account_number]<br>"
+					remembered_info += "<b>Пароль аккаунта отдела ([D]):</b> [department_account.remote_access_pin]<br>"
+					remembered_info += "<b>Средства отдела ([D]):</b> $[department_account.money]<br>"
 
 			H.mind.store_memory(remembered_info)
 
@@ -558,7 +559,7 @@ var/global/datum/controller/occupations/job_master
 			var/datum/computer_file/data/email_account/EA = new/datum/computer_file/data/email_account()
 			EA.password = GenerateKey()
 			EA.login = 	complete_login
-			to_chat(H, "Ваш почтовый адрес <b>[EA.login]</b> и ваш пароль от него <b>[EA.password]</b>. Эта информация также была помещена в ваши заметки (Notes) во вкладке IC.")
+			to_chat(H, "Ваш почтовый адрес <b>[EA.login]</b> и ваш пароль от него <b>[EA.password]</b>. Эта информация также была помещена в ваши (Заметки) во вкладке IC.")
 			H.mind.store_memory("Ваш почтовый адрес [EA.login] и ваш пароль от него [EA.password].")
 		// END EMAIL GENERATION
 
@@ -641,7 +642,7 @@ var/global/datum/controller/occupations/job_master
 					level3++
 				else level4++ //not selected
 
-			tmp_str += "HIGH=[level1]|MEDIUM=[level2]|LOW=[level3]|NEVER=[level4]|BANNED=[level5]|YOUNG=[level6]|-"
+			tmp_str += "ВЫСОКИЙ=[level1]|СРЕДНИЙ=[level2]|НИЗКИЙ=[level3]|НИКОГДА=[level4]|БЛОКИРОВКА=[level5]|ВОЗРАСТ=[level6]|-"
 			feedback_add_details("job_preferences",tmp_str)
 
 /datum/controller/occupations/proc/LateSpawn(var/client/C, var/rank)
@@ -678,7 +679,7 @@ var/global/datum/controller/occupations/job_master
 			to_chat(C, "Выбранная вами точка спавна ([spawnpos.display_name]) недоступна для выбранной вами профессии. Вместо этого вас заставнят в шаттле прибытия.")
 			var/spawning = pick(latejoin)
 			.["turf"] = get_turf(spawning)
-			.["msg"] = "прибудет на станцию в ближайшее время"  //VOREStation Edit - Grammar but mostly 'shuttle' reference removal, and this also applies to notified spawn-character verb use
+			.["msg"] = "прибудет на станцию в ближайшее врем"  //VOREStation Edit - Grammar but mostly 'shuttle' reference removal, and this also applies to notified spawn-character verb use
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)

@@ -61,7 +61,7 @@
 
 /datum/category_item/player_setup_item/general/background/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["econ_status"])
-		var/new_class = input(user, "Выберите свой экономический статус. Это повлияет на сумму денег, с которой вы начнете.", "Character Preference", pref.economic_status)  as null|anything in ECONOMIC_CLASS
+		var/new_class = input(user, "Выберите своё экономическое положение. Это повлияет на сумму денег, с которой Вы начнете.", "Character Preference", pref.economic_status)  as null|anything in ECONOMIC_CLASS
 		if(new_class && CanUseTopic(user))
 			pref.economic_status = new_class
 			return TOPIC_REFRESH
@@ -79,11 +79,11 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["citizenship"])
-		var/choice = input(user, "Пожалуйста, выберите ваше текущее гражданство.", "Character Preference", pref.citizenship) as null|anything in citizenship_choices + list("Нет","Другое")
+		var/choice = input(user, "Пожалуйста, выберите Ваше текущее гражданство.", "Character Preference", pref.citizenship) as null|anything in citizenship_choices + list("Нет","Другое")
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Другое")
-			var/raw_choice = sanitize(input(user, "Пожалуйста, укажите ваше текущее гражданство.", "Character Preference") as text|null, MAX_NAME_LEN)
+			var/raw_choice = sanitize(input(user, "Пожалуйста, укажите Ваше текущее гражданство.", "Character Preference") as text|null, MAX_NAME_LEN)
 			if(raw_choice && CanUseTopic(user))
 				pref.citizenship = raw_choice
 		else
@@ -91,7 +91,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["faction"])
-		var/choice = input(user, "Пожалуйста, выберите фракцию на которую вы работаете.", "Character Preference", pref.faction) as null|anything in faction_choices + list("Нет","Другое")
+		var/choice = input(user, "Пожалуйста, выберите фракцию на которую Вы работаете.", "Character Preference", pref.faction) as null|anything in faction_choices + list("Нет","Другое")
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Другое")
@@ -107,7 +107,7 @@
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Другое")
-			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название вашей религии.", "Character Preference")  as text|null, MAX_NAME_LEN)
+			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название Вашей религии.", "Character Preference")  as text|null, MAX_NAME_LEN)
 			if(raw_choice)
 				pref.religion = sanitize(raw_choice)
 		else
@@ -127,7 +127,7 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["set_security_records"])
-		var/sec_medical = sanitize(input(user,"Введите информацию службы безопасности о вас здесь.","Character Preference", html_decode(pref.sec_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
+		var/sec_medical = sanitize(input(user,"Введите информацию Службы Безопасности о Вас здесь.","Character Preference", html_decode(pref.sec_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
 		if(!isnull(sec_medical) && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 			pref.sec_record = sec_medical
 		return TOPIC_REFRESH

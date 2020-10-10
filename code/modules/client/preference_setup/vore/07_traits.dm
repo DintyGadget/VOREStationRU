@@ -101,12 +101,12 @@
 			log_game("TRAITS [pref.client_ckey]/([character]) with: [english_traits]") //Terrible 'fake' key_name()... but they aren't in the same entity yet
 
 /datum/category_item/player_setup_item/vore/traits/content(var/mob/user)
-	. += "<b>Имя кастомной расы:</b> "
+	. += "<b>Имя особой расы:</b> "
 	. += "<a href='?src=\ref[src];custom_species=1'>[pref.custom_species ? pref.custom_species : "-Введите название-"]</a><br>"
 
 	var/datum/species/selected_species = GLOB.all_species[pref.species]
 	if(selected_species.selects_bodytype)
-		. += "<b>Иконка для отображениея: </b> "
+		. += "<b>Основа для туловища: </b> "
 		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
 
 	if(pref.species == SPECIES_CUSTOM)
@@ -117,11 +117,11 @@
 			traits_left--
 
 		. += "<b>Осталось очков:</b> [points_left]<br>"
-		. += "<b>Черт осталось:</b> [traits_left]<br>"
+		. += "<b>Осталось черт:</b> [traits_left]<br>"
 		if(points_left < 0 || traits_left < 0 || !pref.custom_species)
 			. += "<span style='color:red;'><b>^ Требуется исправление! ^</b></span><br>"
 
-		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Позитивные черты +</a><br>"
+		. += "<a href='?src=\ref[src];add_trait=[POSITIVE_MODE]'>Положительные черты +</a><br>"
 		. += "<ul>"
 		for(var/T in pref.pos_traits)
 			var/datum/trait/trait = positive_traits[T]
@@ -135,15 +135,15 @@
 			. += "<li>- <a href='?src=\ref[src];clicked_neu_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 		. += "</ul>"
 
-		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Негативные черты +</a><br>"
+		. += "<a href='?src=\ref[src];add_trait=[NEGATIVE_MODE]'>Отрицательные черты +</a><br>"
 		. += "<ul>"
 		for(var/T in pref.neg_traits)
 			var/datum/trait/trait = negative_traits[T]
 			. += "<li>- <a href='?src=\ref[src];clicked_neg_trait=[T]'>[trait.name] ([trait.cost])</a></li>"
 		. += "</ul>"
-	. += "<b>Blood Color: </b>" //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
-	. += "<a href='?src=\ref[src];blood_color=1'>Изм</a>"
-	. += "<a href='?src=\ref[src];blood_reset=1'>Сбрс</a><br>"
+	. += "<b>Цвет крови: </b>" //People that want to use a certain species to have that species traits (xenochimera/promethean/spider) should be able to set their own blood color.
+	. += "<a href='?src=\ref[src];blood_color=1'>Изм.</a>"
+	. += "<a href='?src=\ref[src];blood_reset=1'>Сброс</a><br>"
 
 /datum/category_item/player_setup_item/vore/traits/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(!CanUseTopic(user))
@@ -156,7 +156,7 @@
 			Trait system was implemented. If you wish to change it, set your species to 'Custom Species' and configure \
 			the species completely.")
 			return TOPIC_REFRESH*/ //There was no reason to have this.
-		var/raw_choice = sanitize(input(user, "Введите свое собственное название расы:",
+		var/raw_choice = sanitize(input(user, "Введите собственное название расы:",
 			"Настройка персонажа", pref.custom_species) as null|text, MAX_NAME_LEN)
 		if (CanUseTopic(user))
 			pref.custom_species = raw_choice
@@ -166,7 +166,7 @@
 		var/list/choices = custom_species_bases
 		if(pref.species != SPECIES_CUSTOM)
 			choices = (choices | pref.species)
-		var/text_choice = input("Выберите иконку для вашего вида:","Icon Base") in choices
+		var/text_choice = input("Выберите основу для изображения персонажа","Icon Base") in choices
 		if(text_choice in choices)
 			pref.custom_base = text_choice
 		return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -262,8 +262,8 @@
 
 			user.isSynthetic()	//Recheck just to be sure
 			if(pref.dirty_synth && instance.not_for_synths)//if you are a synth you can't take this trait.
-				alert("You cannot take this trait as a SYNTH.\
-				Please remove that trait, or pick another trait to add.","Error")
+				alert("Синты не могут иметь эту черту.\
+				Пожалуста, удалите эту черту, или выберите другую","Error")
 				pref.dirty_synth = 0	//Just to be sure
 				return TOPIC_REFRESH
 
