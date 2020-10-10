@@ -351,7 +351,7 @@
 		if (config.panic_bunker && !holder && !deadmin_holder)
 			log_adminwarn("Ошибка входа: [key] - Впервые заходит на сервер!")
 			message_admins("<span class='adminnotice'>Ошибка входа: [key] - Впервые заходит на сервер!</span>")
-			disconnect_with_message("Sorry but the server is currently not accepting connections from never before seen players.")
+			disconnect_with_message("Извините, но сервер в настоящее время не принимает соединения от никогда ранее не встречавшихся игроков. Пройдите в Discord и оставьте заявку на вступление.")
 			return 0
 
 	// IP Reputation Check
@@ -551,8 +551,8 @@ client/verb/character_setup()
 		ip_reputation = score
 		return TRUE
 
-/client/proc/disconnect_with_message(var/message = "You have been intentionally disconnected by the server.<br>This may be for security or administrative reasons.")
-	message = "<head><title>You Have Been Disconnected</title></head><body><hr><center><b>[message]</b></center><hr><br>If you feel this is in error, you can contact an administrator out-of-game (for example, on Discord).</body>"
+/client/proc/disconnect_with_message(var/message = "Вы были намеренно отключены сервером.<br>Это может быть по причинам безопасности или административным причинам.")
+	message = "<head><meta charset=\"utf-8\"><title>Вы были отключены</title></head><body><hr><center><b>[message]</b></center><hr><br>Если вы считаете, что это ошибка, вы можете связаться с администратором вне игры (например, в Discord).</body>"
 	window_flash(src)
 	src << browse(message,"window=dropmessage;size=480x360;can_close=1")
 	qdel(src)
