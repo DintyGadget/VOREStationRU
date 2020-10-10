@@ -75,7 +75,7 @@
 
 	. = list()
 	. += "<tt><center>"
-	. += "<b>Вы берите интересующую вас профессию, назначив уровень важности</b><br>Недоступные профессии перечеркнуты.<br>"
+	. += "<b>Выберите интересующие Вас профессии, назначив уровень их предпочтения.</b><br>Недоступные профессии перечеркнуты.<br>"
 	. += "<script type='text/javascript'>function setJobPrefRedirect(level, rank) { window.location.href='?src=\ref[src];level=' + level + ';set_job=' + encodeURIComponent(rank); return false; }</script>"
 	. += "<table width='100%' cellpadding='1' cellspacing='0'><tr><td width='20%' valign='top'>" // Table within a table for alignment, also allows you to easily add more columns.
 	. += "<table width='100%' cellpadding='1' cellspacing='0'>"
@@ -255,7 +255,7 @@
 		send_rsc(user, job.get_job_icon(), "job[ckey(rank)].png")
 		dat += "<img src=job[ckey(rank)].png width=96 height=96 style='float:left;'>"
 		if(job.departments)
-			dat += "<b>Департамент:</b> [english_list(job.departments)]."
+			dat += "<b>Отдел:</b> [english_list(job.departments)]."
 			if(LAZYLEN(job.departments_managed))
 				dat += "Вы руководите отделом: [english_list(job.departments_managed)]"
 
