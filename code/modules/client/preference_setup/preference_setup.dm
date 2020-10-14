@@ -3,7 +3,7 @@
 #define PREF_FBP_SOFTWARE "software"
 
 /datum/category_group/player_setup_category/general_preferences
-	name = "Внешность"
+	name = "Основное"
 	sort_order = 1
 	category_item_type = /datum/category_item/player_setup_item/general
 

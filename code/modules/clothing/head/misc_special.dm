@@ -14,8 +14,8 @@
  * Welding mask
  */
 /obj/item/clothing/head/welding
-	name = "welding helmet"
-	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye."
+	name = "сварочная маска"
+	desc = "Закрепляемая на голове маска, защищающая глаза носителя от воздействия сварочной дуги."
 	icon_state = "welding"
 	item_state_slots = list(slot_r_hand_str = "welding", slot_l_hand_str = "welding")
 	matter = list(DEFAULT_WALL_MATERIAL = 3000, "glass" = 1000)
@@ -23,7 +23,7 @@
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	flags_inv = (HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 	body_parts_covered = HEAD|FACE|EYES
-	action_button_name = "Flip Welding Mask"
+	action_button_name = "Отрегулировать Сварочную Маску"
 	siemens_coefficient = 0.9
 	w_class = ITEMSIZE_NORMAL
 	var/base_state
@@ -38,7 +38,7 @@
 
 /obj/item/clothing/head/welding/verb/toggle()
 	set category = "Object"
-	set name = "Adjust welding mask"
+	set name = "Отрегулировать Сварочную Маску"
 	set src in usr
 
 	if(!base_state)
@@ -52,7 +52,7 @@
 			icon_state = base_state
 			flash_protection = FLASH_PROTECTION_MAJOR
 			tint = initial(tint)
-			to_chat(usr, "You flip the [src] down to protect your eyes.")
+			to_chat(usr, "Вы опускаете сварочную маску на лицо, защищая глаза.")
 		else
 			src.up = !src.up
 			body_parts_covered &= ~(EYES|FACE)
@@ -60,7 +60,7 @@
 			icon_state = "[base_state]up"
 			flash_protection = FLASH_PROTECTION_NONE
 			tint = TINT_NONE
-			to_chat(usr, "You push the [src] up out of your face.")
+			to_chat(usr, "Вы приподнимаете сварочную маску с лица.")
 		update_clothing_icon()	//so our mob-overlays
 		if (ismob(src.loc)) //should allow masks to update when it is opened/closed
 			var/mob/M = src.loc
@@ -68,8 +68,8 @@
 		usr.update_action_buttons()
 
 /obj/item/clothing/head/welding/demon
-	name = "demonic welding helmet"
-	desc = "A painted welding helmet, this one has a demonic face on it."
+	name = "демоническая сварочная маска"
+	desc = "Разрисованная сварочная маска с изображением лица демона."
 	icon_state = "demonwelding"
 	item_state_slots = list(
 		slot_l_hand_str = "demonwelding",
@@ -77,8 +77,8 @@
 		)
 
 /obj/item/clothing/head/welding/knight
-	name = "knightly welding helmet"
-	desc = "A painted welding helmet, this one looks like a knights helmet."
+	name = "рыцарская сварочная маска"
+	desc = "Разрисованная сварочная маска, похожая на рыцарский шлем."
 	icon_state = "knightwelding"
 	item_state_slots = list(
 		slot_l_hand_str = "knightwelding",
@@ -86,8 +86,8 @@
 		)
 
 /obj/item/clothing/head/welding/fancy
-	name = "fancy welding helmet"
-	desc = "A painted welding helmet, the black and gold make this one look very fancy."
+	name = "модная сварочная маска"
+	desc = "Сварочная маска, элегантно расписанная черным и золотым цветами."
 	icon_state = "fancywelding"
 	item_state_slots = list(
 		slot_l_hand_str = "fancywelding",
@@ -95,8 +95,8 @@
 		)
 
 /obj/item/clothing/head/welding/engie
-	name = "engineering welding helmet"
-	desc = "A painted welding helmet, this one has been painted the engineering colours."
+	name = "инженерная сварочная маска"
+	desc = "Сварочная маска, расписанная инженерными цветами."
 	icon_state = "engiewelding"
 	item_state_slots = list(
 		slot_l_hand_str = "engiewelding",
@@ -145,18 +145,18 @@
  * Ushanka
  */
 /obj/item/clothing/head/ushanka
-	name = "ushanka"
-	desc = "Perfect for winter in Siberia, da?"
+	name = "ушанка"
+	desc = "Самое то для зимы в Сибири, товарищ."
 	icon_state = "ushankadown"
 	flags_inv = HIDEEARS
 
 /obj/item/clothing/head/ushanka/attack_self(mob/user as mob)
 	if(src.icon_state == "ushankadown")
 		src.icon_state = "ushankaup"
-		to_chat(user, "You raise the ear flaps on the ushanka.")
+		to_chat(user, "Вы завязываете шапку-ушанку сверху.")
 	else
 		src.icon_state = "ushankadown"
-		to_chat(user, "You lower the ear flaps on the ushanka.")
+		to_chat(user, "Вы завязываете шапку-ушанку снизу.")
 
 /*
  * Pumpkin head
@@ -177,8 +177,8 @@
  * Kitty ears
  */
 /obj/item/clothing/head/kitty
-	name = "kitty ears"
-	desc = "A pair of kitty ears. Meow!"
+	name = "кошачьи ушки"
+	desc = "Пара кошачьих ушек. Мяу!"
 	icon_state = "kitty"
 	body_parts_covered = 0
 	siemens_coefficient = 1.5
@@ -201,15 +201,15 @@
 	flags_inv = BLOCKHAIR
 
 /obj/item/clothing/head/santa
-	name = "santa hat"
-	desc = "It's a festive christmas hat, in red!"
+	name = "шапка Санты"
+	desc = "Праздничная шапка, в красной вариации!"
 	icon_state = "santahatnorm"
 	item_state_slots = list(slot_r_hand_str = "santahat", slot_l_hand_str = "santahat")
 	body_parts_covered = 0
 
 /obj/item/clothing/head/santa/green
-	name = "green santa hat"
-	desc = "It's a festive christmas hat, in green!"
+	name = "зеленая шапка Санты"
+	desc = "Праздничная шапка, в зеленой вариации!"
 	icon_state = "santahatgreen"
 	item_state_slots = list(slot_r_hand_str = "santahatgreen", slot_l_hand_str = "santahatgreen")
 	body_parts_covered = 0

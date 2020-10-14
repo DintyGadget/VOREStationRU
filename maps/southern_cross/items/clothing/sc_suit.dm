@@ -1,8 +1,8 @@
 //Pilot
 
 /obj/item/clothing/suit/storage/toggle/bomber/pilot
-	name = "pilot jacket"
-	desc = "A thick, blue bomber jacket."
+	name = "куртка пилота"
+	desc = "Плотная синяя куртка-бомбер."
 	icon_state = "pilot_bomber"
 	item_icons = list(slot_wear_suit_str = 'maps/southern_cross/icons/mob/sc_suit.dmi')
 	item_state_slots = list(slot_r_hand_str = "brown_jacket", slot_l_hand_str = "brown_jacket")

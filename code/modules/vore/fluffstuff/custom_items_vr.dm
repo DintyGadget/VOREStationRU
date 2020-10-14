@@ -830,16 +830,16 @@
 
 //General use, Verk felt like sharing.
 /obj/item/clothing/glasses/fluff/science_proper
-	name = "Aesthetic Science Goggles"
-	desc = "The goggles really do nothing this time!"
+	name = "эстетичные научные очки"
+	desc = "Вот эти уже действительно ничего не делают!"
 	icon_state = "purple"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 	item_flags = AIRTIGHT
 
 //General use, Verk felt like sharing.
 /obj/item/clothing/glasses/fluff/spiffygogs
-	name = "Orange Goggles"
-	desc = "You can almost feel the raw power radiating off these strange specs."
+	name = "оранжевые очки"
+	desc = "Эти странные очки излучают ауру настоящей мощи."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "spiffygogs"
@@ -850,8 +850,8 @@
 
 //General use
 /obj/item/clothing/accessory/tronket
-	name = "metal necklace"
-	desc = "A shiny steel chain with a vague metallic object dangling off it."
+	name = "металлический кулон"
+	desc = "Блестящая стальная цепь, на которой висит металлический объект."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "tronket"
@@ -861,8 +861,8 @@
 	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/flops
-	name = "drop straps"
-	desc = "Wearing suspenders over shoulders? That's been so out for centuries and you know better."
+	name = "лямки по бокам"
+	desc = "Подтяжки через плечи? Это уже несколько веков не в моде, и Вы выше этого."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "flops"

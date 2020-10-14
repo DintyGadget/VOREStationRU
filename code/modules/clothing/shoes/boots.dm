@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes/boots
-	name = "boots"
-	desc = "Generic boots."
+	name = "обувь"
+	desc = "Обыкновенная обувь."
 	icon_state = "workboots"
 	force = 3
 	can_hold_knife = 1
@@ -8,24 +8,24 @@
 	drop_sound = 'sound/items/drop/boots.ogg'
 
 /obj/item/clothing/shoes/boots/cowboy
-	name = "cowboy boots"
-	desc = "Lacking a durasteel horse to ride."
+	name = "ковбойские сапоги"
+	desc = "Не хватает только лошади из дюрастали."
 	icon_state = "cowboy"
 	drop_sound = 'sound/items/drop/leather.ogg'
 
 /obj/item/clothing/shoes/boots/cowboy/classic
-	name = "classic cowboy boots"
-	desc = "A classic looking pair of durable cowboy boots."
+	name = "классические ковбойские сапоги"
+	desc = "Классический фасон надёжных ковбойских сапог."
 	icon_state = "cowboy_classic"
 
 /obj/item/clothing/shoes/boots/cowboy/snakeskin
-	name = "snakeskin cowboy boots"
-	desc = "A pair of cowboy boots made from python skin."
+	name = "ковбойские сапоги из змеиной кожи"
+	desc = "Пара ковбойских сапог, изготовленная из кожи питона."
 	icon_state = "cowboy_snakeskin"
 
 /obj/item/clothing/shoes/boots/jackboots
-	name = "jackboots"
-	desc = "Standard-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
+	name = "сапоги"
+	desc = "Пара стандартных сапог Службы Безопасности, предназначенных для боевых действий."
 	icon_state = "jackboots"
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0)
 	siemens_coefficient = 0.7
@@ -33,41 +33,41 @@
 	pickup_sound = 'sound/items/pickup/boots.ogg'
 
 /obj/item/clothing/shoes/boots/jackboots/toeless
-	name = "toe-less jackboots"
-	desc = "Modified pair of jackboots, particularly friendly to those species whose toes hold claws."
+	name = "сапоги без пальцев"
+	desc = "Видоизмененная пара боевых сапог, предназначенная для рас, обладающих когтями."
 	icon_state = "digiboots"
 	item_state_slots = list(slot_r_hand_str = "jackboots", slot_l_hand_str = "jackboots")
 	species_restricted = null
 
 /obj/item/clothing/shoes/boots/jackboots/knee
-	name = "knee-length jackboots"
-	desc = "Taller synthleather boots with an artificial shine."
+	name = "сапоги по колени"
+	desc = "Более высокие сапоги из синтетической кожи, сияющие искусственным глянцем."
 	icon_state = "kneeboots"
 	item_state_slots = list(slot_r_hand_str = "jackboots", slot_l_hand_str = "jackboots")
 
 /obj/item/clothing/shoes/boots/jackboots/toeless/knee
-	name = "toe-less knee-length jackboots"
-	desc = "Modified pair of taller boots, particularly friendly to those species whose toes hold claws."
+	name = "сапоги по колени без пальцев"
+	desc = "Видоизмененная пара более высоких боевых сапог, предназначенная для рас, обладающих когтями."
 	icon_state = "digikneeboots"
 	item_state_slots = list(slot_r_hand_str = "jackboots", slot_l_hand_str = "jackboots")
 	species_restricted = null
 
 /obj/item/clothing/shoes/boots/jackboots/thigh
-	name = "thigh-length jackboots"
-	desc = "Even taller synthleather boots with an artificial shine."
+	name = "сапоги по бедра"
+	desc = "Ещё более высокие сапоги из синтетической кожи, сияющие искусственным глянцем."
 	icon_state = "thighboots"
 	item_state_slots = list(slot_r_hand_str = "jackboots", slot_l_hand_str = "jackboots")
 
 /obj/item/clothing/shoes/boots/jackboots/toeless/thigh
 	name = "toe-less thigh-length jackboots"
-	desc = "Modified pair of even taller boots, particularly friendly to those species whose toes hold claws."
+	desc = "Видоизмененная пара ещё более высоких боевых сапог, предназначенная для рас, обладающих когтями."
 	icon_state = "digithighboots"
 	item_state_slots = list(slot_r_hand_str = "jackboots", slot_l_hand_str = "jackboots")
 	species_restricted = null
 
 /obj/item/clothing/shoes/boots/workboots
-	name = "workboots"
-	desc = "A pair of steel-toed work boots designed for use in industrial settings. Safety first."
+	name = "рабочие ботинки"
+	desc = "Пара ботинок, упрочненных сталью и защищающих пальцы в рабочих условиях."
 	icon_state = "workboots"
 	armor = list(melee = 40, bullet = 0, laser = 0, energy = 15, bomb = 20, bio = 0, rad = 20)
 	siemens_coefficient = 0.7
@@ -75,15 +75,15 @@
 	pickup_sound = 'sound/items/pickup/boots.ogg'
 
 /obj/item/clothing/shoes/boots/workboots/toeless
-	name = "toe-less workboots"
-	desc = "A pair of toeless work boots designed for use in industrial settings. Modified for species whose toes have claws."
+	name = "рабочие ботинки без пальцев"
+	desc = "Пара рабочих ботинок без пальцев, защищающих ноги в рабочих условиях и видоизмененных для рас, обладающих когтями."
 	icon_state = "workbootstoeless"
 	item_state_slots = list(slot_r_hand_str = "workboots", slot_l_hand_str = "workboots")
 	species_restricted = null
 
 /obj/item/clothing/shoes/boots/winter
-	name = "winter boots"
-	desc = "Boots lined with 'synthetic' animal fur."
+	name = "зимние ботинки"
+	desc = "Ботинки с подбивкой из 'синтетической' шерсти."
 	icon_state = "winterboots"
 	cold_protection = FEET
 	min_cold_protection_temperature = SHOE_MIN_COLD_PROTECTION_TEMPERATURE
@@ -93,54 +93,54 @@
 	step_volume_mod = 0.8
 
 /obj/item/clothing/shoes/boots/winter/security
-	name = "security winter boots"
-	desc = "A pair of winter boots. These ones are lined with grey fur, and coloured an angry red."
+	name = "зимние ботинки Службы Безопасности"
+	desc = "Пара зимних ботинок. Эти подбиты серой шерстью и окрашены в дерзкий красный цвет."
 	icon_state = "winterboots_sec"
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0)
 
 /obj/item/clothing/shoes/boots/winter/science
-	name = "science winter boots"
-	desc = "A pair of winter boots. These ones are lined with white fur, and are trimmed with scientific advancement!"
+	name = "зимние ботинки ученого"
+	desc = "Пара зимних ботинок. Эти подбиты белой шерстью и пронизаны духом науки!"
 	icon_state = "winterboots_sci"
 
 /obj/item/clothing/shoes/boots/winter/command
-	name = "site manager's winter boots"
-	desc = "A pair of winter boots. They're lined with dark fur, and trimmed in the colours of superiority."
+	name = "зимние ботинки Директора Колонии"
+	desc = "Пара зимних ботинок. Эти подбиты тёмной шерстью, а края окрашены в цвет превосходства."
 	icon_state = "winterboots_cap"
 
 /obj/item/clothing/shoes/boots/winter/engineering
-	name = "engineering winter boots"
-	desc = "A pair of winter boots. These ones are lined with orange fur and are trimmed in the colours of disaster."
+	name = "зимние ботинки инженера"
+	desc = "Пара зимних ботинок. Эти подбиты оранжевой шерстью, а края окрашены в цвет катастрофы."
 	icon_state = "winterboots_eng"
 
 /obj/item/clothing/shoes/boots/winter/atmos
-	name = "atmospherics winter boots"
-	desc = "A pair of winter boots. These ones are lined with beige fur, and are trimmed in breath taking colours."
+	name = "зимние ботинки атмосферщика"
+	desc = "Пара зимних ботинок. Эти подбиты бежевой шерстью, а края окрашены в цвет свежего воздуха."
 	icon_state = "winterboots_atmos"
 
 /obj/item/clothing/shoes/boots/winter/medical
-	name = "medical winter boots"
-	desc = "A pair of winter boots. These ones are lined with white fur, and are trimmed like 30cc of dexalin"
+	name = "зимние ботинки врача"
+	desc = "Пара зимних ботинок. Эти подбиты белой шерстью, а края окрашены в цвет 30 единиц дексалина."
 	icon_state = "winterboots_med"
 
 /obj/item/clothing/shoes/boots/winter/mining
-	name = "mining winter boots"
-	desc = "A pair of winter boots. These ones are lined with greyish fur, and their trim is golden!"
+	name = "зимние ботинки шахтера"
+	desc = "Пара зимних ботинок. Эти подбиты сероватой шерстью, а края золотого цвета!"
 	icon_state = "winterboots_mining"
 
 /obj/item/clothing/shoes/boots/winter/supply
-	name = "supply winter boots"
-	desc = "A pair of winter boots. These ones are lined with the galactic cargonia colors!"
+	name = "зимние ботинки грузчика"
+	desc = "Пара зимних ботинок. Края этих ботинок окрашены в цвета Каргонии!"
 	icon_state = "winterboots_sup"
 
 /obj/item/clothing/shoes/boots/winter/hydro
-	name = "hydroponics winter boots"
-	desc = "A pair of winter boots. These ones are lined with brown fur, and their trim is ambrosia green"
+	name = "зимние ботинки ботаника"
+	desc = "Пара зимних ботинок. Эти подбиты коричневой шерстью, а края окрашены в цвет амброзии."
 	icon_state = "winterboots_hydro"
 
 /obj/item/clothing/shoes/boots/winter/explorer
-	name = "explorer winter boots"
-	desc = "Steel-toed winter boots for mining or exploration in hazardous environments. Very good at keeping toes warm and uncrushed."
+	name = "зимние ботинки искателя"
+	desc = "Укреплённые сталью зимние ботинки для добычи руд или исследований в суровых условиях. Помогают держать пальцы в тепле и под защитой."
 	icon_state = "explorer"
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0)
 
@@ -159,15 +159,15 @@
 	siemens_coefficient = 0.7
 
 /obj/item/clothing/shoes/boots/duty
-	name = "duty boots"
-	desc = "A pair of steel-toed synthleather boots with a mirror shine."
+	name = "служебные ботинки"
+	desc = "Пара укрепленных сталью ботинок из синтетической кожи, отполированных до блеска."
 	icon_state = "duty"
 	armor = list(melee = 40, bullet = 0, laser = 0, energy = 15, bomb = 20, bio = 0, rad = 20)
 	siemens_coefficient = 0.7
 
 /obj/item/clothing/shoes/boots/jungle
-	name = "jungle boots"
-	desc = "A pair of durable brown boots. Waterproofed for use planetside."
+	name = "ботинки для джунглей"
+	desc = "Пара надёжных водонепроницаемых коричневых ботинок."
 	icon_state = "jungle"
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 10, rad = 0)
 	siemens_coefficient = 0.7

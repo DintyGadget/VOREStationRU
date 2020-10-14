@@ -25,15 +25,15 @@
 	..()
 
 /datum/gear_tweak/color/get_contents(var/metadata)
-	return "Color: <font color='[metadata]'>&#9899;</font>"
+	return "Цвет: <font color='[metadata]'>&#9899;</font>"
 
 /datum/gear_tweak/color/get_default()
 	return valid_colors ? valid_colors[1] : COLOR_GRAY
 
 /datum/gear_tweak/color/get_metadata(var/user, var/metadata, var/title = "Character Preference")
 	if(valid_colors)
-		return input(user, "Choose a color.", title, metadata) as null|anything in valid_colors
-	return input(user, "Choose a color.", title, metadata) as color|null
+		return input(user, "Выберите цвет.", title, metadata) as null|anything in valid_colors
+	return input(user, "Выберите цвет.", title, metadata) as color|null
 
 /datum/gear_tweak/color/tweak_item(var/obj/item/I, var/metadata)
 	if(valid_colors && !(metadata in valid_colors))
@@ -52,13 +52,13 @@
 	..()
 
 /datum/gear_tweak/path/get_contents(var/metadata)
-	return "Type: [metadata]"
+	return "Вид: [metadata]"
 
 /datum/gear_tweak/path/get_default()
 	return valid_paths[1]
 
 /datum/gear_tweak/path/get_metadata(var/user, var/metadata)
-	return input(user, "Choose a type.", "Character Preference", metadata) as null|anything in valid_paths
+	return input(user, "Выберите вид.", "Character Preference", metadata) as null|anything in valid_paths
 
 /datum/gear_tweak/path/tweak_gear_data(var/metadata, var/datum/gear_data/gear_data)
 	if(!(metadata in valid_paths))
@@ -77,7 +77,7 @@
 	..()
 
 /datum/gear_tweak/contents/get_contents(var/metadata)
-	return "Contents: [english_list(metadata, and_text = ", ")]"
+	return "Содержимое: [english_list(metadata, and_text = ", ")]"
 
 /datum/gear_tweak/contents/get_default()
 	. = list()
@@ -89,7 +89,7 @@
 	for(var/i = metadata.len to valid_contents.len)
 		metadata += "Random"
 	for(var/i = 1 to valid_contents.len)
-		var/entry = input(user, "Choose an entry.", "Character Preference", metadata[i]) as null|anything in (valid_contents[i] + list("Random", "None"))
+		var/entry = input(user, "Выберите содержимое.", "Character Preference", metadata[i]) as null|anything in (valid_contents[i] + list("Random", "None"))
 		if(entry)
 			. += entry
 		else
@@ -122,13 +122,13 @@
 	..()
 
 /datum/gear_tweak/reagents/get_contents(var/metadata)
-	return "Reagents: [metadata]"
+	return "Содержимое: [metadata]"
 
 /datum/gear_tweak/reagents/get_default()
 	return "Random"
 
 /datum/gear_tweak/reagents/get_metadata(var/user, var/list/metadata)
-	. = input(user, "Choose an entry.", "Character Preference", metadata) as null|anything in (valid_reagents + list("Random", "None"))
+	. = input(user, "Выберите содержимое.", "Character Preference", metadata) as null|anything in (valid_reagents + list("Random", "None"))
 	if(!.)
 		return metadata
 
@@ -159,18 +159,18 @@ var/datum/gear_tweak/custom_name/gear_tweak_free_name = new()
 	..()
 
 /datum/gear_tweak/custom_name/get_contents(var/metadata)
-	return "Name: [metadata]"
+	return "Название: [metadata]"
 
 /datum/gear_tweak/custom_name/get_default()
 	return ""
 
 /datum/gear_tweak/custom_name/get_metadata(var/user, var/metadata)
 	if(jobban_isbanned(user, "Custom loadout"))
-		to_chat(user, SPAN_WARNING("You are banned from using custom loadout names/descriptions."))
+		to_chat(user, SPAN_WARNING("Вам запрещено использовать собственные описания и названия предметов."))
 		return
 	if(valid_custom_names)
-		return input(user, "Choose an item name.", "Character Preference", metadata) as null|anything in valid_custom_names
-	return sanitize(input(user, "Choose the item's name. Leave it blank to use the default name.", "Item Name", metadata) as text|null, MAX_LNAME_LEN, extra = 0)
+		return input(user, "Введите название предмета.", "Character Preference", metadata) as null|anything in valid_custom_names
+	return sanitize(input(user, "Введите название предмета. Оставьте пустым для названия по умолчанию.", "Item Name", metadata) as text|null, MAX_LNAME_LEN, extra = 0)
 
 /datum/gear_tweak/custom_name/tweak_item(var/obj/item/I, var/metadata)
 	if(!metadata)
@@ -190,18 +190,18 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 	..()
 
 /datum/gear_tweak/custom_desc/get_contents(var/metadata)
-	return "Description: [metadata]"
+	return "Описание: [metadata]"
 
 /datum/gear_tweak/custom_desc/get_default()
 	return ""
 
 /datum/gear_tweak/custom_desc/get_metadata(var/user, var/metadata)
 	if(jobban_isbanned(user, "Custom loadout"))
-		to_chat(user, SPAN_WARNING("You are banned from using custom loadout names/descriptions."))
+		to_chat(user, SPAN_WARNING("Вам запрещено использовать собственные описания и названия предметов."))
 		return
 	if(valid_custom_desc)
-		return input(user, "Choose an item description.", "Character Preference", metadata) as null|anything in valid_custom_desc
-	return sanitize(input(user, "Choose the item's description. Leave it blank to use the default description.", "Item Description", metadata) as message|null, extra = 0)
+		return input(user, "Введите описание предмета.", "Character Preference", metadata) as null|anything in valid_custom_desc
+	return sanitize(input(user, "Введите описание предмета. Оставьте пустым для описания по умолчанию.", "Item Description", metadata) as message|null, extra = 0)
 
 /datum/gear_tweak/custom_desc/tweak_item(var/obj/item/I, var/metadata)
 	if(!metadata)
@@ -256,7 +256,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	var/entry = input(user, "Choose a processor.", "Character Preference") in names
+	var/entry = input(user, "Выберите процессор.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -268,7 +268,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a battery.", "Character Preference") in names
+	entry = input(user, "Выберите батарейку.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -280,7 +280,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a hard drive.", "Character Preference") in names
+	entry = input(user, "Выберите жесткий диск.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -292,7 +292,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a network card.", "Character Preference") in names
+	entry = input(user, "Выберите сетевую карту.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -304,7 +304,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a nanoprinter.", "Character Preference") in names
+	entry = input(user, "Выберите нанопринтер.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -316,7 +316,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a card slot.", "Character Preference") in names
+	entry = input(user, "Выберите слот карты.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -328,7 +328,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a tesla link.", "Character Preference") in names
+	entry = input(user, "Выберите точку связи тесла.", "Character Preference") in names
 	. += names[entry]
 
 /datum/gear_tweak/tablet/get_default()
@@ -405,7 +405,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	var/entry = input(user, "Choose a processor.", "Character Preference") in names
+	var/entry = input(user, "Выберите процессор.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -417,7 +417,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a battery.", "Character Preference") in names
+	entry = input(user, "Выберите батарейку.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -429,7 +429,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a hard drive.", "Character Preference") in names
+	entry = input(user, "Выберите жесткий диск.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -441,7 +441,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a network card.", "Character Preference") in names
+	entry = input(user, "Выберите сетевую карту.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -453,7 +453,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a nanoprinter.", "Character Preference") in names
+	entry = input(user, "Выберите нанопринтер.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -465,7 +465,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a card slot.", "Character Preference") in names
+	entry = input(user, "Выберите слот карты.", "Character Preference") in names
 	. += names[entry]
 
 	names = list()
@@ -477,7 +477,7 @@ var/datum/gear_tweak/custom_desc/gear_tweak_free_desc = new()
 		else
 			names["None"] = counter++
 
-	entry = input(user, "Choose a tesla link.", "Character Preference") in names
+	entry = input(user, "Выберите точку связи тесла.", "Character Preference") in names
 	. += names[entry]
 
 /datum/gear_tweak/laptop/get_default()

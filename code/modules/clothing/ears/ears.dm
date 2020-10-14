@@ -2,15 +2,15 @@
 	Earmuffs
 */
 /obj/item/clothing/ears/earmuffs
-	name = "earmuffs"
-	desc = "Защищает ваш слух от громких шумов,а также тихих."
+	name = "защитные наушники"
+	desc = "Защищает Ваш слух как от громких шумов, так и от тихих."
 	icon_state = "earmuffs"
 	item_state_slots = list(slot_r_hand_str = "earmuffs", slot_l_hand_str = "earmuffs")
 	slot_flags = SLOT_EARS | SLOT_TWOEARS
 	ear_protection = 2
 
 /obj/item/clothing/ears/earmuffs/headphones
-	name = "headphones"
+	name = "наушники"
 	desc = "Унц унц унц унц."
 	var/headphones_on = 0
 	icon_state = "headphones_off"
@@ -18,7 +18,7 @@
 	slot_flags = SLOT_EARS | SLOT_TWOEARS
 
 /obj/item/clothing/ears/earmuffs/headphones/verb/togglemusic()
-	set name = "Переключение Музыки Для Наушников"
+	set name = "Включить/Выключить Музыку"
 	set category = "Object"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
@@ -41,147 +41,147 @@
 	Skrell tentacle wear
 */
 /obj/item/clothing/ears/skrell
-	name = "skrell tentacle wear"
-	desc = "Некоторые вещи, которые скреллы носят для украшения своих головных щупалец."
+	name = "украшение на хвост скрелла"
+	desc = "Украшение, носимое скреллами на головных щупальцах."
 	icon = 'icons/obj/clothing/ears.dmi'
 	w_class = ITEMSIZE_TINY
 	slot_flags = SLOT_EARS
 	species_restricted = list(SPECIES_SKRELL)
 
 /obj/item/clothing/ears/skrell/chain
-	name = "Gold headtail chains"
-	desc = "Изящная золотая цепочка, которую женщины-скреллы носят для украшения своих хвостов."
+	name = "золотая цепочка на хвост"
+	desc = "Изящная цепочка, которой самки скреллов украшают свои головные хвосты."
 	icon_state = "skrell_chain"
 	item_state_slots = list(slot_r_hand_str = "egg5", slot_l_hand_str = "egg5")
 	drop_sound = 'sound/items/drop/ring.ogg'
 	pickup_sound = 'sound/items/pickup/ring.ogg'
 
 /obj/item/clothing/ears/skrell/chain/silver
-	name = "Silver headtail chains"
-	desc = "Тонкая серебряная цепочка, которую носят самки скреллов, чтобы украсить свои головные хвосты."
+	name = "серебряная цепочка на хвост"
+	desc = "Изящная серебряная цепочка, которой самки скреллов украшают свои головные хвосты."
 	icon_state = "skrell_chain_sil"
 	item_state_slots = list(slot_r_hand_str = "egg", slot_l_hand_str = "egg")
 
 /obj/item/clothing/ears/skrell/chain/bluejewels
-	name = "Blue jeweled golden headtail chains"
-	desc = "Изящная золотая цепочка, украшенная голубыми драгоценностями, которые носили скреллы-женщины для украшения своих хвостов."
+	name = "цепочка на хвост с синими самоцветами"
+	desc = "Изящная золотая цепочка, украшенная синими самоцветами, которой самки скреллов украшают свои головные хвосты."
 	icon_state = "skrell_chain_bjewel"
 	item_state_slots = list(slot_r_hand_str = "egg2", slot_l_hand_str = "egg2")
 
 /obj/item/clothing/ears/skrell/chain/redjewels
-	name = "Red jeweled golden headtail chains"
-	desc = "Изящная золотая цепочка, украшенная красными драгоценностями, которые женщины-скреллы носят для украшения своих хвостов."
+	name = "цепочка на хвост с красными самоцветами"
+	desc = "Изящная золотая цепочка, украшенная красными самоцветами, которой самки скреллов украшают свои головные хвосты."
 	icon_state = "skrell_chain_rjewel"
 	item_state_slots = list(slot_r_hand_str = "egg4", slot_l_hand_str = "egg4")
 
 /obj/item/clothing/ears/skrell/chain/ebony
-	name = "Ebony headtail chains"
-	desc = "Тонкая эбеновая цепочка, которую носили женщины-скреллы, чтобы украсить свои головные хвосты."
+	name = "эбеновая цепочка на хвост"
+	desc = "Изящная эбеновая цепочка, которой самки скреллов украшают свои головные хвосты."
 	icon_state = "skrell_chain_ebony"
 	item_state_slots = list(slot_r_hand_str = "egg6", slot_l_hand_str = "egg6")
 
 /obj/item/clothing/ears/skrell/band
-	name = "Gold headtail bands"
-	desc = "Золотые металлические ленты, которые носят самцы скреллов, чтобы украсить их головные хвосты."
+	name = "золотые обручи на хвост"
+	desc = "Металлические обручи, которыми самцы скреллов украшают свои головные хвосты."
 	icon_state = "skrell_band"
 	item_state_slots = list(slot_r_hand_str = "egg5", slot_l_hand_str = "egg5")
 	drop_sound = 'sound/items/drop/ring.ogg'
 	pickup_sound = 'sound/items/pickup/ring.ogg'
 
 /obj/item/clothing/ears/skrell/band/silver
-	name = "Silver headtail bands"
-	desc = "Серебряные металлические ленты, которые носят самцы скреллов, чтобы украсить их головные хвосты."
+	name = "серебряные обручи на хвост"
+	desc = "Серебряные металлические обручи, которыми самцы скреллов украшают свои головные хвосты."
 	icon_state = "skrell_band_sil"
 	item_state_slots = list(slot_r_hand_str = "egg", slot_l_hand_str = "egg")
 
 /obj/item/clothing/ears/skrell/band/bluejewels
-	name = "Blue jeweled golden headtail bands"
-	desc = "Золотые металлические ленты, украшенные синими драгоценными камнями, которые носили мужчины-скреллы, чтобы украсить их головные хвосты."
+	name = "обручи на хвост с синими самоцветами"
+	desc = "Золотые металлические обручи, украшенные синими самоцветами, которыми самцы скреллов украшают свои головные хвосты."
 	icon_state = "skrell_band_bjewel"
 	item_state_slots = list(slot_r_hand_str = "egg2", slot_l_hand_str = "egg2")
 
 /obj/item/clothing/ears/skrell/band/redjewels
-	name = "Red jeweled golden headtail bands"
-	desc = "Золотые металлические ленты, украшенные красными драгоценными камнями, которые носили мужчины-скреллы, чтобы украсить их головные хвосты."
+	name = "обручи на хвост с красными самоцветами"
+	desc = "Золотые металлические обручи, украшенные красными самоцветами, которыми самцы скреллов украшают свои головные хвосты."
 	icon_state = "skrell_band_rjewel"
 	item_state_slots = list(slot_r_hand_str = "egg4", slot_l_hand_str = "egg4")
 
 /obj/item/clothing/ears/skrell/band/ebony
-	name = "Ebony headtail bands"
-	desc = "Полосы из черного дерева, которые мужчины-скреллы носят для украшения своих хвостов."
+	name = "эбеновые обручи на хвост"
+	desc = "Эбеновые обручи, которыми самцы скреллов украшают свои головные хвосты."
 	icon_state = "skrell_band_ebony"
 	item_state_slots = list(slot_r_hand_str = "egg6", slot_l_hand_str = "egg6")
 
 /obj/item/clothing/ears/skrell/colored/band
-	name = "Colored headtail bands"
-	desc = "Металлические ленты, которые мужчины-скреллы носят для украшения своих хвостов."
+	name = "окрашенные обручи на хвост"
+	desc = "Окрашенные обручи, которыми самцы скреллов украшают свои головные хвосты."
 	icon_state = "skrell_band_sil"
 	item_state_slots = list(slot_r_hand_str = "egg", slot_l_hand_str = "egg")
 
 /obj/item/clothing/ears/skrell/colored/chain
-	name = "Colored headtail chains"
-	desc = "Изящная цепочка, которую женщины-скреллы носят для украшения хвоста на голове."
+	name = "окрашенная цепочка на хвост"
+	desc = "Изящная окрашенная цепочка, которой самки скреллов украшают свои головные хвосты."
 	icon_state = "skrell_chain_sil"
 	item_state_slots = list(slot_r_hand_str = "egg", slot_l_hand_str = "egg")
 
 /obj/item/clothing/ears/skrell/cloth_female
-	name = "red headtail cloth"
-	desc = "Тканевый платок, который носили женские скреллы, обвивал их голову хвостами."
+	name = "красный платок на хвост"
+	desc = "Тканевый платок, которым самки скреллов украшают свои головные хвосты."
 	icon_state = "skrell_cloth_female"
 	item_state_slots = list(slot_r_hand_str = "egg4", slot_l_hand_str = "egg4")
 
 /obj/item/clothing/ears/skrell/cloth_female/black
-	name = "black headtail cloth"
+	name = "черный платок на хвост"
 	icon_state = "skrell_cloth_black_female"
 	item_state_slots = list(slot_r_hand_str = "egg6", slot_l_hand_str = "egg6")
 
 /obj/item/clothing/ears/skrell/cloth_female/blue
-	name = "blue headtail cloth"
+	name = "синий платок на хвост"
 	icon_state = "skrell_cloth_blue_female"
 	item_state_slots = list(slot_r_hand_str = "egg2", slot_l_hand_str = "egg2")
 
 /obj/item/clothing/ears/skrell/cloth_female/green
-	name = "green headtail cloth"
+	name = "зеленый платок на хвост"
 	icon_state = "skrell_cloth_green_female"
 	item_state_slots = list(slot_r_hand_str = "egg3", slot_l_hand_str = "egg3")
 
 /obj/item/clothing/ears/skrell/cloth_female/pink
-	name = "pink headtail cloth"
+	name = "розовый платок на хвост"
 	icon_state = "skrell_cloth_pink_female"
 	item_state_slots = list(slot_r_hand_str = "egg1", slot_l_hand_str = "egg1")
 
 /obj/item/clothing/ears/skrell/cloth_female/lightblue
-	name = "light blue headtail cloth"
+	name = "голубой платок на хвост"
 	icon_state = "skrell_cloth_lblue_female"
 	item_state_slots = list(slot_r_hand_str = "egg2", slot_l_hand_str = "egg2")
 
 /obj/item/clothing/ears/skrell/cloth_male
-	name = "red headtail cloth"
-	desc = "A cloth band worn by male skrell around their head tails."
+	name = "красная повязка на хвост"
+	desc = "Тканевая повязка, которой самцы скреллов украшают свои головные хвосты."
 	icon_state = "skrell_cloth_male"
 	item_state_slots = list(slot_r_hand_str = "egg4", slot_l_hand_str = "egg4")
 
 /obj/item/clothing/ears/skrell/cloth_male/black
-	name = "black headtail cloth"
+	name = "черная повязка на хвост"
 	icon_state = "skrell_cloth_black_male"
 	item_state_slots = list(slot_r_hand_str = "egg6", slot_l_hand_str = "egg6")
 
 /obj/item/clothing/ears/skrell/cloth_male/blue
-	name = "blue headtail cloth"
+	name = "синяя повязка на хвост"
 	icon_state = "skrell_cloth_blue_male"
 	item_state_slots = list(slot_r_hand_str = "egg2", slot_l_hand_str = "egg2")
 
 /obj/item/clothing/ears/skrell/cloth_male/green
-	name = "green headtail cloth"
+	name = "зеленая повязка на хвост"
 	icon_state = "skrell_cloth_green_male"
 	item_state_slots = list(slot_r_hand_str = "egg3", slot_l_hand_str = "egg3")
 
 /obj/item/clothing/ears/skrell/cloth_male/pink
-	name = "pink headtail cloth"
+	name = "розовая повязка на хвост"
 	icon_state = "skrell_cloth_pink_male"
 	item_state_slots = list(slot_r_hand_str = "egg1", slot_l_hand_str = "egg1")
 
 /obj/item/clothing/ears/skrell/cloth_male/lightblue
-	name = "light blue headtail cloth"
+	name = "голубая повязка на хвост"
 	icon_state = "skrell_cloth_lblue_male"
 	item_state_slots = list(slot_r_hand_str = "egg2", slot_l_hand_str = "egg2")

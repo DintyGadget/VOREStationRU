@@ -32,32 +32,32 @@
 //Flower crowns
 
 /obj/item/clothing/head/sunflower_crown
-	name = "sunflower crown"
-	desc = "A flower crown weaved with sunflowers."
+	name = "подсолнечный венок"
+	desc = "Цветочный венок, обвитый подсолнухами."
 	icon_state = "sunflower_crown"
 	body_parts_covered = 0
 	drop_sound = 'sound/items/drop/herb.ogg'
 	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 /obj/item/clothing/head/lavender_crown
-	name = "lavender crown"
-	desc = "A flower crown weaved with lavender."
+	name = "лавандовый венок"
+	desc = "Цветочный венок, обвитый лавандой."
 	icon_state = "lavender_crown"
 	body_parts_covered = 0
 	drop_sound = 'sound/items/drop/herb.ogg'
 	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 /obj/item/clothing/head/poppy_crown
-	name = "poppy crown"
-	desc = "A flower crown weaved with poppies."
+	name = "маковый венок"
+	desc = "Цветочный венок, обвитый маком."
 	icon_state = "poppy_crown"
 	body_parts_covered = 0
 	drop_sound = 'sound/items/drop/herb.ogg'
 	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 /obj/item/clothing/head/rose_crown
-	name = "rose crown"
-	desc = "A flower crown weaved with roses."
+	name = "розовый венок"
+	desc = "Цветочный венок, обвитый розами."
 	icon_state = "poppy_crown"
 	body_parts_covered = 0
 	drop_sound = 'sound/items/drop/herb.ogg'

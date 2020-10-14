@@ -1,17 +1,17 @@
 /obj/item/clothing/gloves/ring/wedding
-	name = "golden wedding ring"
-	desc = "For showing your devotion to another person. It has a golden glimmer to it."
+	name = "золотое свадебное кольцо"
+	desc = "Подтверждает верность другому человек. Сверкает золотыми бликами."
 	icon = 'icons/obj/clothing/gloves_vr.dmi'
 	icon_state = "wedring_g"
 	item_state = "wedring_g"
 	var/partnername = ""
 
 /obj/item/clothing/gloves/ring/wedding/attack_self(mob/user)
-	partnername = copytext_char(sanitize(input(user, "Would you like to change the holoengraving on the ring?", "Name your spouse", "Bae") as null|text),1,MAX_NAME_LEN)
+	partnername = copytext_char(sanitize(input(user, "Хотите ли Вы изменить голографическую надпись на кольцо?", "Введите своего супруга/супруга.", "Солнышко") as null|text),1,MAX_NAME_LEN)
 	name = "[initial(name)] - [partnername]"
 
 /obj/item/clothing/gloves/ring/wedding/silver
-	name = "silver wedding ring"
-	desc = "For showing your devotion to another person. It has a silver glimmer to it."
+	name = "серебряное свадебное кольцо"
+	desc = "Подтверждает верность другому человек. Сверкает серебряными бликами."
 	icon_state = "wedring_s"
 	item_state = "wedring_s"

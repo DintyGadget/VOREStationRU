@@ -32,7 +32,7 @@
 	flags_inv = HIDEHOLSTER
 	var/open = 0	//0 is closed, 1 is open, -1 means it won't be able to toggle
 	verb/toggle()
-		set name = "Пуговица верхней одежды"
+		set name = "Пуговицы Верхней Одежды"
 		set category = "Object"
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())
@@ -49,7 +49,7 @@
 			flags_inv = HIDEHOLSTER
 			to_chat(usr, "Вы расстегиваете верхнюю одежду.")
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на своем [src], прежде чем сразу понимаете, насколько вы глупы.")
+			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на своем [src], прежде чем сразу понимаете, насколько Вы глупы.")
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -58,7 +58,7 @@
 	flags_inv = HIDEHOLSTER
 	var/open = 0	//0 is closed, 1 is open, -1 means it won't be able to toggle
 	verb/toggle()
-		set name = "Пуговица верхней одежды"
+		set name = "Пуговица Верхней Одежды"
 		set category = "Object"
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())
@@ -75,7 +75,7 @@
 			flags_inv = HIDEHOLSTER
 			to_chat(usr, "Вы расстегиваете верхнюю одежду.")
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на своем [src], прежде чем сразу понимаете, насколько вы глупы.")
+			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на своем [src], прежде чем сразу понимаете, насколько Вы глупы.")
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -91,7 +91,7 @@
 	var/icon_badge
 	var/icon_nobadge
 	verb/toggle()
-		set name ="Настроить бейдж"
+		set name ="Отрегулировать Бейдж"
 		set category = "Object"
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())

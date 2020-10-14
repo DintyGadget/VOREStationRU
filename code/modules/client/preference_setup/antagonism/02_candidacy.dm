@@ -1,7 +1,7 @@
 var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 // Change these to 0 if the equivalent mode is disabled for whatever reason!
-	"traitor" = 1,										// 0
+	"предатель" = 1,										// 0
 	"operative" = 1,									// 1
 	"changeling" = 1,									// 2
 	"wizard" = 1,										// 3

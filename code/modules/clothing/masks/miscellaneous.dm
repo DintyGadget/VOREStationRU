@@ -27,8 +27,8 @@
 	..()
 
 /obj/item/clothing/mask/surgical
-	name = "sterile mask"
-	desc = "A sterile mask designed to help prevent the spread of diseases."
+	name = "стерильная маска"
+	desc = "Стерильная маска, используемая для препятствия распространения заболеваний."
 	icon_state = "sterile"
 	item_state_slots = list(slot_r_hand_str = "sterile", slot_l_hand_str = "sterile")
 	w_class = ITEMSIZE_SMALL
@@ -47,18 +47,18 @@
 			body_parts_covered = body_parts_covered & ~FACE
 			armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 			icon_state = "steriledown"
-			to_chat(usr, "You pull the mask below your chin.")
+			to_chat(usr, "Вы опускаете маску на подбородок.")
 		else
 			gas_transfer_coefficient = initial(gas_transfer_coefficient)
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
 			armor = initial(armor)
-			to_chat(usr, "You pull the mask up to cover your face.")
+			to_chat(usr, "Вы надеваете маску на лицо.")
 		update_clothing_icon()
 
 /obj/item/clothing/mask/surgical/verb/toggle()
 	set category = "Object"
-	set name = "Adjust mask"
+	set name = "Отрегулировать Маску"
 	set src in usr
 
 	adjust_mask(usr)
@@ -80,8 +80,8 @@
 //scarves (fit in in mask slot)
 //None of these actually have on-mob sprites...
 /obj/item/clothing/mask/bluescarf
-	name = "blue neck scarf"
-	desc = "A blue neck scarf."
+	name = "синий шарф"
+	desc = "Синий шейный платок.."
 	icon_state = "blueneckscarf"
 	body_parts_covered = FACE
 	item_flags = FLEXIBLEMATERIAL
@@ -89,8 +89,8 @@
 	gas_transfer_coefficient = 0.90
 
 /obj/item/clothing/mask/redscarf
-	name = "red scarf"
-	desc = "A red and white checkered neck scarf."
+	name = "красный шарф"
+	desc = "Красный с белым шейный платок."
 	icon_state = "redwhite_scarf"
 	body_parts_covered = FACE
 	item_flags = FLEXIBLEMATERIAL
@@ -98,8 +98,8 @@
 	gas_transfer_coefficient = 0.90
 
 /obj/item/clothing/mask/greenscarf
-	name = "green scarf"
-	desc = "A green neck scarf."
+	name = "зеленый шарф"
+	desc = "Зеленый шейный платок."
 	icon_state = "green_scarf"
 	body_parts_covered = FACE
 	item_flags = FLEXIBLEMATERIAL
@@ -236,8 +236,8 @@
 		eye.owner = null
 
 /obj/item/clothing/mask/bandana
-	name = "black bandana"
-	desc = "A fine black bandana with nanotech lining. Can be worn on the head or face."
+	name = "черная бандана"
+	desc = "Качественная черная бандана с нановолокнистой подкладкой. Носится как на голове, так и на лице."
 	w_class = ITEMSIZE_TINY
 	flags_inv = HIDEFACE
 	slot_flags = SLOT_MASK|SLOT_HEAD
@@ -260,38 +260,38 @@
 	return ..()
 
 /obj/item/clothing/mask/bandana/red
-	name = "red bandana"
-	desc = "A fine red bandana with nanotech lining. Can be worn on the head or face."
+	name = "красная бандана"
+	desc = "Качественная красная бандана с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandred"
 	item_state_slots = list(slot_r_hand_str = "bandred", slot_l_hand_str = "bandred")
 
 /obj/item/clothing/mask/bandana/blue
-	name = "blue bandana"
-	desc = "A fine blue bandana with nanotech lining. Can be worn on the head or face."
+	name = "синяя бандана"
+	desc = "Качественная синяя бандана с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandblue"
 	item_state_slots = list(slot_r_hand_str = "bandblue", slot_l_hand_str = "bandblue")
 
 /obj/item/clothing/mask/bandana/green
-	name = "green bandana"
-	desc = "A fine green bandana with nanotech lining. Can be worn on the head or face."
+	name = "зеленая бандана"
+	desc = "Качественная зеленая бандана с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandgreen"
 	item_state_slots = list(slot_r_hand_str = "bandgreen", slot_l_hand_str = "bandgreen")
 
 /obj/item/clothing/mask/bandana/gold
-	name = "gold bandana"
-	desc = "A fine gold bandana with nanotech lining. Can be worn on the head or face."
+	name = "золотая бандана"
+	desc = "Качественная бандана золотого цвета с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandgold"
 	item_state_slots = list(slot_r_hand_str = "bandgold", slot_l_hand_str = "bandgold")
 
 /obj/item/clothing/mask/bandana/skull
 	name = "skull bandana"
-	desc = "A fine black bandana with nanotech lining and a skull emblem. Can be worn on the head or face."
+	desc = "Качественная черная бандана с нановолокнистой подкладкой и изображением черепа. Надевается как на макушку, так и на лицо."
 	icon_state = "bandskull"
 	item_state_slots = list(slot_r_hand_str = "bandskull", slot_l_hand_str = "bandskull")
 
 /obj/item/clothing/mask/veil
-	name = "black veil"
-	desc = "A black veil, typically worn at funerals or by goths."
+	name = "черная вуаль"
+	desc = "Черная вуаль, надеваемая либо на похороны, либо готами."
 	w_class = ITEMSIZE_TINY
 	body_parts_covered = FACE
 	icon_state = "veil"

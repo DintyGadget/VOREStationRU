@@ -1428,227 +1428,227 @@
 	//Reminder: BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD
 
 /datum/sprite_accessory/marking/tat_heart
-	name = "Tattoo (Heart, Torso)"
+	name = "Тату: Торс"
 	icon_state = "tat_heart"
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/tat_hive
-	name = "Tattoo (Hive, Back)"
+	name = "Тату: Спина"
 	icon_state = "tat_hive"
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/tat_nightling
-	name = "Tattoo (Nightling, Back)"
+	name = "Тату: Спина, альт"
 	icon_state = "tat_nightling"
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/tat_campbell
-	name = "Tattoo (Campbell, R.Arm)"
+	name = "Тату: Правая рука"
 	icon_state = "tat_campbell"
 	body_parts = list(BP_R_ARM)
 
 /datum/sprite_accessory/marking/tat_campbell/left
-	name = "Tattoo (Campbell, L.Arm)"
+	name = "Тату: Левая рука"
 	body_parts = list(BP_L_ARM)
 
-/datum/sprite_accessory/marking/tat_campbell/rightleg
-	name = "Tattoo (Campbell, R.Leg)"
-	body_parts = list(BP_R_LEG)
-
 /datum/sprite_accessory/marking/tat_campbell/leftleg
-	name = "Tattoo (Campbell, L.Leg)"
+	name = "Тату: Левая нога"
 	body_parts = list (BP_L_LEG)
 
+/datum/sprite_accessory/marking/tat_silverburgh/left
+	name = "Тату: Левая нога, альт"
+	icon_state = "tat_silverburgh"
+	body_parts = list (BP_L_LEG)
+
+/datum/sprite_accessory/marking/tat_campbell/rightleg
+	name = "Тату: Правая нога"
+	body_parts = list(BP_R_LEG)
+
 /datum/sprite_accessory/marking/tat_silverburgh
-	name = "Tattoo (Silverburgh, R.Leg)"
+	name = "Tату: Правая нога, альт"
 	icon_state = "tat_silverburgh"
 	body_parts = list (BP_R_LEG)
 
-/datum/sprite_accessory/marking/tat_silverburgh/left
-	name = "Tattoo (Silverburgh, L.Leg)"
-	icon_state = "tat_silverburgh"
-	body_parts = list (BP_L_LEG)
-
 /datum/sprite_accessory/marking/tat_tiger
-	name = "Tattoo (Tiger Stripes, Body)"
+	name = "Тату: Тигриные полосы (всё тело)"
 	icon_state = "tat_tiger"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN)
 
-/datum/sprite_accessory/marking/taj_paw_socks
-	name = "Socks Coloration (Taj)"
-	icon_state = "taj_pawsocks"
-	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
-	species_allowed = list(SPECIES_TAJ)
-
-/datum/sprite_accessory/marking/una_paw_socks
-	name = "Socks Coloration (Una)"
-	icon_state = "una_pawsocks"
-	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
-	species_allowed = list(SPECIES_UNATHI)
-
 /datum/sprite_accessory/marking/paw_socks
-	name = "Socks Coloration (Generic)"
+	name = "Окрас носков (все расы)"
 	icon_state = "pawsocks"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/paw_socks_belly
-	name = "Socks,Belly Coloration (Generic)"
+	name = "Окрас носков, живота (все расы)"
 	icon_state = "pawsocksbelly"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/belly_hands_feet
-	name = "Hands,Feet,Belly Color (Minor)"
+	name = "Окрас ладоней, ступней, живота (меньше)"
 	icon_state = "bellyhandsfeetsmall"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/hands_feet_belly_full
-	name = "Hands,Feet,Belly Color (Major)"
+	name = "Окрас ладоней, ступней, живота (больше)"
 	icon_state = "bellyhandsfeet"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/hands_feet_belly_full_female
-	name = "Hands,Feet,Belly Color (Major, Female)"
+	name = "Окрас ладоней, ступней, живота (больше, жен.)"
 	icon_state = "bellyhandsfeet_female"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/patches
-	name = "Color Patches"
+	name = "Цветные пятна"
 	icon_state = "patches"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/patchesface
-	name = "Color Patches (Face)"
+	name = "Цветные пятна (лицо)"
 	icon_state = "patchesface"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/bands
-	name = "Color Bands"
+	name = "Цветные кольца"
 	icon_state = "bands"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN)
 
 /datum/sprite_accessory/marking/bandsface
-	name = "Color Bands (Face)"
+	name = "Цветные кольца (лицо)"
 	icon_state = "bandsface"
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/tiger_stripes
-	name = "Tiger Stripes"
+	name = "Тигр: Полосы"
 	icon_state = "tiger"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_GROIN)
 	species_allowed = list(SPECIES_TAJ) //There's a tattoo for non-cats
 
 /datum/sprite_accessory/marking/tigerhead
-	name = "Tiger Stripes (Head, Minor)"
+	name = "Тигр: Полосы (голова, меньше)"
 	icon_state = "tigerhead"
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/tigerface
-	name = "Tiger Stripes (Head, Major)"
+	name = "Тигр: полосы (голова, больше)"
 	icon_state = "tigerface"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ) //There's a tattoo for non-cats
 
 /datum/sprite_accessory/marking/backstripe
-	name = "Back Stripe"
+	name = "Спина: Полосы"
 	icon_state = "backstripe"
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/heterochromia
-	name = "Heterochromia (right eye)"
+	name = "Глаза: Гетерохромия (правый)"
 	icon_state = "heterochromia"
 	body_parts = list(BP_HEAD)
 
 	//Taj specific stuff
 /datum/sprite_accessory/marking/taj_belly
-	name = "Belly Fur (Taj)"
+	name = "Таджара: Живот"
 	icon_state = "taj_belly"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_bellyfull
-	name = "Belly Fur Wide (Taj)"
+	name = "Таджара: Живот (шире)"
 	icon_state = "taj_bellyfull"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_earsout
-	name = "Outer Ear (Taj)"
+	name = "Таджара: Уши (внеш.)"
 	icon_state = "taj_earsout"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_earsin
-	name = "Inner Ear (Taj)"
+	name = "Таджара: Уши (внутр.)"
 	icon_state = "taj_earsin"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_nose
-	name = "Nose Color (Taj)"
+	name = "Таджара: Нос"
 	icon_state = "taj_nose"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_crest
-	name = "Chest Fur Crest (Taj)"
+	name = "Таджара: Грудь (крест)"
 	icon_state = "taj_crest"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_muzzle
-	name = "Muzzle Color (Taj)"
+	name = "Таджара: Морда"
 	icon_state = "taj_muzzle"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_face
-	name = "Cheeks Color (Taj)"
+	name = "Таджара: Щёки"
 	icon_state = "taj_face"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_all
-	name = "All Taj Head (Taj)"
+	name = "Таджара: Голова (полностью)"
 	icon_state = "taj_all"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
+/datum/sprite_accessory/marking/taj_paw_socks
+	name = "Таджара: Окрас носков"
+	icon_state = "taj_pawsocks"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
+	species_allowed = list(SPECIES_TAJ)
+
 	//Una specific stuff
 /datum/sprite_accessory/marking/una_face
-	name = "Face Color (Una)"
+	name = "Унатхи: Лицо"
 	icon_state = "una_face"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/una_facelow
-	name = "Face Color Low (Una)"
+	name = "Унатхи: Лицо (ниже)"
 	icon_state = "una_facelow"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/una_scutes
-	name = "Scutes (Una)"
+	name = "Унатхи: Грудь"
 	icon_state = "una_scutes"
 	body_parts = list(BP_TORSO)
+	species_allowed = list(SPECIES_UNATHI)
+
+/datum/sprite_accessory/marking/una_paw_socks
+	name = "Унатхи: Окрас носков"
+	icon_state = "una_pawsocks"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
 	species_allowed = list(SPECIES_UNATHI)
 
 	//Tesh stuff.
 
 /datum/sprite_accessory/marking/teshi_fluff
-	name = "Underfluff (Teshari)"
+	name = "Тешари: Вторичный цвет"
 	icon_state = "teshi_fluff"
 	body_parts = list(BP_HEAD, BP_TORSO, BP_GROIN, BP_R_LEG, BP_L_LEG)
 	species_allowed = list(SPECIES_TESHARI)
 
 /datum/sprite_accessory/marking/teshi_heterochromia
-	name = "Heterochromia (Teshari) (right eye)"
+	name = "Тешари: Гетерохромия (правый глаз)"
 	icon_state = "teshi_heterochromia"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TESHARI)
@@ -1656,41 +1656,41 @@
 	//Diona stuff.
 
 /datum/sprite_accessory/marking/diona_leaves
-	name = "Leaves (Diona)"
+	name = "Диона: Листва"
 	icon_state = "diona_leaves"
 	body_parts = list(BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_TORSO, BP_GROIN, BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 
 /datum/sprite_accessory/marking/diona_thorns
-	name = "Thorns (Diona)"
+	name = "Диона: Шипы"
 	icon_state = "diona_thorns"
 	body_parts =list(BP_TORSO, BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_flowers
-	name = "Flowers (Diona)"
+	name = "Диона: Цветы"
 	icon_state = "diona_flowers"
 	body_parts =list(BP_TORSO, BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_moss
-	name = "Moss (Diona)"
+	name = "Диона: Мох"
 	icon_state = "diona_moss"
 	body_parts =list(BP_TORSO)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_mushroom
-	name = "Mushroom (Diona)"
+	name = "Диона: Гриб"
 	icon_state = "diona_mushroom"
 	body_parts =list(BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_antennae
-	name = "Antennae (Diona)"
+	name = "Диона: Антенна"
 	icon_state = "diona_antennae"
 	body_parts =list(BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)

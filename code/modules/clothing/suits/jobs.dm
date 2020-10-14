@@ -4,8 +4,8 @@
 
 //Botanist
 /obj/item/clothing/suit/storage/apron
-	name = "apron"
-	desc = "A basic blue apron."
+	name = "фартук"
+	desc = "Обычный синий фартук."
 	icon_state = "apron"
 	item_state_slots = list(slot_r_hand_str = "overalls", slot_l_hand_str = "overalls")
 	blood_overlay_type = "armor"
@@ -14,8 +14,8 @@
 	/obj/item/weapon/reagent_containers/glass/bottle, /obj/item/weapon/material/minihoe)
 
 /obj/item/clothing/suit/storage/apron/white
-	name = "white apron"
-	desc = "A basic white apron."
+	name = "белый фартук"
+	desc = "Обычный белый фартук."
 	icon_state = "apron_white"
 	item_state_slots = list(slot_r_hand_str = "apronchef", slot_l_hand_str = "apronchef")
 
@@ -109,8 +109,8 @@
 
 //Detective
 /obj/item/clothing/suit/storage/det_trench
-	name = "brown trenchcoat"
-	desc = "A rugged canvas trenchcoat, designed and created by TX Fabrication Corp. The coat is externally impact resistant - perfect for your next act of autodefenestration!"
+	name = "коричневый тренчкот"
+	desc = "Изношенный тренчкот с защитой от ударов извне — самое то на случай, если выпадете из окна."
 	icon_state = "detective"
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
@@ -121,15 +121,15 @@
 	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/storage/det_trench/grey
-	name = "grey trenchcoat"
+	name = "серый тренчкот"
 	icon_state = "detective2"
 	item_state_slots = list(slot_r_hand_str = "leather_jacket", slot_l_hand_str = "leather_jacket")
 	flags_inv = HIDEHOLSTER
 
 //Forensics
 /obj/item/clothing/suit/storage/forensics
-	name = "jacket"
-	desc = "A forensics technician jacket."
+	name = "куртка"
+	desc = "Куртка настоящего криминалиста."
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
 	allowed = list(/obj/item/weapon/tank/emergency/oxygen, /obj/item/device/flashlight, /obj/item/weapon/gun/energy, /obj/item/weapon/gun/projectile, /obj/item/ammo_magazine,
@@ -138,31 +138,31 @@
 	armor = list(melee = 10, bullet = 10, laser = 15, energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/storage/forensics/red
-	name = "red jacket"
-	desc = "A red forensics technician jacket."
+	name = "красный пиджак"
+	desc = "Красный пиджак настоящего криминалиста."
 	icon_state = "forensics_red"
 	item_state_slots = list(slot_r_hand_str = "suit_red", slot_l_hand_str = "suit_red")
 
 /obj/item/clothing/suit/storage/forensics/red/long
-	name = "long red jacket"
-	desc = "A long red forensics technician jacket."
+	name = "длинный красный пиджак"
+	desc = "Длинный красный пиджак настоящего криминалиста."
 	icon_state = "forensics_red_long"
 
 /obj/item/clothing/suit/storage/forensics/blue
-	name = "blue jacket"
-	desc = "A blue forensics technician jacket."
+	name = "синий пиджак"
+	desc = "Синий пиджак настоящего криминалиста."
 	icon_state = "forensics_blue"
 	item_state_slots = list(slot_r_hand_str = "suit_navy", slot_l_hand_str = "suit_navy")
 
 /obj/item/clothing/suit/storage/forensics/blue/long
-	name = "long blue jacket"
-	desc = "A long blue forensics technician jacket."
+	name = "длинный синий пиджак"
+	desc = "Длинный синий пиджак настоящего криминалиста."
 	icon_state = "forensics_blue_long"
 
 //Engineering
 /obj/item/clothing/suit/storage/hazardvest
-	name = "hazard vest"
-	desc = "A high-visibility vest used in work zones."
+	name = "аварийный жилет"
+	desc = "Жилет повышенной видимости, используемый при строительстве."
 	icon_state = "hazard"
 	blood_overlay_type = "armor"
 	allowed = list (/obj/item/device/analyzer, /obj/item/device/flashlight, /obj/item/device/multitool, /obj/item/device/pipe_painter, /obj/item/device/radio, /obj/item/device/t_scanner,
@@ -171,32 +171,32 @@
 	body_parts_covered = UPPER_TORSO
 
 /obj/item/clothing/suit/storage/hazardvest/blue
-	name = "blue hazard vest"
-	desc = "A high-visibility vest used in work zones. This one is blue!"
+	name = "синий аварийный жилет"
+	desc = "Жилет повышенной видимости. Этот синего цвета!"
 	icon_state = "hazard_b"
 
 /obj/item/clothing/suit/storage/hazardvest/green
-	name = "green hazard vest"
-	desc = "A high-visibility vest used by emergency responders. This one is green!"
+	name = "зеленый аварийный жилет"
+	desc = "Жилет повышенной видимости. Этот зеленого цвета!"
 	icon_state = "hazard_g"
 
 /obj/item/clothing/suit/storage/hazardvest/white
-	name = "white hazard vest"
-	desc = "A high-visibility vest used in work zones. This one has a red cross!"
+	name = "белый аварийный жилет"
+	desc = "Жилет повышенной видимости. На этом красный крест!"
 	icon_state = "hazard_w"
 
 //Lawyer
 /obj/item/clothing/suit/storage/toggle/lawyer/bluejacket
-	name = "blue suit jacket"
-	desc = "A snappy dress jacket."
+	name = "синий формальный пиджак"
+	desc = "Вызывающий формальный пиджак."
 	icon_state = "suitjacket_blue"
 	item_state_slots = list(slot_r_hand_str = "suit_blue", slot_l_hand_str = "suit_blue")
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/storage/toggle/lawyer/purpjacket
-	name = "purple suit jacket"
-	desc = "A snappy dress jacket."
+	name = "синий формальный пиджак"
+	desc = "Вызывающий формальный пиджак."
 	icon_state = "suitjacket_purp"
 	item_state_slots = list(slot_r_hand_str = "suit_purple", slot_l_hand_str = "suit_purple")
 	blood_overlay_type = "coat"
@@ -204,8 +204,8 @@
 
 //Internal Affairs
 /obj/item/clothing/suit/storage/toggle/internalaffairs
-	name = "black suit jacket"
-	desc = "A smooth black jacket."
+	name = "черный формальный пиджак"
+	desc = "Гладкий тёмный пиджак."
 	icon_state = "ia_jacket"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 	blood_overlay_type = "coat"
@@ -213,8 +213,8 @@
 
 //Medical
 /obj/item/clothing/suit/storage/toggle/fr_jacket
-	name = "first responder jacket"
-	desc = "A high-visibility jacket worn by medical first responders."
+	name = "куртка спасателя"
+	desc = "Куртка повышенной видимости, используемый врачами неотложной помощи."
 	icon_state = "fr_jacket"
 	item_state_slots = list(slot_r_hand_str = "fr_jacket", slot_l_hand_str = "fr_jacket")
 	blood_overlay_type = "armor"
@@ -223,14 +223,14 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/storage/toggle/fr_jacket/ems
-	name = "\improper EMS jacket"
-	desc = "A dark blue, martian-pattern, EMS jacket. It sports high-visibility reflective stripes and a star of life on the back."
+	name = "куртка работника неотложной помощи"
+	desc = "Тёмная куртка врача неотложной помощи со светоотражающими полосами и звездой на спине."
 	icon_state = "ems_jacket"
 	item_state_slots = list(slot_r_hand_str = "ems_jacket", slot_l_hand_str = "ems_jacket")
 
 /obj/item/clothing/suit/surgicalapron
-	name = "surgical apron"
-	desc = "A sterile blue apron for performing surgery."
+	name = "хирургический фартук"
+	desc = "Стерильный синий фартук для проведения хирургических операций."
 	icon_state = "surgical"
 	blood_overlay_type = "armor"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
@@ -240,8 +240,8 @@
 
 //Mime
 /obj/item/clothing/suit/suspenders
-	name = "suspenders"
-	desc = "They suspend the illusion of the mime's play."
+	name = "подтяжки"
+	desc = "Неотъемлемый аксессуар любого уважающего себя мима, и не только."
 	icon = 'icons/obj/clothing/belts.dmi'
 	icon_state = "suspenders"
 	blood_overlay_type = "armor" //it's the less thing that I can put here

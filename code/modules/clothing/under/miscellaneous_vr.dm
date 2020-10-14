@@ -115,19 +115,19 @@
 	armor = list(melee = 5, bullet = 10, laser = 10, energy = 5, bomb = 5, bio = 0, rad = 0)
 
 /obj/item/clothing/under/dress/qipao
-	name = "qipao"
-	desc = "A type of feminine body-hugging dress with distinctive Chinese features of Manchu origin."
+	name = "ципао"
+	desc = "Прилегающее женское платье из Китая."
 	icon = 'icons/obj/clothing/uniforms_vr.dmi'
 	icon_override = 'icons/mob/uniform_vr.dmi'
 	icon_state = "qipao"
 	item_state = "qipao"
 
 /obj/item/clothing/under/dress/qipao/white
-	name = "white qipao"
+	name = "белый ципао"
 	icon_state = "qipao_white"
 	item_state = "qipao_white"
 
 /obj/item/clothing/under/dress/qipao/red
-	name = "red qipao"
+	name = "красный ципао"
 	icon_state = "qipao_red"
 	item_state = "qipao_red"

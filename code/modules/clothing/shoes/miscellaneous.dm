@@ -31,16 +31,16 @@
 
 /obj/item/clothing/shoes/dress
 	name = "dress shoes"
-	desc = "Sharp looking low quarters, perfect for a formal uniform."
+	desc = "Островатые на вид туфли, идеально подходят к формальным костюмам. ooking low quarters, perfect for a formal uniform."
 	icon_state = "laceups"
 
 /obj/item/clothing/shoes/dress/white
 	name = "white dress shoes"
-	desc = "Brilliantly white low quarters, not a spot on them."
+	desc = "Белоснежные туфли, на которых нет ни единого пятнышка."
 	icon_state = "whitedress"
 
 /obj/item/clothing/shoes/sandal
-	desc = "A pair of rather plain, wooden sandals."
+	desc = "Пара обыкновенных деревянных сандалий."
 	name = "sandals"
 	icon_state = "wizard"
 	species_restricted = null
@@ -101,8 +101,8 @@ obj/item/clothing/shoes/sandal/clogs
 	icon_state = "boots"
 
 /obj/item/clothing/shoes/slippers
-	name = "bunny slippers"
-	desc = "Fluffy!"
+	name = "кроличьи тапочки"
+	desc = "Пуффыстые!"
 	icon_state = "slippers"
 	force = 0
 	species_restricted = null
@@ -117,15 +117,15 @@ obj/item/clothing/shoes/sandal/clogs
 	item_state_slots = list(slot_r_hand_str = "slippers", slot_l_hand_str = "slippers")
 
 /obj/item/clothing/shoes/laceup
-	name = "black oxford  shoes"
+	name = "черные оксфорды"
 	icon_state = "oxford_black"
 
 /obj/item/clothing/shoes/laceup/grey
-	name = "grey oxford shoes"
+	name = "серые оксфорды"
 	icon_state = "oxford_grey"
 
 /obj/item/clothing/shoes/laceup/brown
-	name = "brown oxford shoes"
+	name = "коричневые оксфорды"
 	icon_state = "oxford_brown"
 
 /obj/item/clothing/shoes/swimmingfins
@@ -138,34 +138,34 @@ obj/item/clothing/shoes/sandal/clogs
 	species_restricted = null
 
 /obj/item/clothing/shoes/flipflop
-	name = "flip flops"
-	desc = "A pair of foam flip flops. For those not afraid to show a little ankle."
+	name = "шлепанцы"
+	desc = "Пара шлепанцев из пеноматериала. Для тех, кто не стесняется своих лодыжек."
 	icon_state = "thongsandal"
 	addblends = "thongsandal_a"
 
 /obj/item/clothing/shoes/athletic
-	name = "athletic shoes"
-	desc = "A pair of sleek atheletic shoes. Made by and for the sporty types."
+	name = "спортивные кеды"
+	desc = "Пара модных спортивных кед. Придуманы атлетами для атлетов."
 	icon_state = "sportshoe"
 	addblends = "sportshoe_a"
 	item_state_slots = list(slot_r_hand_str = "sportheld", slot_l_hand_str = "sportheld")
 
 /obj/item/clothing/shoes/skater
-	name = "skater shoes"
-	desc = "A pair of wide shoes with thick soles.  Designed for skating."
+	name = "скейтерские кеды"
+	desc = "Пара широких кед с толстой подошвой. Созданы для скейтбординга."
 	icon_state = "skatershoe"
 	addblends = "skatershoe_a"
 	item_state_slots = list(slot_r_hand_str = "skaterheld", slot_l_hand_str = "skaterheld")
 
 /obj/item/clothing/shoes/heels
-	name = "high heels"
-	desc = "A pair of high-heeled shoes. Fancy!"
+	name = "туфли на каблуках"
+	desc = "Пара туфель на высоких каблуках. Элегантно!"
 	icon_state = "heels"
 	addblends = "heels_a"
 
 /obj/item/clothing/shoes/footwraps
-	name = "cloth footwraps"
-	desc = "A roll of treated canvas used for wrapping claws or paws"
+	name = "портянки"
+	desc = "Рулон обработанной ткани для обмотки когтей и лап."
 	icon_state = "clothwrap"
 	item_state = "clothwrap"
 	force = 0

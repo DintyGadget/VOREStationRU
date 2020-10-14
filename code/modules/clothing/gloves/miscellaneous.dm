@@ -48,8 +48,8 @@
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 
 /obj/item/clothing/gloves/sterile
-	name = "sterile gloves"
-	desc = "Sterile gloves."
+	name = "стерильные перчатки"
+	desc = "Стерильные перчатки."
 	icon_state = "latex"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 	siemens_coefficient = 1.0 //thin latex gloves, much more conductive than fabric gloves (basically a capacitor for AC)
@@ -66,12 +66,12 @@
 	qdel(src)*/
 
 /obj/item/clothing/gloves/sterile/latex
-	name = "latex gloves"
-	desc = "Sterile latex gloves."
+	name = "латексные перчатки"
+	desc = "Стерильные латексные перчатки."
 
 /obj/item/clothing/gloves/sterile/nitrile
-	name = "nitrile gloves"
-	desc = "Sterile nitrile gloves"
+	name = "нитриловые перчатки"
+	desc = "Стерильные нитриловые перчатки."
 	icon_state = "nitrile"
 	item_state = "ngloves"
 //	balloonPath = /obj/item/nitrileballoon
@@ -87,8 +87,8 @@
 	pickup_sound = 'sound/items/pickup/leather.ogg'
 
 /obj/item/clothing/gloves/duty
-	desc = "These brown duty gloves are made from a durable synthetic."
-	name = "work gloves"
+	desc = "Эти коричневые рабочие перчатки изготовлены из прочного синтетического материала."
+	name = "рабочие перчатки"
 	icon_state = "work"
 	item_state = "wgloves"
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 5, bomb = 0, bio = 0, rad = 0)
@@ -105,8 +105,8 @@
 	armor = list(melee = 30, bullet = 10, laser = 10, energy = 15, bomb = 20, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/vox
-	desc = "These bizarre gauntlets seem to be fitted for... bird claws?"
-	name = "insulated gauntlets"
+	desc = "Эти странные наручи, кажется, хорошо сядут на... птичьи когти?"
+	name = "изолирующие рукавицы"
 	icon_state = "gloves-vox"
 	item_state = "gloves-vox"
 	flags = PHORONGUARD

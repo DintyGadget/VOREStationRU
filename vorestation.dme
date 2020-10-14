@@ -3603,6 +3603,7 @@
 #include "code\modules\turbolift\turbolift.dm"
 #include "code\modules\turbolift\turbolift_areas.dm"
 #include "code\modules\turbolift\turbolift_console.dm"
+#include "code\modules\turbolift\turbolift_console_vr.dm"
 #include "code\modules\turbolift\turbolift_door.dm"
 #include "code\modules\turbolift\turbolift_door_vr.dm"
 #include "code\modules\turbolift\turbolift_floor.dm"
@@ -3794,5 +3795,4 @@
 #include "maps\tether\tether.dm"
 #include "maps\tether\tether_turfs.dm"
 #include "maps\~map_system\maps.dm"
-#include "voreru\code\game\verbs\emote.dm"
 // END_INCLUDE

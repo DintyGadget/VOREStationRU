@@ -209,8 +209,8 @@
 
 //For general use
 /obj/item/clothing/suit/storage/fluff/fedcoat
-	name = "Federation Uniform Jacket (Red)"
-	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Set phasers to awesome."
+	name = "красная куртка Объединенной Федерации"
+	desc = "Часть униформы Объединённой Федерации. Звёздный флот по-прежнему использует эту униформу, и у неё есть вариации. Фазеры выставлены на крутость."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "fedcoat"
@@ -236,7 +236,7 @@
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/verb/toggle()
-	set name = "Toggle coat buttons"
+	set name = "Пуговицы Куртки"
 	set category = "Object"
 	set src in usr
 
@@ -248,25 +248,25 @@
 			icon_state = "[initial(icon_state)]_open"
 			item_state = "[initial(item_state)]_open"
 			unbuttoned = 1
-			to_chat(usr, "You unbutton the coat.")
+			to_chat(usr, "Вы расстёгиваете куртку.")
 		if(1)
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			unbuttoned = 0
-			to_chat(usr, "You button up the coat.")
+			to_chat(usr, "Вы застёгиваете куртку.")
 	usr.update_inv_wear_suit()
 
 	//Variants
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedblue
-	name = "Federation Uniform Jacket (Blue)"
-	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Wearing this may make you feel all scientific."
+	name = "синяя куртка Объединенной Федерации"
+	desc = "Часть униформы Объединённой Федерации. Звёздный флот по-прежнему использует эту униформу, и у неё есть вариации. В ней Вы чувствуете себя гораздо умнее."
 	icon_state = "fedblue"
 	item_state = "fedblue"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
-	name = "Federation Uniform Jacket (Yellow)"
-	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it.Wearing it may make you feel like checking a warp core, whatever that is."
+	name = "желтая куртка Объединенной Федерации"
+	desc = "Часть униформы Объединённой Федерации. Звёздный флот по-прежнему использует эту униформу, и у неё есть вариации. В ней Вам очень хочется перепроверить ядро искажения... что бы это ни было."
 	icon_state = "fedeng"
 	item_state = "fedeng"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 10, bomb = 0, bio = 30, rad = 35)
@@ -1251,8 +1251,8 @@ Departamental Swimsuits, for general use
 //DS9
 
 /obj/item/clothing/suit/storage/trek/ds9
-	name = "Padded Overcoat"
-	desc = "The overcoat worn by all officers of the 2380s."
+	name = "обитая шинель"
+	desc = "Шинель, которую носили все офицере в 2380-ых."
 	icon_state = "trek_ds9_coat"
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "trek_ds9_coat_mob"
@@ -1402,8 +1402,8 @@ Departamental Swimsuits, for general use
 
 //Jackets For General Use. Sprited by Joji.
 /obj/item/clothing/suit/storage/fluff/jacket //Not the toggle version since it uses custom toggle code to update the on-mob icon.
-	name = "Field Jacket"
-	desc = "A standard Earth military field jacket made of comfortable cotton."
+	name = "полевая куртка"
+	desc = "Военная полевая куртка с Земли, изготовленная из приятного хлопка."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "fjacket"
@@ -1478,8 +1478,8 @@ Departamental Swimsuits, for general use
 
 //General use
 /obj/item/clothing/head/fluff/headbando
-	name = "basic headband"
-	desc = "Perfect for martial artists, sweaty rogue operators, and tunnel gangsters."
+	name = "повязка на голову"
+	desc = "Подходит мастерам боевых искусств, а также гангстерам."
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "headbando"
@@ -1488,24 +1488,24 @@ Departamental Swimsuits, for general use
 	item_state = "headbando"
 
 /obj/item/clothing/suit/storage/fluff/gntop
-	name = "GN crop jacket"
-	desc = "A nifty little jacket. At least it keeps your shoulders warm."
+	name = "укороченная куртка GN"
+	desc = "Приятная курточка. Согревает Ваши плечи."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "gntop"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "gntop"
 
 /obj/item/clothing/under/fluff/gnshorts
-	name = "GN shorts"
-	desc = "Stylish white shorts with pockets, stripes, and even a belt."
+	name = "шорты GN"
+	desc = "Стильные белые шорты с карманами, полосками и даже ремнём."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "gnshorts"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "gnshorts"
 
 /obj/item/clothing/under/fluff/v_nanovest
-	name = "Varmacorp nanovest"
-	desc = "A nifty little vest optimized for nanite contact."
+	name = "наножилет Varmacorp"
+	desc = "Небольшой жилет, предназначенный для контакта с нанитами."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "nanovest"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1513,8 +1513,8 @@ Departamental Swimsuits, for general use
 
 //General use
 /obj/item/clothing/suit/storage/fluff/loincloth
-	name = "Loincloth"
-	desc = "A primitive piece of oak-brown clothing wrapped firmly around the waist. A few bones line the edges. Comes with a primitive outfit to boot."
+	name = "набедренная повязка"
+	desc = "Примитивный кусок ткани дубового цвета, завязанный вокруг талии и по бокам украшенный костями. К нему прилагается примитивная верхняя одежда.."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "loincloth"

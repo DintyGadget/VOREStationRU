@@ -134,7 +134,7 @@ datum/preferences/proc/set_biological_gender(var/gender)
 		var/list/spawnkeys = list()
 		for(var/spawntype in spawntypes)
 			spawnkeys += spawntype
-		var/choice = input(user, "Выберите точкую прибытия Вашего персонажа на станцию.") as null|anything in spawnkeys
+		var/choice = input(user, "Выберите точку прибытия Вашего персонажа на станцию.") as null|anything in spawnkeys
 		if(!choice || !spawntypes[choice] || !CanUseTopic(user))	return TOPIC_NOACTION
 		pref.spawnpoint = choice
 		return TOPIC_REFRESH

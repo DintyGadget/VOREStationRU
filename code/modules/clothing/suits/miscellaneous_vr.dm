@@ -12,8 +12,8 @@
 
 
 /obj/item/clothing/suit/drake_cloak
-	name = "drake cloak"
-	desc = "A simple cloak for drake-taurs."
+	name = "плащ драконовидных"
+	desc = "Простой плащ для драконотавров."
 	icon = 'icons/mob/taursuits_drake_vr.dmi'
 	icon_state = "cloak"
 	item_state_slots = list(slot_r_hand_str = "capjacket", slot_l_hand_str = "capjacket")
@@ -25,7 +25,7 @@
 		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/drake))
 			return ..()
 		else
-			to_chat(H, "<span class='warning'>You need to have a drake-taur half to wear this.</span>")
+			to_chat(H, "<span class='warning'>Такое могут носить только существа-драконотавры!</span>")
 			return 0
 
 /obj/item/clothing/suit/barding
@@ -66,8 +66,8 @@
 	pixel_x = -16
 
 /obj/item/clothing/suit/taur_dress/white
-	name = "white wedding dress"
-	desc = "A fancy white dress with a blue underdress."
+	name = "белое свадебное платье"
+	desc = "Дорогое белое платье для тавров."
 	icon_state = "whitedress1"
 	flags_inv = HIDESHOES
 

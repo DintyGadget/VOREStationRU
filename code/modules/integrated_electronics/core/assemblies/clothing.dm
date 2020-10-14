@@ -4,9 +4,9 @@
 // Note that the electronic assembly is INSIDE the object that actually gets worn, in a similar way to implants.
 
 /obj/item/device/electronic_assembly/clothing
-	name = "electronic clothing"
+	name = "программируемая одежда"
 	icon_state = "circuitry" // Needs to match the clothing's base icon_state.
-	desc = "It's a case, for building machines attached to clothing."
+	desc = "Это корпус для программирования микросхем, прикрепляемых к одежде."
 	w_class = ITEMSIZE_SMALL
 	max_components = IC_COMPONENTS_BASE
 	max_complexity = IC_COMPLEXITY_BASE
@@ -74,7 +74,7 @@
 	// Clothing assemblies can be triggered by clicking on the HUD. This allows that to occur.
 	action_circuit = new(src.IC)
 	IC.force_add_circuit(action_circuit)
-	action_button_name = "Activate [name]"
+	action_button_name = "Активировать [name]"
 
 /obj/item/clothing/Destroy()
 	if(IC)
@@ -87,9 +87,9 @@
 
 // Jumpsuit.
 /obj/item/clothing/under/circuitry
-	name = "electronic jumpsuit"
-	desc = "It's a wearable case for electronics. This on is a black jumpsuit with wiring weaved into the fabric."
-	description_info = "Control-shift-click on this with an item in hand to use it on the integrated circuit."
+	name = "программируемый комбинезон"
+	desc = "Переносной корпус для микросхем. Этот в виде тёмного комбинезона со вшитыми в ткань проводами."
+	description_info = "Кликните по нему с Ctrl+Shift с предметом в руке, чтобы использовать его на интегрированной микросхеме."
 	icon_state = "circuitry"
 	worn_state = "circuitry"
 
@@ -100,10 +100,10 @@
 
 // Gloves.
 /obj/item/clothing/gloves/circuitry
-	name = "electronic gloves"
-	desc = "It's a wearable case for electronics. This one is a pair of black gloves, with wires woven into them. A small \
-	device with a screen is attached to the left glove."
-	description_info = "Control-shift-click on this with an item in hand to use it on the integrated circuit."
+	name = "программируемые перчатки"
+	desc = "Переносной корпус для микросхем. Этот в виде пары тёмных перчаток со вшитыми в ткань проводами.\
+	Небольшой девайс с экраном встроен в левую перчатку."
+	description_info = "Кликните по ним с Ctrl+Shift с предметом в руке, чтобы использовать его на интегрированной микросхеме."
 	icon_state = "circuitry"
 	item_state = "circuitry"
 
@@ -114,10 +114,9 @@
 
 // Glasses.
 /obj/item/clothing/glasses/circuitry
-	name = "electronic goggles"
-	desc = "It's a wearable case for electronics. This one is a pair of goggles, with wiring sticking out. \
-	Could this augment your vision?" // Sadly it won't, or at least not yet.
-	description_info = "Control-shift-click on this with an item in hand to use it on the integrated circuit."
+	name = "программируемые очки"
+	desc = "Переносной корпус для микросхем. Этот в виде пары очков с торчащими проводами. \ Расширят ли они Ваш кругозор?" // Sadly it won't, or at least not yet.
+	description_info = "Кликните по ним с Ctrl+Shift с предметом в руке, чтобы использовать его на интегрированной микросхеме."
 	icon_state = "circuitry"
 	item_state = "night" // The on-mob sprite would be identical anyways.
 
@@ -127,10 +126,9 @@
 
 // Shoes
 /obj/item/clothing/shoes/circuitry
-	name = "electronic boots"
-	desc = "It's a wearable case for electronics. This one is a pair of boots, with wires attached to a small \
-	cover."
-	description_info = "Control-shift-click on this with an item in hand to use it on the integrated circuit."
+	name = "программируемые ботинки"
+	desc = "Переносной корпус для микросхем. Этот в виде пары ботинок с проводами, закрепленным на небольшой панельке."
+	description_info = "Кликните по ним с Ctrl+Shift с предметом в руке, чтобы использовать его на интегрированной микросхеме."
 	icon_state = "circuitry"
 	item_state = "circuitry"
 
@@ -140,10 +138,9 @@
 
 // Head
 /obj/item/clothing/head/circuitry
-	name = "electronic headwear"
-	desc = "It's a wearable case for electronics. This one appears to be a very technical-looking piece that \
-	goes around the collar, with a heads-up-display attached on the right."
-	description_info = "Control-shift-click on this with an item in hand to use it on the integrated circuit."
+	name = "программируемый головной убор"
+	desc = "Переносной корпус для микросхем. Этот в виде продвинутого головного убора, носимого вокруг головы и обладающего дисплеем на правой стороне."
+	description_info = "Кликните по нему с Ctrl+Shift с предметом в руке, чтобы использовать его на интегрированной микросхеме."
 	icon_state = "circuitry"
 	item_state = "circuitry"
 
@@ -153,9 +150,9 @@
 
 // Ear
 /obj/item/clothing/ears/circuitry
-	name = "electronic earwear"
-	desc = "It's a wearable case for electronics. This one appears to be a technical-looking headset."
-	description_info = "Control-shift-click on this with an item in hand to use it on the integrated circuit."
+	name = "программируемая гарнитура"
+	desc = "Переносной корпус для микросхем. Этот исполнен в виде гарнитуры."
+	description_info = "Кликните по ней с Ctrl+Shift с предметом в руке, чтобы использовать его на интегрированной микросхеме."
 	icon = 'icons/obj/clothing/ears.dmi'
 	icon_state = "circuitry"
 	item_state = "circuitry"
@@ -166,9 +163,8 @@
 
 // Exo-slot
 /obj/item/clothing/suit/circuitry
-	name = "electronic chestpiece"
-	desc = "It's a wearable case for electronics. This one appears to be a very technical-looking vest, that \
-	almost looks professionally made, however the wiring popping out betrays that idea."
+	name = "программируемый нагрудник"
+	desc = "Переносной корпус для микросхем. Этот в формате очень технологически сложного на вид жилета, который казался бы изготовленным профессионалом, если бы не торчащие отовсюду провода."
 	description_info = "Control-shift-click on this with an item in hand to use it on the integrated circuit."
 	icon_state = "circuitry"
 	item_state = "circuitry"

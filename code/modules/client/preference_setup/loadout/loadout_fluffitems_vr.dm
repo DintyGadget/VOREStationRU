@@ -5,7 +5,7 @@
 
 /datum/gear/fluff
 	path = /obj/item
-	sort_category = "Пушистые Предметы"
+	sort_category = "Особые предметы"
 	display_name = "Если этот элемент можно выбрать или увидеть, немедленно пропингуйте кодера!"
 	ckeywhitelist = list("Эта запись никогда не должна быть выбрана с помощью этого набора переменных.") //If it does, then that means somebody fucked up the whitelist system pretty hard
 	character_name = list("This entry should never be choosable with this variable set.")
