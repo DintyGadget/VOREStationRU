@@ -15,42 +15,42 @@ var/global/list/seen_religions = list()
 
 // VOREStation Edits Start
 var/global/list/citizenship_choices = list(
-	"Earth",
-	"Mars",
-	"Sif",
-	"Binma",
-	"Moghes",
-	"Meralar",
-	"Qerr'balak",
-	"Virgo 3b Colony",
+	"Земля",
+	"Марс",
+	"Сиф",
+	"Бинма",
+	"Могес",
+	"Мералар",
+	"Керр'Балак",
+	"Колония Дева 3b",
 	"Virgo 4 NT Compound",
-	"Venus",
-	"Tiamat",
-	"An-Tahk-Et"
+	"Венера",
+	"Тиамат",
+	"Ан-Тахк-Эт"
 	)
 
 var/global/list/home_system_choices = list(
-	"Virgo-Erigone",
-	"Sol",
-	"Proxima Centauri",
-	"Procyon",
-	"Vir",
-	"Nyx",
-	"Tau Ceti",
-	"Qerr'valis",
-	"Epsilon Ursae Minoris",
-	"Rarkajar"
+	"Дева-Эригон",
+	"Сол",
+	"Проксима Центавра",
+	"Процион",
+	"Вир",
+	"Никс",
+	"Тау Кита",
+	"Керр'Валис",
+	"Эпсилон Урсае Минорис",
+	"Раркаджар"
 	)
 
 
 var/global/list/faction_choices = list(
-	"Commonwealth of Sol-Procyon",
+	"ЦПСС",
 	"United Fyrds",
 	"Elysian Colonies",
 	"Ares Confederation",
 	"Vey Med",
 	"Einstein Engines",
-	"Free Trade Union",
+	"Вольный Торговый Союз",
 	"NanoTrasen",
 	"Ward-Takahashi GMB",
 	"Gilthari Exports",

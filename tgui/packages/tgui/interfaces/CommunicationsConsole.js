@@ -65,11 +65,11 @@ const CommunicationsConsoleMain = (props, context) => {
   } = data;
 
   let reportText = "View (" + messages.length + ")";
-  let announceText = "Make Priority Announcement";
+  let announceText = "Сделать приоритетный анонс";
   if (msg_cooldown > 0) {
     announceText += " (" + msg_cooldown + "s)";
   }
-  let ccMessageText = emagged ? "Message [UNKNOWN]" : "Message " + boss_short;
+  let ccMessageText = emagged ? "Сообщение в [UNKNOWN]" : "Сообщение в " + boss_short;
   if (cc_cooldown > 0) {
     ccMessageText += " (" + cc_cooldown + "s)";
   }
@@ -89,9 +89,9 @@ const CommunicationsConsoleMain = (props, context) => {
 
   return (
     <Fragment>
-      <Section title="Site Manager-Only Actions">
+      <Section title="Действия для директора">
         <LabeledList>
-          <LabeledList.Item label="Announcement">
+          <LabeledList.Item label="Объявление">
             <Button
               icon="bullhorn"
               content={announceText}
@@ -99,7 +99,7 @@ const CommunicationsConsoleMain = (props, context) => {
               onClick={() => act('announce')} />
           </LabeledList.Item>
           {!!emagged && (
-            <LabeledList.Item label="Transmit">
+            <LabeledList.Item label="Передача">
               <Button
                 icon="broadcast-tower"
                 color="red"
@@ -113,7 +113,7 @@ const CommunicationsConsoleMain = (props, context) => {
                 onClick={() => act('RestoreBackup')} />
             </LabeledList.Item>
           ) || (
-            <LabeledList.Item label="Transmit">
+            <LabeledList.Item label="Передача">
               <Button
                 icon="broadcast-tower"
                 content={ccMessageText}
@@ -123,33 +123,33 @@ const CommunicationsConsoleMain = (props, context) => {
           )}
         </LabeledList>
       </Section>
-      <Section title="Command Staff Actions">
+      <Section title="Действия командования">
         <LabeledList>
-          <LabeledList.Item label="Current Alert"
+          <LabeledList.Item label="Уровень тревоги"
             color={security_level_color}>
             {alertLevelText}
           </LabeledList.Item>
-          <LabeledList.Item label="Change Alert">
+          <LabeledList.Item label="Сменить уровень">
             {alertLevelButtons}
           </LabeledList.Item>
-          <LabeledList.Item label="Displays">
+          <LabeledList.Item label="Дисплеи">
             <Button
               icon="tv"
-              content="Change Status Displays"
+              content="Сменить статус"
               disabled={!authenticated}
               onClick={() => act('status')} />
           </LabeledList.Item>
-          <LabeledList.Item label="Incoming Messages">
+          <LabeledList.Item label="Входящие сообщения">
             <Button
               icon="folder-open"
               content={reportText}
               disabled={!authenticated}
               onClick={() => act('messagelist')} />
           </LabeledList.Item>
-          <LabeledList.Item label="Misc">
+          <LabeledList.Item label="Прочее">
             <Button
               icon="microphone"
-              content={!atcsquelch ? "ATC Relay Enabled" : "ATC Relay Disabled"}
+              content={!atcsquelch ? "Реле ATC включено" : "Реле ATC выключено"}
               disabled={!authenticated}
               selected={atcsquelch}
               onClick={() => act('toggleatc')} />
@@ -179,53 +179,53 @@ const CommunicationsConsoleAuth = (props, context) => {
   } else if (authenticated === 1) {
     authReadable = "Command";
   } else if (authenticated === 2) {
-    authReadable = "Site Director";
+    authReadable = "Директор колонии";
   } else {
     authReadable = "ERROR: Report This Bug!";
   }
 
   return (
     <Fragment>
-      <Section title="Authentication">
+      <Section title="Авторизация">
         <LabeledList>
           {is_ai && (
-            <LabeledList.Item label="Access Level">
+            <LabeledList.Item label="Уровень доступа">
               AI
             </LabeledList.Item>
           ) || (
-            <LabeledList.Item label="Actions">
+            <LabeledList.Item label="Действия">
               <Button
                 icon={authenticated ? 'sign-out-alt' : 'id-card'}
                 selected={authenticated}
                 content={authenticated
-                  ? "Log Out (" + authReadable + ")"
-                  : 'Log In'}
+                  ? "Выйти (" + authReadable + ")"
+                  : 'Войти'}
                 onClick={() => act("auth")} />
             </LabeledList.Item>
           )}
         </LabeledList>
       </Section>
-      <Section title="Escape Shuttle">
+      <Section title="Шаттл эвакуации">
         <LabeledList>
           {!!esc_status && (
-            <LabeledList.Item label="Status">
+            <LabeledList.Item label="Состояние">
               {esc_status}
             </LabeledList.Item>
           )}
           {!!esc_callable && (
-            <LabeledList.Item label="Options">
+            <LabeledList.Item label="Настройки">
               <Button
                 icon="rocket"
-                content="Call Shuttle"
+                content="Вызов шаттла"
                 disabled={!authenticated}
                 onClick={() => act('callshuttle')} />
             </LabeledList.Item>
           )}
           {!!esc_recallable && (
-            <LabeledList.Item label="Options">
+            <LabeledList.Item label="Настройки">
               <Button
                 icon="times"
-                content="Recall Shuttle"
+                content="Отозвать шаттл"
                 disabled={!authenticated || is_ai}
                 onClick={() => act('cancelshuttle')} />
             </LabeledList.Item>
@@ -267,13 +267,13 @@ const CommunicationsConsoleMessage = (props, context) => {
       <LabeledList.Item key={m.id} label={m.title}>
         <Button
           icon="eye"
-          content="View"
+          content="Посмотр."
           disabled={!authenticated
             || message_current && (message_current.title === m.title)}
           onClick={() => act('messagelist', { msgid: m.id })} />
         <Button
           icon="times"
-          content="Delete"
+          content="Удалить"
           disabled={!authenticated || !message_deletion_allowed}
           onClick={() => act('delmessage', { msgid: m.id })} />
       </LabeledList.Item>
@@ -281,16 +281,16 @@ const CommunicationsConsoleMessage = (props, context) => {
   });
 
   return (
-    <Section title="Messages Received" buttons={
+    <Section title="Сообщения получены" buttons={
       <Button
         icon="arrow-circle-left"
-        content="Back To Main Menu"
+        content="Назад в меню"
         onClick={() => act('main')} />
     }>
       <LabeledList>
         {messages.length && messageRows || (
           <LabeledList.Item label="404" color="bad">
-            No messages.
+            Сообщений нет.
           </LabeledList.Item>
         )}
       </LabeledList>
@@ -320,7 +320,7 @@ const CommunicationsConsoleStatusDisplay = (props, context) => {
     <Section title="Modify Status Screens" buttons={
       <Button
         icon="arrow-circle-left"
-        content="Back To Main Menu"
+        content="Назад в меню"
         onClick={() => act('main')} />
     }>
       <LabeledList>

@@ -230,11 +230,11 @@
 // Overmap represetation of tether
 /obj/effect/overmap/visitable/sector/virgo3b
 	name = "Virgo 3B"
-	desc = "Full of phoron, and home to the NSB Adephagia, where you can dock and refuel your craft."
-	scanner_desc = @{"[i]Registration[/i]: NSB Adephagia
-[i]Class[/i]: Installation
-[i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
-[b]Notice[/b]: NanoTrasen Base, authorized personnel only"}
+	desc = "Полон форона и является домом NSB Adephagia, где вы можете состыковаться и заправить свой корабль."
+	scanner_desc = @{"[i]Регистрация[/i]: NSB Adephagia
+[i]Класс[/i]: Сборка
+[i]Транспондер[/i]: Transmitting (CIV), NanoTrasen IFF
+[b]Уведомление[/b]: База NanoTrasen, только авторизованный персонал"}
 	base = 1
 	icon_state = "globe"
 	color = "#d35b5b"
