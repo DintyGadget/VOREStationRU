@@ -69,7 +69,7 @@
 /obj/item/clothing/examine(var/mob/user)
 	. = ..(user)
 	if(LAZYLEN(accessories))
-		. += "К нему прикреплено: [counting_english_list(accessories)]"
+		. += "К одежде прикреплены: [counting_english_list(accessories)]"
 
 /**
  *  Attach accessory A to src

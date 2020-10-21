@@ -10,7 +10,7 @@
 	path = /obj/item/clothing/glasses/omnihud
 
 /datum/gear/eyes/arglassespres
-	display_name = "AR-очки, близорукость"
+	display_name = "AR-очки, (близ.)"
 	path = /obj/item/clothing/glasses/omnihud/prescription
 
 /datum/gear/eyes/arglasses/sec
@@ -52,9 +52,9 @@
 	path = /obj/item/clothing/glasses/omnihud/eng/meson
 
 /datum/gear/eyes/security/secpatch
-	display_name = "HUD-повязка, СБ"
+	display_name = "Служба Безопасности: HUD-повязка"
 	path = /obj/item/clothing/glasses/hud/security/eyepatch
 
 /datum/gear/eyes/medical/medpatch
-	display_name = "HUD-повязка, Мед"
+	display_name = "Медик: HUD-повязка"
 	path = /obj/item/clothing/glasses/hud/health/eyepatch

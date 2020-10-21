@@ -5,8 +5,8 @@
 
 // Armor Versions Here
 /obj/item/clothing/gloves/combat/knight
-	desc = "ye olde armored gauntlets"
-	name = "knight gauntlets"
+	desc = "Старые добрые бронированные наручи."
+	name = "рыцарские перчатки"
 	icon_state = "black"
 	item_state = "black"
 	siemens_coefficient = 2
@@ -18,15 +18,15 @@
 	armor = list(melee = 80, bullet = 50, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/combat/knight/brown
-	desc = "ye olde armored gauntlets"
-	name = "knight gauntlets"
+	desc = "Старые добрые бронированные наручи."
+	name = "рыцарские перчатки"
 	icon_state = "brown"
 	item_state = "brown"
 
 // Costume Versions Here
 /obj/item/clothing/gloves/combat/knight_costume
-	desc = "ye olde armored gauntlets"
-	name = "knight gauntlets"
+	desc = "Старые добрые бронированные наручи."
+	name = "рыцарские перчатки"
 	icon_state = "black"
 	item_state = "black"
 	siemens_coefficient = 2
@@ -38,7 +38,7 @@
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/combat/knight_costume/brown
-	desc = "ye olde armored gauntlets"
-	name = "knight gauntlets"
+	desc = "Старые добрые бронированные наручи."
+	name = "рыцарские перчатки"
 	icon_state = "brown"
 	item_state = "brown"

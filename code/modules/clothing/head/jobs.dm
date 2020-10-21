@@ -1,37 +1,37 @@
 
 //Bartender
 /obj/item/clothing/head/chefhat
-	name = "chef's hat"
-	desc = "It's a hat used by chefs to keep hair out of your food. Judging by the food in the mess, they don't work."
+	name = "колпак повара"
+	desc = "Головной убор повара, не допускающий попадения волос в еду."
 	icon_state = "chefhat"
 
 //Captain
 /obj/item/clothing/head/caphat
-	name = "site manager's hat"
+	name = "головной убор Директора Колонии"
 	icon_state = "captain"
-	desc = "It's good being the king."
+	desc = "Приятно быть королём."
 	body_parts_covered = 0
 
 /obj/item/clothing/head/caphat/cap
-	name = "site manager's cap"
-	desc = "You fear to wear it for the negligence it brings."
+	name = "фуражка Директора Колонии"
+	desc = "Вам страшно её носить из-за халатности, которую она вызывает."
 	icon_state = "capcap"
 
 /obj/item/clothing/head/caphat/formal
-	name = "parade hat"
-	desc = "No one in a commanding position should be without a perfect, white hat of ultimate authority."
+	name = "парадный головной убор"
+	desc = "Ни один человек в управляющей должности не обойдётся без идеальной белой шляпы высшего авторитета."
 	icon_state = "officercap"
 
 //HOP
 /obj/item/clothing/head/caphat/hop
-	name = "crew resource's hat"
-	desc = "A stylish hat that both protects you from enraged former-crewmembers and gives you a false sense of authority."
+	name = "фуражка отдела кадров"
+	desc = "Стильная фуражка, защищающая Вас от взбешенных бывших работников и придаёт Вам ложное чувство власти."
 	icon_state = "hopcap"
 
 //Chaplain
 /obj/item/clothing/head/chaplain_hood
-	name = "chaplain's hood"
-	desc = "It's a hood that covers the head. It keeps you warm during the space winters."
+	name = "капюшон капеллана"
+	desc = "Капюшон, прикрывающий голову. Согревает в космическую зиму."
 	icon_state = "chaplain_hood"
 	item_state_slots = list(slot_r_hand_str = "beret_black", slot_l_hand_str = "beret_black")
 	flags_inv = BLOCKHAIR
@@ -39,15 +39,15 @@
 
 //Chaplain but spookier
 /obj/item/clothing/head/chaplain_hood/whiteout
-	name = "white hood"
-	desc = "It's a generic white hood. Very spooky."
+	name = "белый капюшон"
+	desc = "Обыкновенный белый капюшон. Жутковатый."
 	icon_state = "whiteout_hood"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
 
 //Chaplain
 /obj/item/clothing/head/nun_hood
-	name = "nun hood"
-	desc = "Maximum piety in this star system."
+	name = "капюшон монашки"
+	desc = "Проявление самой что ни на есть набожности."
 	icon_state = "nun_hood"
 	item_state_slots = list(slot_r_hand_str = "beret_black", slot_l_hand_str = "beret_black")
 	flags_inv = BLOCKHAIR
@@ -104,28 +104,28 @@
 	item_state_slots = list(slot_r_hand_str = "beret_black", slot_l_hand_str = "beret_black")
 
 /obj/item/clothing/head/helmet/warden
-	name = "warden's helmet"
-	desc = "Standard Warden gear. Protects the head from impacts."
+	name = "шлем надзирателя"
+	desc = "Стандартный шлем надзирателя. Защищает голову от ударов."
 
 /obj/item/clothing/head/helmet/warden/hat
-	name = "warden's hat"
-	desc = "It's a special hat issued to the Warden of a securiy force."
+	name = "фуражка надзирателя"
+	desc = "Особая фуражка, предназначенная для надзирателя."
 	icon_state = "policehelm"
 	valid_accessory_slots = null
 
 /obj/item/clothing/head/helmet/HoS
-	name = "Head of Security helmet"
-	desc = "Standard Head of Security gear. Protects the head from impacts."
+	name = "шлем Главы Службы Безопасности"
+	desc = "Стандартый шлем Главы Службы Безопасности. Защищает голову от ударов."
 
 /obj/item/clothing/head/helmet/HoS/hat
-	name = "Head of Security Hat"
-	desc = "The hat of the Head of Security. For showing the officers who's in charge."
+	name = "фуражка Главы Службы Безопасности"
+	desc = "Особая фуражка, предназначенная для Главы Службы Безопасности. Дабы показывать офицерам, кто тут главный."
 	icon_state = "hoscap"
 	valid_accessory_slots = null
 
 /obj/item/clothing/head/helmet/dermal
-	name = "Dermal Armour Patch"
-	desc = "You're not quite sure how you manage to take it on and off, but it implants nicely in your head."
+	name = "укрепляющая пластинка"
+	desc = "Не совсем понятно, как она надевается и снимает ся, но в голову вживляется неплохо."
 	icon_state = "dermal"
 	item_state_slots = list(slot_r_hand_str = "", slot_l_hand_str = "")
 	valid_accessory_slots = null
@@ -154,24 +154,24 @@
 
 /obj/item/clothing/head/beret/purple
 	name = "фиолетовый берет"
-	desc = "Стильный берет (если, конечно, фиолетовый)."
+	desc = "Стильный берет (но это если, конечно, фиолетовый)."
 	icon_state = "beret_purpleyellow"
 
 /obj/item/clothing/head/beret/centcom/officer
-	name = "officers beret"
-	desc = "A dark blue beret adorned with a silver patch. Worn by NanoTrasen Officials."
+	name = "берет офицера"
+	desc = "Тёмно-синий берет, украшенный серебряной нашивкой. Используется представителями NanoTrasen."
 	icon_state = "beret_centcom_officer"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
 
 /obj/item/clothing/head/beret/centcom/captain
-	name = "captains beret"
-	desc = "A white beret adorned with a blue patch. Worn by NanoTrasen command staff."
+	name = "берет капитана"
+	desc = "Белый берет, украшенный синей нашивкой. Используется управляющими должностями NanoTrasen."
 	icon_state = "beret_centcom_captain"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
 
 /obj/item/clothing/head/beret/sec/gov
-	name = "officer beret"
-	desc = "A black beret with a gold emblem."
+	name = "берет офицера"
+	desc = "Черный берет с золотой эмблемой."
 	icon_state = "beret_corporate_hos"
 	item_state_slots = list(slot_r_hand_str = "beret_black", slot_l_hand_str = "beret_black")
 

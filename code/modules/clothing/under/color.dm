@@ -11,7 +11,7 @@
 
 /obj/item/clothing/under/color/blackjumpskirt
 	name = "черный комбинезон с юбкой"
-	desc = "A slimming black jumpskirt."
+	desc = "Приятный чёрный комбинезон с юбкой."
 	icon_state = "blackjumpskirt"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 

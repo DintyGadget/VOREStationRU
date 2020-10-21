@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/omnihud
 	name = "AR-очки"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
-	Нередко используются персоналом для взаимодействия с виртуальными интерфейсам. \
+	Нередко используются персоналом для взаимодействия с виртуальными интерфейсами. \
 	<br>Обладают переключаемыми декоративными электрохромными линзами. \
 	Линзы не защищают от ярких вспышек или при сварке."
 	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 3)
@@ -56,7 +56,7 @@
 		name = "[initial(name)] (близ.)" //change the name *after* the text so the message above is accurate
 		icon_state = "[initial(icon_state)]" //reset the icon state just to be safe
 	else
-		user.visible_message("[user] удаляет рецепт в [src.name] и перенастраивает линзы.")
+		user.visible_message("[user] берёт в руки [src.name] и перенастраивает линзы, удаляя старый рецепт.")
 		name = "[initial(name)]"
 		icon_state = "[initial(icon_state)]"
 
@@ -135,7 +135,7 @@
 /obj/item/clothing/glasses/omnihud/sec
 	name = "AR-S очки"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
-	В эти встроен доступ к записям СБ и защита от вспышек. \
+	В эти встроен доступ к записям службы безопасности и защита от вспышек. \
 	Они также имеют доступ к тревогам камер и датчиков движения."
 	mode = "sec"
 	flash_protection = FLASH_PROTECTION_MODERATE //weld protection is a little too widespread
@@ -171,7 +171,7 @@
 
 /obj/item/clothing/glasses/omnihud/eng/meson
 	name = "HUD с мезонным сканером"
-	desc = "Гарнитура со встроенным в линзы сканером и ретинальным проектором. Не защищает глаза, однако более удобные, чем защитные очки."
+	desc = "Гарнитура со встроенным в линзы сканером и ретинальным проектором. Не защищает глаза, однако более удобная, чем защитные очки."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "projector"
@@ -224,7 +224,7 @@
 		return 1
 
 /obj/item/clothing/glasses/hud/security/eyepatch
-    name = "HUD-повязка СБ"
+    name = "HUD-повязка службы безопасности"
     desc = "Повязка на глаз со встроенным сканером людей в поле зрения, предоставляющая информацию об их идентификации и записях Службы Безопасности."
     icon_state = "eyepatch"
     item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")

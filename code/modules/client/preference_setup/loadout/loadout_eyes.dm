@@ -44,41 +44,41 @@
 	path = /obj/item/clothing/glasses/science
 
 /datum/gear/eyes/security
-	display_name = "СБ: HUD Службы Безопасности"
+	display_name = "Служба Безопасности: HUD"
 	path = /obj/item/clothing/glasses/hud/security
 	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель", "Детектив")
 
 /datum/gear/eyes/security/prescriptionsec
-	display_name = "СБ: HUD Службы Безопасности, близорукость"
+	display_name = "Служба Безопасности: HUD (близ.)"
 	path = /obj/item/clothing/glasses/hud/security/prescription
 
 /datum/gear/eyes/security/sunglasshud
-	display_name = "СБ: HUD Службы Безопасности, солнечные"
+	display_name = "Служба Безопасности: HUD, солнечные"
 	path = /obj/item/clothing/glasses/sunglasses/sechud
 
 /datum/gear/eyes/security/aviator
-	display_name = "СБ: HUD Службы Безопасности, авиаторы"
+	display_name = "Служба Безопасности: HUD, авиаторы"
 	path = /obj/item/clothing/glasses/sunglasses/sechud/aviator
 
 /datum/gear/eyes/security/aviator/prescription
-	display_name = "СБ: HUD Службы Безопасности, авиаторы, близорукость"
+	display_name = "Служба Безопасности: HUD, авиаторы (близ)"
 	path = /obj/item/clothing/glasses/sunglasses/sechud/aviator/prescription
 
 /datum/gear/eyes/medical
-	display_name = "Медик: Медицинский HUD"
+	display_name = "Медик: HUD"
 	path = /obj/item/clothing/glasses/hud/health
 	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Search and Rescue")
 
 /datum/gear/eyes/medical/prescriptionmed
-	display_name = "Медик: Медицинский HUD, близорукость"
+	display_name = "Медик: HUD (близ.)"
 	path = /obj/item/clothing/glasses/hud/health/prescription
 
 /datum/gear/eyes/medical/aviator
-	display_name = "Медик: Медицинский HUD, авиаторы"
+	display_name = "Медик: HUD , авиаторы"
 	path = /obj/item/clothing/glasses/hud/health/aviator
 
 /datum/gear/eyes/medical/aviator/prescription
-	display_name = "Медик: Медицинский HUD, авиаторы, близорукость"
+	display_name = "Медик: HUD, авиаторы, близорукость"
 	path = /obj/item/clothing/glasses/hud/health/aviator/prescription
 
 /datum/gear/eyes/meson
@@ -87,7 +87,7 @@
 	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник", "Ученый", "Директор исследований", "Шахтер")
 
 /datum/gear/eyes/meson/prescription
-	display_name = "Мезонный сканер, близорукость (Инж, Науч, Шахт)"
+	display_name = "Мезонный сканер, близ. (Инж, Науч, Шахт)"
 	path = /obj/item/clothing/glasses/meson/prescription
 
 /datum/gear/eyes/material
@@ -96,7 +96,7 @@
 	allowed_roles = list("Шахтер","Интендант")
 
 /datum/gear/eyes/material/prescription
-	display_name = "Шахтёр: Оптический сканер материалов, близорукость"
+	display_name = "Шахтёр: Оптический сканер материалов (близ.)"
 	path = /obj/item/clothing/glasses/material/prescription
 
 /datum/gear/eyes/meson/aviator
@@ -104,7 +104,7 @@
 	path = /obj/item/clothing/glasses/meson/aviator
 
 /datum/gear/eyes/meson/aviator/prescription
-	display_name = "Мезонный сканер, авиаторы, близорукость (Инж, Науч, Шахт)"
+	display_name = "Мезонный сканер, авиаторы, близ. (Инж, Науч, Шахт)"
 	path = /obj/item/clothing/glasses/meson/aviator/prescription
 
 /datum/gear/eyes/glasses/fakesun
@@ -129,7 +129,7 @@
 	path = /obj/item/clothing/glasses/sunglasses/aviator
 
 /datum/gear/eyes/sun/prescriptionsun
-	display_name = "Солнечные очки, близорукость (СБ/Управление)"
+	display_name = "Солнечные очки, близ. (СБ/Управление)"
 	path = /obj/item/clothing/glasses/sunglasses/prescription
 
 /datum/gear/eyes/circuitry
@@ -141,7 +141,7 @@
 	path = /obj/item/clothing/glasses/rimless
 
 /datum/gear/eyes/glasses/prescriptionrimless
-	display_name = "Очки, без оправы, близорукость"
+	display_name = "Очки, без оправы (близ.)"
 	path = /obj/item/clothing/glasses/regular/rimless
 
 /datum/gear/eyes/glasses/thin
@@ -149,5 +149,5 @@
 	path = /obj/item/clothing/glasses/thin
 
 /datum/gear/eyes/glasses/prescriptionthin
-	display_name = "Очки, тонкая оправа, близорукость"
+	display_name = "Очки, тонкая оправа (близ.)"
 	path = /obj/item/clothing/glasses/regular/thin

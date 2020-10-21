@@ -6,7 +6,7 @@
 
 /obj/item/clothing/ears/earring/stud
 	name = "жемчужные серьги-гвоздики"
-	desc = "Пара маленьких сережек-гвоздиков."
+	desc = "Пара маленьких серёжек-гвоздиков."
 	icon_state = "ear_stud"
 	color = "#eae0c8"
 

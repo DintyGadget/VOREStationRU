@@ -3,7 +3,7 @@
 */
 /obj/item/clothing/ears/earmuffs
 	name = "защитные наушники"
-	desc = "Защищает Ваш слух как от громких шумов, так и от тихих."
+	desc = "Защищают Ваш слух как от громких шумов, так и от тихих."
 	icon_state = "earmuffs"
 	item_state_slots = list(slot_r_hand_str = "earmuffs", slot_l_hand_str = "earmuffs")
 	slot_flags = SLOT_EARS | SLOT_TWOEARS

@@ -21,23 +21,23 @@
 
 //Captain
 /obj/item/clothing/suit/captunic
-	name = "site manager's parade tunic"
-	desc = "Worn by a Site Manager to show their class."
+	name = "парадная туника Директора Колонии"
+	desc = "Демонстрирует престижность должности Директора Колонии."
 	icon_state = "captunic"
 	body_parts_covered = UPPER_TORSO|ARMS
 	flags_inv = HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 
 /obj/item/clothing/suit/captunic/capjacket
-	name = "site manager's uniform jacket"
-	desc = "A less formal jacket for everyday Site Manager use."
+	name = "пиджак Директора Колонии"
+	desc = "Менее официальный из пиджаков Директора Колонии для повседневного применения."
 	icon_state = "capjacket"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	flags_inv = HIDEHOLSTER
 
 //Chaplain
 /obj/item/clothing/suit/storage/hooded/chaplain_hoodie
-	name = "chaplain hoodie"
-	desc = "This suit says to you \"Hush\"!"
+	name = "облачение капеллана"
+	desc = "Этот костюм Вам шепчет, \"Тсс...\"!"
 	icon_state = "chaplain_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
@@ -47,8 +47,8 @@
 
 //Chaplain but spookier
 /obj/item/clothing/suit/storage/hooded/chaplain_hoodie/whiteout
-	name = "white robe"
-	desc = "A long, flowing white robe. It looks comfortable, but not very warm."
+	name = "белое облачение"
+	desc = "Длинная белая роба. Выглядит удобно, но не очень тепло."
 	icon_state = "whiteout_robe"
 	item_state_slots = list(slot_r_hand_str = "suit_white", slot_l_hand_str = "suit_white")
 	flags_inv = HIDETIE|HIDEHOLSTER
@@ -56,16 +56,16 @@
 
 //Chaplain
 /obj/item/clothing/suit/nun
-	name = "nun robe"
-	desc = "Maximum piety in this star system."
+	name = "облачение монашки"
+	desc = "Самая что ни на есть набожность."
 	icon_state = "nun"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 
 //Chef
 /obj/item/clothing/suit/chef
-	name = "chef's apron"
-	desc = "An apron used by a high class chef."
+	name = "фартук шеф-повара"
+	desc = "Фартук шеф-повара высшего класса."
 	icon_state = "chef"
 	gas_transfer_coefficient = 0.90
 	permeability_coefficient = 0.50
@@ -75,8 +75,8 @@
 
 //Chef
 /obj/item/clothing/suit/chef/classic
-	name = "classic chef's apron"
-	desc = "A basic, dull, white chef's apron."
+	name = "классический фартук шеф-повара"
+	desc = "Обыкновенный фартук белого цвета."
 	icon_state = "apronchef"
 	blood_overlay_type = "armor"
 	body_parts_covered = 0
@@ -84,24 +84,24 @@
 
 //Security
 /obj/item/clothing/suit/security/navyofficer
-	name = "security officer's jacket"
-	desc = "This jacket is for those special occasions when a security officer actually feels safe."
+	name = "пиджак офицера"
+	desc = "Этот пиджак предназначен для тех особых случаев, когда офицер чувствует себя в безопасности."
 	icon_state = "officerbluejacket"
 	item_state_slots = list(slot_r_hand_str = "suit_navy", slot_l_hand_str = "suit_navy")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/security/navywarden
-	name = "warden's jacket"
-	desc = "Perfectly suited for the warden that wants to leave an impression of style on those who visit the brig."
+	name = "пиджак надзирателя"
+	desc = "Идеально подходит надзирателям, которые хотят произвести впечатление на посетителей брига."
 	icon_state = "wardenbluejacket"
 	item_state_slots = list(slot_r_hand_str = "suit_navy", slot_l_hand_str = "suit_navy")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/security/navyhos
-	name = "head of security's jacket"
-	desc = "This piece of clothing was specifically designed for asserting superior authority."
+	name = "пиджак Главы Службы Безопасности"
+	desc = "Изготовлен специально для демонстрации авторитета."
 	icon_state = "hosbluejacket"
 	item_state_slots = list(slot_r_hand_str = "suit_navy", slot_l_hand_str = "suit_navy")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS

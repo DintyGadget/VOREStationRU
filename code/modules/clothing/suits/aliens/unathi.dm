@@ -1,7 +1,7 @@
 //Unathi clothing.
 /obj/item/clothing/suit/unathi/robe
 	name = "домотканая туника"
-	desc = "Традиционная верхняя одежда Унатхи."
+	desc = "Традиционная верхняя одежда унатхи."
 	icon_state = "robe-unathi"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 	flags_inv = HIDETIE|HIDEHOLSTER

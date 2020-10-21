@@ -1,4 +1,4 @@
 /obj/item/clothing/accessory/holster/waist/kinetic_accelerator
-	name = "KA holster"
-	desc = "A specialized holster, made specifically for Kinetic Accelerator."
+	name = "кобура КА"
+	desc = "Специализрованная кобура, предназначенная для Кинетического Акселератора."
 	can_hold = list(/obj/item/weapon/gun/energy/kinetic_accelerator)

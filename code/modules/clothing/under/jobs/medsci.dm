@@ -2,14 +2,14 @@
  * Science
  */
 /obj/item/clothing/under/rank/research_director
-	desc = "It's a jumpsuit worn by those with the know-how to achieve the position of \"Research Director\". Its fabric provides minor protection from biological contaminants."
-	name = "research director's jumpsuit"
+	desc = "Комбинезон, предназначенных для тех, кто владеет достаточными знаниями, чтобы носить титул Директора Исследований. Ткань предоставляет слабую защиту от биологическх заражений."
+	name = "комбинезон Директора Исследований"
 	icon_state = "director"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/research_director/rdalt
-	desc = "A dress suit and slacks stained with hard work and dedication to science. Perhaps other things as well, but mostly hard work and dedication."
-	name = "head researcher uniform"
+	desc = "Парадный костюм, окрашенного в цвета упорной и кропотливой работы. Ну и иногда и другие, но обычно упорной и кропотливой работы."
+	name = "униформа Главного Исследователя"
 	icon_state = "rdalt"
 	item_state_slots = list(slot_r_hand_str = "director", slot_l_hand_str = "director")
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)

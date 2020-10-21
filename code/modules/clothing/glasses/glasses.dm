@@ -101,7 +101,7 @@ BLIND     // can't see anything
 	overlay = global_hud.meson
 
 /obj/item/clothing/glasses/meson/prescription
-	name = "мезонный сканер (близорукость)"
+	name = "мезонный сканер (близ.)"
 	desc = "Оптический мезонный сканер с линзами для близоруких."
 	prescription = 1
 
@@ -114,7 +114,7 @@ BLIND     // can't see anything
 	activation_sound = 'sound/effects/pop.ogg'
 
 /obj/item/clothing/glasses/meson/aviator/prescription
-	name = "инженерные очки-авиаторы (близорукость)"
+	name = "инженерные очки-авиаторы (близ.)"
 	desc = "Инженерные очки-авиаторы с линзами для близоруких."
 	prescription = 1
 
@@ -128,7 +128,7 @@ BLIND     // can't see anything
 	activation_sound = 'sound/effects/pop.ogg'
 
 /obj/item/clothing/glasses/hud/health/aviator/prescription
-	name = "медицинские очки-авиаторы (близорукость)"
+	name = "медицинские очки-авиаторы (близ.)"
 	desc = "Модифицированные очки-авиаторы с медицинским HUD. В комплект входят линзы для близоруких."
 	prescription = 6
 
@@ -246,7 +246,7 @@ BLIND     // can't see anything
 	overlay = global_hud.material
 
 /obj/item/clothing/glasses/material/prescription
-	name = "сканер материалов (близорукость)"
+	name = "сканер материалов (близ.)"
 	prescription = 1
 
 /obj/item/clothing/glasses/graviton
@@ -268,7 +268,7 @@ BLIND     // can't see anything
 	overlay = global_hud.material
 
 /obj/item/clothing/glasses/regular
-	name = "очки (близорукость)"
+	name = "очки (близ.)"
 	desc = "Изготовлены Zadr Inc."
 	icon_state = "glasses"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -300,18 +300,18 @@ BLIND     // can't see anything
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/regular/rimless
-	name = "очки без оправы (близорукость)"
-	desc = "Стильные современные очки с одной крупной линзой."
+	name = "очки без оправы (близ.)"
+	desc = "Стильные современные очки из одной крупной линзы."
 	icon_state = "glasses_rimless"
 
 /obj/item/clothing/glasses/rimless
 	name = "очки без оправы"
-	desc = "Стильные современные очки с одной крупной линзой."
+	desc = "Стильные современные очки из одной крупной линзы."
 	icon_state = "glasses_rimless"
 	prescription = 0
 
 /obj/item/clothing/glasses/regular/thin
-	name = "очки в тонкой оправе (близорукость)"
+	name = "очки в тонкой оправе (близ.)"
 	desc = "Очки в оправе — прошлый век."
 	icon_state = "glasses_thin"
 	prescription = 1
@@ -401,7 +401,7 @@ BLIND     // can't see anything
 	w_class = ITEMSIZE_TINY
 
 /obj/item/clothing/glasses/sunglasses/prescription
-	name = "солнечные очки (близорукость)"
+	name = "солнечные очки (близ.)"
 	prescription = 1
 
 /obj/item/clothing/glasses/sunglasses/big
@@ -427,11 +427,11 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses/sunglasses/sechud/tactical
 	name = "тактический HUD"
-	desc = "Визор со встроенной боевой информацией и записями СБ. Предоставляют защиту от вспышек."
+	desc = "Визор со встроенной боевой информацией и записями Службы Безопасности. Предоставляют защиту от вспышек."
 	icon_state = "swatgoggles"
 
 /obj/item/clothing/glasses/sunglasses/sechud/aviator
-	name = "HUD-авиатор СБ"
+	name = "HUD-авиатор службы безопасности"
 	desc = "Модифицированные очки-авиаторы с режимами HUD и защиты от вспышек."
 	icon_state = "aviator_sec"
 	off_state = "aviator"
@@ -466,7 +466,7 @@ BLIND     // can't see anything
 		icon_state = off_state
 
 /obj/item/clothing/glasses/sunglasses/sechud/aviator/prescription
-	name = "HUD-авиатор СБ (близорукость)"
+	name = "HUD-авиатор службы безопасности (близ.)"
 	desc = "Модифицированные очки-авиаторы с режимами HUD и защиты от вспышек, а также набором линз для близоруких."
 	prescription = 6
 

@@ -1,18 +1,18 @@
 /obj/item/clothing/under/pj/red
-	name = "red pj's"
-	desc = "Sleepwear."
+	name = "красная пижама"
+	desc = "Пижама для сна."
 	icon_state = "red_pyjamas"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 
 /obj/item/clothing/under/pj/blue
-	name = "blue pj's"
-	desc = "Sleepwear."
+	name = "синяя пижама"
+	desc = "Пижама для сна."
 	icon_state = "blue_pyjamas"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 
 /obj/item/clothing/under/captain_fly
-	name = "rogue's uniform"
-	desc = "For the man who doesn't care because he's still free."
+	name = "униформа разбойника"
+	desc = "Для мужчины, котому абсолютно всё равно."
 	icon_state = "captain_fly"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 
@@ -28,89 +28,89 @@
 
 /obj/item/clothing/under/sl_suit
 	desc = "Скудноватый на вид костюм."
-	name = "amish suit"
+	name = "амишевый костюм"
 	icon_state = "sl_suit"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/waiter
-	name = "waiter's outfit"
-	desc = "It's a very smart uniform with a special pocket for tip."
+	name = "униформа официанта"
+	desc = "Солидная униформа с особым кармашком для чаевых."
 	icon_state = "waiter"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/customs
-	name = "customs uniform"
-	desc = "A standard SolGov customs uniform.  Complete with epaulettes."
+	name = "таможенная униформа"
+	desc = "Стандартная таможенная униформа Сол. На ней множество вышивок."
 	icon_state = "cu_suit"
 
 /obj/item/clothing/under/customs/khaki
 	icon_state = "cu_suit_kh"
 
 /obj/item/clothing/under/rank/mailman
-	name = "mailman's jumpsuit"
-	desc = "<i>'Special delivery!'</i>"
+	name = "комбинезон почтальона"
+	desc = "<i>'Спецдоставка!'</i>"
 	icon_state = "mailman"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/sexyclown
-	name = "sexy-clown suit"
-	desc = "It makes you look HONKable!"
+	name = "сексапильный костюм клоуна"
+	desc = "Так и хочется Вас хонкнуть!"
 	icon_state = "sexyclown"
 	item_state_slots = list(slot_r_hand_str = "clown", slot_l_hand_str = "clown")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	rolled_sleeves = -1 //Please never
 
 /obj/item/clothing/under/rank/vice
-	name = "vice officer's jumpsuit"
-	desc = "It's the standard issue pretty-boy outfit, as seen on Holo-Vision."
+	name = "комбинезон вице-офицера"
+	desc = "Униформа мальчика на побегушках."
 	icon_state = "vice"
 	item_state_slots = list(slot_r_hand_str = "grey", slot_l_hand_str = "grey")
 
 //This set of uniforms looks fairly fancy and is generally used for high-ranking NT personnel from what I've seen, so lets give them appropriate ranks.
 /obj/item/clothing/under/rank/centcom
-	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Captain.\""
-	name = "\improper Officer's Dress Uniform"
+	desc = "Золотые кромки поверх чёрных тканей. Эта униформа демонстрирует звание Капитана."
+	name = "парадная униформа Офицера ЦК"
 	icon_state = "officer"
 	item_state_slots = list(slot_r_hand_str = "lawyer_black", slot_l_hand_str = "lawyer_black")
 	displays_id = 0
 
 /obj/item/clothing/under/rank/centcom_officer
-	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Admiral.\""
-	name = "\improper Officer's Dress Uniform"
+	desc = "Золотые кромки поверх чёрных тканей. Эта униформа демонстрирует звание Адмирала."
+	name = "парадная униформа Офицера ЦК"
 	icon_state = "officer"
 	item_state_slots = list(slot_r_hand_str = "lawyer_black", slot_l_hand_str = "lawyer_black")
 	displays_id = 0
 
 /obj/item/clothing/under/rank/centcom_captain
-	desc = "Gold trim on space-black cloth, this uniform displays the rank of \"Admiral-Executive.\""
-	name = "\improper Officer's Dress Uniform"
+	desc = "Золотые кромки поверх чёрных тканей. Эта униформа демонстрирует звание Исполнительного Адмирала."
+	name = "парадная униформа Офицера ЦК"
 	icon_state = "centcom"
 	item_state_slots = list(slot_r_hand_str = "lawyer_black", slot_l_hand_str = "lawyer_black")
 	displays_id = 0
 
 /obj/item/clothing/under/ert
-	name = "ERT tactical uniform"
-	desc = "A short-sleeved black uniform, paired with grey digital-camo cargo pants. It looks very tactical."
+	name = "тактическая форма ГЭР"
+	desc = "Чёрная униформа с короткими рукавами вместе с серыми камуфляжными штанами."
 	icon_state = "ert_uniform"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 
 /obj/item/clothing/under/gov
-	desc = "A neat proper uniform of someone on offical business. The collar is <i>immaculately</i> starched."
-	name = "Green formal uniform"
+	desc = "Формальная униформа для важных дел. Воротник <i>тщательно</i> закрахмален."
+	name = "формальная зеленая униформа"
 	icon_state = "greensuit"
 	item_state_slots = list(slot_r_hand_str = "centcom", slot_l_hand_str = "centcom")
 	rolled_sleeves = 0
 	starting_accessories = list(/obj/item/clothing/accessory/tie/darkgreen)
 
 /obj/item/clothing/under/gov/skirt
-	name = "Green formal skirt uniform"
-	desc = "A neat proper uniform of someone on offical business. The top button is sewn shut."
+	name = "формальная зеленая юбка"
+	desc = "Формальная униформа для важных дел. Верхняя пуговица вшита полностью."
 	icon_state = "greensuit_skirt"
 
 /obj/item/clothing/under/space
-	name = "\improper NASA jumpsuit"
-	desc = "It has a NASA logo on it and is made of space-proofed materials."
+	name = "кобинезон NASA"
+	desc = "Изготовлен из герметичных материалов и имеет на себе логотип NASA."
 	icon_state = "black"
 	w_class = ITEMSIZE_LARGE//bulky item
 	gas_transfer_coefficient = 0.01
@@ -121,10 +121,10 @@
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/acj
-	name = "administrative cybernetic jumpsuit"
+	name = "административный кибернетический костюм"
 	icon_state = "syndicate"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
-	desc = "it's a cybernetically enhanced jumpsuit used for administrative duties."
+	desc = "Кибернетически усовершенствованный кобинезон для исполнения административных обязанностей."
 	gas_transfer_coefficient = 0.01
 	permeability_coefficient = 0.01
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
@@ -134,13 +134,13 @@
 	siemens_coefficient = 0
 
 /obj/item/clothing/under/owl
-	name = "owl uniform"
-	desc = "A jumpsuit with owl wings. Photorealistic owl feathers! Twooooo!"
+	name = "костюм филина"
+	desc = "Комбинезон с крыльями. И с реалистичными перьями!"
 	icon_state = "owl"
 
 /obj/item/clothing/under/johnny
-	name = "johnny~~ jumpsuit"
-	desc = "Johnny~~"
+	name = "кобинезон Джонни~~"
+	desc = "Джонни~~"
 	icon_state = "johnny"
 
 /obj/item/clothing/under/color/rainbow
@@ -149,8 +149,8 @@
 	icon_state = "rainbow"
 
 /obj/item/clothing/under/psysuit
-	name = "dark undersuit"
-	desc = "A thick, layered grey undersuit lined with power cables. Feels a little like wearing an electrical storm."
+	name = "темное термобелье"
+	desc = "Плотное слоистое термобелье темного цвета, обвитое проводами. Будто переносная электрическая буря."
 	icon_state = "psysuit"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
@@ -169,23 +169,23 @@
 	icon_state = "gentlesuit_skirt"
 
 /obj/item/clothing/under/gimmick/rank/captain/suit
-	name = "site manager's suit"
-	desc = "A green suit and yellow necktie. Exemplifies authority."
+	name = "костюм Директора Колонии"
+	desc = "Зеленый костюм с желтым галстуком. Пиковый авторитет."
 	icon_state = "green_suit"
 	item_state_slots = list(slot_r_hand_str = "centcom", slot_l_hand_str = "centcom")
 
 /obj/item/clothing/under/gimmick/rank/captain/suit/skirt
-	name = "site manager's skirt suit"
+	name = "юбка Директора Колонии"
 	icon_state = "green_suit_skirt"
 
 /obj/item/clothing/under/gimmick/rank/head_of_personnel/suit
-	name = "head of personnel's suit"
-	desc = "A teal suit and yellow necktie. An authoritative yet tacky ensemble."
+	name = "костюм Главы Персонала"
+	desc = "Бирюзовый костюм с желтым галстуком. Показушно, однако стильно."
 	icon_state = "teal_suit"
 	item_state_slots = list(slot_r_hand_str = "green", slot_l_hand_str = "green")
 
 /obj/item/clothing/under/gimmick/rank/head_of_personnel/suit/skirt
-	name = "head of personnel's skirt suit"
+	name = "юбка Главы Персонала"
 	icon_state = "teal_suit_skirt"
 
 /obj/item/clothing/under/suit_jacket
@@ -230,60 +230,60 @@
 	icon_state = "red_suit_skirt"
 
 /obj/item/clothing/under/schoolgirl
-	name = "schoolgirl uniform"
-	desc = "It's just like one of my Japanese animes!"
+	name = "униформа школьницы"
+	desc = "Прям как в японских мультиках!"
 	icon_state = "schoolgirl"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/overalls
-	name = "laborer's overalls"
-	desc = "A set of durable overalls for getting the job done."
+	name = "кобинезон работяги"
+	desc = "Надежный комбинезон для исполнения обязанностей."
 	icon_state = "overalls"
 	item_state_slots = list(slot_r_hand_str = "cargo", slot_l_hand_str = "cargo")
 
 /obj/item/clothing/under/overalls/sleek
-	name = "sleek overalls"
-	desc = "A set of modern pleather reinforced overalls."
+	name = "стильный комбинезон"
+	desc = "Современный кобинезон, упрочненный кожзамом."
 	icon_state = "overalls_sleek"
 
 /obj/item/clothing/under/pirate
-	name = "pirate outfit"
-	desc = "Yarr."
+	name = "костюм пирата"
+	desc = "Йо-хо-хо."
 	icon_state = "pirate"
 	item_state_slots = list(slot_r_hand_str = "sl_suit", slot_l_hand_str = "sl_suit")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 /obj/item/clothing/under/soviet
-	name = "soviet uniform"
-	desc = "For the Motherland!"
+	name = "советская униформа"
+	desc = "За Россию-матушку!"
 	icon_state = "soviet"
 	item_state_slots = list(slot_r_hand_str = "grey", slot_l_hand_str = "grey")
 
 /obj/item/clothing/under/redcoat
-	name = "redcoat uniform"
-	desc = "Looks old."
+	name = "алый мундир"
+	desc = "На вид староватый."
 	icon_state = "redcoat"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 
 /obj/item/clothing/under/kilt
-	name = "kilt"
-	desc = "Includes shoes and plaid"
+	name = "килт"
+	desc = "В комплект входят ботинки."
 	icon_state = "kilt"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|FEET
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/sexymime
-	name = "sexy mime outfit"
-	desc = "The only time when you DON'T enjoy looking at someone's rack."
+	name = "сексапильный костюм мима"
+	desc = "На такую красоту даже смотреть не хочется."
 	icon_state = "sexymime"
 	item_state_slots = list(slot_r_hand_str = "mime", slot_l_hand_str = "mime")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	rolled_sleeves = -1 //Please never
 
 /obj/item/clothing/under/gladiator
-	name = "gladiator uniform"
-	desc = "Are you not entertained? Is that not why you are here?"
+	name = "облачение гладиатора"
+	desc = "Хлеба и зрелищ."
 	icon_state = "gladiator"
 	item_state_slots = list(slot_r_hand_str = "yellow", slot_l_hand_str = "yellow")
 	body_parts_covered = LOWER_TORSO
@@ -302,23 +302,23 @@
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 
 /obj/item/clothing/under/robe
-	name = "black robe"
-	desc = "A black robe. It gives off uncomfortable cult vibes."
+	name = "черная роба"
+	desc = "Черная роба, так и отдаёт культизмом."
 	icon_state = "robe"
 
 /obj/item/clothing/under/whiterobe
-	name = "white robe"
-	desc = "A white robe. It gives off uncomfortable cult vibes."
+	name = "белая роба"
+	desc = "Белая роба, так и отдаёт культизмом."
 	icon_state = "whiterobe"
 
 /obj/item/clothing/under/goldrobe
-	name = "black gold-lined robe"
-	desc = "A gold-lined black robe. It gives off uncomfortable cult vibes, but fancy."
+	name = "черно-золотая роба"
+	desc = "Черно-золотая роба, так и отдаёт культизмом, однако смотрится стильно."
 	icon_state = "goldrobe"
 
 /obj/item/clothing/under/whitegoldrobe
-	name = "white gold-lined robe"
-	desc = "A gold-lined white robe. It gives off uncomfortable cult vibes, but fancy."
+	name = "бело-золотая роба"
+	desc = "Бело-золотая роба, так и отдаёт культизмом, однако смотрится стильно."
 	icon_state = "whitegoldrobe"
 
 /*
@@ -328,19 +328,19 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/dress/blacktango
-	name = "black tango dress"
-	desc = "Filled with Latin fire."
+	name = "черное платье для танго"
+	desc = "Блещет южноамериканским пламенем."
 	icon_state = "black_tango"
 
 /obj/item/clothing/under/dress/blacktango/alt
-	name = "black tango dress"
-	desc = "Filled with Latin fire."
+	name = "черное платье для танго"
+	desc = "Блещет южноамериканским пламенем."
 	icon_state = "black_tango_alt"
 	item_state_slots = list(slot_r_hand_str = "black_tango", slot_l_hand_str = "black_tango")
 
 /obj/item/clothing/under/dress/stripeddress
-	name = "striped dress"
-	desc = "Fashion in space."
+	name = "полосатое платье"
+	desc = "Мода в космосе."
 	icon_state = "striped_dress"
 
 /obj/item/clothing/under/dress/sailordress
@@ -395,32 +395,32 @@
 	icon_state = "dress_yellow"
 
 /obj/item/clothing/under/dress/dress_saloon
-	name = "saloon girl dress"
-	desc = "A old western inspired gown for the girl who likes to drink."
+	name = "платье девушки из кабака"
+	desc = "Облачение в духе старых вестернов для девушек, которые не против выпить."
 	icon_state = "dress_saloon"
 	item_state_slots = list(slot_r_hand_str = "dress_white", slot_l_hand_str = "dress_white")
 
 /obj/item/clothing/under/dress/dress_cap
-	name = "site manager's dress uniform"
-	desc = "Feminine fashion for the style conscious Site Manager."
+	name = "платье Директора Колонии"
+	desc = "Женская одежда для Директора Колонии с чувством стиля."
 	icon_state = "dress_cap"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/dress/dress_hop
-	name = "head of personnel dress uniform"
-	desc = "Feminine fashion for the style conscious HoP."
+	name = "платье Главы Персонала"
+	desc = "Женская одежда для Главы Персонала с чувством стиля."
 	icon_state = "dress_hop"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/dress/dress_hr
-	name = "human resources director uniform"
-	desc = "Superior class for the nosy H.R. Director."
+	name = "униформа директора отдела кадров"
+	desc = "Элегантная униформа для доставучего директора отдела кадров."
 	icon_state = "huresource"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 
 /obj/item/clothing/under/dress/black_corset
-	name = "black corset"
-	desc = "A black corset and skirt for those fancy nights out."
+	name = "черный корсет"
+	desc = "Черный корсет и юбка для роскошных пятниц."
 	icon_state = "black_corset"
 
 /obj/item/clothing/under/dress/flower_dress
@@ -620,26 +620,26 @@ Uniforms and such
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/captainformal
-	name = "site manager's formal uniform"
-	desc = "A Site Manager's formal-wear, for special occasions."
+	name = "формальный наряд Директора Колонии"
+	desc = "Официальный наряд Директора Колонии для особых случаев."
 	icon_state = "captain_formal"
 	item_state_slots = list(slot_r_hand_str = "lawyer_blue", slot_l_hand_str = "lawyer_blue")
 
 /obj/item/clothing/under/hosformalmale
-	name = "head of security's formal uniform"
-	desc = "A male head of security's formal-wear, for special occasions."
+	name = "формальный наряд Главы Службы Безопасности"
+	desc = "Мужской наряд Главы Службы Безопасности для особых случаев."
 	icon_state = "hos_formal_male"
 	item_state_slots = list(slot_r_hand_str = "lawyer_red", slot_l_hand_str = "lawyer_red")
 
 /obj/item/clothing/under/hosformalfem
-	name = "head of security's formal uniform"
-	desc = "A female head of security's formal-wear, for special occasions."
+	name = "формальный наряд Главы Службы Безопасности"
+	desc = "Женский наряд Главы Службы Безопасности для особых случаев."
 	icon_state = "hos_formal_fem"
 	item_state_slots = list(slot_r_hand_str = "lawyer_red", slot_l_hand_str = "lawyer_red")
 
 /obj/item/clothing/under/assistantformal
-	name = "assistant's formal uniform"
-	desc = "An assistant's formal-wear. Why an assistant needs formal-wear is still unknown."
+	name = "формальный наряд ассистента"
+	desc = "Официальный наряд ассистента. Для чего он нужен ассистентам - пока ещё не понятно."
 	icon_state = "assistant_formal"
 	item_state_slots = list(slot_r_hand_str = "lawyer_black", slot_l_hand_str = "lawyer_black")
 
@@ -882,15 +882,15 @@ Uniforms and such
  * pyjamas
  */
 /obj/item/clothing/under/bluepyjamas
-	name = "blue pyjamas"
-	desc = "Slightly old-fashioned sleepwear."
+	name = "синяя пижама"
+	desc = "Старомодная постельная одежда."
 	icon_state = "blue_pyjamas"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 
 /obj/item/clothing/under/redpyjamas
-	name = "red pyjamas"
-	desc = "Slightly old-fashioned sleepwear."
+	name = "красная пижама"
+	desc = "Старомодная постельная одежда."
 	icon_state = "red_pyjamas"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
@@ -932,14 +932,14 @@ Uniforms and such
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/major_bills)
 
 /obj/item/clothing/under/confederacy
-	name = "\improper Confederacy uniform"
-	desc = "A military uniform belonging to the Confederacy of Man, an independent human government."
+	name = "униформа Конфедерации"
+	desc = "Военная униформа Конфедерации Человека, независимого правительства человеческой расы."
 	icon_state = "confed"
 	worn_state = "confed"
 
 /obj/item/clothing/under/saare
-	name = "\improper SAARE uniform"
-	desc = "A dress uniform belonging to Stealth Assault Enterprises, a minor private military corporation."
+	name = "униформа SAARE"
+	desc = "Униформа Stealth Assault Enterprises, частной военной корпорации."
 	icon_state = "saare"
 	worn_state = "saare"
 
@@ -970,8 +970,8 @@ Uniforms and such
 //Uniforms end above here.
 
 /obj/item/clothing/under/medigown
-	name = "medical gown"
-	desc = "A flimsy examination gown, the back ties never close."
+	name = "медицинская маечка"
+	desc = "Маечка для медицинских обследований. На спине не сходятся пуговицы."
 	icon_state = "medicalgown"
 	worn_state = "medicalgown"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
@@ -984,16 +984,16 @@ Uniforms and such
 
 /obj/item/clothing/under/explorer
 	desc = "Зелёный комбинезон для проведения исследований в суровых условиях."
-	name = "комбинезон исследователя"
+	name = "комбинезон искателя"
 	icon_state = "explorer"
 
 /obj/item/clothing/under/explorer/armored
-	desc = "A green uniform for operating in hazardous environments. This one looks like it's been modified."
+	desc = "Зелёный комбинезон для проведения исследований в суровых условиях. Этот комбинезон, кажется, был модифицирован."
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 10, bomb = 10, bio = 10, rad = 30)
 	armorsoak = list(melee = 5, bullet = 5, laser = 5,energy = 5, bomb = 5, bio = 5, rad = 0)
 
 /obj/item/clothing/under/cohesion
-	name = "черный когезонный костюм"
+	name = "черный когезионный костюм"
 	desc = "Простой чёрный костюм для поддержания когезии, позволяющий Прометеанам поддерживать свою форму и защищающий от прямого физического контакта."
 	icon_state = "cohesionsuit"
 	rolled_sleeves = -1 // defeats the purpose!!!
@@ -1023,9 +1023,9 @@ Uniforms and such
 //Item sprites go in icons\obj\clothing\ranger.dmi with the format "white_ranger_uniform"
 /obj/item/clothing/under/color/ranger
 	var/unicolor = "white"
-	name = "униформа рейнджера"
-	desc = "Made from a space-proof fibre and tight fitting, this uniform usually gives the agile Rangers all kinds of protection while not inhibiting their movement. \
-	This costume is instead made from genuine cotton fibre and is based on the season three uniform."
+	name = "костюм рейнджера"
+	desc = "Изготовленная из герметичных материалов и плотно прилегающая к телу, эта форма предоставляет рейнджерам защиту, не препятствуя передвижению. \
+	Однако этот костюм изготовлен из хлопка по подобию костюмов из третьего сезона."
 	icon = 'icons/obj/clothing/ranger.dmi'
 	icon_state = "white_ranger_uniform"
 	rolled_down = 0
@@ -1034,23 +1034,29 @@ Uniforms and such
 /obj/item/clothing/under/color/ranger/Initialize()
 	. = ..()
 	if(icon_state == "ranger_uniform") //allows for custom items
-		name = "[unicolor] ranger uniform"
 		icon_state = "[unicolor]_ranger_uniform"
 
 /obj/item/clothing/under/color/ranger/black
 	unicolor = "black"
+	name = "костюм черного рейнджера"
 
 /obj/item/clothing/under/color/ranger/pink
 	unicolor = "pink"
+	name = "костюм розового рейнджера"
+
 
 /obj/item/clothing/under/color/ranger/green
 	unicolor = "green"
+	name = "костюм зеленого рейнджера"
 
 /obj/item/clothing/under/color/ranger/cyan
 	unicolor = "cyan"
+	name = "костюм бирюзового рейнджера"
 
 /obj/item/clothing/under/color/ranger/orange
 	unicolor = "orange"
+	name = "костюм оранжевого рейнджера"
 
 /obj/item/clothing/under/color/ranger/yellow
 	unicolor = "yellow"
+	name = "костюм желтого рейнджера"

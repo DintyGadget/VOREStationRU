@@ -4,12 +4,12 @@
 
 // Thief - Traitor / Merc
 /obj/item/clothing/gloves/sterile/thieves
-	name = "sterile gloves"
-	desc = "Sterile gloves."
-	description_antag = "These gloves are uniquely suited for stealing, as well as breaking and entering. They have minor insulation.\
-	Attempting to 'help' someone will open their backpack, if it exists, or their belt if they have no backpack, allowing you to deposit\
-	items into the inventories. Be careful about making too much noise.\
-	Disarm intent will swap the items in your LEFT pockets. Grab will swap RIGHT pockets."
+	name = "стерильные перчатки"
+	desc = "Стерильные перчатки."
+	description_antag = "Эти перчатки изготовлены специально для воровства, а также взломов и проникновений. Обладает слабым изолирующим эффектом. \
+	Попытка 'помочь' кому-то откроет их рюкзак, если он есть, или пояс с инструментами, \
+	позволяя Вам перемещать предметы в инвентарях. Постарайтесь не нашуметь.\
+	Намерение разоружить поменяет местами предметы в ваших ЛЕВЫХ карманах, а захват - в ПРАВЫХ."
 	icon_state = "latex"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 	siemens_coefficient = 0.5 // Not perfect, but slightly more protective than nothing.
@@ -25,7 +25,7 @@
 		return 0
 
 	if(user.a_intent != I_HURT && (turn(target.dir, 180) == get_dir(user, target)))
-		to_chat(target, "<span class='warning'>[user] rifles in your pockets!</span>")
+		to_chat(target, "<span class='warning'>[user] копается в Ваших карманах!</span>")
 
 	if(user.a_intent == I_HELP)
 		if(istype(target.back,/obj/item/weapon/storage) && do_after(user, 3 SECONDS, target))
@@ -91,11 +91,11 @@
 
 // Buzzer Ring - Traitor, Merc.
 /obj/item/clothing/gloves/ring/buzzer
-	name = "ring"
-	desc = "A plain metal band."
-	description_antag = "This morphium-alloy ring continually generates an electric field, capable of electrocuting a target while not injuring the wearer.\
-	The device is also capable of 'frankenstein'-ing a corpse, long after normal technology would be able to save them. The body will still be tied to the\
-	normal damage limits for survival, however, so care must be taken."
+	name = "кольцо"
+	desc = "Обыкновенное металлическое кольцо."
+	description_antag = "Это кольцо из сплава морфия генерирует электрическое поле, способное ударить цель током без вреда носителю.\
+	Кольцо также способно 'оживить' труп даже тогда, когда не способны привычные технологии.\
+	Однако, для обеспечения жизнеспособности тела нанёсенные ему ранения должны быть сперва вылечены."
 	icon_state = "material"
 	var/battery_type = /obj/item/weapon/cell/device/weapon/recharge
 	var/obj/item/weapon/cell/battery = null
@@ -127,7 +127,7 @@
 
 					do_defib(H)
 
-			to_chat(L, "<span class='warning'>You feel a powerful shock!</span>")
+			to_chat(L, "<span class='warning'>Вы чувствуете сильный удар током!</span>")
 			if(!.)
 				playsound(L, 'sound/effects/sparks7.ogg', 40, 1)
 				L.electrocute_act(battery.percent() * 0.25, src)

@@ -7,8 +7,8 @@
  */
 
 /obj/item/clothing/gloves/gauntlets	//Used to cover gloves, otherwise act as gloves.
-	name = "gauntlets"
-	desc = "These gloves go over regular gloves."
+	name = "наручи"
+	desc = "Эти перчатки надеваются поверх других перчаток."
 	glove_level = 3
 	overgloves = 1
 	punch_force = 5
@@ -19,11 +19,11 @@
 	if(H.gloves)
 		gloves = H.gloves
 		if(!istype(gloves))
-			to_chat(user, "You are unable to wear \the [src] as \the [H.gloves] are in the way.")
+			to_chat(user, "Вы не можете надеть [src], так как на Вас [H.gloves].")
 			gloves = null
 			return 0
 		if(gloves.overgloves)
-			to_chat(user, "You are unable to wear \the [src] as \the [H.gloves] are in the way.")
+			to_chat(user, "Вы не можете надеть [src], так как на Вас [H.gloves].")
 			gloves = null
 			return 0
 		H.drop_from_inventory(gloves)
@@ -35,7 +35,7 @@
 				gloves = null
 			return 0
 	if(gloves)
-		to_chat(user, "You slip \the [src] on over \the [gloves].")
+		to_chat(user, "Вы надеваете [src] поверх перчаток.")
 	wearer = H
 	return 1
 

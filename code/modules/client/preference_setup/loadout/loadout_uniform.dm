@@ -206,7 +206,7 @@
 	allowed_roles = list("Интендант","Грузчик")
 
 /datum/gear/uniform/suit/lawyer
-	display_name = "Костюм, праздничный (выбор)"
+	display_name = "Костюм, официальный (выбор)"
 	path = /obj/item/clothing/under/lawyer
 
 /datum/gear/uniform/suit/lawyer/New()
@@ -236,7 +236,7 @@
 	path = /obj/item/clothing/under/sl_suit
 
 /datum/gear/uniform/suit/gentle
-	display_name = "Костюм, джентельмен"
+	display_name = "Костюм, джентльмен"
 	path = /obj/item/clothing/under/gentlesuit
 
 /datum/gear/uniform/suit/gentleskirt
@@ -281,6 +281,10 @@
 /datum/gear/uniform/oldwoman
 	display_name = "Одежда пожилой женщины"
 	path = /obj/item/clothing/under/oldwoman
+
+/datum/gear/uniform/oldman
+	display_name = "Одежда пожилого мужчины"
+	path = /obj/item/clothing/under/lawyer/oldman
 
 /datum/gear/uniform/sundress
 	display_name = "Сарафан"

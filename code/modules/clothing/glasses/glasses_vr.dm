@@ -3,18 +3,18 @@
 
 	//Look it's really not that fancy. It's not ACTUALLY unique scrip data.
 	if(prescription)
-		name = "[initial(name)] (pr)"
-		user.visible_message("[user] replaces the lenses in \the [src] with a new prescription.")
+		name = "[initial(name)] (близ.)"
+		user.visible_message("[user] вставляет линзы в [src] в соответствии с новым рецептом.")
 	else
 		name = "[initial(name)]"
-		user.visible_message("[user] replaces the prescription lenses in \the [src] with generics.")
+		user.visible_message("[user] вставляет в [src] обыкновенные линзы.")
 
 	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 
 //Prescription kit
 /obj/item/device/glasses_kit
-	name = "prescription glasses kit"
-	desc = "A kit containing all the needed tools and parts to develop and apply a prescription for someone."
+	name = "набор рецептурных линз"
+	desc = "Набор всех необходимых линз и инструментов для изготовления очков для слабовидящих."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "modkit"
 	var/scrip_loaded = 0
@@ -27,7 +27,7 @@
 
 	//Too difficult
 	if(target == user)
-		to_chat(user, "<span class='warning'>Вы не можете использовать это на самих себе! Попросите Вам помочь.</span>")
+		to_chat(user, "<span class='warning'>Вы не можете использовать это на своих глазах самостоятельно! Попросите Вам помочь.</span>")
 		return
 
 	//We're applying a prescription
@@ -45,7 +45,7 @@
 	else if(ishuman(target))
 		var/mob/living/carbon/human/T = target
 		if(T.glasses || (T.head && T.head.flags_inv & HIDEEYES))
-			to_chat(user, "<span class='warning'>Глаза этого персонажа не могут быть прикрыты!</span>")
+			to_chat(user, "<span class='warning'>Глаза этого персонажа должны быть видны!</span>")
 			return
 
 		T.visible_message("[user] начинает измерять толщину рецептурных линз для [target].","[user] начинает проверять Ваши глаза. Не двигайтесь!")
@@ -95,7 +95,7 @@
 
 /obj/item/clothing/glasses/sunglasses/sechud/tajblind
 	name = "глянцевая повязка на глаза"
-	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен HUD Службы Безопасности."
+	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен HUD службы безопасности."
 	icon = 'icons/obj/clothing/glasses_vr.dmi'
 	icon_override = 'icons/mob/eyes_vr.dmi'
 	icon_state = "tajblind_sec"

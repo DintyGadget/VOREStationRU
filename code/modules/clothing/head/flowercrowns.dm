@@ -1,6 +1,6 @@
 /obj/item/clothing/head/woodcirclet
-	name = "wood circlet"
-	desc = "A small wood circlet for making a flower crown."
+	name = "деревянный венец"
+	desc = "Небольшой деревянный венец для изготовления цветочных венков."
 	icon_state = "woodcirclet"
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = 0
@@ -10,16 +10,16 @@
 	if(istype(W, /obj/item/weapon/reagent_containers/food/snacks/grown))
 		var/obj/item/weapon/reagent_containers/food/snacks/grown/G = W
 		if(G.seed.kitchen_tag == "poppy")
-			to_chat(user, "You attach the poppy to the circlet and create a beautiful flower crown.")
+			to_chat(user, "Вы обвиваете обруч маком и создаёте прекрасный цветочный венок.")
 			complete = new /obj/item/clothing/head/poppy_crown(get_turf(user))
 		else if(G.seed.kitchen_tag == "sunflower")
-			to_chat(user, "You attach the sunflower to the circlet and create a beautiful flower crown.")
+			to_chat(user, "Вы обвиваете обруч подсолнухами и создаёте прекрасный цветочный венок.")
 			complete = new /obj/item/clothing/head/sunflower_crown(get_turf(user))
 		else if(G.seed.kitchen_tag == "lavender")
-			to_chat(user, "You attach the lavender to the circlet and create a beautiful flower crown.")
+			to_chat(user, "Вы обвиваете обруч лавандой и создаёте прекрасный цветочный венок.")
 			complete = new /obj/item/clothing/head/lavender_crown(get_turf(user))
 		else if(G.seed.kitchen_tag == "rose")
-			to_chat(user, "You attach the rose to the circlet and create a beautiful flower crown.")
+			to_chat(user, "Вы обвиваете обруч розами и создаёте прекрасный цветочный венок.")
 			complete = new /obj/item/clothing/head/rose_crown(get_turf(user))
 		user.drop_from_inventory(W)
 		user.drop_from_inventory(src)

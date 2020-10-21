@@ -6,30 +6,30 @@
 
 /obj/item/clothing/glasses/hud/health
 	name = "медицинский HUD"
-	desc = "Индикатор, сканирующий людей в поле зрения и отображающий на стекле информацию о их состоянии."
+	desc = "Индикатор, сканирующий людей в поле зрения и отображающий на стекле информацию об их состоянии."
 	icon_state = "healthhud"
 	item_state_slots = list(slot_r_hand_str = "headset", slot_l_hand_str = "headset")
 	body_parts_covered = 0
 	enables_planes = list(VIS_CH_STATUS,VIS_CH_HEALTH)
 
 /obj/item/clothing/glasses/hud/health/prescription
-	name = "медицинский HUD (близорукость)"
+	name = "медицинский HUD (близ.)"
 	desc = "Медицинский HUD, интегрированный в рецептурные очки."
 	prescription = 1
 	icon_state = "healthhudpresc"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 
 /obj/item/clothing/glasses/hud/security
-	name = "HUD Службы Безопасности"
-	desc = "Индикатор, сканирующий людей в поле зрения и отображающий на стекле информацию об их идентификации и записях Службы Безопасности."
+	name = "HUD службы безопасности"
+	desc = "Индикатор, сканирующий людей в поле зрения и отображающий на стекле информацию об их идентификации и записях службы безопасности."
 	icon_state = "securityhud"
 	item_state_slots = list(slot_r_hand_str = "headset", slot_l_hand_str = "headset")
 	body_parts_covered = 0
 	enables_planes = list(VIS_CH_ID,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM)
 
 /obj/item/clothing/glasses/hud/security/prescription
-	name = "HUD Службы Безопасности (близорукость)"
-	desc = "HUD Службы Безопасности, интегрированный в рецептурные очки."
+	name = "HUD службы безопасности (близ.)"
+	desc = "HUD службы безопасности, интегрированный в рецептурные очки."
 	prescription = 1
 	icon_state = "sechudpresc"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")

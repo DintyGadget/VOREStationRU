@@ -1,43 +1,43 @@
 /obj/item/clothing/accessory/vest
-	name = "black vest"
-	desc = "Slick black suit vest."
+	name = "черный жилет"
+	desc = "Стильный жилет чёрного цвета."
 	icon_state = "det_vest"
 	slot = ACCESSORY_SLOT_OVER
 
 /obj/item/clothing/accessory/jacket
-	name = "tan suit jacket"
-	desc = "Cozy suit jacket."
+	name = "бежевый пиджак"
+	desc = "Удобный пиджак бежевого цвета."
 	icon_state = "tan_jacket"
 	slot = ACCESSORY_SLOT_OVER
 
 /obj/item/clothing/accessory/jacket/charcoal
-	name = "charcoal suit jacket"
-	desc = "Strict suit jacket."
+	name = "темный пиджак"
+	desc = "Строгий пиджак угольного цвета."
 	icon_state = "charcoal_jacket"
 
 /obj/item/clothing/accessory/jacket/navy
-	name = "navy suit jacket"
-	desc = "Official suit jacket."
+	name = "синий пиджак"
+	desc = "Парадный пиджак синего цвета."
 	icon_state = "navy_jacket"
 
 /obj/item/clothing/accessory/jacket/burgundy
-	name = "burgundy suit jacket"
-	desc = "Expensive suit jacket."
+	name = "бордовый пиджак"
+	desc = "Дорогой пиджак бордового цвета."
 	icon_state = "burgundy_jacket"
 
 /obj/item/clothing/accessory/jacket/checkered
-	name = "checkered suit jacket"
-	desc = "Lucky suit jacket."
+	name = "клетчатый пиджак"
+	desc = "Везучий пиджак в клеточку."
 	icon_state = "checkered_jacket"
 
 /obj/item/clothing/accessory/chaps
-	name = "brown chaps"
-	desc = "A pair of loose, brown leather chaps."
+	name = "коричневые гамаши"
+	desc = "Свисающие кожаные гамаши коричневого цвета."
 	icon_state = "chaps"
 
 /obj/item/clothing/accessory/chaps/black
-	name = "black chaps"
-	desc = "A pair of loose, black leather chaps."
+	name = "черные гамаши"
+	desc = "Свисающие кожаные гамаши чёрного цвета."
 	icon_state = "chaps_black"
 
 /*
@@ -119,13 +119,13 @@
 
 /obj/item/clothing/accessory/poncho/roles/science
 	name = "научное пончо"
-	desc = "Простая и удобная накидка без рукавов. Это пончо белое с фиолетовыми краями - расцветка Научного Отдела NanoTrasen."
+	desc = "Простая и удобная накидка без рукавов. Это пончо белое с фиолетовыми краями - расцветка научного отдела NanoTrasen."
 	icon_state = "sciponcho"
 	item_state = "sciponcho"
 
 /obj/item/clothing/accessory/poncho/roles/cargo
 	name = "пончо отдела снабжения"
-	desc = "Простая и удобная накидка без рукавов. Это пончо серое с бежевым - расцветка Отдела Снабжения."
+	desc = "Простая и удобная накидка без рукавов. Это пончо серое с бежевым - расцветка отдела снабжения."
 	icon_state = "cargoponcho"
 	item_state = "cargoponcho"
 
@@ -147,37 +147,37 @@
 
 /obj/item/clothing/accessory/poncho/roles/cloak/cmo
 	name = "плащ Главврача"
-	desc = "Изысканная накидка, предназначенный для Главврача."
+	desc = "Изысканная накидка, предназначенная для Главврача."
 	icon_state = "cmocloak"
 	item_state = "cmocloak"
 
 /obj/item/clothing/accessory/poncho/roles/cloak/hop
 	name = "плащ Главы Персонала"
-	desc = "Изысканная накидка, предназначенный для Главы Персонала."
+	desc = "Изысканная накидка, предназначенная для Главы Персонала."
 	icon_state = "hopcloak"
 	item_state = "hopcloak"
 
 /obj/item/clothing/accessory/poncho/roles/cloak/rd
 	name = "плащ Директора Исследований"
-	desc = "Изысканная накидка, предназначенный для Директора Исследований."
+	desc = "Изысканная накидка, предназначенная для Директора Исследований."
 	icon_state = "rdcloak"
 	item_state = "rdcloak"
 
 /obj/item/clothing/accessory/poncho/roles/cloak/qm
 	name = "плащ Квартирмейстера"
-	desc = "Изысканная накидка, предназначенный для Квартирмейстера"
+	desc = "Изысканная накидка, предназначенная для Квартирмейстера"
 	icon_state = "qmcloak"
 	item_state = "qmcloak"
 
 /obj/item/clothing/accessory/poncho/roles/cloak/hos
-	name = "плащ Главы СБ"
-	desc = "Изысканная накидка, предназначенный для Главы Службы Безопасности."
+	name = "плащ Главы Службы Безопасности"
+	desc = "Изысканная накидка, предназначенная для Главы Службы Безопасности."
 	icon_state = "hoscloak"
 	item_state = "hoscloak"
 
 /obj/item/clothing/accessory/poncho/roles/cloak/captain
 	name = "плащ Директора Колонии"
-	desc = "Изысканная накидка, предназначенный для Директора Колонии."
+	desc = "Изысканная накидка, предназначенная для Директора Колонии."
 	icon_state = "capcloak"
 	item_state = "capcloak"
 
@@ -374,7 +374,7 @@
 
 /obj/item/clothing/accessory/sweater/redneck
 	name = "красная водолазка"
-	desc = "Удобная водолазка темно-красного цвета."
+	desc = "Удобная водолазка тёмно-красного цвета."
 	icon_state = "turtleneck_red"
 
 //***
@@ -392,12 +392,12 @@
 	icon_state = "asym_blue"
 
 /obj/item/clothing/accessory/asymmetric/purple
-	name = "фиолетовая ассиметричная куртка"
+	name = "фиолетовая асимметричная куртка"
 	desc = "Вызывающий авангард в мальвовых тонах."
 	icon_state = "asym_purple"
 
 /obj/item/clothing/accessory/asymmetric/green
-	name = "зеленая ассиметричная куртка"
+	name = "зеленая асимметричная куртка"
 	desc = "Вызывающий авангард в тонах морской волны."
 	icon_state = "asym_green"
 

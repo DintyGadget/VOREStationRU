@@ -40,9 +40,9 @@
 
 /obj/item/clothing/head/hardhat/ranger
 	var/hatcolor = "white"
-	name = "ranger helmet"
-	desc = "A special helmet designed for the Go Go ERT-Rangers, able to withstand a pressureless environment, filter gas and provide air. It has thermal vision and sometimes \
-	mesons to find breaches, as well as an integrated radio... well, only in the show, of course. This one has none of those features- it just has a flashlight instead."
+	name = "шлем рейнджера"
+	desc = "Особый шлем Гоу-Гоу ГЭР-Рейнджеров, предоставляющий защиту в вакууме и воздух, а также фильтрующий газы. \
+	Обладает инфракрасными визором и, иногда, мезонным сканером для поиска пробитий, а также радио... Ну, в сериале, конечно. У этого же шлема есть только фонарик."
 	icon = 'icons/obj/clothing/ranger.dmi'
 	icon_state = "ranger_helmet"
 	light_overlay = "helmet_light"
@@ -51,23 +51,28 @@
 /obj/item/clothing/head/hardhat/ranger/Initialize()
 	. = ..()
 	if(icon_state == "ranger_helmet")
-		name = "[hatcolor] ranger helmet"
 		icon_state = "[hatcolor]_ranger_helmet"
 
 /obj/item/clothing/head/hardhat/ranger/black
 	hatcolor = "black"
+	name = "шлем черного рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/pink
 	hatcolor = "pink"
+	name = "шлем розового рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/green
 	hatcolor = "green"
+	name = "шлем зеленого рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/cyan
 	hatcolor = "cyan"
+	name = "шлем бирюзового рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/orange
 	hatcolor = "orange"
+	name = "шлем оранжевого рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/yellow
 	hatcolor = "yellow"
+	name = "шлем желтого рейнджера"
