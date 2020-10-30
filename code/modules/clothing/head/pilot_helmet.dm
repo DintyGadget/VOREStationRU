@@ -156,7 +156,7 @@
 /obj/item/clothing/head/pilot/verb/hud_colors()
 	set name = "Изменить Цвет HUD"
 	set desc = "Изменить цвет HUD пилотского шлема."
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 
 	var/newcolor = input(usr,"Выберите цвет!","Цвет HUD") as null|color

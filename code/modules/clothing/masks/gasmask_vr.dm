@@ -11,8 +11,8 @@
 	flags_inv = HIDEEARS|HIDEEYES|HIDEFACE
 
 /obj/item/clothing/mask/gas/imperial
-	name = "imperial soldier facemask"
-	desc = "A close-fitting tactical mask that can be connected to an air supply."
+	name = "защитная маска имперского солдата"
+	desc = "Плотно прилегающая тактическая маска, которую возможно подсоединить к источнику воздуха."
 	icon_state = "ge_visor"
 	icon = 'icons/obj/clothing/masks_vr.dmi'
 	icon_override = 'icons/mob/mask_vr.dmi'

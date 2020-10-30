@@ -35,28 +35,28 @@
 	adjust_mask(user)
 
 /obj/item/clothing/mask/breath/verb/toggle()
-		set category = "Object"
+		set category = "Объект"
 		set name = "Отрегулировать Маску"
 		set src in usr
 
 		adjust_mask(usr)
 
 /obj/item/clothing/mask/breath/medical
-	desc = "A close-fitting sterile mask that can be connected to an air supply."
+	desc = "Плотно прилегающая стерильная маска, которую можно присоединить к системе подачи воздуха."
 	name = "medical mask"
 	icon_state = "medical"
 	item_state_slots = list(slot_r_hand_str = "medical", slot_l_hand_str = "medical")
 	permeability_coefficient = 0.01
 
 /obj/item/clothing/mask/breath/emergency
-	desc = "A close-fitting  mask that is used by the wallmounted emergency oxygen pump."
+	desc = "Плотно прилегающая маска, которую можно присоединить к настенной системе экстренной подачи воздуха."
 	name = "emergency mask"
 	icon_state = "breath"
 	item_state = "breath"
 	permeability_coefficient = 0.50
 
 /obj/item/clothing/mask/breath/anesthetic
-	desc = "A close-fitting sterile mask that is used by the anesthetic wallmounted pump."
+	desc = "Плотно прилегающая стерильная маска, используемая вместе с анестетиком."
 	name = "anesthetic mask"
 	icon_state = "medical"
 	item_state = "medical"

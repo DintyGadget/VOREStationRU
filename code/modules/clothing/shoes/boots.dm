@@ -146,14 +146,14 @@
 
 // Allows the wearer to climb cliffs, which could allow for shortcuts or sequence-breaking.
 /obj/item/clothing/shoes/boots/winter/climbing
-	name = "climbing winter boots"
-	desc = "A pair of winter boots, with metal bracing attached to assist in climbing rocky terrain."
+	name = "альпинистские зимние ботинки"
+	desc = "Пара зимних ботинок с металлическими подошвами, способствующими при скалолазаньи."
 	icon_state = "climbing_boots"
 	rock_climbing = TRUE
 
 /obj/item/clothing/shoes/boots/tactical
-	name = "tactical boots"
-	desc = "Tan boots with extra padding and armor."
+	name = "тактические ботинки"
+	desc = "Бежевые ботинки с бронированным подслоем."
 	icon_state = "jungle"
 	armor = list(melee = 40, bullet = 30, laser = 40,energy = 25, bomb = 50, bio = 0, rad = 0)
 	siemens_coefficient = 0.7
@@ -173,16 +173,16 @@
 	siemens_coefficient = 0.7
 
 /obj/item/clothing/shoes/boots/swat
-	name = "\improper SWAT shoes"
-	desc = "When you want to turn up the heat."
+	name = "ботинки СОБР"
+	desc = "Прибавим жару."
 	icon_state = "swat"
 	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
 	item_flags = NOSLIP
 	siemens_coefficient = 0.6
 
 /obj/item/clothing/shoes/boots/combat //Basically SWAT shoes combined with galoshes.
-	name = "combat boots"
-	desc = "When you REALLY want to turn up the heat"
+	name = "боевые ботинки"
+	desc = "Прибавим МНОГО жару."
 	icon_state = "swat"
 	force = 5
 	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
@@ -196,8 +196,8 @@
 
 //Stolen from CM, refurbished to be less terrible.
 /obj/item/clothing/shoes/boots/marine
-	name = "combat boots"
-	desc = "Standard issue combat boots for combat scenarios or combat situations. All combat, all the time.  It can hold a Strategical knife."
+	name = "боевые ботинки"
+	desc = "Стандартизированные военные ботинки для боевых действий. Всегда наготове. На них поместится боевой нож."
 	icon_state = "jackboots"
 	armor = list(melee = 80, bullet = 60, laser = 50,energy = 25, bomb = 50, bio = 10, rad = 0)
 	siemens_coefficient = 0.6

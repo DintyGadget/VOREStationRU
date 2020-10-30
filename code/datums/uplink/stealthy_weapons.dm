@@ -10,7 +10,7 @@
 	path = /obj/item/weapon/soap/syndie
 
 /datum/uplink_item/item/stealthy_weapons/concealed_cane
-	name = "Concealed Cane Sword"
+	name = "Трость со скрытым клинком"
 	item_cost = 10
 	path = /obj/item/weapon/cane/concealed
 

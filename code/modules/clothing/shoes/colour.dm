@@ -46,14 +46,14 @@
 	icon_state = "rain_bow"
 
 /obj/item/clothing/shoes/flats
-	name = "black flats"
-	desc = "Sleek black flats."
+	name = "черные балетки"
+	desc = "Стильные черные балетки."
 	icon_state = "flatsblack"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 
 /obj/item/clothing/shoes/flats/white
-	name = "white flats"
-	desc = "Shiny white flats."
+	name = "белые балетки"
+	desc = "Яркие белые балетки."
 	icon_state = "flatswhite"
 	addblends = "flatswhite_a"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
@@ -63,32 +63,32 @@
 	desc = "Стильные балетки."
 
 /obj/item/clothing/shoes/flats/red
-	name = "red flats"
-	desc = "Ruby red flats."
+	name = "красные балетки"
+	desc = "Балетки рубинового красного цвета."
 	icon_state = "flatsred"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 
 /obj/item/clothing/shoes/flats/purple
-	name = "purple flats"
-	desc = "Royal purple flats."
+	name = "фиолетовые балетки"
+	desc = "Балетки королевского фиолетового цвета."
 	icon_state = "flatspurple"
 	item_state_slots = list(slot_r_hand_str = "purple", slot_l_hand_str = "purple")
 
 /obj/item/clothing/shoes/flats/blue
-	name = "blue flats"
-	desc = "Sleek blue flats."
+	name = "синие балетки"
+	desc = "Яркие синие балетки."
 	icon_state = "flatsblue"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 
 /obj/item/clothing/shoes/flats/brown
-	name = "brown flats"
-	desc = "Sleek brown flats."
+	name = "коричневые балетки"
+	desc = "Яркие балетки коричневого цвета."
 	icon_state = "flatsbrown"
 	item_state_slots = list(slot_r_hand_str = "brown", slot_l_hand_str = "brown")
 
 /obj/item/clothing/shoes/flats/orange
-	name = "orange flats"
-	desc = "Radiant orange flats."
+	name = "оранжевые балетки"
+	desc = "Блестящие балетки оранжевого цвета."
 	icon_state = "flatsorange"
 	item_state_slots = list(slot_r_hand_str = "orange", slot_l_hand_str = "orange")
 

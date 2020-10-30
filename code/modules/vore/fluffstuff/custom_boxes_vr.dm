@@ -221,8 +221,8 @@
 Swimsuits, for general use, to avoid arriving to work with your swimsuit.
 */
 /obj/item/weapon/storage/box/fluff/swimsuit
-	name = "Black Swimsuit capsule"
-	desc = "A little capsule where a swimsuit is usually stored."
+	name = "капсула с черным купальником"
+	desc = "Небольшая капсула для хранения купальника."
 	storage_slots = 1
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "capsule"
@@ -233,47 +233,47 @@ Swimsuits, for general use, to avoid arriving to work with your swimsuit.
 	has_items = list(/obj/item/clothing/under/swimsuit/black)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/blue
-	name = "Blue Swimsuit capsule"
+	name = "капсула с синим купальником"
 	has_items = list(/obj/item/clothing/under/swimsuit/blue)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/purple
-	name = "Purple Swimsuit capsule"
+	name = "капсула с фиолетовым купальником"
 	has_items = list(/obj/item/clothing/under/swimsuit/purple)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/green
-	name = "Green Swimsuit capsule"
+	name = "капсула с зеленым купальником"
 	has_items = list(/obj/item/clothing/under/swimsuit/green)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/red
-	name = "Red Swimsuit capsule"
+	name = "капсула с красным купальником"
 	has_items = list(/obj/item/clothing/under/swimsuit/red)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/white
-	name = "White Swimsuit capsule"
+	name = "капсула с белым купальником"
 	has_items = list(/obj/item/clothing/under/swimsuit/white)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/blue
-	name = "Striped Swimsuit capsule"
+	name = "капсула с полосатым купальником"
 	has_items = list(/obj/item/clothing/under/swimsuit/striped)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/earth
-	name = "Earthen Swimsuit capsule"
+	name = "капсула с земляным купальником"
 	has_items = list(/obj/item/clothing/under/swimsuit/earth)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/engineering
-	name = "Engineering Swimsuit capsule"
+	name = "капсула с купальником инженера"
 	has_items = list(/obj/item/clothing/under/swimsuit/fluff/engineering)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/science
-	name = "Science Swimsuit capsule"
+	name = "капсула с купальником ученого"
 	has_items = list(/obj/item/clothing/under/swimsuit/fluff/science)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/security
-	name = "Security Swimsuit capsule"
+	name = "капсула с купальником службы безопасности"
 	has_items = list(/obj/item/clothing/under/swimsuit/fluff/security)
 
 /obj/item/weapon/storage/box/fluff/swimsuit/medical
-	name = "Medical Swimsuit capsule"
+	name = "капсула с купальником врача"
 	has_items = list(/obj/item/clothing/under/swimsuit/fluff/medical)
 
 //Monkey boxes for the new primals we have

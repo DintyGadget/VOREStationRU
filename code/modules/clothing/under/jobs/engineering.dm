@@ -27,7 +27,7 @@
 	rolled_sleeves = -1
 
 /obj/item/clothing/under/rank/roboticist
-	desc = "Прилегающий черный кобинезон с упрочнёнными краями; идеально подходит для производственных работ."
-	name = "roboticist's jumpsuit"
+	desc = "Обтягивающий черный кобинезон с упрочнёнными краями; идеально подходит для производственных работ."
+	name = "комбинезон робототехника"
 	icon_state = "robotics"
 	rolled_sleeves = 0

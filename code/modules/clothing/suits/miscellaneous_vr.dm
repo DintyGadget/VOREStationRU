@@ -1,5 +1,5 @@
 /obj/item/clothing/suit/customs
-	desc = "A standard SolCom Customs formal jacket."
+	desc = "Формальный пиджак Таможни Сол."
 
 //HERE BE TAUR RELATED CLOTHES
 
@@ -29,7 +29,7 @@
 			return 0
 
 /obj/item/clothing/suit/barding
-	description_info = "You need to be a horsy to wear that."
+	description_info = "Чтобы это надеть, необходимо быть лошадью."
 	icon = 'icons/mob/taursuits_horse_vr.dmi'
 	item_state_slots = list(slot_r_hand_str = "capjacket", slot_l_hand_str = "capjacket")
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS
@@ -41,23 +41,23 @@
 		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/horse))
 			return ..()
 		else
-			to_chat(H, "<span class='warning'>You need to have a horse-taur half to wear this.</span>")
+			to_chat(H, "<span class='warning'>Чтобы это надеть, Вам нужно быть наполовину лошадью-тавром.</span>")
 			return 0
 
 //Bardings are medieval suits of armor.
 /obj/item/clothing/suit/barding/agatha
-	name = "Agatha barding"
-	desc = "Knightly armor for a mount who doesn't need any rider. This one is marked to the house of Agatha."
+	name = "бард Агата"
+	desc = "Рыцарские доспехи для скакуна, который не нуждается в наезднике. Эти доспехи с эмблемой дома Агата."
 	icon_state = "Agatha_barding"
 
 /obj/item/clothing/suit/barding/alt_agatha
-	name = "Agatha barding"
-	desc = "Knightly armor for a mount who doesn't need any rider. This one is marked to the house of Agatha."
+	name = "бард Агата"
+	desc = "Рыцарские доспехи для скакуна, который не нуждается в наезднике. Эти доспехи с эмблемой дома Агата."
 	icon_state = "Agatha_barding_alt"
 
 /obj/item/clothing/suit/barding/mason
-	name = "Mason barding"
-	desc = "Knightly armor for a mount who doesn't need any rider. This one is marked to the house of Mason."
+	name = "бард Масон"
+	desc = "Рыцарские доспехи для скакуна, который не нуждается в наезднике. Эти доспехи с эмблемой дома Масон."
 	icon_state = "Mason_barding"
 
 /obj/item/clothing/suit/taur_dress
@@ -72,16 +72,16 @@
 	flags_inv = HIDESHOES
 
 /obj/item/clothing/suit/storage/det_trench/alt
-	name = "sleek modern coat"
-	desc = "A sleek overcoat made of neo-laminated fabric. Has a reasonably sized pocket on the inside."
+	name = "элегантное пальто"
+	desc = "Глянцевое пальто, изготовленное из неоламинированной ткани. На внутренней стороне располагается карман."
 	icon = 'icons/obj/clothing/suits_vr.dmi'
 	icon_override = 'icons/mob/suit_vr.dmi'
 	icon_state = "cyberpunksleek"
 	item_state = "cyberpunksleek"
 
 /obj/item/clothing/suit/storage/det_trench/alt2
-	name = "sleek modern coat (long)"
-	desc = "A sleek long overcoat made of neo-laminated fabric. Has a reasonably sized pocket on the inside."
+	name = "длинное элегантное пальто"
+	desc = "Длинное глянцевое пальто, изготовленное из неоламинированной ткани. На внутренней стороне располагается карман."
 	icon = 'icons/obj/clothing/suits_vr.dmi'
 	icon_override = 'icons/mob/suit_vr.dmi'
 	icon_state = "cyberpunksleek_long"

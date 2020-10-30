@@ -33,7 +33,7 @@
 	var/open = 0	//0 is closed, 1 is open, -1 means it won't be able to toggle
 	verb/toggle()
 		set name = "Пуговицы Верхней Одежды"
-		set category = "Object"
+		set category = "Объект"
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())
 			return 0
@@ -59,7 +59,7 @@
 	var/open = 0	//0 is closed, 1 is open, -1 means it won't be able to toggle
 	verb/toggle()
 		set name = "Пуговица Верхней Одежды"
-		set category = "Object"
+		set category = "Объект"
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())
 			return 0
@@ -92,7 +92,7 @@
 	var/icon_nobadge
 	verb/toggle()
 		set name ="Отрегулировать Бейдж"
-		set category = "Object"
+		set category = "Объект"
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())
 			return 0

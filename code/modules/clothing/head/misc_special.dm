@@ -37,7 +37,7 @@
 
 
 /obj/item/clothing/head/welding/verb/toggle()
-	set category = "Object"
+	set category = "Объект"
 	set name = "Отрегулировать Сварочную Маску"
 	set src in usr
 
@@ -107,8 +107,8 @@
  * Cakehat
  */
 /obj/item/clothing/head/cakehat
-	name = "cake-hat"
-	desc = "It's tasty looking!"
+	name = "шляпа из торта"
+	desc = "На вид вкусно!"
 	icon_state = "cake0"
 	var/onfire = 0
 	body_parts_covered = HEAD
@@ -162,8 +162,8 @@
  * Pumpkin head
  */
 /obj/item/clothing/head/pumpkinhead
-	name = "carved pumpkin"
-	desc = "A jack o' lantern! Believed to ward off evil spirits."
+	name = "вырезанная тыква"
+	desc = "Фонарь Джека! Отпугивает злых духов."
 	icon_state = "hardhat0_pumpkin"//Could stand to be renamed
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
@@ -193,8 +193,8 @@
 		ears.Blend(earbit, ICON_OVERLAY)
 
 /obj/item/clothing/head/richard
-	name = "chicken mask"
-	desc = "You can hear the distant sounds of rhythmic electronica."
+	name = "куриная маска"
+	desc = "Вам слышатся звуки евробита."
 	icon_state = "richard"
 	item_state_slots = list(slot_r_hand_str = "chickenhead", slot_l_hand_str = "chickenhead")
 	body_parts_covered = HEAD|FACE

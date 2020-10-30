@@ -170,14 +170,14 @@
 //VOREStation edit start
 /obj/item/clothing/proc/change_color()
 	set name = "Изменить Цвет"
-	set category = "Object"
+	set category = "Объект"
 	set desc = "Изменить цвет одежды."
 	set src in usr
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
 		return
 
-	var/new_color = input(usr, "Выберите новый цвет", "Color", color) as color|null
+	var/new_color = input(usr, "Выберите новый цвет", "Цвет", color) as color|null
 
 	if(new_color && (new_color != color))
 		color = new_color
@@ -676,7 +676,7 @@
 
 /obj/item/clothing/shoes/verb/toggle_layer()
 	set name = "Сменить Слой Обуви"
-	set category = "Object"
+	set category = "Объект"
 
 	if(shoes_under_pants == -1)
 		to_chat(usr, "<span class='notice'>[src] нельзя носить поверх Вашего костюма!</span>")
@@ -974,14 +974,14 @@
 
 /obj/item/clothing/under/verb/toggle()
 	set name = "Переключить Датчики"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	set_sensors(usr)
 	..()
 
 /obj/item/clothing/under/verb/rollsuit()
 	set name = "Спустить Рукава"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
@@ -1009,22 +1009,22 @@
 		if(icon_override == rolled_down_icon)
 			icon_override = initial(icon_override)
 		item_state_slots[slot_w_uniform_str] = "[worn_state]"
-		to_chat(usr, "<span class='notice'>Вы закатали рукава [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы закатили рукава [src].</span>")
 	update_clothing_icon()
 
 /obj/item/clothing/under/verb/rollsleeves()
 	set name = "Закатать Рукава"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
 
 	update_rollsleeves_status()
 	if(rolled_sleeves == -1)
-		to_chat(usr, "<span class='notice'>Вы не можете закатать рукава [src]!</span>")
+		to_chat(usr, "<span class='notice'>Вы не можете закатить рукава [src]!</span>")
 		return
 	if(rolled_down == 1)
-		to_chat(usr, "<span class='notice'>Нужно сначала закатать рукава [src]!</span>")
+		to_chat(usr, "<span class='notice'>Нужно сначала закатить рукава [src]!</span>")
 		return
 
 	rolled_sleeves = !rolled_sleeves
@@ -1035,7 +1035,7 @@
 			item_state_slots[slot_w_uniform_str] = "[worn_state]"
 		else
 			item_state_slots[slot_w_uniform_str] = "[worn_state]_r"
-		to_chat(usr, "<span class='notice'>Вы закатали рукава [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы закатили рукава [src].</span>")
 	else
 		body_parts_covered = initial(body_parts_covered)
 		if(icon_override == rolled_down_sleeves_icon)

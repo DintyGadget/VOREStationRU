@@ -621,8 +621,8 @@
 	new /obj/item/clothing/accessory/collar/khcrystal(src)
 
 /obj/item/weapon/cane/fluff
-	name = "cane"
-	desc = "A cane used by a true gentlemen. Or a clown."
+	name = "трость"
+	desc = "Трость, полагающаяся настоящему джентльмену. Или же клоуну."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "browncane"
 	item_icons = list (slot_r_hand_str = 'icons/vore/custom_items_vr.dmi', slot_l_hand_str = 'icons/vore/custom_items_vr.dmi')

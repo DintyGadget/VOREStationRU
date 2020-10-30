@@ -11,8 +11,8 @@
  * Lasertag
  */
 /obj/item/clothing/suit/bluetag
-	name = "blue laser tag armour"
-	desc = "Blue Pride, Station Wide."
+	name = "синяя броня для лазерных салок"
+	desc = "Синие, вперёд!"
 	icon_state = "bluetag"
 	item_state_slots = list(slot_r_hand_str = "tdblue", slot_l_hand_str = "tdblue")
 	blood_overlay_type = "armor"
@@ -21,8 +21,8 @@
 	siemens_coefficient = 3.0
 
 /obj/item/clothing/suit/redtag
-	name = "red laser tag armour"
-	desc = "Reputed to go faster."
+	name = "красная броня для лазерных салок"
+	desc = "По слухам, делает носителя быстрее."
 	icon_state = "redtag"
 	item_state_slots = list(slot_r_hand_str = "tdred", slot_l_hand_str = "tdred")
 	blood_overlay_type = "armor"
@@ -34,8 +34,8 @@
  * Costume
  */
 /obj/item/clothing/suit/pirate
-	name = "pirate coat"
-	desc = "Yarr."
+	name = "пиратский мундир"
+	desc = "Йо-хо-хо."
 	icon_state = "pirate"
 	item_state_slots = list(slot_r_hand_str = "greatcoat", slot_l_hand_str = "greatcoat")
 	body_parts_covered = UPPER_TORSO|ARMS
@@ -53,45 +53,45 @@
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/hgpirate
-	name = "pirate captain coat"
-	desc = "Yarr."
+	name = "мундир капитана пиратов"
+	desc = "Йо-хо-хо."
 	icon_state = "hgpirate"
 	item_state_slots = list(slot_r_hand_str = "greatcoat", slot_l_hand_str = "greatcoat")
 	flags_inv = HIDEJUMPSUIT
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 
 /obj/item/clothing/suit/cyborg_suit
-	name = "cyborg suit"
-	desc = "Suit for a cyborg costume."
+	name = "костюм киборга"
+	desc = "Верхняя одежда для костюма киборга."
 	icon_state = "death"
 	fire_resist = T0C+5200
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 
 /obj/item/clothing/suit/greatcoat
-	name = "great coat"
+	name = "шинель"
 	desc = "Тяжелая шинель."
 	icon_state = "gentlecoat"
 	item_state_slots = list(slot_r_hand_str = "greatcoat", slot_l_hand_str = "greatcoat")
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/johnny_coat
-	name = "johnny~~ coat"
-	desc = "Johnny~~"
+	name = "пальто джонни~~"
+	desc = "Джонни~~"
 	icon_state = "gentlecoat"
 	item_state_slots = list(slot_r_hand_str = "johnny_coat", slot_l_hand_str = "johnny_coat")
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/justice
-	name = "justice suit"
-	desc = "This pretty much looks ridiculous."
+	name = "костюм справедливости"
+	desc = "Смехота, если честно."
 	icon_state = "gentle_coat"
 	item_state_slots = list(slot_r_hand_str = "greatcoat", slot_l_hand_str = "greatcoat")
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|HANDS|LEGS|FEET
 
 /obj/item/clothing/suit/judgerobe
-	name = "judge's robe"
-	desc = "This robe commands authority."
+	name = "облачение судьи"
+	desc = "От этой робы отдаёт авторитетом."
 	icon_state = "judge"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	allowed = list(/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/spacecash)
@@ -104,41 +104,41 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 /obj/item/clothing/suit/syndicatefake
-	name = "red space suit replica"
+	name = "муляжный красный скафандр"
 	icon = 'icons/obj/clothing/spacesuits.dmi'
 	icon_state = "syndicate"
-	desc = "A plastic replica of the syndicate space suit, you'll look just like a real murderous syndicate agent in this! This is a toy, it is not made for use in space!"
+	desc = "Пластиковый муляж синдикатного скафандра, в котором каждый похож на настоящего агента! Это лишь игрушка и не предназначается для использования в космосе."
 	w_class = ITEMSIZE_NORMAL
 	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen,/obj/item/toy)
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|HANDS|LEGS|FEET
 
 /obj/item/clothing/suit/hastur
-	name = "Hastur's Robes"
-	desc = "Robes not meant to be worn by man"
+	name = "облачение Хастура"
+	desc = "Эта роба предназначена не для человека."
 	icon_state = "hastur"
 	item_state_slots = list(slot_r_hand_str = "rad", slot_l_hand_str = "rad")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 
 /obj/item/clothing/suit/imperium_monk
-	name = "Imperium monk"
-	desc = "Have YOU killed a xenos today?"
+	name = "имперское облачение"
+	desc = "А ТЫ сегодня убивал ксеносов?"
 	icon_state = "imperium_monk"
 	body_parts_covered = HEAD|UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 
 /obj/item/clothing/suit/chickensuit
-	name = "Chicken Suit"
-	desc = "A suit made long ago by the ancient empire KFC."
+	name = "костюм курицы"
+	desc = "Костюм, сотканный в древней империи KFC."
 	icon_state = "chickensuit"
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS|FEET
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 	siemens_coefficient = 2.0
 
 /obj/item/clothing/suit/monkeysuit
-	name = "Monkey Suit"
-	desc = "A suit that looks like a primate"
+	name = "костюм обезьяны"
+	desc = "Костюм, сделанный по образу примата."
 	icon_state = "monkeysuit"
 	item_state_slots = list(slot_r_hand_str = "brown_jacket", slot_l_hand_str = "brown_jacket")
 	body_parts_covered = UPPER_TORSO|ARMS|LOWER_TORSO|LEGS|FEET|HANDS
@@ -146,63 +146,63 @@
 	siemens_coefficient = 2.0
 
 /obj/item/clothing/suit/holidaypriest
-	name = "Holiday Priest"
-	desc = "This is a nice holiday my son."
+	name = "выходной костюм священника"
+	desc = "Сегодня отличный выходной день, сын мой."
 	icon_state = "holidaypriest"
 	item_state_slots = list(slot_r_hand_str = "labcoat", slot_l_hand_str = "labcoat")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	flags_inv = HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 
 /obj/item/clothing/suit/cardborg
-	name = "cardborg suit"
-	desc = "An ordinary cardboard box with holes cut in the sides."
+	name = "картонный костюм борга"
+	desc = "Обыкновенная картонная коробка с дырками по сторонам."
 	icon_state = "cardborg"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 	flags_inv = HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 
 /obj/item/clothing/suit/skeleton
-	name = "skeleton costume"
-	desc = "A body-tight costume with the human skeleton lined out on it."
+	name = "костюм скелета"
+	desc = "Обтягивающий костюм с нарисованным на нём человеческим скелетом."
 	icon_state = "skelecost"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|FEET|HANDS|EYES|HEAD|FACE
 	flags_inv = HIDEJUMPSUIT|HIDESHOES|HIDEGLOVES|HIDETIE|HIDEHOLSTER
 	item_state_slots = list(slot_r_hand_str = "judge", slot_l_hand_str = "judge")
 
 /obj/item/clothing/suit/engicost
-	name = "sexy engineering voidsuit costume"
-	desc = "It's supposed to look like an engineering voidsuit... It doesn't look like it could protect from much radiation."
+	name = "сексапильный инженерный скафандр"
+	desc = "По идее это инженерный скафандр.... однако от радиации вряд ли защитит."
 	icon_state = "engicost"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|FEET
 	flags_inv = HIDEJUMPSUIT|HIDESHOES|HIDETIE|HIDEHOLSTER
 	item_state_slots = list(slot_r_hand_str = "eng_voidsuit", slot_l_hand_str = "eng_voidsuit")
 
 /obj/item/clothing/suit/maxman
-	name = "doctor maxman costume"
-	desc = "A costume made to look like Dr. Maxman, the famous male-enhancement salesman. Complete with red do-rag and sleeveless labcoat."
+	name = "костюм доктора Максмена"
+	desc = "Костюм по подобию внешнего вида Доктора Максмена, известного продавца средств для мужчин. В комплекте с красной повязкой и халатом без рукавов!"
 	icon_state = "maxman"
 	body_parts_covered = LOWER_TORSO|FEET|LEGS|HEAD
 	flags_inv = HIDEJUMPSUIT|HIDESHOES|HIDETIE|HIDEHOLSTER
 	item_state_slots = list(slot_r_hand_str = "leather_jacket", slot_l_hand_str = "leather_jacket")
 
 /obj/item/clothing/suit/iasexy
-	name = "sexy internal affairs suit"
-	desc = "Now where's your pen?~"
+	name = "сексапильный костюм агента внутренних дел"
+	desc = "Ну и где твоя ручка?~"
 	icon_state = "iacost"
 	body_parts_covered = UPPER_TORSO|FEET|LOWER_TORSO|EYES
 	flags_inv = HIDEJUMPSUIT|HIDESHOES|HIDETIE|HIDEHOLSTER
 	item_state_slots = list(slot_r_hand_str = "suit_black", slot_l_hand_str = "suit_black")
 
 /obj/item/clothing/suit/sexyminer
-	name = "sexy miner costume"
-	desc = "For when you need to get your rocks off."
+	name = "сексапильный костюм шахтера"
+	desc = "Когда нужно позаботиться о своих камушках."
 	icon_state = "sexyminer"
 	body_parts_covered = FEET|LOWER_TORSO|HEAD
 	flags_inv = HIDEJUMPSUIT|HIDESHOES|HIDETIE|HIDEHOLSTER
 	item_state_slots = list(slot_r_hand_str = "miner", slot_l_hand_str = "miner")
 
 /obj/item/clothing/suit/sumo
-	name = "inflatable sumo wrestler costume"
-	desc = "An inflated sumo wrestler costume. It's quite hot."
+	name = "надуваемый костюм борца сумо"
+	desc = "Надутый костюм борца сумо. В нём жарковато"
 	icon_state = "sumo"
 	body_parts_covered = FEET|LOWER_TORSO|UPPER_TORSO|LEGS|ARMS
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
@@ -210,16 +210,16 @@
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
 /obj/item/clothing/suit/hackercost
-	name = "classic hacker costume"
-	desc = "You would feel insanely cool wearing this."
+	name = "костюм классического хакера"
+	desc = "В нём Вы чувствуете себя просто обалдеть как круто."
 	icon_state = "hackercost"
 	body_parts_covered = FEET|LOWER_TORSO|UPPER_TORSO|LEGS|ARMS|EYES
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 	item_state_slots = list(slot_r_hand_str = "leather_coat", slot_l_hand_str = "leather_coat")
 
 /obj/item/clothing/suit/lumber
-	name = "sexy lumberjack costume"
-	desc = "Smells of dusky pine. Includes chest hair and beard."
+	name = "сексапильный костюм лесоруба"
+	desc = "Пахнет утренней хвоей. В комплекте волосы на груди и борода."
 	icon_state = "sexylumber"
 	body_parts_covered = FEET|LOWER_TORSO|FEET
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
@@ -229,8 +229,8 @@
  * Misc
  */
 /obj/item/clothing/suit/straight_jacket
-	name = "straight jacket"
-	desc = "A suit that completely restrains the wearer."
+	name = "смирительная рубашка"
+	desc = "Костюм, полностью ограничивающий носителя в передвижении."
 	icon_state = "straight_jacket"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER
@@ -241,7 +241,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(src == H.wear_suit)
-			to_chat(H, "<span class='notice'>You need help taking this off!</span>")
+			to_chat(H, "<span class='notice'>Вам необходима помощь, чтобы его снять!</span>")
 			return
 	..()
 
@@ -255,8 +255,8 @@
 			H.drop_from_inventory(H.handcuffed)
 
 /obj/item/clothing/suit/ianshirt
-	name = "worn shirt"
-	desc = "A worn out, curiously comfortable t-shirt with a picture of Ian. You wouldn't go so far as to say it feels like being hugged when you wear it but it's pretty close. Good for sleeping in."
+	name = "поношенная футболка"
+	desc = "Поношенная и весьма удобная футболка с изображением Иана. По ощущениям она очень похожа на объятия. В ней приятно спать."
 	icon_state = "ianshirt"
 	item_state_slots = list(slot_r_hand_str = "labcoat", slot_l_hand_str = "labcoat") //placeholder -S2-
 	body_parts_covered = UPPER_TORSO|ARMS
@@ -292,24 +292,24 @@ obj/item/clothing/suit/kamishimo
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/browncoat
-	name = "brown leather coat"
-	desc = "A long, brown leather coat."
+	name = "коричневое кожаное пальто"
+	desc = "Длинное кожаное пальто коричневого цвета."
 	icon_state = "browncoat"
 	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
 	item_state_slots = list(slot_r_hand_str = "brown_jacket", slot_l_hand_str = "brown_jacket")
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/neocoat
-	name = "black coat"
-	desc = "A flowing, black coat."
+	name = "черное пальто"
+	desc = "Элегантное черное пальто."
 	icon_state = "neocoat"
 	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
 	item_state_slots = list(slot_r_hand_str = "leather_jacket", slot_l_hand_str = "leather_jacket")
 	flags_inv = HIDEHOLSTER
 
 /obj/item/clothing/suit/customs
-	name = "customs jacket"
-	desc = "A standard SolGov Customs formal jacket."
+	name = "таможенный пиджак"
+	desc = "Формальный пиджак Таможни Сол."
 	icon_state = "customs_jacket"
 	item_state_slots = list(slot_r_hand_str = "suit_blue", slot_l_hand_str = "suit_blue")
 	flags_inv = HIDEHOLSTER
@@ -362,22 +362,22 @@ obj/item/clothing/suit/kamishimo
  * stripper
  */
 /obj/item/clothing/suit/stripper/stripper_pink
-	name = "pink skimpy dress"
-	desc = "A rather skimpy pink dress."
+	name = "откровенное розовое платье"
+	desc = "Весьма откровенное платье розового цвета."
 	icon_state = "stripper_p_over"
 	item_state_slots = list(slot_r_hand_str = "pink_labcoat", slot_l_hand_str = "pink_labcoat")
 	siemens_coefficient = 1
 
 /obj/item/clothing/suit/stripper/stripper_green
-	name = "green skimpy dress"
-	desc = "A rather skimpy green dress."
+	name = "откровенное зеленое платье"
+	desc = "Весьма откровенное платье зеленого цвета."
 	icon_state = "stripper_g_over"
 	item_state_slots = list(slot_r_hand_str = "green_labcoat", slot_l_hand_str = "green_labcoat")
 	siemens_coefficient = 1
 
 /obj/item/clothing/suit/xenos
-	name = "xenos suit"
-	desc = "A suit made out of chitinous alien hide."
+	name = "костюм ксеноморфа"
+	desc = "Костюм, изготовленный из хитиновой шкуры инопланетного происхождения."
 	icon_state = "xenos"
 	item_state_slots = list(slot_r_hand_str = "black_suit", slot_l_hand_str = "black_suit")
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
@@ -772,7 +772,7 @@ obj/item/clothing/suit/kamishimo
 
 /obj/item/clothing/suit/storage/flannel/verb/roll_sleeves()
 	set name = "Закатить Рукава"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living))
 		return
@@ -791,7 +791,7 @@ obj/item/clothing/suit/kamishimo
 
 /obj/item/clothing/suit/storage/flannel/verb/tuck()
 	set name = "Заправить Рубашку"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)||usr.stat)
 		return
@@ -806,7 +806,7 @@ obj/item/clothing/suit/kamishimo
 
 /obj/item/clothing/suit/storage/flannel/verb/button()
 	set name = "Пуговицы Рубашки"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)||usr.stat)
 		return
@@ -894,10 +894,10 @@ obj/item/clothing/suit/kamishimo
 	icon_state = "snowsuit_science"
 
 /obj/item/clothing/suit/caution
-	name = "wet floor sign"
-	desc = "Caution! Wet Floor!"
-	description_fluff = "Used by the janitor to passive-aggressively point at when you eventually slip on one of their mopped floors."
-	description_info = "Alt-click, or click in-hand to toggle the caution lights. It looks like you can wear it in your suit slot."
+	name = "табличка \"мокрый пол\""
+	desc = "ОСТОРОЖНО! Мокрый пол!"
+	description_fluff = "Уборщики имеют тенденцию пассивно-агрессивно указывать на неё, когда Вы поскальзываетесь на мокром полу."
+	description_info = "Альт+клик, либо нажатие в руке, активирует фонарики. Похоже, табличку можно носить поверх одежды."
 	icon_state = "caution"
 	drop_sound = 'sound/items/drop/shoes.ogg'
 	force = 1
@@ -920,10 +920,10 @@ obj/item/clothing/suit/kamishimo
 	else if(src.icon_state == "caution")
 		src.icon_state = "caution_blinking"
 		src.item_state = "caution_blinking"
-		usr.show_message("You turn the wet floor sign on.")
+		usr.show_message("Вы включаете фонарики таблички.")
 		playsound(src.loc, 'sound/machines/button.ogg', 30, 1)
 	else
 		src.icon_state = "caution"
 		src.item_state = "caution"
-		usr.show_message("You turn the wet floor sign off.")
+		usr.show_message("Вы выключаете фонарики таблички.")
 	update_clothing_icon()

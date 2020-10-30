@@ -1179,22 +1179,22 @@ Departamental Swimsuits, for general use
 
 //TOS
 /obj/item/clothing/under/rank/trek/command
-	name = "Command Uniform"
-	desc = "The uniform worn by command officers in the mid 2260s."
+	name = "униформа управляющего"
+	desc = "Униформа операционных офицеров в середине 2260-ых."
 	icon_state = "trek_command"
 	item_state = "trek_command"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // Considering only staff heads get to pick it
 
 /obj/item/clothing/under/rank/trek/engsec
-	name = "Operations Uniform"
-	desc = "The uniform worn by operations officers of the mid 2260s. You feel strangely vulnerable just seeing this..."
+	name = "униформа оператора"
+	desc = "Униформа операционных офицеров в середине 2260-ых. На удивление внушающий вид..."
 	icon_state = "trek_engsec"
 	item_state = "trek_engsec"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot.
 
 /obj/item/clothing/under/rank/trek/medsci
-	name = "MedSci Uniform"
-	desc = "The uniform worn by medsci officers in the mid 2260s."
+	name = "научно-медицинская униформа"
+	desc = "Униформа научно-медицинских офицеров в середине 2260-ых."
 	icon_state = "trek_medsci"
 	item_state = "trek_medsci"
 	permeability_coefficient = 0.50
@@ -1202,49 +1202,49 @@ Departamental Swimsuits, for general use
 
 //TNG
 /obj/item/clothing/under/rank/trek/command/next
-	desc = "The uniform worn by command officers. This one's from the mid 2360s."
+	desc = "Униформа управляющих офицеров в середине 2360-ых."
 	icon_state = "trek_next_command"
 	item_state = "trek_next_command"
 
 /obj/item/clothing/under/rank/trek/engsec/next
-	desc = "The uniform worn by operation officers. This one's from the mid 2360s."
+	desc = "Униформа операционных офицеров в середине 2360-ых."
 	icon_state = "trek_next_engsec"
 	item_state = "trek_next_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/next
-	desc = "The uniform worn by medsci officers. This one's from the mid 2360s."
+	desc = "Униформа научно-медицинских офицеров в середине 2360-ых."
 	icon_state = "trek_next_medsci"
 	item_state = "trek_next_medsci"
 
 //ENT
 /obj/item/clothing/under/rank/trek/command/ent
-	desc = "The uniform worn by command officers of the 2140s."
+	desc = "Униформа управляющих офицеров в 2140-ых."
 	icon_state = "trek_ent_command"
 	item_state = "trek_ent_command"
 
 /obj/item/clothing/under/rank/trek/engsec/ent
-	desc = "The uniform worn by operations officers of the 2140s."
+	desc = "Униформа операционных офицеров в 2140-ых."
 	icon_state = "trek_ent_engsec"
 	item_state = "trek_ent_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/ent
-	desc = "The uniform worn by medsci officers of the 2140s."
+	desc = "Униформа научно-медицинских офицеров в 2140-ых."
 	icon_state = "trek_ent_medsci"
 	item_state = "trek_ent_medsci"
 
 //VOY
 /obj/item/clothing/under/rank/trek/command/voy
-	desc = "The uniform worn by command officers of the 2370s."
+	desc = "Униформа управляющих офицеров в 2370-ых."
 	icon_state = "trek_voy_command"
 	item_state = "trek_voy_command"
 
 /obj/item/clothing/under/rank/trek/engsec/voy
-	desc = "The uniform worn by operations officers of the 2370s."
+	desc = "Униформа операционных офицеров в 2370-ых."
 	icon_state = "trek_voy_engsec"
 	item_state = "trek_voy_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/voy
-	desc = "The uniform worn by medsci officers of the 2370s."
+	desc = "Униформа научно-медицинских офицеров в 2370-ых."
 	icon_state = "trek_voy_medsci"
 	item_state = "trek_voy_medsci"
 
@@ -1252,7 +1252,7 @@ Departamental Swimsuits, for general use
 
 /obj/item/clothing/suit/storage/trek/ds9
 	name = "обитая шинель"
-	desc = "Шинель, которую носили все офицере в 2380-ых."
+	desc = "Шинель, которую носили офицеры в 2380-ых."
 	icon_state = "trek_ds9_coat"
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "trek_ds9_coat_mob"
@@ -1278,17 +1278,17 @@ Departamental Swimsuits, for general use
 
 
 /obj/item/clothing/under/rank/trek/command/ds9
-	desc = "The uniform worn by command officers of the 2380s."
+	desc = "Униформа управляющих офицеров в 2380-ых."
 	icon_state = "trek_command"
 	item_state = "trek_ds9_command"
 
 /obj/item/clothing/under/rank/trek/engsec/ds9
-	desc = "The uniform worn by operations officers of the 2380s."
+	desc = "Униформа операционных офицеров в 2380-ых."
 	icon_state = "trek_engsec"
 	item_state = "trek_ds9_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/ds9
-	desc = "The uniform undershit worn by medsci officers of the 2380s."
+	desc = "Униформа научно-медицинских офицеров в 2380-ых."
 	icon_state = "trek_medsci"
 	item_state = "trek_ds9_medsci"
 
@@ -1413,8 +1413,8 @@ Departamental Swimsuits, for general use
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/jacket/verb/toggle()
-	set name = "Toggle coat buttons"
-	set category = "Object"
+	set name = "Пуговицы Куртки"
+	set category = "Объект"
 	set src in usr
 
 	if(!usr.canmove || usr.stat || usr.restrained())
@@ -1425,20 +1425,20 @@ Departamental Swimsuits, for general use
 			icon_state = "[initial(icon_state)]_open"
 			item_state = "[initial(item_state)]_open"
 			unbuttoned = 1
-			to_chat(usr, "You unbutton the coat.")
+			to_chat(usr, "Вы расстегиваете куртку.")
 		if(1)
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			unbuttoned = 0
-			to_chat(usr, "You button up the coat.")
+			to_chat(usr, "Вы застегиваете куртку.")
 	usr.update_inv_wear_suit()
 
 /obj/item/clothing/suit/storage/fluff/jacket/field //Just here so it can be seen and easily recognized under /spawn.
-	name = "Field Jacket"
+	name = "полевая куртка"
 
 /obj/item/clothing/suit/storage/fluff/jacket/air_cavalry
-	name = "Air Cavalry Jacket"
-	desc = "A jacket worn by the 1st Cavalry Division on Earth."
+	name = "куртка Воздушной Кавалерии"
+	desc = "Куртка первой дивизии Кавалерии на Земле."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "acjacket"
@@ -1447,8 +1447,8 @@ Departamental Swimsuits, for general use
 	item_state = "acjacket_mob"
 
 /obj/item/clothing/suit/storage/fluff/jacket/air_force
-	name = "Air Force Jacket"
-	desc = "A jacket worn by the Earth Air Force."
+	name = "куртка Воздушных Сил"
+	desc = "Куртка Воздушных Сил Земли."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "afjacket"
@@ -1457,8 +1457,8 @@ Departamental Swimsuits, for general use
 	item_state = "afjacket_mob"
 
 /obj/item/clothing/suit/storage/fluff/jacket/navy
-	name = "Navy Jacket"
-	desc = "A jacket worn by the Earth's Navy. It's adorned with reflective straps."
+	name = "куртка ВМС"
+	desc = "Куртка Военных Морских Сил Земли. Украшена светоотражающими полосами."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "navyjacket"
@@ -1467,8 +1467,8 @@ Departamental Swimsuits, for general use
 	item_state = "navyjacket_mob"
 
 /obj/item/clothing/suit/storage/fluff/jacket/special_forces
-	name = "Special Forces Jacket"
-	desc = "A durable jacket worn by the Earth's special forces."
+	name = "куртка спецназа"
+	desc = "Надежная куртка войск специального назначения на Земле."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "sfjacket"
@@ -1478,7 +1478,7 @@ Departamental Swimsuits, for general use
 
 //General use
 /obj/item/clothing/head/fluff/headbando
-	name = "повязка на голову"
+	name = "повязка"
 	desc = "Подходит мастерам боевых искусств, а также гангстерам."
 
 	icon = 'icons/vore/custom_items_vr.dmi'
@@ -1691,8 +1691,8 @@ Departamental Swimsuits, for general use
 
 //KotetsuRedwood:Latex Maid Dresses, for everyone to 'enjoy'. :3c
 /obj/item/clothing/under/fluff/latexmaid
-	name = "latex maid dress"
-	desc = "Squeak! A shiny outfit for cleaning, made by people with dirty minds."
+	name = "латексная униформа горничной"
+	desc = "Скрипучая блестящая униформа для уборки, придуманная людьми с грязными помыслам."
 
 	item_icons = list(slot_w_uniform_str = 'icons/vore/custom_clothes_vr.dmi')
 	icon = 'icons/vore/custom_clothes_vr.dmi'
@@ -1706,9 +1706,9 @@ Departamental Swimsuits, for general use
 
 //Aztectornado:Tron inspired Siren outfit
 /obj/item/clothing/under/fluff/siren
-	name = "Siren Jumpsuit"
-	desc = "An advanced jumpsuit with inlaid neon highlighting, and a port on the back."
-	description_fluff = "Unlike other competitor suits, the Ward Takahashi Siren jumpsuit features a whole host of extra sensors for augmented reality use, and features a non-invasive neural sensor/stimulator for a fully immersive experience."
+	name = "комбинезон модели Siren"
+	desc = "Технологичный комбинезон со встроенной неоновой подсветкой и портом на спине."
+	description_fluff = "Этот комбинезон модели Siren фирмы Ward Takahashi обладает множеством датчиков для использования дополненной реальности, а также безопасный нейростимулятор для более полного погружения."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1718,9 +1718,9 @@ Departamental Swimsuits, for general use
 	rolled_sleeves = 0
 
 /obj/item/clothing/gloves/fluff/siren
-	name = "Siren Gloves"
-	desc = "A set of white and neon blue gloves."
-	description_fluff = "Like its jumpsuit companion, the Ward Takahashi Siren gloves feature multiple sensors for usage in augmented reality. The gloves operate fine even without a paired jumpsuit, offering optimal AR menu control and haptic feedback."
+	name = "перчатки модели Siren"
+	desc = "Пара бело-синих перчаток с неоновой подсветкой."
+	description_fluff = "Как и комбинезон данной серии, перчатки модели Siren фирмы Ward Takahashi обладают множеством датчиков для использования дополненной реальности. Перчатки работают отдельно от комбинезона и предоставляют управление AR и передачу тактильных ощущений."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1728,9 +1728,9 @@ Departamental Swimsuits, for general use
 	item_state = "tronsiren_gloves_mob"
 
 /obj/item/clothing/shoes/boots/fluff/siren
-	name = "Siren Boots"
-	desc = "A set of white boots with neon lighting."
-	description_fluff = "Unlike the rest of the Ward Takahashi Siren lineup, the boots are simply boots. However, they go great with the rest of the outfit, and are quite comfortable."
+	name = "ботинки модели Siren"
+	desc = "Пара бело-синих ботинок с неоновой подсветкой."
+	description_fluff = "В отличие от остальной одежды серии Siren фирмы Ward Takahashi, это всего лишь обыкновенные ботинки. Однако они весьма хорошо подходят остальным элементам одежды и довольно удобные."
 
 	icon_state = "tronsiren_shoes"
 	icon = 'icons/vore/custom_clothes_vr.dmi'

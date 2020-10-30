@@ -1,5 +1,5 @@
 /datum/playingcard
-	var/name = "playing card"
+	var/name = "игральная карта"
 	var/card_icon = "card_back"
 	var/back_icon = "card_back"
 
@@ -10,13 +10,13 @@
 	var/cooldown = 0 // to prevent spam shuffle
 
 /obj/item/weapon/deck/holder
-	name = "card box"
-	desc = "A small leather case to show how classy you are compared to everyone else."
+	name = "карточный чехол"
+	desc = "Небольшой кожаный чехол для хранения игральных карт, дабы всем показать, насколько Ваш вкус лучше остальных."
 	icon_state = "card_holder"
 
 /obj/item/weapon/deck/cards
-	name = "deck of cards"
-	desc = "A simple deck of playing cards."
+	name = "колода игральных карт"
+	desc = "Обыкновенная колода игральных карт."
 	icon_state = "deck"
 	drop_sound = 'sound/items/drop/paper.ogg'
 	pickup_sound = 'sound/items/pickup/paper.ogg'
@@ -24,31 +24,31 @@
 /obj/item/weapon/deck/cards/New()
 	..()
 	var/datum/playingcard/P
-	for(var/suit in list("spades","clubs","diamonds","hearts"))
+	for(var/suit in list("пик","треф","бубен","червей"))
 
 		var/colour
-		if(suit == "spades" || suit == "clubs")
+		if(suit == "пик" || suit == "треф")
 			colour = "black_"
 		else
 			colour = "red_"
 
-		for(var/number in list("ace","two","three","four","five","six","seven","eight","nine","ten"))
+		for(var/number in list("туз","двойка","тройка","четверка","пятерка","шестерка","семерка","восьмерка","девятка","десятка"))
 			P = new()
-			P.name = "[number] of [suit]"
+			P.name = "[number] [suit]"
 			P.card_icon = "[colour]num"
 			P.back_icon = "card_back"
 			cards += P
 
-		for(var/number in list("jack","queen","king"))
+		for(var/number in list("валет","дама","король"))
 			P = new()
-			P.name = "[number] of [suit]"
+			P.name = "[number] [suit]"
 			P.card_icon = "[colour]col"
 			P.back_icon = "card_back"
 			cards += P
 
 	for(var/i = 0, i<2, i++)
 		P = new()
-		P.name = "joker"
+		P.name = "джокер"
 		P.card_icon = "joker"
 		cards += P
 
@@ -59,10 +59,10 @@
 			for(var/datum/playingcard/P in H.cards)
 				cards += P
 			qdel(H)
-			to_chat(user,"<span class='notice'>You place your cards on the bottom of \the [src]</span>.")
+			to_chat(user,"<span class='notice'>Вы складываете свои карты под колоду.</span>.")
 			return
 		else
-			to_chat(user,"<span class='warning'>You can't mix cards from other decks!</span>")
+			to_chat(user,"<span class='warning'>Нельзя перемешивать колоды друг с другом!</span>")
 			return
 	..()
 
@@ -75,9 +75,9 @@
 
 /obj/item/weapon/deck/verb/draw_card()
 
-	set category = "Object"
-	set name = "Draw"
-	set desc = "Draw a card from a deck."
+	set category = "Объект"
+	set name = "Вытянуть Карту"
+	set desc = "Вытягивает карту из колоды."
 	set src in view(1)
 
 	var/mob/living/carbon/user = usr
@@ -85,19 +85,19 @@
 	if(usr.stat || !Adjacent(usr)) return
 
 	if(user.hands_are_full()) // Safety check lest the card disappear into oblivion
-		to_chat(user,"<span class='notice'>Your hands are full!</span>")
+		to_chat(user,"<span class='notice'>Ваши руки заняты!</span>")
 		return
 
 	if(!istype(usr,/mob/living/carbon))
 		return
 
 	if(!cards.len)
-		to_chat(user,"<span class='notice'>There are no cards in the deck.</span>")
+		to_chat(user,"<span class='notice'>В колоде не осталось карт.</span>")
 		return
 
 	var/obj/item/weapon/hand/H = user.get_type_in_hands(/obj/item/weapon/hand)
 	if(H && !(H.parentdeck == src))
-		to_chat(user,"<span class='warning'>You can't mix cards from different decks!</span>")
+		to_chat(user,"<span class='warning'>Нельзя перемешивать колоды друг с другом!</span>")
 		return
 
 	if(!H)
@@ -111,20 +111,20 @@
 	cards -= P
 	H.parentdeck = src
 	H.update_icon()
-	user.visible_message("<span class='notice'>\The [user] draws a card.</span>")
-	to_chat(user,"<span class='notice'>It's the [P].</span>")
+	user.visible_message("<span class='notice'>[user] вытягивает карту.</span>")
+	to_chat(user,"<span class='notice'>Это [P].</span>")
 
 /obj/item/weapon/deck/verb/deal_card()
 
-	set category = "Object"
-	set name = "Deal"
-	set desc = "Deal a card from a deck."
+	set category = "Объект"
+	set name = "Раздать Карту"
+	set desc = "Раздает из колоды карту."
 	set src in view(1)
 
 	if(usr.stat || !Adjacent(usr)) return
 
 	if(!cards.len)
-		to_chat(usr,"<span class='notice'>There are no cards in the deck.</span>")
+		to_chat(usr,"<span class='notice'>В колоде не осталось карт.</span>")
 		return
 
 	var/list/players = list()
@@ -133,22 +133,22 @@
 			players += player
 	//players -= usr
 
-	var/mob/living/M = input("Who do you wish to deal a card?") as null|anything in players
+	var/mob/living/M = input("Кому бы Вы хотели выдать карту?") as null|anything in players
 	if(!usr || !src || !M) return
 
 	deal_at(usr, M, 1)
 
 /obj/item/weapon/deck/verb/deal_card_multi()
 
-	set category = "Object"
-	set name = "Deal Multiple Cards"
-	set desc = "Deal multiple cards from a deck."
+	set category = "Объект"
+	set name = "Раздать Несколько Карт"
+	set desc = "Раздает из колоды несколько карт."
 	set src in view(1)
 
 	if(usr.stat || !Adjacent(usr)) return
 
 	if(!cards.len)
-		to_chat(usr,"<span class='notice'>There are no cards in the deck.</span>")
+		to_chat(usr,"<span class='notice'>В колоде не осталось карт.</span>")
 		return
 
 	var/list/players = list()
@@ -157,10 +157,10 @@
 			players += player
 	//players -= usr
 	var/maxcards = max(min(cards.len,10),1)
-	var/dcard = input("How many card(s) do you wish to deal? You may deal up to [maxcards] cards.") as num
+	var/dcard = input("Сколько карт Вы хотели бы выдать? Можно выдать до [maxcards] карт.") as num
 	if(dcard > maxcards)
 		return
-	var/mob/living/M = input("Who do you wish to deal [dcard] card(s)?") as null|anything in players
+	var/mob/living/M = input("Кому бы Вы хотели выдать [dcard] карт?") as null|anything in players
 	if(!usr || !src || !M) return
 
 	deal_at(usr, M, dcard)
@@ -175,20 +175,19 @@
 		H.concealed = 1
 		H.update_icon()
 	if(user==target)
-		var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-		user.visible_message("<span class = 'notice'>\The [user] deals [dcard] card(s) to [TU.himself].</span>")
+		user.visible_message("<span class = 'notice'>[user] выдаёт себе [dcard] карты </span>")
 	else
-		user.visible_message("<span class = 'notice'>\The [user] deals [dcard] card(s) to \the [target].</span>")
+		user.visible_message("<span class = 'notice'>[user] выдает [dcard] карты [target].</span>")
 	H.throw_at(get_step(target,target.dir),10,1,H)
 
 
 /obj/item/weapon/hand/attackby(obj/O as obj, mob/user as mob)
 	if(cards.len == 1 && istype(O, /obj/item/weapon/pen))
 		var/datum/playingcard/P = cards[1]
-		if(P.name != "Blank Card")
-			to_chat(user,"<span class = 'notice'>You cannot write on that card.</span>")
+		if(P.name != "Пустая Карта")
+			to_chat(user,"<span class = 'notice'>На этой карте ничего нельзя писать.</span>")
 			return
-		var/cardtext = sanitize(input(user, "What do you wish to write on the card?", "Card Editing") as text|null, MAX_PAPER_MESSAGE_LEN)
+		var/cardtext = sanitize(input(user, "Что бы Вы хотели написать на этой карте?", "Редактирование Карты") as text|null, MAX_PAPER_MESSAGE_LEN)
 		if(!cardtext)
 			return
 		P.name = cardtext
@@ -206,7 +205,7 @@
 			H.update_icon()
 			return
 		else
-			to_chat(user,"<span class = 'notice'>You cannot mix cards from other decks!</span>")
+			to_chat(user,"<span class = 'notice'>Нельзя перемешивать колоды друг с другом!</span>")
 			return
 
 	..()
@@ -216,9 +215,9 @@
 
 
 /obj/item/weapon/deck/verb/verb_shuffle()
-	set category = "Object"
-	set name = "Shuffle"
-	set desc = "Shuffle the cards in the deck."
+	set category = "Объект"
+	set name = "Перетасовать"
+	set desc = "Перетасовать карты в колоде."
 	set src in view(1)
 	shuffle()
 
@@ -231,7 +230,12 @@
 			newcards += P
 			cards -= P
 		cards = newcards
-		user.visible_message("<span class = 'notice'>\The [user] shuffles [src].</span>")
+		if (src == /obj/item/weapon/deck/cah)
+			user.visible_message("<span class = 'notice'>[user] перетасовывает белую колоду Карт Против Галактики.</span>")
+		else if (src == /obj/item/weapon/deck/cah/black)
+			user.visible_message("<span class = 'notice'>[user] перетасовывает черную колоду Карт Против Галактики.</span>")
+		else
+			user.visible_message("<span class = 'notice'>[user] перетасовывает колоду игральных карт.</span>")
 		playsound(src, 'sound/items/cardshuffle.ogg', 50, 1)
 		cooldown = world.time
 	else
@@ -248,10 +252,10 @@
 				if (H.hand)
 					temp = H.organs_by_name["l_hand"]
 				if(temp && !temp.is_usable())
-					to_chat(user,"<span class='notice'>You try to move your [temp.name], but cannot!</span>")
+					to_chat(user,"<span class='notice'>Вы пытаетесь пошевелить рукой, но не можете!</span>")
 					return
 
-				to_chat(user,"<span class='notice'>You pick up [src].</span>")
+				to_chat(user,"<span class='notice'>Вы подбираете колоду карт.</span>")
 				user.put_in_hands(src)
 
 	return
@@ -267,16 +271,16 @@
 				if (H.hand)
 					temp = H.organs_by_name["l_hand"]
 				if(temp && !temp.is_usable())
-					to_chat(user,"<span class='notice'>You try to move your [temp.name], but cannot!</span>")
+					to_chat(user,"<span class='notice'>Вы пытаетесь пошевелить рукой, но не можете!</span>")
 					return
 
-				to_chat(user,"<span class='notice'>You pick up [src].</span>")
+				to_chat(user,"<span class='notice'>Вы подбираете колоду карт.</span>")
 				user.put_in_hands(src)
 	return
 
 /obj/item/weapon/pack/
-	name = "Card Pack"
-	desc = "For those with disposible income."
+	name = "набор карт"
+	desc = "Для тех, кому некуда девать деньги."
 
 	icon_state = "card_pack"
 	icon = 'icons/obj/playing_cards.dmi'
@@ -288,7 +292,12 @@
 
 
 /obj/item/weapon/pack/attack_self(var/mob/user as mob)
-	user.visible_message("<span class ='danger'>[user] rips open \the [src]!</span>")
+	if (src == /obj/item/weapon/pack/cardemon)
+		user.visible_message("<span class ='danger'>[user] рвёт упаковку комплекта карт Картемон!</span>")
+	else if (src == /obj/item/weapon/pack/spaceball)
+		user.visible_message("<span class ='danger'>[user] рвёт упаковку комплекта карт Спейсбол!</span>")
+	else
+		user.visible_message("<span class ='danger'>[user] рвёт упаковку комплекта карт!</span>")
 	var/obj/item/weapon/hand/H = new()
 
 	H.cards += cards
@@ -301,8 +310,8 @@
 	user.put_in_active_hand(H)
 
 /obj/item/weapon/hand
-	name = "hand of cards"
-	desc = "Some playing cards."
+	name = "рука карт"
+	desc = "Несколько игровых карт в руке."
 	icon = 'icons/obj/playing_cards.dmi'
 	icon_state = "empty"
 	drop_sound = 'sound/items/drop/paper.ogg'
@@ -315,20 +324,20 @@
 
 /obj/item/weapon/hand/verb/discard()
 
-	set category = "Object"
-	set name = "Discard"
-	set desc = "Place (a) card(s) from your hand in front of you."
+	set category = "Объект"
+	set name = "Сбросить Карту"
+	set desc = "Положить карту (карты) из своей руки перед собой."
 
 	var/i
 	var/maxcards = min(cards.len,5) // Maximum of 5 cards at once
-	var/discards = input("How many cards do you want to discard? You may discard up to [maxcards] card(s)") as num
+	var/discards = input("Сколько карт Вы бы хотели сбросить? Можно сбросить до [maxcards] карт.") as num
 	if(discards > maxcards)
 		return
 	for	(i = 0;i < discards;i++)
 		var/list/to_discard = list()
 		for(var/datum/playingcard/P in cards)
 			to_discard[P.name] = P
-		var/discarding = input("Which card do you wish to put down?") as null|anything in to_discard
+		var/discarding = input("Какую карту Вы хотели бы сбросить?") as null|anything in to_discard
 
 		if(!discarding || !to_discard[discarding] || !usr || !src) return
 
@@ -342,7 +351,7 @@
 		H.parentdeck = src.parentdeck
 		H.update_icon()
 		src.update_icon()
-		usr.visible_message("<span class = 'notice'>\The [usr] plays \the [discarding].</span>")
+		usr.visible_message("<span class = 'notice'>[usr] разыгрывает карту [discarding].</span>")
 		H.loc = get_step(usr,usr.dir)
 
 	if(!cards.len)
@@ -351,20 +360,20 @@
 /obj/item/weapon/hand/attack_self(var/mob/user as mob)
 	concealed = !concealed
 	update_icon()
-	user.visible_message("<span class = 'notice'>\The [user] [concealed ? "conceals" : "reveals"] their hand.</span>")
+	user.visible_message("<span class = 'notice'>[user] [concealed ? "скрывает" : "раскрывает"] карты в руке.</span>")
 
 /obj/item/weapon/hand/examine(mob/user)
 	. = ..()
 	if((!concealed) && cards.len)
-		. += "It contains: "
+		. += "В руке содержатся: "
 		for(var/datum/playingcard/P in cards)
-			. += "\The [P.name]."
+			. += "[P.name]."
 
 /obj/item/weapon/hand/verb/Removecard()
 
-	set category = "Object"
-	set name = "Remove card"
-	set desc = "Remove a card from the hand."
+	set category = "Объект"
+	set name = "Убрать Карту Из Руки"
+	set desc = "Достает из Вашей руки карту."
 	set src in view(1)
 
 	var/mob/living/carbon/user = usr
@@ -372,13 +381,13 @@
 	if(user.stat || !Adjacent(user)) return
 
 	if(user.hands_are_full()) // Safety check lest the card disappear into oblivion
-		to_chat(usr,"<span class='danger'>Your hands are full!</span>")
+		to_chat(usr,"<span class='danger'>Ваши руки заняты!</span>")
 		return
 
 	var/pickablecards = list()
 	for(var/datum/playingcard/P in cards)
 		pickablecards[P.name] += P
-	var/pickedcard = input("Which card do you want to remove from the hand?")	as null|anything in pickablecards
+	var/pickedcard = input("Какую карту Вы хотели бы убрать из руки?")	as null|anything in pickablecards
 
 	if(!pickedcard || !pickablecards[pickedcard] || !usr || !src) return
 
@@ -403,11 +412,11 @@
 		qdel(src)
 		return
 	else if(cards.len > 1)
-		name = "hand of cards"
-		desc = "Some playing cards."
+		name = "рука карт"
+		desc = "Несколько игровых карт в руке."
 	else
-		name = "a playing card"
-		desc = "A playing card."
+		name = "игровая карта"
+		desc = "Одна игровая карта."
 
 	overlays.Cut()
 

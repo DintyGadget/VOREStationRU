@@ -64,25 +64,25 @@
 		RemoveHood()
 
 /obj/item/clothing/suit/storage/hooded/carp_costume
-	name = "carp costume"
-	desc = "A costume made from 'synthetic' carp scales, it smells."
+	name = "костюм карпа"
+	desc = "Костюм, изготовленный из 'синтетической' чешуи карпа. Воняет."
 	icon_state = "carp_casual"
 	item_state_slots = list(slot_r_hand_str = "carp_casual", slot_l_hand_str = "carp_casual") //Does not exist -S2-
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE	//Space carp like space, so you should too
-	action_button_name = "Toggle Carp Hood"
+	action_button_name = "Отрегулировать Капюшон Карпа"
 	hoodtype = /obj/item/clothing/head/hood/carp_hood
 
 /obj/item/clothing/suit/storage/hooded/ian_costume	//It's Ian, rub his bell- oh god what happened to his inside parts?
-	name = "corgi costume"
-	desc = "A costume that looks like someone made a human-like corgi, it won't guarantee belly rubs."
+	name = "костюм корги"
+	desc = "Костюм, исполненный в виде человекоподобного корги. Не гарантирует, что Вам погладят пузик."
 	icon_state = "ian"
 	item_state_slots = list(slot_r_hand_str = "ian", slot_l_hand_str = "ian") //Does not exist -S2-
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	flags_inv = HIDEJUMPSUIT|HIDETIE|HIDEHOLSTER
-	action_button_name = "Toggle Ian Hood"
+	action_button_name = "Отрегулировать Капюшон Иана"
 	hoodtype = /obj/item/clothing/head/hood/ian_hood
 
 /obj/item/clothing/suit/storage/hooded/wintercoat
@@ -111,7 +111,7 @@
 	/obj/item/weapon/handcuffs,/obj/item/clothing/head/helmet)
 
 /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	name = "зимнее пальто Службы Безопасности"
+	name = "зимнее пальто службы безопасности"
 	icon_state = "coatsecurity"
 	item_state_slots = list(slot_r_hand_str = "coatsecurity", slot_l_hand_str = "coatsecurity")
 	armor = list(melee = 25, bullet = 20, laser = 20, energy = 15, bomb = 20, bio = 0, rad = 0)

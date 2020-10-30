@@ -1,20 +1,20 @@
 /obj/item/clothing/shoes/griffin
-	name = "griffon boots"
-	desc = "A pair of costume boots fashioned after bird talons."
+	name = "ботинки грифона"
+	desc = "Пара ботинок для костюма грифона, исполненные в стиле птичьих когтей."
 	icon_state = "griffinboots"
 	item_state = "griffinboots"
 	icon = 'icons/obj/clothing/shoes_vr.dmi'
 	icon_override = 'icons/mob/feet_vr.dmi'
 
 /obj/item/clothing/shoes/bhop
-	name = "jump boots"
-	desc = "A specialized pair of combat boots with a built-in propulsion system for rapid foward movement."
+	name = "джет-ботинки"
+	desc = "Специализированная пара военных ботинок со встроенной системой подачи импульса для быстрого передвижения."
 	icon_state = "jetboots"
 	item_state = "jetboots"
 	icon = 'icons/obj/clothing/shoes_vr.dmi'
 	icon_override = 'icons/mob/feet_vr.dmi'
 	// resistance_flags = FIRE_PROOF
-	action_button_name = "Activate Jump Boots"
+	action_button_name = "Активировать Джет-Ботинки"
 	permeability_coefficient = 0.05
 	var/jumpdistance = 5 //-1 from to see the actual distance, e.g 4 goes over 3 tiles
 	var/jumpspeed = 3
@@ -31,19 +31,19 @@
 		return // User is already being thrown
 
 	if(recharging_time > world.time)
-		to_chat(user, "<span class='warning'>The boot's internal propulsion needs to recharge still!</span>")
+		to_chat(user, "<span class='warning'>Система импульса джет-ботинок перезаряжается!</span>")
 		return
 
 	var/atom/target = get_edge_target_turf(user, user.dir) //gets the user's direction
 
 	playsound(src, 'sound/effects/stealthoff.ogg', 50, 1, 1)
-	user.visible_message("<span class='warning'>[user] dashes forward into the air!</span>")
+	user.visible_message("<span class='warning'>[user] бросается вперёд!</span>")
 	user.throw_at(target, jumpdistance, jumpspeed)
 	recharging_time = world.time + recharging_rate
 
 /obj/item/clothing/shoes/magboots/adv
-	name = "advanced magboots"
-	desc = "Advanced magnetic boots for a trained user. They have a lower magnetic force, allowing the user to move more quickly."
+	name = "улучшенные магнитные ботинки"
+	desc = "Усовершенствованные магнитные ботинки для продвинутых пользователей. В них слабее магнитное сцепление, что позволяет носителю передвигаться быстрее."
 	icon = 'icons/obj/clothing/shoes_vr.dmi'
 	icon_override = 'icons/mob/feet_vr.dmi'
 
@@ -62,8 +62,8 @@
 
 // Armor Versions Here
 /obj/item/clothing/shoes/knight
-	name = "knight boots"
-	desc = "A pair of olde knight boots."
+	name = "рыцарские ботинки"
+	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots1"
 	item_state = "knight_boots1"
 	icon = 'icons/obj/clothing/shoes_vr.dmi'
@@ -71,15 +71,15 @@
 	armor = list(melee = 80, bullet = 50, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/shoes/knight/black
-	name = "knight boots"
-	desc = "A pair of olde knight boots."
+	name = "рыцарские ботинки"
+	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots2"
 	item_state = "knight_boots2"
 
 // Costume Versions Here
 /obj/item/clothing/shoes/knight_costume
-	name = "knight boots"
-	desc = "A pair of olde knight boots."
+	name = "рыцарские ботинки"
+	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots1"
 	item_state = "knight_boots1"
 	icon = 'icons/obj/clothing/shoes_vr.dmi'
@@ -87,6 +87,6 @@
 
 /obj/item/clothing/shoes/knight_costume/black
 	name = "knight boots"
-	desc = "A pair of olde knight boots."
+	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots2"
 	item_state = "knight_boots2"
