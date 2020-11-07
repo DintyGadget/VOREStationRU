@@ -1,8 +1,8 @@
 // Inherits from /book/ so it can fit on bookshelves.
 /obj/item/weapon/book/codex // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Virgo-Erigone Edition"
-	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Virgo-Erigone, human or not. It also \
-	has the words 'Don't Panic' in small, friendly letters on the cover."
+	name = "Туристический Гид по Человеческому Космосу: Вирго-Эригон"
+	desc = "Содержит полезную информацию о мире вокруг. Написан, похоже, для туристов Вирго-Эригон, будь то человек или нет. \
+	На обложке маленькими приветливыми буквами подписано 'Не Паникуйте'."
 	icon_state = "codex"
 	item_state = "book4"
 	unique = TRUE
@@ -20,29 +20,29 @@
 	tree.display(user)
 
 /obj/item/weapon/book/codex/lore/vir // Vorestation Edits throughout this object.
-	name = "The Traveler's Guide to Human Space: Virgo-Erigone Edition"
-	desc = "Contains useful information about the world around you.  It seems to have been written for travelers to Virgo-Erigone, human or not. It also \
-	has the words 'Don't Panic' in small, friendly letters on the cover."
+	name = "Туристический Гид по Человеческому Космосу: Вирго-Эригон"
+	desc = "Содержит полезную информацию о мире вокруг. Написан, похоже, для туристов Вирго-Эригон, будь то человек или нет. \
+	На обложке маленькими приветливыми буквами подписано 'Не Паникуйте'."
 	icon_state = "codex"
 	root_type = /datum/lore/codex/category/main_virgo_lore
-	libcategory = "Reference"
+	libcategory = "Справочник"
 
 /obj/item/weapon/book/codex/lore/robutt
-	name = "A Buyer's Guide to Artificial Bodies"
-	desc = "Recommended reading for the newly cyborgified, new positronics, and the upwardly-mobile FBP."
+	name = "Гид по Искусственным Телам Для Потребителей"
+	desc = "Рекомендуется к прочтению всему недавно кибернетизированному персоналу, а также позитроникам и прямоходящим синтетикам."
 	icon_state = "codex_robutt"
 	item_state = "book6"
 	root_type = /datum/lore/codex/category/main_robutts
-	libcategory = "Reference"
+	libcategory = "Справочник"
 
 /obj/item/weapon/book/codex/lore/news
-	name = "Daedalus Pocket Newscaster"
-	desc = "A regularly-updating compendium of articles on current events. Essential for new arrivals in the Vir system and anyone interested in politics."
+	name = "карманный вестник Daedalus"
+	desc = "Регулярно обновляемый компендиум недавних событий. Крайне необходим для всех новоприбывших в систему Вир и тех, кому интересна политика."
 	icon_state = "newscodex"
 	item_state = "book1"
 	w_class = ITEMSIZE_SMALL
 	root_type = /datum/lore/codex/category/main_news
-	libcategory = "Reference"
+	libcategory = "Справочник"
 	drop_sound = 'sound/items/drop/device.ogg'
 
 /* //VORESTATION REMOVAL

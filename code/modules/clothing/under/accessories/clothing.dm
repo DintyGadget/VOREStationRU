@@ -363,7 +363,7 @@
 	icon_state = "turtleneck_winterred"
 
 /obj/item/clothing/accessory/sweater/uglyxmas
-	name = "богий рождественский свитер"
+	name = "убогий рождественский свитер"
 	desc = "Подарок, которому стоило бы остаться где-то глубоко в шкафу."
 	icon_state = "uglyxmas"
 

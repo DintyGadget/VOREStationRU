@@ -3,7 +3,7 @@
 	var/r_hair = 0
 	var/g_hair = 0
 	var/b_hair = 0
-	var/h_style = "Bald"
+	var/h_style = "Лысая голова"
 
 	var/r_grad = 0
 	var/g_grad = 0
@@ -13,7 +13,7 @@
 	var/r_facial = 0
 	var/g_facial = 0
 	var/b_facial = 0
-	var/f_style = "Shaved"
+	var/f_style = "Бритое лицо"
 
 	//Eye colour
 	var/r_eyes = 0

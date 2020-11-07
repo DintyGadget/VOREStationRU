@@ -1,6 +1,6 @@
 //Material earrings
 /obj/item/clothing/ears/earring
-	name = "earring"
+	name = "сережки"
 	desc = "Пара серёжек."
 	icon = 'icons/obj/clothing/ears.dmi'
 

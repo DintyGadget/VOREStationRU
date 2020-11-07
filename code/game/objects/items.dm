@@ -193,8 +193,8 @@
 	return
 
 /obj/item/verb/move_to_top()
-	set name = "Move To Top"
-	set category = "Object"
+	set name = "Переместить Наверх"
+	set category = "Объект"
 	set src in oview(1)
 
 	if(!istype(src.loc, /turf) || usr.stat || usr.restrained() )
@@ -211,16 +211,16 @@
 	var/size
 	switch(src.w_class)
 		if(ITEMSIZE_TINY)
-			size = "tiny"
+			size = "крохотный"
 		if(ITEMSIZE_SMALL)
-			size = "small"
+			size = "маленький"
 		if(ITEMSIZE_NORMAL)
-			size = "normal-sized"
+			size = "среднего размера"
 		if(ITEMSIZE_LARGE)
-			size = "bulky"
+			size = "крупноватый"
 		if(ITEMSIZE_HUGE)
-			size = "huge"
-	return ..(user, "", "It is a [size] item.")
+			size = "огромный"
+	return ..(user, "", "Это [size] предмет.")
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
@@ -480,28 +480,28 @@ var/list/global/slot_flags_enumeration = list(
 
 /obj/item/verb/verb_pickup()
 	set src in oview(1)
-	set category = "Object"
-	set name = "Pick up"
+	set category = "Объект"
+	set name = "Подобрать"
 
 	if(!(usr)) //BS12 EDIT
 		return
 	if(!usr.canmove || usr.stat || usr.restrained() || !Adjacent(usr))
 		return
 	if((!istype(usr, /mob/living/carbon)) || (istype(usr, /mob/living/carbon/brain)))//Is humanoid, and is not a brain
-		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
+		to_chat(usr, "<span class='warning'>Вы не можете что-либо подобрать!</span>")
 		return
 	var/mob/living/carbon/C = usr
 	if( usr.stat || usr.restrained() )//Is not asleep/dead and is not restrained
-		to_chat(usr, "<span class='warning'>You can't pick things up!</span>")
+		to_chat(usr, "<span class='warning'>Вы не можете что-либо подобрать!</span>")
 		return
 	if(src.anchored) //Object isn't anchored
-		to_chat(usr, "<span class='warning'>You can't pick that up!</span>")
+		to_chat(usr, "<span class='warning'>Вы не можете это подобрать!</span>")
 		return
 	if(C.get_active_hand()) //Hand is not full
-		to_chat(usr, "<span class='warning'>Your hand is full.</span>")
+		to_chat(usr, "<span class='warning'>Ваша рука занята.</span>")
 		return
 	if(!istype(src.loc, /turf)) //Object is on a turf
-		to_chat(usr, "<span class='warning'>You can't pick that up!</span>")
+		to_chat(usr, "<span class='warning'>Вы не можете это подобрать.</span>")
 		return
 	//All checks are done, time to pick it up!
 	usr.UnarmedAttack(src)
@@ -664,11 +664,11 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 
 /obj/item/proc/showoff(mob/user)
 	for (var/mob/M in view(user))
-		M.show_message("[user] holds up [src]. <a HREF=?src=\ref[M];lookitem=\ref[src]>Take a closer look.</a>",1)
+		M.show_message("[user] показывает [src]. <a HREF=?src=\ref[M];lookitem=\ref[src]>Осмотреть поближе.</a>",1)
 
 /mob/living/carbon/verb/showoff()
-	set name = "Show Held Item"
-	set category = "Object"
+	set name = "Показать Предмет В Руке"
+	set category = "Объект"
 
 	var/obj/item/I = get_active_hand()
 	if(I && !I.abstract)

@@ -940,134 +940,134 @@
 	icon = 'icons/mob/Human_face.dmi'
 
 /datum/sprite_accessory/facial_hair/shaved
-	name = "Shaved"
+	name = "Бритое лицо"
 	icon_state = "bald"
 	gender = NEUTER
 	species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_TAJ,SPECIES_SKRELL, "Machine", SPECIES_TESHARI, SPECIES_TESHARI,SPECIES_PROMETHEAN)
 
 /datum/sprite_accessory/facial_hair/watson
-	name = "Watson Mustache"
+	name = "Усы Ватсона"
 	icon_state = "facial_watson"
 
 /datum/sprite_accessory/facial_hair/hogan
-	name = "Hulk Hogan Mustache"
+	name = "Усы Халка Хогана"
 	icon_state = "facial_hogan" //-Neek
 
 /datum/sprite_accessory/facial_hair/vandyke
-	name = "Van Dyke Mustache"
+	name = "Усы Ван Дайка"
 	icon_state = "facial_vandyke"
 
 /datum/sprite_accessory/facial_hair/chaplin
-	name = "Square Mustache"
+	name = "Усы квадратные"
 	icon_state = "facial_chaplin"
 
 /datum/sprite_accessory/facial_hair/selleck
-	name = "Selleck Mustache"
+	name = "Усы Селлека"
 	icon_state = "facial_selleck"
 
-/datum/sprite_accessory/facial_hair/neckbeard
-	name = "Neckbeard"
-	icon_state = "facial_neckbeard"
-
-/datum/sprite_accessory/facial_hair/fullbeard
-	name = "Full Beard"
-	icon_state = "facial_fullbeard"
-
-/datum/sprite_accessory/facial_hair/longbeard
-	name = "Long Beard"
-	icon_state = "facial_longbeard"
-
-/datum/sprite_accessory/facial_hair/vlongbeard
-	name = "Very Long Beard"
-	icon_state = "facial_wise"
-
-/datum/sprite_accessory/facial_hair/elvis
-	name = "Elvis Sideburns"
-	icon_state = "facial_elvis"
-	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
-
-/datum/sprite_accessory/facial_hair/abe
-	name = "Abraham Lincoln Beard"
-	icon_state = "facial_abe"
-
-/datum/sprite_accessory/facial_hair/chinstrap
-	name = "Chinstrap"
-	icon_state = "facial_chin"
-
-/datum/sprite_accessory/facial_hair/hip
-	name = "Hipster Beard"
-	icon_state = "facial_hip"
-
-/datum/sprite_accessory/facial_hair/gt
-	name = "Goatee"
-	icon_state = "facial_gt"
-
-/datum/sprite_accessory/facial_hair/jensen
-	name = "Adam Jensen Beard"
-	icon_state = "facial_jensen"
-
-/datum/sprite_accessory/facial_hair/volaju
-	name = "Volaju"
-	icon_state = "facial_volaju"
-
-/datum/sprite_accessory/facial_hair/dwarf
-	name = "Dwarf Beard"
-	icon_state = "facial_dwarf"
-
-/datum/sprite_accessory/facial_hair/threeOclock
-	name = "3 O'clock Shadow"
-	icon_state = "facial_3oclock"
-
-/datum/sprite_accessory/facial_hair/threeOclockstache
-	name = "3 O'clock Shadow and Moustache"
-	icon_state = "facial_3oclockmoustache"
-
-/datum/sprite_accessory/facial_hair/fiveOclock
-	name = "5 O'clock Shadow"
-	icon_state = "facial_5oclock"
-
-/datum/sprite_accessory/facial_hair/fiveOclockstache
-	name = "5 O'clock Shadow and Moustache"
-	icon_state = "facial_5oclockmoustache"
-
-/datum/sprite_accessory/facial_hair/sevenOclock
-	name = "7 O'clock Shadow"
-	icon_state = "facial_7oclock"
-
-/datum/sprite_accessory/facial_hair/sevenOclockstache
-	name = "7 O'clock Shadow and Moustache"
-	icon_state = "facial_7oclockmoustache"
+/datum/sprite_accessory/facial_hair/walrus
+	name = "Усы моржовые"
+	icon_state = "facial_walrus"
 
 /datum/sprite_accessory/facial_hair/mutton
-	name = "Mutton Chops"
+	name = "Бакенбарды"
 	icon_state = "facial_mutton"
 
 /datum/sprite_accessory/facial_hair/muttonstache
-	name = "Mutton Chops and Moustache"
+	name = "Бакенбарды с усами"
 	icon_state = "facial_muttonmus"
 
-/datum/sprite_accessory/facial_hair/walrus
-	name = "Walrus Moustache"
-	icon_state = "facial_walrus"
+/datum/sprite_accessory/facial_hair/elvis
+	name = "Бакенбарды Элвиса"
+	icon_state = "facial_elvis"
+	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
+
+/datum/sprite_accessory/facial_hair/threeOclock
+	name = "Щетина, три часа"
+	icon_state = "facial_3oclock"
+
+/datum/sprite_accessory/facial_hair/threeOclockstache
+	name = "Щетина, три часа с усами"
+	icon_state = "facial_3oclockmoustache"
+
+/datum/sprite_accessory/facial_hair/fiveOclock
+	name = "Щетина, пять часов"
+	icon_state = "facial_5oclock"
+
+/datum/sprite_accessory/facial_hair/fiveOclockstache
+	name = "Щетина, пять часов с усами"
+	icon_state = "facial_5oclockmoustache"
+
+/datum/sprite_accessory/facial_hair/sevenOclock
+	name = "Щетина, семь часов"
+	icon_state = "facial_7oclock"
+
+/datum/sprite_accessory/facial_hair/sevenOclockstache
+	name = "Щетина, семь часов с усами"
+	icon_state = "facial_7oclockmoustache"
+
+/datum/sprite_accessory/facial_hair/neckbeard
+	name = "Борода по шею"
+	icon_state = "facial_neckbeard"
+
+/datum/sprite_accessory/facial_hair/fullbeard
+	name = "Борода, полная"
+	icon_state = "facial_fullbeard"
+
+/datum/sprite_accessory/facial_hair/longbeard
+	name = "Борода, длинная"
+	icon_state = "facial_longbeard"
+
+/datum/sprite_accessory/facial_hair/vlongbeard
+	name = "Борода, очень длинная"
+	icon_state = "facial_wise"
+
+/datum/sprite_accessory/facial_hair/abe
+	name = "Борода Линкольна"
+	icon_state = "facial_abe"
+
+/datum/sprite_accessory/facial_hair/chinstrap
+	name = "Бородка под подбородком"
+	icon_state = "facial_chin"
+
+/datum/sprite_accessory/facial_hair/hip
+	name = "Борода хипстера"
+	icon_state = "facial_hip"
+
+/datum/sprite_accessory/facial_hair/gt
+	name = "Бородка козлиная"
+	icon_state = "facial_gt"
+
+/datum/sprite_accessory/facial_hair/jensen
+	name = "Борода Адама Дженсена"
+	icon_state = "facial_jensen"
+
+/datum/sprite_accessory/facial_hair/volaju
+	name = "Борода Воладжу"
+	icon_state = "facial_volaju"
+
+/datum/sprite_accessory/facial_hair/dwarf
+	name = "Борода гнома"
+	icon_state = "facial_dwarf"
 
 /datum/sprite_accessory/facial_hair/croppedbeard
-	name = "Full Cropped Beard"
+	name = "Борода укороченная"
 	icon_state = "facial_croppedfullbeard"
 
 /datum/sprite_accessory/facial_hair/chinless
-	name = "Chinless Beard"
+	name = "Борода без подбородка"
 	icon_state = "facial_chinlessbeard"
 
 /datum/sprite_accessory/facial_hair/tribeard
-	name = "Tribeard"
+	name = "Борода тройная"
 	icon_state = "facial_tribeard"
 
 /datum/sprite_accessory/facial_hair/moonshiner
-	name = "Moonshiner"
+	name = "Борода мудреца"
 	icon_state = "facial_moonshiner"
 
 /datum/sprite_accessory/facial_hair/martial
-	name = "Martial Artist"
+	name = "Борода мудреца, альт"
 	icon_state = "facial_martialartist"
 /*
 ///////////////////////////////////
@@ -1077,70 +1077,70 @@
 ///////////////////////////////////
 */
 
-/datum/sprite_accessory/hair/una_spines_long
-	name = "Long Unathi Spines"
-	icon_state = "soghun_longspines"
-	species_allowed = list(SPECIES_UNATHI)
-
 /datum/sprite_accessory/hair/una_spines_short
-	name = "Short Unathi Spines"
+	name = "Унати: Шипы короткие"
 	icon_state = "soghun_shortspines"
 	species_allowed = list(SPECIES_UNATHI)
 
-/datum/sprite_accessory/hair/una_frills_long
-	name = "Long Unathi Frills"
-	icon_state = "soghun_longfrills"
+/datum/sprite_accessory/hair/una_spines_long
+	name = "Унати: Шипы длинные"
+	icon_state = "soghun_longspines"
 	species_allowed = list(SPECIES_UNATHI)
 
-/datum/sprite_accessory/hair/una_frills_short
-	name = "Short Unathi Frills"
-	icon_state = "soghun_shortfrills"
+/datum/sprite_accessory/hair/una_smallhorns
+	name = "Унати: Рога короткие"
+	icon_state = "unathi_smallhorn"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/hair/una_horns
-	name = "Unathi Horns"
+	name = "Унати: Рога средние"
 	icon_state = "soghun_horns"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/hair/una_bighorns
-	name = "Unathi Big Horns"
+	name = "Унати: Рога большие"
 	icon_state = "unathi_bighorn"
 	species_allowed = list(SPECIES_UNATHI)
 
-/datum/sprite_accessory/hair/una_smallhorns
-	name = "Unathi Small Horns"
-	icon_state = "unathi_smallhorn"
-	species_allowed = list(SPECIES_UNATHI)
-
 /datum/sprite_accessory/hair/una_ramhorns
-	name = "Unathi Ram Horns"
+	name = "Унати: Рога округлые"
 	icon_state = "unathi_ramhorn"
 	species_allowed = list(SPECIES_UNATHI)
 
+/datum/sprite_accessory/hair/una_frills_short
+	name = "Унати: Плавники короткие"
+	icon_state = "soghun_shortfrills"
+	species_allowed = list(SPECIES_UNATHI)
+
+/datum/sprite_accessory/hair/una_frills_long
+	name = "Унати: Плавники средние"
+	icon_state = "soghun_longfrills"
+	species_allowed = list(SPECIES_UNATHI)
+
 /datum/sprite_accessory/hair/una_sidefrills
-	name = "Unathi Side Frills"
+	name = "Унати: Плавники большие"
 	icon_state = "unathi_sidefrills"
 	species_allowed = list(SPECIES_UNATHI)
 
 //Skrell 'hairstyles'
 /datum/sprite_accessory/hair/skr_tentacle_veryshort
-	name = "Skrell Short Tentacles"
+	name = "Скрелл: Очень короткие щупальца"
 	icon_state = "skrell_hair_short"
 	species_allowed = list(SPECIES_SKRELL)
 	gender = MALE
 
 /datum/sprite_accessory/hair/skr_tentacle_short
-	name = "Skrell Average Tentacles"
+	name = "Скрелл: Короткие щупальца"
 	icon_state = "skrell_hair_average"
 	species_allowed = list(SPECIES_SKRELL)
 
 /datum/sprite_accessory/hair/skr_tentacle_average
-	name = "Skrell Long Tentacles"
+	name = "Скрелл: Длинные щупальца"
 	icon_state = "skrell_hair_long"
 	species_allowed = list(SPECIES_SKRELL)
 
 /datum/sprite_accessory/hair/skr_tentacle_verylong
-	name = "Skrell Very Long Tentacles"
+	name = "Скрелл: Очень длинные щупальца"
 	icon_state = "skrell_hair_verylong"
 	species_allowed = list(SPECIES_SKRELL)
 
@@ -1159,7 +1159,6 @@
 	name = "Tajaran Bangs"
 	icon_state = "hair_bangs"
 	species_allowed = list(SPECIES_TAJ)
-
 
 /datum/sprite_accessory/hair/taj_ears_braid
 	name = "Tajaran Braid"
@@ -1312,99 +1311,100 @@
 	icon_state = "teshari_fluffymohawk"
 
 // Vox things
-/datum/sprite_accessory/hair/vox_braid_long
-	name = "Long Vox braid"
-	icon_state = "vox_longbraid"
-	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_braid_short
-	name = "Short Vox Braid"
+	name = "Вокс: Короткая коса"
 	icon_state = "vox_shortbraid"
 	species_allowed = list(SPECIES_VOX)
 
+/datum/sprite_accessory/hair/vox_braid_long
+	name = "Вокс: Длинная коса"
+	icon_state = "vox_longbraid"
+	species_allowed = list(SPECIES_VOX)
+
 /datum/sprite_accessory/hair/vox_quills_short
-	name = "Short Vox Quills"
+	name = "Вокс: Короткие перья"
 	icon_state = "vox_shortquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_quills_kingly
-	name = "Kingly Vox Quills"
+	name = "Вокс: Королевские перья"
 	icon_state = "vox_kingly"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_quills_mohawk
-	name = "Quill Mohawk"
+	name = "Вокс: Могавк из перьев"
 	icon_state = "vox_mohawk"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/facial_hair/taj_sideburns
-	name = "Tajaran Sideburns"
+	name = "Таджара: Бакенбарды"
 	icon_state = "facial_sideburns"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_mutton
-	name = "Tajaran Mutton"
+	name = "Таджара: Бакенбарды большие"
 	icon_state = "facial_mutton"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_pencilstache
-	name = "Tajaran Pencilstache"
+	name = "Таджара: Усы тонкие"
 	icon_state = "facial_pencilstache"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_moustache
-	name = "Tajaran Moustache"
+	name = "Таджара: Усы толстые"
 	icon_state = "facial_moustache"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_goatee
-	name = "Tajaran Goatee"
+	name = "Таджара: Козлиная бородка"
 	icon_state = "facial_goatee"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_smallstache
-	name = "Tajaran Smallsatche"
+	name = "Таджара: Козлиная бородка, альт"
 	icon_state = "facial_smallstache"
 	species_allowed = list(SPECIES_TAJ)
 
 //unathi horn beards and the like
 
 /datum/sprite_accessory/facial_hair/una_chinhorn
-	name = "Unathi Chin Horn"
+	name = "Унати: Рожки на подбородке"
 	icon_state = "facial_chinhorns"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/facial_hair/una_hornadorns
-	name = "Unathi Horn Adorns"
+	name = "Унати: Рога по лицу"
 	icon_state = "facial_hornadorns"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/facial_hair/una_spinespikes
-	name = "Unathi Spine Spikes"
+	name = "Унати: Шипы до спины"
 	icon_state = "facial_spikes"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/facial_hair/una_dorsalfrill
-	name = "Unathi Dorsal Frill"
+	name = "Унати: Спинной плавник"
 	icon_state = "facial_dorsalfrill"
 	species_allowed = list(SPECIES_UNATHI)
 
 
 //Teshari things
 /datum/sprite_accessory/facial_hair/teshari_beard
-	name = "Teshari Beard"
+	name = "Тешари: Борода"
 	icon_state = "teshari_chin"
 	species_allowed = list(SPECIES_TESHARI)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/teshari_scraggly
-	name = "Teshari Scraggly"
+	name = "Тешари: Борода, альт"
 	icon_state = "teshari_scraggly"
 	species_allowed = list(SPECIES_TESHARI)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/teshari_chops
-	name = "Teshari Chops"
+	name = "Тешари: Бакенбарды"
 	icon_state = "teshari_gap"
 	species_allowed = list(SPECIES_TESHARI)
 	gender = NEUTER

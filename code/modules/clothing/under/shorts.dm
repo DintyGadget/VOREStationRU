@@ -37,7 +37,7 @@
 
 /obj/item/clothing/under/shorts/jeans
 	name = "джинсовые шорты"
-	desc = "Some jeans! Just in short form!"
+	desc = "Как джинсы, только короче!"
 	icon_state = "jeans_shorts"
 
 /obj/item/clothing/under/shorts/jeans/female

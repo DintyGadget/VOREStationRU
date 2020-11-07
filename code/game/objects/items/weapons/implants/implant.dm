@@ -98,8 +98,8 @@
 GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/weapon/implant/tracking)
 
 /obj/item/weapon/implant/tracking
-	name = "tracking implant"
-	desc = "An implant normally given to dangerous criminals. Allows security to track your location."
+	name = "имплант отслеживания"
+	desc = "Имплант, предназначенный для опасных преступников. Позволяет службе безопасности отслеживать Ваше местоположение."
 	var/id = 1
 	var/degrade_time = 10 MINUTES	//How long before the implant stops working outside of a living body.
 

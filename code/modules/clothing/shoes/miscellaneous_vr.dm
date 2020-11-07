@@ -86,7 +86,7 @@
 	icon_override = 'icons/obj/clothing/shoes_vr.dmi'
 
 /obj/item/clothing/shoes/knight_costume/black
-	name = "knight boots"
+	name = "рыцарские ботинки"
 	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots2"
 	item_state = "knight_boots2"

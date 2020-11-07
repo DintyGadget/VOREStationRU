@@ -16,9 +16,9 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 #define SETTTAB 9
 
 /obj/item/device/communicator
-	name = "communicator"
-	desc = "A personal device used to enable long range dialog between two people, utilizing existing telecommunications infrastructure to allow \
-	communications across different stations, planets, or even star systems."
+	name = "коммуникатор"
+	desc = "Личный девайс, позволяющий двум пользователям общаться несмотря на огромные расстояния. Текущая инфраструктура телекоммуникаций позволяет \
+	поддерживать связь на разных станциях, планетах, и даже звездных системах."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "communicator"
 	w_class = ITEMSIZE_SMALL
@@ -39,21 +39,21 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	var/list/im_contacts = list()
 	var/list/im_list = list()
 
-	var/note = "Thank you for choosing the T-14.2 Communicator, this is your notepad!" //Current note in the notepad function
+	var/note = "Благодарим за приобретение Коммуникатора Т-14.2. Это Ваши заметки!" //Current note in the notepad function
 	var/notehtml = ""
 
 	var/fon = 0 // Internal light
 	var/flum = 2 // Brightness
 
 	var/list/modules = list(
-							list("module" = "Phone", "icon" = "phone", "number" = PHONTAB),
-							list("module" = "Contacts", "icon" = "user", "number" = CONTTAB),
-							list("module" = "Messaging", "icon" = "comment-alt", "number" = MESSTAB),
-							list("module" = "News", "icon" = "newspaper", "number" = NEWSTAB), // Need a different icon,
-							list("module" = "Note", "icon" = "sticky-note", "number" = NOTETAB),
-							list("module" = "Weather", "icon" = "sun", "number" = WTHRTAB),
-							list("module" = "Crew Manifest", "icon" = "crown", "number" = MANITAB), // Need a different icon,
-							list("module" = "Settings", "icon" = "cog", "number" = SETTTAB),
+							list("module" = "Телефон", "icon" = "phone", "number" = PHONTAB),
+							list("module" = "Контакты", "icon" = "user", "number" = CONTTAB),
+							list("module" = "Сообщения", "icon" = "comment-alt", "number" = MESSTAB),
+							list("module" = "Новости", "icon" = "newspaper", "number" = NEWSTAB), // Need a different icon,
+							list("module" = "Заметки", "icon" = "sticky-note", "number" = NOTETAB),
+							list("module" = "Погода", "icon" = "sun", "number" = WTHRTAB),
+							list("module" = "Список Экипажа", "icon" = "crown", "number" = MANITAB), // Need a different icon,
+							list("module" = "Настройки", "icon" = "cog", "number" = SETTTAB),
 							)	//list("module" = "Name of Module", "icon" = "icon name64", "number" = "what tab is the module")
 
 	var/selected_tab = HOMETAB
@@ -125,22 +125,22 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	. = ..()
 
 	if(Adjacent(user) && video_source)
-		. += "<span class='notice'>It looks like it's on a video call: <a href='?src=\ref[src];watchvideo=1'>\[view\]</a></span>"
-	
+		. += "<span class='notice'>Включена видеосвязь: <a href='?src=\ref[src];watchvideo=1'>\[посмотреть\]</a></span>"
+
 	for(var/mob/living/voice/voice in contents)
-		. += "<span class='notice'>On the screen, you can see a image feed of [voice].</span>"
-		
+		. += "<span class='notice'>На экране видно изображение: [voice].</span>"
+
 		if(voice && voice.key)
 			switch(voice.stat)
 				if(CONSCIOUS)
 					if(!voice.client)
-						. += "<span class='warning'>[voice] appears to be asleep.</span>" //afk
+						. += "<span class='warning'>[voice], кажется, спит.</span>" //afk
 				if(UNCONSCIOUS)
-					. += "<span class='warning'>[voice] doesn't appear to be conscious.</span>"
+					. += "<span class='warning'>[voice], кажется, не сознании.</span>"
 				if(DEAD)
-					. += "<span class='deadsay'>[voice] appears to have died...</span>" //Hopefully this never has to be used.
+					. += "<span class='deadsay'>[voice], кажется, на другом свете...</span>" //Hopefully this never has to be used.
 		else
-			. += "<span class='notice'>The device doesn't appear to be transmitting any data.</span>"
+			. += "<span class='notice'>Девайс, похоже, сейчас не передаёт какие-либо данные.</span>"
 
 // Proc: Topic()
 // Parameters: href, href_list - Data from a link
@@ -157,7 +157,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 // Parameters: None
 // Description: Drops all calls when EMPed, so the holder can then get murdered by the antagonist.
 /obj/item/device/communicator/emp_act()
-	close_connection(reason = "Hardware error de%#_^@%-BZZZZZZZT")
+	close_connection(reason = "Компонентный сбой н%#_^@%-БЗЗЗЗЗЗ")
 
 // Proc: add_to_EPv2()
 // Parameters: 1 (hex - a single hexadecimal character)
@@ -206,7 +206,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 		if(!node)
 			node = get_exonet_node()
 		if(!get_connection_to_tcomms())
-			close_connection(reason = "Connection timed out")
+			close_connection(reason = "Соединение потеряно.")
 
 // Proc: attackby()
 // Parameters: 2 (C - what is used on the communicator. user - the mob that has the communicator)
@@ -216,12 +216,12 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 	if(istype(C, /obj/item/weapon/card/id))
 		var/obj/item/weapon/card/id/idcard = C
 		if(!idcard.registered_name || !idcard.assignment)
-			to_chat(user, "<span class='notice'>\The [src] rejects the ID.</span>")
+			to_chat(user, "<span class='notice'>[src] не принимает ID-карту.</span>")
 		else if(!owner)
-			to_chat(user, "<span class='notice'>\The [src] rejects the ID.</span>")
+			to_chat(user, "<span class='notice'>[src] не принимает ID-карту.</span>")
 		else if(owner == idcard.registered_name)
 			occupation = idcard.assignment
-			to_chat(user, "<span class='notice'>Occupation updated.</span>")
+			to_chat(user, "<span class='notice'>Информация о пользователе обновлена.</span>")
 
 	return
 
@@ -288,7 +288,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 		return
 	owner = new_name
 
-	name = "[new_name]'s [initial(name)]"
+	name = "[initial(name)] ([new_name])"
 	if(camera)
 		camera.name = name
 		camera.c_tag = name
@@ -299,9 +299,9 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 /obj/item/device/communicator/Destroy()
 	for(var/mob/living/voice/voice in contents)
 		voice_mobs.Remove(voice)
-		to_chat(voice, "<span class='danger'>[bicon(src)] Connection timed out with remote host.</span>")
+		to_chat(voice, "<span class='danger'>[bicon(src)] Потеряно соединение с удаленным хостом.</span>")
 		qdel(voice)
-	close_connection(reason = "Connection timed out")
+	close_connection(reason = "Соединение потеряно.")
 
 	//Clean up all references we might have to others
 	communicating.Cut()
@@ -347,9 +347,9 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 //It's the 26th century. We should have smart watches by now.
 /obj/item/device/communicator/watch
-	name = "communicator watch"
-	desc = "A personal device used to enable long range dialog between two people, utilizing existing telecommunications infrastructure to allow \
-	communications across different stations, planets, or even star systems. You can wear this one on your wrist!"
+	name = "наручный коммуникатор"
+	desc = "Личный девайс, позволяющий двум пользователям общаться несмотря на огромные расстояния. Текущая инфраструктура телекоммуникаций позволяет \
+	поддерживать связь на разных станциях, планетах, и даже звездных системах. Этот коммуникатор можно носить на запастье!"
 	icon = 'icons/obj/device.dmi'
 	icon_state = "commwatch"
 	slot_flags = SLOT_GLOVES

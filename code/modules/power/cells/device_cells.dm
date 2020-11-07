@@ -1,7 +1,7 @@
 //currently only used by energy-type guns, that may change in the future.
 /obj/item/weapon/cell/device
-	name = "device power cell"
-	desc = "A small power cell designed to power handheld devices."
+	name = "батарейка для девайсов"
+	desc = "Небольшая батарейка для зарядки ручных приборов."
 	icon_state = "dcell"
 	item_state = "egg6"
 	w_class = ITEMSIZE_SMALL
@@ -14,8 +14,8 @@
 	preserve_item = 1
 
 /obj/item/weapon/cell/device/weapon
-	name = "weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry."
+	name = "батарейка для оружия"
+	desc = "Небольшая батарейка для зарядки ручного оружия."
 	icon_state = "wcell"
 	maxcharge = 2400
 	charge_amount = 20
@@ -26,8 +26,8 @@
 	update_icon()
 
 /obj/item/weapon/cell/device/weapon/recharge
-	name = "self-charging weapon power cell"
-	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."
+	name = "батарейка для оружия с самоподзарядкой"
+	desc = "Небольшая батарейка для зарядки ручного оружия. Эта батарейка подзаряжает себя самостоятельно."
 //	icon_state = "wcell" //TODO: Different sprite
 	self_recharge = TRUE
 	charge_amount = 120

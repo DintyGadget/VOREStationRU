@@ -807,8 +807,8 @@
 
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
-	name = "Maid Outfit"
-	desc = "A french maid outfit made ironically in Gaia's version of the far east."
+	name = "наряд горничной"
+	desc = "Наряд французской горничной по подобию гайянских."
 
 //JoanRisu:Joan Risu
 /obj/item/clothing/head/helmet/space/fluff/joan
@@ -896,48 +896,48 @@
 	item_state = ""
 
 /obj/item/clothing/under/rank/khi/cmd //Command version
-	name = "KHI command suit"
-	desc = "Kitsuhana Heavy Industries uniform. An extra-comfortable command one, at that. I guess if you DON'T want anarchy for some reason."
+	name = "костюм командования KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. Очень удобная униформа командования, даже. На случай, если по какой-то причине Вы не стремитесь к анархии."
 	icon_state = "khi_uniform_cmd_i"
 	item_state = "khi_uniform_cmd"
 	worn_state = "khi_uniform_cmd"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/sec //Security version
-	name = "KHI security suit"
-	desc = "Kitsuhana Heavy Industries uniform. This one has angry red security stripes. Keepin' the peace in style."
+	name = "униформа службы безопасности KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. На этой яростные красные полосы службы безопасности. Стильно, правопорядочно."
 	icon_state = "khi_uniform_sec_i"
 	item_state = "khi_uniform_sec"
 	worn_state = "khi_uniform_sec"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/med //Medical version
-	name = "KHI medical suit"
-	desc = "Kitsuhana Heavy Industries uniform. The medical version. Why not just get a new body, anyway?"
+	name = "костюм врача KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. Медицинская вариация. Почему бы и вовсе не приобрести новое тело?"
 	icon_state = "khi_uniform_med_i"
 	item_state = "khi_uniform_med"
 	worn_state = "khi_uniform_med"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/khi/eng //Engineering version
-	name = "KHI engineering suit"
-	desc = "Kitsuhana Heavy Industries uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time."
+	name = "костюм инженера KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. На инженера, судя по виду. Выстраиваем будущее, катастрофа за катастрофой."
 	icon_state = "khi_uniform_eng_i"
 	item_state = "khi_uniform_eng"
 	worn_state = "khi_uniform_eng"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
 /obj/item/clothing/under/rank/khi/sci //Science version
-	name = "KHI science suit"
-	desc = "Kitsuhana Heavy Industries uniform. For performing science in, based on the color! Only SCIENCE can save us now."
+	name = "костюм ученого KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. Судя по цвету, для проведения всяких научных штук! Нас теперь спасёт только сила науки."
 	icon_state = "khi_uniform_sci_i"
 	item_state = "khi_uniform_sci"
 	worn_state = "khi_uniform_sci"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/fluff/aronai //Aro fluff version
-	name = "KHI meditech suit"
-	desc = "Kitsuhana Heavy Industries uniform. This one has the colors of a resleeving or mnemonics engineer. It has 'Aronai' written inside the top."
+	name = "костюм биоинженера KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. На этом костюме цвета инженера ресливинга. На внутренней стороне верха написано 'Aronai'."
 	icon_state = "khi_uniform_aro_i"
 	item_state = "khi_uniform_aro"
 	worn_state = "khi_uniform_aro"
@@ -1016,8 +1016,8 @@
 
 
 /obj/item/clothing/shoes/black/cuffs
-	name = "gilded leg wraps"
-	desc = "Ankle coverings for digitigrade creatures. Gilded!"
+	name = "позолоченные обмотки"
+	desc = "Обмотки для лодышек пальцеходящих существ. Позолоченные!"
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "gildedcuffs"
 
@@ -1027,13 +1027,13 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/shoes/black/cuffs/red
-	name = "red leg wraps"
-	desc = "Ankle coverings for digitigrade creatures. Red!"
+	name = "красные обмотки"
+	desc = "Обмотки для лодышек пальцеходящих существ. Красные!"
 	icon_state = "redcuffs"
 
 /obj/item/clothing/shoes/black/cuffs/blue
-	name = "blue leg wraps"
-	desc = "Ankle coverings for digitigrade creatures. Blue!"
+	name = "синие обмотки"
+	desc = "Обмотки для лодышек пальцеходящих существ. Синие!"
 	icon_state = "bluecuffs"
 
 //bwoincognito:Octavious Ward

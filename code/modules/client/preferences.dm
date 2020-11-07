@@ -34,19 +34,19 @@ datum/preferences
 	var/be_random_name = 0				//whether we are a random name every round
 	var/nickname						//our character's nickname
 	var/age = 30						//age of character
-	var/spawnpoint = "Arrivals Shuttle" //where this character will spawn (0-2).
+	var/spawnpoint = "Шаттл Прибытия"	 //where this character will spawn (0-2).
 	var/b_type = "A+"					//blood type (not-chooseable)
 	var/backbag = 2						//backpack type
 	var/pdachoice = 1					//PDA type
-	var/h_style = "Bald"				//Hair type
+	var/h_style = "Лысая голова"				//Hair type
 	var/r_hair = 0						//Hair color
 	var/g_hair = 0						//Hair color
 	var/b_hair = 0						//Hair color
-	var/grad_style = "none"				//Gradient style
+	var/grad_style = "Нет"				//Gradient style
 	var/r_grad = 0						//Gradient color
 	var/g_grad = 0						//Gradient color
 	var/b_grad = 0						//Gradient color
-	var/f_style = "Shaved"				//Face hair type
+	var/f_style = "Бритое лицо"				//Face hair type
 	var/r_facial = 0					//Face hair color
 	var/g_facial = 0					//Face hair color
 	var/b_facial = 0					//Face hair color
@@ -72,7 +72,7 @@ datum/preferences
 	var/synth_markings = 1				//Enable/disable markings on synth parts. //VOREStation Edit - 1 by default
 
 		//Some faction information.
-	var/home_system = "Нету"           //System of birth.
+	var/home_system = "Нет"           //System of birth.
 	var/citizenship = "Нет"            //Current home system.
 	var/faction = "Нет"                //General associated faction.
 	var/religion = "Нет"               //Religious association.
@@ -216,11 +216,11 @@ datum/preferences
 		if(-1000 to 3)
 			return "Ужасно"
 		if(4 to 6)
-			return "Ниже Среднего"
+			return "Ниже cреднего"
 		if(7 to 10)
 			return "Средний"
 		if(11 to 14)
-			return "Выше Среднего"
+			return "Выше cреднего"
 		if(15 to 18)
 			return "Исключительный"
 		if(19 to 24)
@@ -244,14 +244,14 @@ datum/preferences
 
 	if(path)
 		dat += "Слоты - "
-		dat += "<a href='?src=\ref[src];load=1'>Загр. слот</a> - "
-		dat += "<a href='?src=\ref[src];save=1'>Сохр. слот</a> - "
-		dat += "<a href='?src=\ref[src];reload=1'>Обнов. слот</a> - "
+		dat += "<a href='?src=\ref[src];load=1'>Загрузить слот</a> - "
+		dat += "<a href='?src=\ref[src];save=1'>Сохранить слот</a> - "
+		dat += "<a href='?src=\ref[src];reload=1'>Обновить слот</a> - "
 		dat += "<a href='?src=\ref[src];resetslot=1'>Сбросить слот</a> - "
-		dat += "<a href='?src=\ref[src];copy=1'>Копир. слот</a>"
+		dat += "<a href='?src=\ref[src];copy=1'>Копировать слот</a>"
 
 	else
-		dat += "Пожалуйста, создайте учетную запись, чтобы сохранить ваши настройки."
+		dat += "Пожалуйста, создайте учетную запись, чтобы сохранить Ваши настройки."
 
 	dat += "<br>"
 	dat += player_setup.header()
@@ -261,7 +261,7 @@ datum/preferences
 	dat += "</html></body>"
 	//user << browse(dat, "window=preferences;size=635x736")
 	winshow(user, "preferences_window", TRUE)
-	var/datum/browser/popup = new(user, "preferences_browser", "Character Setup", 800, 800)
+	var/datum/browser/popup = new(user, "preferences_browser", "Настройка Персонажа", 800, 800)
 	popup.set_content(dat)
 	popup.open(FALSE) // Skip registring onclose on the browser pane
 	onclose(user, "preferences_window", src) // We want to register on the window itself
@@ -403,7 +403,7 @@ datum/preferences
 		for(var/i=1, i<= config.character_slots, i++)
 			S.cd = "/character[i]"
 			S["real_name"] >> name
-			if(!name)	name = "Character[i]"
+			if(!name)	name = "Персонаж[i]"
 			if(i==default_slot)
 				name = "<b>[name]</b>"
 			dat += "<a href='?src=\ref[src];changeslot=[i]'>[name]</a><br>"
@@ -411,7 +411,7 @@ datum/preferences
 	dat += "<hr>"
 	dat += "</center></tt>"
 	//user << browse(dat, "window=saves;size=300x390")
-	panel = new(user, "Character Slots", "Character Slots", 300, 390, src)
+	panel = new(user, "Слоты Персонажей", "Слоты Персонажей", 300, 390, src)
 	panel.set_content(dat)
 	panel.open()
 
@@ -426,18 +426,18 @@ datum/preferences
 	var/savefile/S = new /savefile(path)
 	if(S)
 		dat += "<b>Выберите слот персонажа для перезаписи.</b><br>"
-		dat += "<b>Затем вам нужно будет сохранить, чтобы подтвердить.</b><hr>"
+		dat += "<b>Затем Вам нужно будет сохраниться, чтобы подтвердить.</b><hr>"
 		var/name
 		for(var/i=1, i<= config.character_slots, i++)
 			S.cd = "/character[i]"
 			S["real_name"] >> name
-			if(!name)	name = "Character[i]"
+			if(!name)	name = "Персонаж[i]"
 			if(i==default_slot)
 				name = "<b>[name]</b>"
 			dat += "<a href='?src=\ref[src];overwrite=[i]'>[name]</a><br>"
 
 	dat += "<hr>"
 	dat += "</center></tt>"
-	panel = new(user, "Character Slots", "Character Slots", 300, 390, src)
+	panel = new(user, "Слоты Персонажей", "Слоты Персонажей", 300, 390, src)
 	panel.set_content(dat)
 	panel.open()

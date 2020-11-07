@@ -4,7 +4,7 @@
 /obj/item/clothing/var/hides_bulges = FALSE // OwO wats this?
 
 /obj/item/clothing/under/permit
-	name = "разрешение на наготу"
+	name = "лицензия на наготу"
 	desc = "Эта карточка позволяет носителю исполнять свои обязанности без рабочей формы. Обычно выдаётся работинкам, которым нечего скрывать."
 	icon = 'icons/obj/card.dmi'
 	icon_state = "guest"

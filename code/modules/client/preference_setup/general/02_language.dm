@@ -68,7 +68,7 @@
 			if(!available_languages.len)
 				alert(user, "Нет дополнительных языков, доступных для выбора.")
 			else
-				var/new_lang = input(user, "Выберите дополнительный язык:", "Character Generation", null) as null|anything in available_languages
+				var/new_lang = input(user, "Выберите дополнительный язык:", "Редактирование Персонажа", null) as null|anything in available_languages
 				if(new_lang && pref.alternate_languages.len < S.num_alternate_languages)
 					pref.alternate_languages |= new_lang
 					return TOPIC_REFRESH
@@ -80,13 +80,13 @@
 			char = input("Введите один специальный символ.\nВы можете повторно выбрать те же символы.\nСимволы, уже используемые для радио: ; : .\nСимволы, уже используемые для спец. команд Say: ! * ^", "Enter Character - [3 - keys.len] remaining") as null|text
 			if(char)
 				if(length(char) > 1)
-					alert(user, "Разрешены только одиночные символы.", "Error", "Ok")
+					alert(user, "Разрешены только одиночные символы.", "Ошибка", "Ок")
 				else if(char in list(";", ":", "."))
-					alert(user, "Этот символ уже используется радио.", "Error", "Ok")
+					alert(user, "Этот символ уже используется радио.", "Ошибка", "Ок")
 				else if(char in list("!","*","^","-"))
-					alert(user, "Этот символ уже используется Say.", "Error", "Ok")
+					alert(user, "Этот символ уже используется глаголом Сказать.", "Ошибка", "Ок")
 				else if(contains_az09(char))
-					alert(user, "Этот символ не является специальным.", "Error", "Ok")
+					alert(user, "Этот символ не является специальным.", "Ошибка", "Ок")
 				else
 					keys.Add(char)
 		while(char && keys.len < 3)

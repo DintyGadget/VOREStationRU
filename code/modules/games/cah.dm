@@ -9,7 +9,7 @@
 	var/blanks = 5
 
 /obj/item/weapon/deck/cah/black
-	name = "\improper CAG deck (black)"
+	name = "черная колода карт Карт Против Галактики"
 	desc = "Не выходящая из моды словесная игра: Карты Против Галактики. Предупреждение: может содержать остатки разрушенных четвертых стен. Это черная колода."
 	icon_state = "cag_black"
 	blanks = 0

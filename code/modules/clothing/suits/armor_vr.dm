@@ -105,8 +105,8 @@
 
 // Costume Versions Here
 /obj/item/clothing/suit/armor/combat/crusader_costume
-	name = "crusader costume armor"
-	desc = "ye olde knight, risen again."
+	name = "костюм крестоносца"
+	desc = "Старый рыцарь восстал вновь."
 	icon_state = "crusader"
 	icon = 'icons/obj/clothing/knights_vr.dmi'
 	icon_override = 'icons/obj/clothing/knights_vr.dmi'
@@ -115,7 +115,7 @@
 	siemens_coefficient = 1
 
 /obj/item/clothing/suit/armor/combat/crusader_costume/bedevere
-	name = "bedevere's costume armor"
-	desc = "ye olde knight, risen again."
+	name = "костюм бедивера"
+	desc = "Старый рыцарь восстал вновь."
 	icon_state = "bedevere"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO

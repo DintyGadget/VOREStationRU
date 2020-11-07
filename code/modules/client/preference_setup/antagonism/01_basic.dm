@@ -44,17 +44,17 @@ var/global/list/uplink_locations = list("ПДА", "Гарнитура", "Нич�
 		return TOPIC_REFRESH
 
 	if(href_list["exploitable_record"])
-		var/exploitmsg = sanitize(input(user,"Напишите компромат на себя здесь.","Exploitable Information", html_decode(pref.exploit_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
+		var/exploitmsg = sanitize(input(user,"Напишите компромат на себя здесь.","Компромат", html_decode(pref.exploit_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
 		if(!isnull(exploitmsg) && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 			pref.exploit_record = exploitmsg
 			return TOPIC_REFRESH
 
 	if(href_list["antagfaction"])
-		var/choice = input(user, "Пожалуйста, выберите свою антагонистическую фракцию.", "Character Preference", pref.antag_faction) as null|anything in antag_faction_choices + list("None","Other")
+		var/choice = input(user, "Пожалуйста, выберите свою антагонистическую фракцию.", "Редактирование Персонажа", pref.antag_faction) as null|anything in antag_faction_choices + list("Нет","Другое")
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
-		if(choice == "Other")
-			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название Вашей фракции.", "Character Preference")  as text|null, MAX_NAME_LEN)
+		if(choice == "Другое")
+			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название Вашей фракции.", "Редактирование Персонажа")  as text|null, MAX_NAME_LEN)
 			if(raw_choice)
 				pref.antag_faction = raw_choice
 		else
@@ -62,7 +62,7 @@ var/global/list/uplink_locations = list("ПДА", "Гарнитура", "Нич�
 		return TOPIC_REFRESH
 
 	if(href_list["antagvis"])
-		var/choice = input(user, "Пожалуйста, установите уровень своей видимости.", "Character Preference", pref.antag_vis) as null|anything in antag_visiblity_choices
+		var/choice = input(user, "Пожалуйста, установите уровень своей видимости.", "Редактирование Персонажа", pref.antag_vis) as null|anything in antag_visiblity_choices
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		else

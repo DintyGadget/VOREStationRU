@@ -51,7 +51,7 @@
 
 /datum/category_item/player_setup_item/general/flavor/content(var/mob/user)
 	. += "<b>Флавор:</b><br>"
-	. += "<a href='?src=\ref[src];flavor_text=open'>Установить описание</a><br/>"
+	. += "<a href='?src=\ref[src];flavor_text=open'>Установить описание персонажа</a><br/>"
 	. += "<a href='?src=\ref[src];flavour_text_robot=open'>Установить описание робота</a><br/>"
 
 /datum/category_item/player_setup_item/general/flavor/OnTopic(var/href,var/list/href_list, var/mob/user)
@@ -59,7 +59,7 @@
 		switch(href_list["flavor_text"])
 			if("open")
 			if("general")
-				var/msg = sanitize(input(usr,"Дайте общее описание Вашего персонажа. Оно будет показано независимо от одежды.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]])) as message, extra = 0)	//VOREStation Edit: separating out OOC notes
+				var/msg = sanitize(input(usr,"Дайте общее описание Вашего персонажа. Оно будет показано независимо от одежды.","Редактирование Флавора",html_decode(pref.flavor_texts[href_list["flavor_text"]])) as message, extra = 0)	//VOREStation Edit: separating out OOC notes
 				if(CanUseTopic(user))
 					pref.flavor_texts[href_list["flavor_text"]] = msg
 			else
