@@ -11,7 +11,7 @@
 	var/generate_gender = FALSE
 	var/generate_id_gender = FALSE
 
-	var/to_wear_hair = "Bald"
+	var/to_wear_hair = "Лысая голова"
 
 	var/to_wear_helmet = /obj/item/clothing/head/welding
 	var/to_wear_glasses = /obj/item/clothing/glasses/threedglasses

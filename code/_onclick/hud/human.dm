@@ -14,7 +14,7 @@
 	var/other = list()
 	var/hotkeybuttons = list()
 	var/slot_info = list()
-	
+
 	HUD.adding = adding
 	HUD.other = other
 	HUD.hotkeybuttons = hotkeybuttons //These can be disabled for hotkey users
@@ -333,8 +333,8 @@
 
 /mob/living/carbon/human/verb/toggle_hotkey_verbs()
 	set category = "OOC"
-	set name = "Toggle hotkey buttons"
-	set desc = "This disables or enables the user interface buttons which can be used with hotkeys."
+	set name = "Переключить Хоткейные Кнопки"
+	set desc = "Включает или отключает на интерфейсе кнопки, которые можно использовать при помощи хоткеев."
 
 	if(hud_used.hotkey_ui_hidden)
 		client.screen += hud_used.hotkeybuttons
@@ -345,9 +345,9 @@
 
 //Used for new human mobs created by cloning/goleming/etc.
 /mob/living/carbon/human/proc/set_cloned_appearance()
-	f_style = "Shaved"
+	f_style = "Бритое лицо"
 	if(dna.species == "Human") //no more xenos losing ears/tentacles
-		h_style = pick("Bedhead", "Bedhead 2", "Bedhead 3")
+		h_style = pick("Отлежанные", "Отлежанные 2", "Отлежанные 3")
 	all_underwear.Cut()
 	regenerate_icons()
 

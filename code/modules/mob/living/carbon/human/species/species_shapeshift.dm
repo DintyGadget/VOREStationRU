@@ -112,7 +112,7 @@ var/list/wrapped_species_by_ref = list()
 	visible_message("<span class='notice'>\The [src]'s form contorts subtly.</span>")
 	if(valid_hairstyles.len)
 		var/new_hair = input("Select a hairstyle.", "Shapeshifter Hair") as null|anything in valid_hairstyles
-		change_hair(new_hair ? new_hair : "Bald")
+		change_hair(new_hair ? new_hair : "Лысая голова")
 	if(valid_gradstyles.len)
 		var/new_hair = input("Select a hair gradient style.", "Shapeshifter Hair") as null|anything in valid_gradstyles
 		change_hair_gradient(new_hair ? new_hair : "None")

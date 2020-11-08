@@ -158,12 +158,12 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	// Hair
 	// FIXME:  Species-specific defaults pls
 	if(!character.h_style)
-		character.h_style = "Skinhead"
+		character.h_style = "Скинхед"
 	var/hair = hair_styles_list.Find(character.h_style)
 
 	// Facial Hair
 	if(!character.f_style)
-		character.f_style = "Shaved"
+		character.f_style = "Бритое лицо"
 	var/beard	= facial_hair_styles_list.Find(character.f_style)
 
 
