@@ -645,12 +645,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	else if(href_list["limbs"])
 
-		var/list/limb_selection_list = list("Левая нога","Правая нога","Левая рука","Правая рука","Левая стопа","Правая стопа","Левая кисть","Правая кисть","Всё тело")
+		var/list/limb_selection_list = list("Левая нога","Правая нога","Левая рука","Правая рука","Левая стопа","Правая стопа","Левая кисть","Правая кисть","Все тело")
 
 		// Full prosthetic bodies without a brain are borderline unkillable so make sure they have a brain to remove/destroy.
 		var/datum/species/current_species = GLOB.all_species[pref.species]
 		if(!current_species.has_organ["brain"])
-			limb_selection_list -= "Всё тело"
+			limb_selection_list -= "Все тело"
 		else if(pref.organ_data[BP_TORSO] == "cyborg")
 			limb_selection_list |= "Голова"
 

@@ -15,7 +15,7 @@
 		..(speaker,message)
 
 /datum/language/corticalborer
-	name = "Cortical Link"
+	name = "Связь Кортиков"
 	desc = "Cortical borers possess a strange link between their tiny minds."
 	speech_verb = "sings"
 	ask_verb = "sings"
@@ -86,7 +86,7 @@
 	flags = RESTRICTED | HIVEMIND
 
 /datum/language/xenocommon
-	name = "Xenomorph"
+	name = "Ксеноморфский"
 	colour = "alien"
 	desc = "The common tongue of the xenomorphs."
 	speech_verb = "hisses"
@@ -97,7 +97,7 @@
 	syllables = list("sss","sSs","SSS")
 
 /datum/language/xenos
-	name = "Hivemind"
+	name = "Коллективный Разум"
 	desc = "Xenomorphs have the strange ability to commune over a psychic hivemind."
 	speech_verb = "hisses"
 	ask_verb = "hisses"

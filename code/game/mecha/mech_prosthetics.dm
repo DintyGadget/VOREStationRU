@@ -13,8 +13,8 @@
 
 	// Prosfab specific stuff
 	var/manufacturer = null
-	var/species_types = list("Human")
-	var/species = "Human"
+	var/species_types = list("Человек")
+	var/species = "Человек"
 
 	loading_icon_state = "prosfab_loading"
 
@@ -108,7 +108,7 @@
 
 	switch(action)
 		if("species")
-			var/new_species = input(usr, "Select a new species", "Prosfab Species Selection", "Human") as null|anything in species_types
+			var/new_species = input(usr, "Select a new species", "Prosfab Species Selection", "Человек") as null|anything in species_types
 			if(new_species && tgui_status(usr, state) == STATUS_INTERACTIVE)
 				species = new_species
 			return

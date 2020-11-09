@@ -6,7 +6,7 @@
 
 /datum/species/xenochimera //Scree's race.
 	name = SPECIES_XENOCHIMERA
-	name_plural = "Xenochimeras"
+	name_plural = "Ксенохимеры"
 	icobase = 'icons/mob/human_races/r_xenochimera.dmi'
 	deform = 'icons/mob/human_races/r_def_xenochimera.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -14,11 +14,11 @@
 	slowdown = -0.2		//scuttly, but not as scuttly as a tajara or a teshari.
 	brute_mod = 0.8		//About as tanky to brute as a Unathi. They'll probably snap and go feral when hurt though.
 	burn_mod =  1.15	//As vulnerable to burn as a Tajara.
-	base_species = "Xenochimera"
+	base_species = "Ксенохимера"
 	selects_bodytype = TRUE
 
 	num_alternate_languages = 2
-	secondary_langs = list("Sol Common")
+	secondary_langs = list("Сольский Общий")
 	//color_mult = 1 //It seemed to work fine in testing, but I've been informed it's unneeded.
 	tail = "tail" //Scree's tail. Can be disabled in the vore tab by choosing "hide species specific tail sprite"
 	icobase_tail = 1
@@ -360,7 +360,7 @@
 /////////////////////
 /datum/species/spider //These actually look pretty damn spooky!
 	name = SPECIES_VASILISSAN
-	name_plural = "Vasilissans"
+	name_plural = "Василиссаны"
 	icobase = 'icons/mob/human_races/r_spider.dmi'
 	deform = 'icons/mob/human_races/r_def_spider.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -426,7 +426,7 @@
 
 /datum/species/werebeast
 	name = SPECIES_WEREBEAST
-	name_plural = "Werebeasts"
+	name_plural = "Оборотни"
 	icobase = 'icons/mob/human_races/r_werebeast.dmi'
 	deform = 'icons/mob/human_races/r_def_werebeast.dmi'
 	icon_template = 'icons/mob/human_races/r_werebeast.dmi'
@@ -443,7 +443,7 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_CANILUNZT)
 	name_language = LANGUAGE_CANILUNZT
-	primitive_form = "Wolpin"
+	primitive_form = "Вольпин"
 	color_mult = 1
 	icon_height = 64
 

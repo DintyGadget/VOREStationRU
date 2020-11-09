@@ -32,7 +32,7 @@
 		to_chat(src,"<span class='warning'>Вам недоступна данная раса.</span>")
 
 	//Custom species checks
-	if (client?.prefs?.species == "Custom Species")
+	if (client?.prefs?.species == "Собственная Раса")
 
 		//Didn't name it
 		if(!client?.prefs?.custom_species)

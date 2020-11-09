@@ -218,7 +218,7 @@
 		// Note that list() here is intended
 		// Returning a raw /datum/multilingual_say_piece is supported, but only for hivemind languages
 		// What we actually want is a normal say piece that's all noise lang
-		return list(new /datum/multilingual_say_piece(GLOB.all_languages["Noise"], trim(strip_prefixes(copytext_char(message, 2)))))
+		return list(new /datum/multilingual_say_piece(GLOB.all_languages["Шум"], trim(strip_prefixes(copytext_char(message, 2)))))
 
 	// Scan the message for prefixes
 	var/list/prefix_locations = find_valid_prefixes(message)

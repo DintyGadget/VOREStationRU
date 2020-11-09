@@ -346,7 +346,7 @@
 //Used for new human mobs created by cloning/goleming/etc.
 /mob/living/carbon/human/proc/set_cloned_appearance()
 	f_style = "Бритое лицо"
-	if(dna.species == "Human") //no more xenos losing ears/tentacles
+	if(dna.species == "Человек") //no more xenos losing ears/tentacles
 		h_style = pick("Отлежанные", "Отлежанные 2", "Отлежанные 3")
 	all_underwear.Cut()
 	regenerate_icons()

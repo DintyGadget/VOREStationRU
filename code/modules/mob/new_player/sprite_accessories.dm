@@ -1614,25 +1614,25 @@
 
 	//Una specific stuff
 /datum/sprite_accessory/marking/una_face
-	name = "Унатхи: Лицо"
+	name = "Унати: Лицо"
 	icon_state = "una_face"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/una_facelow
-	name = "Унатхи: Лицо (ниже)"
+	name = "Унати: Лицо (ниже)"
 	icon_state = "una_facelow"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/una_scutes
-	name = "Унатхи: Грудь"
+	name = "Унати: Грудь"
 	icon_state = "una_scutes"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/una_paw_socks
-	name = "Унатхи: Окрас носков"
+	name = "Унати: Окрас носков"
 	icon_state = "una_pawsocks"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
 	species_allowed = list(SPECIES_UNATHI)

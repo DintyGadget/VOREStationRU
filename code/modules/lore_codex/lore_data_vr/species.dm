@@ -17,7 +17,7 @@
 		)
 
 /datum/lore/codex/page/human/add_content()
-	name = "Human"
+	name = "Человек"
 	keywords += list("Humanity")
 	data = "Humans are a race of 'ape'-like creatures from the continental planet Earth in the Sol system. They are the primary driving \
 	force for rapid space expansion, owing to their strong, expansionist central government and opportunistic [quick_link("TSC","Trans-Stellar Corporations")]. \
@@ -29,7 +29,7 @@
 	of other species."
 
 /datum/lore/codex/page/skrell
-	name = "Skrell"
+	name = "Скрелл"
 	keywords = list("Skrellian")
 	data = "The Skrell are a species of amphibious humanoids, distinguished by their gelatinous appearance and head tentacles. \
 	Skrell come from the world of Sirisai (called Qerr'balak by Skrell), a humid planet with plenty of swamps and jungles. Currently more technologically advanced \
@@ -41,7 +41,7 @@
 	outpaced by the humans. For humans, they were their first contact sentient species, and are their longest, and closest, ally in space."
 
 /datum/lore/codex/page/unathi
-	name = "Unathi"
+	name = "Унати"
 	data = "The Unathi are a race of tall, reptilian humanoids that possess both crocodile-like and serpent-like features. Their scales are hard and \
 	plate-like, save for the softer ones that line the inside of their legs, armpits, and groin. Originating from the planet of Moghes, the Unathi \
 	live in an extremely religious society. The Unathi believe in and closely follow a set of Decrees laid out in their belief system, The Unity. \
@@ -54,7 +54,7 @@
 	common on the outskirts of SolGov's grasp, such as systems like Virgo-Erigone."
 
 /datum/lore/codex/page/tajaran
-	name = "Tajaran"
+	name = "Таджара"
 	keywords = list("Tajara")
 	data = "The Tajara are a race of humanoid mammalian aliens from Meralar, the fourth planet of the Rarkajar star system. Thickly furred and protected \
 	from cold, they thrive on their subarctic planet, where the only terran temperate areas spread across the equator and tropical belt. \
@@ -64,7 +64,7 @@
 	Among these bonds, Humans stand out as valued trade partners and maybe even a friend."
 
 /datum/lore/codex/page/diona/add_content()
-	name = "Diona"
+	name = "Диона"
 	keywords += list("Dionaea")
 	data = "The Dionaea are a group of omnivorous, slow-metabolism plantlike organisms that are in fact clusters of individual, smaller organisms. \
 	They exhibit a high degree of structural flexibility, and come in a wide variety of shapes and colors to reflect the intelligence of each individual \
@@ -79,7 +79,7 @@
 	Introduced by the Skrell, and quite slow and peaceful, the Diona share good relations with the other species."
 
 /datum/lore/codex/page/akula/add_content()
-	name = "Akula"
+	name = "Акула"
 	keywords += list("Akula")
 	data = "The Akula are a species of amphibious humanoids like the [quick_link("Skrell")], but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed to \
@@ -92,7 +92,7 @@
 	[quick_link("Virgo-Prime")] nearly impossible if it were not for Skrellean technology to aid them."
 
 /datum/lore/codex/page/nevrean/add_content()
-	name = "Nevrean"
+	name = "Невреан"
 	keywords += list("Nevrean")
 	data = "An avian species hailing from the planet Eltus in the Vilous system, characterised by their long whiplike \
 	tail-feathers. The species is generally matriarchal, with females tending towards duller, brown coloration and \
@@ -104,7 +104,7 @@
 	and folded under their jumpsuit sleeves. "
 
 /datum/lore/codex/page/sergal/add_content()
-	name = "Sergal"
+	name = "Сергал"
 	keywords += list("Sergal")
 	data = "There are two subspecies of Sergal, Southern and Northern. Northern sergals are a highly aggressive race that \
 	lives in the plains and tundra of their homeworld. They are characterized by long, fluffy fur bodies with cold colors; usually with \
@@ -118,7 +118,7 @@
 	lived to 5000. Although General Rain's historical existence is disputed, she is nonetheless a symbol of the Sergal's warrior culture."
 
 /datum/lore/codex/page/vulpkanin/add_content()
-	name = "Vulpkanin"
+	name = "Вульпканин"
 	keywords += list("Vulpkanin")
 	data = "Vulpkanin or \"Vulpa\" are a species of sharp-witted canid bipeds residing on the planet Altam just barely \
 	within the binary Vazzend system. Their politically de-centralized society and independent natures have led them \
@@ -128,7 +128,7 @@
 	positioning and ear twitches to communicate intent."
 
 /datum/lore/codex/page/zorren/add_content()
-	name = "Zorren"
+	name = "Зоррен"
 	keywords += list("Zorren")
 	data = "The fox-like Zorren are native to [quick_link("Virgo-Prime")], however there are two distinct varieties of \
 	Zorren one with large ears and shorter fur, and the other with longer fur that is a bit more vibrant. The \
@@ -143,7 +143,7 @@
 
 // Bird lore
 /datum/lore/codex/category/teshari/add_content()
-	name = "Teshari"
+	name = "Тешари"
 	keywords += list("Teshari")
 	data = "The Teshari are reptilian pack predators from the [quick_link("Skrell")] homeworld, Sirisai (Qerr'balak). While they evolved alongside the Skrell, their interactions with them \
 	tended to be confused and violent, and until peaceful contact was made they largely stayed in their territories on and around the poles, in tundral \

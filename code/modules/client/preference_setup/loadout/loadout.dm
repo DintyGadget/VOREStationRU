@@ -44,7 +44,7 @@ var/list/gear_datums = list()
 /datum/category_item/player_setup_item/loadout
 	name = "Loadout"
 	sort_order = 1
-	var/current_tab = "General"
+	var/current_tab = "Общее"
 
 /datum/category_item/player_setup_item/loadout/load_character(var/savefile/S)
 	from_file(S["gear_list"], pref.gear_list)
@@ -251,7 +251,7 @@ var/list/gear_datums = list()
 	var/slot               //Slot to equip to.
 	var/list/allowed_roles //Roles that can spawn with this item.
 	var/whitelisted        //Term to check the whitelist for..
-	var/sort_category = "General"
+	var/sort_category = "Общее"
 	var/list/gear_tweaks = list() //List of datums which will alter the item after it has been spawned.
 	var/exploitable = 0		//Does it go on the exploitable information list?
 	var/type_category = null

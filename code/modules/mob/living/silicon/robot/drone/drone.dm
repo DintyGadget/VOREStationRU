@@ -97,9 +97,9 @@ var/list/mob_hat_cache = list()
 	..()
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
-	remove_language("Robot Talk")
-	add_language("Robot Talk", 0)
-	add_language("Drone Talk", 1)
+	remove_language("Роботический")
+	add_language("Роботический", 0)
+	add_language("Дроновое Общение", 1)
 	serial_number = rand(0,999)
 
 	//They are unable to be upgraded, so let's give them a bit of a better battery.

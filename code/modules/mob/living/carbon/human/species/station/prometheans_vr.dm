@@ -6,12 +6,12 @@
 	gluttonous = 0
 	water_damage_mod = 0		//No water damage
 	valid_transform_species = list(
-		"Human", "Unathi", "Tajara", "Skrell",
-		"Diona", "Teshari", "Monkey","Sergal",
-		"Akula","Nevrean","Zorren",
-		"Fennec", "Vulpkanin", "Vasilissan",
-		"Rapala", "Neaera", "Stok", "Farwa", "Sobaka",
-		"Wolpin", "Saru", "Sparra")
+		"Человек", "Унати", "Таджара", "Скрелл",
+		"Диона", "Тешари", "Мартышка","Сергал",
+		"Акула","Невреан","Зоррен",
+		"Фенек", "Вульпканин", "Василиссан",
+		"Рапала", "Неера", "Сток", "Фарва", "Собак",
+		"Вольпин", "Сару", "Спарра")
 
 	color_mult = 1
 	mob_size = MOB_MEDIUM //As of writing, original was MOB_SMALL - Allows normal swapping

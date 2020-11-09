@@ -1,6 +1,6 @@
 /datum/species/sergal
 	name = SPECIES_SERGAL
-	name_plural = "Sergals"
+	name_plural = "Сергалы"
 	icobase = 'icons/mob/human_races/r_sergal.dmi'
 	deform = 'icons/mob/human_races/r_def_sergal.dmi'
 	tail = "tail"
@@ -63,7 +63,7 @@
 
 /datum/species/akula
 	name = SPECIES_AKULA
-	name_plural = "Akula"
+	name_plural = "Акулы"
 	icobase = 'icons/mob/human_races/r_akula.dmi'
 	deform = 'icons/mob/human_races/r_def_akula.dmi'
 	tail = "tail"
@@ -96,7 +96,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
-	primitive_form = "Sobaka"
+	primitive_form = "Собак"
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -110,7 +110,7 @@
 
 /datum/species/nevrean
 	name = SPECIES_NEVREAN
-	name_plural = "Nevreans"
+	name_plural = "Невреаны"
 	icobase = 'icons/mob/human_races/r_nevrean.dmi'
 	deform = 'icons/mob/human_races/r_def_nevrean.dmi'
 	tail = "tail"
@@ -140,7 +140,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
-	primitive_form = "Sparra"
+	primitive_form = "Спарра"
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -156,7 +156,7 @@
 
 /datum/species/hi_zoxxen
 	name = SPECIES_ZORREN_HIGH
-	name_plural = "Zorren"
+	name_plural = "Зоррены"
 	icobase = 'icons/mob/human_races/r_fox_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_fox.dmi'
 	tail = "tail"
@@ -199,14 +199,14 @@
 
 /datum/species/vulpkanin
 	name = SPECIES_VULPKANIN
-	name_plural = "Vulpkanin"
+	name_plural = "Вульпканины"
 	icobase = 'icons/mob/human_races/r_vulpkanin.dmi'
 	deform = 'icons/mob/human_races/r_vulpkanin.dmi'
 //	path = /mob/living/carbon/human/vulpkanin
 //	default_language = "Sol Common"
 	secondary_langs = list(LANGUAGE_CANILUNZT)
 	name_language = LANGUAGE_CANILUNZT
-	primitive_form = "Wolpin"
+	primitive_form = "Вольпин"
 	tail = "vulptail"
 	tail_animation = 'icons/mob/species/vulpkanin/tail.dmi' // probably need more than just one of each, but w/e
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -226,7 +226,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
-	primitive_form = "Wolpin"
+	primitive_form = "Вольпин"
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -345,7 +345,7 @@
 
 datum/species/harpy
 	name = SPECIES_RAPALA
-	name_plural = "Rapalans"
+	name_plural = "Рапалы"
 	icobase = 'icons/mob/human_races/r_harpy_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_harpy_vr.dmi'
 	tail = "tail"
@@ -383,7 +383,7 @@ datum/species/harpy
 
 /datum/species/crew_shadekin
 	name = SPECIES_SHADEKIN_CREW
-	name_plural = "Black-Eyed Shadekin"
+	name_plural = "Темноглазые Шейдкины"
 	icobase = 'icons/mob/human_races/r_shadekin_vr.dmi'
 	deform = 'icons/mob/human_races/r_shadekin_vr.dmi'
 	tail = "tail"
@@ -496,7 +496,7 @@ datum/species/harpy
 
 /datum/species/fl_zorren
 	name = SPECIES_FENNEC
-	name_plural = "Fennec"
+	name_plural = "Феньки"
 	icobase = 'icons/mob/human_races/r_fennec_vr.dmi'
 	deform = 'icons/mob/human_races/r_def_fennec.dmi'
 	tail = "tail"
@@ -528,7 +528,7 @@ datum/species/harpy
 
 /datum/species/xenohybrid
 	name = SPECIES_XENOHYBRID
-	name_plural = "Xenomorphs"
+	name_plural = "Ксеноморфы"
 	icobase = 'icons/mob/human_races/r_xenomorph.dmi'
 	deform = 'icons/mob/human_races/r_def_xenomorph.dmi'
 	tail = "tail"

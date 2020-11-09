@@ -55,13 +55,13 @@
 /mob/living/carbon/alien/get_default_language()
 	if(default_language)
 		return default_language
-	return GLOB.all_languages["Xenomorph"]
+	return GLOB.all_languages["Ксеноморфский"]
 
 /mob/living/carbon/alien/say_quote(var/message, var/datum/language/speaking = null)
 	var/verb = "hisses"
 	var/ending = copytext_char(message, length(message))
 
-	if(speaking && (speaking.name != "Galactic Common")) //this is so adminbooze xenos speaking common have their custom verbs,
+	if(speaking && (speaking.name != "Галактический Общий")) //this is so adminbooze xenos speaking common have their custom verbs,
 		verb = speaking.get_spoken_verb(ending)          //and use normal verbs for their own languages and non-common languages
 	else
 		if(ending == "!")

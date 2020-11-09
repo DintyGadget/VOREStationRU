@@ -1,6 +1,6 @@
 /datum/species/vox
 	name = SPECIES_VOX
-	name_plural = "Vox"
+	name_plural = "Воксы"
 	icobase = 'icons/mob/human_races/r_vox.dmi'
 	deform = 'icons/mob/human_races/r_def_vox.dmi'
 	default_language = LANGUAGE_VOX

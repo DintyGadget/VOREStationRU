@@ -41,7 +41,7 @@
 #define USELESS_JOB "Visitor"
 
 //Herm Gender
-#define HERM "herm"
+#define HERM "Гермафродит"
 
 // Bluespace shelter deploy checks
 #define SHELTER_DEPLOY_ALLOWED "allowed"

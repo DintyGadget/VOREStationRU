@@ -218,7 +218,7 @@
 
 // Tram departure cryo doors that turn into ordinary airlock doors at round end
 /obj/machinery/cryopod/robot/door/tram
-	name = "\improper Tram Station"
+	name = "Трамвайный Вокзал"
 	icon = 'icons/obj/doors/Doorextglass.dmi'
 	icon_state = "door_closed"
 	can_atmos_pass = ATMOS_PASS_NO
@@ -270,7 +270,7 @@ var/global/list/latejoin_tram   = list()
 	..()
 
 /datum/spawnpoint/tram
-	display_name = "Tram Station"
+	display_name = "Трамвайный Вокзал"
 	msg = "прибывает на станцию"
 
 /datum/spawnpoint/tram/New()

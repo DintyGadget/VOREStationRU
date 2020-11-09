@@ -31,8 +31,8 @@ BLIND     // can't see anything
 	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 	sprite_sheets = list(
-		"Teshari" = 'icons/mob/species/seromi/eyes.dmi',
-		"Vox" = 'icons/mob/species/vox/eyes.dmi'
+		"Тешари" = 'icons/mob/species/seromi/eyes.dmi',
+		"Вокс" = 'icons/mob/species/vox/eyes.dmi'
 		)
 
 /obj/item/clothing/glasses/update_clothing_icon()
@@ -168,7 +168,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses/night/vox
 	name = "инопланетные очки"
-	species_restricted = list("Vox")
+	species_restricted = list("Вокс")
 	flags = PHORONGUARD
 
 /obj/item/clothing/glasses/night/New()

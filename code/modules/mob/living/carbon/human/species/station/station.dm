@@ -1,6 +1,6 @@
 /datum/species/human
 	name = SPECIES_HUMAN
-	name_plural = "Humans"
+	name_plural = "Люди"
 	primitive_form = SPECIES_MONKEY
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 	blurb = "Humanity originated in the Sol system, and over the last five centuries has spread \
@@ -47,7 +47,7 @@
 
 /datum/species/unathi
 	name = SPECIES_UNATHI
-	name_plural = "Unathi"
+	name_plural = "Унати"
 	icobase = 'icons/mob/human_races/r_lizard.dmi'
 	deform = 'icons/mob/human_races/r_def_lizard.dmi'
 	tail = "sogtail"
@@ -166,7 +166,7 @@
 
 /datum/species/tajaran
 	name = SPECIES_TAJ
-	name_plural = "Tajaran"
+	name_plural = "Таджары"
 	icobase = 'icons/mob/human_races/r_tajaran.dmi'
 	deform = 'icons/mob/human_races/r_def_tajaran.dmi'
 	tail = "tajtail"
@@ -255,7 +255,7 @@
 
 /datum/species/skrell
 	name = SPECIES_SKRELL
-	name_plural = "Skrell"
+	name_plural = "Скреллы"
 	icobase = 'icons/mob/human_races/r_skrell.dmi'
 	deform = 'icons/mob/human_races/r_def_skrell.dmi'
 	primitive_form = SPECIES_MONKEY_SKRELL
@@ -332,7 +332,7 @@
 
 /datum/species/zaddat
 	name = SPECIES_ZADDAT
-	name_plural = "Zaddat"
+	name_plural = "Заддаты"
 	icobase = 'icons/mob/human_races/r_zaddat.dmi'
 	deform = 'icons/mob/human_races/r_zaddat.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch)
@@ -444,7 +444,7 @@
 
 /datum/species/diona
 	name = SPECIES_DIONA
-	name_plural = "Dionaea"
+	name_plural = "Дионы"
 	icobase = 'icons/mob/human_races/r_diona.dmi'
 	deform = 'icons/mob/human_races/r_def_plant.dmi'
 	language = LANGUAGE_ROOTLOCAL

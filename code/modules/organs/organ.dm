@@ -89,7 +89,7 @@ var/list/organ_cache = list()
 		if(internal)
 			holder.internal_organs |= src
 	else
-		species = GLOB.all_species["Human"]
+		species = GLOB.all_species["Человек"]
 
 	handle_organ_mod_special()
 

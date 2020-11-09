@@ -1,6 +1,6 @@
 /datum/species/alraune
 	name = SPECIES_ALRAUNE
-	name_plural = "Alraunes"
+	name_plural = "Алрауне"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 	num_alternate_languages = 2
 	slowdown = 1 //slow, they're plants. Not as slow as full diona.
@@ -58,7 +58,7 @@
 	flesh_color = "#9ee02c"
 	blood_color = "#edf4d0" //sap!
 	base_color = "#1a5600"
-	
+
 	reagent_tag = IS_ALRAUNE
 
 	blurb = "Alraunes are a rare sight in space. Their bodies are reminiscent of that of plants, and yet they share many\

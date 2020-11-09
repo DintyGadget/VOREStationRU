@@ -13,37 +13,37 @@
 	display_name = "Вокс: Повседневная одежда"
 	path = /obj/item/clothing/under/vox/vox_casual
 	sort_category = "Расовая одежда"
-	whitelisted = "Vox"
+	whitelisted = "Вокс"
 
 /datum/gear/uniform/voxrobes
 	display_name = "Вокс: Удобная одежда"
 	path = /obj/item/clothing/under/vox/vox_robes
 	sort_category = "Расовая одежда"
-	whitelisted = "Vox"
+	whitelisted = "Вокс"
 
 /datum/gear/accessory/vox
 	display_name = "Вокс: Жилет с карманами"
 	path = /obj/item/clothing/accessory/storage/vox
 	sort_category = "Расовая одежда"
-	whitelisted = "Vox"
+	whitelisted = "Вокс"
 
 /datum/gear/gloves/vox
 	display_name = "Вокс: Изолирующие рукавицы"
 	path = /obj/item/clothing/gloves/vox
 	sort_category = "Расовая одежда"
-	whitelisted = "Vox"
+	whitelisted = "Вокс"
 
 /datum/gear/shoes/vox
 	display_name = "Вокс: Магнитные когти"
 	path = /obj/item/clothing/shoes/magboots/vox
 	sort_category = "Расовая одежда"
-	whitelisted = "Vox"
+	whitelisted = "Вокс"
 
 /datum/gear/mask/vox
 	display_name = "Вокс: Маска"
 	path = /obj/item/clothing/mask/gas/swat/vox
 	sort_category = "Расовая одежда"
-	whitelisted = "Vox"
+	whitelisted = "Вокс"
 
 /datum/gear/mask/transparent
 	display_name = "Прозрачная газовая маска"

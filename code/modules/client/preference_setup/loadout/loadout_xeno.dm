@@ -12,7 +12,7 @@
 	sort_category = "Расовая одежда"
 
 /datum/gear/suit/unathi_mantle
-	display_name = "Унатхи: Мантия из шкуры"
+	display_name = "Унати: Мантия из шкуры"
 	path = /obj/item/clothing/suit/unathi/mantle
 	cost = 1
 	sort_category = "Расовая одежда"

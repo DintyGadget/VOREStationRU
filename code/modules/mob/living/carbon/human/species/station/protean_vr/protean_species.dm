@@ -169,7 +169,7 @@
 		H.forceMove(H.temporary_form.drop_location())
 		H.ckey = H.temporary_form.ckey
 		QDEL_NULL(H.temporary_form)
-	
+
 	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 60 minutes before respawning, to represent the time it would take to ship a new-you to the station.</span>")
 
 	for(var/obj/item/organ/I in H.internal_organs)
@@ -211,7 +211,7 @@
 
 /datum/species/protean/Stat(var/mob/living/carbon/human/H)
 	..()
-	if(statpanel("Protean"))
+	if(statpanel("Протеан"))
 		var/obj/item/organ/internal/nano/refactory/refactory = H.nano_get_refactory()
 		if(refactory && !(refactory.status & ORGAN_DEAD))
 			stat(null, "- -- --- Refactory Metal Storage --- -- -")

@@ -25,7 +25,7 @@
 			else
 				O.species = GLOB.all_species[prosfab.species]
 		else
-			O.species = GLOB.all_species["Human"]
+			O.species = GLOB.all_species["Человек"]
 		O.robotize(prosfab.manufacturer)
 		O.dna = new/datum/dna() //Uuughhhh... why do I have to do this?
 		O.dna.ResetUI()
@@ -39,7 +39,7 @@
 /datum/design/item/prosfab/pros/torso/Fabricate(var/newloc, var/fabricator)
 	if(istype(fabricator, /obj/machinery/mecha_part_fabricator/pros))
 		var/obj/machinery/mecha_part_fabricator/pros/prosfab = fabricator
-		var/newspecies = "Human"
+		var/newspecies = "Человек"
 
 		var/datum/robolimb/manf = all_robolimbs[prosfab.manufacturer]
 

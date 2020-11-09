@@ -28,7 +28,7 @@
 
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
-		if(H.species.name == "Diona")
+		if(H.species.name == "Диона")
 			to_chat(L, "<span class='warning'>На мгновение вы чувствуете себя странно, но это проходит.</span>")
 			return FALSE // Happy trees aren't affected by tranquility.
 

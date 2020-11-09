@@ -44,7 +44,7 @@
 	autohiss_extra_map = list(
 			"x" = list("ks", "kss", "ksss")
 		),
-	autohiss_exempt = list("Sinta'unathi"))
+	autohiss_exempt = list("Синта'унати"))
 
 	excludes = list(/datum/trait/autohiss_tajaran)
 
@@ -56,9 +56,9 @@
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		),
-	autohiss_exempt = list("Siik"))
+	autohiss_exempt = list("Сиик"))
 	excludes = list(/datum/trait/autohiss_unathi)
-
+e
 /datum/trait/bloodsucker
 	name = "Кровосос"
 	desc = "Делает вас способным получать питание только из крови. В качестве компенсации вы получаете клыки, которые можно использовать для получения крови с добычи."

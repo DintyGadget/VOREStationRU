@@ -68,7 +68,7 @@ datum/preferences/proc/set_biological_gender(var/gender)
 	. += "<a href='?src=\ref[src];rename=1'><b>[pref.real_name]</b></a><br>"
 	. += "<a href='?src=\ref[src];random_name=1'>Случайное имя</A><br>"
 	. += "<a href='?src=\ref[src];always_random_name=1'>Всегда случайное имя: [pref.be_random_name ? "Да" : "Нет"]</a><br>"
-	. += "<b>Локализованное имя:</b> "
+	. += "<b>Прозвище:</b> "
 	. += "<a href='?src=\ref[src];nickname=1'><b>[pref.nickname]</b></a>"
 	. += "<br>"
 	. += "<b>Биологический пол:</b> <a href='?src=\ref[src];bio_gender=1'><b>[gender2text(pref.biological_gender)]</b></a><br>"
@@ -100,7 +100,7 @@ datum/preferences/proc/set_biological_gender(var/gender)
 		return TOPIC_REFRESH
 
 	else if(href_list["nickname"])
-		var/raw_nickname = input(user, "Введите переведенное имя Вашего персонажа:", "Ися Персонажа")  as text|null
+		var/raw_nickname = input(user, "Введите прозвище Вашего персонажа:", "Имя Персонажа")  as text|null
 		if (!isnull(raw_nickname) && CanUseTopic(user))
 			var/new_nickname = sanitize_name(raw_nickname, pref.species, is_FBP())
 			if(new_nickname)
