@@ -96,7 +96,7 @@
 				return TRUE
 
 /client/verb/volume_panel()
-	set name = "Volume Panel"
+	set name = "Панель Громкости"
 	set category = "Настройки"
 	set desc = "Позволяет регулировать уровень громкости на лету."
 

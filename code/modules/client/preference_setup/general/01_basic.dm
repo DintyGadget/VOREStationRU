@@ -117,9 +117,18 @@ datum/preferences/proc/set_biological_gender(var/gender)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["id_gender"])
-		var/new_gender = input(user, "Выберите Ваш гендер:", "Изменение Персонажа", pref.identifying_gender) as null|anything in all_genders_define_list
+		var/new_gender = input(user, "Выберите Ваш гендер:", "Изменение Персонажа", pref.identifying_gender) as null|anything in all_genders_text_list
 		if(new_gender && CanUseTopic(user))
-			pref.identifying_gender = new_gender
+			if(new_gender == "Мужской")
+				pref.identifying_gender = MALE
+			else if (new_gender == "Женский")
+				pref.identifying_gender = FEMALE
+			else if (new_gender == "Множественное число")
+				pref.identifying_gender = PLURAL
+			else if (new_gender == "Гермафродит")
+				pref.identifying_gender = HERM
+			else
+				pref.identifying_gender = NEUTER
 		return TOPIC_REFRESH
 
 	else if(href_list["age"])

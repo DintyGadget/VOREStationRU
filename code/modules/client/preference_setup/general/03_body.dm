@@ -677,10 +677,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			if("Правая рука")
 				limb =        BP_R_ARM
 				second_limb = BP_R_HAND
-			if("Левая ступня")
+			if("Левая стопа")
 				limb =        BP_L_FOOT
 				third_limb =  BP_L_LEG
-			if("Правая ступня")
+			if("Правая стопа")
 				limb =        BP_R_FOOT
 				third_limb =  BP_R_LEG
 			if("Левая кисть")

@@ -19,7 +19,7 @@ var/global/list/uplink_locations = list("ПДА", "Гарнитура", "Нич�
 /datum/category_item/player_setup_item/antagonism/basic/sanitize_character()
 	pref.uplinklocation	= sanitize_inlist(pref.uplinklocation, uplink_locations, initial(pref.uplinklocation))
 	if(!pref.antag_faction) pref.antag_faction = "Нет"
-	if(!pref.antag_vis) pref.antag_vis = "Скрыто"
+	if(!pref.antag_vis) pref.antag_vis = "Скрытый"
 
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/antagonism/basic/copy_to_mob(var/mob/living/carbon/human/character)

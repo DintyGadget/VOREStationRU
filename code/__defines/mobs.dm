@@ -299,7 +299,7 @@
 #define SPECIES_TESHARI			"Тешари"
 #define SPECIES_TAJ				"Таджара"
 #define SPECIES_PROMETHEAN		"Прометеан"
-#define SPECIES_DIONA			"Диаона"
+#define SPECIES_DIONA			"Диона"
 #define SPECIES_VOX				"Вокс"
 #define SPECIES_ZADDAT			"Заддат"
 

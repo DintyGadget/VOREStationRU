@@ -880,7 +880,7 @@
 		body_parts = list(BP_TORSO,BP_GROIN)
 
 	zorren_belly_female
-		name = "Зорррен: Торс (жен.)"
+		name = "Зоррен: Торс (жен.)"
 		icon_state = "zorren_belly_female"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_TORSO,BP_GROIN)

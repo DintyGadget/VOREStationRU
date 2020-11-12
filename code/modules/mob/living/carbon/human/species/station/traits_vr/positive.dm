@@ -1,6 +1,6 @@
 /datum/trait/speed_fast
-	name = "Поспешность"
-	desc = "Позволяет двигаться в среднем быстрее, чем на базовом уровне."
+	name = "Спешка"
+	desc = "Позволяет двигаться быстрее, чем обычно."
 	cost = 4
 	var_changes = list("slowdown" = -0.5)
 
@@ -57,39 +57,39 @@
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp))
 
 /datum/trait/melee_attack_fangs
-	name = "Резкие атаки & Парализующие клыки"
-	desc = "Обеспечивает резкие рукопашные атаки, которые наносят немного больший урон, а также клыки, из-за которых субьект не сможет чувствовать свое тело или боль."
+	name = "Резкие атаки и парализующие клыки"
+	desc = "Обеспечивает резкие рукопашные атаки, которые наносят немного больший урон, а также клыки, из-за которых цель не сможет чувствовать свое тело или боль."
 	cost = 2
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/minor_brute_resist
-	name = "Слабое сопротивление урону"
-	desc = "Добавляет 15% сопротивления источникам грубого урона."
+	name = "Устойчивость к травмам"
+	desc = "Добавляет 15% сопротивления источникам травмирующего урона."
 	cost = 2
 	var_changes = list("brute_mod" = 0.85)
 
 /datum/trait/brute_resist
-	name = "Сопротивление урону"
-	desc = "Добавляет 25% сопротивления источникам грубого урона."
+	name = "Повышенная устойчивость к травмам"
+	desc = "Добавляет 25% сопротивления источникам травмирующего урона."
 	cost = 3
 	var_changes = list("brute_mod" = 0.75)
 	excludes = list(/datum/trait/minor_burn_resist,/datum/trait/burn_resist)
 
 /datum/trait/minor_burn_resist
-	name = "Слабое сопротивление огню"
-	desc = "Добавляет 15% сопротивления источникам огня."
+	name = "Устойчивость к огню"
+	desc = "Добавляет 15% сопротивления источникам обжигающего урона."
 	cost = 2
 	var_changes = list("burn_mod" = 0.85)
 
 /datum/trait/burn_resist
-	name = "Сопротивление огню"
-	desc = "Добавляет 25% сопротивления источникам огня."
+	name = "Повышенная устойчивость к огню"
+	desc = "Добавляет 25% сопротивления источникам обжигающего урона."
 	cost = 3
 	var_changes = list("burn_mod" = 0.75)
 	excludes = list(/datum/trait/minor_brute_resist,/datum/trait/brute_resist)
 
 /datum/trait/photoresistant
-	name = "Фотоустойчивый"
+	name = "Светоустойчивый"
 	desc = "Уменьшает длительность оглушения от вспышек и других оглушений и отключений, связанных с использованием света, на 50%"
 	cost = 1
 	var_changes = list("flash_mod" = 0.5)
@@ -105,7 +105,7 @@
 	H.verbs |= /mob/living/proc/start_wings_hovering
 
 /datum/trait/hardfeet
-	name = "Тяжелая поступь"
+	name = "Твердые ступни"
 	desc = "Делает ваши красивые когтистые, чешуйчатые, копытные, бронированные или иначе просто ужасно мозолистые ноги невосприимчивыми к осколкам стекла."
 	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
@@ -121,12 +121,12 @@
 
 /datum/trait/traceur
 	name = "Ловкач"
-	desc = "Вы способны к паркуру и можете * переворачивать небольшие предметы (большую часть времени)."
+	desc = "Вы способны к паркуру и можете делать сальто над небольшими предметами (чаще всего)."
 	cost = 2
 	var_changes = list("agility" = 90)
 
 /datum/trait/snowwalker
-	name = "Снежный ходок"
+	name = "Снегоход"
 	desc = "Вы можете беспрепятственно передвигаться по снегу."
 	cost = 1
 	var_changes = list("snow_movement" = -2)

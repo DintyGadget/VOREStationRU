@@ -49,4 +49,4 @@
 		save_character(S)
 
 /datum/category_item/player_setup_item/vore/nif/content(var/mob/user)
-	. += "<b>NIF:</b> [ispath(pref.nif_path) ? "Present" : "None"]"
+	. += "<b>NIF:</b> [ispath(pref.nif_path) ? "Присутствует" : "Нет"]"

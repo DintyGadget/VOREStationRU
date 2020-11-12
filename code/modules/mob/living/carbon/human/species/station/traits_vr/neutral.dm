@@ -1,6 +1,6 @@
 /datum/trait/metabolism_up
 	name = "Быстрый метаболизм"
-	desc = "Вы быстрее перевариваете проглоченные и введенные реагенты, и более часто хотите есть (скорость Тешари)."
+	desc = "Вы быстрее перевариваете проглоченные и введенные реагенты, и в Вас быстрее просыпается голод (скорость Тешари)."
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.2, "hunger_factor" = 0.2, "metabolism" = 0.06) // +20% rate and 4x hunger (Teshari level)
 	excludes = list(/datum/trait/metabolism_down, /datum/trait/metabolism_apex)
@@ -13,7 +13,7 @@
 	excludes = list(/datum/trait/metabolism_up, /datum/trait/metabolism_apex)
 
 /datum/trait/metabolism_apex
-	name = "Apex Metabolism"
+	name = "Пиковый метаболизм"
 	desc = "Наконец-то достойное оправдание вашим хищническим действиям. По сути, удваивает метаболизм. Подходит для персонажей с большим аппетитом."
 	cost = 0
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
@@ -28,28 +28,28 @@
 
 /datum/trait/hotadapt
 	name = "Теплокровный"
-	desc = "Вы способны выдерживать гораздо более высокие температуры, чем другие расы, и даже можете чувствовать себя комфортно в очень жаркой среде. Вы также более уязвимы к холоду, и вследствие этих адаптаций у вас повышается температура тела."
+	desc = "Вы способны выдерживать гораздо более высокие температуры, чем другие расы, и даже можете чувствовать себя комфортно в очень жаркой среде. Вы также более уязвимы к холоду, и вследствие этих адаптаций имеете повышенную температура тела."
 	cost = 0
 	var_changes = list("heat_level_1" = 420, "heat_level_2" = 460, "heat_level_3" = 1100, "breath_heat_level_1" = 440, "breath_heat_level_2" = 510, "breath_heat_level_3" = 1500, "heat_discomfort_level" = 390, "cold_level_1" = 280, "cold_level_2" = 220, "cold_level_3" = 140, "breath_cold_level_1" = 260, "breath_cold_level_2" = 240, "breath_cold_level_3" = 120, "cold_discomfort_level" = 280, "body_temperature" = 330)
 	excludes = list(/datum/trait/coldadapt)
 
 /datum/trait/autohiss_unathi
-	name = "Autohiss (Unathi)"
+	name = "Шипение (Унати)"
 	desc = "You roll your S's and x's"
 	cost = 0
 	var_changes = list(
 	autohiss_basic_map = list(
-			"s" = list("ss", "sss", "ssss")
+			"с" = list("сс", "ссс", "сссс")
 		),
 	autohiss_extra_map = list(
-			"x" = list("ks", "kss", "ksss")
+			"кс" = list("кс", "ксс", "кссс")
 		),
 	autohiss_exempt = list("Синта'унати"))
 
 	excludes = list(/datum/trait/autohiss_tajaran)
 
 /datum/trait/autohiss_tajaran
-	name = "Autohiss (Tajaran)"
+	name = "Шипение (Таджара)"
 	desc = "You roll your R's."
 	cost = 0
 	var_changes = list(
@@ -61,7 +61,7 @@
 e
 /datum/trait/bloodsucker
 	name = "Кровосос"
-	desc = "Делает вас способным получать питание только из крови. В качестве компенсации вы получаете клыки, которые можно использовать для получения крови с добычи."
+	desc = "Позволяет получать питательные вещества только за счет чужой крови. В качестве компенсации Вы получаете клыки, которые можно использовать для получения крови с добычи."
 	cost = 0
 	var_changes = list("gets_food_nutrition" = 0) //The verb is given in human.dm
 
@@ -81,8 +81,8 @@ e
 	H.verbs |= /mob/living/carbon/human/proc/succubus_drain_lethal
 
 /datum/trait/feeder
-	name = "Сьедобный"
-	desc = "Позволяет вам кормить свою добычу, используя ваше собственное тело."
+	name = "Съедобный"
+	desc = "Позволяет Вам кормить свою добычу, используя ваше собственное тело."
 	cost = 0
 
 /datum/trait/feeder/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -90,7 +90,7 @@ e
 	H.verbs |= /mob/living/carbon/human/proc/slime_feed
 
 /datum/trait/hard_vore
-	name = "Жестокий Хищник"
+	name = "Жестокий хищник"
 	desc = "Позволяет отрывать конечности и вырывать внутренние органы."
 	cost = 0 //I would make this cost a point, since it has some in game value, but there are easier, less damaging ways to perform the same functions.
 
@@ -100,7 +100,7 @@ e
 
 /datum/trait/trashcan
 	name = "Мусорка"
-	desc = "Позволяет выбрасывать мусор на ходу вместо того, чтобы искать мусорное ведро или мусорить, как животное."
+	desc = "Позволяет переваривать мусор самостоятельно вместо того, чтобы искать мусорное ведро или мусорить, как животное."
 	cost = 0
 	var_changes = list("trashcan" = 1)
 
@@ -110,7 +110,7 @@ e
 
 /datum/trait/gem_eater
 	name = "Рудоед"
-	desc = "Вы получаете питание только из сырой руды и очищенных минералов. Нет ничего, что удовлетворяет аппетит лучше, чем драгоценные камни, экзотические или редкие минералы, и у вас чертовски хороший вкус. Все остальное ниже вашего достоинства."
+	desc = "Вы получаете питание только из сырой руды и очищенных минералов. Нет ничего, что удовлетворяет аппетит лучше, чем драгоценные камни, экзотические или редкие минералы, и у Вас чертовски хороший вкус. Все остальное ниже Вашего достоинства."
 	cost = 0
 	var_changes = list("gets_food_nutrition" = 0, "eat_minerals" = 1)
 
@@ -120,13 +120,13 @@ e
 
 /datum/trait/glowing_eyes
 	name = "Светящиеся глаза"
-	desc = "Ваши глаза светятся в темноте. Жутко! И немного нервно."
+	desc = "Ваши глаза светятся в темноте. Жутко! И немного показушно."
 	cost = 0
 	var_changes = list("has_glowing_eyes" = 1)
 
 /datum/trait/glowing_body
 	name = "Светящееся тело"
-	desc = "Ваше тело светится примерно так же, как свет ПДА! Настраиваемый цвет и переключение на вкладке способностей в игре."
+	desc = "Ваше тело светится примерно так же, как фонарик ПДА! Настраиваемый цвет и переключение на вкладке способностей в игре."
 	cost = 0
 /datum/trait/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -172,20 +172,20 @@ e
 
 // Alcohol Traits Start Here, from negative to positive.
 /datum/trait/alcohol_intolerance_advanced
-	name = "Воздушная печень"
-	desc = "Единственный способ бухнуть, это держать бутылку в руках, и даже тогда вам лучше не вдыхать слишком много, находясь рядом с алкоголем. Напитки в три раза крепче."
+	name = "Посаженная печень"
+	desc = "Если бухать, так только если держать бухло в своих руках, да и даже так его лучше сильно не вдыхать. Напитки в три раза крепче."
 	cost = 0
 	var_changes = list("alcohol_mod" = 3) // 300% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
 
 /datum/trait/alcohol_intolerance_basic
-	name = "Нетерпимость к алкоголю"
-	desc = "Вам тяжело употреблять алкоголь. Может быть, вы просто никогда не принимали его, а может, он вам не нравится ... в любом случае, напитки в два раза крепче."
+	name = "Слабая печень"
+	desc = "Вам тяжело употреблять алкоголь. Может быть, Вы просто никогда не принимали его, а может, он Вам не нравится ... в любом случае, напитки в два раза крепче."
 	cost = 0
 	var_changes = list("alcohol_mod" = 2) // 200% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
 
 /datum/trait/alcohol_intolerance_slight
 	name = "Трезвенник"
-	desc = "У вас легкая борьба с алкоголем. Напитки в полтора раза крепче."
+	desc = "Вы не очень хорошо ладите с алкоголем. Напитки в полтора раза крепче."
 	cost = 0
 	var_changes = list("alcohol_mod" = 1.5) // 150% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
 
@@ -197,13 +197,13 @@ e
 
 /datum/trait/alcohol_tolerance_advanced
 	name = "Стальная печень"
-	desc = "Напитки трепещут перед твоей мощью! Вы можете пить алкоголь в два раза больше, чем эти синебрюхие котлы с ракушками! Напитки только наполовину такие же крепкие."
+	desc = "Напитки трепещут перед Вашей мощью! Вы можете пить алкоголь в два раза больше, чем все эти худобрюхие! Напитки в два раза менее крепкие."
 	cost = 0
 	var_changes = list("alcohol_mod" = 0.5) // 50% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
 
 /datum/trait/alcohol_immunity
-	name = "Алкоголик"
-	desc = "Вы так много пили, что большинство спиртных напитков даже не опьяняют вас. Требуется что-то вроде Пан-галактического бухла или пинты Deathbell, чтобы вы вас даже слегка торкнуло."
+	name = "Дюрасталевая печень"
+	desc = "Вы так много пили, что большинство спиртных напитков даже не опьяняют вас. Вам понадобится аж какой-нибудь Пан-Галактический или пинта Смертозвона, чтобы Вас хотя бы слегка торкнуло."
 	cost = 0
 	var_changes = list("alcohol_mod" = 0.25) // 25% as effective if alcohol_mod is set to 1. If it's not 1 in species.dm, update this!
 // Alcohol Traits End Here.

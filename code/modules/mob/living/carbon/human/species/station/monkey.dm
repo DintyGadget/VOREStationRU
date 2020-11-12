@@ -1,7 +1,7 @@
 /datum/species/monkey
 	name = SPECIES_MONKEY
-	name_plural = "Monkeys"
-	blurb = "Ook."
+	name_plural = "Мартышки"
+	blurb = "Ук."
 
 	icobase = 'icons/mob/human_races/monkeys/r_monkey.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_monkey.dmi'
@@ -69,7 +69,7 @@
 
 /datum/species/monkey/tajaran
 	name = SPECIES_MONKEY_TAJ
-	name_plural = "Farwa"
+	name_plural = "Фарвы"
 
 	icobase = 'icons/mob/human_races/monkeys/r_farwa.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_farwa.dmi'
@@ -82,7 +82,7 @@
 
 /datum/species/monkey/skrell
 	name = SPECIES_MONKEY_SKRELL
-	name_plural = "Neaera"
+	name_plural = "Нееры"
 
 	icobase = 'icons/mob/human_races/monkeys/r_neaera.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_neaera.dmi'
@@ -96,14 +96,14 @@
 
 /datum/species/monkey/unathi
 	name = SPECIES_MONKEY_UNATHI
-	name_plural = "Сток"
+	name_plural = "Стоки"
 
 	icobase = 'icons/mob/human_races/monkeys/r_stok.dmi'
 	deform = 'icons/mob/human_races/monkeys/r_stok.dmi'
 
 	tail = "stoktail"
 	greater_form = SPECIES_UNATHI
-	default_language = "Stok"
+	default_language = "Сток"
 	flesh_color = "#34AF10"
 	base_color = "#066000"
 	reagent_tag = IS_UNATHI

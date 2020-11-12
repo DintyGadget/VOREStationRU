@@ -166,13 +166,13 @@
 		var/list/choices = custom_species_bases
 		if(pref.species != SPECIES_CUSTOM)
 			choices = (choices | pref.species)
-		var/text_choice = input("Выберите основу для изображения персонажа","Icon Base") in choices
+		var/text_choice = input("Выберите основу для изображения персонажа","Основа Спрайта") in choices
 		if(text_choice in choices)
 			pref.custom_base = text_choice
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["blood_color"])
-		var/color_choice = input("Выберите цвет крови (не относится к синтам)","Blood Color",pref.blood_color) as color
+		var/color_choice = input("Выберите цвет крови (не относится к синтам)","Цвет Крови",pref.blood_color) as color
 		if(color_choice)
 			pref.blood_color = sanitize_hexcolor(color_choice, default="#A10808")
 		return TOPIC_REFRESH

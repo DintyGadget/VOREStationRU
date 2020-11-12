@@ -4,16 +4,15 @@ var/datum/species/shapeshifter/promethean/prometheans
 /datum/species/shapeshifter/promethean
 
 	name =             SPECIES_PROMETHEAN
-	name_plural =      "Prometheans"
-	blurb =            "Prometheans (Macrolimus artificialis) are a species of artificially-created gelatinous humanoids, \
-	chiefly characterized by their primarily liquid bodies and ability to change their bodily shape and color in order to  \
-	mimic many forms of life. Derived from the Aetolian giant slime (Macrolimus vulgaris) inhabiting the warm, tropical planet \
-	of Aetolus, they are a relatively new lab-created sapient species, and as such many things about them have yet to be comprehensively studied. \
-	What has Science done?"
+	name_plural =      "Прометеаны"
+	blurb =            "Прометеаны (Macrolimus artificialis) являются расой искусственно созданных желеобразных гуманоидов, \
+	в целом характеризованных своими в общем случае жидким телами и способностью изменять его форму и цвет для подражания другим формам жизни. \
+	Произошедшие от Этольского гигантского слизня (Macrolimus vulgaris) на теплой тропической планете Этол, они являются сравнительно новой разумной расой,\
+	создаваемой в лаборатория, и поэтому они ещё подлежат доскональному изучению. До чего дошел прогресс?"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/promethean)
-	show_ssd =         "totally quiescent"
-	death_message =    "rapidly loses cohesion, splattering across the ground..."
-	knockout_message = "collapses inwards, forming a disordered puddle of goo."
+	show_ssd =         "в состоянии полной неподвижности."
+	death_message =    "мгновенно теряет когезию, растекаясь по полу..."
+	knockout_message = "стягивается внутрь, формируя беспорядочную лужу из слизи."
 	remains_type = /obj/effect/decal/cleanable/ash
 
 	blood_color = "#05FF9B"
@@ -34,7 +33,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 	secondary_langs = list(LANGUAGE_PROMETHEAN, LANGUAGE_SOL_COMMON)	// For some reason, having this as their species language does not allow it to be chosen.
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)	// Prometheans are weird, let's just assume they can use basically any language.
 
-	blood_name = "gelatinous ooze"
+	blood_name = "склизкое желе"
 
 	breath_type = null
 	poison_type = null
@@ -102,8 +101,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot/unbreakable/slime),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/unbreakable/slime)
 		)
-	heat_discomfort_strings = list("You feel too warm.")
-	cold_discomfort_strings = list("You feel too cool.")
+	heat_discomfort_strings = list("Вам слишком тепло.")
+	cold_discomfort_strings = list("Вам слишком прохладно.")
 
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/shapeshifter_select_shape,
@@ -143,23 +142,23 @@ var/datum/species/shapeshifter/promethean/prometheans
 /datum/species/shapeshifter/promethean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 
 	if(H.zone_sel.selecting == "head" || H.zone_sel.selecting == "r_hand" || H.zone_sel.selecting == "l_hand") return ..() //VOREStation Edit
-	var/t_him = "them"
+	var/t_him = "им"
 	if(ishuman(target))
 		var/mob/living/carbon/human/T = target
 		switch(T.identifying_gender)
 			if(MALE)
-				t_him = "him"
+				t_him = "ему"
 			if(FEMALE)
-				t_him = "her"
+				t_him = "ей"
 	else
 		switch(target.gender)
 			if(MALE)
-				t_him = "him"
+				t_him = "ему"
 			if(FEMALE)
-				t_him = "her"
+				t_him = "ей"
 
-	H.visible_message("<span class='notice'>\The [H] glomps [target] to make [t_him] feel better!</span>", \
-					"<span class='notice'>You glomp [target] to make [t_him] feel better!</span>")
+	H.visible_message("<span class='notice'>[H] тискает [target], чтобы поднять [t_him] настроение!</span>", \
+					"<span class='notice'>Вы тискаете [target], чтобы поднять [t_him] настроение!</span>")
 	H.apply_stored_shock_to(target)
 
 /datum/species/shapeshifter/promethean/handle_death(var/mob/living/carbon/human/H)
@@ -316,22 +315,22 @@ var/datum/species/shapeshifter/promethean/prometheans
 	if(!stored_shock_by_ref["\ref[H]"])
 		return
 
-	var/t_she = "She is"
+	var/t_she = "Она"
 	if(H.identifying_gender == MALE)
-		t_she = "He is"
+		t_she = "Он"
 	else if(H.identifying_gender == PLURAL)
-		t_she = "They are"
+		t_she = "Они"
 	else if(H.identifying_gender == NEUTER)
-		t_she = "It is"
+		t_she = "Оно"
 	else if(H.identifying_gender == HERM) //VOREStation Edit
-		t_she = "Shi is"
+		t_she = "Оно"
 
 	switch(stored_shock_by_ref["\ref[H]"])
 		if(1 to 10)
-			return "[t_she] flickering gently with a little electrical activity."
+			return "[t_she] мерцает от слабой электрической активности."
 		if(11 to 20)
-			return "[t_she] glowing gently with moderate levels of electrical activity.\n"
+			return "[t_she] светится от значительной электрической активности."
 		if(21 to 35)
-			return "<span class='warning'>[t_she] glowing brightly with high levels of electrical activity.</span>"
+			return "<span class='warning'>[t_she] ярко сияет от высокого уровня электрической активности.</span>"
 		if(35 to INFINITY)
-			return "<span class='danger'>[t_she] radiating massive levels of electrical activity!</span>"
+			return "<span class='danger'>[t_she] излучает огромные уровни электрической активности!</span>"
