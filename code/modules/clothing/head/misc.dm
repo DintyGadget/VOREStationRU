@@ -447,8 +447,8 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/head/blackngoldheaddress
-	name = "black and gold headdress"
-	desc = "An odd looking headdress that covers the eyes."
+	name = "черно-золотая тиара"
+	desc = "Очень странная тиара, которая каким-то образом даже закрывает глаза."
 	icon_state = "blackngoldheaddress"
 	flags_inv = HIDEEYES
 	body_parts_covered = HEAD|EYES

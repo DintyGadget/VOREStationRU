@@ -595,7 +595,7 @@
 	path = /obj/item/clothing/under/cyberpunkharness
 
 /datum/gear/uniform/whitegown
-	display_name = "Фата, белая"
+	display_name = "Платье, белое"
 	path = /obj/item/clothing/under/wedding/whitegown
 
 /datum/gear/uniform/floofdress
@@ -607,7 +607,7 @@
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/uniform/blackngold
-	display_name = "Фата, черно-золотая"
+	display_name = "Платье, черно-золотое"
 	path = /obj/item/clothing/under/blackngold
 
 /datum/gear/uniform/sheerblue

@@ -42,7 +42,7 @@ var/XENOMORPH_EGG 	= "Ксеноморф"
 
 	else if(href_list["vore_egg_type"])
 		var/list/vore_egg_types = global_vore_egg_types
-		var/selection = input(user, "Выберите вип яйца вашего персонажа:", "Настройка Персонажа", pref.vore_egg_type) as null|anything in vore_egg_types
+		var/selection = input(user, "Выберите тип яйца вашего персонажа:", "Настройка Персонажа", pref.vore_egg_type) as null|anything in vore_egg_types
 		if(selection)
 			pref.vore_egg_type = vore_egg_types[selection]
 			return TOPIC_REFRESH

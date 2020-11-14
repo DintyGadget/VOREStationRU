@@ -81,7 +81,7 @@
 	icon_state = "brown"
 
 /obj/item/clothing/gloves/evening
-	desc = "Пара перчаток длиной по локость. Стильно!"
+	desc = "Пара перчаток длиной по локоть. Стильно!"
 	name = "вечерние перчатки"
 	icon_state = "evening_gloves"
 	addblends = "evening_gloves_a"

@@ -38,11 +38,11 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 	if(pai != null) //Have a person in them already?
 		return ..()
 
-	var/choice = input(user, "You sure you want to inhabit this PAI?") in list("Yes", "No")
-	if(choice == "No")
+	var/choice = input(user, "Вы точно хотите поселиться в этом пИИ?") in list("Да", "Нет")
+	if(choice == "Нет")
 		return ..()
 
-	var/pai_name = input(user, "Choose your character's name", "Character Name") as text
+	var/pai_name = input(user, "Выберите имя своего персонажа", "Имя Персонажа") as text
 	var/actual_pai_name = sanitize_name(pai_name)
 	if(isnull(actual_pai_name))
 		return ..()

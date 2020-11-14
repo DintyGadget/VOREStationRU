@@ -690,12 +690,12 @@
 		name = "Паук: Глаза"
 		icon_state = "spidereyes"
 		body_parts = list(BP_HEAD)
-    
+
 	closedeyes
 		name = "Глаза: Закрытые"
 		icon_state = "eyes_closed"
 		body_parts = list(BP_HEAD)
-    
+
 	brows
 		name = "Брови"
 		icon_state = "brows"
@@ -1180,7 +1180,7 @@
 		body_parts = list(BP_TORSO,BP_GROIN)
 
 	vas_toes
-		name = "Bug Paws (Vasilissan)"
+		name = "Жук: Лапки (Василиссан)"
 		icon_state = "vas_toes"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_FOOT,BP_R_FOOT)

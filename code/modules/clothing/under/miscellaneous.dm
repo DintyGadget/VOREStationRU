@@ -604,15 +604,15 @@ obj/item/clothing/under/dress/yellowswoop
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/wedding/floofdress
-	name = "floofy dress"
-	desc = "A lovely floofed out dress for formal occasions. Comes in many colors!"
+	name = "пышное платье"
+	desc = "Красивое пышное платье для официальных церемоний. Разных цветов!"
 	icon_state = "floofdress"
 	flags_inv = HIDESHOES
 	index = 1
 
 /obj/item/clothing/under/wedding/whitegown
-	name = "white gown"
-	desc = "A elegant white gown with accents of sheer mesh."
+	name = "белое платье"
+	desc = "Элегантное белое платье с сеточками."
 	icon_state = "whitegown"
 	index = 1
 
@@ -633,44 +633,44 @@ Uniforms and such
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/dress/sundress_pink
-	name = "pink stripied sundress"
-	desc = "A cute pink sundress."
+	name = "розовый сарафан"
+	desc = "Милый сарафан розового цвета."
 	icon_state = "pinksun"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/dress/sundress_white
-	name = "white sundress"
-	desc = "A white sundress, it's short."
+	name = "белый сарафан"
+	desc = "Коротенький белый сарафан."
 	icon_state = "whitesun"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/dress/sundress_pinkbow
-	name = "bowed pink sundress"
-	desc = "A cute pink sundress with a bow."
+	name = "розовый сарафан с бантиком"
+	desc = "Милый розовый сарафан с бантиком."
 	icon_state = "bowsun"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/dress/sundress_blue
-	name = "long blue sundress"
-	desc = "A long blue sun dress with white frills towards the bottom."
+	name = "длинный голубой сарафан"
+	desc = "Длинный сарафан голубого цвета с белой подкладкой."
 	icon_state = "bluesun"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS
 
 /obj/item/clothing/under/dress/sundress_pinkshort
-	name = "short pink sundress"
-	desc = "A very short pink sundress, it's more like a chemise."
+	name = "короткий розовый сарафан"
+	desc = "Очень короткий розовый сарафанчик."
 	icon_state = "shortpink"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/dress/twopiece
-	name = "two-piece dress"
-	desc = "A fancy two-piece dress, the pieces are sewn together."
+	name = "двойное платье"
+	desc = "Красивое платье из двух сшитых частей."
 	icon_state = "twopiece"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/dress/gothic2
-	name = "lacey gothic dress"
-	desc = "An elegant gothic dress with lace decorations."
+	name = "готическое платье"
+	desc = "Элегантное готическое платье."
 	icon_state = "gothic2"
 
 /obj/item/clothing/under/captainformal
@@ -871,20 +871,20 @@ Uniforms and such
 	index = 1
 
 /obj/item/clothing/under/blackngold
-	name = "black and gold gown"
-	desc = "A black and gold gown. You get the impression this is typically worn for religious purposes."
+	name = "черно-золотое платье"
+	desc = "Чёрно-золотое платье. У Вас такое впечатление, что его носят для проведения религиозных обрядов."
 	icon_state = "blackngold"
 	index = 1
 
 /obj/item/clothing/under/sheerblue
-	name = "sheer blue dress"
-	desc = "An entirely sheer blue dress. Best worn with something underneath!"
+	name = "открытое голубое платье"
+	desc = "Довольно откровенное голубое платье. Лучше всего смотрится с чем-то ещё!"
 	icon_state = "sheerblue"
 	index = 1
 
 /obj/item/clothing/under/disheveled
-	name = "disheveled suit"
-	desc = "What might pass as well maintained formal attire. If you're blind."
+	name = "растрепанный костюм"
+	desc = "Сойдёт за хорошую формальную униформу. Если Вы в край слепы, конечно."
 	icon_state = "disheveled"
 	index = 1
 

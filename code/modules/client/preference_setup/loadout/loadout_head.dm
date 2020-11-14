@@ -385,5 +385,5 @@
 	path = /obj/item/clothing/head/rose_crown
 
 /datum/gear/head/blackngoldheaddress
-	display_name = "black and gold headdress"
+	display_name = "Тиара, черно-золотая"
 	path = /obj/item/clothing/head/blackngoldheaddress
