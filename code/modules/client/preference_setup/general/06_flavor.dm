@@ -63,7 +63,7 @@
 				if(CanUseTopic(user))
 					pref.flavor_texts[href_list["flavor_text"]] = msg
 			else
-				var/msg = sanitize(input(usr,"Установите описание для данной части тела.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]])) as message, extra = 0)
+				var/msg = sanitize(input(usr,"Установите описание для данной части тела.","Редактирование Флавор",html_decode(pref.flavor_texts[href_list["flavor_text"]])) as message, extra = 0)
 				if(CanUseTopic(user))
 					pref.flavor_texts[href_list["flavor_text"]] = msg
 		SetFlavorText(user)

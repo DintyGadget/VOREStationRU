@@ -55,7 +55,7 @@
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/accessory/purse
-	display_name = "Портмоне"
+	display_name = "Сумочка"
 	path = /obj/item/weapon/storage/backpack/purse
 	cost = 3
 
@@ -79,7 +79,7 @@
 /datum/gear/accessory/holster
 	display_name = "Кобура (выбор) (СБ, ДК, ГП)"
 	path = /obj/item/clothing/accessory/holster
-	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава безопасности","Детектив")
+	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава службы безопасности","Детектив")
 
 /datum/gear/accessory/holster/New()
 	..()
@@ -144,32 +144,32 @@
 /datum/gear/accessory/brown_vest
 	display_name = "Жилет из лямок, коричневый"
 	path = /obj/item/clothing/accessory/storage/brown_vest
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик", "Search and Rescue")
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач", "Search and Rescue")
 
 /datum/gear/accessory/black_vest
 	display_name = "Жилет из лямок, черный"
 	path = /obj/item/clothing/accessory/storage/black_vest
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик", "Search and Rescue")
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач", "Search and Rescue")
 
 /datum/gear/accessory/white_vest
 	display_name = "Жилет из лямок, белый"
 	path = /obj/item/clothing/accessory/storage/white_vest
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик", "Search and Rescue")
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач", "Search and Rescue")
 
 /datum/gear/accessory/brown_drop_pouches
 	display_name = "Сумочки, коричневые"
 	path = /obj/item/clothing/accessory/storage/brown_drop_pouches
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик", "Search and Rescue")
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач", "Search and Rescue")
 
 /datum/gear/accessory/black_drop_pouches
 	display_name = "Сумочки, черные"
 	path = /obj/item/clothing/accessory/storage/black_drop_pouches
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик", "Search and Rescue")
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач", "Search and Rescue")
 
 /datum/gear/accessory/white_drop_pouches
 	display_name = "Сумочки, белые"
 	path = /obj/item/clothing/accessory/storage/white_drop_pouches
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик", "Search and Rescue")
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач", "Search and Rescue")
 
 /datum/gear/accessory/fannypack
 	display_name = "Поясная сумка (выбор)"
@@ -250,7 +250,7 @@
 /datum/gear/accessory/stethoscope
 	display_name = "Стетоскоп"
 	path = /obj/item/clothing/accessory/stethoscope
-	allowed_roles = list("Главврач","Медик","Химик","Психиатр","Парамедик", "Search and Rescue")
+	allowed_roles = list("Главврач","Врач","Химик","Психиатр","Парамедик", "Search and Rescue")
 
 /datum/gear/accessory/locket
 	display_name = "Медальон"

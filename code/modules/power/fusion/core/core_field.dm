@@ -511,12 +511,12 @@
 	var/stablemessage = "Containment field returning to stable conditions."
 
 	if(percent_unstable >= warnpoint) //we're unstable, start warning engineering
-		global_announcer.autosay(warnmessage, "Field Stability Monitor", "Engineering")
+		global_announcer.autosay(warnmessage, "Field Stability Monitor", "Инженерный отдел")
 		stable = 0 //we know we're not stable, so let's not state the safe message.
 		sleep(20)
 	return
 	if(percent_unstable < warnpoint && stable == 0) //The field is stable again. Let's set our safe variable and state the safe message.
-		global_announcer.autosay(stablemessage, "Field Stability Monitor", "Engineering")
+		global_announcer.autosay(stablemessage, "Field Stability Monitor", "Инженерный отдел")
 		stable = 1
 	return
 

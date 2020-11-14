@@ -18,4 +18,4 @@
 /datum/gear/head/detective_alt
 	display_name = "СБ: Киберскоп (Детектив)"
 	path = /obj/item/clothing/head/helmet/detective_alt
-	allowed_roles = list("Глава безопасности", "Детектив")
+	allowed_roles = list("Глава службы безопасности", "Детектив")

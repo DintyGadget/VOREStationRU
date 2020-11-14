@@ -46,7 +46,7 @@
 /datum/gear/eyes/security
 	display_name = "Служба Безопасности: HUD"
 	path = /obj/item/clothing/glasses/hud/security
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель", "Детектив")
 
 /datum/gear/eyes/security/prescriptionsec
 	display_name = "Служба Безопасности: HUD (близ.)"
@@ -65,26 +65,26 @@
 	path = /obj/item/clothing/glasses/sunglasses/sechud/aviator/prescription
 
 /datum/gear/eyes/medical
-	display_name = "Медик: HUD"
+	display_name = "Врач: HUD"
 	path = /obj/item/clothing/glasses/hud/health
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Search and Rescue")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Search and Rescue")
 
 /datum/gear/eyes/medical/prescriptionmed
-	display_name = "Медик: HUD (близ.)"
+	display_name = "Врач: HUD (близ.)"
 	path = /obj/item/clothing/glasses/hud/health/prescription
 
 /datum/gear/eyes/medical/aviator
-	display_name = "Медик: HUD , авиаторы"
+	display_name = "Врач: HUD , авиаторы"
 	path = /obj/item/clothing/glasses/hud/health/aviator
 
 /datum/gear/eyes/medical/aviator/prescription
-	display_name = "Медик: HUD, авиаторы, близорукость"
+	display_name = "Врач: HUD, авиаторы, близорукость"
 	path = /obj/item/clothing/glasses/hud/health/aviator/prescription
 
 /datum/gear/eyes/meson
 	display_name = "Мезонный сканер (Инж, Науч, Шахт)"
 	path = /obj/item/clothing/glasses/meson
-	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник", "Ученый", "Директор исследований", "Шахтер")
+	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник", "Учёный", "Директор исследований", "Шахтёр")
 
 /datum/gear/eyes/meson/prescription
 	display_name = "Мезонный сканер, близ. (Инж, Науч, Шахт)"
@@ -93,7 +93,7 @@
 /datum/gear/eyes/material
 	display_name = "Шахтёр: Оптический сканер материалов"
 	path = /obj/item/clothing/glasses/material
-	allowed_roles = list("Шахтер","Интендант")
+	allowed_roles = list("Шахтёр","Квартирмейстер")
 
 /datum/gear/eyes/material/prescription
 	display_name = "Шахтёр: Оптический сканер материалов (близ.)"
@@ -118,7 +118,7 @@
 /datum/gear/eyes/sun
 	display_name = "Солнечные очки (СБ/Управление)"
 	path = /obj/item/clothing/glasses/sunglasses
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель","Директор колонии","Глава персонала","Интендант","Агент внутренних дел","Детектив")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель","Директор колонии","Глава персонала","Квартирмейстер","Агент внутренних дел","Детектив")
 
 /datum/gear/eyes/sun/shades
 	display_name = "Солнечные очки, толстые (СБ/Управление)"

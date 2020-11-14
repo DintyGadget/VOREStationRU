@@ -474,7 +474,7 @@
 		var/mob/living/silicon/robot/R = M
 		switch(hudtype)
 			if("security")
-				return R.hudmode == "Security"
+				return R.hudmode == "Служба безопасности"
 			if("medical")
-				return R.hudmode == "Medical"
+				return R.hudmode == "Медицинский отдел"
 	return 0

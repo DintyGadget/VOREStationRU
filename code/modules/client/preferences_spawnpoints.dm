@@ -39,7 +39,7 @@ var/list/spawntypes = list()
 
 /datum/spawnpoint/arrivals
 	display_name = "Ўаттл ѕрибыти€"
-	msg = "прибывает на станцию на шаттле."
+	msg = "прибывает на станцию на шаттле"
 
 /datum/spawnpoint/arrivals/New()
 	..()
@@ -47,7 +47,7 @@ var/list/spawntypes = list()
 
 /datum/spawnpoint/gateway
 	display_name = "“елепорт"
-	msg = "завершает переход через внестанционный телепорт."
+	msg = "завершает переход через внестанционный телепорт"
 
 /datum/spawnpoint/gateway/New()
 	..()
@@ -63,7 +63,7 @@ var/list/spawntypes = list()
 */
 /datum/spawnpoint/cryo
 	display_name = " риокамера"
-	msg = "завершает криогенную разморозку."
+	msg = "завершает криогенную разморозку"
 	allowed_mob_types = JOB_CARBON
 
 /datum/spawnpoint/cryo/New()
@@ -72,7 +72,7 @@ var/list/spawntypes = list()
 
 /datum/spawnpoint/cyborg
 	display_name = "’ранилище  иборгов"
-	msg = "активируетс€ из хранилища."
+	msg = "активируетс€ из хранилища"
 	allowed_mob_types = JOB_SILICON
 
 /datum/spawnpoint/cyborg/New()

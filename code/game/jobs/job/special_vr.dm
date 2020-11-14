@@ -26,7 +26,7 @@
 
 /*/datum/job/centcom_visitor //For Pleasure // You mean for admin abuse... -Ace
 	title = "CentCom Visitor"
-	department = "Civilian"
+	department = "Гражданские"
 	head_position = 1
 	faction = "Station"
 	total_positions = 2

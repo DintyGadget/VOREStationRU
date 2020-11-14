@@ -216,14 +216,14 @@
 #define ANTAG_KNOWN		"Known"
 
 // Departments.
-#define DEPARTMENT_COMMAND			"Command"
-#define DEPARTMENT_SECURITY			"Security"
-#define DEPARTMENT_ENGINEERING		"Engineering"
-#define DEPARTMENT_MEDICAL			"Medical"
+#define DEPARTMENT_COMMAND			"Командование"
+#define DEPARTMENT_SECURITY			"Служба безопасности"
+#define DEPARTMENT_ENGINEERING		"Инженерный отдел"
+#define DEPARTMENT_MEDICAL			"Медицинский отдел"
 #define DEPARTMENT_RESEARCH			"Research"
-#define DEPARTMENT_CARGO			"Cargo"
-#define DEPARTMENT_CIVILIAN			"Civilian"
-#define DEPARTMENT_PLANET			"Exploration" //VOREStation Edit // I hate having this be here and not in a SC file. Hopefully someday the manifest can be rewritten to be map-agnostic.
+#define DEPARTMENT_CARGO			"Отдел снабжения"
+#define DEPARTMENT_CIVILIAN			"Гражданские"
+#define DEPARTMENT_PLANET			"Отдел искателей" //VOREStation Edit // I hate having this be here and not in a SC file. Hopefully someday the manifest can be rewritten to be map-agnostic.
 #define DEPARTMENT_SYNTHETIC		"Synthetic"
 
 // These are mostly for the department guessing code and event system.

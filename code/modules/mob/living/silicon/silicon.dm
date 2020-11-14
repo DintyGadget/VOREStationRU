@@ -208,9 +208,9 @@
 			. += "<b>[L.name] ([get_language_prefix()][L.key])</b>[synth ? default_str : null]<br>Speech Synthesizer: <i>[synth ? "YES" : "NOT SUPPORTED"]</i><br>[L.desc]<br><br>"
 
 /mob/living/silicon/proc/toggle_sensor_mode()
-	var/sensor_type = input("Please select sensor type.", "Sensor Integration", null) in list("Security","Medical","Disable")
+	var/sensor_type = input("Please select sensor type.", "Sensor Integration", null) in list("Служба безопасности","Медицинский отдел","Disable")
 	switch(sensor_type)
-		if ("Security")
+		if ("Служба безопасности")
 			if(plane_holder)
 				//Enable Security planes
 				plane_holder.set_vis(VIS_CH_ID,TRUE)
@@ -224,7 +224,7 @@
 				plane_holder.set_vis(VIS_CH_HEALTH,FALSE)
 
 			to_chat(src, "<span class='notice'>Security records overlay enabled.</span>")
-		if ("Medical")
+		if ("Медицинский отдел")
 			if(plane_holder)
 				//Disable Security planes
 				plane_holder.set_vis(VIS_CH_ID,FALSE)

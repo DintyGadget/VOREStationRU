@@ -14,7 +14,7 @@
 #define VANTAG_KIDNAP  "vantag_kidnap"
 #define VANTAG_KILL    "vantag_kill"
 
-#define DEPARTMENT_OFFDUTY			"Off-Duty"
+#define DEPARTMENT_OFFDUTY			"В отпуске"
 
 #define ANNOUNCER_NAME "Facility PA"
 
@@ -38,7 +38,7 @@
 #define BLUE_SHIELDED 2 // Shield from bluespace teleportation (telescience)
 
 //Assistant/Visitor/Whatever
-#define USELESS_JOB "Visitor"
+#define USELESS_JOB "Гость"
 
 //Herm Gender
 #define HERM "Гермафродит"
@@ -50,14 +50,14 @@
 #define SHELTER_DEPLOY_ANCHORED_OBJECTS "anchored objects"
 #define SHELTER_DEPLOY_SHIP_SPACE "ship not in space"
 
-#define PTO_SECURITY		"Security"
-#define PTO_MEDICAL			"Medical"
-#define PTO_ENGINEERING 	"Engineering"
-#define PTO_SCIENCE			"Science"
-#define PTO_EXPLORATION 	"Exploration"
-#define PTO_CARGO			"Cargo"
-#define PTO_CIVILIAN		"Civilian"
-#define PTO_CYBORG			"Cyborg"
+#define PTO_SECURITY		"Служба безопасности"
+#define PTO_MEDICAL			"Медицинский отдел"
+#define PTO_ENGINEERING 	"Инженерный отдел"
+#define PTO_SCIENCE			"Научный отдел"
+#define PTO_EXPLORATION 	"Отдел искателей"
+#define PTO_CARGO			"Отдел снабжения"
+#define PTO_CIVILIAN		"Гражданские"
+#define PTO_CYBORG			"Киборг"
 
 #define DEPARTMENT_TALON	"ITV Talon"
 

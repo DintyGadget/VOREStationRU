@@ -6,7 +6,7 @@
 	bantype = "changeling"
 	feedback_tag = "changeling_objective"
 	avoid_silicons = TRUE
-	protected_jobs = list("Офицер безопасности", "Надзиратель", "Детектив", "Глава безопасности", "Директор колонии")
+	protected_jobs = list("Офицер безопасности", "Надзиратель", "Детектив", "Глава службы безопасности", "Директор колонии")
 	welcome_text = "Используйте \"#g\" в чате, чтобы общаться с другими подменышами. Помните: вы получаете всю их поглощенную ДНК, если поглощаете их."
 	antag_sound = 'sound/effects/antag_notice/ling_alert.ogg'
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE

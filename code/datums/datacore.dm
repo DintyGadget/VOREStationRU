@@ -282,14 +282,14 @@ var/global/list/PDA_Manifest = list()
 
 
 	PDA_Manifest = list(
-		list("cat" = "Command", "elems" = heads),
-		list("cat" = "Security", "elems" = sec),
-		list("cat" = "Engineering", "elems" = eng),
-		list("cat" = "Medical", "elems" = med),
-		list("cat" = "Science", "elems" = sci),
-		list("cat" = "Cargo", "elems" = car),
-		list("cat" = "Exploration", "elems" = pla), // VOREStation Edit
-		list("cat" = "Civilian", "elems" = civ),
+		list("cat" = "Командование", "elems" = heads),
+		list("cat" = "Служба безопасности", "elems" = sec),
+		list("cat" = "Инженерный отдел", "elems" = eng),
+		list("cat" = "Медицинский отдел", "elems" = med),
+		list("cat" = "Научный отдел", "elems" = sci),
+		list("cat" = "Отдел снабжения", "elems" = car),
+		list("cat" = "Отдел искателей", "elems" = pla), // VOREStation Edit
+		list("cat" = "Гражданские", "elems" = civ),
 		list("cat" = "Silicon", "elems" = bot),
 		list("cat" = "Miscellaneous", "elems" = misc)
 		)

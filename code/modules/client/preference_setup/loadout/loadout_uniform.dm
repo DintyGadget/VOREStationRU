@@ -111,69 +111,69 @@
 	allowed_roles = list("Главный инженер","Инженер")
 
 /datum/gear/uniform/job_skirt/roboticist
-	display_name = "Ученый: Юбка робототехника"
+	display_name = "Учёный: Юбка робототехника"
 	path = /obj/item/clothing/under/rank/roboticist/skirt
-	allowed_roles = list("Директор исследований","Роботехник")
+	allowed_roles = list("Директор исследований","Робототехник")
 
 /datum/gear/uniform/job_skirt/cmo
-	display_name = "Медик: Юбка Главврача"
+	display_name = "Врач: Юбка Главврача"
 	path = /obj/item/clothing/under/rank/chief_medical_officer/skirt
 	allowed_roles = list("Главврач")
 
 /datum/gear/uniform/job_skirt/chem
-	display_name = "Медик: Юбка химика"
+	display_name = "Врач: Юбка химика"
 	path = /obj/item/clothing/under/rank/chemist/skirt
 	allowed_roles = list("Главврач","Химик")
 
 /datum/gear/uniform/job_skirt/viro
-	display_name = "Медик: Юбка вирусолога"
+	display_name = "Врач: Юбка вирусолога"
 	path = /obj/item/clothing/under/rank/virologist/skirt
-	allowed_roles = list("Главврач","Медик")
+	allowed_roles = list("Главврач","Врач")
 
 /datum/gear/uniform/job_skirt/med
-	display_name = "Медик: Юбка врача"
+	display_name = "Врач: Юбка врача"
 	path = /obj/item/clothing/under/rank/medical/skirt
-	allowed_roles = list("Главврач","Медик","Химик","Психиатр","Парамедик")
+	allowed_roles = list("Главврач","Врач","Химик","Психиатр","Парамедик")
 
 /datum/gear/uniform/job_skirt/sci
-	display_name = "Ученый: Юбка ученого"
+	display_name = "Учёный: Юбка ученого"
 	path = /obj/item/clothing/under/rank/scientist/skirt
-	allowed_roles = list("Директор исследований","Ученый", "Ксенобиолог")
+	allowed_roles = list("Директор исследований","Учёный", "Ксенобиолог")
 
 /datum/gear/uniform/job_skirt/cargo
 	display_name = "Карго: Юбка карго"
 	path = /obj/item/clothing/under/rank/cargotech/skirt
-	allowed_roles = list("Интендант","Грузчик")
+	allowed_roles = list("Квартирмейстер","Грузчик")
 
 /datum/gear/uniform/job_skirt/qm
 	display_name = "Карго: Юбка Квартирмейстера"
 	path = /obj/item/clothing/under/rank/cargo/skirt
-	allowed_roles = list("Интендант")
+	allowed_roles = list("Квартирмейстер")
 
 /datum/gear/uniform/job_skirt/warden
 	display_name = "СБ: Юбка надзирателя"
 	path = /obj/item/clothing/under/rank/warden/skirt
-	allowed_roles = list("Глава безопасности", "Надзиратель")
+	allowed_roles = list("Глава службы безопасности", "Надзиратель")
 
 /datum/gear/uniform/job_skirt/security
 	display_name = "СБ: Юбка СБ"
 	path = /obj/item/clothing/under/rank/security/skirt
-	allowed_roles = list("Глава безопасности", "Надзиратель", "Детектив", "Офицер безопасности")
+	allowed_roles = list("Глава службы безопасности", "Надзиратель", "Детектив", "Офицер безопасности")
 
 /datum/gear/uniform/job_skirt/head_of_security
 	display_name = "СБ: Юбка Главы СБ"
 	path = /obj/item/clothing/under/rank/head_of_security/skirt
-	allowed_roles = list("Глава безопасности")
+	allowed_roles = list("Глава службы безопасности")
 
 /datum/gear/uniform/job_turtle/science
-	display_name = "Ученый: Водолазка"
+	display_name = "Учёный: Водолазка"
 	path = /obj/item/clothing/under/rank/scientist/turtleneck
-	allowed_roles = list("Директор исследований", "Ученый", "Роботехник", "Ксенобиолог")
+	allowed_roles = list("Директор исследований", "Учёный", "Робототехник", "Ксенобиолог")
 
 /datum/gear/uniform/job_turtle/security
 	display_name = "СБ: Водолазка"
 	path = /obj/item/clothing/under/rank/security/turtleneck
-	allowed_roles = list("Глава безопасности", "Надзиратель", "Детектив", "Офицер безопасности")
+	allowed_roles = list("Глава службы безопасности", "Надзиратель", "Детектив", "Офицер безопасности")
 
 /datum/gear/uniform/job_turtle/engineering
 	display_name = "Инженер: Водолазка"
@@ -181,29 +181,29 @@
 	allowed_roles = list("Главный инженер", "Атмосферный техник", "Инженер")
 
 /datum/gear/uniform/job_turtle/medical
-	display_name = "Медик: Водолазка"
+	display_name = "Врач: Водолазка"
 	path = /obj/item/clothing/under/rank/medical/turtleneck
-	allowed_roles = list("Главврач", "Парамедик", "Медик", "Психиатр", "Search and Rescue", "Химик")
+	allowed_roles = list("Главврач", "Парамедик", "Врач", "Психиатр", "Search and Rescue", "Химик")
 
 /datum/gear/uniform/jeans_qm
 	display_name = "Карго: Джинсы Квартирмейстера"
 	path = /obj/item/clothing/under/rank/cargo/jeans
-	allowed_roles = list("Интендант")
+	allowed_roles = list("Квартирмейстер")
 
 /datum/gear/uniform/jeans_qmf
 	display_name = "Карго: Джинсы Квартирмейстера, женские"
 	path = /obj/item/clothing/under/rank/cargo/jeans/female
-	allowed_roles = list("Интендант")
+	allowed_roles = list("Квартирмейстер")
 
 /datum/gear/uniform/jeans_cargo
 	display_name = "Карго: Джинсы"
 	path = /obj/item/clothing/under/rank/cargotech/jeans
-	allowed_roles = list("Интендант","Грузчик")
+	allowed_roles = list("Квартирмейстер","Грузчик")
 
 /datum/gear/uniform/jeans_cargof
 	display_name = "Карго: Джинсы, женские"
 	path = /obj/item/clothing/under/rank/cargotech/jeans/female
-	allowed_roles = list("Интендант","Грузчик")
+	allowed_roles = list("Квартирмейстер","Грузчик")
 
 /datum/gear/uniform/suit/lawyer
 	display_name = "Костюм, официальный (выбор)"
@@ -306,22 +306,22 @@
 /datum/gear/uniform/corpdetsuit
 	display_name = "Детектив: Униформа, фирменная"
 	path = /obj/item/clothing/under/det/corporate
-	allowed_roles = list("Детектив","Глава безопасности")
+	allowed_roles = list("Детектив","Глава службы безопасности")
 
 /datum/gear/uniform/corpsecsuit
 	display_name = "СБ: Униформа, фирменная"
 	path = /obj/item/clothing/under/rank/security/corp
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель")
 
 /datum/gear/uniform/corpwarsuit
 	display_name = "СБ: Униформа, фирменная (Надзиратель)"
 	path = /obj/item/clothing/under/rank/warden/corp
-	allowed_roles = list("Глава безопасности","Надзиратель")
+	allowed_roles = list("Глава службы безопасности","Надзиратель")
 
 /datum/gear/uniform/corphossuit
 	display_name = "СБ: Униформа, фирменная (Глава СБ)"
 	path = /obj/item/clothing/under/rank/head_of_security/corp
-	allowed_roles = list("Глава безопасности")
+	allowed_roles = list("Глава службы безопасности")
 
 /datum/gear/uniform/uniform_hop
 	display_name = "Управление: Платье ГП"
@@ -337,17 +337,17 @@
 /datum/gear/uniform/navysecsuit
 	display_name = "СБ: Униформа, морской синий"
 	path = /obj/item/clothing/under/rank/security/navyblue
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель")
 
 /datum/gear/uniform/navywarsuit
 	display_name = "СБ: Униформа, морской синий (Надзиратель)"
 	path = /obj/item/clothing/under/rank/warden/navyblue
-	allowed_roles = list("Глава безопасности","Надзиратель")
+	allowed_roles = list("Глава службы безопасности","Надзиратель")
 
 /datum/gear/uniform/navyhossuit
 	display_name = "СБ: Униформа, морской синий (Глава СБ)"
 	path = /obj/item/clothing/under/rank/head_of_security/navyblue
-	allowed_roles = list("Глава безопасности")
+	allowed_roles = list("Глава службы безопасности")
 
 /datum/gear/uniform/shortplaindress
 	display_name = "Платье, простое"
@@ -436,7 +436,7 @@
 /datum/gear/uniform/pcrc
 	display_name = "СБ: Униформа, PCRC"
 	path = /obj/item/clothing/under/pcrc
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель")
 
 /datum/gear/uniform/brandsuit/grayson
 	display_name = "Комбинезон: Grayson"

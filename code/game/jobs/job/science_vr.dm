@@ -16,7 +16,7 @@
 	spawn_positions = 5
 	pto_type = PTO_SCIENCE
 	alt_titles = list("Ксеноархеолог" = /datum/alt_title/xenoarch, "Аномалист" = /datum/alt_title/anomalist, \
-						"Исследователь Форона" = /datum/alt_title/phoron_research, "Конструктор схем" = /datum/alt_title/circuit_designer)
+						"Исследователь форона" = /datum/alt_title/phoron_research, "Программист микросхем" = /datum/alt_title/circuit_designer)
 
 
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch, access_xenobotany)
@@ -24,9 +24,9 @@
 
 
 /datum/alt_title/circuit_designer
-	title = "Конструктор схем"
-	title_blurb = "A Circuit Designer is a Scientist whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
-				   They work to create various useful devices using the capabilities of integrated circuitry."
+	title = "Программист микросхем"
+	title_blurb = "Программист микросхем является учёным, который специализируется на разработке интегральных микросхем. Он знаком с принципами работы этих схем и их программирования. \
+				   Используя их возможности, программист создаёт всевозможные полезные гаджеты."
 
 /datum/job/xenobiologist
 	spawn_positions = 3
@@ -57,5 +57,5 @@
 	minimal_player_age = 14
 
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
-	job_description = "A Xenobotanist grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
-					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	job_description = "Ксеноботаник выращивает и ухаживает за ассортиментом необычайных и порой даже опасных растений. \
+					Если результаты таких экспериментов безопасны и даже полезны для персонала, ксеноботаник может поделиться своей находкой с остальным персоналом."

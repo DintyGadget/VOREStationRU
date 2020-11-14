@@ -1283,7 +1283,7 @@
 	name = "игрушечный ИИ"
 	desc = "Маленькое игрушечное ядро ИИ!"// with real law announcing action!" //Alas, requires a rewrite of how ion laws work.
 	icon = 'icons/obj/toy.dmi'
-	icon_state = "AI"
+	icon_state = "ИИ"
 	w_class = ITEMSIZE_SMALL
 	var/cooldown = 0
 /*

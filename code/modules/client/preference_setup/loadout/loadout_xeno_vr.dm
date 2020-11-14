@@ -2,10 +2,10 @@
 /////
 
 /datum/gear/suit/dept/cloak/research
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог", "Ксеноботаник")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог", "Ксеноботаник")
 
 /datum/gear/uniform/dept/undercoat/research
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог", "Ксеноботаник")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог", "Ксеноботаник")
 
 /////
 
@@ -63,13 +63,13 @@
 	sort_category = "Расовая одежда"
 
 /datum/gear/eyes/medical/tajblind
-	display_name = "Таджара: Повязка на глаза, медицинская (Медик)"
+	display_name = "Таджара: Повязка на глаза, медицинская (Врач)"
 	path = /obj/item/clothing/glasses/hud/health/tajblind
 	//whitelisted = SPECIES_TAJ
 	sort_category = "Расовая одежда"
 
 /datum/gear/eyes/meson/tajblind
-	display_name = "Таджара: Повязка на глаза, защитная (Инженер, Ученый)"
+	display_name = "Таджара: Повязка на глаза, защитная (Инженер, Учёный)"
 	path = /obj/item/clothing/glasses/meson/prescription/tajblind
 	//whitelisted = SPECIES_TAJ
 	sort_category = "Расовая одежда"

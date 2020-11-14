@@ -8,11 +8,11 @@
 /mob/living/silicon/toggle_sensor_mode()
 	. = ..()
 	switch(hudmode) // This is set in parent
-		if ("Security")
+		if ("Служба безопасности")
 			//Disable Medical planes
 			plane_holder?.set_vis(VIS_CH_BACKUP,FALSE)
 
-		if ("Medical")
+		if ("Медицинский отдел")
 			//Enable Medical planes
 			plane_holder?.set_vis(VIS_CH_BACKUP,TRUE)
 

@@ -1,5 +1,5 @@
 var/list/obj/machinery/photocopier/faxmachine/allfaxes = list()
-var/list/admin_departments = list("[using_map.boss_name]", "Virgo-Prime Governmental Authority", "Virgo-Erigonne Job Boards", "Supply") // Vorestation Edit
+var/list/admin_departments = list("[using_map.boss_name]", "Virgo-Prime Governmental Authority", "Virgo-Erigonne Job Boards", "Снабжение") // Vorestation Edit
 var/list/alldepartments = list()
 
 var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
@@ -84,7 +84,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 					rank = scan.assignment
 			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
 				authenticated = usr.name
-				rank = "AI"
+				rank = "ИИ"
 			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(usr))
 				authenticated = usr.name
 				var/mob/living/silicon/robot/R = usr
@@ -110,7 +110,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 
 	if(!authenticated)
 		return
-	
+
 	switch(action)
 		if("send")
 			if(copyitem)
@@ -212,7 +212,7 @@ var/list/adminfaxes = list()	//cache for faxes that have been sent to admins
 		message_admins(sender, "[uppertext(using_map.boss_short)] FAX", rcvdcopy, "CentComFaxReply", "#006100")
 	else if (destination == "Virgo-Prime Governmental Authority") // Vorestation Edit
 		message_admins(sender, "VIRGO GOVERNMENT FAX", rcvdcopy, "CentComFaxReply", "#1F66A0")
-	else if (destination == "Supply")
+	else if (destination == "Снабжение")
 		message_admins(sender, "[uppertext(using_map.boss_short)] SUPPLY FAX", rcvdcopy, "CentComFaxReply", "#5F4519")
 	else
 		message_admins(sender, "[uppertext(destination)] FAX", rcvdcopy, "UNKNOWN")

@@ -129,17 +129,17 @@ var/const/TALON_FREQ = 1363 //VOREStation Add
 
 var/list/radiochannels = list(
 	"Общий"		= PUB_FREQ,
-	"Science"		= SCI_FREQ,
-	"Command"		= COMM_FREQ,
-	"Medical"		= MED_FREQ,
-	"Engineering"	= ENG_FREQ,
-	"Security" 		= SEC_FREQ,
+	"Научный отдел"		= SCI_FREQ,
+	"Командование"		= COMM_FREQ,
+	"Медицинский отдел"		= MED_FREQ,
+	"Инженерный отдел"	= ENG_FREQ,
+	"Служба безопасности" 		= SEC_FREQ,
 	"Response Team" = ERT_FREQ,
 	"Special Ops" 	= DTH_FREQ,
 	"Mercenary" 	= SYND_FREQ,
 	"Raider"		= RAID_FREQ,
-	"Supply" 		= SUP_FREQ,
-	"Service" 		= SRV_FREQ,
+	"Снабжение" 		= SUP_FREQ,
+	"Сервис" 		= SRV_FREQ,
 	"Explorer"		= EXP_FREQ,
 	"AI Private"	= AI_FREQ,
 	"Entertainment" = ENT_FREQ,
@@ -155,7 +155,7 @@ var/list/radiochannels = list(
 	set category = "Generate TGUI Radio Constants"
 
 	var/list/channel_info = list()
-	
+
 	for(var/i in RADIO_LOW_FREQ to RADIO_HIGH_FREQ)
 		for(var/key in radiochannels)
 			if(i == radiochannels[key])

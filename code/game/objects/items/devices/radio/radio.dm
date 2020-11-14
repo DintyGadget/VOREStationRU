@@ -404,11 +404,11 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 	// --- AI ---
 	else if (isAI(M))
-		jobname = "AI"
+		jobname = "ИИ"
 
 	// --- Cyborg ---
 	else if (isrobot(M))
-		jobname = "Cyborg"
+		jobname = "Киборг"
 
 	// --- Personal AI (pAI) ---
 	else if (istype(M, /mob/living/silicon/pai))

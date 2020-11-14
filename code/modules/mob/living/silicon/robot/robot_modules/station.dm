@@ -2,9 +2,9 @@ var/global/list/robot_modules = list(
 	"Стандарт"		= /obj/item/weapon/robot_module/robot/standard,
 	"Сервис" 		= /obj/item/weapon/robot_module/robot/clerical/butler,
 	"Клерк" 		= /obj/item/weapon/robot_module/robot/clerical/general,
-	"Ученый" 		= /obj/item/weapon/robot_module/robot/research,
-	"Шахтер" 		= /obj/item/weapon/robot_module/robot/miner,
-	"Медик" 		= /obj/item/weapon/robot_module/robot/medical/crisis,
+	"Учёный" 		= /obj/item/weapon/robot_module/robot/research,
+	"Шахтёр" 		= /obj/item/weapon/robot_module/robot/miner,
+	"Врач" 		= /obj/item/weapon/robot_module/robot/medical/crisis,
 	"Хирург" 		= /obj/item/weapon/robot_module/robot/medical/surgeon,
 	"Охрана" 		= /obj/item/weapon/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/weapon/robot_module/robot/security/combat,
@@ -156,13 +156,13 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/proc/handle_shell(var/mob/living/silicon/robot/R)
 	if(R.braintype == BORG_BRAINTYPE_AI_SHELL)
 		channels = list(
-			"Medical" = 1,
-			"Engineering" = 1,
-			"Security" = 1,
-			"Service" = 1,
-			"Supply" = 1,
-			"Science" = 1,
-			"Command" = 1,
+			"Медицинский отдел" = 1,
+			"Инженерный отдел" = 1,
+			"Служба безопасности" = 1,
+			"Сервис" = 1,
+			"Снабжение" = 1,
+			"Научный отдел" = 1,
+			"Командование" = 1,
 			"Explorer" = 1
 			)
 
@@ -205,7 +205,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/medical
 	name = "medical robot module"
-	channels = list("Medical" = 1)
+	channels = list("Медицинский отдел" = 1)
 	networks = list(NETWORK_MEDICAL)
 	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
 	can_be_pushed = 0
@@ -357,7 +357,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/engineering
 	name = "engineering robot module"
-	channels = list("Engineering" = 1)
+	channels = list("Инженерный отдел" = 1)
 	networks = list(NETWORK_ENGINEERING)
 	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
 	sprites = list(
@@ -369,7 +369,7 @@ var/global/list/robot_modules = list(
 					"WTOperator" = "sleekce",
 					"XI-GUS" = "spidereng",
 					"XI-ALP" = "heavyEng",
-					"Basic" = "Engineering",
+					"Basic" = "Инженерный отдел",
 					"Antique" = "engineerrobot",
 					"Landmate" = "landmate",
 					"Landmate - Treaded" = "engiborg+tread",
@@ -468,7 +468,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/security
 	name = "security robot module"
-	channels = list("Security" = 1)
+	channels = list("Служба безопасности" = 1)
 	networks = list(NETWORK_SECURITY)
 	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
 	can_be_pushed = 0
@@ -522,7 +522,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/janitor
 	name = "janitorial robot module"
-	channels = list("Service" = 1)
+	channels = list("Сервис" = 1)
 	sprites = list(
 					"M-USE NanoTrasen" = "robotJani",
 					"Arachne" = "crawler",
@@ -559,8 +559,8 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/robot/clerical
 	name = "service robot module"
 	channels = list(
-		"Service" = 1,
-		"Command" = 1
+		"Сервис" = 1,
+		"Командование" = 1
 		)
 	languages = list(
 					LANGUAGE_SOL_COMMON	= 1,
@@ -592,7 +592,7 @@ var/global/list/robot_modules = list(
 					"XI-GUS" = "spider",
 					"XI-ALP" = "heavyServ",
 					"Standard" = "Service2",
-					"Waitress" = "Service",
+					"Waitress" = "Сервис",
 					"Bro" = "Brobot",
 					"Rich" = "maximillion",
 					"Drone - Service" = "drone-service",
@@ -646,7 +646,7 @@ var/global/list/robot_modules = list(
 					"WTOmni" = "omoikane",
 					"XI-GUS" = "spidercom",
 					"XI-ALP" = "heavyServ",
-					"Waitress" = "Service",
+					"Waitress" = "Сервис",
 					"Bro" = "Brobot",
 					"Rich" = "maximillion",
 					"Default" = "Service2",
@@ -675,7 +675,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/miner
 	name = "miner robot module"
-	channels = list("Supply" = 1)
+	channels = list("Снабжение" = 1)
 	networks = list(NETWORK_MINE)
 	sprites = list(
 					"NM-USE NanoTrasen" = "robotMine",
@@ -708,7 +708,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/robot/research
 	name = "research module"
-	channels = list("Science" = 1)
+	channels = list("Научный отдел" = 1)
 	sprites = list(
 					"L'Ouef" = "peaceborg",
 					"Cabeiri" = "eyebot-science",
@@ -888,7 +888,7 @@ var/global/list/robot_modules = list(
 /obj/item/weapon/robot_module/drone/construction
 	name = "construction drone module"
 	hide_on_manifest = 1
-	channels = list("Engineering" = 1)
+	channels = list("Инженерный отдел" = 1)
 	languages = list()
 
 /obj/item/weapon/robot_module/drone/construction/New()
@@ -903,7 +903,7 @@ var/global/list/robot_modules = list(
 
 /obj/item/weapon/robot_module/drone/mining
 	name = "miner drone module"
-	channels = list("Supply" = 1)
+	channels = list("Снабжение" = 1)
 	networks = list(NETWORK_MINE)
 
 /obj/item/weapon/robot_module/drone/mining/New()

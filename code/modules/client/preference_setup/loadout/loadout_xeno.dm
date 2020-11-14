@@ -180,17 +180,17 @@
 /datum/gear/uniform/dept/undercoat/qm
 	display_name = "Тешари: Накидка Квартирмейстера"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/qm
-	allowed_roles = list("Интендант")
+	allowed_roles = list("Квартирмейстер")
 
 /datum/gear/uniform/dept/undercoat/command
 	display_name = "Тешари: Накидка Управления"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/command
-	allowed_roles = list("Директор колонии","Глава персонала","Глава безопасности","Главный инженер","Главврач","Директор исследований")
+	allowed_roles = list("Директор колонии","Глава персонала","Глава службы безопасности","Главный инженер","Главврач","Директор исследований")
 
 /datum/gear/uniform/dept/undercoat/command_g
 	display_name = "Тешари: Накидка Управления, золотые пуговицы"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/command_g
-	allowed_roles = list("Директор колонии","Глава персонала","Глава безопасности","Главный инженер","Главврач","Директор исследований")
+	allowed_roles = list("Директор колонии","Глава персонала","Глава службы безопасности","Главный инженер","Главврач","Директор исследований")
 
 /datum/gear/uniform/dept/undercoat/cmo
 	display_name = "Тешари: Накидка Главврача"
@@ -200,17 +200,17 @@
 /datum/gear/uniform/dept/undercoat/cargo
 	display_name = "Тешари: Накидка карго"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/cargo
-	allowed_roles = list("Грузчик","Интендант","Шахтер")
+	allowed_roles = list("Грузчик","Квартирмейстер","Шахтёр")
 
 /datum/gear/uniform/dept/undercoat/mining
 	display_name = "Тешари: Накидка шахтёра"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/mining
-	allowed_roles = list("Интендант","Шахтер")
+	allowed_roles = list("Квартирмейстер","Шахтёр")
 
 /datum/gear/uniform/dept/undercoat/security
 	display_name = "Тешари: Накидка Службы Безопасности"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/sec
-	allowed_roles = list("Глава безопасности","Детектив","Надзиратель","Офицер безопасности")
+	allowed_roles = list("Глава службы безопасности","Детектив","Надзиратель","Офицер безопасности")
 
 /datum/gear/uniform/dept/undercoat/service
 	display_name = "Тешари: Накидка работника сервиса"
@@ -230,17 +230,17 @@
 /datum/gear/uniform/dept/undercoat/research
 	display_name = "Тешари: Накидка ученого"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/sci
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог")
 
 /datum/gear/uniform/dept/undercoat/robo
 	display_name = "Тешари: Накидка робототехника"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/robo
-	allowed_roles = list("Роботехник")
+	allowed_roles = list("Робототехник")
 
 /datum/gear/uniform/dept/undercoat/medical
 	display_name = "Тешари: Накидка медика"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/medical
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр")
 
 /datum/gear/uniform/dept/undercoat/chemistry
 	display_name = "Тешари: Накидка химика"
@@ -250,7 +250,7 @@
 /datum/gear/uniform/dept/undercoat/virology
 	display_name = "Тешари: Накидка вирусолога"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/viro
-	allowed_roles = list("Медик")
+	allowed_roles = list("Врач")
 
 /datum/gear/uniform/dept/undercoat/paramedic
 	display_name = "Тешари: Накидка парамедика"
@@ -274,12 +274,12 @@
 /datum/gear/suit/dept/cloak/qm
 	display_name = "Тешари: Плащ Квартирмейстера"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/qm
-	allowed_roles = list("Интендант")
+	allowed_roles = list("Квартирмейстер")
 
 /datum/gear/suit/dept/cloak/command
 	display_name = "Тешари: Плащ Управления"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/command
-	allowed_roles = list("Директор колонии","Глава персонала","Глава безопасности","Главный инженер","Главврач","Директор исследований")
+	allowed_roles = list("Директор колонии","Глава персонала","Глава службы безопасности","Главный инженер","Главврач","Директор исследований")
 
 /datum/gear/suit/dept/cloak/cmo
 	display_name = "Тешари: Плащ Главврача"
@@ -289,17 +289,17 @@
 /datum/gear/suit/dept/cloak/cargo
 	display_name = "Тешари: Плащ карго"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/cargo
-	allowed_roles = list("Грузчик","Интендант","Шахтер")
+	allowed_roles = list("Грузчик","Квартирмейстер","Шахтёр")
 
 /datum/gear/suit/dept/cloak/mining
 	display_name = "Тешари: Плащ шахтёра"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/mining
-	allowed_roles = list("Интендант","Шахтер")
+	allowed_roles = list("Квартирмейстер","Шахтёр")
 
 /datum/gear/suit/dept/cloak/security
 	display_name = "Тешари: Плащ Службы Безопасности"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/sec
-	allowed_roles = list("Глава безопасности","Детектив","Надзиратель","Офицер безопасности")
+	allowed_roles = list("Глава службы безопасности","Детектив","Надзиратель","Офицер безопасности")
 
 /datum/gear/suit/dept/cloak/service
 	display_name = "Тешари: Плащ работника сервиса"
@@ -319,17 +319,17 @@
 /datum/gear/suit/dept/cloak/research
 	display_name = "Тешари: Плащ ученого"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/sci
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог")
 
 /datum/gear/suit/dept/cloak/robo
 	display_name = "Тешари: Плащ робототехника"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/robo
-	allowed_roles = list("Роботехник")
+	allowed_roles = list("Робототехник")
 
 /datum/gear/suit/dept/cloak/medical
 	display_name = "Тешари: Плащ медика)"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/medical
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр")
 
 /datum/gear/suit/dept/cloak/chemistry
 	display_name = "Тешари: Плащ химика"
@@ -339,7 +339,7 @@
 /datum/gear/suit/dept/cloak/virology
 	display_name = "Тешари: Плащ вирусолога"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/viro
-	allowed_roles = list("Медик")
+	allowed_roles = list("Врач")
 
 /datum/gear/suit/dept/cloak/paramedic
 	display_name = "Тешари: Плащ парамедика"

@@ -60,7 +60,7 @@ Basic - Software in this bundle is automagically preinstalled in every new compu
 	NTNRC Chat - NTNet Relay Chat client. Allows PDA-messaging style messaging for more than two users. Person which created the conversation is Host and has administrative privilegies (kicking, etc.)
 	NTNet News - Allows reading news from newscaster network.
 
-Engineering - Requires "Engineering" access on ID card (ie. CE, Atmostech, Engineer)
+Engineering - Requires "Инженерный отдел" access on ID card (ie. CE, Atmostech, Engineer)
 	Alarm Monitor - Allows monitoring alarms, same as the stationbound one.
 	Power Monitor - Power monitoring computer, connects to sensors in same way as regular one does.
 	Atmospheric Control - Allows access to the Atmospherics Monitor Console that operates air alarms. Requires extra access: "Atmospherics"

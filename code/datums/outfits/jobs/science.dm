@@ -18,7 +18,7 @@
 	pda_type = /obj/item/device/pda/heads/rd
 
 /decl/hierarchy/outfit/job/science/scientist
-	name = OUTFIT_JOB_NAME("Ученый")
+	name = OUTFIT_JOB_NAME("Учёный")
 	uniform = /obj/item/clothing/under/rank/scientist
 	id_type = /obj/item/weapon/card/id/science
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
@@ -30,7 +30,7 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
 
 /decl/hierarchy/outfit/job/science/roboticist
-	name = OUTFIT_JOB_NAME("Роботехник")
+	name = OUTFIT_JOB_NAME("Робототехник")
 	uniform = /obj/item/clothing/under/rank/roboticist
 	shoes = /obj/item/clothing/shoes/black
 	belt = /obj/item/weapon/storage/belt/utility/full

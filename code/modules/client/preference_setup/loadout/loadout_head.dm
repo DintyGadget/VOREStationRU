@@ -19,32 +19,32 @@
 /datum/gear/head/beret/bsec
 	display_name = "СБ: Берет, ВМС (Офицер)"
 	path = /obj/item/clothing/head/beret/sec/navy/officer
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель")
 
 /datum/gear/head/beret/bsec_warden
 	display_name = "СБ: Берет, ВМС (Надзиратель)"
 	path = /obj/item/clothing/head/beret/sec/navy/warden
-	allowed_roles = list("Глава безопасности","Надзиратель")
+	allowed_roles = list("Глава службы безопасности","Надзиратель")
 
 /datum/gear/head/beret/bsec_hos
 	display_name = "СБ: Берет, ВМС (Глава СБ)"
 	path = /obj/item/clothing/head/beret/sec/navy/hos
-	allowed_roles = list("Глава безопасности")
+	allowed_roles = list("Глава службы безопасности")
 
 /datum/gear/head/beret/csec
 	display_name = "СБ: Берет, фирменный"
 	path = /obj/item/clothing/head/beret/sec/corporate/officer
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель", "Детектив")
 
 /datum/gear/head/beret/csec_warden
 	display_name = "СБ: Берет, фирменный (Надзиратель)"
 	path = /obj/item/clothing/head/beret/sec/corporate/warden
-	allowed_roles = list("Глава безопасности","Надзиратель")
+	allowed_roles = list("Глава службы безопасности","Надзиратель")
 
 /datum/gear/head/beret/csec_hos
 	display_name = "СБ: Берет, фирменный (Глава СБ)"
 	path = /obj/item/clothing/head/beret/sec/corporate/hos
-	allowed_roles = list("Глава безопасности")
+	allowed_roles = list("Глава службы безопасности")
 
 /datum/gear/head/beret/eng
 	display_name = "Берет, инженерно-оранжевый"
@@ -57,7 +57,7 @@
 /datum/gear/head/beret/sec
 	display_name = "СБ: Берет, красный"
 	path = /obj/item/clothing/head/beret/sec
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель", "Детектив")
 
 /datum/gear/head/cap
 	display_name = "Кепка, черная"
@@ -78,7 +78,7 @@
 /datum/gear/head/cap/corp
 	display_name = "СБ: Фуражка, фирменная"
 	path = /obj/item/clothing/head/soft/sec/corp
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель", "Детектив")
 
 /datum/gear/head/cap/green
 	display_name = "Кепка, зеленая"
@@ -107,7 +107,7 @@
 /datum/gear/head/cap/sec
 	display_name = "СБ: Фуражка"
 	path = /obj/item/clothing/head/soft/sec
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель", "Детектив")
 
 /datum/gear/head/cap/yellow
 	display_name = "Кепка, желтая"
@@ -122,7 +122,7 @@
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/head/cap/mbill
-	display_name = "Кепка, Major Bill"
+	display_name = "Кепка, Major Bill's"
 	path = /obj/item/clothing/head/soft/mbill
 
 /datum/gear/head/cap/sol
@@ -311,7 +311,7 @@
 	display_name = "Сварочная маска, обычная (Инж/Робототехник)"
 	path = /obj/item/clothing/head/welding
 	cost = 2
-	allowed_roles = list("Главный инженер","Инженер","Атмосферный техник","Директор исследований","Роботехник")
+	allowed_roles = list("Главный инженер","Инженер","Атмосферный техник","Директор исследований","Робототехник")
 
 /datum/gear/head/welding/demon
 	display_name = "Сварочная маска, демон (Инж/Робототехник)"

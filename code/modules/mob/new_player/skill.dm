@@ -17,7 +17,7 @@ var/list/SKILL_ENGINEER = list("field" = "Инженерное дело", "EVA" 
 var/list/SKILL_ORGAN_ROBOTICIST = list("field" = "Наука", "devices" = SKILL_ADEPT, "electrical" = SKILL_BASIC, "computer" = SKILL_ADEPT, "anatomy" = SKILL_BASIC)
 var/list/SKILL_SECURITY_OFFICER = list("field" = "Безопасность", "combat" = SKILL_BASIC, "weapons" = SKILL_ADEPT, "law" = SKILL_ADEPT, "forensics" = SKILL_BASIC)
 var/list/SKILL_CHEMIST = list("field" = "Наука", "chemistry" = SKILL_ADEPT, "science" = SKILL_ADEPT, "medical" = SKILL_BASIC, "devices" = SKILL_BASIC)
-var/global/list/SKILL_PRE = list("Инженер" = SKILL_ENGINEER, "Роботехник" = SKILL_ORGAN_ROBOTICIST, "Офицер безопасности" = SKILL_SECURITY_OFFICER, "Химик" = SKILL_CHEMIST)
+var/global/list/SKILL_PRE = list("Инженер" = SKILL_ENGINEER, "Робототехник" = SKILL_ORGAN_ROBOTICIST, "Офицер безопасности" = SKILL_SECURITY_OFFICER, "Химик" = SKILL_CHEMIST)
 
 /datum/skill/management
 	ID = "management"

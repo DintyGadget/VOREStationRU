@@ -169,14 +169,14 @@ datum/gear/suit/duster
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/yellow
 
 /datum/gear/suit/labcoat/emt
-	display_name = "Медик: Халат"
+	display_name = "Врач: Халат"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/emt
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр")
 
 /datum/gear/suit/roles/surgical_apron
-	display_name = "Медик: Фартук хирурга"
+	display_name = "Врач: Фартук хирурга"
 	path = /obj/item/clothing/suit/surgicalapron
-	allowed_roles = list("Медик","Главврач")
+	allowed_roles = list("Врач","Главврач")
 
 /datum/gear/suit/overalls
 	display_name = "Комбинезон"
@@ -206,7 +206,7 @@ datum/gear/suit/duster
 	path = /obj/item/clothing/accessory/poncho/roles/security
 
 /datum/gear/suit/roles/poncho/medical
-	display_name = "Медик: Пончо"
+	display_name = "Врач: Пончо"
 	path = /obj/item/clothing/accessory/poncho/roles/medical
 
 /datum/gear/suit/roles/poncho/engineering
@@ -214,16 +214,16 @@ datum/gear/suit/duster
 	path = /obj/item/clothing/accessory/poncho/roles/engineering
 
 /datum/gear/suit/roles/poncho/science
-	display_name = "Ученый: Пончо"
+	display_name = "Учёный: Пончо"
 	path = /obj/item/clothing/accessory/poncho/roles/science
 
 /datum/gear/suit/roles/poncho/cloak/hos
 	display_name = "СБ: Плащ Главы Службы Безопасности"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/hos
-	allowed_roles = list("Глава безопасности")
+	allowed_roles = list("Глава службы безопасности")
 
 /datum/gear/suit/roles/poncho/cloak/cmo
-	display_name = "Медик: Плащ Главврача"
+	display_name = "Врач: Плащ Главврача"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/cmo
 	allowed_roles = list("Главврач")
 
@@ -233,14 +233,14 @@ datum/gear/suit/duster
 	allowed_roles = list("Главный инженер")
 
 /datum/gear/suit/roles/poncho/cloak/rd
-	display_name = "Ученый: Плащ Директора Исследований"
+	display_name = "Учёный: Плащ Директора Исследований"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/rd
 	allowed_roles = list("Директор исследований")
 
 /datum/gear/suit/roles/poncho/cloak/qm
 	display_name = "Карго: Плащ Квартирмейстера"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/qm
-	allowed_roles = list("Интендант")
+	allowed_roles = list("Квартирмейстер")
 
 /datum/gear/suit/roles/poncho/cloak/captain
 	display_name = "Управление: Плащ Директора Колонии"
@@ -277,11 +277,11 @@ datum/gear/suit/duster
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/atmos
 
 /datum/gear/suit/roles/poncho/cloak/research
-	display_name = "Ученый: Плащ"
+	display_name = "Учёный: Плащ"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/research
 
 /datum/gear/suit/roles/poncho/cloak/medical
-	display_name = "Медик: Плащ"
+	display_name = "Врач: Плащ"
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/medical
 
 /datum/gear/suit/roles/poncho/cloak/custom //A colorable cloak
@@ -345,14 +345,14 @@ datum/gear/suit/duster
 /datum/gear/suit/wintercoat/security
 	display_name = "СБ: Зимнее пальто"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list("Офицер безопасности", "Глава безопасности", "Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности", "Глава службы безопасности", "Надзиратель", "Детектив")
 
 /datum/gear/suit/wintercoat/medical
-	display_name = "Медик: Зимнее пальто"
+	display_name = "Врач: Зимнее пальто"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical
 
 /datum/gear/suit/wintercoat/science
-	display_name = "Ученый: Зимнее пальто"
+	display_name = "Учёный: Зимнее пальто"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/science
 
 /datum/gear/suit/wintercoat/engineering
@@ -452,11 +452,11 @@ datum/gear/suit/duster
 	path = /obj/item/clothing/suit/storage/toggle/supply_dep_jacket
 
 /datum/gear/suit/miscellaneous/sci_dep_jacket
-	display_name = "Ученый: Куртка отдела"
+	display_name = "Учёный: Куртка отдела"
 	path = /obj/item/clothing/suit/storage/toggle/sci_dep_jacket
 
 /datum/gear/suit/miscellaneous/med_dep_jacket
-	display_name = "Медика: Куртка отдела"
+	display_name = "Врача: Куртка отдела"
 	path = /obj/item/clothing/suit/storage/toggle/med_dep_jacket
 
 /datum/gear/suit/miscellaneous/peacoat
@@ -478,22 +478,22 @@ datum/gear/suit/duster
 /datum/gear/suit/snowsuit/command
 	display_name = "Управление: Зимняя куртка"
 	path = /obj/item/clothing/suit/storage/snowsuit/command
-	allowed_roles = list("Директор колонии","Директор исследований","Глава персонала","Глава безопасности","Главный инженер","Секретарь")
+	allowed_roles = list("Директор колонии","Директор исследований","Глава персонала","Глава службы безопасности","Главный инженер","Секретарь")
 
 /datum/gear/suit/snowsuit/security
 	display_name = "СБ: Зимняя куртка"
 	path = /obj/item/clothing/suit/storage/snowsuit/security
-	allowed_roles = list("Офицер безопасности", "Глава безопасности", "Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности", "Глава службы безопасности", "Надзиратель", "Детектив")
 
 /datum/gear/suit/snowsuit/medical
-	display_name = "Медик: Зимняя куртка"
+	display_name = "Врач: Зимняя куртка"
 	path = /obj/item/clothing/suit/storage/snowsuit/medical
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Search and Rescue")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Search and Rescue")
 
 /datum/gear/suit/snowsuit/science
-	display_name = "Ученый: Зимняя куртка"
+	display_name = "Учёный: Зимняя куртка"
 	path = /obj/item/clothing/suit/storage/snowsuit/science
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог")
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "Инженер: Зимняя куртка"
@@ -503,7 +503,7 @@ datum/gear/suit/duster
 /datum/gear/suit/snowsuit/cargo
 	display_name = "Карго: Зимняя куртка"
 	path = /obj/item/clothing/suit/storage/snowsuit/cargo
-	allowed_roles = list("Интендант","Шахтер","Грузчик","Глава персонала")
+	allowed_roles = list("Квартирмейстер","Шахтёр","Грузчик","Глава персонала")
 
 /datum/gear/suit/miscellaneous/cardigan
 	display_name = "Кардиган (окрашиваемый)"

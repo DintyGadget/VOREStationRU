@@ -1,8 +1,8 @@
 /datum/gear/shoes/boots/winter/science
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог", "Ксеноботаник", "Искатель", "Первопроходец")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог", "Ксеноботаник", "Искатель", "Первопроходец")
 
 /datum/gear/shoes/boots/winter/medical
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
 
 /datum/gear/shoes/black/cuffs
 	display_name = "Онучи, черные"

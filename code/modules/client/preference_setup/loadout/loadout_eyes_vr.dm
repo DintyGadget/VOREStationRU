@@ -1,9 +1,9 @@
 /datum/gear/eyes/medical
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
 
 /datum/gear/eyes/meson
 	display_name = "Оптический мезонный сканер (Инж, Науч)"
-	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник", "Ученый", "Директор исследований", "Искатель", "Первопроходец")
+	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник", "Учёный", "Директор исследований", "Искатель", "Первопроходец")
 
 /datum/gear/eyes/arglasses
 	display_name = "AR-очки"
@@ -16,12 +16,12 @@
 /datum/gear/eyes/arglasses/sec
 	display_name = "AR-S очки (СБ)"
 	path = /obj/item/clothing/glasses/omnihud/sec
-	allowed_roles = list("Офицер безопасности","Глава безопасности","Надзиратель","Детектив")
+	allowed_roles = list("Офицер безопасности","Глава службы безопасности","Надзиратель","Детектив")
 
 /datum/gear/eyes/arglasses/sci
-	display_name = "AR-R очки (Ученый)"
+	display_name = "AR-R очки (Учёный)"
 	path = /obj/item/clothing/glasses/omnihud/rnd
-	allowed_roles = list("Директор исследований","Ученый","Ксенобиолог","Ксеноботаник","Роботехник")
+	allowed_roles = list("Директор исследований","Учёный","Ксенобиолог","Ксеноботаник","Робототехник")
 
 /datum/gear/eyes/arglasses/eng
 	display_name = "AR-E очки (Инженер)"
@@ -29,9 +29,9 @@
 	allowed_roles = list("Инженер","Главный инженер","Атмосферный техник")
 
 /datum/gear/eyes/arglasses/med
-	display_name = "AR-M очки (Медик)"
+	display_name = "AR-M очки (Врач)"
 	path = /obj/item/clothing/glasses/omnihud/med
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
 
 /datum/gear/eyes/arglasses/all
 	display_name = "AR-B очки (ДК, ГП)"
@@ -56,5 +56,5 @@
 	path = /obj/item/clothing/glasses/hud/security/eyepatch
 
 /datum/gear/eyes/medical/medpatch
-	display_name = "Медик: HUD-повязка"
+	display_name = "Врач: HUD-повязка"
 	path = /obj/item/clothing/glasses/hud/health/eyepatch

@@ -15,7 +15,7 @@
 	var/supported = 0
 	var/active = 0
 	var/list/resource_field = list()
-	var/obj/item/device/radio/intercom/faultreporter = new /obj/item/device/radio/intercom{channels=list("Supply")}(null)
+	var/obj/item/device/radio/intercom/faultreporter = new /obj/item/device/radio/intercom{channels=list("Снабжение")}(null)
 
 	var/list/ore_types = list(
 		"hematite" = /obj/item/weapon/ore/iron,
@@ -60,7 +60,7 @@
 	cell = default_use_hicell()
 
 /obj/machinery/mining/drill/get_cell()
-	return cell	
+	return cell
 
 /obj/machinery/mining/drill/loaded
 	cell = /obj/item/weapon/cell/high
@@ -267,7 +267,7 @@
 
 	if(error)
 		src.visible_message("<span class='notice'>\The [src] flashes a '[error]' warning.</span>")
-		faultreporter.autosay(error, src.name, "Supply")
+		faultreporter.autosay(error, src.name, "Снабжение")
 	need_player_check = 1
 	active = 0
 	update_icon()

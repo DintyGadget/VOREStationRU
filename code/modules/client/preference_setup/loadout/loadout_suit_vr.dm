@@ -1,14 +1,14 @@
 /datum/gear/suit/wintercoat/medical
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
 
 /datum/gear/suit/wintercoat/science
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог", "Ксеноботаник", "Искатель", "Первопроходец")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог", "Ксеноботаник", "Искатель", "Первопроходец")
 
 /datum/gear/suit/snowsuit/medical
-	allowed_roles = list("Медик","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
+	allowed_roles = list("Врач","Главврач","Химик","Парамедик","Geneticist", "Психиатр", "Военврач")
 
 /datum/gear/suit/snowsuit/science
-	allowed_roles = list("Директор исследований","Ученый", "Роботехник", "Ксенобиолог", "Ксеноботаник", "Искатель", "Первопроходец")
+	allowed_roles = list("Директор исследований","Учёный", "Робототехник", "Ксенобиолог", "Ксеноботаник", "Искатель", "Первопроходец")
 
 /datum/gear/suit/labcoat_colorable
 	display_name = "Лаб. халат (окрашиваемый)"
@@ -43,19 +43,19 @@
 /datum/gear/uniform/detective_alt
 	display_name = "Детектив: Пальто"
 	path = /obj/item/clothing/suit/storage/det_trench/alt
-	allowed_roles = list("Глава безопасности", "Детектив")
+	allowed_roles = list("Глава службы безопасности", "Детектив")
 
 //Detective alternative
 /datum/gear/uniform/detective_alt2
 	display_name = "Детектив: Пальто длинное"
 	path = /obj/item/clothing/suit/storage/det_trench/alt2
-	allowed_roles = list("Глава безопасности", "Детектив")
+	allowed_roles = list("Глава службы безопасности", "Детектив")
 
 //Emergency Responder jackets for Parameds & EMTs, but also general Medical Staff
 /datum/gear/suit/roles/medical/ems_jacket
 	display_name = "Парамедик: Куртка"
 	path = /obj/item/clothing/suit/storage/toggle/fr_jacket
-	allowed_roles = list("Главврач","Парамедик","Медик")
+	allowed_roles = list("Главврач","Парамедик","Врач")
 
 //imo-superior 'martian' style jacket with the star-of-life design
 /datum/gear/suit/roles/medical/ems_jacket/alt
@@ -66,4 +66,4 @@
 /datum/gear/suit/roles/medical/paramedic_vest
 	display_name = "Парамедик: Жилет"
 	path = /obj/item/clothing/suit/storage/toggle/paramedic
-	allowed_roles = list("Главврач","Парамедик","Медик")
+	allowed_roles = list("Главврач","Парамедик","Врач")

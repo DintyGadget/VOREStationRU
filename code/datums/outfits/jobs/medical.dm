@@ -20,7 +20,7 @@
 	pda_type = /obj/item/device/pda/heads/cmo
 
 /decl/hierarchy/outfit/job/medical/doctor
-	name = OUTFIT_JOB_NAME("Медик")
+	name = OUTFIT_JOB_NAME("Врач")
 	uniform = /obj/item/clothing/under/rank/medical
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	l_hand = /obj/item/weapon/storage/firstaid/regular
@@ -28,7 +28,7 @@
 	id_type = /obj/item/weapon/card/id/medical
 
 /decl/hierarchy/outfit/job/medical/doctor/emergency_physician
-	name = OUTFIT_JOB_NAME("Старщий Фельдшер")
+	name = OUTFIT_JOB_NAME("Врач скорой помощи")
 	suit = /obj/item/clothing/suit/storage/toggle/fr_jacket
 
 /decl/hierarchy/outfit/job/medical/doctor/surgeon

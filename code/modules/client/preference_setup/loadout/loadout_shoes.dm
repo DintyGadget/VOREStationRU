@@ -170,10 +170,10 @@
 /datum/gear/shoes/boots/winter/security
 	display_name = "Зимние ботинки (СБ)"
 	path = /obj/item/clothing/shoes/boots/winter/security
-	allowed_roles = list("Офицер безопасности", "Глава безопасности", "Надзиратель", "Детектив")
+	allowed_roles = list("Офицер безопасности", "Глава службы безопасности", "Надзиратель", "Детектив")
 
 /datum/gear/shoes/boots/winter/science
-	display_name = "Зимние ботинки (Ученый)"
+	display_name = "Зимние ботинки (Учёный)"
 	path = /obj/item/clothing/shoes/boots/winter/science
 
 /datum/gear/shoes/boots/winter/command
