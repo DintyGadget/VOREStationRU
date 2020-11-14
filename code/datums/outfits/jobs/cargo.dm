@@ -3,7 +3,7 @@
 	hierarchy_type = /decl/hierarchy/outfit/job/cargo
 
 /decl/hierarchy/outfit/job/cargo/qm
-	name = OUTFIT_JOB_NAME("Cargo")
+	name = OUTFIT_JOB_NAME("Квартирмейстер")
 	uniform = /obj/item/clothing/under/rank/cargo
 	l_ear = /obj/item/device/radio/headset/headset_qm //VOREStation Add
 	shoes = /obj/item/clothing/shoes/brown
@@ -13,13 +13,13 @@
 	pda_type = /obj/item/device/pda/quartermaster
 
 /decl/hierarchy/outfit/job/cargo/cargo_tech
-	name = OUTFIT_JOB_NAME("Cargo technician")
+	name = OUTFIT_JOB_NAME("Грузчик")
 	uniform = /obj/item/clothing/under/rank/cargotech
 	id_type = /obj/item/weapon/card/id/cargo
 	pda_type = /obj/item/device/pda/cargo
 
 /decl/hierarchy/outfit/job/cargo/mining
-	name = OUTFIT_JOB_NAME("Shaft miner")
+	name = OUTFIT_JOB_NAME("Шахтёр")
 	uniform = /obj/item/clothing/under/rank/miner
 	l_ear = /obj/item/device/radio/headset/headset_mine
 	backpack = /obj/item/weapon/storage/backpack/industrial

@@ -2,7 +2,7 @@
 //				AI
 //////////////////////////////////
 /datum/job/ai
-	title = "AI"
+	title = "ИИ"
 	flag = AI
 	departments = list(DEPARTMENT_SYNTHETIC)
 	sorting_order = 1 // Be above their borgs.
@@ -41,7 +41,7 @@
 //			Cyborg
 //////////////////////////////////
 /datum/job/cyborg
-	title = "Cyborg"
+	title = "Киборг"
 	flag = CYBORG
 	departments = list(DEPARTMENT_SYNTHETIC)
 	department_flag = ENGSEC

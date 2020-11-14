@@ -20,7 +20,7 @@
 	job_description = "Ассистент делает все, что от него требуется. Хотя он и является частью экипажа, у него нет реальной власти."
 /*	alt_titles = list("Technical Assistant" = /datum/alt_title/tech_assist,
 						"Medical Intern"= /datum/alt_title/med_intern, "Research Assistant" = /datum/alt_title/research_assist,
-						"Visitor" = /datum/alt_title/visitor)
+						"Гость" = /datum/alt_title/visitor)
 	)	*/	//VOREStation Removal: no alt-titles for visitors
 
 /datum/job/assistant/get_access()
@@ -36,9 +36,9 @@
 					для того, чтобы стать Инженером. Технический Ассистент не имеет никаких реальных полномочий."
 
 /datum/alt_title/med_intern
-	title = "Медицинский Интерн"
-	title_blurb = "Медицинский Интерн пытается выполнять все, что нужно медицинскому отделу. Их часто просят обратить внимание на консоль датчиков \
-					костюмов. У медицинского Интерна нет реальной власти."
+	title = "Врач-интерн"
+	title_blurb = "Врач-интерн пытается выполнять все, что нужно медицинскому отделу. Их часто просят обратить внимание на консоль датчиков \
+					костюмов. У медицинского Стажёра нет реальной власти."
 
 /datum/alt_title/research_assist
 	title = "Научный Ассистент"

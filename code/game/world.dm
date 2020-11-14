@@ -511,10 +511,12 @@ var/world_topic_spam_protect_time = world.timeofday
 //	s += "[game_version]"
 	s += "Наш дискорд"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
-	s += ")"
+	s += ")\]"
+	s += "<br><small><a href=\"https://discord.gg/mbmYyeu\">Спокойный сервер с упором на ролевую игру — разнообразие рас и много теплого чая на воребилде. Рады новичкам! Для вступления необходимо заполнить заявку в Дискорде.</a></small></br>"
 
 	var/list/features = list()
 
+	/*
 	if(ticker)
 		if(master_mode)
 			features += master_mode
@@ -535,6 +537,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	if (config && config.allow_ai)
 		features += "ИИ включен"
+	*/
 
 	var/n = 0
 	for (var/mob/M in player_list)

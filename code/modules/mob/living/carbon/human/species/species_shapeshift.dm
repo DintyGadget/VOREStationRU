@@ -112,13 +112,13 @@ var/list/wrapped_species_by_ref = list()
 	visible_message("<span class='notice'>\The [src]'s form contorts subtly.</span>")
 	if(valid_hairstyles.len)
 		var/new_hair = input("Select a hairstyle.", "Shapeshifter Hair") as null|anything in valid_hairstyles
-		change_hair(new_hair ? new_hair : "Bald")
+		change_hair(new_hair ? new_hair : "Лысая голова")
 	if(valid_gradstyles.len)
 		var/new_hair = input("Select a hair gradient style.", "Shapeshifter Hair") as null|anything in valid_gradstyles
 		change_hair_gradient(new_hair ? new_hair : "None")
 	if(valid_facialhairstyles.len)
 		var/new_hair = input("Select a facial hair style.", "Shapeshifter Hair") as null|anything in valid_facialhairstyles
-		change_facial_hair(new_hair ? new_hair : "Shaved")
+		change_facial_hair(new_hair ? new_hair : "Бритое лицо")
 
 /mob/living/carbon/human/proc/shapeshifter_select_gender()
 
@@ -319,11 +319,11 @@ var/list/wrapped_species_by_ref = list()
 	var/new_eyes = input("Pick a new color for your eyes.","Eye Color", current_color) as null|color
 	if(!new_eyes)
 		return
-	
+
 	shapeshifter_set_eye_color(new_eyes)
 
 /mob/living/carbon/human/proc/shapeshifter_set_eye_color(var/new_eyes)
-	
+
 	var/list/new_color_rgb_list = hex2rgb(new_eyes)
 	// First, update mob vars.
 	r_eyes = new_color_rgb_list[1]

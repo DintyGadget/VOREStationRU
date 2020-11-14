@@ -35,7 +35,7 @@ datum/category_group/underwear/dd_SortValue()
 	category_item_type = /datum/category_item/underwear/socks
 
 /datum/category_group/underwear/undershirt
-	name = "Рубашка"
+	name = "Футболка"
 	display_name = "undershirt"
 	sort_order = 4		// Undershirts currently have the highest sort order because they may cover both underwear and socks.
 	category_item_type = /datum/category_item/underwear/undershirt

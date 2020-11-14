@@ -387,15 +387,15 @@
 	center_of_mass = list("x"=17, "y"=8)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/barflask
-	name = "flask"
-	desc = "For those who can't be bothered to hang out at the bar to drink."
+	name = "фляга"
+	desc = "Для тех, кому совсем не хочется связываться с баром."
 	icon_state = "barflask"
 	volume = 60
 	center_of_mass = list("x"=17, "y"=7)
 
 /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask
-	name = "vacuum flask"
-	desc = "Keeping your drinks at the perfect temperature since 1892."
+	name = "термос"
+	desc = "Поддерживает в напитках идеальную температуру с 1892."
 	icon_state = "vacuumflask"
 	volume = 60
 	center_of_mass = list("x"=15, "y"=4)

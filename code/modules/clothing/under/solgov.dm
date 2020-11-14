@@ -43,8 +43,8 @@
 //Utility
 //These are just colored
 /obj/item/clothing/under/utility
-	name = "utility uniform"
-	desc = "A comfortable turtleneck and black utility trousers."
+	name = "комплект черной одежды"
+	desc = "Удобная водолазка с черными штанами."
 	icon_state = "blackutility"
 	worn_state = "blackutility"
 	rolled_sleeves = 0
@@ -52,14 +52,14 @@
 	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/utility/blue
-	name = "utility uniform"
-	desc = "A comfortable blue utility jumpsuit."
+	name = "комплект синей одежды"
+	desc = "Удобный синий комбинезон."
 	icon_state = "navyutility"
 	worn_state = "navyutility"
 
 /obj/item/clothing/under/utility/grey
-	name = "utility uniform"
-	desc = "A comfortable grey utility jumpsuit."
+	name = "комплект серой одежды"
+	desc = "Удобный серый комбинезон."
 	icon_state = "greyutility"
 	worn_state = "greyutility"
 

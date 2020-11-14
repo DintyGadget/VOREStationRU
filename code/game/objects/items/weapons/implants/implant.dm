@@ -98,8 +98,8 @@
 GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/weapon/implant/tracking)
 
 /obj/item/weapon/implant/tracking
-	name = "tracking implant"
-	desc = "An implant normally given to dangerous criminals. Allows security to track your location."
+	name = "имплант отслеживания"
+	desc = "Имплант, предназначенный для опасных преступников. Позволяет службе безопасности отслеживать Ваше местоположение."
 	var/id = 1
 	var/degrade_time = 10 MINUTES	//How long before the implant stops working outside of a living body.
 
@@ -524,26 +524,26 @@ the implant may become unstable and either pre-maturely inject the subject or si
 			if(istype(t, /area/syndicate_station) || istype(t, /area/syndicate_mothership) || istype(t, /area/shuttle/syndicate_elite) )
 				//give the syndies a bit of stealth
 				a.autosay("[mobname] has died in Space!", "[mobname]'s Death Alarm")
-//				a.autosay("[mobname] has died in Space!", "[mobname]'s Death Alarm", "Security")
-//				a.autosay("[mobname] has died in Space!", "[mobname]'s Death Alarm", "Medical")
+//				a.autosay("[mobname] has died in Space!", "[mobname]'s Death Alarm", "Служба безопасности")
+//				a.autosay("[mobname] has died in Space!", "[mobname]'s Death Alarm", "Медицинский отдел")
 			else
 				a.autosay("[mobname] has died in [t.name]!", "[mobname]'s Death Alarm")
-//				a.autosay("[mobname] has died in [t.name]!", "[mobname]'s Death Alarm", "Security")
-//				a.autosay("[mobname] has died in [t.name]!", "[mobname]'s Death Alarm", "Medical")
+//				a.autosay("[mobname] has died in [t.name]!", "[mobname]'s Death Alarm", "Служба безопасности")
+//				a.autosay("[mobname] has died in [t.name]!", "[mobname]'s Death Alarm", "Медицинский отдел")
 			qdel(a)
 			STOP_PROCESSING(SSobj, src)
 		if ("emp")
 			var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
 			var/name = prob(50) ? t.name : pick(teleportlocs)
 			a.autosay("[mobname] has died in [name]!", "[mobname]'s Death Alarm")
-//			a.autosay("[mobname] has died in [name]!", "[mobname]'s Death Alarm", "Security")
-//			a.autosay("[mobname] has died in [name]!", "[mobname]'s Death Alarm", "Medical")
+//			a.autosay("[mobname] has died in [name]!", "[mobname]'s Death Alarm", "Служба безопасности")
+//			a.autosay("[mobname] has died in [name]!", "[mobname]'s Death Alarm", "Медицинский отдел")
 			qdel(a)
 		else
 			var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset/heads/captain(null)
 			a.autosay("[mobname] has died-zzzzt in-in-in...", "[mobname]'s Death Alarm")
-//			a.autosay("[mobname] has died-zzzzt in-in-in...", "[mobname]'s Death Alarm", "Security")
-//			a.autosay("[mobname] has died-zzzzt in-in-in...", "[mobname]'s Death Alarm", "Medical")
+//			a.autosay("[mobname] has died-zzzzt in-in-in...", "[mobname]'s Death Alarm", "Служба безопасности")
+//			a.autosay("[mobname] has died-zzzzt in-in-in...", "[mobname]'s Death Alarm", "Медицинский отдел")
 			qdel(a)
 			STOP_PROCESSING(SSobj, src)
 

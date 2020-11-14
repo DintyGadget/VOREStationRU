@@ -118,7 +118,7 @@
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Unathi"
+	suggested_species = "Унати"
 
 /obj/item/weapon/disk/limb/dsi_lizard
 	company = "DSI - Lizard"
@@ -132,7 +132,7 @@
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Sergal"
+	suggested_species = "Сергал"
 
 /obj/item/weapon/disk/limb/dsi_sergal
 	company = "DSI - Sergal"
@@ -146,7 +146,7 @@
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Nevrean"
+	suggested_species = "Невреан"
 
 /obj/item/weapon/disk/limb/dsi_nevrean
 	company = "DSI - Nevrean"
@@ -188,7 +188,7 @@
 	unavailable_to_build = 1
 	includes_tail = 1
 	skin_tone = 1
-	suggested_species = "Vasilissan"
+	suggested_species = "Василиссан"
 
 /obj/item/weapon/disk/limb/dsi_spider
 	company = "DSI - Vasilissan"
@@ -199,7 +199,7 @@
 	icon = 'icons/mob/human_races/cyberlimbs/DSITeshari/dsi_teshari.dmi'
 	lifelike = 1
 	skin_tone = 1
-	suggested_species = "Teshari"
+	suggested_species = "Тешари"
 
 /datum/robolimb/dsi_teshari/New()
 	species_cannot_use = GLOB.all_species.Copy()

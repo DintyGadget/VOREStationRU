@@ -155,19 +155,19 @@
 		if(ACCESS_REGION_ALL)
 			return "All"
 		if(ACCESS_REGION_SECURITY) //security
-			return "Security"
+			return "Служба безопасности"
 		if(ACCESS_REGION_MEDBAY) //medbay
 			return "Medbay"
 		if(ACCESS_REGION_RESEARCH) //research
 			return "Research"
 		if(ACCESS_REGION_ENGINEERING) //engineering and maintenance
-			return "Engineering"
+			return "Инженерный отдел"
 		if(ACCESS_REGION_COMMAND) //command
-			return "Command"
+			return "Командование"
 		if(ACCESS_REGION_GENERAL) //station general
 			return "Station General"
 		if(ACCESS_REGION_SUPPLY) //supply
-			return "Supply"
+			return "Снабжение"
 
 /proc/get_access_desc(id)
 	var/list/AS = get_all_access_datums_by_id()

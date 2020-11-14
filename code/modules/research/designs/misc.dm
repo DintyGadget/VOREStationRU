@@ -2,10 +2,10 @@
 
 /datum/design/item/general/AssembleDesignName()
 	..()
-	name = "General purpose design ([item_name])"
+	name = "Разработка общего применения ([item_name])"
 
 /datum/design/item/general/communicator
-	name = "Communicator"
+	name = "Коммуникатор"
 	id = "communicator"
 	req_tech = list(TECH_DATA = 2, TECH_MAGNET = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 500)
@@ -13,8 +13,8 @@
 	sort_string = "TAAAA"
 
 datum/design/item/general/laserpointer
-	name = "laser pointer"
-	desc = "Don't shine it in your eyes!"
+	name = "Лазерная указка"
+	desc = "Не направляйте её на глаза!"
 	id = "laser_pointer"
 	req_tech = list(TECH_MAGNET = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 100, "glass" = 50)
@@ -22,7 +22,7 @@ datum/design/item/general/laserpointer
 	sort_string = "TAABA"
 
 /datum/design/item/general/translator
-	name = "handheld translator"
+	name = "Ручной переводчик"
 	id = "translator"
 	req_tech = list(TECH_DATA = 3, TECH_ENGINEERING = 3)
 	materials = list(DEFAULT_WALL_MATERIAL = 3000, "glass" = 3000)
@@ -30,7 +30,7 @@ datum/design/item/general/laserpointer
 	sort_string = "TAACA"
 
 /datum/design/item/general/ear_translator
-	name = "earpiece translator"
+	name = "Гарнитура-переводчик"
 	id = "ear_translator"
 	req_tech = list(TECH_DATA = 5, TECH_ENGINEERING = 5)	//It's been hella miniaturized.
 	materials = list(DEFAULT_WALL_MATERIAL = 2000, "glass" = 2000, "gold" = 1000)
@@ -38,8 +38,8 @@ datum/design/item/general/laserpointer
 	sort_string = "TAACB"
 
 /datum/design/item/general/light_replacer
-	name = "Light replacer"
-	desc = "A device to automatically replace lights. Refill with working lightbulbs."
+	name = "Заменитель лампочек"
+	desc = "Прибор для автоматической замены лампочек. Заправляется рабочими лампами."
 	id = "light_replacer"
 	req_tech = list(TECH_MAGNET = 3, TECH_MATERIAL = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 1500, "silver" = 150, "glass" = 3000)
@@ -47,8 +47,8 @@ datum/design/item/general/laserpointer
 	sort_string = "TAADA"
 
 /datum/design/item/general/binaryencrypt
-	name = "Binary encryption key"
-	desc = "Allows for deciphering the binary channel on-the-fly."
+	name = "Ключ бинарного шифрования"
+	desc = "Позволяет на ходу расшифровать двоичные данные."
 	id = "binaryencrypt"
 	req_tech = list(TECH_ILLEGAL = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 300, "glass" = 300)
@@ -56,8 +56,8 @@ datum/design/item/general/laserpointer
 	sort_string = "TBAAA"
 
 /datum/design/item/general/chameleon
-	name = "Holographic equipment kit"
-	desc = "A kit of dangerous, high-tech equipment with changeable looks."
+	name = "Набор голографической экипировки"
+	desc = "Набор опасной, высокотехнологичной экипировки с изменяемым внешним видом."
 	id = "chameleon"
 	req_tech = list(TECH_ILLEGAL = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 500)
@@ -65,8 +65,8 @@ datum/design/item/general/laserpointer
 	sort_string = "TBAAB"
 
 /datum/design/item/general/bsflare
-	name = "bluespace flare"
-	desc = "A marker that can be detected by shuttle landing systems."
+	name = "Блюспейсовый сигнальный маяк"
+	desc = "Маячок, фиксируемый системами посадки челноков."
 	id = "bsflare"
 	req_tech = list(TECH_DATA = 3, TECH_BLUESPACE = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 4000, MAT_GLASS = 2000, MAT_SILVER = 2000)

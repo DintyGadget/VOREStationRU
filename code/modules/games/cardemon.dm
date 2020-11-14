@@ -1,6 +1,6 @@
 /obj/item/weapon/pack/cardemon
-	name = "cardemon booster pack"
-	desc = "Finally! A children's card game in space!"
+	name = "комплект карточек Картемон"
+	desc = "Наконец-то! Эта детская игра теперь и в космосе."
 	icon_state = "card_pack_cardemon"
 	parentdeck = "cardemon"
 
@@ -13,14 +13,14 @@
 		if(prob(10))
 			if(prob(5))
 				if(prob(5))
-					rarity = "Plasteel"
+					rarity = "Пласталевый"
 				else
-					rarity = "Platinum"
+					rarity = "Платиновый"
 			else
-				rarity = "Silver"
+				rarity = "Серебряный"
 
-		var/nam = pick("Death","Life","Plant","Leaf","Air","Earth","Fire","Water","Killer","Holy", "God", "Ordinary","Demon","Angel", "Plasteel", "Phoron", "Mad", "Insane", "Metal", "Steel", "Secret")
-		var/nam2 = pick("Carp", "Corgi", "Cat", "Mouse", "Octopus", "Lizard", "Monkey", "Plant", "Duck", "Demon", "Spider", "Bird", "Slime", "Sheep", "Fish")
+		var/nam = pick("Смертельный","Жизненный","Растительный","Лиственный","Воздушный","Земельный","Огненный","Водяной","Убийственный","Святой", "Божественный", "Обыкновенный","Демонический","Ангельский", "Пласталевый", "Фороновый", "Разъяренный", "Сумасшедший", "Металлический", "Стальной", "Секретный")
+		var/nam2 = pick("Карп", "Корги", "Кот", "Хомяк", "Осминог", "Ящер", "Примат", "Цветок", "Утенок", "Демон", "Паук", "Птенец", "Слизень", "Баран")
 
 		P = new()
 		P.name = "[nam] [nam2]"

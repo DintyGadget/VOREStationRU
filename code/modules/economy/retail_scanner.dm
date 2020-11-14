@@ -404,22 +404,22 @@
 //--Premades--//
 
 /obj/item/device/retail_scanner/command
-	account_to_connect = "Command"
+	account_to_connect = "Командование"
 
 /obj/item/device/retail_scanner/medical
-	account_to_connect = "Medical"
+	account_to_connect = "Медицинский отдел"
 
 /obj/item/device/retail_scanner/engineering
-	account_to_connect = "Engineering"
+	account_to_connect = "Инженерный отдел"
 
 /obj/item/device/retail_scanner/science
-	account_to_connect = "Science"
+	account_to_connect = "Научный отдел"
 
 /obj/item/device/retail_scanner/security
-	account_to_connect = "Security"
+	account_to_connect = "Служба безопасности"
 
 /obj/item/device/retail_scanner/cargo
-	account_to_connect = "Cargo"
+	account_to_connect = "Отдел снабжения"
 
 /obj/item/device/retail_scanner/civilian
-	account_to_connect = "Civilian"
+	account_to_connect = "Гражданские"

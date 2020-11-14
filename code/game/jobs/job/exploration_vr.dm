@@ -11,14 +11,14 @@ var/const/SAR 				=(1<<14)
 	secondary_color = rgb(127,223,223)
 
 /obj/item/weapon/card/id/explorer
-	name = "identification card"
+	name = "идентификационная карта"
 	desc = "Карта, выданная геологоразведочным работникам станции."
 	icon_state = "cyan"
 	primary_color = rgb(47,189,189)
 	secondary_color = rgb(127,223,223)
 
 /obj/item/weapon/card/id/explorer/head
-	name = "identification card"
+	name = "идентификационная карта"
 	desc = "Карта, которая представляет открытие неизвестного."
 	icon_state = "cyanGold"
 	primary_color = rgb(47,189,189)
@@ -39,7 +39,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Главой Персонала"
+	supervisors = "Главой персонала"
 	selection_color = "#d6d05c"
 	economic_modifier = 8
 	minimal_player_age = 7
@@ -48,11 +48,23 @@ var/const/SAR 				=(1<<14)
 
 	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
 	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
+
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
-	job_description = "Работа Первопроходца заключается в том, чтобы руководить и управлять экспедициями, и он является главным руководителем всех выездных экспедиций."
+	job_description = "Работа Первопроходца заключается в проведении экспедиций, в которых он занимает роль лидера."
+
+// XenosStation Edit
+	alt_titles = list("Ведущий скаут" = /datum/alt_title/lead_scout,
+						"Руководитель экспедиции" = /datum/alt_title/expedition_manager)
 
 /datum/alt_title/pathfinder
 	title = "Первопроходец"
+
+/datum/alt_title/lead_scout
+	title = "Ведущий скаут"
+
+/datum/alt_title/expedition_manager
+	title = "Руководитель экспедиций"
+// End of XenosStation Edit
 
 /datum/job/pilot
 	title = "Пилот"
@@ -62,7 +74,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "Следопытом и Главой Персонала"
+	supervisors = "Первопроходцем и Главой персонала"
 	selection_color = "#999440"
 	economic_modifier = 5
 	minimal_player_age = 3
@@ -72,8 +84,17 @@ var/const/SAR 				=(1<<14)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 	job_description = "Пилот управляет различными шаттлами в системе Дева-Эригон."
 
+	alt_titles = list("Авиатор" = /datum/alt_title/aviator,
+						"Военный пилот" = /datum/alt_title/combat_pilot)
+
 /datum/alt_title/pilot
 	title = "Пилот"
+
+/datum/alt_title/aviator
+	title = "Авиатор"
+
+/datum/alt_title/combat_pilot
+	title = "Военный пилот"
 
 /datum/job/explorer
 	title = "Искатель"
@@ -83,17 +104,22 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Следопытом и Главой Персонала"
+	supervisors = "Первопроходцем и Главой персонала"
 	selection_color = "#999440"
 	economic_modifier = 6
 	pto_type = PTO_EXPLORATION
 	access = list(access_explorer, access_external_airlocks, access_eva)
 	minimal_access = list(access_explorer, access_external_airlocks, access_eva)
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
-	job_description = "Искатель ищет интересные вещи и возвращает их на станцию."
+	job_description = "Искатель ищет на планетах интересные вещи и приносит их на станцию."
+
+	alt_titles = list("Полевой скаут" = /datum/alt_title/field_scout)
 
 /datum/alt_title/explorer
 	title = "Искатель"
+
+/datum/alt_title/field_scout
+	title = "Полевой скаут"
 
 /datum/job/sar
 	title = "Военврач"
@@ -117,20 +143,20 @@ var/const/SAR 				=(1<<14)
 	title = "Военврач"
 
 /datum/job/offduty_exploration
-	title = "Off-duty Explorer"
+	title = "Искатель на отгуле"
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
 	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "nobody! Enjoy your time off"
+	supervisors = "...никем! Наслаждайтесь отдыхом"
 	selection_color = "#999440"
 	access = list(access_maint_tunnels, access_external_airlocks)
 	minimal_access = list(access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/explorer
-	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
+	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
 	pto_type = PTO_EXPLORATION
 	economic_modifier = 5
 
 /datum/alt_title/offduty_exp
-	title = "Off-duty Explorer"
+	title = "Искатель на отгуле"

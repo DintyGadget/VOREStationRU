@@ -1,6 +1,6 @@
 /obj/structure/bed/chair/wheelchair
-	name = "wheelchair"
-	desc = "You sit in this. Either by will or force."
+	name = "инвалидная коляска"
+	desc = "Вы в ней сидите. По своей воле или чужой."
 	icon_state = "wheelchair"
 	anchored = 0
 	buckle_movable = 1
@@ -33,7 +33,7 @@
 		if(user==pulling)
 			pulling = null
 			user.pulledby = null
-			to_chat(user, "<span class='warning'>You lost your grip!</span>")
+			to_chat(user, "<span class='warning'>Вы потеряли хватку!</span>")
 		return
 	if(has_buckled_mobs() && pulling && user in buckled_mobs)
 		if(pulling.stat || pulling.stunned || pulling.weakened || pulling.paralysis || pulling.lying || pulling.restrained())
@@ -51,10 +51,10 @@
 		if(user==pulling)
 			return
 	if(pulling && (get_dir(src.loc, pulling.loc) == direction))
-		to_chat(user, "<span class='warning'>You cannot go there.</span>")
+		to_chat(user, "<span class='warning'>Вы не можете туда проехать.</span>")
 		return
 	if(pulling && has_buckled_mobs() && (user in buckled_mobs))
-		to_chat(user, "<span class='warning'>You cannot drive while being pushed.</span>")
+		to_chat(user, "<span class='warning'>Вы не можете ехать, пока Вас толкают.</span>")
 		return
 
 	// Let's roll
@@ -93,7 +93,7 @@
 
 /obj/structure/bed/chair/wheelchair/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
-	
+
 	cut_overlays()
 	playsound(src, 'sound/effects/roll.ogg', 75, 1)
 	if(has_buckled_mobs())
@@ -112,7 +112,7 @@
 						unbuckle_mob()
 				if (pulling && (get_dist(src, pulling) > 1))
 					pulling.pulledby = null
-					to_chat(pulling, "<span class='warning'>You lost your grip!</span>")
+					to_chat(pulling, "<span class='warning'>Вы потеряли хватку!</span>")
 					pulling = null
 			else
 				if (occupant && (src.loc != occupant.loc))
@@ -131,7 +131,7 @@
 	if(in_range(src, user))
 		if(!ishuman(user))	return
 		if(has_buckled_mobs() && user in buckled_mobs)
-			to_chat(user, "<span class='warning'>You realize you are unable to push the wheelchair you sit in.</span>")
+			to_chat(user, "<span class='warning'>Вы резко осознаете, что не можете толкать коляску, пока сами же на ней и сидите.</span>")
 			return
 		if(!pulling)
 			pulling = user
@@ -139,9 +139,9 @@
 			if(user.pulling)
 				user.stop_pulling()
 			user.set_dir(get_dir(user, src))
-			to_chat(user, "You grip \the [name]'s handles.")
+			to_chat(user, "Вы беретесь за ручки коляски.")
 		else
-			to_chat(usr, "You let go of \the [name]'s handles.")
+			to_chat(usr, "Вы отпускаете ручки коляски.")
 			pulling.pulledby = null
 			pulling = null
 		return
@@ -177,11 +177,11 @@
 			victim.apply_effect(6, STUTTER, blocked)
 			victim.apply_damage(10, BRUTE, def_zone, soaked)
 		if(pulling)
-			occupant.visible_message("<span class='danger'>[pulling] has thrusted \the [name] into \the [A], throwing \the [occupant] out of it!</span>")
+			occupant.visible_message("<span class='danger'>[pulling] толкнул коляску в сторону [A], выбрасывая из неё [occupant]!</span>")
 
-			add_attack_logs(pulling,occupant,"Crashed their [name] into [A]")
+			add_attack_logs(pulling,occupant,"Врезались коляской в [A]")
 		else
-			occupant.visible_message("<span class='danger'>[occupant] crashed into \the [A]!</span>")
+			occupant.visible_message("<span class='danger'>[occupant] врезался в [A]!</span>")
 
 /obj/structure/bed/chair/wheelchair/proc/create_track()
 	var/obj/effect/decal/cleanable/blood/tracks/B = new(loc)
@@ -204,8 +204,8 @@
 	..()
 
 /obj/item/wheelchair
-	name = "wheelchair"
-	desc = "A folded wheelchair that can be carried around."
+	name = "инвалидная коляска"
+	desc = "Складываемая коляска, которую можно переносить с собой."
 	icon = 'icons/obj/furniture.dmi'
 	icon_state = "wheelchair_folded"
 	item_state = "wheelchair"
@@ -223,7 +223,7 @@
 	if((over_object == usr && (in_range(src, usr) || usr.contents.Find(src))))
 		if(!ishuman(usr))	return
 		if(has_buckled_mobs())	return 0
-		visible_message("[usr] collapses \the [src.name].")
+		visible_message("[usr] складывает инвалидную коляску.")
 		var/obj/item/wheelchair/R = new/obj/item/wheelchair(get_turf(src))
 		R.name = src.name
 		R.color = src.color

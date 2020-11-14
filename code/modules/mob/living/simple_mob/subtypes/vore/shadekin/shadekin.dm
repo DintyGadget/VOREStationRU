@@ -211,7 +211,7 @@
 
 /mob/living/simple_mob/shadekin/Stat()
 	. = ..()
-	if(statpanel("Shadekin"))
+	if(statpanel("Шейдкин"))
 		abilities_stat()
 
 /mob/living/simple_mob/shadekin/proc/abilities_stat()

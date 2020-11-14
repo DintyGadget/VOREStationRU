@@ -1,6 +1,6 @@
 /datum/species/alraune
 	name = SPECIES_ALRAUNE
-	name_plural = "Alraunes"
+	name_plural = "Алрауне"
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite)
 	num_alternate_languages = 2
 	slowdown = 1 //slow, they're plants. Not as slow as full diona.
@@ -58,17 +58,16 @@
 	flesh_color = "#9ee02c"
 	blood_color = "#edf4d0" //sap!
 	base_color = "#1a5600"
-	
+
 	reagent_tag = IS_ALRAUNE
 
-	blurb = "Alraunes are a rare sight in space. Their bodies are reminiscent of that of plants, and yet they share many\
-	traits with other humanoid beings.\
+	blurb = "Алрауне можно очень редко увидеть в космосе. Их тела напоминают растения, однако алрауне также имеют множество человеческих черт. \
 	\
-	Most Alraunes are not interested in traversing space, their heavy preference for natural environments and general\
-	disinterest in things outside it keeps them as a species at a rather primal stage.\
+	Большинство алрауне не заинтересованы в космических путешествиях; их сильное предпочтение к естественной среде обитания и отсутствие интереса ко всему остальному \
+	привёл к их заторможенному развитию как расы. \
 	\
-	However, after their discovery by the angels of Sanctum, many alraunes succumbed to their curiosity, and took the offer\
-	to learn of the world and venture out, whether it's to Sanctum, or elsewhere in the galaxy."
+	Однако после того, как их обнаружили ангелы Санктума, многие алрауне всё же поддались любопытству и приняли предложение \
+	узнать о мире больше и отправиться в новые места, будь это Санктум или где-либо ещё."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/alraune)
 
 	has_limbs = list(

@@ -3,7 +3,7 @@
 #define PREF_FBP_SOFTWARE "software"
 
 /datum/category_group/player_setup_category/general_preferences
-	name = "Внешность"
+	name = "Основное"
 	sort_order = 1
 	category_item_type = /datum/category_item/player_setup_item/general
 
@@ -273,7 +273,7 @@
 	return 0 //Something went wrong!
 
 /datum/category_item/player_setup_item/proc/get_min_age()
-	var/datum/species/S = GLOB.all_species[pref.species ? pref.species : "Human"]
+	var/datum/species/S = GLOB.all_species[pref.species ? pref.species : SPECIES_HUMAN]
 	if(!is_FBP())
 		return S.min_age // If they're not a robot, we can just use the species var.
 	var/FBP_type = get_FBP_type()
@@ -287,7 +287,7 @@
 	return S.min_age // welp
 
 /datum/category_item/player_setup_item/proc/get_max_age()
-	var/datum/species/S = GLOB.all_species[pref.species ? pref.species : "Human"]
+	var/datum/species/S = GLOB.all_species[pref.species ? pref.species : SPECIES_HUMAN]
 	if(!is_FBP())
 		return S.max_age // If they're not a robot, we can just use the species var.
 	var/FBP_type = get_FBP_type()

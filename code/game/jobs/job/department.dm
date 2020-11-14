@@ -15,57 +15,57 @@
 
 /datum/department/command
 	name = DEPARTMENT_COMMAND
-	short_name = "Heads"
+	short_name = "Главы"
 	color = "#3333FF"
 	sorting_order = 10
 
 /datum/department/security
 	name = DEPARTMENT_SECURITY
-	short_name = "Sec"
+	short_name = "СБ"
 	color = "#8E0000"
 	sorting_order = 6
 
 /datum/department/engineering
 	name = DEPARTMENT_ENGINEERING
-	short_name = "Eng"
+	short_name = "Инж"
 	color = "#B27300"
 	sorting_order = 5
 
 /datum/department/medical
 	name = DEPARTMENT_MEDICAL
-	short_name = "Med"
+	short_name = "Мед"
 	color = "#006600"
 	sorting_order = 4
 
 /datum/department/research
 	name = DEPARTMENT_RESEARCH
-	short_name = "Sci"
+	short_name = "РнД"
 	color = "#A65BA6"
 	sorting_order = 3
 
 /datum/department/cargo
 	name = DEPARTMENT_CARGO
-	short_name = "Car"
+	short_name = "Карго"
 	color = "#BB9040"
 	sorting_order = 2
 
 /datum/department/civilian
 	name = DEPARTMENT_CIVILIAN
-	short_name = "Civ"
+	short_name = "Гражд"
 	color = "#A32800"
 	sorting_order = 1
 
 // Mostly for if someone wanted to rewrite manifest code to be map-agnostic.
 /datum/department/misc
-	name = "Miscellaneous"
-	short_name = "Misc"
+	name = "Другие"
+	short_name = "Другие"
 	color = "#666666"
 	sorting_order = 0
 	assignable = FALSE
 
 /datum/department/synthetic
 	name = DEPARTMENT_SYNTHETIC
-	short_name = "Bot"
+	short_name = "Бот"
 	color = "#222222"
 	sorting_order = -1
 	assignable = FALSE
@@ -73,8 +73,8 @@
 // This one isn't very useful since no real centcom jobs exist yet.
 // Instead the jobs like ERT are hardcoded in.
 /datum/department/centcom
-	name = "Central Command"
-	short_name = "Centcom"
+	name = "Центральное Командование"
+	short_name = "ЦентКом"
 	color = "#A52A2A"
 	sorting_order = 20 // Above Command.
 	centcom_only = TRUE

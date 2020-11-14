@@ -52,9 +52,9 @@
 	if(can_select_ooc_color(user))
 		. += "<b>Цвет ООС:</b>�"
 		if(pref.ooccolor == initial(pref.ooccolor))
-			. += "<a href='?src=\ref[src];select_ooc_color=1'><b>Using Default</b></a><br>"
+			. += "<a href='?src=\ref[src];select_ooc_color=1'><b>По умолчанию</b></a><br>"
 		else
-			. += "<a href='?src=\ref[src];select_ooc_color=1'><b>[pref.ooccolor]</b></a> [color_square(hex = pref.ooccolor)]�<a href='?src=\ref[src];reset=ooc'>reset</a><br>"
+			. += "<a href='?src=\ref[src];select_ooc_color=1'><b>[pref.ooccolor]</b></a> [color_square(hex = pref.ooccolor)]<a href='?src=\ref[src];reset=ooc'>Сброс</a><br>"
 
 /datum/category_item/player_setup_item/player_global/ui/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["select_style"])

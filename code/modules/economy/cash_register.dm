@@ -520,22 +520,22 @@
 //--Premades--//
 
 /obj/machinery/cash_register/command
-	account_to_connect = "Command"
+	account_to_connect = "Командование"
 
 /obj/machinery/cash_register/medical
-	account_to_connect = "Medical"
+	account_to_connect = "Медицинский отдел"
 
 /obj/machinery/cash_register/engineering
-	account_to_connect = "Engineering"
+	account_to_connect = "Инженерный отдел"
 
 /obj/machinery/cash_register/science
-	account_to_connect = "Science"
+	account_to_connect = "Научный отдел"
 
 /obj/machinery/cash_register/security
-	account_to_connect = "Security"
+	account_to_connect = "Служба безопасности"
 
 /obj/machinery/cash_register/cargo
-	account_to_connect = "Cargo"
+	account_to_connect = "Отдел снабжения"
 
 /obj/machinery/cash_register/civilian
-	account_to_connect = "Civilian"
+	account_to_connect = "Гражданские"

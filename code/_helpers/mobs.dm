@@ -1,5 +1,5 @@
 proc/random_hair_style(gender, species = SPECIES_HUMAN)
-	var/h_style = "Bald"
+	var/h_style = "Лысая голова"
 
 	var/list/valid_hairstyles = list()
 	for(var/hairstyle in hair_styles_list)
@@ -18,7 +18,7 @@ proc/random_hair_style(gender, species = SPECIES_HUMAN)
 	return h_style
 
 proc/random_facial_hair_style(gender, species = SPECIES_HUMAN)
-	var/f_style = "Shaved"
+	var/f_style = "Бритое лицо"
 
 	var/list/valid_facialhairstyles = list()
 	for(var/facialhairstyle in facial_hair_styles_list)
@@ -148,7 +148,7 @@ Proc for attack log creation, because really why not
 	if(!time)
 		return 1 //Done!
 	if(user.status_flags & DOING_TASK)
-		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		to_chat(user, "<span class='warning'>Вы сейчас заняты чем-то другим.</span>")
 		return 0 //Performing an exclusive do_after or do_mob already
 	var/user_loc = user.loc
 	var/target_loc = target.loc
@@ -207,7 +207,7 @@ Proc for attack log creation, because really why not
 	if(!delay)
 		return 1 //Okay. Done.
 	if(user.status_flags & DOING_TASK)
-		to_chat(user, "<span class='warning'>You're in the middle of doing something else already.</span>")
+		to_chat(user, "<span class='warning'>Вы сейчас заняты чем-то другим.</span>")
 		return 0 //Performing an exclusive do_after or do_mob already
 	var/atom/target_loc = null
 	if(target)

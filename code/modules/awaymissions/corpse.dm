@@ -145,8 +145,8 @@
 	corpsepocket1 = /obj/item/device/flashlight/pen
 	corpseshoes = /obj/item/clothing/shoes/black
 	corpseid = 1
-	corpseidjob = "Медик"
-	corpseidaccess = "Медик"
+	corpseidjob = "Врач"
+	corpseidaccess = "Врач"
 
 /obj/effect/landmark/corpse/engineer
 	name = "Engineer"
@@ -196,8 +196,8 @@
 	corpseback = /obj/item/weapon/storage/backpack/industrial
 	corpseshoes = /obj/item/clothing/shoes/black
 	corpseid = 1
-	corpseidjob = "Шахтер"
-	corpseidaccess = "Шахтер"
+	corpseidjob = "Шахтёр"
+	corpseidaccess = "Шахтёр"
 
 /obj/effect/landmark/corpse/miner/rig
 	corpsesuit = /obj/item/clothing/suit/space/void/mining

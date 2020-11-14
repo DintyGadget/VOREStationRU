@@ -23,10 +23,10 @@
 	S["economic_status"]		<< pref.economic_status
 
 /datum/category_item/player_setup_item/general/background/sanitize_character()
-	if(!pref.home_system) pref.home_system = "Unset"
-	if(!pref.citizenship) pref.citizenship = "None"
-	if(!pref.faction)     pref.faction =     "None"
-	if(!pref.religion)    pref.religion =    "None"
+	if(!pref.home_system) pref.home_system = "Нет"
+	if(!pref.citizenship) pref.citizenship = "Нет"
+	if(!pref.faction)     pref.faction =     "Нет"
+	if(!pref.religion)    pref.religion =    "Нет"
 
 	pref.economic_status = sanitize_inlist(pref.economic_status, ECONOMIC_CLASS, initial(pref.economic_status))
 
@@ -56,22 +56,22 @@
 		. += "<a href='?src=\ref[src];set_medical_records=1'>[TextPreview(pref.med_record,40)]</a><br><br>"
 		. += "Записи о занятости:<br>"
 		. += "<a href='?src=\ref[src];set_general_records=1'>[TextPreview(pref.gen_record,40)]</a><br><br>"
-		. += "Записи СБ:<br>"
+		. += "Записи службы безопасности:<br>"
 		. += "<a href='?src=\ref[src];set_security_records=1'>[TextPreview(pref.sec_record,40)]</a><br>"
 
 /datum/category_item/player_setup_item/general/background/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["econ_status"])
-		var/new_class = input(user, "Выберите своё экономическое положение. Это повлияет на сумму денег, с которой Вы начнете.", "Character Preference", pref.economic_status)  as null|anything in ECONOMIC_CLASS
+		var/new_class = input(user, "Выберите своё экономическое положение. Это повлияет на сумму денег, с которой Вы начнете.", "Изменение Персонажа", pref.economic_status)  as null|anything in ECONOMIC_CLASS
 		if(new_class && CanUseTopic(user))
 			pref.economic_status = new_class
 			return TOPIC_REFRESH
 
 	else if(href_list["home_system"])
-		var/choice = input(user, "Пожалуйста, выберите родную систему.", "Character Preference", pref.home_system) as null|anything in home_system_choices + list("Нету","Другое")
+		var/choice = input(user, "Пожалуйста, выберите родную систему.", "Изменение Персонажа", pref.home_system) as null|anything in home_system_choices + list("Нет","Другое")
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Другое")
-			var/raw_choice = sanitize(input(user, "Пожалуйста, введите родную систему.", "Character Preference")  as text|null, MAX_NAME_LEN)
+			var/raw_choice = sanitize(input(user, "Пожалуйста, введите родную систему.", "Изменение Персонажа")  as text|null, MAX_NAME_LEN)
 			if(raw_choice && CanUseTopic(user))
 				pref.home_system = raw_choice
 		else
@@ -79,11 +79,11 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["citizenship"])
-		var/choice = input(user, "Пожалуйста, выберите Ваше текущее гражданство.", "Character Preference", pref.citizenship) as null|anything in citizenship_choices + list("Нет","Другое")
+		var/choice = input(user, "Пожалуйста, выберите Ваше текущее гражданство.", "Изменение Персонажа", pref.citizenship) as null|anything in citizenship_choices + list("Нет","Другое")
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Другое")
-			var/raw_choice = sanitize(input(user, "Пожалуйста, укажите Ваше текущее гражданство.", "Character Preference") as text|null, MAX_NAME_LEN)
+			var/raw_choice = sanitize(input(user, "Пожалуйста, укажите Ваше текущее гражданство.", "Изменение Персонажа") as text|null, MAX_NAME_LEN)
 			if(raw_choice && CanUseTopic(user))
 				pref.citizenship = raw_choice
 		else
@@ -91,11 +91,11 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["faction"])
-		var/choice = input(user, "Пожалуйста, выберите фракцию на которую Вы работаете.", "Character Preference", pref.faction) as null|anything in faction_choices + list("Нет","Другое")
+		var/choice = input(user, "Пожалуйста, выберите фракцию на которую Вы работаете.", "Изменение Персонажа", pref.faction) as null|anything in faction_choices + list("Нет","Другое")
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Другое")
-			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название фракции.", "Character Preference")  as text|null, MAX_NAME_LEN)
+			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название фракции.", "Изменение Персонажа")  as text|null, MAX_NAME_LEN)
 			if(raw_choice)
 				pref.faction = raw_choice
 		else
@@ -103,11 +103,11 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["religion"])
-		var/choice = input(user, "Пожалуйста, выберите религию.", "Character Preference", pref.religion) as null|anything in religion_choices + list("Нет","Другое")
+		var/choice = input(user, "Пожалуйста, выберите религию.", "Изменение Персонажа", pref.religion) as null|anything in religion_choices + list("Нет","Другое")
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Другое")
-			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название Вашей религии.", "Character Preference")  as text|null, MAX_NAME_LEN)
+			var/raw_choice = sanitize(input(user, "Пожалуйста, введите название Вашей религии.", "Изменение Персонажа")  as text|null, MAX_NAME_LEN)
 			if(raw_choice)
 				pref.religion = sanitize(raw_choice)
 		else
@@ -115,19 +115,19 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["set_medical_records"])
-		var/new_medical = sanitize(input(user,"Введите медицинскую информацию о персонаже здесь.","Character Preference", html_decode(pref.med_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
+		var/new_medical = sanitize(input(user,"Введите медицинскую информацию о персонаже здесь.","Изменение Персонажа", html_decode(pref.med_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
 		if(!isnull(new_medical) && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 			pref.med_record = new_medical
 		return TOPIC_REFRESH
 
 	else if(href_list["set_general_records"])
-		var/new_general = sanitize(input(user,"Введите информацию о занятости персонажа здесь.","Character Preference", html_decode(pref.gen_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
+		var/new_general = sanitize(input(user,"Введите информацию о занятости персонажа здесь.","Изменение Персонажа", html_decode(pref.gen_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
 		if(!isnull(new_general) && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 			pref.gen_record = new_general
 		return TOPIC_REFRESH
 
 	else if(href_list["set_security_records"])
-		var/sec_medical = sanitize(input(user,"Введите информацию Службы Безопасности о Вас здесь.","Character Preference", html_decode(pref.sec_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
+		var/sec_medical = sanitize(input(user,"Введите информацию Службы Безопасности о Вас здесь.","Изменение Персонажа", html_decode(pref.sec_record)) as message|null, MAX_RECORD_LENGTH, extra = 0)
 		if(!isnull(sec_medical) && !jobban_isbanned(user, "Records") && CanUseTopic(user))
 			pref.sec_record = sec_medical
 		return TOPIC_REFRESH

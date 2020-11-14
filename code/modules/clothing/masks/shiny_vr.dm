@@ -1,10 +1,10 @@
 /obj/item/clothing/mask/muzzle/ballgag
-	name = "ball gag"
-	desc = "What's that? You'll have to speak up."
+	name = "шариковый кляп"
+	desc = "Что-что? Говори чётче."
 	icon_state = "ballgag"
 
 /obj/item/clothing/mask/muzzle/ballgag/ringgag
-	name = "ring gag"
-	desc = "What's that? You'll have to speak more clearly."
+	name = "колечный кляп"
+	desc = "Что-что? Говори чётче."
 	icon_state = "ringgag"
 	gas_transfer_coefficient = 1

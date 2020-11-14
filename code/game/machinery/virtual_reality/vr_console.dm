@@ -241,7 +241,7 @@
 
 		avatar = new(S, "Virtual Reality Avatar")
 		// If the user has a non-default (Human) bodyshape, make it match theirs.
-		if(occupant.species.name != "Promethean" && occupant.species.name != "Human" && mirror_first_occupant)
+		if(occupant.species.name != "Прометеан" && occupant.species.name != "Человек" && mirror_first_occupant)
 			avatar.shapeshifter_change_shape(occupant.species.name)
 		avatar.forceMove(get_turf(S))			// Put the mob on the landmark, instead of inside it
 		avatar.Sleeping(1)

@@ -3,7 +3,7 @@
 	name_plural = "Skeletons"
 	icobase = 'icons/mob/human_races/r_skeleton.dmi'
 	primitive_form = "Monkey"
-	language = "Sol Common"
+	language = "Сольский Общий"
 	unarmed_types = list(/datum/unarmed_attack/claws/strong, /datum/unarmed_attack/bite/sharp)	//Bones are pointy, fight me.
 	blurb = "Spooky Scary Skeletons!"
 	name_language = null // Use the first-name last-name generator rather than a language scrambler

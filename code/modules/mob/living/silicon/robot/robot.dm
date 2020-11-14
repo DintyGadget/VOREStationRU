@@ -1,8 +1,8 @@
 #define CYBORG_POWER_USAGE_MULTIPLIER 2 // Multiplier for amount of power cyborgs use.
 
 /mob/living/silicon/robot
-	name = "Cyborg"
-	real_name = "Cyborg"
+	name = "Киборг"
+	real_name = "Киборг"
 	icon = 'icons/mob/robots.dmi'
 	icon_state = "robot"
 	maxHealth = 200
@@ -89,7 +89,7 @@
 	var/speed = 0 //Cause sec borgs gotta go fast //No they dont!
 	var/scrambledcodes = 0 // Used to determine if a borg shows up on the robotics console.  Setting to one hides them.
 	var/tracking_entities = 0 //The number of known entities currently accessing the internal camera
-	var/braintype = "Cyborg"
+	var/braintype = "Киборг"
 
 	var/list/robot_verbs_default = list(
 		/mob/living/silicon/robot/proc/sensor_mode,
@@ -101,7 +101,7 @@
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
 
-	add_language("Robot Talk", 1)
+	add_language("Роботический", 1)
 	add_language(LANGUAGE_GALCOM, 1)
 	add_language(LANGUAGE_EAL, 1)
 
@@ -224,7 +224,7 @@
 				mmi.brainmob.languages = M.original_languages
 			else
 				mmi.brainmob.languages = languages
-			mmi.brainmob.remove_language("Robot Talk")
+			mmi.brainmob.remove_language("Роботический")
 			mind.transfer_to(mmi.brainmob)
 		else if(!shell) // Shells don't have brainmbos in their MMIs.
 			to_chat(src, "<span class='danger'>Ой! Что-то пошло очень не так, ваш ММИ не смог принять ваше сознание. Вы стали призраком. Пожалуйста, сделайте отчет об ошибке, чтобы мы могли исправить эту ошибку.</span>")

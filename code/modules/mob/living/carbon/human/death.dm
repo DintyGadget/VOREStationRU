@@ -117,9 +117,9 @@
 	if(HUSK in mutations)	return
 
 	if(f_style)
-		f_style = "Shaved"		//we only change the icon_state of the hair datum, so it doesn't mess up their UI/UE
+		f_style = "Бритое лицо"		//we only change the icon_state of the hair datum, so it doesn't mess up their UI/UE
 	if(h_style)
-		h_style = "Bald"
+		h_style = "Лысая голова"
 	update_hair(0)
 
 	mutations.Add(HUSK)
@@ -136,9 +136,9 @@
 	if(SKELETON in src.mutations)	return
 
 	if(f_style)
-		f_style = "Shaved"
+		f_style = "Бритое лицо"
 	if(h_style)
-		h_style = "Bald"
+		h_style = "Лысая голова"
 	update_hair(0)
 
 	mutations.Add(SKELETON)

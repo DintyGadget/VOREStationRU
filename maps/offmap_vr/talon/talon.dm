@@ -10,7 +10,7 @@ var/global/list/latejoin_talon = list()
 	..()
 
 /datum/spawnpoint/talon
-	display_name = "ITV Talon Cryo"
+	display_name = "Криокамера фрегата Талон"
 	restrict_job = list("Talon Captain", "Talon Pilot", "Talon Engineer", "Talon Doctor", "Talon Guard")
 	msg = "выходит из криостазиса"
 	announce_channel = "Talon"

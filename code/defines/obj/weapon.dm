@@ -156,8 +156,8 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
 /obj/item/weapon/staff
-	name = "wizards staff"
-	desc = "Apparently a staff used by the wizard."
+	name = "посох волшебника"
+	desc = "Якобы посох, используемый волшебниками."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "staff"
 	item_icons = list(
@@ -172,8 +172,8 @@
 	attack_verb = list("bludgeoned", "whacked", "disciplined")
 
 /obj/item/weapon/staff/broom
-	name = "broom"
-	desc = "Used for sweeping, and flying into the night while cackling. Black cat not included."
+	name = "метла"
+	desc = "Для подметания, а также ночных полетов под зловещий хохот. Черный кот в комплекте не идёт."
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "broom"
 

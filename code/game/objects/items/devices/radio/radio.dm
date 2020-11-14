@@ -26,8 +26,8 @@ var/global/list/default_medbay_channels = list(
 
 /obj/item/device/radio
 	icon = 'icons/obj/radio_vr.dmi' //VOREStation Edit
-	name = "shortwave radio" //VOREStation Edit
-	desc = "Used to talk to people when headsets don't function. Range is limited."
+	name = "короткочастотная рация" //VOREStation Edit
+	desc = "Используется для коммуникаций при нерабочей гарнитуре. Расстояние ограничено."
 	suffix = "\[3\]"
 	icon_state = "walkietalkie"
 	item_state = "radio"
@@ -154,7 +154,7 @@ var/global/list/default_medbay_channels = list(
 /obj/item/device/radio/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "Radio", name, parent_ui)
+		ui = new(user, src, "Радио", name, parent_ui)
 		ui.open()
 
 /obj/item/device/radio/tgui_data(mob/user)
@@ -226,7 +226,7 @@ var/global/list/default_medbay_channels = list(
 	var/list = !!(chan_stat&FREQ_LISTENING)!=0
 	return {"
 			<B>[chan_name]</B><br>
-			Speaker: <A href='byond://?src=\ref[src];ch_name=[chan_name];listen=[!list]'>[list ? "Engaged" : "Disengaged"]</A><BR>
+			Динамик: <A href='byond://?src=\ref[src];ch_name=[chan_name];listen=[!list]'>[list ? "Engaged" : "Disengaged"]</A><BR>
 			"}
 
 /obj/item/device/radio/proc/ToggleBroadcast()
@@ -277,10 +277,10 @@ var/global/list/default_medbay_channels = list(
 				subspace_transmission = !subspace_transmission
 				if(!subspace_transmission)
 					channels = list()
-					to_chat(usr, "<span class='notice'>Subspace Transmission is disabled</span>")
+					to_chat(usr, "<span class='notice'>Субпространственная передача отключена.</span>")
 				else
 					recalculateChannels()
-					to_chat(usr, "<span class='notice'>Subspace Transmission is enabled</span>")
+					to_chat(usr, "<span class='notice'>Субпространственная передача включена.</span>")
 				. = TRUE
 		if("toggleLoudspeaker")
 			if(!subspace_switchable)
@@ -288,9 +288,9 @@ var/global/list/default_medbay_channels = list(
 			loudspeaker = !loudspeaker
 
 			if(loudspeaker)
-				to_chat(usr, "<span class='notice'>Loadspeaker enabled.</span>")
+				to_chat(usr, "<span class='notice'>Режим громкоговорителя включен.</span>")
 			else
-				to_chat(usr, "<span class='notice'>Loadspeaker disabled.</span>")
+				to_chat(usr, "<span class='notice'>Режим громкоговорителя отключен.</span>")
 			. = TRUE
 
 	if(. && iscarbon(usr))
@@ -316,8 +316,8 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 	GLOB.autospeaker.SetName(from)
 	Broadcast_Message(connection, GLOB.autospeaker,
-						0, "*garbled automated announcement*", src,
-						message_to_multilingual(message), from, "Automated Announcement", from, "synthesized voice",
+						0, "*скомканное автоматизированное объявление*", src,
+						message_to_multilingual(message), from, "Автоматизированное Объявление", from, "синтезированный голос",
 						DATA_FAKE, 0, zlevels, connection.frequency, "докладывает")
 
 // Interprets the message mode when talking into a radio, possibly returning a connection datum
@@ -337,7 +337,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	// If we were to send to a channel we don't have, drop it.
 	return RADIO_CONNECTION_FAIL
 
-/obj/item/device/radio/talk_into(mob/living/M as mob, list/message_pieces, channel, var/verb = "says")
+/obj/item/device/radio/talk_into(mob/living/M as mob, list/message_pieces, channel, var/verb = "говорит")
 	if(!on)
 		return FALSE // the device has to be on
 	//  Fix for permacell radios, but kinda eh about actually fixing them.
@@ -404,11 +404,11 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 	// --- AI ---
 	else if (isAI(M))
-		jobname = "AI"
+		jobname = "ИИ"
 
 	// --- Cyborg ---
 	else if (isrobot(M))
-		jobname = "Cyborg"
+		jobname = "Киборг"
 
 	// --- Personal AI (pAI) ---
 	else if (istype(M, /mob/living/silicon/pai))
@@ -467,14 +467,14 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	if(bluespace_radio)
 		//Nothing to transmit to
 		if(!bs_tx_weakref)
-			to_chat(loc, "<span class='warning'>\The [src] buzzes to inform you of the lack of a functioning connection.</span>")
+			to_chat(loc, "<span class='warning'>Рация пикает, что говорит об отсутствии функционирующего соединения.</span>")
 			return FALSE
 
 		var/obj/machinery/telecomms/tx_to = bs_tx_weakref.resolve()
 		//Was linked, now destroyed or something
 		if(!tx_to)
 			bs_tx_weakref = null
-			to_chat(loc, "<span class='warning'>\The [src] buzzes to inform you of the lack of a functioning connection.</span>")
+			to_chat(loc, "<span class='warning'>Рация пикает, что говорит об отсутствии функционирующего соединения.</span>")
 			return FALSE
 
 		//Transmitted in the blind. If we get a message back, cool. If not, oh well.
@@ -486,7 +486,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		var/list/jamming = is_jammed(src)
 		if(jamming)
 			var/distance = jamming["distance"]
-			to_chat(M, "<span class='danger'>[bicon(src)] You hear the [distance <= 2 ? "loud hiss" : "soft hiss"] of static.</span>")
+			to_chat(M, "<span class='danger'>[bicon(src)] Вы слышите [distance <= 2 ? "громкий" : "слабый"] статический шум.</span>")
 			return FALSE
 
 		// First, we want to generate a new radio signal
@@ -505,7 +505,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 			return TRUE //Huzzah, sent via subspace
 
 		else if(adhoc_fallback) //Less huzzah, we have to fallback
-			to_chat(loc, "<span class='warning'>\The [src] pings as it falls back to local radio transmission.</span>")
+			to_chat(loc, "<span class='warning'>Рация пикает, откатываясь в режим локальной радиопередачи.</span>")
 			subspace_transmission = FALSE
 
 		else //Oh well
@@ -533,7 +533,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		if(signal.data["done"] && pos_z in signal.data["level"])
 			if(adhoc_fallback)
-				to_chat(loc, "<span class='notice'>\The [src] pings as it reestablishes subspace communications.</span>")
+				to_chat(loc, "<span class='notice'>Рация пищит, вновь налаживая субпространственное соединение.</span>")
 				subspace_transmission = TRUE
 			// we're done here.
 			return TRUE
@@ -597,9 +597,9 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 	if((in_range(src, user) || loc == user))
 		if(b_stat)
-			. += "<span class='notice'>\The [src] can be attached and modified!</span>"
+			. += "<span class='notice'>[src] может быть модифицирована или прикреплена!</span>"
 		else
-			. += "<span class='notice'>\The [src] can not be modified or attached!</span>"
+			. += "<span class='notice'>[src] не может быть модифицирована или прикреплена!</span>"
 
 /obj/item/device/radio/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	..()
@@ -609,9 +609,9 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	b_stat = !( b_stat )
 	if(!istype(src, /obj/item/device/radio/beacon))
 		if (b_stat)
-			user.show_message("<span class='notice'>\The [src] can now be attached and modified!</span>")
+			user.show_message("<span class='notice'>[src] теперь может быть модифицирована или прикреплена!</span>")
 		else
-			user.show_message("<span class='notice'>\The [src] can no longer be modified or attached!</span>")
+			user.show_message("<span class='notice'>[src] больше не может быть модифицирована или прикреплена!</span>")
 		updateDialog()
 			//Foreach goto(83)
 		add_fingerprint(user)
@@ -675,15 +675,15 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 					keyslot = null
 
 			recalculateChannels()
-			to_chat(user, "You pop out the encryption key in the radio!")
+			to_chat(user, "Вы достаёте клюш шифрования из рации!")
 			playsound(src, W.usesound, 50, 1)
 
 		else
-			to_chat(user, "This radio doesn't have any encryption keys!")
+			to_chat(user, "В этой рации нет ключей шифрования!")
 
 	if(istype(W, /obj/item/device/encryptionkey/))
 		if(keyslot)
-			to_chat(user, "The radio can't hold another key!")
+			to_chat(user, "В этой рации не может быть больше одного ключа шифрования!")
 			return
 
 		if(!keyslot)
@@ -720,7 +720,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		if(!radio_controller)
 			sleep(30) // Waiting for the radio_controller to be created.
 		if(!radio_controller)
-			src.name = "broken radio"
+			src.name = "сломанная рация"
 			return
 
 		secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
@@ -746,7 +746,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	icon = 'icons/obj/items.dmi'
 	icon_state = "red_phone"
 	listening = 1
-	name = "phone"
+	name = "телефон"
 	anchored = FALSE
 
 /obj/item/device/radio/phone/medbay

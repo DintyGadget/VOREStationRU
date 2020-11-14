@@ -108,7 +108,7 @@
 
 			name_ender = ", <b><font color='#555555'>[use_gender]!</font></b>[species.get_additional_examine_text(src)]"
 
-		else if(species.name != "Human")
+		else if(species.name != "Человек")
 			name_ender = ", <b><font color='[species.get_flesh_colour(src)]'>\a [species.get_examine_name()]!</font></b>[species.get_additional_examine_text(src)]"
 
 	var/list/msg = list("<meta charset=\"utf-8\"><span class='info'>*---------*","Это [bicon(src)] <EM>[src.name]</EM>[name_ender]")
@@ -474,7 +474,7 @@
 		var/mob/living/silicon/robot/R = M
 		switch(hudtype)
 			if("security")
-				return R.hudmode == "Security"
+				return R.hudmode == "Служба безопасности"
 			if("medical")
-				return R.hudmode == "Medical"
+				return R.hudmode == "Медицинский отдел"
 	return 0

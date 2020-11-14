@@ -29,7 +29,7 @@
 /mob/new_player/proc/new_player_panel_proc()
 	var/output = "<div align='center'>"
 	output +="<hr>"
-	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Настроить персонажа</A></p>"
+	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Редактировать персонажа</A></p>"
 
 	if(!ticker || ticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
@@ -58,12 +58,12 @@
 				break
 
 			if(newpoll)
-				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
+				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Показать опросы</A> (Новое!)</b></p>"
 			else
-				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
+				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Показать опросы</A></p>"
 
 	if(client.check_for_new_server_news())
-		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Показать новости</A> (NEW!)</b></p>"
+		output += "<p><b><a href='byond://?src=\ref[src];shownews=1'>Показать новости</A> (Новое!)</b></p>"
 	else
 		output += "<p><a href='byond://?src=\ref[src];shownews=1'>Показать новости</A></p>"
 
@@ -71,7 +71,7 @@
 		output += "<p>[href(src, list("give_feedback" = 1), "Give Feedback")]</p>"
 	output += "</div>"
 
-	panel = new(src, "Welcome","Welcome", 210, 300, src)
+	panel = new(src, "Добро пожаловать","Добро пожаловать", 210, 300, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -122,7 +122,7 @@
 	if(href_list["observe"])
 		var/alert_time = ticker?.current_state <= GAME_STATE_SETTING_UP ? 1 : round(config.respawn_time/10/60)
 
-		if(alert(src,"Вы уверены, что хотите наблюдать? Вам придется подождать [alert_time] минут, прежде чем вы сможете войти в игру!","Player Setup","Да","Нет") == "Да")
+		if(alert(src,"Вы уверены, что хотите наблюдать? Вам придется подождать [alert_time] минут, прежде чем Вы сможете войти в игру!","Player Setup","Да","Нет") == "Да")
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
@@ -202,13 +202,13 @@
 			return
 
 		if(!is_alien_whitelisted(src, GLOB.all_species[client.prefs.species]))
-			alert(src, "В настоящее время вы не находитесь в белом списке, и можете играть за [client.prefs.species].")
+			alert(src, "В настоящее время Вы не находитесь в белом списке, и можете играть за [client.prefs.species].")
 			return 0
 
 		var/datum/species/S = GLOB.all_species[client.prefs.species]
 
 		if(!(S.spawn_flags & SPECIES_CAN_JOIN))
-			alert(src,"Ваша текущая раста, [client.prefs.species], недоступна для игры на станции.")
+			alert(src,"Ваша текущая раса, [client.prefs.species], недоступна для игры на станции.")
 			return 0
 
 		AttemptLateSpawn(href_list["SelectedJob"],client.prefs.spawnpoint)

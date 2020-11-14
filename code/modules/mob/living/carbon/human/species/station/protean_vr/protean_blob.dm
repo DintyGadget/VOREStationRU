@@ -185,7 +185,7 @@
 		return humanform.adjustOxyLoss(amount)
 	else
 		return ..()
-	
+
 /mob/living/simple_mob/protean_blob/adjustHalLoss(amount)
 	if(humanform)
 		return humanform.adjustHalLoss(amount)
@@ -228,7 +228,7 @@
 	else
 		animate(src, alpha = 0, time = 2 SECONDS)
 		sleep(2 SECONDS)
-	
+
 	if(!QDELETED(src)) // Human's handle death should have taken us, but maybe we were adminspawned or something without a human counterpart
 		qdel(src)
 
@@ -307,7 +307,7 @@ var/global/list/disallowed_protean_accessories = list(
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/nano_intoblob()
 	var/panel_was_up = FALSE
-	if(client?.statpanel == "Protean")
+	if(client?.statpanel == "Протеан")
 		panel_was_up = TRUE
 
 	handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
@@ -383,7 +383,7 @@ var/global/list/disallowed_protean_accessories = list(
 
 	//Flip them to the protean panel
 	if(panel_was_up)
-		client?.statpanel = "Protean"
+		client?.statpanel = "Протеан"
 
 	//Return our blob in case someone wants it
 	return blob
@@ -400,9 +400,9 @@ var/global/list/disallowed_protean_accessories = list(
 		return
 
 	var/panel_was_up = FALSE
-	if(client?.statpanel == "Protean")
+	if(client?.statpanel == "Протеан")
 		panel_was_up = TRUE
-	
+
 	if(buckled)
 		buckled.unbuckle_mob()
 	if(LAZYLEN(buckled_mobs))
@@ -455,7 +455,7 @@ var/global/list/disallowed_protean_accessories = list(
 
 	//Flip them to the protean panel
 	if(panel_was_up)
-		client?.statpanel = "Protean"
+		client?.statpanel = "Протеан"
 
 	//Return ourselves in case someone wants it
 	return src

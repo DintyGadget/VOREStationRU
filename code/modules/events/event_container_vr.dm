@@ -1,12 +1,12 @@
 #define ASSIGNMENT_ANY "Any"
-#define ASSIGNMENT_AI "AI"
-#define ASSIGNMENT_CYBORG "Cyborg"
+#define ASSIGNMENT_AI "ИИ"
+#define ASSIGNMENT_CYBORG "Киборг"
 #define ASSIGNMENT_ENGINEER "Engineer"
 #define ASSIGNMENT_GARDENER "Садовник"
 #define ASSIGNMENT_JANITOR "Уборщик"
-#define ASSIGNMENT_MEDICAL "Medical"
-#define ASSIGNMENT_SCIENTIST "Ученый"
-#define ASSIGNMENT_SECURITY "Security"
+#define ASSIGNMENT_MEDICAL "Медицинский отдел"
+#define ASSIGNMENT_SCIENTIST "Учёный"
+#define ASSIGNMENT_SECURITY "Служба безопасности"
 
 //
 // VOREStation overrides to the default event manager configuration.

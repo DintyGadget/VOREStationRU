@@ -89,7 +89,7 @@
 
 	if(selected_species.selects_bodytype)
 		var/datum/species/custom/CS = character.species
-		var/S = pref.custom_base ? pref.custom_base : "Human"
+		var/S = pref.custom_base ? pref.custom_base : "Человек"
 		var/datum/species/custom/new_CS = CS.produceCopy(S, pref.pos_traits + pref.neu_traits + pref.neg_traits, character)
 
 		//Any additional non-trait settings can be applied here
@@ -107,7 +107,7 @@
 	var/datum/species/selected_species = GLOB.all_species[pref.species]
 	if(selected_species.selects_bodytype)
 		. += "<b>Основа для туловища: </b> "
-		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Human"]</a><br>"
+		. += "<a href='?src=\ref[src];custom_base=1'>[pref.custom_base ? pref.custom_base : "Человек"]</a><br>"
 
 	if(pref.species == SPECIES_CUSTOM)
 		var/points_left = pref.starting_trait_points
@@ -150,7 +150,7 @@
 		return TOPIC_NOACTION
 
 	else if(href_list["custom_species"])
-		/*if(pref.species != "Custom Species")
+		/*if(pref.species != "Собственная Раса")
 			alert("You cannot set a custom species name unless you set your character to use the 'Custom Species' \
 			species on the 'General' tab. If you have this set to something, it's because you had it set before the \
 			Trait system was implemented. If you wish to change it, set your species to 'Custom Species' and configure \
@@ -166,13 +166,13 @@
 		var/list/choices = custom_species_bases
 		if(pref.species != SPECIES_CUSTOM)
 			choices = (choices | pref.species)
-		var/text_choice = input("Выберите основу для изображения персонажа","Icon Base") in choices
+		var/text_choice = input("Выберите основу для изображения персонажа","Основа Спрайта") in choices
 		if(text_choice in choices)
 			pref.custom_base = text_choice
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["blood_color"])
-		var/color_choice = input("Выберите цвет крови (не относится к синтам)","Blood Color",pref.blood_color) as color
+		var/color_choice = input("Выберите цвет крови (не относится к синтам)","Цвет Крови",pref.blood_color) as color
 		if(color_choice)
 			pref.blood_color = sanitize_hexcolor(color_choice, default="#A10808")
 		return TOPIC_REFRESH

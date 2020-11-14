@@ -1,6 +1,6 @@
 /obj/item/device/radio/headset
-	name = "radio headset"
-	desc = "An updated, modular intercom that fits over the head. Takes encryption keys"
+	name = "гарнитура"
+	desc = "Обновленный, модулярный интерком, надеваемый на голову. Поддерживает ключи шифрования."
 	var/radio_desc = ""
 	icon_state = "headset"
 	item_state = null //To remove the radio's state
@@ -16,7 +16,7 @@
 	var/obj/item/device/encryptionkey/keyslot2 = null
 	var/ks1type = null
 	var/ks2type = null
-	
+
 	drop_sound = 'sound/items/drop/component.ogg'
 	pickup_sound = 'sound/items/pickup/component.ogg'
 
@@ -43,17 +43,17 @@
 	. = ..()
 
 	if(radio_desc && Adjacent(user))
-		. += "The following channels are available:"
+		. += "Доступны следующие каналы:"
 		. += radio_desc
 
 /obj/item/device/radio/headset/handle_message_mode(mob/living/M as mob, list/message_pieces, channel)
 	if(channel == "special")
 		if(translate_binary)
-			var/datum/language/binary = GLOB.all_languages["Robot Talk"]
+			var/datum/language/binary = GLOB.all_languages["Роботический"]
 			binary.broadcast(M, M.strip_prefixes(multilingual_to_message(message_pieces)))
 			return RADIO_CONNECTION_NON_SUBSPACE
 		if(translate_hive)
-			var/datum/language/hivemind = GLOB.all_languages["Hivemind"]
+			var/datum/language/hivemind = GLOB.all_languages["Коллективный Разум"]
 			hivemind.broadcast(M, M.strip_prefixes(multilingual_to_message(message_pieces)))
 			return RADIO_CONNECTION_NON_SUBSPACE
 		return RADIO_CONNECTION_FAIL

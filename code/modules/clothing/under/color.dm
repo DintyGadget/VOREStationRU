@@ -1,145 +1,145 @@
 /obj/item/clothing/under/color/black
-	name = "black jumpsuit"
+	name = "черный комбинезон"
 	icon_state = "black"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/blackf
-	name = "feminine black jumpsuit"
-	desc = "It's very smart and in a ladies size!"
+	name = "женский черный комбинезон"
+	desc = "Придаёт умный вид и подходит женщинам!"
 	icon_state = "black"
 	worn_state = "blackf"
 
 /obj/item/clothing/under/color/blackjumpskirt
-	name = "black jumpskirt"
-	desc = "A slimming black jumpskirt."
+	name = "черный комбинезон с юбкой"
+	desc = "Приятный чёрный комбинезон с юбкой."
 	icon_state = "blackjumpskirt"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 
 /obj/item/clothing/under/color/blue
-	name = "blue jumpsuit"
+	name = "синий комбинезон"
 	icon_state = "blue"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/green
-	name = "green jumpsuit"
+	name = "зеленый комбинезон"
 	icon_state = "green"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/grey
-	name = "grey jumpsuit"
+	name = "серый комбинезон"
 	icon_state = "grey"
 	rolled_sleeves = 0
 
 //TFF 5/8/19 - add a non perma-set orange jumpsuit, splits prison into its own obj with override var settings.
 //TFF 5/9/19 - add a different icon_state to both jumpsuits, orange and prison. Refactors orange and prison jumpsuit slightly.
 /obj/item/clothing/under/color/orange
-	name = "orange jumpsuit"
+	name = "оранжевый комбинезон"
 	icon_state = "orange"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/prison
-	name = "prison jumpsuit"
-	desc = "It's standardized prisoner-wear. Its suit sensors are permanently set to the \"Tracking\" position."
+	name = "комбинезон заключенного"
+	desc = "Одежда, выдаваемая заключённым. Датчики на костюме установлены на отслеживание и не подлежат настройке."
 	icon_state = "prison"
 	has_sensor = 2
 	sensor_mode = 3
 
 /obj/item/clothing/under/color/pink
-	name = "pink jumpsuit"
+	name = "розовый комбинезон"
 	icon_state = "pink"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/red
-	name = "red jumpsuit"
+	name = "красный комбинезон"
 	icon_state = "red"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/white
-	name = "white jumpsuit"
+	name = "белый комбинезон"
 	icon_state = "white"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/yellow
-	name = "yellow jumpsuit"
+	name = "желтый комбинезон"
 	icon_state = "yellow"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/psyche
-	name = "psychedelic jumpsuit"
-	desc = "Groovy!"
+	name = "психоделический комбинезон"
+	desc = "Штырит!"
 	icon_state = "psyche"
 
 /obj/item/clothing/under/color/lightblue
-	name = "lightblue jumpsuit"
-	desc = "A light blue jumpsuit."
+	name = "светло-синий комбинезон"
+	desc = "Светло-синий комбинезон."
 	icon_state = "lightblue"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/aqua
-	name = "aqua jumpsuit"
-	desc = "An aqua jumpsuit."
+	name = "голубой комбинезон"
+	desc = "Комбинезон цвета морской волны."
 	icon_state = "aqua"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color
-	name = "purple jumpsuit"
-	desc = "The latest in space fashion."
+	name = "фиолетовый комбинезон"
+	desc = "Последний писк космической моды."
 	icon_state = "purple"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/lightpurple
-	name = "lightpurple jumpsuit"
-	desc = "A light purple jumpsuit."
+	name = "светло-фиолетовый комбинезон"
+	desc = "Светло-фиолетовый кобинезон."
 	icon_state = "lightpurple"
 	item_state_slots = list(slot_r_hand_str = "purple", slot_l_hand_str = "purple")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/lightgreen
-	name = "lightgreen jumpsuit"
-	desc = "A light green jumpsuit."
+	name = "светло-зеленый комбинезон"
+	desc = "Светло-зелёный комбинезон."
 	icon_state = "lightgreen"
 	item_state_slots = list(slot_r_hand_str = "green", slot_l_hand_str = "green")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/lightbrown
-	name = "lightbrown jumpsuit"
-	desc = "A light brown jumpsuit."
+	name = "светло-коричневый комбинезон"
+	desc = "Светло-коричневый комбинезон."
 	icon_state = "lightbrown"
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/brown
-	name = "brown jumpsuit"
-	desc = "A brown jumpsuit."
+	name = "коричневый комбинезон"
+	desc = "Коричневый комбинезон."
 	icon_state = "brown"
 	item_state_slots = list(slot_r_hand_str = "lightbrown", slot_l_hand_str = "lightbrown")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/yellowgreen
-	name = "yellowgreen jumpsuit"
-	desc = "A... yellow green jumpsuit?"
+	name = "желто-зеленый комбинезон"
+	desc = "Жёлто-... зелёный комбинезон?"
 	icon_state = "yellowgreen"
 	item_state_slots = list(slot_r_hand_str = "yellow", slot_l_hand_str = "yellow")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/darkblue
-	name = "darkblue jumpsuit"
-	desc = "A dark blue jumpsuit."
+	name = "темно-синий комбинезон"
+	desc = "Тёмно-синий комбинезон."
 	icon_state = "darkblue"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/lightred
-	name = "lightred jumpsuit"
-	desc = "A light red jumpsuit."
+	name = "светло-красный комбинезон"
+	desc = "Светло-красный комбинезон."
 	icon_state = "lightred"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 	rolled_sleeves = 0
 
 /obj/item/clothing/under/color/darkred
-	name = "darkred jumpsuit"
-	desc = "A dark red jumpsuit."
+	name = "темно-красный комбинезон"
+	desc = "Тёмно-красный комбинезон."
 	icon_state = "darkred"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 	rolled_sleeves = 0

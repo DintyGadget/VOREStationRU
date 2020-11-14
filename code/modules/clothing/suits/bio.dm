@@ -1,8 +1,8 @@
 //Biosuit complete with shoes (in the item sprite)
 /obj/item/clothing/head/bio_hood
-	name = "bio hood"
+	name = "биологический капюшон"
 	icon_state = "bio"
-	desc = "A hood that protects the head and face from biological comtaminants."
+	desc = "Капюшон, защищающий голову и лицо носителя от биологических загрязнителей."
 	randpixel = 0
 	center_of_mass = null
 	permeability_coefficient = 0.01
@@ -14,8 +14,8 @@
 	item_flags = THICKMATERIAL | ALLOW_SURVIVALFOOD
 
 /obj/item/clothing/suit/bio_suit
-	name = "bio suit"
-	desc = "A suit that protects against biological contamination."
+	name = "биологический костюм"
+	desc = "Костюм, предоставляющий защиту от биологического загрязнения."
 	icon_state = "bio"
 	w_class = ITEMSIZE_LARGE//bulky item
 	gas_transfer_coefficient = 0.01
@@ -88,8 +88,8 @@
 
 //Plague Dr mask can be found in clothing/masks/gasmask.dm
 /obj/item/clothing/suit/bio_suit/plaguedoctorsuit
-	name = "Plague doctor suit"
-	desc = "It protected doctors from the Black Death, back then. You bet your arse it's gonna help you against viruses."
+	name = "костюм чумного доктора"
+	desc = "Он защищал докторов от чумы. Ясен пень, что защитит от вирусов."
 	icon_state = "plaguedoctor"
 	item_state_slots = list(slot_r_hand_str = "bio", slot_l_hand_str = "bio")
 	flags_inv = HIDEGLOVES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER

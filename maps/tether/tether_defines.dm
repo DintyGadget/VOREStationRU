@@ -30,7 +30,7 @@
 #define NETWORK_TETHER "Tether"
 #define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
 #define NETWORK_OUTSIDE "Outside"
-#define NETWORK_EXPLORATION "Exploration"
+#define NETWORK_EXPLORATION "Отдел искателей"
 #define NETWORK_XENOBIO "Xenobiology"
 
 /datum/map/tether/New()
@@ -124,7 +124,7 @@
 
 	bot_patrolling = FALSE
 
-	allowed_spawns = list("Tram Station","Gateway","Cryogenic Storage","Cyborg Storage","ITV Talon Cryo")
+	allowed_spawns = list("Трамвайный Вокзал","Телепорт","Криокамера","Хранилище Киборгов","Криокамера Фрегата Талон")
 	spawnpoint_died = /datum/spawnpoint/tram
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo

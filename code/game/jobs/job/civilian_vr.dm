@@ -44,11 +44,11 @@
 
 /datum/alt_title/historian
 	title = "Историк"
-	title_blurb = "The Historian uses the Library as a base of operation to record any important events occuring on station."
+	title_blurb = "Историк использует библиотеку в качестве своей базы для записи важных событий, происходящих на станции."
 
 /datum/alt_title/professor
 	title = "Профессор"
-	title_blurb = "The Professor uses the Library as a base of operations to share their vast knowledge with the crew."
+	title_blurb = "Профессор использует библиотеку как персональную аудиторию для просвещения экипажа."
 
 /datum/job/lawyer
 	disallow_jobhop = TRUE
@@ -64,31 +64,31 @@
 //////////////////////////////////
 
 /datum/job/entertainer
-	title = "Артист"
+	title = "Аниматор"
 	flag = ENTERTAINER
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "Главой Персонала"
+	supervisors = "Главой персонала"
 	selection_color = "#515151"
 	access = list(access_entertainment)
 	minimal_access = list(access_entertainment)
 	pto_type = PTO_CIVILIAN
 
 	outfit_type = /decl/hierarchy/outfit/job/assistant
-	job_description = "Артист делает именно это, развлекает! Ставьте спектакли, играйте музыку, пойте песни, рассказывайте истории или читайте свои любимые фанфики."
-	alt_titles = list("Вокалист" = /datum/alt_title/performer, "Музыкант" = /datum/alt_title/musician, "Рабочий сцены" = /datum/alt_title/stagehand)
+	job_description = "Аниматор отвечает за развлечение персонала! Ставьте спектакли, играйте музыку, пойте песни, рассказывайте истории или читайте свои любимые фанфики."
+	alt_titles = list("Артист" = /datum/alt_title/performer, "Музыкант" = /datum/alt_title/musician, "Рабочий сцены" = /datum/alt_title/stagehand)
 
 // Entertainer Alt Titles
 /datum/alt_title/performer
-	title = "Вокалист"
-	title_blurb = "Вокалист - это тот, кто поет! Актерское мастерство, танцы и так далее!"
+	title = "Артист"
+	title_blurb = "Артист -- понятие растяжимое! Актерское мастерство, танцы, вокал и так далее!"
 
 /datum/alt_title/musician
 	title = "Музыкант"
-	title_blurb = "Музыкант - это тот, кто создает музыку! Петь, играть на музыкальных инструментах, слогать стихами - это ваше дело!"
+	title_blurb = "Музыкант - это тот, кто создаёт музыку! Петь, играть на музыкальных инструментах, слогать стихами - это ваше дело!"
 
 /datum/alt_title/stagehand
 	title = "Рабочий сцены"

@@ -249,7 +249,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = AMBIENCE_ARRIVALS
 
 /area/centcom/tram
-	name = "\improper Tram Station"
+	name = "Трамвайный Вокзал"
 	ambience = AMBIENCE_ARRIVALS
 
 /area/centcom/security

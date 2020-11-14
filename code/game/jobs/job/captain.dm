@@ -29,7 +29,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	job_description = "Директор колонии управляет остальным командным составом, а через них и остальной частью объекта. Хотя у них есть доступ ко всему, \
 						они не все понимают и должны давать задачи соответствующему члену экипажа.  Ожидается, что Директор колонии будет иметь  \
 						представление о стандартной рабочей процедуре и будет подчиняться ей, а также судебным искам, так же как и любой другой член экипажа."
-	alt_titles = list("Смотритель"= /datum/alt_title/overseer)
+	alt_titles = list("Руководитель станции"= /datum/alt_title/overseer)
 
 /*
 /datum/job/captain/equip(var/mob/living/carbon/human/H)
@@ -44,7 +44,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 // Captain Alt Titles
 /datum/alt_title/overseer
-	title = "Смотритель"
+	title = "Руководитель станции"
 
 //////////////////////////////////
 //		Head of Personnel
@@ -72,7 +72,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	job_description = "The Head of Personnel manages the Service department, the Exploration team, and most other civilians. They also \
 						manage the Supply department, through the Quartermaster. In addition, the Head of Personnel oversees the personal accounts \
 						of the crew, including their money and access. If necessary, the Head of Personnel is first in line to assume Acting Command."
-	alt_titles = list("Старший офицер" = /datum/alt_title/cro)
+	alt_titles = list("Менеджер экипажа" = /datum/alt_title/cro)
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
@@ -89,7 +89,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 
 // HOP Alt Titles
 /datum/alt_title/cro
-	title = "Старший офицер"
+	title = "Менеджер экипажа"
 
 //////////////////////////////////
 //		Command Secretary

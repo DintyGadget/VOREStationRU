@@ -8,12 +8,12 @@
 
 	//No Flavor Text
 	if (config.require_flavor && !client?.prefs?.flavor_texts["general"] && !(J.mob_type & JOB_SILICON))
-		to_chat(src,"<span class='warning'>Пожалуйста, установите общее описание персонажа. Установите его с помощью кнопки \"Установить описание\" на вкладке \"Внешность\" в настройке персонажа.</span>")
+		to_chat(src,"<span class='warning'>Пожалуйста, установите флавор (общее описание внешности) персонажа с помощью кнопки \"Установить описание\" на вкладке \"Основное\" в редакторе персонажа.</span>")
 		pass = FALSE
 
 	//No OOC notes
 	if (config.allow_Metadata && (!client?.prefs?.metadata || length(client.prefs.metadata) < 15))
-		to_chat(src,"<span class='warning'>Please set informative OOC notes related to RP/ERP preferences. Set them using the 'OOC Notes' button on the 'General' tab in character setup.</span>")
+		to_chat(src,"<span class='warning'>Пожалуйста, впишите информативные ООС-заметки касательно своих RP/ERP предпочтений с помощью кнопки \"Заметки ООС\" на вкладке \"Основное\" в редакторе персонажа.</span>")
 		pass = FALSE
 
 	//Are they on the VERBOTEN LIST?
@@ -24,20 +24,20 @@
 	//Do they have their scale properly setup?
 	if(!client?.prefs?.size_multiplier)
 		pass = FALSE
-		to_chat(src,"<span class='warning'>Вы еще не установили свой размер. Сделайте это на вкладке Д.Н.П в разделе настройки персонажа.</span>")
+		to_chat(src,"<span class='warning'>Вы еще не установили свой размер. Сделайте это на вкладке \"Дополнительно\" в редакторе персонажа.</span>")
 
 	//Can they play?
 	if(!is_alien_whitelisted(src,GLOB.all_species[client?.prefs?.species]) && !check_rights(R_ADMIN, 0))
 		pass = FALSE
-		to_chat(src,"<span class='warning'>Вам не разрешается спавниться в качестве этого вида.</span>")
+		to_chat(src,"<span class='warning'>Вам недоступна данная раса.</span>")
 
 	//Custom species checks
-	if (client?.prefs?.species == "Custom Species")
+	if (client?.prefs?.species == "Собственная Раса")
 
 		//Didn't name it
 		if(!client?.prefs?.custom_species)
 			pass = FALSE
-			to_chat(src,"<span class='warning'>Вы должны назвать свой собственный вид. Сделайте это на вкладке Д.Н.П в разделе настройки персонажа.</span>")
+			to_chat(src,"<span class='warning'>Вы должны назвать свою собственную расу. Сделайте это на вкладке \"Дополнительно\" в редакторе персонажа.</span>")
 
 		//Check traits/costs
 		var/list/megalist = client.prefs.pos_traits + client.prefs.neu_traits + client.prefs.neg_traits
@@ -52,7 +52,7 @@
 			//A trait was removed from the game
 			if(isnull(cost))
 				pass = FALSE
-				to_chat(src,"<span class='warning'>Your custom species is not playable. One or more traits appear to have been removed from the game or renamed. Enter character setup to correct this.</span>")
+				to_chat(src,"<span class='warning'>Ваша собственная раса недопустима для игры. Одна или более выбранных черт была переименована или удалена. Поправьте это в редакторе персонажа.</span>")
 				break
 			else
 				points_left -= traits_costs[T]
@@ -60,7 +60,7 @@
 		//Went into negatives
 		if(points_left < 0 || traits_left < 0)
 			pass = FALSE
-			to_chat(src,"<span class='warning'>Ваш пользовательский вид не играбелен. Переконфигурируйте свои черты на вкладке Д.Н.П.</span>")
+			to_chat(src,"<span class='warning'>Ваша собственная раса недопустима для игры. Перенастройте свои черты на вкладке \"Дополнительно\".</span>")
 
 	//Final popup notice
 	if (!pass)
