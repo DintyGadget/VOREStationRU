@@ -13,6 +13,7 @@ var/global/list/seen_religions = list()
 		seen_religions    |= M.client.prefs.religion*/
 	return
 
+// VOREStation Edits Start
 var/global/list/citizenship_choices = list(
 	"Земля",
 	"Марс",
@@ -20,11 +21,19 @@ var/global/list/citizenship_choices = list(
 	"Бинма",
 	"Могес",
 	"Мералар",
-	"Керр'Балак"
+	"Керр'Балак",
+	"Колония Дева 3b",
+	"Virgo 4 NT Compound",
+	"Венера",
+	"Тиамат",
+	"Ан-Тахк-Эт"
 	)
 
 var/global/list/home_system_choices = list(
+	"Дева-Эригон",
 	"Сол",
+	"Проксима Центавра",
+	"Процион",
 	"Вир",
 	"Никс",
 	"Тау Кита",
@@ -33,8 +42,12 @@ var/global/list/home_system_choices = list(
 	"Раркаджар"
 	)
 
+
 var/global/list/faction_choices = list(
 	"ЦПСС",
+	"United Fyrds",
+	"Elysian Colonies",
+	"Ares Confederation",
 	"Vey Med",
 	"Einstein Engines",
 	"Вольный Торговый Союз",
@@ -48,6 +61,7 @@ var/global/list/faction_choices = list(
 	"Morpheus Cyberkinetics",
 	"Xion Manufacturing Group"
 	)
+// VOREStation Edits Stop
 
 var/global/list/antag_faction_choices = list()	//Should be populated after brainstorming. Leaving as blank in case brainstorming does not occur.
 
@@ -75,5 +89,7 @@ var/global/list/religion_choices = list(
 	"Xilar Qall",
 	"Tajr-kii Rarkajar",
 	"Agnosticism",
-	"Deism"
+	"Deism",
+	"Neo-Moreauism",
+	"Orthodox Moreauism"
 	)

@@ -429,7 +429,7 @@
 		<br>\nФиз. состояние: [active1.fields["p_stat"]]
 		<br>\nПсих. состояние: [active1.fields["m_stat"]]<br>"}
 	else
-		P.info += "<b>Общие записи утеряны</b><br>"
+		P.info += "<b>Общие записи утеряны!</b><br>"
 	if(istype(active2, /datum/data/record) && data_core.security.Find(active2))
 		P.info += {"<br>\n<center><b>Данные безопасности</b></center>
 		<br>\nСтатус: [active2.fields["criminal"]]<br>\n
@@ -440,7 +440,7 @@
 		<br>\nВажные заметки:
 		<br>\n\t[active2.fields["notes"]]<br>\n
 		<br>\n
-		<center><b>Комментирование/Логирование</b></center><br>"}
+		<center><b>Коммент/Лог</b></center><br>"}
 		for(var/c in active2.fields["comments"])
 			P.info += "[c["header"]]<br>[c["text"]]<br>"
 	else

@@ -65,11 +65,11 @@ const CommunicationsConsoleMain = (props, context) => {
   } = data;
 
   let reportText = "View (" + messages.length + ")";
-  let announceText = "РЎРґРµР»Р°Р№С‚m РїСЂРёРѕСЂРёС‚РµС‚РЅРѕРµ РѕР±СЉСЏРІР»РµРЅРёРµ";
+  let announceText = "Сделать приоритетный анонс";
   if (msg_cooldown > 0) {
     announceText += " (" + msg_cooldown + "s)";
   }
-  let ccMessageText = emagged ? "РЎРѕРѕР±С‰РµРЅРёРµ РІ [UNKNOWN]" : "РЎРѕРѕР±С‰РµРЅРёРµ РІ " + boss_short;
+  let ccMessageText = emagged ? "Сообщение в [UNKNOWN]" : "Сообщение в " + boss_short;
   if (cc_cooldown > 0) {
     ccMessageText += " (" + cc_cooldown + "s)";
   }
@@ -81,7 +81,7 @@ const CommunicationsConsoleMain = (props, context) => {
         key={slevel.name}
         icon={slevel.icon}
         content={slevel.name}
-        disabled={!authmax}
+        disabled={!authenticated}
         selected={slevel.id === security_level}
         onClick={() => act('newalertlevel', { level: slevel.id })} />
     );
@@ -89,16 +89,9 @@ const CommunicationsConsoleMain = (props, context) => {
 
   return (
     <Fragment>
-      <Section title="Р”РµР№СЃС‚РІРёСЏ РґР»СЏ РґРёСЂРµРєС‚РѕСЂР°">
+      <Section title="Действия для директора">
         <LabeledList>
-          <LabeledList.Item label="РЈСЂРѕРІРµРЅСЊ С‚СЂРµРІРѕРіРё"
-            color={security_level_color}>
-            {alertLevelText}
-          </LabeledList.Item>
-          <LabeledList.Item label="РЎРјРµРЅРёС‚ СѓСЂРѕРІРµРЅСЊ">
-            {alertLevelButtons}
-          </LabeledList.Item>
-          <LabeledList.Item label="РћР±СЉСЏРІР»РµРЅРёРµ">
+          <LabeledList.Item label="Объявление">
             <Button
               icon="bullhorn"
               content={announceText}
@@ -106,7 +99,7 @@ const CommunicationsConsoleMain = (props, context) => {
               onClick={() => act('announce')} />
           </LabeledList.Item>
           {!!emagged && (
-            <LabeledList.Item label="РџРµСЂРµРґР°С‡Р°">
+            <LabeledList.Item label="Передача">
               <Button
                 icon="broadcast-tower"
                 color="red"
@@ -120,7 +113,7 @@ const CommunicationsConsoleMain = (props, context) => {
                 onClick={() => act('RestoreBackup')} />
             </LabeledList.Item>
           ) || (
-            <LabeledList.Item label="Transmit">
+            <LabeledList.Item label="Передача">
               <Button
                 icon="broadcast-tower"
                 content={ccMessageText}
@@ -130,26 +123,33 @@ const CommunicationsConsoleMain = (props, context) => {
           )}
         </LabeledList>
       </Section>
-      <Section title="Р”РµР№СЃС‚РІРёСЏ РєРѕРјР°РЅРґРЅРѕРіРѕ СЃРѕСЃС‚Р°РІР°">
+      <Section title="Действия командования">
         <LabeledList>
-          <LabeledList.Item label="Р­РєСЂР°РЅС‹">
+          <LabeledList.Item label="Уровень тревоги"
+            color={security_level_color}>
+            {alertLevelText}
+          </LabeledList.Item>
+          <LabeledList.Item label="Сменить уровень">
+            {alertLevelButtons}
+          </LabeledList.Item>
+          <LabeledList.Item label="Дисплеи">
             <Button
               icon="tv"
-              content="РЎРјРµРЅРёС‚СЊ СЃС‚Р°С‚СѓСЃ"
+              content="Сменить статус"
               disabled={!authenticated}
               onClick={() => act('status')} />
           </LabeledList.Item>
-          <LabeledList.Item label="Р’С…РѕРґСЏС‰РёРµ СЃРѕРѕР±С‰РµРЅРёСЏ">
+          <LabeledList.Item label="Входящие сообщения">
             <Button
               icon="folder-open"
               content={reportText}
               disabled={!authenticated}
               onClick={() => act('messagelist')} />
           </LabeledList.Item>
-          <LabeledList.Item label="РџСЂРѕС‡РµРµ">
+          <LabeledList.Item label="Прочее">
             <Button
               icon="microphone"
-              content={!atcsquelch ? "Р РµР»Рµ ATC РІРєР»СЋС‡РµРЅРѕ" : "Р РµР»Рµ ATC РІС‹РєР»СЋС‡РµРЅРѕ"}
+              content={!atcsquelch ? "Реле ATC включено" : "Реле ATC выключено"}
               disabled={!authenticated}
               selected={atcsquelch}
               onClick={() => act('toggleatc')} />
@@ -179,53 +179,53 @@ const CommunicationsConsoleAuth = (props, context) => {
   } else if (authenticated === 1) {
     authReadable = "Command";
   } else if (authenticated === 2) {
-    authReadable = "Site Director";
+    authReadable = "Директор колонии";
   } else {
     authReadable = "ERROR: Report This Bug!";
   }
 
   return (
     <Fragment>
-      <Section title="РђРІС‚РѕСЂРёР·Р°С†РёСЏ">
+      <Section title="Авторизация">
         <LabeledList>
           {is_ai && (
-            <LabeledList.Item label="Access Level">
+            <LabeledList.Item label="Уровень доступа">
               AI
             </LabeledList.Item>
           ) || (
-            <LabeledList.Item label="Р”РµР№СЃС‚РІРёСЏ">
+            <LabeledList.Item label="Действия">
               <Button
                 icon={authenticated ? 'sign-out-alt' : 'id-card'}
                 selected={authenticated}
                 content={authenticated
-                  ? "Р’С‹Р№С‚Рё (" + authReadable + ")"
-                  : 'Р’РѕР№С‚Рё'}
+                  ? "Выйти (" + authReadable + ")"
+                  : 'Войти'}
                 onClick={() => act("auth")} />
             </LabeledList.Item>
           )}
         </LabeledList>
       </Section>
-      <Section title="РЁР°С‚С‚Р» СЌРІР°РєСѓР°С†РёРё">
+      <Section title="Шаттл эвакуации">
         <LabeledList>
           {!!esc_status && (
-            <LabeledList.Item label="РЎРѕСЃС‚РѕСЏРЅРёРµ">
+            <LabeledList.Item label="Состояние">
               {esc_status}
             </LabeledList.Item>
           )}
           {!!esc_callable && (
-            <LabeledList.Item label="РќР°СЃС‚СЂРѕР№РєРё">
+            <LabeledList.Item label="Настройки">
               <Button
                 icon="rocket"
-                content="Р’С‹Р·РѕРІ С€Р°С‚С‚Р»Р°"
+                content="Вызов шаттла"
                 disabled={!authenticated}
                 onClick={() => act('callshuttle')} />
             </LabeledList.Item>
           )}
           {!!esc_recallable && (
-            <LabeledList.Item label="РќР°СЃС‚СЂРѕР№РєРё">
+            <LabeledList.Item label="Настройки">
               <Button
                 icon="times"
-                content="РћС‚РѕР·РІР°С‚СЊ С€Р°С‚С‚Р»"
+                content="Отозвать шаттл"
                 disabled={!authenticated || is_ai}
                 onClick={() => act('cancelshuttle')} />
             </LabeledList.Item>
@@ -267,13 +267,13 @@ const CommunicationsConsoleMessage = (props, context) => {
       <LabeledList.Item key={m.id} label={m.title}>
         <Button
           icon="eye"
-          content="РџРѕСЃРјРѕС‚СЂ."
+          content="Посмотр."
           disabled={!authenticated
             || message_current && (message_current.title === m.title)}
           onClick={() => act('messagelist', { msgid: m.id })} />
         <Button
           icon="times"
-          content="РЈРґР°Р»РёС‚СЊ"
+          content="Удалить"
           disabled={!authenticated || !message_deletion_allowed}
           onClick={() => act('delmessage', { msgid: m.id })} />
       </LabeledList.Item>
@@ -281,16 +281,16 @@ const CommunicationsConsoleMessage = (props, context) => {
   });
 
   return (
-    <Section title="РЎРѕРѕР±С‰РµРЅРёСЏ РїРѕР»СѓС‡РµРЅС‹" buttons={
+    <Section title="Сообщения получены" buttons={
       <Button
         icon="arrow-circle-left"
-        content="РќР°Р·Р°Рґ РІ РјРµРЅСЋ"
+        content="Назад в меню"
         onClick={() => act('main')} />
     }>
       <LabeledList>
         {messages.length && messageRows || (
           <LabeledList.Item label="404" color="bad">
-            РЎРѕРѕР±С‰РµРЅРёР№ РЅРµС‚.
+            Сообщений нет.
           </LabeledList.Item>
         )}
       </LabeledList>
@@ -320,7 +320,7 @@ const CommunicationsConsoleStatusDisplay = (props, context) => {
     <Section title="Modify Status Screens" buttons={
       <Button
         icon="arrow-circle-left"
-        content="Back To Main Menu"
+        content="Назад в меню"
         onClick={() => act('main')} />
     }>
       <LabeledList>

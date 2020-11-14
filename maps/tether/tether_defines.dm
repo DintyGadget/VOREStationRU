@@ -81,15 +81,15 @@
 	company_short = "NT"
 	starsys_name  = "Virgo-Erigone"
 
-	shuttle_docked_message = "Состав до %dock_name% прибыл на станцию Orange Line. Отправление через %ETD%."
-	shuttle_leaving_dock = "Состав отошел от станции Orange Line. У вас есть примерно %ETA% до прибытия в %dock_name%."
-	shuttle_called_message = "Происходит запланированный перевод экипажа на %dock_name%. Состав скоро прибудет. Отправляющимся следует проследовать до станции Orange Line в пределах %ETA%."
-	shuttle_recall_message = "Запланированный перевоз экипажа отменен."
+	shuttle_docked_message = "The scheduled Orange Line tram to the %dock_name% has arrived. It will depart in approximately %ETD%."
+	shuttle_leaving_dock = "The Orange Line tram has left the station. Estimate %ETA% until the tram arrives at %dock_name%."
+	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The tram will be arriving shortly. Those departing should proceed to the Orange Line tram station within %ETA%."
+	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	shuttle_name = "Automated Tram"
-	emergency_shuttle_docked_message = "На станцию прибыл эвакуационный состав. У вас есть примерно %ETD% чтобы занять свое место."
-	emergency_shuttle_leaving_dock = "Аварийный состав ушел со станции.  У вас есть примерно %ETA% до прибытия в %dock_name%."
-	emergency_shuttle_called_message = "Началась экстренная эвакуация, вызван внеплановый состав. Он прибудет на станцию примерно через %ETA%."
-	emergency_shuttle_recall_message = "Эвакуационный состав отозван."
+	emergency_shuttle_docked_message = "The evacuation tram has arrived at the tram station. You have approximately %ETD% to board the tram."
+	emergency_shuttle_leaving_dock = "The emergency tram has left the station. Estimate %ETA% until the tram arrives at %dock_name%."
+	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule tram has been called. It will arrive at the tram station in approximately %ETA%."
+	emergency_shuttle_recall_message = "The evacuation tram has been recalled."
 
 	station_networks = list(
 							NETWORK_CARGO,
@@ -230,7 +230,7 @@
 // Overmap represetation of tether
 /obj/effect/overmap/visitable/sector/virgo3b
 	name = "Virgo 3B"
-	desc = "Полный форона и является домом NSB Adephagia, где вы можете состыковаться и заправить свой корабль."
+	desc = "Полон форона и является домом NSB Adephagia, где вы можете состыковаться и заправить свой корабль."
 	scanner_desc = @{"[i]Регистрация[/i]: NSB Adephagia
 [i]Класс[/i]: Сборка
 [i]Транспондер[/i]: Transmitting (CIV), NanoTrasen IFF
@@ -288,8 +288,8 @@
 // For making the 6-in-1 holomap, we calculate some offsets
 #define TETHER_MAP_SIZE 140 // Width and height of compiled in tether z levels.
 #define TETHER_HOLOMAP_CENTER_GUTTER 40 // 40px central gutter between columns
-#define TETHER_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*TETHER_MAP_SIZE) - TETHER_HOLOMAP_CENTER_GUTTER) / 2) // 100
-#define TETHER_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*TETHER_MAP_SIZE)) / 2) // 60
+#define TETHER_HOLOMAP_MARGIN_X ((HOLOMAP_ICON_SIZE - (2*TETHER_MAP_SIZE) - TETHER_HOLOMAP_CENTER_GUTTER) / 2) // 80
+#define TETHER_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*TETHER_MAP_SIZE)) / 2) // 30
 
 // We have a bunch of stuff common to the station z levels
 /datum/map_z_level/tether/station

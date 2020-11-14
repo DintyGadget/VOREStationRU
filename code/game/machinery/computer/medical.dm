@@ -492,6 +492,7 @@
 
 	..(severity)
 
+
 /obj/machinery/computer/med_data/laptop
 	name = "Medical Laptop"
 	desc = "A cheap laptop. It seems to have only the medical records program."

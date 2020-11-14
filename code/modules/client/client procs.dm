@@ -351,7 +351,8 @@
 		if (config.panic_bunker && !holder && !deadmin_holder)
 			log_adminwarn("Ошибка входа: [key] - Впервые заходит на сервер!")
 			message_admins("<span class='adminnotice'>Ошибка входа: [key] - Впервые заходит на сервер!</span>")
-			disconnect_with_message("Извините, но сервер в настоящее время не принимает соединения от никогда ранее не встречавшихся игроков. Пройдите в Discord и оставьте заявку на вступление.")
+			to_chat(src, {"<span class='notice'>Добро пожаловать!<br>Данный сервер принимает подключения только после подачи заявки в нашем Дискорде. Для этого необходимо ознакомиться с правилами нашего Дискорда и сервера, расположенных в каналах #правила-дискорда и #информация соответственно. <br> Наш сервер: <a href='https://discord.gg/mbmYyeu'>https://discord.gg/mbmYyeu</a></span>"})
+			qdel(src)
 			return 0
 
 	// IP Reputation Check
