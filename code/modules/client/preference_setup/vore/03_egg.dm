@@ -1,22 +1,22 @@
-var/UNATHI_EGG 		= "Unathi"
-var/TAJARAN_EGG 		= "Tajaran"
-var/AKULA_EGG 		= "Akula"
-var/SKRELL_EGG		= "Skrell"
-var/SERGAL_EGG 		= "Sergal"
-var/HUMAN_EGG 		= "Human"
-var/NEVREAN_EGG		= "nevrean"
-var/SLIME_EGG 		= "Slime"
-var/EGG_EGG 			= "Egg"
-var/XENOCHIMERA_EGG 	= "Xenochimera"
-var/XENOMORPH_EGG 	= "Xenomorph"
+var/UNATHI_EGG 		= "Унати"
+var/TAJARAN_EGG 		= "Таджара"
+var/AKULA_EGG 		= "Акула"
+var/SKRELL_EGG		= "Скрелл"
+var/SERGAL_EGG 		= "Сергал"
+var/HUMAN_EGG 		= "Человек"
+var/NEVREAN_EGG		= "Невреан"
+var/SLIME_EGG 		= "Слизень"
+var/EGG_EGG 			= "Яйцо"
+var/XENOCHIMERA_EGG 	= "Ксенохимера"
+var/XENOMORPH_EGG 	= "Ксеноморф"
 
 // Define a place to save appearance in character setup
 /datum/preferences
-	var/vore_egg_type = "Egg" //The egg type they have.
+	var/vore_egg_type = "Яйцо" //The egg type they have.
 
 // Definition of the stuff for the egg type.
 /datum/category_item/player_setup_item/vore/egg
-	name = "Egg appearance."
+	name = "Вид яйца"
 	sort_order = 3
 
 /datum/category_item/player_setup_item/vore/egg/load_character(var/savefile/S)
@@ -34,7 +34,7 @@ var/XENOMORPH_EGG 	= "Xenomorph"
 
 /datum/category_item/player_setup_item/vore/egg/content(var/mob/user)
 	. += "<br>"
-	. += " Стиль яйца: <a href='?src=\ref[src];vore_egg_type=1'>[pref.vore_egg_type]</a><br>"
+	. += " Вид яйца: <a href='?src=\ref[src];vore_egg_type=1'>[pref.vore_egg_type]</a><br>"
 
 /datum/category_item/player_setup_item/vore/egg/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(!CanUseTopic(user))
@@ -42,7 +42,7 @@ var/XENOMORPH_EGG 	= "Xenomorph"
 
 	else if(href_list["vore_egg_type"])
 		var/list/vore_egg_types = global_vore_egg_types
-		var/selection = input(user, "Выберите тип яйца вашего персонажа:", "Настройка персонажа", pref.vore_egg_type) as null|anything in vore_egg_types
+		var/selection = input(user, "Выберите тип яйца вашего персонажа:", "Настройка Персонажа", pref.vore_egg_type) as null|anything in vore_egg_types
 		if(selection)
 			pref.vore_egg_type = vore_egg_types[selection]
 			return TOPIC_REFRESH

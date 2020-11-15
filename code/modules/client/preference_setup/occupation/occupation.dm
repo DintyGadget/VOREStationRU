@@ -142,12 +142,12 @@
 			continue
 		if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
-			. += "<del>[rank]</del></td></a><td> \[IN [(available_in_days)] DAYS]</td></tr>"
+			. += "<del>[rank]</del></td></a><td> \[ЧЕРЕЗ [(available_in_days)] ДНЕЙ]</td></tr>"
 			continue
 		//VOREStation Add
 		if(!job.player_has_enough_playtime(user.client))
 			var/available_in_hours = job.available_in_playhours(user.client)
-			. += "<del>[rank]</del></td></a><td> \[IN [round(available_in_hours, 0.1)] DEPTHOURS]</td></tr>"
+			. += "<del>[rank]</del></td></a><td> \[ЧЕРЕЗ [round(available_in_hours, 0.1)] ЧАСОВ]</td></tr>"
 			continue
 		//VOREStation Add End
 		if(job.minimum_character_age && user.client && (user.client.prefs.age < job.minimum_character_age))
@@ -156,7 +156,7 @@
 		if((pref.job_civilian_low & ASSISTANT) && job.type != /datum/job/assistant)
 			. += "<font color=grey>[rank]</font></a></td><td></td></tr>"
 			continue
-		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == "AI"))//Bold head jobs
+		if((rank in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND) ) || (rank == "ИИ"))//Bold head jobs
 			. += "<b>[rank]</b></a>"
 		else
 			. += "[rank]</a>"
@@ -235,7 +235,7 @@
 		var/datum/job/job = locate(href_list["select_alt_title"])
 		if (job)
 			var/choices = list(job.title) + job.alt_titles
-			var/choice = input("Выберите подтип для [job.title].", "Choose Title", pref.GetPlayerAltTitle(job)) as anything in choices|null
+			var/choice = input("Выберите альтернативное название для работы: [job.title].", "Альтернативное название", pref.GetPlayerAltTitle(job)) as anything in choices|null
 			if(choice && CanUseTopic(user))
 				SetPlayerAltTitle(job, choice)
 				return (pref.equip_preview_mob ? TOPIC_REFRESH_UPDATE_PREVIEW : TOPIC_REFRESH)
@@ -251,7 +251,7 @@
 
 		dat += "<p style='background-color: [job.selection_color]'><br><br><p>"
 		if(job.alt_titles)
-			dat += "<i><b>Другое название:</b> [english_list(job.alt_titles)].</i>"
+			dat += "<i><b>Альтернативные названия:</b> [english_list(job.alt_titles)].</i>"
 		send_rsc(user, job.get_job_icon(), "job[ckey(rank)].png")
 		dat += "<img src=job[ckey(rank)].png width=96 height=96 style='float:left;'>"
 		if(job.departments)

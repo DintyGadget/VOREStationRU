@@ -1,6 +1,6 @@
 //Due to how large this one is it gets its own file
 /datum/job/chaplain
-	title = "Священник"
+	title = "Капеллан"
 	flag = CHAPLAIN
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
@@ -13,13 +13,12 @@
 	minimal_access = list(access_chapel_office, access_crematorium)
 
 	outfit_type = /decl/hierarchy/outfit/job/chaplain
-	job_description = "Священник служит духовным нуждам экипажа."
-	alt_titles = list("Советник" = /datum/alt_title/counselor)
+	job_description = "Капеллан служит религиозным нуждам экипажа, проводя различные обряды и церемонии."
+	alt_titles = list("Священник" = /datum/alt_title/priest)
 
 // Chaplain Alt Titles
-/datum/alt_title/counselor
+/datum/alt_title/priest
 	title = "Советник"
-	title_blurb = "Советник заботится об эмоциональных потребностях экипажа, не уделяя особого внимания медицинским или духовным вопросам."
 
 /datum/job/chaplain/equip(var/mob/living/carbon/human/H, var/alt_title, var/ask_questions = TRUE)
 	. = ..()

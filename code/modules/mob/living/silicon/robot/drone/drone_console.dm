@@ -7,7 +7,7 @@
 	circuit = /obj/item/weapon/circuitboard/drone_control
 
 	//Used when pinging drones.
-	var/drone_call_area = "Engineering"
+	var/drone_call_area = "Инженерный отдел"
 	//Used to enable or disable drone fabrication.
 	var/obj/machinery/drone_fabricator/dronefab
 
@@ -40,7 +40,7 @@
 			continue
 		if(D.foreign_droid)
 			continue
-		
+
 		data["drones"].Add(list(list(
 			"name" = D.real_name,
 			"active" = D.stat != 2,

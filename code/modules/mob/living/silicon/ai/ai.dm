@@ -41,7 +41,7 @@ var/list/ai_verbs_default = list(
 
 
 /mob/living/silicon/ai
-	name = "AI"
+	name = "ИИ"
 	icon = 'icons/mob/AI.dmi'//
 	icon_state = "ai"
 	anchored = 1 // -- TLE
@@ -155,7 +155,7 @@ var/list/ai_verbs_default = list(
 		add_ai_verbs(src)
 
 	//Languages
-	add_language("Robot Talk", 1)
+	add_language("Роботический", 1)
 	add_language(LANGUAGE_GALCOM, 1)
 	add_language(LANGUAGE_SOL_COMMON, 1)
 	add_language(LANGUAGE_UNATHI, 1)
@@ -218,7 +218,7 @@ var/list/ai_verbs_default = list(
 		show_laws()
 		to_chat(src, "<b>These laws may be changed by other players, or by you being the traitor.</b>")
 
-	job = "AI"
+	job = "ИИ"
 	setup_icon()
 
 /mob/living/silicon/ai/Destroy()
@@ -292,7 +292,7 @@ var/list/ai_verbs_default = list(
 
 	// Set ai pda name
 	if(aiPDA)
-		aiPDA.ownjob = "AI"
+		aiPDA.ownjob = "ИИ"
 		aiPDA.owner = pickedName
 		aiPDA.name = pickedName + " (" + aiPDA.ownjob + ")"
 
@@ -350,7 +350,7 @@ var/list/ai_verbs_default = list(
 		return
 
 	if (!custom_sprite)
-		var/new_sprite = input("Select an icon!", "AI", selected_sprite) as null|anything in ai_icons
+		var/new_sprite = input("Select an icon!", "ИИ", selected_sprite) as null|anything in ai_icons
 		if(new_sprite) selected_sprite = new_sprite
 	updateicon()
 
@@ -936,9 +936,9 @@ var/list/ai_verbs_default = list(
 	else if(iscarbon(speaker)) // Nonhuman carbon mob
 		jobname = "No id"
 	else if(isAI(speaker))
-		jobname = "AI"
+		jobname = "ИИ"
 	else if(isrobot(speaker))
-		jobname = "Cyborg"
+		jobname = "Киборг"
 	else if(istype(speaker, /mob/living/silicon/pai))
 		jobname = "Personal AI"
 	else

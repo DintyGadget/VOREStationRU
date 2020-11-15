@@ -5,7 +5,7 @@
 
 /datum/gear/fluff
 	path = /obj/item
-	sort_category = "Пушистые Предметы"
+	sort_category = "Особые предметы"
 	display_name = "Если этот элемент можно выбрать или увидеть, немедленно пропингуйте кодера!"
 	ckeywhitelist = list("Эта запись никогда не должна быть выбрана с помощью этого набора переменных.") //If it does, then that means somebody fucked up the whitelist system pretty hard
 	character_name = list("This entry should never be choosable with this variable set.")
@@ -417,7 +417,7 @@
 	display_name = "Ace's Holster"
 	ckeywhitelist = list("jertheace")
 	character_name = list("Jeremiah Acacius")
-	allowed_roles = list("Директор колонии", "Надзиратель", "Глава безопасности")
+	allowed_roles = list("Директор колонии", "Надзиратель", "Глава службы безопасности")
 
 /datum/gear/fluff/jeremiah_boots
 	path = /obj/item/clothing/shoes/boots/combat
@@ -445,7 +445,7 @@
 	display_name = "Katarina's Backpack"
 	ckeywhitelist = list("joanrisu")
 	character_name = list("Katarina Eine")
-	allowed_roles = list("Директор колонии", "Надзиратель", "Глава безопасности")
+	allowed_roles = list("Директор колонии", "Надзиратель", "Глава службы безопасности")
 
 /datum/gear/fluff/emoticon_box
 	path = /obj/item/weapon/storage/box/fluff/emoticon
@@ -562,7 +562,7 @@
 	display_name = "Kenzie's Hypospray"
 	ckeywhitelist = list("lm40")
 	character_name = list("Kenzie Houser")
-	allowed_roles = list("Главврач","Медик","Химик","Психиатр","Парамедик", "Военврач")
+	allowed_roles = list("Главврач","Врач","Химик","Психиатр","Парамедик", "Военврач")
 
 /datum/gear/fluff/brianna_backpack
 	path = /obj/item/weapon/storage/backpack/messenger/black/fluff/briana
@@ -597,7 +597,7 @@
 	slot = slot_wear_suit
 	ckeywhitelist = list("mrsignmeup")
 	character_name = list("Reshskakskakss Seekiseekis")
-	allowed_roles = list("Глава безопасности")
+	allowed_roles = list("Глава службы безопасности")
 
 /datum/gear/fluff/daniel_medal
 	path = /obj/item/clothing/accessory/medal/conduct
@@ -730,7 +730,7 @@
 	display_name = "Tiemli's Welding Goggles"
 	ckeywhitelist = list("radiantaurora")
 	character_name = list("Tiemli Kroto")
-	allowed_roles = list("Роботехник")
+	allowed_roles = list("Робототехник")
 
 /datum/gear/fluff/clara_flask
 	path = /obj/item/weapon/reagent_containers/food/drinks/glass2/fluff/claraflask
@@ -772,7 +772,7 @@
 	slot = slot_wear_suit
 	ckeywhitelist = list("samanthafyre")
 	character_name = list("Kateryna Petrovitch")
-	allowed_roles = list("Офицер безопасности", "Надзиратель", "Глава безопасности", "Директор колонии", "Глава персонала")
+	allowed_roles = list("Офицер безопасности", "Надзиратель", "Глава службы безопасности", "Директор колонии", "Глава персонала")
 
 /datum/gear/fluff/viktor_flask
 	path = /obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask/fluff/viktor
@@ -805,14 +805,14 @@
 	display_name = "NT-HASD 556's Modkit"
 	ckeywhitelist = list("silencedmp5a5")
 	character_name = list("NT-HASD #556")
-	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава безопасности","Детектив")
+	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава службы безопасности","Детектив")
 
 /datum/gear/fluff/serdykov_modkit //Also converts a Security suit's sprite
 	path = /obj/item/device/modkit_conversion/fluff/serdykit
 	display_name = "Serdykov Antoz's Modkit"
 	ckeywhitelist = list("silencedmp5a5")
 	character_name = list("Serdykov Antoz")
-	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава безопасности","Детектив")
+	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава службы безопасности","Детектив")
 
 /datum/gear/fluff/tasy_clownuniform
 	path = /obj/item/clothing/under/sexyclown
@@ -1066,7 +1066,7 @@
 	slot = slot_glasses
 	ckeywhitelist = list("wickedtemp")
 	character_name = list("Chakat Tempest Venosare")
-	allowed_roles = list("Главврач","Медик","Химик","Психиатр","Парамедик", "Военврач", "Off-duty Medic")
+	allowed_roles = list("Главврач","Врач","Химик","Психиатр","Парамедик", "Военврач", "Off-duty Medic")
 
 /datum/gear/fluff/tempest_hypospray
 	path = /obj/item/weapon/reagent_containers/hypospray/vial/tempest
@@ -1074,7 +1074,7 @@
 	slot = slot_belt
 	ckeywhitelist = list("wickedtemp")
 	character_name = list("Chakat Tempest Venosare")
-	allowed_roles = list("Главврач","Медик","Химик","Психиатр","Парамедик", "Военврач", "Off-duty Medic")
+	allowed_roles = list("Главврач","Врач","Химик","Психиатр","Парамедик", "Военврач", "Off-duty Medic")
 
 /datum/gear/fluff/tempest_backpack
 	path = /obj/item/weapon/storage/backpack/saddlebag/tempest

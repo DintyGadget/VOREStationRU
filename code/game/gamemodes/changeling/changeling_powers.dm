@@ -67,7 +67,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	verbs.Add(/datum/changeling/proc/EvolutionMenu)
 	verbs.Add(/mob/proc/changeling_respec)
-	add_language("Changeling")
+	add_language("Генокрад")
 
 	var/lesser_form = !ishuman(src)
 
@@ -154,7 +154,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 		languages += language
 
 	//This isn't strictly necessary but just to be safe...
-	add_language("Changeling")
+	add_language("Генокрад")
 
 	//////////
 	//STINGS//	//They get a pretty header because there's just so fucking many of them ;_;

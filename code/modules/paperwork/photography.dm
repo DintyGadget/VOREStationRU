@@ -10,9 +10,9 @@
 * film *
 *******/
 /obj/item/device/camera_film
-	name = "film cartridge"
+	name = "картридж с пленкой"
 	icon = 'icons/obj/items.dmi'
-	desc = "A camera film cartridge. Insert it into a camera to reload it."
+	desc = "Картридж с пленкой для камеры. Вставьте его в камеру, чтобы её заправить."
 	icon_state = "film"
 	item_state = "camera"
 	w_class = ITEMSIZE_TINY
@@ -24,7 +24,7 @@
 var/global/photo_count = 0
 
 /obj/item/weapon/photo
-	name = "photo"
+	name = "фотография"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "photo"
 	item_state = "paper"
@@ -47,7 +47,7 @@ var/global/photo_count = 0
 
 /obj/item/weapon/photo/attackby(obj/item/weapon/P as obj, mob/user as mob)
 	if(istype(P, /obj/item/weapon/pen))
-		var/txt = sanitize(input(user, "What would you like to write on the back?", "Photo Writing", null)  as text, 128)
+		var/txt = sanitize(input(user, "Что бы Вы хотели написать на обратной стороне?", "Написать на фотографии", null)  as text, 128)
 		if(loc == user && user.stat == 0)
 			scribble = txt
 	..()
@@ -58,7 +58,7 @@ var/global/photo_count = 0
 		show(user)
 		return list(desc)
 	else
-		return list("<span class='notice'>It is too far away to examine.</span>")
+		return list("<span class='notice'>Фотографию не видно с такого расстояния.</span>")
 
 /obj/item/weapon/photo/proc/show(mob/user as mob)
 	user << browse_rsc(img, "tmp_photo_[id].png")
@@ -71,11 +71,11 @@ var/global/photo_count = 0
 	return
 
 /obj/item/weapon/photo/verb/rename()
-	set name = "Rename photo"
-	set category = "Object"
+	set name = "Переименовать Фото"
+	set category = "Объект"
 	set src in usr
 
-	var/n_name = sanitizeSafe(input(usr, "What would you like to label the photo?", "Photo Labelling", null)  as text, MAX_NAME_LEN)
+	var/n_name = sanitizeSafe(input(usr, "Как бы Вы хотели пометить фотографию?", "Пометка Фотографии", null)  as text, MAX_NAME_LEN)
 	//loc.loc check is for making possible renaming photos in clipboards
 	if(( (loc == usr || (loc.loc && loc.loc == usr)) && usr.stat == 0))
 		name = "[(n_name ? text("[n_name]") : "photo")]"
@@ -87,7 +87,7 @@ var/global/photo_count = 0
 * photo album *
 **************/
 /obj/item/weapon/storage/photo_album
-	name = "Photo album"
+	name = "фотоальбом"
 	icon = 'icons/obj/items.dmi'
 	icon_state = "album"
 	item_state = "briefcase"
@@ -121,9 +121,9 @@ var/global/photo_count = 0
 * camera *
 *********/
 /obj/item/device/camera
-	name = "camera"
+	name = "камера"
 	icon = 'icons/obj/items.dmi'
-	desc = "A polaroid camera. 10 photos left."
+	desc = "Полароидная камера. Осталось 10 фотографий."
 	icon_state = "camera"
 	item_state = "camera"
 	w_class = ITEMSIZE_SMALL
@@ -138,12 +138,12 @@ var/global/photo_count = 0
 	var/list/picture_planes = list()
 
 /obj/item/device/camera/verb/change_size()
-	set name = "Set Photo Focus"
-	set category = "Object"
-	var/nsize = input("Photo Size","Pick a size of resulting photo.") as null|anything in list(1,3,5,7)
+	set name = "Установить Фокус Камеры"
+	set category = "Объект"
+	var/nsize = input("Размер Фото","Выберите размер фотографии.") as null|anything in list(1,3,5,7)
 	if(nsize)
 		size = nsize
-		to_chat(usr, "<span class='notice'>Camera will now take [size]x[size] photos.</span>")
+		to_chat(usr, "<span class='notice'>Камера теперь будет фотографировать [size]x[size].</span>")
 
 /obj/item/device/camera/attack(mob/living/carbon/human/M as mob, mob/user as mob)
 	return
@@ -154,15 +154,15 @@ var/global/photo_count = 0
 		src.icon_state = icon_on
 	else
 		src.icon_state = icon_off
-	to_chat(user, "You switch the camera [on ? "on" : "off"].")
+	to_chat(user, "Вы [on ? "включаете" : "выключаете"] камеру.")
 	return
 
 /obj/item/device/camera/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/device/camera_film))
 		if(pictures_left)
-			to_chat(user, "<span class='notice'>[src] still has some film in it!</span>")
+			to_chat(user, "<span class='notice'>В камере ещё осталась плёнка!</span>")
 			return
-		to_chat(user, "<span class='notice'>You insert [I] into [src].</span>")
+		to_chat(user, "<span class='notice'>Вы заправляете камеру плёнкой.</span>")
 		user.drop_item()
 		qdel(I)
 		pictures_left = pictures_max
@@ -226,17 +226,17 @@ var/global/photo_count = 0
 		if(A.invisibility) continue
 		var/holding = null
 		if(A.l_hand || A.r_hand)
-			if(A.l_hand) holding = "They are holding \a [A.l_hand]"
+			if(A.l_hand) holding = "В левой руке [A.l_hand]"
 			if(A.r_hand)
 				if(holding)
-					holding += " and \a [A.r_hand]"
+					holding += ", а в правой [A.r_hand]"
 				else
-					holding = "They are holding \a [A.r_hand]"
+					holding = "В правой руке: [A.r_hand]"
 
 		if(!mob_detail)
-			mob_detail = "You can see [A] on the photo[A:health < 75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]. "
+			mob_detail = "На фотографии [A]. [A:health < 75 ? "Лицо выражает боль.":""].[holding ? " [holding]":"."]. "
 		else
-			mob_detail += "You can also see [A] on the photo[A:health < 75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]."
+			mob_detail += "Также на фотографии [A]. [A:health < 75 ? "Лицо выражает боль.":""].[holding ? " [holding]":"."]. "
 
 	return mob_detail
 
@@ -247,8 +247,8 @@ var/global/photo_count = 0
 	playsound(src, pick('sound/items/polaroid1.ogg', 'sound/items/polaroid2.ogg'), 75, 1, -3)
 
 	pictures_left--
-	desc = "A polaroid camera. It has [pictures_left] photos left."
-	to_chat(user, "<span class='notice'>[pictures_left] photos left.</span>")
+	desc = "Полароидная камера. Осталось [pictures_left] фотографий."
+	to_chat(user, "<span class='notice'>Осталось [pictures_left] фотографий.</span>")
 	icon_state = icon_off
 	on = 0
 	spawn(64)
@@ -296,7 +296,7 @@ var/global/photo_count = 0
 	pc.Blend(tiny_img,ICON_OVERLAY, 12, 19)
 
 	var/obj/item/weapon/photo/p = new()
-	p.name = "photo"
+	p.name = "фотография"
 	p.icon = ic
 	p.tiny = pc
 	p.img = photoimage

@@ -22,26 +22,26 @@
 	delete_inventory()
 
 /mob/living/carbon/human/skrell/Initialize(var/new_loc)
-	h_style = "Skrell Short Tentacles"
+	h_style = "Скрелл: Короткие щупальца"
 	return ..(new_loc, SPECIES_SKRELL)
 
 /mob/living/carbon/human/tajaran/Initialize(var/new_loc)
-	h_style = "Tajaran Ears"
+	h_style = "Таджара: Уши"
 	return ..(new_loc, SPECIES_TAJ)
 
 /mob/living/carbon/human/unathi/Initialize(var/new_loc)
-	h_style = "Unathi Horns"
+	h_style = "Унати: Рога"
 	return ..(new_loc, SPECIES_UNATHI)
 
 /mob/living/carbon/human/vox/Initialize(var/new_loc)
-	h_style = "Short Vox Quills"
+	h_style = "Вокс: Короткие перья"
 	return ..(new_loc, SPECIES_VOX)
 
 /mob/living/carbon/human/diona/Initialize(var/new_loc)
 	return ..(new_loc, SPECIES_DIONA)
 
 /mob/living/carbon/human/teshari/Initialize(var/new_loc)
-	h_style = "Teshari Default"
+	h_style = "Тешари: Обычная"
 	return ..(new_loc, SPECIES_TESHARI)
 
 /mob/living/carbon/human/promethean/Initialize(var/new_loc)

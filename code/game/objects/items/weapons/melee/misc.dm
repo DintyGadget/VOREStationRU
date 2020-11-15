@@ -15,8 +15,8 @@
 		return (OXYLOSS)
 
 /obj/item/weapon/melee/umbrella
-	name = "umbrella"
-	desc = "To keep the rain off you. Use with caution on windy days."
+	name = "зонт"
+	desc = "Дабы не промокнуть под дождем. Использовать с осторожностью в ветренные дни."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "umbrella_closed"
 	addblends = "umbrella_closed_a"

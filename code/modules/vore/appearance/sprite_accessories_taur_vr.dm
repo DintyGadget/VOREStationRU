@@ -1,7 +1,7 @@
 /datum/riding/taur
 	keytype = /obj/item/weapon/material/twohanded/fluff/riding_crop // Crack!
 	nonhuman_key_exemption = FALSE	// If true, nonhumans who can't hold keys don't need them, like borgs and simplemobs.
-	key_name = "a riding crop"		// What the 'keys' for the thing being rided on would be called.
+	key_name = "плетка"		// What the 'keys' for the thing being rided on would be called.
 	only_one_driver = TRUE			// If true, only the person in 'front' (first on list of riding mobs) can drive.
 
 /datum/riding/taur/handle_vehicle_layer()
@@ -21,7 +21,7 @@
 
 /datum/riding/taur/force_dismount(mob/M)
 	. = ..()
-	ridden.visible_message("<span class='notice'>[M] stops riding [ridden]!</span>")
+	ridden.visible_message("<span class='notice'>[M] прекращает кататься верхом на [ridden]!</span>")
 
 //Hoooo boy.
 /datum/riding/taur/get_offsets(pass_index) // list(dir = x, y, layer)
@@ -59,7 +59,7 @@
 	if(M in buckled_mobs)
 		return FALSE
 	if(M.size_multiplier > size_multiplier * 1.2)
-		to_chat(M,"<span class='warning'>This isn't a pony show! You need to be bigger for them to ride.</span>")
+		to_chat(M,"<span class='warning'>Ваш размер не выдержит на себе это существо!</span>")
 		return FALSE
 	if(M.loc != src.loc)
 		if(M.Adjacent(src))
@@ -71,9 +71,9 @@
 		var/datum/sprite_accessory/tail/taur/ridertype = H.tail_style
 		if(ridertype.can_ride)
 			if(istype(ridertype, /datum/sprite_accessory/tail/taur/naga) || istype(ridertype, /datum/sprite_accessory/tail/taur/slug))
-				to_chat(src,"<span class='warning'>Too few legs. TOO FEW LEGS!!</span>")
+				to_chat(src,"<span class='warning'>Слишком мало ног. МАЛО НОГ!!</span>")
 				return FALSE
-			to_chat(src,"<span class='warning'>Too many legs. TOO MANY LEGS!!</span>")
+			to_chat(src,"<span class='warning'>Слишком много ног. МНОГО НОГ!!</span>")
 			return FALSE
 
 	. = ..()
@@ -84,9 +84,9 @@
 	return
 
 /mob/living/carbon/human/proc/taur_mount(var/mob/living/M in living_mobs(1))
-	set name = "Taur Mount/Dismount"
+	set name = "Подсадить/Опустить С Тавра"
 	set category = "Abilities"
-	set desc = "Let people ride on you."
+	set desc = "Позволяет людям прокатиться на Вас."
 
 	if(LAZYLEN(buckled_mobs))
 		var/datum/riding/R = riding_datum
@@ -98,7 +98,7 @@
 	if(!can_buckle || !istype(M) || !M.Adjacent(src) || M.buckled)
 		return
 	if(buckle_mob(M))
-		visible_message("<span class='notice'>[M] starts riding [name]!</span>")
+		visible_message("<span class='notice'>[M] начинает кататься верхом на [name]!</span>")
 
 /mob/living/carbon/human/attack_hand(mob/user as mob)
 	if(LAZYLEN(buckled_mobs))
@@ -123,7 +123,7 @@
 // Taur sprites are now a subtype of tail since they are mutually exclusive anyway.
 
 /datum/sprite_accessory/tail/taur
-	name = "You should not see this..."
+	name = "Вы не должны это видеть..."
 	icon = 'icons/mob/vore/taurs_vr.dmi'
 	do_colouration = 1 // Yes color, using tail color
 	color_blend_mode = ICON_MULTIPLY  // The sprites for taurs are designed for ICON_MULTIPLY
@@ -139,28 +139,28 @@
 	//duplicate all the messages, and it starts getting awkward. These are singletons, anyway!
 
 	//Messages to owner when stepping on/over
-	var/msg_owner_help_walk		= "You carefully step over %prey."
-	var/msg_owner_help_run		= "You carefully step over %prey."
-	var/msg_owner_harm_walk		= "You methodically place your foot down upon %prey's body, slowly applying pressure, crushing them against the floor below!"
-	var/msg_owner_harm_run		= "You carelessly step down onto %prey, crushing them!"
-	var/msg_owner_disarm_walk	= "You firmly push your foot down on %prey, painfully but harmlessly pinning them to the ground!"
-	var/msg_owner_disarm_run	= "You quickly push %prey to the ground with your foot!"
-	var/msg_owner_grab_fail		= "You step down onto %prey, squishing them and forcing them down to the ground!"
-	var/msg_owner_grab_success	= "You pin %prey down onto the floor with your foot and curl your toes up around their body, trapping them inbetween them!"
+	var/msg_owner_help_walk		= "Вы аккуратно обходите %prey."
+	var/msg_owner_help_run		= "Вы аккуратно обходите %prey."
+	var/msg_owner_harm_walk		= "Вы намеренно наступаете ногой на тело %prey, постепенно вдавливая существо в пол!"
+	var/msg_owner_harm_run		= "Вы неосторожно проходите, растаптывая %prey!"
+	var/msg_owner_disarm_walk	= "Вы плотно наступаете на %prey ногой, больно но безвредно придавливая существо к земле!"
+	var/msg_owner_disarm_run	= "Вы быстро толкаете %prey на землю своей ногой!"
+	var/msg_owner_grab_fail		= "Вы наступаете на %prey, придавливая существо и прижимая к земле!"
+	var/msg_owner_grab_success	= "Вы прижимаете %prey к полу свой ногой, зажимая существо между своими пальцами!"
 
 	//Messages to prey when stepping on/over
-	var/msg_prey_help_walk		= "%owner steps over you carefully!"
-	var/msg_prey_help_run		= "%owner steps over you carefully!"
-	var/msg_prey_harm_walk		= "%owner methodically places their foot upon your body, slowly applying pressure, crushing you against the floor below!"
-	var/msg_prey_harm_run		= "%owner steps carelessly on your body, crushing you!"
-	var/msg_prey_disarm_walk	= "%owner firmly pushes their foot down on you, quite painfully but harmlessly pinning you to the ground!"
-	var/msg_prey_disarm_run		= "%owner pushes you down to the ground with their foot!"
-	var/msg_prey_grab_fail		= "%owner steps down and squishes you with their foot, forcing you down to the ground!"
-	var/msg_prey_grab_success	= "%owner pins you down to the floor with their foot and curls their toes up around your body, trapping you inbetween them!"
+	var/msg_prey_help_walk		= "%owner осторожно проходит над Вами!"
+	var/msg_prey_help_run		= "%owner осторожно проходит над Вами!"
+	var/msg_prey_harm_walk		= "%owner намеренно наступает на Вас ногой, постепенно вдавливая Вас в пол!"
+	var/msg_prey_harm_run		= "%owner неосторожно проходится по Вам, растаптывая Вас!"
+	var/msg_prey_disarm_walk	= "%owner плотно наступает на Вас ногой, больно но безвредно прижимая Вас к земле!"
+	var/msg_prey_disarm_run		= "%owner толкает Вас на землю своей ногой!"
+	var/msg_prey_grab_fail		= "%owner наступает на Вас, придавливая Вас к земле своей ногой!"
+	var/msg_prey_grab_success	= "%owner прижимает Вас к полу своей ногой, зажимая Вас между своими пальцами!"
 
 	//Messages for smalls moving under larges
-	var/msg_owner_stepunder		= "%owner runs between your legs." //Weird becuase in the case this is used, %owner is the 'bumper' (src)
-	var/msg_prey_stepunder		= "You run between %prey's legs." //Same, inverse
+	var/msg_owner_stepunder		= "%owner пробегает между Ваших ног." //Weird becuase in the case this is used, %owner is the 'bumper' (src)
+	var/msg_prey_stepunder		= "Вы пробегаете между ног %prey." //Same, inverse
 	hide_body_parts	= list(BP_L_LEG, BP_L_FOOT, BP_R_LEG, BP_R_FOOT) //Exclude pelvis just in case.
 	clip_mask_icon = 'icons/mob/vore/taurs_vr.dmi'
 	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
@@ -170,7 +170,7 @@
 // Tails/taurhalves for everyone
 
 /datum/sprite_accessory/tail/taur/wolf
-	name = "Wolf (Taur)"
+	name = "Тавр: Волк"
 	icon_state = "wolf_s"
 	under_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
 	suit_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
@@ -178,37 +178,37 @@
 
 //TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/fatwolf
-	name = "Fat Wolf (Taur)"
+	name = "Тавр: Волк толстый"
 	icon_state = "fatwolf_s"
 	icon_sprite_tag = "wolf"	//This could be modified later.
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c
-	name = "Wolf dual-color (Taur)"
+	name = "Тавр: Волк (два цвета)"
 	icon_state = "wolf_s"
 	extra_overlay = "wolf_markings"
 	//icon_sprite_tag = "wolf2c"
 
 //TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
-	name = "Fat Wolf dual-color (Taur)"
+	name = "Тавр: Волк толстый (два цвета)"
 	icon_state = "fatwolf_s"
 	extra_overlay = "fatwolf_markings"
 	//icon_sprite_tag = "fatwolf2c"
 
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
-	name = "SynthWolf dual-color (Taur)"
+	name = "Тавр: Волк-синт (два цвета)"
 	icon_state = "synthwolf_s"
 	extra_overlay = "synthwolf_markings"
 	//icon_sprite_tag = "synthwolf"
 
 /datum/sprite_accessory/tail/taur/skunk
-	name = "Skunk (Taur)"
+	name = "Тавр: Скунс"
 	icon_state = "skunk_s"
 	extra_overlay = "skunk_markings"
 	icon_sprite_tag = "skunk"
 
 /datum/sprite_accessory/tail/taur/naga
-	name = "Naga (Taur)"
+	name = "Тавр: Нага"
 	icon_state = "naga_s"
 	suit_sprites = 'icons/mob/taursuits_naga_vr.dmi'
 	//icon_sprite_tag = "naga"
@@ -241,13 +241,13 @@
 	msg_owner_stepunder = "%owner bounds over your tail."
 
 /datum/sprite_accessory/tail/taur/naga/naga_2c
-	name = "Naga dual-color (Taur)"
+	name = "Тавр: Нага (два цвета)"
 	icon_state = "naga_s"
 	extra_overlay = "naga_markings"
 	//icon_sprite_tag = "naga2c"
 
 /datum/sprite_accessory/tail/taur/horse
-	name = "Horse (Taur)"
+	name = "Тавр: Лошадь"
 	icon_state = "horse_s"
 	under_sprites = 'icons/mob/taursuits_horse_vr.dmi'
 	suit_sprites = 'icons/mob/taursuits_horse_vr.dmi'
@@ -269,13 +269,13 @@
 	msg_prey_grab_fail = "%owner steps down and squishes you with their hoof, forcing you down to the ground!"
 
 /datum/sprite_accessory/tail/taur/horse/synthhorse
-	name = "SynthHorse dual-color (Taur)"
+	name = "Тавр: Лошадь-синт (два цвета)"
 	icon_state = "synthhorse_s"
 	extra_overlay = "synthhorse_markings"
 	//icon_sprite_tag = "synthhorse"
 
 /datum/sprite_accessory/tail/taur/cow
-	name = "Cow (Taur)"
+	name = "Тавр: Корова"
 	icon_state = "cow_s"
 	suit_sprites = 'icons/mob/taursuits_cow_vr.dmi'
 	icon_sprite_tag = "cow"
@@ -296,7 +296,7 @@
 	msg_prey_grab_fail = "%owner steps down and squishes you with their hoof, forcing you down to the ground!"
 
 /datum/sprite_accessory/tail/taur/deer
-	name = "Deer dual-color (Taur)"
+	name = "Тавр: Олень (два цвета)"
 	icon_state = "deer_s"
 	extra_overlay = "deer_markings"
 	suit_sprites = 'icons/mob/taursuits_deer_vr.dmi'
@@ -318,25 +318,25 @@
 	msg_prey_grab_fail = "%owner steps down and squishes you with their hoof, forcing you down to the ground!"
 
 /datum/sprite_accessory/tail/taur/lizard
-	name = "Lizard (Taur)"
+	name = "Тавр: Ящер"
 	icon_state = "lizard_s"
 	suit_sprites = 'icons/mob/taursuits_lizard_vr.dmi'
 	icon_sprite_tag = "lizard"
 
 /datum/sprite_accessory/tail/taur/lizard/lizard_2c
-	name = "Lizard dual-color (Taur)"
+	name = "Тавр: Ящер (два цвета)"
 	icon_state = "lizard_s"
 	extra_overlay = "lizard_markings"
 	//icon_sprite_tag = "lizard2c"
 
 /datum/sprite_accessory/tail/taur/lizard/synthlizard
-	name = "SynthLizard dual-color (Taur)"
+	name = "Тавр: Ящер-синт (два цвета)"
 	icon_state = "synthlizard_s"
 	extra_overlay = "synthlizard_markings"
 	//icon_sprite_tag = "synthlizard"
 
 /datum/sprite_accessory/tail/taur/spider
-	name = "Spider (Taur)"
+	name = "Тавр: Паук"
 	icon_state = "spider_s"
 	suit_sprites = 'icons/mob/taursuits_spider_vr.dmi'
 	icon_sprite_tag = "spider"
@@ -357,7 +357,7 @@
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
 
 /datum/sprite_accessory/tail/taur/tents
-	name = "Tentacles (Taur)"
+	name = "Тавр: Щупальца"
 	icon_state = "tent_s"
 	icon_sprite_tag = "tentacle"
 	can_ride = 0
@@ -384,43 +384,43 @@
 	msg_prey_grab_fail = "%owner steps down onto you with one of their tentacles, squishing you and forcing you onto the ground!"
 
 /datum/sprite_accessory/tail/taur/feline
-	name = "Feline (Taur)"
+	name = "Тавр: Кот"
 	icon_state = "feline_s"
 	suit_sprites = 'icons/mob/taursuits_feline_vr.dmi'
 	icon_sprite_tag = "feline"
 
 //TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/fatfeline
-	name = "Fat Feline (Taur)"
+	name = "Тавр: Кот толстый"
 	icon_state = "fatfeline_s"
 	//icon_sprite_tag = "fatfeline"
 
 /datum/sprite_accessory/tail/taur/fatfeline_wag
-	name = "Fat Feline (Taur) (vwag)"
+	name = "Тавр: Кот толстый виляющий"
 	icon_state = "fatfeline_s"
 	ani_state = "fatfeline_w"
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c
-	name = "Feline dual-color (Taur)"
+	name = "Тавр: Кот (два цвета)"
 	icon_state = "feline_s"
 	extra_overlay = "feline_markings"
 	//icon_sprite_tag = "feline2c"
 
 //TFF 22/11/19 - CHOMPStation port of fat taur sprites
 /datum/sprite_accessory/tail/taur/feline/fatfeline_2c
-	name = "Fat Feline dual-color (Taur)"
+	name = "Тавр: Кот толстый (два цвета)"
 	icon_state = "fatfeline_s"
 	extra_overlay = "fatfeline_markings"
 	//icon_sprite_tag = "fatfeline2c"
 
 /datum/sprite_accessory/tail/taur/feline/synthfeline
-	name = "SynthFeline dual-color (Taur)"
+	name = "Тавр: Кот-синт (два цвета)"
 	icon_state = "synthfeline_s"
 	extra_overlay = "synthfeline_markings"
 	//icon_sprite_tag = "synthfeline"
 
 /datum/sprite_accessory/tail/taur/slug
-	name = "Slug (Taur)"
+	name = "Тавр: Слизняк"
 	icon_state = "slug_s"
 	suit_sprites = 'icons/mob/taursuits_slug_vr.dmi'
 	icon_sprite_tag = "slug"
@@ -453,12 +453,12 @@
 	msg_owner_stepunder = "%owner bounds over your tail."
 
 /datum/sprite_accessory/tail/taur/frog
-	name = "Frog (Taur)"
+	name = "Тавр: Лягушка"
 	icon_state = "frog_s"
 	icon_sprite_tag = "frog"
 
 /datum/sprite_accessory/tail/taur/thicktentacles
-	name = "Thick Tentacles (Taur)"
+	name = "Тавр: Щупальца толстые"
 	icon_state = "tentacle_s"
 	can_ride = 0
 	icon_sprite_tag = "thick_tentacles"
@@ -485,21 +485,21 @@
 	msg_prey_grab_fail = "%owner steps down onto you with one of their tentacles, squishing you and forcing you onto the ground!"
 
 /datum/sprite_accessory/tail/taur/drake //Enabling on request, no suit compatibility but then again see 2 above.
-	name = "Drake (Taur)"
+	name = "Тавр: Дракон"
 	icon_state = "drake_s"
 	extra_overlay = "drake_markings"
 	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'
 	icon_sprite_tag = "drake"
 
 /datum/sprite_accessory/tail/taur/otie
-	name = "Otie (Taur)"
+	name = "Тавр: Оти"
 	icon_state = "otie_s"
 	extra_overlay = "otie_markings"
 	suit_sprites = 'icons/mob/taursuits_otie_vr.dmi'
 	icon_sprite_tag = "otie"
 
 /datum/sprite_accessory/tail/taur/alraune/alraune_2c
-	name = "Alraune (dual color)"
+	name = "Тавр: Алрауне (два цвета)"
 	icon_state = "alraunecolor_s"
 	ani_state = "alraunecolor_closed_s"
 	ckeys_allowed = null
@@ -510,7 +510,7 @@
 	icon_sprite_tag = "alraune"
 
 /datum/sprite_accessory/tail/taur/wasp
-	name = "Wasp (dual color)"
+	name = "Тавр: Оса"
 	icon_state = "wasp_s"
 	extra_overlay = "wasp_markings"
 	clip_mask_state = "taur_clip_mask_wasp"
@@ -532,7 +532,7 @@
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
 
 /datum/sprite_accessory/tail/taur/mermaid
-	name = "Mermaid (Taur)"
+	name = "Тавр: Русалка"
 	icon_state = "mermaid_s"
 	can_ride = 0
 	icon_sprite_tag = "mermaid"
@@ -565,7 +565,7 @@
 	msg_owner_stepunder = "%owner bounds over your tail."
 
 /datum/sprite_accessory/tail/taur/shadekin_tail
-	name = "Shadekin Tail"
+	name = "Шейдкин: Хвост"
 	icon_state = "shadekin_s"
 	can_ride = 0
 	hide_body_parts = null
@@ -575,11 +575,11 @@
 	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 /datum/sprite_accessory/tail/taur/shadekin_tail/shadekin_tail_2c
-	name = "Shadekin Tail (dual color)"
+	name = "Шейдкин: Хвост (два цвета)"
 	extra_overlay = "shadekin_markings"
 
 /datum/sprite_accessory/tail/taur/shadekin_tail/shadekin_tail_long
-	name = "Shadekin Long Tail"
+	name = "Шейдкин: Хвост длинный"
 	icon_state = "shadekin_long_s"
 
 // Special snowflake tails/taurhalves

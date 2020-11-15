@@ -209,8 +209,8 @@
 
 //For general use
 /obj/item/clothing/suit/storage/fluff/fedcoat
-	name = "Federation Uniform Jacket (Red)"
-	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Set phasers to awesome."
+	name = "красная куртка Объединенной Федерации"
+	desc = "Часть униформы Объединённой Федерации. Звёздный флот по-прежнему использует эту униформу, и у неё есть вариации. Фазеры выставлены на крутость."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "fedcoat"
@@ -236,7 +236,7 @@
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/verb/toggle()
-	set name = "Toggle coat buttons"
+	set name = "Пуговицы Куртки"
 	set category = "Object"
 	set src in usr
 
@@ -248,25 +248,25 @@
 			icon_state = "[initial(icon_state)]_open"
 			item_state = "[initial(item_state)]_open"
 			unbuttoned = 1
-			to_chat(usr, "You unbutton the coat.")
+			to_chat(usr, "Вы расстёгиваете куртку.")
 		if(1)
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			unbuttoned = 0
-			to_chat(usr, "You button up the coat.")
+			to_chat(usr, "Вы застёгиваете куртку.")
 	usr.update_inv_wear_suit()
 
 	//Variants
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedblue
-	name = "Federation Uniform Jacket (Blue)"
-	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it. Wearing this may make you feel all scientific."
+	name = "синяя куртка Объединенной Федерации"
+	desc = "Часть униформы Объединённой Федерации. Звёздный флот по-прежнему использует эту униформу, и у неё есть вариации. В ней Вы чувствуете себя гораздо умнее."
 	icon_state = "fedblue"
 	item_state = "fedblue"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
 
 /obj/item/clothing/suit/storage/fluff/fedcoat/fedeng
-	name = "Federation Uniform Jacket (Yellow)"
-	desc = "A uniform jacket from the United Federation. Starfleet still uses this uniform and there are variations of it.Wearing it may make you feel like checking a warp core, whatever that is."
+	name = "желтая куртка Объединенной Федерации"
+	desc = "Часть униформы Объединённой Федерации. Звёздный флот по-прежнему использует эту униформу, и у неё есть вариации. В ней Вам очень хочется перепроверить ядро искажения... что бы это ни было."
 	icon_state = "fedeng"
 	item_state = "fedeng"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 10, bomb = 0, bio = 30, rad = 35)
@@ -807,8 +807,8 @@
 
 //Viveret:Keturah
 /obj/item/clothing/under/dress/maid
-	name = "Maid Outfit"
-	desc = "A french maid outfit made ironically in Gaia's version of the far east."
+	name = "наряд горничной"
+	desc = "Наряд французской горничной по подобию гайянских."
 
 //JoanRisu:Joan Risu
 /obj/item/clothing/head/helmet/space/fluff/joan
@@ -896,48 +896,48 @@
 	item_state = ""
 
 /obj/item/clothing/under/rank/khi/cmd //Command version
-	name = "KHI command suit"
-	desc = "Kitsuhana Heavy Industries uniform. An extra-comfortable command one, at that. I guess if you DON'T want anarchy for some reason."
+	name = "костюм командования KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. Очень удобная униформа командования, даже. На случай, если по какой-то причине Вы не стремитесь к анархии."
 	icon_state = "khi_uniform_cmd_i"
 	item_state = "khi_uniform_cmd"
 	worn_state = "khi_uniform_cmd"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/sec //Security version
-	name = "KHI security suit"
-	desc = "Kitsuhana Heavy Industries uniform. This one has angry red security stripes. Keepin' the peace in style."
+	name = "униформа службы безопасности KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. На этой яростные красные полосы службы безопасности. Стильно, правопорядочно."
 	icon_state = "khi_uniform_sec_i"
 	item_state = "khi_uniform_sec"
 	worn_state = "khi_uniform_sec"
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/med //Medical version
-	name = "KHI medical suit"
-	desc = "Kitsuhana Heavy Industries uniform. The medical version. Why not just get a new body, anyway?"
+	name = "костюм врача KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. Медицинская вариация. Почему бы и вовсе не приобрести новое тело?"
 	icon_state = "khi_uniform_med_i"
 	item_state = "khi_uniform_med"
 	worn_state = "khi_uniform_med"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
 
 /obj/item/clothing/under/rank/khi/eng //Engineering version
-	name = "KHI engineering suit"
-	desc = "Kitsuhana Heavy Industries uniform. One fit for an engineer, by the looks of it. Building the future, one disaster at a time."
+	name = "костюм инженера KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. На инженера, судя по виду. Выстраиваем будущее, катастрофа за катастрофой."
 	icon_state = "khi_uniform_eng_i"
 	item_state = "khi_uniform_eng"
 	worn_state = "khi_uniform_eng"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 10)
 
 /obj/item/clothing/under/rank/khi/sci //Science version
-	name = "KHI science suit"
-	desc = "Kitsuhana Heavy Industries uniform. For performing science in, based on the color! Only SCIENCE can save us now."
+	name = "костюм ученого KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. Судя по цвету, для проведения всяких научных штук! Нас теперь спасёт только сила науки."
 	icon_state = "khi_uniform_sci_i"
 	item_state = "khi_uniform_sci"
 	worn_state = "khi_uniform_sci"
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
 
 /obj/item/clothing/under/rank/khi/fluff/aronai //Aro fluff version
-	name = "KHI meditech suit"
-	desc = "Kitsuhana Heavy Industries uniform. This one has the colors of a resleeving or mnemonics engineer. It has 'Aronai' written inside the top."
+	name = "костюм биоинженера KHI"
+	desc = "Униформа Kitsuhana Heavy Industries. На этом костюме цвета инженера ресливинга. На внутренней стороне верха написано 'Aronai'."
 	icon_state = "khi_uniform_aro_i"
 	item_state = "khi_uniform_aro"
 	worn_state = "khi_uniform_aro"
@@ -1016,8 +1016,8 @@
 
 
 /obj/item/clothing/shoes/black/cuffs
-	name = "gilded leg wraps"
-	desc = "Ankle coverings for digitigrade creatures. Gilded!"
+	name = "позолоченные обмотки"
+	desc = "Обмотки для лодышек пальцеходящих существ. Позолоченные!"
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "gildedcuffs"
 
@@ -1027,13 +1027,13 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/shoes/black/cuffs/red
-	name = "red leg wraps"
-	desc = "Ankle coverings for digitigrade creatures. Red!"
+	name = "красные обмотки"
+	desc = "Обмотки для лодышек пальцеходящих существ. Красные!"
 	icon_state = "redcuffs"
 
 /obj/item/clothing/shoes/black/cuffs/blue
-	name = "blue leg wraps"
-	desc = "Ankle coverings for digitigrade creatures. Blue!"
+	name = "синие обмотки"
+	desc = "Обмотки для лодышек пальцеходящих существ. Синие!"
 	icon_state = "bluecuffs"
 
 //bwoincognito:Octavious Ward
@@ -1179,22 +1179,22 @@ Departamental Swimsuits, for general use
 
 //TOS
 /obj/item/clothing/under/rank/trek/command
-	name = "Command Uniform"
-	desc = "The uniform worn by command officers in the mid 2260s."
+	name = "униформа управляющего"
+	desc = "Униформа операционных офицеров в середине 2260-ых."
 	icon_state = "trek_command"
 	item_state = "trek_command"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // Considering only staff heads get to pick it
 
 /obj/item/clothing/under/rank/trek/engsec
-	name = "Operations Uniform"
-	desc = "The uniform worn by operations officers of the mid 2260s. You feel strangely vulnerable just seeing this..."
+	name = "униформа оператора"
+	desc = "Униформа операционных офицеров в середине 2260-ых. На удивление внушающий вид..."
 	icon_state = "trek_engsec"
 	item_state = "trek_engsec"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // since they're shared between jobs and kinda moot.
 
 /obj/item/clothing/under/rank/trek/medsci
-	name = "MedSci Uniform"
-	desc = "The uniform worn by medsci officers in the mid 2260s."
+	name = "научно-медицинская униформа"
+	desc = "Униформа научно-медицинских офицеров в середине 2260-ых."
 	icon_state = "trek_medsci"
 	item_state = "trek_medsci"
 	permeability_coefficient = 0.50
@@ -1202,57 +1202,57 @@ Departamental Swimsuits, for general use
 
 //TNG
 /obj/item/clothing/under/rank/trek/command/next
-	desc = "The uniform worn by command officers. This one's from the mid 2360s."
+	desc = "Униформа управляющих офицеров в середине 2360-ых."
 	icon_state = "trek_next_command"
 	item_state = "trek_next_command"
 
 /obj/item/clothing/under/rank/trek/engsec/next
-	desc = "The uniform worn by operation officers. This one's from the mid 2360s."
+	desc = "Униформа операционных офицеров в середине 2360-ых."
 	icon_state = "trek_next_engsec"
 	item_state = "trek_next_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/next
-	desc = "The uniform worn by medsci officers. This one's from the mid 2360s."
+	desc = "Униформа научно-медицинских офицеров в середине 2360-ых."
 	icon_state = "trek_next_medsci"
 	item_state = "trek_next_medsci"
 
 //ENT
 /obj/item/clothing/under/rank/trek/command/ent
-	desc = "The uniform worn by command officers of the 2140s."
+	desc = "Униформа управляющих офицеров в 2140-ых."
 	icon_state = "trek_ent_command"
 	item_state = "trek_ent_command"
 
 /obj/item/clothing/under/rank/trek/engsec/ent
-	desc = "The uniform worn by operations officers of the 2140s."
+	desc = "Униформа операционных офицеров в 2140-ых."
 	icon_state = "trek_ent_engsec"
 	item_state = "trek_ent_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/ent
-	desc = "The uniform worn by medsci officers of the 2140s."
+	desc = "Униформа научно-медицинских офицеров в 2140-ых."
 	icon_state = "trek_ent_medsci"
 	item_state = "trek_ent_medsci"
 
 //VOY
 /obj/item/clothing/under/rank/trek/command/voy
-	desc = "The uniform worn by command officers of the 2370s."
+	desc = "Униформа управляющих офицеров в 2370-ых."
 	icon_state = "trek_voy_command"
 	item_state = "trek_voy_command"
 
 /obj/item/clothing/under/rank/trek/engsec/voy
-	desc = "The uniform worn by operations officers of the 2370s."
+	desc = "Униформа операционных офицеров в 2370-ых."
 	icon_state = "trek_voy_engsec"
 	item_state = "trek_voy_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/voy
-	desc = "The uniform worn by medsci officers of the 2370s."
+	desc = "Униформа научно-медицинских офицеров в 2370-ых."
 	icon_state = "trek_voy_medsci"
 	item_state = "trek_voy_medsci"
 
 //DS9
 
 /obj/item/clothing/suit/storage/trek/ds9
-	name = "Padded Overcoat"
-	desc = "The overcoat worn by all officers of the 2380s."
+	name = "обитая шинель"
+	desc = "Шинель, которую носили офицеры в 2380-ых."
 	icon_state = "trek_ds9_coat"
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "trek_ds9_coat_mob"
@@ -1278,17 +1278,17 @@ Departamental Swimsuits, for general use
 
 
 /obj/item/clothing/under/rank/trek/command/ds9
-	desc = "The uniform worn by command officers of the 2380s."
+	desc = "Униформа управляющих офицеров в 2380-ых."
 	icon_state = "trek_command"
 	item_state = "trek_ds9_command"
 
 /obj/item/clothing/under/rank/trek/engsec/ds9
-	desc = "The uniform worn by operations officers of the 2380s."
+	desc = "Униформа операционных офицеров в 2380-ых."
 	icon_state = "trek_engsec"
 	item_state = "trek_ds9_engsec"
 
 /obj/item/clothing/under/rank/trek/medsci/ds9
-	desc = "The uniform undershit worn by medsci officers of the 2380s."
+	desc = "Униформа научно-медицинских офицеров в 2380-ых."
 	icon_state = "trek_medsci"
 	item_state = "trek_ds9_medsci"
 
@@ -1402,8 +1402,8 @@ Departamental Swimsuits, for general use
 
 //Jackets For General Use. Sprited by Joji.
 /obj/item/clothing/suit/storage/fluff/jacket //Not the toggle version since it uses custom toggle code to update the on-mob icon.
-	name = "Field Jacket"
-	desc = "A standard Earth military field jacket made of comfortable cotton."
+	name = "полевая куртка"
+	desc = "Военная полевая куртка с Земли, изготовленная из приятного хлопка."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "fjacket"
@@ -1413,8 +1413,8 @@ Departamental Swimsuits, for general use
 	var/unbuttoned = 0
 
 /obj/item/clothing/suit/storage/fluff/jacket/verb/toggle()
-	set name = "Toggle coat buttons"
-	set category = "Object"
+	set name = "Пуговицы Куртки"
+	set category = "Объект"
 	set src in usr
 
 	if(!usr.canmove || usr.stat || usr.restrained())
@@ -1425,20 +1425,20 @@ Departamental Swimsuits, for general use
 			icon_state = "[initial(icon_state)]_open"
 			item_state = "[initial(item_state)]_open"
 			unbuttoned = 1
-			to_chat(usr, "You unbutton the coat.")
+			to_chat(usr, "Вы расстегиваете куртку.")
 		if(1)
 			icon_state = "[initial(icon_state)]"
 			item_state = "[initial(item_state)]"
 			unbuttoned = 0
-			to_chat(usr, "You button up the coat.")
+			to_chat(usr, "Вы застегиваете куртку.")
 	usr.update_inv_wear_suit()
 
 /obj/item/clothing/suit/storage/fluff/jacket/field //Just here so it can be seen and easily recognized under /spawn.
-	name = "Field Jacket"
+	name = "полевая куртка"
 
 /obj/item/clothing/suit/storage/fluff/jacket/air_cavalry
-	name = "Air Cavalry Jacket"
-	desc = "A jacket worn by the 1st Cavalry Division on Earth."
+	name = "куртка Воздушной Кавалерии"
+	desc = "Куртка первой дивизии Кавалерии на Земле."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "acjacket"
@@ -1447,8 +1447,8 @@ Departamental Swimsuits, for general use
 	item_state = "acjacket_mob"
 
 /obj/item/clothing/suit/storage/fluff/jacket/air_force
-	name = "Air Force Jacket"
-	desc = "A jacket worn by the Earth Air Force."
+	name = "куртка Воздушных Сил"
+	desc = "Куртка Воздушных Сил Земли."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "afjacket"
@@ -1457,8 +1457,8 @@ Departamental Swimsuits, for general use
 	item_state = "afjacket_mob"
 
 /obj/item/clothing/suit/storage/fluff/jacket/navy
-	name = "Navy Jacket"
-	desc = "A jacket worn by the Earth's Navy. It's adorned with reflective straps."
+	name = "куртка ВМС"
+	desc = "Куртка Военных Морских Сил Земли. Украшена светоотражающими полосами."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "navyjacket"
@@ -1467,8 +1467,8 @@ Departamental Swimsuits, for general use
 	item_state = "navyjacket_mob"
 
 /obj/item/clothing/suit/storage/fluff/jacket/special_forces
-	name = "Special Forces Jacket"
-	desc = "A durable jacket worn by the Earth's special forces."
+	name = "куртка спецназа"
+	desc = "Надежная куртка войск специального назначения на Земле."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "sfjacket"
@@ -1478,8 +1478,8 @@ Departamental Swimsuits, for general use
 
 //General use
 /obj/item/clothing/head/fluff/headbando
-	name = "basic headband"
-	desc = "Perfect for martial artists, sweaty rogue operators, and tunnel gangsters."
+	name = "повязка"
+	desc = "Подходит мастерам боевых искусств, а также гангстерам."
 
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "headbando"
@@ -1488,24 +1488,24 @@ Departamental Swimsuits, for general use
 	item_state = "headbando"
 
 /obj/item/clothing/suit/storage/fluff/gntop
-	name = "GN crop jacket"
-	desc = "A nifty little jacket. At least it keeps your shoulders warm."
+	name = "укороченная куртка GN"
+	desc = "Приятная курточка. Согревает Ваши плечи."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "gntop"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "gntop"
 
 /obj/item/clothing/under/fluff/gnshorts
-	name = "GN shorts"
-	desc = "Stylish white shorts with pockets, stripes, and even a belt."
+	name = "шорты GN"
+	desc = "Стильные белые шорты с карманами, полосками и даже ремнём."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_state = "gnshorts"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "gnshorts"
 
 /obj/item/clothing/under/fluff/v_nanovest
-	name = "Varmacorp nanovest"
-	desc = "A nifty little vest optimized for nanite contact."
+	name = "наножилет Varmacorp"
+	desc = "Небольшой жилет, предназначенный для контакта с нанитами."
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "nanovest"
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1513,8 +1513,8 @@ Departamental Swimsuits, for general use
 
 //General use
 /obj/item/clothing/suit/storage/fluff/loincloth
-	name = "Loincloth"
-	desc = "A primitive piece of oak-brown clothing wrapped firmly around the waist. A few bones line the edges. Comes with a primitive outfit to boot."
+	name = "набедренная повязка"
+	desc = "Примитивный кусок ткани дубового цвета, завязанный вокруг талии и по бокам украшенный костями. К нему прилагается примитивная верхняя одежда.."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "loincloth"
@@ -1691,8 +1691,8 @@ Departamental Swimsuits, for general use
 
 //KotetsuRedwood:Latex Maid Dresses, for everyone to 'enjoy'. :3c
 /obj/item/clothing/under/fluff/latexmaid
-	name = "latex maid dress"
-	desc = "Squeak! A shiny outfit for cleaning, made by people with dirty minds."
+	name = "латексная униформа горничной"
+	desc = "Скрипучая блестящая униформа для уборки, придуманная людьми с грязными помыслам."
 
 	item_icons = list(slot_w_uniform_str = 'icons/vore/custom_clothes_vr.dmi')
 	icon = 'icons/vore/custom_clothes_vr.dmi'
@@ -1700,15 +1700,15 @@ Departamental Swimsuits, for general use
 	item_state = "latexmaid_mob"
 
 	sprite_sheets = list(
-			"Teshari" = 'icons/vore/custom_clothes_tesh_vr.dmi'
+			"Тешари" = 'icons/vore/custom_clothes_tesh_vr.dmi'
 			)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 //Aztectornado:Tron inspired Siren outfit
 /obj/item/clothing/under/fluff/siren
-	name = "Siren Jumpsuit"
-	desc = "An advanced jumpsuit with inlaid neon highlighting, and a port on the back."
-	description_fluff = "Unlike other competitor suits, the Ward Takahashi Siren jumpsuit features a whole host of extra sensors for augmented reality use, and features a non-invasive neural sensor/stimulator for a fully immersive experience."
+	name = "комбинезон модели Siren"
+	desc = "Технологичный комбинезон со встроенной неоновой подсветкой и портом на спине."
+	description_fluff = "Этот комбинезон модели Siren фирмы Ward Takahashi обладает множеством датчиков для использования дополненной реальности, а также безопасный нейростимулятор для более полного погружения."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1718,9 +1718,9 @@ Departamental Swimsuits, for general use
 	rolled_sleeves = 0
 
 /obj/item/clothing/gloves/fluff/siren
-	name = "Siren Gloves"
-	desc = "A set of white and neon blue gloves."
-	description_fluff = "Like its jumpsuit companion, the Ward Takahashi Siren gloves feature multiple sensors for usage in augmented reality. The gloves operate fine even without a paired jumpsuit, offering optimal AR menu control and haptic feedback."
+	name = "перчатки модели Siren"
+	desc = "Пара бело-синих перчаток с неоновой подсветкой."
+	description_fluff = "Как и комбинезон данной серии, перчатки модели Siren фирмы Ward Takahashi обладают множеством датчиков для использования дополненной реальности. Перчатки работают отдельно от комбинезона и предоставляют управление AR и передачу тактильных ощущений."
 
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -1728,9 +1728,9 @@ Departamental Swimsuits, for general use
 	item_state = "tronsiren_gloves_mob"
 
 /obj/item/clothing/shoes/boots/fluff/siren
-	name = "Siren Boots"
-	desc = "A set of white boots with neon lighting."
-	description_fluff = "Unlike the rest of the Ward Takahashi Siren lineup, the boots are simply boots. However, they go great with the rest of the outfit, and are quite comfortable."
+	name = "ботинки модели Siren"
+	desc = "Пара бело-синих ботинок с неоновой подсветкой."
+	description_fluff = "В отличие от остальной одежды серии Siren фирмы Ward Takahashi, это всего лишь обыкновенные ботинки. Однако они весьма хорошо подходят остальным элементам одежды и довольно удобные."
 
 	icon_state = "tronsiren_shoes"
 	icon = 'icons/vore/custom_clothes_vr.dmi'

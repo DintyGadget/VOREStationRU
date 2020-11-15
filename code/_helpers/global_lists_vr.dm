@@ -11,7 +11,7 @@ var/global/list/positive_traits = list()	// Positive custom species traits, inde
 var/global/list/traits_costs = list()		// Just path = cost list, saves time in char setup
 var/global/list/all_traits = list()			// All of 'em at once (same instances)
 
-var/global/list/sensorpreflist = list("Выкл", "Двоичный", "Жизненно важные органы", "Отслеживание", "Нет предпочтений")	//TFF 5/8/19 - Suit Sensors global list
+var/global/list/sensorpreflist = list("Отключен", "Бинарный датчик", "Датчики органов", "Маячок отслеживания", "Нет предпочтения")	//TFF 5/8/19 - Suit Sensors global list
 
 var/global/list/custom_species_bases = list() // Species that can be used for a Custom Species icon base
 
@@ -105,30 +105,30 @@ var/global/list/fancy_release_sounds = list(
 		)
 
 var/global/list/global_vore_egg_types = list(
-		"Unathi" 		= UNATHI_EGG,
-		"Tajaran" 		= TAJARAN_EGG,
-		"Akula" 		= AKULA_EGG,
-		"Skrell" 		= SKRELL_EGG,
-		"Nevrean"		= NEVREAN_EGG,
-		"Sergal" 		= SERGAL_EGG,
-		"Human"			= HUMAN_EGG,
-		"Slime"			= SLIME_EGG,
-		"Egg"			= EGG_EGG,
-		"Xenochimera" 		= XENOCHIMERA_EGG,
-		"Xenomorph"		= XENOMORPH_EGG)
+		"Унати" 		= UNATHI_EGG,
+		"Таджара" 		= TAJARAN_EGG,
+		"Акула" 		= AKULA_EGG,
+		"Скрелл" 		= SKRELL_EGG,
+		"Невреан"		= NEVREAN_EGG,
+		"Сергал" 		= SERGAL_EGG,
+		"Человек"			= HUMAN_EGG,
+		"Слизень"			= SLIME_EGG,
+		"Яйцо"			= EGG_EGG,
+		"Ксенохимера" 		= XENOCHIMERA_EGG,
+		"Ксеноморф"		= XENOMORPH_EGG)
 
 var/global/list/tf_vore_egg_types = list(
-	"Unathi" 		= /obj/structure/closet/secure_closet/egg/unathi,
-	"Tajara" 		= /obj/structure/closet/secure_closet/egg/tajaran,
-	"Akula" 		= /obj/structure/closet/secure_closet/egg/shark,
-	"Skrell" 		= /obj/structure/closet/secure_closet/egg/skrell,
-	"Sergal"		= /obj/structure/closet/secure_closet/egg/sergal,
-	"Nevrean"		= /obj/structure/closet/secure_closet/egg/nevrean,
-	"Human"			= /obj/structure/closet/secure_closet/egg/human,
-	"Slime"			= /obj/structure/closet/secure_closet/egg/slime,
-	"Egg"			= /obj/structure/closet/secure_closet/egg,
-	"Xenochimera"		= /obj/structure/closet/secure_closet/egg/scree,
-	"Xenomorph"		= /obj/structure/closet/secure_closet/egg/xenomorph)
+	"Унати" 		= /obj/structure/closet/secure_closet/egg/unathi,
+	"Таджара" 		= /obj/structure/closet/secure_closet/egg/tajaran,
+	"Акула" 		= /obj/structure/closet/secure_closet/egg/shark,
+	"Скрелл" 		= /obj/structure/closet/secure_closet/egg/skrell,
+	"Сергал"		= /obj/structure/closet/secure_closet/egg/sergal,
+	"Невреан"		= /obj/structure/closet/secure_closet/egg/nevrean,
+	"Человек"			= /obj/structure/closet/secure_closet/egg/human,
+	"Слизень"			= /obj/structure/closet/secure_closet/egg/slime,
+	"Яйцо"			= /obj/structure/closet/secure_closet/egg,
+	"Ксенохимера"		= /obj/structure/closet/secure_closet/egg/scree,
+	"Ксеноморф"		= /obj/structure/closet/secure_closet/egg/xenomorph)
 
 var/global/list/edible_trash = list(/obj/item/broken_device,
 				/obj/item/clothing/accessory/collar,	//TFF 10/7/19 - add option to nom collars,

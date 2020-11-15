@@ -1,6 +1,6 @@
 /obj/item/weapon/pack/spaceball
-	name = "spaceball booster pack"
-	desc = "Officially licensed to take your money."
+	name = "комплект карточек Спейсбола"
+	desc = "Лицензия на взымание Ваших денег."
 	icon_state = "card_pack_spaceball"
 	parentdeck = "spaceball"
 
@@ -18,7 +18,7 @@
 			var/language_type = pick(/datum/language/human,/datum/language/diona_local,/datum/language/tajaran,/datum/language/unathi)
 			var/datum/language/L = new language_type()
 			var/team = pick("Brickburn Galaxy Trekers","Mars Rovers", "Qerrbalak Saints", "Moghes Rockets", "Meralar Lightning", "[using_map.starsys_name] Vixens", "Euphoric-Earth Alligators")
-			P.name = "[L.get_random_name(pick(MALE,FEMALE))], [year - rand(0,50)] [team]"
+			P.name = "[L.get_random_name(pick(MALE,FEMALE))], [year - rand(0,50)] из команды [team]"
 			P.card_icon = "spaceball_standard"
 		P.back_icon = "card_back_spaceball"
 

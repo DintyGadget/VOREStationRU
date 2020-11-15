@@ -136,9 +136,9 @@ var/global/list/alphabet_uppercase = list("A","B","C","D","E","F","G","H","I","J
 
 // Used by robots and robot preferences.
 var/list/robot_module_types = list(
-	"Стандарт", "Инженер", "Хирург",  "Медик",
-	"Шахтер",    "Уборщик",     "Сервис",      "Клерк", "Охрана",
-	"Ученый"
+	"Стандарт", "Инженер", "Хирург",  "Врач",
+	"Шахтёр",    "Уборщик",     "Сервис",      "Клерк", "Охрана",
+	"Учёный"
 )
 
 // Some scary sounds.
@@ -168,7 +168,7 @@ var/max_explosion_range = 14
 // Announcer intercom, because too much stuff creates an intercom for one message then hard del()s it.
 var/global/obj/item/device/radio/intercom/omni/global_announcer = new /obj/item/device/radio/intercom/omni(null)
 
-var/list/station_departments = list("Command", "Medical", "Engineering", "Science", "Security", "Cargo", "Exploration", "Civilian") //VOREStation Edit
+var/list/station_departments = list("Командование", "Медицинский отдел", "Инженерный отдел", "Научный отдел", "Служба безопасности", "Отдел снабжения", "Отдел искателей", "Гражданские") //VOREStation Edit
 
 //Icons for in-game HUD glasses. Why don't we just share these a little bit?
 var/static/icon/ingame_hud = icon('icons/mob/hud.dmi')

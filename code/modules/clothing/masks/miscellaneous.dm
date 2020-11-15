@@ -1,6 +1,6 @@
 /obj/item/clothing/mask/muzzle
-	name = "muzzle"
-	desc = "To stop that awful noise."
+	name = "кляп"
+	desc = "Чтобы заглушать надоедливые звуки."
 	icon_state = "muzzle"
 	body_parts_covered = FACE
 	w_class = ITEMSIZE_SMALL
@@ -8,8 +8,8 @@
 	voicechange = 1
 
 /obj/item/clothing/mask/muzzle/tape
-	name = "length of tape"
-	desc = "It's a robust DIY muzzle!"
+	name = "кусочек скотча"
+	desc = "Надежный самодельный кляп!"
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "tape_cross"
 	item_state_slots = list(slot_r_hand_str = null, slot_l_hand_str = null)
@@ -17,8 +17,8 @@
 
 /obj/item/clothing/mask/muzzle/New()
     ..()
-    say_messages = list("Mmfph!", "Mmmf mrrfff!", "Mmmf mnnf!")
-    say_verbs = list("mumbles", "says")
+    say_messages = list("Ммф!", "Мфф мррфффф!", "Ммф мнффф!")
+    say_verbs = list("бормочет", "говорит")
 
 // Clumsy folks can't take the mask off themselves.
 /obj/item/clothing/mask/muzzle/attack_hand(mob/living/user as mob)
@@ -27,8 +27,8 @@
 	..()
 
 /obj/item/clothing/mask/surgical
-	name = "sterile mask"
-	desc = "A sterile mask designed to help prevent the spread of diseases."
+	name = "стерильная маска"
+	desc = "Стерильная маска, используемая для препятствия распространения заболеваний."
 	icon_state = "sterile"
 	item_state_slots = list(slot_r_hand_str = "sterile", slot_l_hand_str = "sterile")
 	w_class = ITEMSIZE_SMALL
@@ -47,32 +47,32 @@
 			body_parts_covered = body_parts_covered & ~FACE
 			armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 			icon_state = "steriledown"
-			to_chat(usr, "You pull the mask below your chin.")
+			to_chat(usr, "Вы опускаете маску на подбородок.")
 		else
 			gas_transfer_coefficient = initial(gas_transfer_coefficient)
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
 			armor = initial(armor)
-			to_chat(usr, "You pull the mask up to cover your face.")
+			to_chat(usr, "Вы надеваете маску на лицо.")
 		update_clothing_icon()
 
 /obj/item/clothing/mask/surgical/verb/toggle()
-	set category = "Object"
-	set name = "Adjust mask"
+	set category = "Объект"
+	set name = "Отрегулировать Маску"
 	set src in usr
 
 	adjust_mask(usr)
 
 /obj/item/clothing/mask/fakemoustache
-	name = "fake moustache"
-	desc = "Warning: moustache is fake."
+	name = "поддельные усы"
+	desc = "Внимание: усы поддельные."
 	icon_state = "fake-moustache"
 	flags_inv = HIDEFACE
 	body_parts_covered = 0
 
 /obj/item/clothing/mask/snorkel
-	name = "Snorkel"
-	desc = "For the Swimming Savant."
+	name = "плавательная маска"
+	desc = "Для ценителей плаванья."
 	icon_state = "snorkel"
 	flags_inv = HIDEFACE
 	body_parts_covered = 0
@@ -80,8 +80,8 @@
 //scarves (fit in in mask slot)
 //None of these actually have on-mob sprites...
 /obj/item/clothing/mask/bluescarf
-	name = "blue neck scarf"
-	desc = "A blue neck scarf."
+	name = "синий шарф"
+	desc = "Синий шейный платок."
 	icon_state = "blueneckscarf"
 	body_parts_covered = FACE
 	item_flags = FLEXIBLEMATERIAL
@@ -89,8 +89,8 @@
 	gas_transfer_coefficient = 0.90
 
 /obj/item/clothing/mask/redscarf
-	name = "red scarf"
-	desc = "A red and white checkered neck scarf."
+	name = "красный шарф"
+	desc = "Красный с белым шейный платок."
 	icon_state = "redwhite_scarf"
 	body_parts_covered = FACE
 	item_flags = FLEXIBLEMATERIAL
@@ -98,8 +98,8 @@
 	gas_transfer_coefficient = 0.90
 
 /obj/item/clothing/mask/greenscarf
-	name = "green scarf"
-	desc = "A green neck scarf."
+	name = "зеленый шарф"
+	desc = "Зеленый шейный платок."
 	icon_state = "green_scarf"
 	body_parts_covered = FACE
 	item_flags = FLEXIBLEMATERIAL
@@ -107,8 +107,8 @@
 	gas_transfer_coefficient = 0.90
 
 /obj/item/clothing/mask/ninjascarf
-	name = "ninja scarf"
-	desc = "A stealthy, dark scarf."
+	name = "шарф ниндзя"
+	desc = "Скрытный шарф черного цвета."
 	icon_state = "ninja_scarf"
 	body_parts_covered = FACE
 	item_flags = FLEXIBLEMATERIAL
@@ -117,8 +117,8 @@
 	siemens_coefficient = 0
 
 /obj/item/clothing/mask/pig
-	name = "pig mask"
-	desc = "A rubber pig mask."
+	name = "маска свиньи"
+	desc = "Резиновая маска свиньи."
 	icon_state = "pig"
 	flags_inv = HIDEFACE|BLOCKHAIR
 	w_class = ITEMSIZE_SMALL
@@ -126,8 +126,8 @@
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/mask/shark
-	name = "shark mask"
-	desc = "A rubber shark mask."
+	name = "маска акулы"
+	desc = "Резиновая маска акулы."
 	icon_state = "shark"
 	flags_inv = HIDEFACE
 	w_class = ITEMSIZE_SMALL
@@ -135,8 +135,8 @@
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/mask/dolphin
-	name = "dolphin mask"
-	desc = "A rubber dolphin mask."
+	name = "маска дельфина"
+	desc = "Резиновая маска дельфина."
 	icon_state = "dolphin"
 	flags_inv = HIDEFACE
 	w_class = ITEMSIZE_SMALL
@@ -144,8 +144,8 @@
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/mask/goblin
-	name = "goblin mask"
-	desc = "A rubber goblin mask."
+	name = "маска гоблина"
+	desc = "Резиновая маска гоблина."
 	icon_state = "goblin"
 	flags_inv = HIDEFACE
 	w_class = ITEMSIZE_SMALL
@@ -153,8 +153,8 @@
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/mask/demon
-	name = "demon mask"
-	desc = "A rubber demon mask."
+	name = "маска демона"
+	desc = "Резиновая маска демона."
 	icon_state = "demon"
 	flags_inv = HIDEFACE
 	w_class = ITEMSIZE_SMALL
@@ -162,8 +162,8 @@
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/mask/horsehead
-	name = "horse head mask"
-	desc = "A mask made of soft vinyl and latex, representing the head of a horse."
+	name = "маска лошади"
+	desc = "Маска, изготовленная из винила и латекса в форме головы лошади."
 	icon_state = "horsehead"
 	flags_inv = HIDEFACE|BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
@@ -171,29 +171,29 @@
 	siemens_coefficient = 0.9
 
 /obj/item/clothing/mask/nock_scarab
-	name = "nock mask (blue, scarab)"
-	desc = "To Nock followers, masks symbolize rebirth and a new persona. Damaging the wearer's mask is generally considered an attack on their person itself."
+	name = "маска Нока"
+	desc = "Для последователей Нока, данная маска символизирует перерождение в качестве новой личности. Причинение маске вреда считается за нападение на самого носителя."
 	icon_state = "nock_scarab"
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = HEAD|FACE
 
 /obj/item/clothing/mask/nock_demon
-	name = "nock mask (purple, demon)"
-	desc = "To Nock followers, masks symbolize rebirth and a new persona. Damaging the wearer's mask is generally considered an attack on their person itself."
+	name = "маска Нока"
+	desc = "Для последователей Нока, данная маска символизирует перерождение в качестве новой личности. Причинение маске вреда считается за нападение на самого носителя."
 	icon_state = "nock_demon"
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = HEAD|FACE
 
 /obj/item/clothing/mask/nock_life
-	name = "nock mask (green, life)"
-	desc = "To Nock followers, masks symbolize rebirth and a new persona. Damaging the wearer's mask is generally considered an attack on their person itself."
+	name = "маска Нока"
+	desc = "Для последователей Нока, данная маска символизирует перерождение в качестве новой личности. Причинение маске вреда считается за нападение на самого носителя."
 	icon_state = "nock_life"
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = HEAD|FACE
 
 /obj/item/clothing/mask/nock_ornate
-	name = "nock mask (red, ornate)"
-	desc = "To Nock followers, masks symbolize rebirth and a new persona. Damaging the wearer's mask is generally considered an attack on their person itself."
+	name = "маска Нока"
+	desc = "Для последователей Нока, данная маска символизирует перерождение в качестве новой личности. Причинение маске вреда считается за нападение на самого носителя."
 	icon_state = "nock_ornate"
 	w_class = ITEMSIZE_SMALL
 	body_parts_covered = HEAD|FACE
@@ -201,12 +201,12 @@
 /obj/item/clothing/mask/horsehead/New()
     ..()
     // The horse mask doesn't cause voice changes by default, the wizard spell changes the flag as necessary
-    say_messages = list("NEEIIGGGHHHH!", "NEEEIIIIGHH!", "NEIIIGGHH!", "HAAWWWWW!", "HAAAWWW!")
+    say_messages = list("ИИИИИИГОГО!", "ИИГОООГООО!", "ИГООГО!", "ИИИИИИИИИИИГОГО!", "ИГОГО!")
     say_verbs = list("whinnies", "neighs", "says")
 
 /obj/item/clothing/mask/ai
-	name = "camera MIU"
-	desc = "Allows for direct mental connection to accessible camera networks."
+	name = "маска наблюдения"
+	desc = "Устанавливает прямое соединение с доступными сетями камер наблюдения."
 	icon_state = "s-ninja"
 	item_state_slots = list(slot_r_hand_str = "mime", slot_l_hand_str = "mime")
 	flags_inv = HIDEFACE
@@ -236,8 +236,8 @@
 		eye.owner = null
 
 /obj/item/clothing/mask/bandana
-	name = "black bandana"
-	desc = "A fine black bandana with nanotech lining. Can be worn on the head or face."
+	name = "черная бандана"
+	desc = "Качественная черная бандана с нановолокнистой подкладкой. Носится как на голове, так и на лице."
 	w_class = ITEMSIZE_TINY
 	flags_inv = HIDEFACE
 	slot_flags = SLOT_MASK|SLOT_HEAD
@@ -260,38 +260,38 @@
 	return ..()
 
 /obj/item/clothing/mask/bandana/red
-	name = "red bandana"
-	desc = "A fine red bandana with nanotech lining. Can be worn on the head or face."
+	name = "красная бандана"
+	desc = "Качественная красная бандана с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandred"
 	item_state_slots = list(slot_r_hand_str = "bandred", slot_l_hand_str = "bandred")
 
 /obj/item/clothing/mask/bandana/blue
-	name = "blue bandana"
-	desc = "A fine blue bandana with nanotech lining. Can be worn on the head or face."
+	name = "синяя бандана"
+	desc = "Качественная синяя бандана с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandblue"
 	item_state_slots = list(slot_r_hand_str = "bandblue", slot_l_hand_str = "bandblue")
 
 /obj/item/clothing/mask/bandana/green
-	name = "green bandana"
-	desc = "A fine green bandana with nanotech lining. Can be worn on the head or face."
+	name = "зеленая бандана"
+	desc = "Качественная зеленая бандана с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandgreen"
 	item_state_slots = list(slot_r_hand_str = "bandgreen", slot_l_hand_str = "bandgreen")
 
 /obj/item/clothing/mask/bandana/gold
-	name = "gold bandana"
-	desc = "A fine gold bandana with nanotech lining. Can be worn on the head or face."
+	name = "золотая бандана"
+	desc = "Качественная бандана золотого цвета с нановолокнистой подкладкой. Надевается как на макушку, так и на лицо."
 	icon_state = "bandgold"
 	item_state_slots = list(slot_r_hand_str = "bandgold", slot_l_hand_str = "bandgold")
 
 /obj/item/clothing/mask/bandana/skull
 	name = "skull bandana"
-	desc = "A fine black bandana with nanotech lining and a skull emblem. Can be worn on the head or face."
+	desc = "Качественная черная бандана с нановолокнистой подкладкой и изображением черепа. Надевается как на макушку, так и на лицо."
 	icon_state = "bandskull"
 	item_state_slots = list(slot_r_hand_str = "bandskull", slot_l_hand_str = "bandskull")
 
 /obj/item/clothing/mask/veil
-	name = "black veil"
-	desc = "A black veil, typically worn at funerals or by goths."
+	name = "черная вуаль"
+	desc = "Черная вуаль, надеваемая либо на похороны, либо готами."
 	w_class = ITEMSIZE_TINY
 	body_parts_covered = FACE
 	icon_state = "veil"

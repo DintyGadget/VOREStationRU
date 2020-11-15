@@ -130,8 +130,8 @@
 	var/gibbed_anim = "gibbed-h"
 	var/dusted_anim = "dust-h"
 	var/death_sound
-	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
-	var/knockout_message = "has been knocked unconscious!"
+	var/death_message = "скукоживается и падает на землю, в глазах ни единого следа жизни..."
+	var/knockout_message = "теряет сознание!"
 	var/cloning_modifier = /datum/modifier/cloning_sickness
 
 	// Environment tolerance/life processes vars.
@@ -153,9 +153,9 @@
 
 	var/cold_discomfort_level = 285							// Aesthetic messages about feeling chilly.
 	var/list/cold_discomfort_strings = list(
-		"You feel chilly.",
-		"You shiver suddenly.",
-		"Your chilly flesh stands out in goosebumps."
+		"Вы чувствуете холод.",
+		"Вы вздрагиваете от прохлады.",
+		"Вы покрываетесь гусиной кожей от мороза."
 		)
 
 	// Hot
@@ -169,9 +169,9 @@
 
 	var/heat_discomfort_level = 315							// Aesthetic messages about feeling warm.
 	var/list/heat_discomfort_strings = list(
-		"You feel sweat drip down your neck.",
-		"You feel uncomfortably warm.",
-		"Your skin prickles in the heat."
+		"С Вашей шеи стекает пот.",
+		"Вам жарковато.",
+		"Ваша кожа покалывает на жаре."
 		)
 
 	var/water_resistance = 0.1								// How wet the species gets from being splashed.
@@ -374,40 +374,40 @@
 
 /datum/species/proc/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 
-	var/t_him = "them"
+	var/t_him = "их"
 	if(ishuman(target))
 		var/mob/living/carbon/human/T = target
 		if(!T.species.ambiguous_genders || (T.species.ambiguous_genders && H.species == T.species))
 			switch(T.identifying_gender)
 				if(MALE)
-					t_him = "him"
+					t_him = "ему"
 				if(FEMALE)
-					t_him = "her"
+					t_him = "ей"
 		else
-			t_him = "them"
+			t_him = "им"
 	else
 		switch(target.gender)
 			if(MALE)
-				t_him = "him"
+				t_him = "ему"
 			if(FEMALE)
-				t_him = "her"
+				t_him = "ей"
 	//VOREStation Edit Start - Headpats and Handshakes.
 	if(H.zone_sel.selecting == "head")
 		H.visible_message( \
-			"<span class='notice'>[H] pats [target] on the head.</span>", \
-			"<span class='notice'>You pat [target] on the head.</span>", )
+			"<span class='notice'>[H] гладит [target] по голове.</span>", \
+			"<span class='notice'>Вы гладите [target] по голове.</span>", )
 	else if(H.zone_sel.selecting == "r_hand" || H.zone_sel.selecting == "l_hand")
 		H.visible_message( \
-			"<span class='notice'>[H] shakes [target]'s hand.</span>", \
-			"<span class='notice'>You shake [target]'s hand.</span>", )
+			"<span class='notice'>[H] пожимает руку [target].</span>", \
+			"<span class='notice'>Вы пожимаете руку [target].</span>", )
 	//TFF 15/12/19 - Port nose booping from CHOMPStation
 	else if(H.zone_sel.selecting == "mouth")
 		H.visible_message( \
-			"<span class='notice'>[H] boops [target]'s nose.</span>", \
-			"<span class='notice'>You boop [target] on the nose.</span>", )
+			"<span class='notice'>[H] легонько тыкает [target] в носик.</span>", \
+			"<span class='notice'>Вы легонько тыкаете [target] в носик.</span>", )
 	//VOREStation Edit End
-	else H.visible_message("<span class='notice'>[H] hugs [target] to make [t_him] feel better!</span>", \
-					"<span class='notice'>You hug [target] to make [t_him] feel better!</span>") //End VOREStation Edit
+	else H.visible_message("<span class='notice'>[H] обнимает [target], чтобы поднять [t_him] настроение!</span>", \
+					"<span class='notice'>Вы обнимаете [target], чтобы поднять [t_him] настроение!</span>") //End VOREStation Edit
 
 /datum/species/proc/remove_inherent_verbs(var/mob/living/carbon/human/H)
 	if(inherent_verbs)

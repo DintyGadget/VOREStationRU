@@ -7,7 +7,7 @@
 /obj/machinery/smartfridge/secure/medbay
 	expert_job = "Химик"
 /obj/machinery/smartfridge/secure/virology
-	expert_job = "Медик" //Virologist is an alt-title unfortunately
+	expert_job = "Врач" //Virologist is an alt-title unfortunately
 /obj/machinery/smartfridge/chemistry
 	expert_job = "Химик" //Unsure what this one is used for, actually
 /obj/machinery/smartfridge/drinks

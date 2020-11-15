@@ -1,45 +1,45 @@
 /datum/mob_descriptor/height
-	name = "height"
+	name = "высота"
 	standalone_value_descriptors = list(
-		"very short",
-		"short",
-		"of average height",
-		"tall",
-		"very tall"
+		"очень низкого роста",
+		"низкого роста",
+		"среднего роста",
+		"высокого роста",
+		"очень высокого роста"
 		)
-	comparative_value_descriptor_equivalent = "around the same height as you"
+	comparative_value_descriptor_equivalent = "одного роста с Вами"
 	comparative_value_descriptors_smaller = list(
-		"slightly shorter than you",
-		"shorter than you",
-		"much shorter than you",
-		"tiny and insignificant next to you"
+		"чуточку ниже Вас",
+		"ниже Вас",
+		"гораздо ниже Вас",
+		"крошечного роста по сравнению с Вами"
 		)
 	comparative_value_descriptors_larger = list(
-		"slightly taller than you",
-		"taller than you",
-		"much taller than you",
-		"towering over you"
+		"чуть выше Вас",
+		"выше Вас",
+		"гораздо выше Вас",
+		"громадного роста по сравнению с Вами"
 		)
 
 /datum/mob_descriptor/build
-	name = "build"
-	comparative_value_descriptor_equivalent = "around the same build as you"
+	name = "строение"
+	comparative_value_descriptor_equivalent = "одного строения с Вами"
 	standalone_value_descriptors = list(
-		"rail thin",
-		"thin",
-		"of average build",
-		"broad-shouldered",
-		"heavily built"
+		"худощавого телосложения",
+		"худенького телосложения",
+		"среднего телосложения",
+		"крупного телосложения",
+		"мускулистого телосложения"
 		)
 	comparative_value_descriptors_smaller = list(
-		"a bit smaller in build than you",
-		"smaller in build than you",
-		"much smaller in build than you",
-		"dwarfed by your height"
+		"чуть худощавее Вас",
+		"худощавее Вас",
+		"гораздо худощавее Вас",
+		"совсем тощего сложения на фоне Вашего"
 		)
 	comparative_value_descriptors_larger = list(
-		"slightly larger than you in build",
-		"built larger than you",
-		"built much larger than you",
-		"dwarfing you"
+		"чуть мускулистее Вас",
+		"мускулистее Вас",
+		"значительно мускулистее Вас",
+		"просто гора мускулов на Вашем фоне"
 		)

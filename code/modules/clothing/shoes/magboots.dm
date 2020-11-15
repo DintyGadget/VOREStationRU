@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes/magboots
-	desc = "Magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle. They're large enough to be worn over other footwear."
-	name = "magboots"
+	desc = "Магнитные ботинки, зачастую используемые во время внекорабельной деятельности для поддержания сцепления с поверхностью корабля. Достаточно большие для ношения поверх другой обуви."
+	name = "магнитные ботинки"
 	icon_state = "magboots0"
 	flags = PHORONGUARD
 	item_state_slots = list(slot_r_hand_str = "magboots", slot_l_hand_str = "magboots")
@@ -12,7 +12,7 @@
 	preserve_item = 1
 	var/magpulse = 0
 	var/icon_base = "magboots"
-	action_button_name = "Toggle Magboots"
+	action_button_name = "Переключить Магнитные Ботинки"
 	var/obj/item/clothing/shoes/shoes = null	//Undershoes
 	var/mob/living/carbon/human/wearer = null	//For shoe procs
 	step_volume_mod = 1.3
@@ -31,7 +31,7 @@
 		set_slowdown()
 		force = 3
 		if(icon_base) icon_state = "[icon_base]0"
-		to_chat(user, "You disable the mag-pulse traction system.")
+		to_chat(user, "Вы отключаете систему магнитного сцепления.")
 	else
 		item_flags |= NOSLIP
 		magpulse = 1
@@ -39,7 +39,7 @@
 		force = 5
 		if(icon_base) icon_state = "[icon_base]1"
 		playsound(src, 'sound/effects/magnetclamp.ogg', 20)
-		to_chat(user, "You enable the mag-pulse traction system.")
+		to_chat(user, "Вы включаете систему магнитного сцепления.")
 	user.update_inv_shoes()	//so our mob-overlays update
 	user.update_action_buttons()
 
@@ -50,7 +50,7 @@
 		shoes = H.shoes
 		if(shoes.overshoes)
 			if(slot && slot == slot_shoes)
-				to_chat(user, "You are unable to wear \the [src] as \the [H.shoes] are in the way.")
+				to_chat(user, "Вы не можете надеть [src], так как Вам мешают [H.shoes].")
 			shoes = null
 			return 0
 		H.drop_from_inventory(shoes)	//Remove the old shoes so you can put on the magboots.
@@ -64,7 +64,7 @@
 
 	if (shoes)
 		if(slot && slot == slot_shoes)
-			to_chat(user, "You slip \the [src] on over \the [shoes].")
+			to_chat(user, "Вы надеваете [src] поверх своей обуви.")
 	set_slowdown()
 	wearer = H
 	return 1
@@ -80,45 +80,45 @@
 
 /obj/item/clothing/shoes/magboots/examine(mob/user)
 	. = ..()
-	. += "Its mag-pulse traction system appears to be [item_flags & NOSLIP ? "enabled" : "disabled"]."
+	. += "Система магнитного сцепления, похоже, [item_flags & NOSLIP ? "активирована" : "отключена"]."
 
 /obj/item/clothing/shoes/magboots/vox
 
-	desc = "A pair of heavy, jagged armoured foot pieces, seemingly suitable for a velociraptor."
-	name = "vox magclaws"
+	desc = "Пара тяжелых, бронированных когтей, предназначенных, по всей видимости, для велоцирапторов."
+	name = "магнитные когти"
 	item_state = "boots-vox"
 	icon_state = "boots-vox"
 	flags = PHORONGUARD
 	species_restricted = list(SPECIES_VOX)
 
-	action_button_name = "Toggle the magclaws"
+	action_button_name = "Переключить Магнитные Когти"
 
 /obj/item/clothing/shoes/magboots/vox/attack_self(mob/user)
 	if(src.magpulse)
 		item_flags &= ~NOSLIP
 		magpulse = 0
 		canremove = 1
-		to_chat(user, "You relax your deathgrip on the flooring.")
+		to_chat(user, "Вы достаёте свои когти из пола.")
 	else
 		//make sure these can only be used when equipped.
 		if(!ishuman(user))
 			return
 		var/mob/living/carbon/human/H = user
 		if (H.shoes != src)
-			to_chat(user, "You will have to put on the [src] before you can do that.")
+			to_chat(user, "Вам нужно сперва надеть [src].")
 			return
 
 		item_flags |= NOSLIP
 		magpulse = 1
 		canremove = 0	//kinda hard to take off magclaws when you are gripping them tightly.
-		to_chat(user, "You dig your claws deeply into the flooring, bracing yourself.")
+		to_chat(user, "Вы впиваетесь когтями в пол, прижимаясь к нему.")
 	user.update_action_buttons()
 
 //In case they somehow come off while enabled.
 /obj/item/clothing/shoes/magboots/vox/dropped(mob/user as mob)
 	..()
 	if(src.magpulse)
-		user.visible_message("The [src] go limp as they are removed from [usr]'s feet.", "The [src] go limp as they are removed from your feet.")
+		user.visible_message("Магнитные когти отключаются, будучи снятыми с [usr]'s feet.", "Магнитные когти отключаются, будучи снятыми с Ваших лап.")
 		item_flags &= ~NOSLIP
 		magpulse = 0
 		canremove = 1
@@ -126,4 +126,4 @@
 /obj/item/clothing/shoes/magboots/vox/examine(mob/user)
 	. = ..()
 	if(magpulse)
-		. += "It would be hard to take these off without relaxing your grip first." // Theoretically this message should only be seen by the wearer when the claws are equipped.
+		. += "Их непросто снять, не ослабив сперва хватку." // Theoretically this message should only be seen by the wearer when the claws are equipped.

@@ -14,7 +14,7 @@
 			return emote(copytext_char(message,2))
 
 		if(copytext_char(message,1,2) == ";")
-			var/datum/language/L = GLOB.all_languages["Drone Talk"]
+			var/datum/language/L = GLOB.all_languages["Дроновое Общение"]
 			if(istype(L))
 				return L.broadcast(src,trim(copytext_char(message,2)))
 

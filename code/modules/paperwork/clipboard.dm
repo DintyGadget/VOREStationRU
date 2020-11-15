@@ -1,6 +1,6 @@
 /obj/item/weapon/clipboard
-	name = "clipboard"
-	desc = "Used to clip paper to, for an on-the-go writing board."
+	name = "бумажный планшет"
+	desc = "Используется как подставка для бумаги для ведения записей на ходу."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "clipboard"
 	item_state = "clipboard"
@@ -50,7 +50,7 @@
 		W.loc = src
 		if(istype(W, /obj/item/weapon/paper))
 			toppaper = W
-		to_chat(user, "<span class='notice'>You clip the [W] onto \the [src].</span>")
+		to_chat(user, "<span class='notice'>Вы прикрепляете [W] к планшету.</span>")
 		update_icon()
 
 	else if(istype(toppaper) && istype(W, /obj/item/weapon/pen))
@@ -60,23 +60,23 @@
 	return
 
 /obj/item/weapon/clipboard/attack_self(mob/user as mob)
-	var/dat = "<title>Clipboard</title>"
+	var/dat = "<title>Планшет</title>"
 	if(haspen)
-		dat += "<A href='?src=\ref[src];pen=1'>Remove Pen</A><BR><HR>"
+		dat += "<A href='?src=\ref[src];pen=1'>Убрать Ручку</A><BR><HR>"
 	else
-		dat += "<A href='?src=\ref[src];addpen=1'>Add Pen</A><BR><HR>"
+		dat += "<A href='?src=\ref[src];addpen=1'>Добавить Ручку</A><BR><HR>"
 
 	//The topmost paper. I don't think there's any way to organise contents in byond, so this is what we're stuck with.	-Pete
 	if(toppaper)
 		var/obj/item/weapon/paper/P = toppaper
-		dat += "<A href='?src=\ref[src];write=\ref[P]'>Write</A> <A href='?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR><HR>"
+		dat += "<A href='?src=\ref[src];write=\ref[P]'>Написать</A> <A href='?src=\ref[src];remove=\ref[P]'>Убрать</A> <A href='?src=\ref[src];rename=\ref[P]'>Переименовать</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR><HR>"
 
 	for(var/obj/item/weapon/paper/P in src)
 		if(P==toppaper)
 			continue
-		dat += "<A href='?src=\ref[src];remove=\ref[P]'>Remove</A> <A href='?src=\ref[src];rename=\ref[P]'>Rename</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
+		dat += "<A href='?src=\ref[src];remove=\ref[P]'>Убрать</A> <A href='?src=\ref[src];rename=\ref[P]'>Переименовать</A> - <A href='?src=\ref[src];read=\ref[P]'>[P.name]</A><BR>"
 	for(var/obj/item/weapon/photo/Ph in src)
-		dat += "<A href='?src=\ref[src];remove=\ref[Ph]'>Remove</A> <A href='?src=\ref[src];rename=\ref[Ph]'>Rename</A> - <A href='?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
+		dat += "<A href='?src=\ref[src];remove=\ref[Ph]'>Убрать</A> <A href='?src=\ref[src];rename=\ref[Ph]'>Переименовать</A> - <A href='?src=\ref[src];look=\ref[Ph]'>[Ph.name]</A><BR>"
 
 	user << browse(dat, "window=clipboard")
 	onclose(user, "clipboard")
@@ -103,7 +103,7 @@
 					usr.drop_item()
 					W.loc = src
 					haspen = W
-					to_chat(usr, "<span class='notice'>You slot the pen into \the [src].</span>")
+					to_chat(usr, "<span class='notice'>Вы просовываете ручку в планшет.</span>")
 
 		else if(href_list["write"])
 			var/obj/item/weapon/P = locate(href_list["write"])
@@ -164,7 +164,7 @@
 			var/obj/item/P = locate(href_list["top"])
 			if(P && (P.loc == src) && istype(P, /obj/item/weapon/paper) )
 				toppaper = P
-				to_chat(usr, "<span class='notice'>You move [P.name] to the top.</span>")
+				to_chat(usr, "<span class='notice'>Вы перекладываете [P.name] наверх.</span>")
 
 		//Update everything
 		attack_self(usr)

@@ -461,8 +461,8 @@
 	starts_with = list(/obj/item/toy/snappop = 8)
 
 /obj/item/weapon/storage/box/matches
-	name = "matchbox"
-	desc = "Небольшая коробка спичек премиум-класса Space-Proof."
+	name = "коробок спичек"
+	desc = "Небольшая коробка спичек премиум-класса."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	w_class = ITEMSIZE_TINY

@@ -1,6 +1,6 @@
 /datum/species/vox
 	name = SPECIES_VOX
-	name_plural = "Vox"
+	name_plural = "Воксы"
 	icobase = 'icons/mob/human_races/r_vox.dmi'
 	deform = 'icons/mob/human_races/r_def_vox.dmi'
 	default_language = LANGUAGE_VOX
@@ -10,12 +10,12 @@
 	assisted_langs = list(LANGUAGE_ROOTGLOBAL)
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick,  /datum/unarmed_attack/claws/strong, /datum/unarmed_attack/bite/strong)
 	rarity_value = 4
-	blurb = "The Vox are the broken remnants of a once-proud race, now reduced to little more than \
-	scavenging vermin who prey on isolated stations, ships or planets to keep their own ancient arkships \
-	alive. They are four to five feet tall, reptillian, beaked, tailed and quilled; human crews often \
-	refer to them as 'shitbirds' for their violent and offensive nature, as well as their horrible \
-	smell.<br/><br/>Most humans will never meet a Vox raider, instead learning of this insular species through \
-	dealing with their traders and merchants; those that do rarely enjoy the experience."
+	blurb = "Воксы -- разбитые останки прежде величественной расы, от которой остались лишь \
+	одни жалкие разбойники, выживающие за счет набегов на изолированные станции, корабли и планеты.\
+	В среднем они полтора метра ростом и обладают рептильей кожей, клювом, хвостом и иногда оперением. \
+	Люди иногда прозывают их 'птицеблядями' за их склонности к насилию и конфликтам, а также их отвратительный запах. \
+	Большинство людей никога в жизни не увидит ни одного вокса-налётчика и может узнать об этой расе только благодаря единичным случаям - торговцам. \
+	Тем, кому не повезло, встреча вряд ли придётся по душе."
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vox)
 
 //	taste_sensitivity = TASTE_DULL

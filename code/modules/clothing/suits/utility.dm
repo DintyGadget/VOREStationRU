@@ -10,8 +10,8 @@
  */
 
 /obj/item/clothing/suit/fire
-	name = "firesuit"
-	desc = "A suit that protects against fire and heat."
+	name = "противопожарный костюм"
+	desc = "Костюм, предоставляющий защиту от огня и жара."
 	icon_state = "fire"
 	w_class = ITEMSIZE_LARGE//bulky item
 	gas_transfer_coefficient = 0.90
@@ -32,8 +32,8 @@
 	icon_state = "firesuit"
 
 /obj/item/clothing/suit/fire/heavy //Is this even used?? -S2-
-	name = "firesuit"
-	desc = "A suit that protects against extreme fire and heat."
+	name = "противопожарный костюм"
+	desc = "Костюм, предоставляющий защиту от особо опасного огня и жара."
 	//icon_state = "thermal"
 	item_state_slots = list(slot_r_hand_str = "black_suit", slot_l_hand_str = "black_suit")
 	w_class = ITEMSIZE_LARGE//bulky item
@@ -43,8 +43,8 @@
  * Bomb protection
  */
 /obj/item/clothing/head/bomb_hood
-	name = "bomb hood"
-	desc = "Use in case of bomb."
+	name = "бомбоустойчивый капюшон"
+	desc = "Используется в случае бомб."
 	icon_state = "bombsuit"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 100, bio = 0, rad = 0)
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|BLOCKHAIR
@@ -52,8 +52,8 @@
 	siemens_coefficient = 0
 
 /obj/item/clothing/suit/bomb_suit
-	name = "bomb suit"
-	desc = "A suit designed for safety when handling explosives."
+	name = "бомбоустойчивый костюм"
+	desc = "Используется в качестве меры предосторожности при операциях со взрывчаткой."
 	icon_state = "bombsuit"
 	w_class = ITEMSIZE_LARGE//bulky item
 	gas_transfer_coefficient = 0.01
@@ -78,9 +78,9 @@
  * Radiation protection
  */
 /obj/item/clothing/head/radiation
-	name = "Radiation Hood"
+	name = "антирадиационный капюшон"
 	icon_state = "rad"
-	desc = "A hood with radiation protective properties. Label: Made with lead, do not eat insulation"
+	desc = "Капюшон с антирадиационными свойствами. Бирка: Изготовлено с использованием свинца, не употребляйте изоляцию."
 	flags_inv = BLOCKHAIR
 	item_flags = THICKMATERIAL
 	body_parts_covered = HEAD|FACE|EYES
@@ -88,7 +88,7 @@
 
 /obj/item/clothing/suit/radiation
 	name = "Radiation suit"
-	desc = "A suit that protects against radiation. Label: Made with lead, do not eat insulation."
+	desc = "Костюм, предоставляющий защиту от радиации. Бирка: Изготовлено с использованием свинца, не употребляйте изоляцию."
 	icon_state = "rad"
 	w_class = ITEMSIZE_LARGE//bulky item
 	gas_transfer_coefficient = 0.90

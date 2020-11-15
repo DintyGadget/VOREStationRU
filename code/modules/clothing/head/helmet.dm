@@ -149,7 +149,7 @@
 	siemens_coefficient = 1
 
 /obj/item/clothing/head/helmet/gladiator
-	name = "gladiator helmet"
+	name = "шлем гладиатора"
 	desc = "Ave, Imperator, morituri te salutant."
 	icon_state = "gladiator"
 	item_state_slots = list(slot_r_hand_str = "vhelmet", slot_l_hand_str = "vhelmet")

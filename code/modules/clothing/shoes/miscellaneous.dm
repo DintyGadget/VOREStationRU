@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes/syndigaloshes
-	desc = "A pair of brown shoes. They seem to have extra grip."
-	name = "brown shoes"
+	desc = "Пара кроссовок коричневого цвета. Кажется, обладают более хорошим сцеплением."
+	name = "коричневые кроссовки"
 	icon_state = "brown"
 	permeability_coefficient = 0.05
 	item_flags = NOSLIP
@@ -13,13 +13,13 @@
 	pickup_sound = 'sound/items/pickup/rubber.ogg'
 
 /obj/item/clothing/shoes/mime
-	name = "mime shoes"
+	name = "башмаки мима"
 	icon_state = "white"
 	step_volume_mod = 0	//It's a mime
 
 /obj/item/clothing/shoes/galoshes
-	desc = "Rubber boots"
-	name = "galoshes"
+	desc = "Резиновые ботинки."
+	name = "галоши"
 	icon_state = "galoshes"
 	permeability_coefficient = 0.05
 	siemens_coefficient = 0 //They're thick rubber boots! Of course they won't conduct electricity!
@@ -30,18 +30,18 @@
 	pickup_sound = 'sound/items/pickup/rubber.ogg'
 
 /obj/item/clothing/shoes/dress
-	name = "dress shoes"
-	desc = "Sharp looking low quarters, perfect for a formal uniform."
+	name = "парадные туфли"
+	desc = "Островатые на вид туфли, идеально подходят к формальным костюмам."
 	icon_state = "laceups"
 
 /obj/item/clothing/shoes/dress/white
-	name = "white dress shoes"
-	desc = "Brilliantly white low quarters, not a spot on them."
+	name = "белые парадные туфли"
+	desc = "Белоснежные туфли, на которых нет ни единого пятнышка."
 	icon_state = "whitedress"
 
 /obj/item/clothing/shoes/sandal
-	desc = "A pair of rather plain, wooden sandals."
-	name = "sandals"
+	desc = "Пара обыкновенных деревянных сандалий."
+	name = "сандали"
 	icon_state = "wizard"
 	species_restricted = null
 	body_parts_covered = 0
@@ -49,19 +49,19 @@
 	wizard_garb = 1
 
 obj/item/clothing/shoes/sandal/clogs
-	name = "plastic clogs"
-	desc = "A pair of plastic clog shoes."
+	name = "пластиковые башмаки"
+	desc = "Пара пластиковых башмаков."
 	icon_state = "clogs"
 
 /obj/item/clothing/shoes/sandal/marisa
-	desc = "A pair of magic, black shoes."
+	desc = "Пара волшебных черных башмаков."
 	name = "magic shoes"
 	icon_state = "black"
 	body_parts_covered = FEET
 
 /obj/item/clothing/shoes/clown_shoes
-	desc = "The prankster's standard-issue clowning shoes. Damn they're huge!"
-	name = "clown shoes"
+	desc = "Стандартизированные башмаки заведующего по розыгрышам. Господи, какие же они огромные!"
+	name = "клоунские башмаки"
 	icon_state = "clown"
 	slowdown = SHOES_SLOWDOWN+1
 	force = 0
@@ -79,8 +79,8 @@ obj/item/clothing/shoes/sandal/clogs
 		playsound(src, "clownstep", 20, 1)
 
 /obj/item/clothing/shoes/cult
-	name = "boots"
-	desc = "A pair of boots worn by the followers of Nar-Sie."
+	name = "ботинки"
+	desc = "Пара ботинок, носимых последователями Nar-Sie."
 	icon_state = "cult"
 	item_state_slots = list(slot_r_hand_str = "cult", slot_l_hand_str = "cult")
 	force = 2
@@ -96,13 +96,13 @@ obj/item/clothing/shoes/sandal/clogs
 	return
 
 /obj/item/clothing/shoes/cyborg
-	name = "cyborg boots"
-	desc = "Shoes for a cyborg costume"
+	name = "ботинки киборга"
+	desc = "Ботинки для костюма киборга."
 	icon_state = "boots"
 
 /obj/item/clothing/shoes/slippers
-	name = "bunny slippers"
-	desc = "Fluffy!"
+	name = "кроличьи тапочки"
+	desc = "Пуффыстые!"
 	icon_state = "slippers"
 	force = 0
 	species_restricted = null
@@ -111,26 +111,26 @@ obj/item/clothing/shoes/sandal/clogs
 	pickup_sound = 'sound/items/pickup/clothing.ogg'
 
 /obj/item/clothing/shoes/slippers/worn
-	name = "worn bunny slippers"
-	desc = "Fluffy..."
+	name = "поношенные кроличьи тапочки"
+	desc = "Пуффыстые..."
 	icon_state = "slippers_worn"
 	item_state_slots = list(slot_r_hand_str = "slippers", slot_l_hand_str = "slippers")
 
 /obj/item/clothing/shoes/laceup
-	name = "black oxford  shoes"
+	name = "черные оксфорды"
 	icon_state = "oxford_black"
 
 /obj/item/clothing/shoes/laceup/grey
-	name = "grey oxford shoes"
+	name = "серые оксфорды"
 	icon_state = "oxford_grey"
 
 /obj/item/clothing/shoes/laceup/brown
-	name = "brown oxford shoes"
+	name = "коричневые оксфорды"
 	icon_state = "oxford_brown"
 
 /obj/item/clothing/shoes/swimmingfins
-	desc = "Help you swim good."
-	name = "swimming fins"
+	desc = "Способствуют при плавании."
+	name = "плавательные ласты"
 	icon_state = "flippers"
 	item_state_slots = list(slot_r_hand_str = "galoshes", slot_l_hand_str = "galoshes")
 	item_flags = NOSLIP
@@ -138,34 +138,34 @@ obj/item/clothing/shoes/sandal/clogs
 	species_restricted = null
 
 /obj/item/clothing/shoes/flipflop
-	name = "flip flops"
-	desc = "A pair of foam flip flops. For those not afraid to show a little ankle."
+	name = "шлепанцы"
+	desc = "Пара шлепанцев из пеноматериала. Для тех, кто не стесняется своих лодыжек."
 	icon_state = "thongsandal"
 	addblends = "thongsandal_a"
 
 /obj/item/clothing/shoes/athletic
-	name = "athletic shoes"
-	desc = "A pair of sleek atheletic shoes. Made by and for the sporty types."
+	name = "спортивные кеды"
+	desc = "Пара модных спортивных кед. Придуманы атлетами для атлетов."
 	icon_state = "sportshoe"
 	addblends = "sportshoe_a"
 	item_state_slots = list(slot_r_hand_str = "sportheld", slot_l_hand_str = "sportheld")
 
 /obj/item/clothing/shoes/skater
-	name = "skater shoes"
-	desc = "A pair of wide shoes with thick soles.  Designed for skating."
+	name = "скейтерские кеды"
+	desc = "Пара широких кед с толстой подошвой. Созданы для скейтбординга."
 	icon_state = "skatershoe"
 	addblends = "skatershoe_a"
 	item_state_slots = list(slot_r_hand_str = "skaterheld", slot_l_hand_str = "skaterheld")
 
 /obj/item/clothing/shoes/heels
-	name = "high heels"
-	desc = "A pair of high-heeled shoes. Fancy!"
+	name = "туфли на каблуках"
+	desc = "Пара туфель на высоких каблуках. Элегантно!"
 	icon_state = "heels"
 	addblends = "heels_a"
 
 /obj/item/clothing/shoes/footwraps
-	name = "cloth footwraps"
-	desc = "A roll of treated canvas used for wrapping claws or paws"
+	name = "портянки"
+	desc = "Рулон обработанной ткани для обмотки когтей и лап."
 	icon_state = "clothwrap"
 	item_state = "clothwrap"
 	force = 0
@@ -176,32 +176,38 @@ obj/item/clothing/shoes/sandal/clogs
 
 /obj/item/clothing/shoes/boots/ranger
 	var/bootcolor = "white"
-	name = "ranger boots"
-	desc = "The Rangers special lightweight hybrid magboots-jetboots perfect for EVA. If only these functions were so easy to copy in reality.\
-	 These ones are just a well-made pair of boots in appropriate colours."
+	name = "ботинки рейнджера"
+	desc = "Особый легковесный гибрид магнитных ботинок и джет-ботинок, идеальный для внекорабельной деятельности. Если бы ещё все эти свойства были настоящими!\
+	 Эти ботинки - всего лишь красивая копия ботинок рейнджеров соответствующего цвета."
 	icon = 'icons/obj/clothing/ranger.dmi'
 	icon_state = "ranger_boots"
 
 /obj/item/clothing/shoes/boots/ranger/Initialize()
 	. = ..()
 	if(icon_state == "ranger_boots")
-		name = "[bootcolor] ranger boots"
+		name = "ботинки рейнджера"
 		icon_state = "[bootcolor]_ranger_boots"
 
 /obj/item/clothing/shoes/boots/ranger/black
 	bootcolor = "black"
+	name = "черные ботинки рейнджера"
 
 /obj/item/clothing/shoes/boots/ranger/pink
 	bootcolor = "pink"
+	name = "розовые ботинки рейнджера"
 
 /obj/item/clothing/shoes/boots/ranger/green
 	bootcolor = "green"
+	name = "зеленые ботинки рейнджера"
 
 /obj/item/clothing/shoes/boots/ranger/cyan
 	bootcolor = "cyan"
+	name = "бирюзовые ботинки рейнджера"
 
 /obj/item/clothing/shoes/boots/ranger/orange
 	bootcolor = "orange"
+	name = "оранжевые ботинки рейнджера"
 
 /obj/item/clothing/shoes/boots/ranger/yellow
 	bootcolor = "yellow"
+	name = "желтые ботинки рейнджера"

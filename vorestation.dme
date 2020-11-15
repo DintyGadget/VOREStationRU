@@ -3804,5 +3804,4 @@
 #include "maps\tether\tether.dm"
 #include "maps\tether\tether_turfs.dm"
 #include "maps\~map_system\maps.dm"
-#include "voreru\code\game\verbs\emote.dm"
 // END_INCLUDE

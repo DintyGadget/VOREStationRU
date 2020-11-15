@@ -142,7 +142,7 @@
 /datum/category_item/player_setup_item/vore/ears/content(var/mob/user)
 	. += "<h2>Дополнительные настройки персонажа</h2>"
 
-	var/ear_display = "Normal"
+	var/ear_display = "Обычные"
 	if(pref.ear_style && (pref.ear_style in ear_styles_list))
 		var/datum/sprite_accessory/ears/instance = ear_styles_list[pref.ear_style]
 		ear_display = instance.name
@@ -154,11 +154,11 @@
 	if(ear_styles_list[pref.ear_style])
 		var/datum/sprite_accessory/ears/ear = ear_styles_list[pref.ear_style]
 		if (ear.do_colouration)
-			. += "<a href='?src=\ref[src];ear_color=1'>Цвет</a> [color_square(pref.r_ears, pref.g_ears, pref.b_ears)]<br>"
+			. += "<a href='?src=\ref[src];ear_color=1'>Цвет 1</a> [color_square(pref.r_ears, pref.g_ears, pref.b_ears)]<br>"
 		if (ear.extra_overlay)
-			. += "<a href='?src=\ref[src];ear_color2=1'>Втор. цвет</a> [color_square(pref.r_ears2, pref.g_ears2, pref.b_ears2)]<br>"
+			. += "<a href='?src=\ref[src];ear_color2=1'>Цвет 2</a> [color_square(pref.r_ears2, pref.g_ears2, pref.b_ears2)]<br>"
 
-	var/tail_display = "Normal"
+	var/tail_display = "Обычные"
 	if(pref.tail_style && (pref.tail_style in tail_styles_list))
 		var/datum/sprite_accessory/tail/instance = tail_styles_list[pref.tail_style]
 		tail_display = instance.name
@@ -170,11 +170,11 @@
 	if(tail_styles_list[pref.tail_style])
 		var/datum/sprite_accessory/tail/T = tail_styles_list[pref.tail_style]
 		if (T.do_colouration)
-			. += "<a href='?src=\ref[src];tail_color=1'>Цвет</a> [color_square(pref.r_tail, pref.g_tail, pref.b_tail)]<br>"
+			. += "<a href='?src=\ref[src];tail_color=1'>Цвет 1</a> [color_square(pref.r_tail, pref.g_tail, pref.b_tail)]<br>"
 		if (T.extra_overlay)
-			. += "<a href='?src=\ref[src];tail_color2=1'>Втор. цвет</a> [color_square(pref.r_tail2, pref.g_tail2, pref.b_tail2)]<br>"
+			. += "<a href='?src=\ref[src];tail_color2=1'>Цвет 2</a> [color_square(pref.r_tail2, pref.g_tail2, pref.b_tail2)]<br>"
 
-	var/wing_display = "Normal"
+	var/wing_display = "Обычные"
 	if(pref.wing_style && (pref.wing_style in wing_styles_list))
 		var/datum/sprite_accessory/wing/instance = wing_styles_list[pref.wing_style]
 		wing_display = instance.name
@@ -186,9 +186,9 @@
 	if(wing_styles_list[pref.wing_style])
 		var/datum/sprite_accessory/wing/W = wing_styles_list[pref.wing_style]
 		if (W.do_colouration)
-			. += "<a href='?src=\ref[src];wing_color=1'>Цвет</a> [color_square(pref.r_wing, pref.g_wing, pref.b_wing)]<br>"
+			. += "<a href='?src=\ref[src];wing_color=1'>Цвет 1</a> [color_square(pref.r_wing, pref.g_wing, pref.b_wing)]<br>"
 		if (W.extra_overlay)
-			. += "<a href='?src=\ref[src];wing_color2=1'>Втор. цвет</a> [color_square(pref.r_wing2, pref.g_wing2, pref.b_wing2)]<br>"
+			. += "<a href='?src=\ref[src];wing_color2=1'>Цвет 2</a> [color_square(pref.r_wing2, pref.g_wing2, pref.b_wing2)]<br>"
 
 /datum/category_item/player_setup_item/vore/ears/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(!CanUseTopic(user))
@@ -196,7 +196,7 @@
 
 	else if(href_list["ear_style"])
 		// Construct the list of names allowed for this user.
-		var/list/pretty_ear_styles = list("Normal" = null)
+		var/list/pretty_ear_styles = list("Обычные" = null)
 		for(var/path in ear_styles_list)
 			var/datum/sprite_accessory/ears/instance = ear_styles_list[path]
 			if(((!instance.ckeys_allowed) || (usr.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)))
@@ -229,7 +229,7 @@
 
 	else if(href_list["tail_style"])
 		// Construct the list of names allowed for this user.
-		var/list/pretty_tail_styles = list("Normal" = null)
+		var/list/pretty_tail_styles = list("Обычный" = null)
 		for(var/path in tail_styles_list)
 			var/datum/sprite_accessory/tail/instance = tail_styles_list[path]
 			if(((!instance.ckeys_allowed) || (usr.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)))
@@ -262,7 +262,7 @@
 
 	else if(href_list["wing_style"])
 		// Construct the list of names allowed for this user.
-		var/list/pretty_wing_styles = list("Normal" = null)
+		var/list/pretty_wing_styles = list("Обычные" = null)
 		for(var/path in wing_styles_list)
 			var/datum/sprite_accessory/wing/instance = wing_styles_list[path]
 			if(((!instance.ckeys_allowed) || (usr.ckey in instance.ckeys_allowed)) && ((!instance.apply_restrictions) || (pref.species in instance.species_allowed)))

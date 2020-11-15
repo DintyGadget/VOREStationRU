@@ -37,7 +37,7 @@
 /var/const/access_medical = 5
 /datum/access/medical
 	id = access_medical
-	desc = "Medical"
+	desc = "Медицинский отдел"
 	region = ACCESS_REGION_MEDBAY
 
 /var/const/access_morgue = 6
@@ -67,7 +67,7 @@
 /var/const/access_engine = 10
 /datum/access/engine
 	id = access_engine
-	desc = "Engineering"
+	desc = "Инженерный отдел"
 	region = ACCESS_REGION_ENGINEERING
 
 /var/const/access_engine_equip = 11
@@ -253,7 +253,7 @@
 /var/const/access_qm = 41
 /datum/access/qm
 	id = access_qm
-	desc = "Интендант"
+	desc = "Квартирмейстер"
 	region = ACCESS_REGION_SUPPLY
 
 /var/const/access_network = 42
@@ -276,7 +276,7 @@
 /var/const/access_research = 47
 /datum/access/research
 	id = access_research
-	desc = "Science"
+	desc = "Научный отдел"
 	region = ACCESS_REGION_RESEARCH
 
 /var/const/access_mining = 48
@@ -333,7 +333,7 @@
 /var/const/access_hos = 58
 /datum/access/hos
 	id = access_hos
-	desc = "Глава безопасности"
+	desc = "Глава службы безопасности"
 	region = ACCESS_REGION_SECURITY
 
 /var/const/access_RC_announce = 59 //Request console announcements
@@ -363,7 +363,7 @@
 /var/const/access_sec_doors = 63 // Security front doors
 /datum/access/sec_doors
 	id = access_sec_doors
-	desc = "Security"
+	desc = "Служба безопасности"
 	region = ACCESS_REGION_SECURITY
 
 /var/const/access_psychiatrist = 64 // Psychiatrist's office

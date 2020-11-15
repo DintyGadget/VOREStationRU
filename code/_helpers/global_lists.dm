@@ -19,7 +19,7 @@ var/global/list/mechas_list = list()				//list of all mechs. Used by hostile mob
 var/global/list/joblist = list()					//list of all jobstypes, minus borg and AI
 
 #define all_genders_define_list list(MALE,FEMALE,PLURAL,NEUTER,HERM) //VOREStaton Edit
-#define all_genders_text_list list("Муж.","Жен.","Множ. число","Небинар.","Герм.") //VOREStation Edit
+#define all_genders_text_list list("Мужской","Женский","Множественное число","Средний","Гермафродит") //VOREStation Edit
 
 var/list/mannequins_
 
@@ -47,7 +47,7 @@ var/global/list/body_marking_styles_list = list()		//stores /datum/sprite_access
 var/datum/category_collection/underwear/global_underwear = new()
 
 	//Backpacks
-var/global/list/backbaglist = list("Ничего", "Рюкзак", "Сумка", "Сумка другая", "Курьерская сумка")
+var/global/list/backbaglist = list("Ничего", "Рюкзак", "Сумка", "Сумка с другой стороны", "Курьерская сумка")
 var/global/list/pdachoicelist = list("Обычный", "Компакт", "Старый", "Грубый", "Голографический")
 var/global/list/exclude_jobs = list(/datum/job/ai,/datum/job/cyborg)
 

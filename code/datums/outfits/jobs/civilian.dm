@@ -9,7 +9,7 @@
 
 //VOREStation Add - Interns
 /decl/hierarchy/outfit/job/assistant/intern
-	name = OUTFIT_JOB_NAME("Интерн")
+	name = OUTFIT_JOB_NAME("Стажёр")
 	id_type = /obj/item/weapon/card/id/civilian
 //VOREStation Add End - Interns
 
@@ -54,7 +54,7 @@
 // Rykka adds Server Outfit
 
 /decl/hierarchy/outfit/job/service/server
-	name = OUTFIT_JOB_NAME("Server")
+	name = OUTFIT_JOB_NAME("Официант")
 	uniform = /obj/item/clothing/under/waiter
 
 // End Outfit addition
@@ -85,7 +85,7 @@
 	pda_type = /obj/item/device/pda/librarian
 
 /decl/hierarchy/outfit/job/internal_affairs_agent
-	name = OUTFIT_JOB_NAME("Internal affairs agent")
+	name = OUTFIT_JOB_NAME("Агент внутренних дел")
 	l_ear = /obj/item/device/radio/headset/ia
 	uniform = /obj/item/clothing/under/rank/internalaffairs
 	suit = /obj/item/clothing/suit/storage/toggle/internalaffairs
@@ -96,7 +96,7 @@
 	pda_type = /obj/item/device/pda/lawyer
 
 /decl/hierarchy/outfit/job/chaplain
-	name = OUTFIT_JOB_NAME("Священник")
+	name = OUTFIT_JOB_NAME("Капеллан")
 	uniform = /obj/item/clothing/under/rank/chaplain
 	l_hand = /obj/item/weapon/storage/bible
 	id_type = /obj/item/weapon/card/id/civilian

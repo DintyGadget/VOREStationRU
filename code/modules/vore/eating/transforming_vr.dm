@@ -92,7 +92,7 @@
 	M.gender = target_gender
 	M.identifying_gender = target_gender
 	if(target_gender == FEMALE)
-		M.f_style = "Shaved"
+		M.f_style = "Бритое лицо"
 	M.dna.SetUIState(DNA_UI_GENDER,M.gender!=MALE,1)
 	M.sync_organ_dna()
 	M.update_icons_body()

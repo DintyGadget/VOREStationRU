@@ -1,20 +1,20 @@
 /obj/item/clothing/head/centhat
-	name = "\improper CentCom. hat"
+	name = "головной убор ЦК"
 	icon_state = "centcom"
-	desc = "It's good to be emperor."
+	desc = "Приятно быть императором."
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
 
 /obj/item/clothing/head/centhat/customs
-	name = "Customs Hat"
-	desc = "A formal hat for SolGov Customs Officers."
+	name = "таможенный головной убор"
+	desc = "Формальный головной убор офицеров таможни Сол."
 	icon_state = "customshat"
 
 /obj/item/clothing/head/pin
 	icon_state = "pin"
 	addblends = "pin_a"
-	name = "hair pin"
-	desc = "A nice hair pin."
+	name = "заколка для волос"
+	desc = "Милая заколочка для волос."
 	slot_flags = SLOT_HEAD | SLOT_EARS
 	body_parts_covered = 0
 	drop_sound = 'sound/items/drop/accessory.ogg'
@@ -23,103 +23,103 @@
 /obj/item/clothing/head/pin/pink
 	icon_state = "pinkpin"
 	addblends = null
-	name = "pink hair hat"
+	name = "розовая заколка"
 
 /obj/item/clothing/head/pin/clover
 	icon_state = "cloverpin"
-	name = "clover pin"
+	name = "заколка с клевером"
 	addblends = null
-	desc = "A hair pin in the shape of a clover leaf."
+	desc = "Заколка в форме листа клевера."
 
 /obj/item/clothing/head/pin/butterfly
 	icon_state = "butterflypin"
-	name = "butterfly pin"
+	name = "заколка с бабочкой"
 	addblends = null
-	desc = "A hair pin in the shape of a bright blue butterfly."
+	desc = "Заколка в форме яркой голубой бабочки."
 
 /obj/item/clothing/head/pin/magnetic
 	icon_state = "magnetpin"
-	name = "magnetic 'pin'"
+	name = "магнитная 'заколка'"
 	addblends = null
-	desc = "Finally, a hair pin even a Morpheus chassis can use."
+	desc = "Наконец-то, заколка, которую могут использовать даже роботы."
 	matter = list(DEFAULT_WALL_MATERIAL = 10)
 
 /obj/item/clothing/head/pin/flower
-	name = "red flower pin"
+	name = "красная цветочная заколка"
 	icon_state = "hairflower"
 	addblends = null
-	desc = "Smells nice."
+	desc = "Приятно пахнет."
 
 /obj/item/clothing/head/pin/flower/blue
 	icon_state = "hairflower_blue"
-	name = "blue flower pin"
+	name = "синяя цветочная заколка"
 
 /obj/item/clothing/head/pin/flower/pink
 	icon_state = "hairflower_pink"
-	name = "pink flower pin"
+	name = "розовая цветочная заколка"
 
 /obj/item/clothing/head/pin/flower/yellow
 	icon_state = "hairflower_yellow"
-	name = "yellow flower pin"
+	name = "желтая цветочная заколка"
 
 /obj/item/clothing/head/pin/flower/violet
 	icon_state = "hairflower_violet"
-	name = "violet flower pin"
+	name = "фиолетовая цветочная заколка"
 
 /obj/item/clothing/head/pin/flower/orange
 	icon_state = "hairflower_orange"
-	name = "orange flower pin"
+	name = "оранжевая цветочная заколка"
 
 /obj/item/clothing/head/pin/flower/white
 	icon_state = "hairflower_white"
 	addblends = "hairflower_white_a"
-	name = "flower pin"
+	name = "цветочная заколка"
 
 /obj/item/clothing/head/pin/bow
 	icon_state = "bow"
 	addblends = "bow_a"
-	name = "hair bow"
-	desc = "A ribbon tied into a bow with a clip on the back to attach to hair."
+	name = "бантик"
+	desc = "Ленточка, завязанная в бантик с зажимом для крепления на волосы."
 	item_state_slots = list(slot_r_hand_str = "pill", slot_l_hand_str = "pill")
 
 /obj/item/clothing/head/pin/bow/big
 	icon_state = "whiteribbon"
-	name = "ribbon"
+	name = "ленточка"
 
 /obj/item/clothing/head/pin/bow/big/red
 	icon_state = "redribbon"
-	name = "red ribbon"
+	name = "красная ленточка"
 	addblends = null
 
 /obj/item/clothing/head/powdered_wig
-	name = "powdered wig"
-	desc = "A powdered wig."
+	name = "пудреный парик"
+	desc = "Это пудрёный парик."
 	icon_state = "pwig"
 
 /obj/item/clothing/head/that
-	name = "top-hat"
-	desc = "It's an amish looking hat."
+	name = "цилиндр"
+	desc = "Цилиндр. На вид весьма еврейский."
 	icon_state = "tophat"
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
 
 /obj/item/clothing/head/redcoat
-	name = "redcoat's hat"
+	name = "шляпа красного мундира"
 	icon_state = "redcoat"
 	item_state_slots = list(slot_r_hand_str = "pirate", slot_l_hand_str = "pirate")
-	desc = "<i>'I guess it's a redhead.'</i>"
+	desc = "<i>'Не путать с красногвардейцами.'</i>"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/mailman
-	name = "station cap"
+	name = "фуражка почтальона"
 	icon_state = "mailman"
 	item_state_slots = list(slot_r_hand_str = "hopcap", slot_l_hand_str = "hopcap")
-	desc = "<i>Choo-choo</i>!"
+	desc = "<i>Чух-чух!</i>"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/plaguedoctorhat
-	name = "plague doctor's hat"
-	desc = "These were once used by Plague doctors. They're pretty much useless."
+	name = "шляпа чумного доктора"
+	desc = "Такие шляпы носили чумные докторы. Они так, для красоты."
 	icon_state = "plaguedoctor"
 	item_state_slots = list(slot_r_hand_str = "tophat", slot_l_hand_str = "tophat")
 	permeability_coefficient = 0.01
@@ -127,46 +127,46 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/head/hasturhood
-	name = "hastur's hood"
-	desc = "It's unspeakably stylish"
+	name = "капюшон Хастура"
+	desc = "Невыразимо стильный."
 	icon_state = "hasturhood"
 	item_state_slots = list(slot_r_hand_str = "enginering_beret", slot_l_hand_str = "enginering_beret")
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/head/nursehat
-	name = "nurse's hat"
-	desc = "It allows quick identification of trained medical personnel."
+	name = "головной убор медсестры"
+	desc = "Позволяет быстро опознать обученный медицинский персонал."
 	icon_state = "nursehat"
 	siemens_coefficient = 0.9
 	body_parts_covered = 0
 
 /obj/item/clothing/head/syndicatefake
-	name = "red space-helmet replica"
+	name = "муляжный красный шлем"
 	item_state_slots = list(slot_r_hand_str = "syndicate-helm-black-red", slot_l_hand_str = "syndicate-helm-black-red")
 	icon_state = "syndicate"
-	desc = "A plastic replica of a bloodthirsty mercenary's space helmet, you'll look just like a real murderous criminal operative in this! This is a toy, it is not made for use in space!"
+	desc = "Пластиковый поддельный космический шлем кровожадных наемников. Это лишь муляж, в космос в нём выходить не следует!"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	siemens_coefficient = 2.0
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/head/cueball
-	name = "cueball helmet"
-	desc = "A large, featureless white orb mean to be worn on your head. How do you even see out of this thing?"
+	name = "шлем-сфера"
+	desc = "Огромная неприметная сфера, которая надевается на голову. Что вообще в ней можно увидеть?"
 	icon_state = "cueball"
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/head/greenbandana
-	name = "green bandana"
-	desc = "It's a green bandana with some fine nanotech lining."
+	name = "зеленая бандана"
+	desc = "Зеленая бандана с искусно вышитой полосой."
 	icon_state = "greenbandana"
 	flags_inv = 0
 	body_parts_covered = 0
 
 /obj/item/clothing/head/cardborg
-	name = "cardborg helmet"
-	desc = "A helmet made out of a box."
+	name = "шлем картонного борга"
+	desc = "Шлем, изготовленный из коробки."
 	icon_state = "cardborg_h"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	body_parts_covered = HEAD|FACE|EYES
@@ -174,8 +174,8 @@
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
 /obj/item/clothing/head/justice
-	name = "justice hat"
-	desc = "fight for what's righteous!"
+	name = "головной убор справедливости"
+	desc = "Боритесь за правое дело!"
 	icon_state = "justicered" //Does this even exist?
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD|EYES
@@ -193,14 +193,14 @@
 	icon_state = "justicepink"
 
 /obj/item/clothing/head/rabbitears
-	name = "rabbit ears"
-	desc = "Wearing these makes you looks useless, and only good for your sex appeal."
+	name = "кроличьи ушки"
+	desc = "Делают носителя на вид абсолютно бесполезным, однако придают особый шарм."
 	icon_state = "bunny"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/flatcap
-	name = "flat cap"
-	desc = "A working man's cap."
+	name = "плоская кепка"
+	desc = "Кепка работяги."
 	icon_state = "flat_cap"
 	item_state_slots = list(slot_r_hand_str = "detective", slot_l_hand_str = "detective")
 	siemens_coefficient = 0.9 //...what?
@@ -211,27 +211,27 @@
 	item_state_slots = list(slot_r_hand_str = "greysoft", slot_l_hand_str = "greysoft")
 
 /obj/item/clothing/head/pirate
-	name = "pirate hat"
-	desc = "Yarr."
+	name = "пиратская шляпа"
+	desc = "Йо-хо-хо."
 	icon_state = "pirate"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/hgpiratecap
-	name = "pirate hat"
-	desc = "Yarr."
+	name = "пиратская шляпа"
+	desc = "Йо-хо-хо."
 	icon_state = "hgpiratecap"
 	item_state_slots = list(slot_r_hand_str = "hoscap", slot_l_hand_str = "hoscap")
 	body_parts_covered = 0
 
 /obj/item/clothing/head/bandana
-	name = "pirate bandana"
-	desc = "Yarr."
+	name = "пиратская бандана"
+	desc = "Йо-хо-хо."
 	icon_state = "bandana"
 	item_state_slots = list(slot_r_hand_str = "redbandana", slot_l_hand_str = "redbandana")
 
 /obj/item/clothing/head/bowler
-	name = "bowler-hat"
-	desc = "Gentleman, elite aboard!"
+	name = "котелок"
+	desc = "Клуб истинных джентльменов!"
 	icon_state = "bowler"
 	item_state_slots = list(slot_r_hand_str = "tophat", slot_l_hand_str = "tophat")
 	body_parts_covered = 0
@@ -239,109 +239,109 @@
 //stylish bs12 hats
 
 /obj/item/clothing/head/bowlerhat
-	name = "bowler hat"
+	name = "котелок"
 	icon_state = "bowler_hat"
 	item_state_slots = list(slot_r_hand_str = "tophat", slot_l_hand_str = "tophat")
-	desc = "For the gentleman of distinction."
+	desc = "Для исключительных джентльменов."
 	body_parts_covered = 0
 
 /obj/item/clothing/head/beaverhat
-	name = "beaver hat"
+	name = "бобровая шапка"
 	icon_state = "beaver_hat"
 	item_state_slots = list(slot_r_hand_str = "tophat", slot_l_hand_str = "tophat")
-	desc = "Soft felt makes this hat both comfortable and elegant."
+	desc = "Мягкий и теплый мех и согревает, и придает стиль."
 
 /obj/item/clothing/head/boaterhat
-	name = "boater hat"
+	name = "шляпа лодочника"
 	icon_state = "boater_hat"
 	item_state_slots = list(slot_r_hand_str = "tophat", slot_l_hand_str = "tophat")
-	desc = "The ultimate in summer fashion."
+	desc = "Последний писк летней моды."
 
 /obj/item/clothing/head/fedora
-	name = "fedora"
+	name = "федора"
 	icon_state = "fedora"
 	item_state_slots = list(slot_r_hand_str = "detective", slot_l_hand_str = "detective")
-	desc = "A sharp, stylish hat."
+	desc = "Стильный головной убор."
 
 /obj/item/clothing/head/fedora/brown
-	name = "fedora"
-	desc = "A brown fedora - either the cornerstone of a reporter's style or a poor attempt at looking cool, depending on the person wearing it."
+	name = "федора"
+	desc = "Коричневая федора. В зависимости от носителя, является либо последним писком детективной моды, либо убогой попыткой выглядеть круто."
 	icon_state = "detective"
 	allowed = list(/obj/item/weapon/reagent_containers/food/snacks/candy_corn, /obj/item/weapon/pen)
 
 /obj/item/clothing/head/fedora/grey
 	icon_state = "detective2"
 	item_state_slots = list(slot_r_hand_str = "detective", slot_l_hand_str = "detective")
-	desc = "A grey fedora - either the cornerstone of a reporter's style or a poor attempt at looking cool, depending on the person wearing it."
+	desc = "Серая федора. В зависимости от носителя, является либо последним писком детективной моды, либо убогой попыткой выглядеть круто."
 
 
 /obj/item/clothing/head/feathertrilby
-	name = "feather trilby"
+	name = "фетровая шляпа"
 	icon_state = "feather_trilby"
 	item_state_slots = list(slot_r_hand_str = "detective", slot_l_hand_str = "detective")
-	desc = "A sharp, stylish hat with a feather."
+	desc = "Стильная шляпа с пёрышком."
 
 /obj/item/clothing/head/fez
-	name = "fez"
+	name = "феска"
 	icon_state = "fez"
-	desc = "You should wear a fez. Fezzes are cool."
+	desc = "Всем стоит носить по феске. Они прикольные."
 
 /obj/item/clothing/head/cowboy_hat
-	name = "cowboy hat"
-	desc = "For those that have spurs that go jingle jangle jingle."
+	name = "ковбойская шляпа"
+	desc = "Для тех, у кого очень громкие шпоры."
 	icon_state = "cowboyhat"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/cowboy_hat/black
-	name = "black cowboy hat"
-	desc = "You can almost hear the old western music."
+	name = "черная ковбойская шляпа"
+	desc = "В ней порой мерещится старое кантри."
 	icon_state = "cowboy_black"
 
 /obj/item/clothing/head/cowboy_hat/wide
-	name = "wide-brimmed cowboy hat"
-	desc = "Because justice isn't going to dispense itself."
+	name = "широкая ковбойская шляпа"
+	desc = "Потому что справедливость сама себя не восстановит."
 	icon_state = "cowboy_wide"
 
 /obj/item/clothing/head/cowboy_hat/small
-	name = "small cowboy hat"
-	desc = "For the tiniest of cowboys."
+	name = "маленькая ковбойская шляпа"
+	desc = "Для самых крохотных ковбоев."
 	icon_state = "cowboy_small"
 
 /obj/item/clothing/head/witchwig
-	name = "witch costume wig"
-	desc = "Eeeee~heheheheheheh!"
+	name = "парик костюма ведьмы"
+	desc = "Ииииии~хихихихихихи!"
 	icon_state = "witch"
 	flags_inv = BLOCKHAIR
 	siemens_coefficient = 2.0
 
 /obj/item/clothing/head/chicken
-	name = "chicken suit head"
-	desc = "Bkaw!"
+	name = "голова куриного костюма"
+	desc = "Кудах!"
 	icon_state = "chickenhead"
 	flags_inv = BLOCKHAIR
 	siemens_coefficient = 0.7
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/head/bearpelt
-	name = "bear pelt hat"
-	desc = "Fuzzy."
+	name = "медвежья шапка"
+	desc = "Пушистая."
 	icon_state = "bearpelt"
 	item_state_slots = list(slot_r_hand_str = "beret_black", slot_l_hand_str = "beret_black")
 	flags_inv = BLOCKHAIR
 	siemens_coefficient = 0.7
 
 /obj/item/clothing/head/xenos
-	name = "xenos helmet"
+	name = "ксеноморфный шлем"
 	icon_state = "xenos"
 	item_state_slots = list(slot_r_hand_str = "xenos_helm", slot_l_hand_str = "xenos_helm")
-	desc = "A helmet made out of chitinous alien hide."
+	desc = "Изготовлен из инопланетной хитиновой шкуры."
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
 	siemens_coefficient = 2.0
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/head/philosopher_wig
-	name = "natural philosopher's wig"
-	desc = "A stylish monstrosity unearthed from Earth's Renaissance period. With this most distinguish'd wig, you'll be ready for your next soiree!"
+	name = "парик философа"
+	desc = "Модная катастрофа из эпохи Возрождения старой Земли. Неотъемлемый элемент философских дискуссий."
 	icon_state = "philosopher_wig"
 	item_state_slots = list(slot_r_hand_str = "pwig", slot_l_hand_str = "pwig")
 	flags_inv = BLOCKHAIR
@@ -349,14 +349,14 @@
 	body_parts_covered = 0
 
 /obj/item/clothing/head/orangebandana //themij: Taryn Kifer
-	name = "orange bandana"
-	desc = "An orange piece of cloth, worn on the head."
+	name = "оранжевая бандана"
+	desc = "Оранжевая ткань, предназначенная для ношения на голове."
 	icon_state = "orange_bandana"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/hijab
-	name = "hijab"
-	desc = "A veil that is wrapped to cover the head and chest"
+	name = "хиджаб"
+	desc = "Используется для прикрытия головы и груди."
 	icon_state = "hijab"
 	addblends = "hijab_a"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
@@ -364,15 +364,15 @@
 	flags_inv = BLOCKHAIR
 
 /obj/item/clothing/head/kippa
-	name = "kippa"
-	desc = "A small, brimless cap."
+	name = "ермолка"
+	desc = "Небольшой головной убор без полей."
 	icon_state = "kippa"
 	addblends = "kippa_a"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/turban
-	name = "turban"
-	desc = "A cloth used to wind around the head"
+	name = "тюрбан"
+	desc = "Кусок ткани, обмотанный вокруг головы."
 	icon_state = "turban"
 	addblends = "turban_a"
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
@@ -380,75 +380,75 @@
 	flags_inv = BLOCKHEADHAIR
 
 /obj/item/clothing/head/taqiyah
-	name = "taqiyah"
-	desc = "A short, rounded skullcap usually worn for religious purposes."
+	name = "тафья"
+	desc = "Плоская круглая шапочка, плотно закрывающая макушку."
 	icon_state = "taqiyah"
 	addblends = "taqiyah_a"
 	item_state_slots = list(slot_r_hand_str = "taq", slot_l_hand_str = "taq")
 
 /obj/item/clothing/head/beanie
-	name = "beanie"
-	desc = "A head-hugging brimless winter cap. This one is tight."
+	name = "шапка"
+	desc = "Теплая зимняя шапка без полей. Эта плотно прилегает к голове."
 	icon_state = "beanie"
 	addblends = "beanie_a"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/beanie_loose
-	name = "loose beanie"
-	desc = "A head-hugging brimless winter cap. This one is loose."
+	name = "свисающая шапка"
+	desc = "Теплая зимняя шапка без полей. Эта свисает с головы."
 	icon_state = "beanie_hang"
 	addblends = "beanie_hang_a"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/beretg
-	name = "beret"
-	desc = "A beret, an artists favorite headwear."
+	name = "берет"
+	desc = "Берет: излюбленный художниками головной убор."
 	icon_state = "beret_g"
 	addblends = "beret_g_a"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/sombrero
-	name = "sombrero"
-	desc = "A wide-brimmed hat popularly worn in Mexico."
+	name = "сомбреро"
+	desc = "Головной убор с широкими полями, популярный в Мексике."
 	icon_state = "sombrero"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/headband/maid
-	name = "maid headband"
-	desc = "Keeps hair out of the way for important... jobs."
+	name = "повязка горничной"
+	desc = "Благодаря этой повязке волосы не мешаются во время оказания... услуг."
 	icon_state = "maid"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/maangtikka
-	name = "maang tikka"
-	desc = "A jeweled headpiece originating in India."
+	name = "манг тикка"
+	desc = "Индийский аксессуар, инкрустированный самоцветами."
 	icon_state = "maangtikka"
 	body_parts_covered = 0
 	drop_sound = 'sound/items/drop/ring.ogg'
 	pickup_sound = 'sound/items/pickup/ring.ogg'
 
 /obj/item/clothing/head/jingasa
-	name = "jingasa"
-	desc = "A wide, flat rain hat originally from Japan."
+	name = "дзингаса"
+	desc = "Широкая плоская шляпа из Японии, прикрывающая от дождя."
 	icon_state = "jingasa"
 	body_parts_covered = 0
 	item_state_slots = list(slot_r_hand_str = "taq", slot_l_hand_str = "taq")
 
 /obj/item/clothing/head/cowl
-	name = "black cowl"
-	desc = "A gold-lined black cowl. It gives off uncomfortable cult vibes, but fancy."
+	name = "черный капюшон"
+	desc = "Черный капюшон с золотым обрамлением. От него отдает культом, но смотрится он стильно."
 	icon_state = "cowl"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/cowl
-	name = "white cowl"
-	desc = "A gold-lined white cowl. It gives off uncomfortable cult vibes, but fancy."
+	name = "белый капюшон"
+	desc = "Белый капюшон с золотым обрамлением. От него отдает культом, но смотрится он стильно."
 	icon_state = "whitecowl"
 	body_parts_covered = 0
 
 /obj/item/clothing/head/blackngoldheaddress
-	name = "black and gold headdress"
-	desc = "An odd looking headdress that covers the eyes."
+	name = "черно-золотая тиара"
+	desc = "Очень странная тиара, которая каким-то образом даже закрывает глаза."
 	icon_state = "blackngoldheaddress"
 	flags_inv = HIDEEYES
 	body_parts_covered = HEAD|EYES

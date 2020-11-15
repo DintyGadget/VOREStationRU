@@ -1,7 +1,7 @@
 // Collars
 
 /datum/gear/choker //A colorable choker
-	display_name = "choker (colorable, tagless)"
+	display_name = "Чокер (окрашиваемый, без бирки)"
 	path = /obj/item/clothing/accessory/choker
 	slot = slot_tie
 	sort_category = "Аксессуары"
@@ -11,7 +11,7 @@
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/collar
-	display_name = "collar, silver"
+	display_name = "Ошейник, серебряный"
 	path = /obj/item/clothing/accessory/collar/silver
 	slot = slot_tie
 	sort_category = "Аксессуары"
@@ -21,87 +21,87 @@
 	gear_tweaks += gear_tweak_collar_tag
 
 /datum/gear/collar/golden
-	display_name = "collar, golden"
+	display_name = "Ошейник, золотой"
 	path = /obj/item/clothing/accessory/collar/gold
 
 /datum/gear/collar/bell
-	display_name = "collar, bell"
+	display_name = "Ошейник, с колокольчиком"
 	path = /obj/item/clothing/accessory/collar/bell
 
 /datum/gear/collar/shock
-	display_name = "collar, shock"
+	display_name = "Ошейник, электрический"
 	path = /obj/item/clothing/accessory/collar/shock
 
 /datum/gear/collar/spike
-	display_name = "collar, spike"
+	display_name = "Ошейник, шипованный"
 	path = /obj/item/clothing/accessory/collar/spike
 
 /datum/gear/collar/pink
-	display_name = "collar, pink"
+	display_name = "Ошейник, розовый"
 	path = /obj/item/clothing/accessory/collar/pink
 
 /datum/gear/collar/holo
-	display_name = "collar, holo"
+	display_name = "Ошейник, голографический"
 	path = /obj/item/clothing/accessory/collar/holo
 
 //TFF 17/6/19 - public loadout addition: Indigestible Holocollar
 /datum/gear/collar/holo/indigestible
-	display_name = "collar, holo (indigestible)"
+	display_name = "Ошейник, неперевариваемый"
 	path = /obj/item/clothing/accessory/collar/holo/indigestible
 
 /datum/gear/accessory/holster
-	display_name = "holster selection (Security, SM, HoP, Exploration)"
-	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава безопасности","Детектив","Искатель","Первопроходец")
+	display_name = "Кобура, выбор (СБ, ДК, ГП, Иск)"
+	allowed_roles = list("Директор колонии", "Глава персонала", "Офицер безопасности", "Надзиратель", "Глава службы безопасности","Детектив","Искатель","Первопроходец")
 
 /datum/gear/accessory/brown_vest
-	display_name = "webbing, brown (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик","Химик","Военврач","Искатель","Первопроходец","Шахтер")
+	display_name = "Жилет из лямок, коричневый (Инж, СБ, Мед, Иск, Шахт)"
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач","Химик","Военврач","Искатель","Первопроходец","Шахтёр")
 
 /datum/gear/accessory/black_vest
-	display_name = "webbing, black (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик","Химик","Военврач","Искатель","Первопроходец","Шахтер")
+	display_name = "Жилет из лямок, черный (Инж, СБ, Мед, Иск, Шахт)"
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач","Химик","Военврач","Искатель","Первопроходец","Шахтёр")
 
 /datum/gear/accessory/white_vest
-	display_name = "webbing, white (Medical)"
-	allowed_roles = list("Парамедик","Главврач","Медик","Химик","Военврач")
+	display_name = "Жилет из лямок, белый (Мед)"
+	allowed_roles = list("Парамедик","Главврач","Врач","Химик","Военврач")
 
 /datum/gear/accessory/brown_drop_pouches
-	display_name = "drop pouches, brown (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик","Химик","Военврач","Искатель","Первопроходец","Шахтер")
+	display_name = "Сумочки, коричневые (Инж, СБ, Мед, Иск, Шахт)"
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач","Химик","Военврач","Искатель","Первопроходец","Шахтёр")
 
 /datum/gear/accessory/black_drop_pouches
-	display_name = "drop pouches, black (Eng, Sec, Med, Exploration, Miner)"
-	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава безопасности","Надзиратель","Парамедик","Главврач","Медик","Химик","Военврач","Искатель","Первопроходец","Шахтер")
+	display_name = "Сумочки, черные (Инж, СБ, Мед, Иск, Шахт)"
+	allowed_roles = list("Инженер","Атмосферный техник","Главный инженер","Офицер безопасности","Детектив","Глава службы безопасности","Надзиратель","Парамедик","Главврач","Врач","Химик","Военврач","Искатель","Первопроходец","Шахтёр")
 
 /datum/gear/accessory/white_drop_pouches
-	display_name = "drop pouches, white (Medical)"
-	allowed_roles = list("Парамедик","Главврач","Медик","Химик","Военврач")
+	display_name = "Сумочки, белые (Мед)"
+	allowed_roles = list("Парамедик","Главврач","Врач","Химик","Военврач")
 
 /datum/gear/accessory/webbing
 	cost = 1
 
 /datum/gear/accessory/stethoscope
-	allowed_roles = list("Главврач","Медик","Химик","Психиатр","Парамедик", "Военврач")
+	allowed_roles = list("Главврач","Врач","Химик","Психиатр","Парамедик", "Военврач")
 
 /datum/gear/accessory/khcrystal
-	display_name = "KH Life Crystal"
+	display_name = "Жизненный кристалл KH"
 	path = /obj/item/weapon/storage/box/khcrystal
-	description = "A small necklace device that will notify an offsite cloning facility should you expire after activating it."
+	description = "Небольшой девайс, встроенный в кулон, при активации уведомляющий о Вашей кончине стороннюю лабораторию клонирования."
 
 /datum/gear/accessory/tronket
-	display_name = "metal necklace"
-	description = "A shiny steel chain with a vague metallic object dangling off it."
+	display_name = "Металлический кулон"
+	description = "Блестящая стальная цепь, на которой висит металлический объект."
 	path = /obj/item/clothing/accessory/tronket
 
 /datum/gear/accessory/pilotpin
-	display_name = "pilot qualification pin"
-	description = "An iron pin denoting the qualification to fly SCG spacecraft."
+	display_name = "Значок квалифицированного пилота"
+	description = "Железный значок, выдаваемый квалифицированным пилотам."
 	path = /obj/item/clothing/accessory/solgov/specialty/pilot
 	allowed_roles = list("Первопроходец", "Пилот", "Военврач")
 
 /datum/gear/accessory/flops
-	display_name = "drop straps"
-	description = "Wearing suspenders over shoulders? That's been so out for centuries and you know better."
+	display_name = "Лямки по бокам"
+	description = "Подтяжки через плечи? Это уже несколько веков не в моде, и Вы выше этого."
 	path = /obj/item/clothing/accessory/flops
 
 /datum/gear/accessory/flops/New()

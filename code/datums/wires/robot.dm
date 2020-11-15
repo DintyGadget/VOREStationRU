@@ -2,7 +2,7 @@
 	randomize = TRUE
 	holder_type = /mob/living/silicon/robot
 	wire_count = 5
-	proper_name = "Cyborg"
+	proper_name = "Киборг"
 
 /datum/wires/robot/New(atom/_holder)
 	wires = list(WIRE_AI_CONTROL, WIRE_BORG_CAMERA, WIRE_BORG_LAWCHECK, WIRE_BORG_LOCKED)

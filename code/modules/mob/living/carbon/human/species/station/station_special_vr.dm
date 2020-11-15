@@ -6,7 +6,7 @@
 
 /datum/species/xenochimera //Scree's race.
 	name = SPECIES_XENOCHIMERA
-	name_plural = "Xenochimeras"
+	name_plural = "Ксенохимеры"
 	icobase = 'icons/mob/human_races/r_xenochimera.dmi'
 	deform = 'icons/mob/human_races/r_def_xenochimera.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -14,11 +14,11 @@
 	slowdown = -0.2		//scuttly, but not as scuttly as a tajara or a teshari.
 	brute_mod = 0.8		//About as tanky to brute as a Unathi. They'll probably snap and go feral when hurt though.
 	burn_mod =  1.15	//As vulnerable to burn as a Tajara.
-	base_species = "Xenochimera"
+	base_species = "Ксенохимера"
 	selects_bodytype = TRUE
 
 	num_alternate_languages = 2
-	secondary_langs = list("Sol Common")
+	secondary_langs = list("Сольский Общий")
 	//color_mult = 1 //It seemed to work fine in testing, but I've been informed it's unneeded.
 	tail = "tail" //Scree's tail. Can be disabled in the vore tab by choosing "hide species specific tail sprite"
 	icobase_tail = 1
@@ -38,9 +38,9 @@
 	min_age = 18
 	max_age = 80
 
-	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
-	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
-	Most, if not all chimeras possess the ability to undergo some type of regeneration process, at the cost of energy."
+	blurb = "Амальгамация различных видов со всей вселенной с крайне нестабильной ДНК, в связи с чем клонированию они не подлежат. \
+	Широко известны за свой хищнический образ жизни и склонности к насилию, проявляющиеся при длительном недостатке питания или стрессе. \
+	Большинство (если не все) ксенохимеры обладают способностью к какому-нибудь виду процесса регенерации ценой собственной энергии."
 
 	wikilink = "https://wiki.vore-station.net/Xenochimera"
 
@@ -360,7 +360,7 @@
 /////////////////////
 /datum/species/spider //These actually look pretty damn spooky!
 	name = SPECIES_VASILISSAN
-	name_plural = "Vasilissans"
+	name_plural = "Василиссаны"
 	icobase = 'icons/mob/human_races/r_spider.dmi'
 	deform = 'icons/mob/human_races/r_def_spider.dmi'
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp)
@@ -381,11 +381,10 @@
 	min_age = 18
 	max_age = 80
 
-	blurb = "Vasilissans are a tall, lanky, spider like people. \
-	Each having four eyes, an extra four, large legs sprouting from their back, and a chitinous plating on their body, and the ability to spit webs \
-	from their mandible lined mouths.  They are a recent discovery by Nanotrasen, only being discovered roughly seven years ago.  \
-	Before they were found they built great cities out of their silk, being united and subjugated in warring factions under great Star Queens  \
-	Who forced the working class to build huge, towering cities to attempt to reach the stars, which they worship as gems of great spiritual and magical significance."
+	blurb = "Василиссаны -- высокие паукоподобные люди. У каждого по четыре глаза, и ещё по четыре, а также большие ножки, растущие из спины. \
+	Их тела покрыты хитином, а сами они обладают способностью плести в своём рту паутину. NanoTrasen обнаружили эту расу всего семь лет назад. \
+	До своего обнаружения василиссаны строили величественные города из своего шёлка, объединенные и разделенные на воюющие фракциии под правлением Звездных Королев, \
+	что принуждали рабочий класс строить возвышающиеся города в попытке достичь звезды, почитаемые как самоцветы высокой духовной и магической значимости."
 
 	wikilink = "https://wiki.vore-station.net/Vasilissans"
 
@@ -426,7 +425,7 @@
 
 /datum/species/werebeast
 	name = SPECIES_WEREBEAST
-	name_plural = "Werebeasts"
+	name_plural = "Оборотни"
 	icobase = 'icons/mob/human_races/r_werebeast.dmi'
 	deform = 'icons/mob/human_races/r_def_werebeast.dmi'
 	icon_template = 'icons/mob/human_races/r_werebeast.dmi'
@@ -443,14 +442,14 @@
 	num_alternate_languages = 3
 	secondary_langs = list(LANGUAGE_CANILUNZT)
 	name_language = LANGUAGE_CANILUNZT
-	primitive_form = "Wolpin"
+	primitive_form = "Вольпин"
 	color_mult = 1
 	icon_height = 64
 
 	min_age = 18
 	max_age = 200
 
-	blurb = "Big buff werewolves. These are a limited functionality event species that are not balanced for regular gameplay. Adminspawn only."
+	blurb = "Большие мускулистые оборотни. Недоработаны и не сбалансированы для нормальной игры. Спавнятся админами."
 
 	wikilink="N/A"
 

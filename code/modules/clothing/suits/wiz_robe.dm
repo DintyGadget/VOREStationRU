@@ -1,6 +1,6 @@
 /obj/item/clothing/head/wizard
-	name = "wizard hat"
-	desc = "Strange-looking hat-wear that most certainly belongs to a real magic user."
+	name = "шляпа волшебника"
+	desc = "Причудливая шляпа, абсолютно точно принадлежащая настояющему волшебник."
 	icon_state = "wizard"
 	//Not given any special protective value since the magic robes are full-body protection --NEO
 	siemens_coefficient = 0.8
@@ -14,8 +14,8 @@
 	siemens_coefficient = 0.8
 
 /obj/item/clothing/head/wizard/fake
-	name = "wizard hat"
-	desc = "It has WIZZARD written across it in sequins. Comes with a cool beard."
+	name = "шляпа волшебника"
+	desc = "На ней вышито: МАГГГ. В комплекте классная борода."
 	icon_state = "wizard-fake"
 	body_parts_covered = HEAD|FACE
 
@@ -46,8 +46,8 @@
 	siemens_coefficient = 0.8
 
 /obj/item/clothing/suit/wizrobe
-	name = "wizard robe"
-	desc = "A magnificant, gem-lined robe that seems to radiate power."
+	name = "мантия волшебника"
+	desc = "Великолепная роба, украшенная самоцветами, от которой так и тянет силой."
 	icon_state = "wizard"
 	gas_transfer_coefficient = 0.01 // IT'S MAGICAL OKAY JEEZ +1 TO NOT DIE
 	permeability_coefficient = 0.01
@@ -93,8 +93,8 @@
 	flags_inv = HIDETIE|HIDEHOLSTER
 
 /obj/item/clothing/suit/wizrobe/fake
-	name = "wizard robe"
-	desc = "A rather dull, blue robe meant to mimick real wizard robes."
+	name = "мантия волшебника"
+	desc = "Скудноватая синия мантия, имитирующая робы настоящих волшебников."
 	icon_state = "wizard-fake"
 	item_state_slots = list(slot_r_hand_str = "wizard", slot_l_hand_str = "wizard")
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)

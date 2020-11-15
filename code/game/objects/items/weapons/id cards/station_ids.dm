@@ -211,8 +211,8 @@
 	icon_state = "secGold"
 	primary_color = rgb(189,47,0)
 	secondary_color = rgb(255,223,127)
-	assignment = "Глава безопасности"
-	rank = "Глава безопасности"
+	assignment = "Глава службы безопасности"
+	rank = "Глава службы безопасности"
 
 /obj/item/weapon/card/id/engineering
 	name = "identification card"
@@ -259,8 +259,8 @@
 	icon_state = "cargoGold"
 	primary_color = rgb(142,94,0)
 	secondary_color = rgb(255,223,127)
-	assignment = "Интендант"
-	rank = "Интендант"
+	assignment = "Квартирмейстер"
+	rank = "Квартирмейстер"
 
 /obj/item/weapon/card/id/assistant
 	assignment = USELESS_JOB //VOREStation Edit - Visitor not Assistant
@@ -272,7 +272,7 @@
 	icon_state = "civ"
 	primary_color = rgb(0,94,142)
 	secondary_color = rgb(95,159,191)
-	assignment = "Civilian"
+	assignment = "Гражданские"
 	rank = "Ассистент"
 
 /obj/item/weapon/card/id/civilian/head //This is not the HoP. There's no position that uses this right now.

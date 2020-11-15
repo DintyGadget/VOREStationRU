@@ -59,7 +59,7 @@
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])
-		var/new_size = input(user, "Выберите размер Вашего персонажа в пределах от 50% до 200%", "Set Size") as num|null
+		var/new_size = input(user, "Выберите размер Вашего персонажа в пределах от 50% до 200%", "Установка Размера") as num|null
 		if (!ISINRANGE(new_size,50,200))
 			pref.size_multiplier = 1
 			to_chat(user, "<span class='notice'>Недопустимый размер.</span>")
@@ -75,14 +75,14 @@
 	else if(href_list["weight"])
 		var/new_weight = input(user, "Выберите относительную массу тела Вашего персонажа.\n\
 			Это измерение должно быть установлено относительно тела обычного человека ростом 175 см, а не фактического размера вашего персонажа.\n\
-			Если Вы установите свой вес на 500, потому что Вы нага или у Вас металлические имплантаты, и начнёте жаловаться на то, что не можете ходить, клянусь богом,\n\
-			я найду Вас и вмажу Вас за то, что не прочитали инструкцию!\n\
-			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference") as num|null
+			Если Вы установите свой вес на 500, потому что Вы нага или у Вас металлические имплантанты, и начнёте жаловаться на то, что не можете ходить, клянусь богом,\n\
+			я найду Вас и вмажу Вам за то, что не прочитали инструкцию!\n\
+			([WEIGHT_MIN]-[WEIGHT_MAX])", "Изменение Персонажа") as num|null
 		if(new_weight)
-			var/unit_of_measurement = alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", "Pounds", "Kilograms")
-			if(unit_of_measurement == "Pounds")
+			var/unit_of_measurement = alert(user, "Это в фунтах или килограммах?", "Подтверждение", "Фунты", "Килограммы")
+			if(unit_of_measurement == "Фунты")
 				new_weight = round(text2num(new_weight),4)
-			if(unit_of_measurement == "Kilograms")
+			if(unit_of_measurement == "Килограммы")
 				new_weight = round(2.20462*text2num(new_weight),4)
 			pref.weight_vr = sanitize_integer(new_weight, WEIGHT_MIN, WEIGHT_MAX, pref.weight_vr)
 			return TOPIC_REFRESH
@@ -91,7 +91,7 @@
 		var/weight_gain_rate = input(user, "Выберите скорость набора веса Вашим персонажем \
 			от 100% (реалистично) до 0% (не набирается).\n\
 			(для отключения, выставьте 0.01, округлится до 0)\
-			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference") as num|null
+			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Изменение Персонажаe") as num|null
 		if(weight_gain_rate)
 			pref.weight_gain = round(text2num(weight_gain_rate),1)
 			return TOPIC_REFRESH
@@ -100,7 +100,7 @@
 		var/weight_loss_rate = input(user, "Выберите скорость потери веса Вами персонажем \
 			от 100% (реалистично) до 0% (нет потери).\n\
 			(для отключения, выставьте 0.01,округлится до 0)\
-			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Character Preference") as num|null
+			([WEIGHT_CHANGE_MIN]-[WEIGHT_CHANGE_MAX])", "Изменение Персонажа") as num|null
 		if(weight_loss_rate)
 			pref.weight_loss = round(text2num(weight_loss_rate),1)
 			return TOPIC_REFRESH

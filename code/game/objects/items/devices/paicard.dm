@@ -1,7 +1,7 @@
 GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 
 /obj/item/device/paicard
-	name = "personal AI device"
+	name = "персональный ИИ"
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pai"
 	item_state = "electronic"
@@ -38,11 +38,11 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 	if(pai != null) //Have a person in them already?
 		return ..()
 
-	var/choice = input(user, "You sure you want to inhabit this PAI?") in list("Yes", "No")
-	if(choice == "No")
+	var/choice = input(user, "Вы точно хотите поселиться в этом пИИ?") in list("Да", "Нет")
+	if(choice == "Нет")
 		return ..()
 
-	var/pai_name = input(user, "Choose your character's name", "Character Name") as text
+	var/pai_name = input(user, "Выберите имя своего персонажа", "Имя Персонажа") as text
 	var/actual_pai_name = sanitize_name(pai_name)
 	if(isnull(actual_pai_name))
 		return ..()
@@ -159,18 +159,18 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 
 	if(pai)
 		dat += {"
-			<b><font size='3px'>Personal AI Device</font></b><br><br>
+			<b><font size='3px'>Персональный ИИ</font></b><br><br>
 			<table class="request">
 				<tr>
-					<td class="request">Installed Personality:</td>
+					<td class="request">Установленная личность:</td>
 					<td>[pai.name]</td>
 				</tr>
 				<tr>
-					<td class="request">Prime directive:</td>
+					<td class="request">Основная директива:</td>
 					<td>[pai.pai_law0]</td>
 				</tr>
 				<tr>
-					<td class="request">Additional directives:</td>
+					<td class="request">Второстепенные директивы:</td>
 					<td>[pai.pai_laws]</td>
 				</tr>
 			</table>
@@ -179,7 +179,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 		dat += {"
 			<table>
 				<td class="button">
-					<a href='byond://?src=\ref[src];setlaws=1' class='button'>Configure Directives</a>
+					<a href='byond://?src=\ref[src];setlaws=1' class='button'>Конфигурация директив</a>
 				</td>
 			</table>
 		"}
@@ -187,23 +187,23 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 			dat += {"
 				<table>
 					<td class="button">
-						<a href='byond://?src=\ref[src];setdna=1' class='button'>Imprint Master DNA</a>
+						<a href='byond://?src=\ref[src];setdna=1' class='button'>Отпечатать ДНК источника</a>
 					</td>
 				</table>
 			"}
 		dat += "<br>"
 		if(radio)
-			dat += "<b>Radio Uplink</b>"
+			dat += "<b>Канал связи радио</b>"
 			dat += {"
 				<table class="request">
 					<tr>
-						<td class="radio">Transmit:</td>
+						<td class="radio">Передача:</td>
 						<td><a href='byond://?src=\ref[src];wires=4'>[radio.broadcasting ? "<font color=#55FF55>En" : "<font color=#FF5555>Dis" ]abled</font></a>
 
 						</td>
 					</tr>
 					<tr>
-						<td class="radio">Receive:</td>
+						<td class="radio">Прием:</td>
 						<td><a href='byond://?src=\ref[src];wires=2'>[radio.listening ? "<font color=#55FF55>En" : "<font color=#FF5555>Dis" ]abled</font></a>
 
 						</td>
@@ -212,11 +212,11 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 				<br>
 			"}
 		else //</font></font>
-			dat += "<b>Radio Uplink</b><br>"
-			dat += "<font color=red><i>Radio firmware not loaded. Please install a pAI personality to load firmware.</i></font><br>"
+			dat += "<b>Канал связи радио</b><br>"
+			dat += "<font color=red><i>Программное обеспечение радио не установлено. Пожалуйста, установите личность пИИ для загрузки ПО.</i></font><br>"
 		dat += {"
 			<table>
-				<td class="button_red"><a href='byond://?src=\ref[src];wipe=1' class='button'>Wipe current pAI personality</a>
+				<td class="button_red"><a href='byond://?src=\ref[src];wipe=1' class='button'>Стереть текущую личность пИИ.</a>
 
 				</td>
 			</table>
@@ -224,30 +224,30 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 	else
 		if(looking_for_personality)
 			dat += {"
-				<b><font size='3px'>pAI Request Module</font></b><br><br>
-				<p>Requesting AI personalities from central database... If there are no entries, or if a suitable entry is not listed, check again later as more personalities may be added.</p>
-				<img src='loading.gif' /> Searching for personalities<br><br>
+				<b><font size='3px'>Модуль запроса пИИ</font></b><br><br>
+				<p>Запрашиваем личности ИИ из центральной базы данных... если записи в базе отсутствуют, или не отображена подходящая запись, повторите попытку позже, т.к. могут быть загружены дополнительные личности.</p>
+				<img src='loading.gif' /> Ищем личности...<br><br>
 
 				<table>
 					<tr>
 						<td class="button">
-							<a href='byond://?src=\ref[src];request=1' class="button">Refresh available personalities</a>
+							<a href='byond://?src=\ref[src];request=1' class="button">Обновить доступные личности</a>
 						</td>
 					</tr>
 				</table><br>
 			"}
 		else
 			dat += {"
-				<b><font size='3px'>pAI Request Module</font></b><br><br>
-			    <p>No personality is installed.</p>
+				<b><font size='3px'>Модуль запроса пИИ</font></b><br><br>
+			    <p>Личность не загружена.</p>
 				<table>
 					<tr>
-						<td class="button"><a href='byond://?src=\ref[src];request=1' class="button">Request personality</a>
+						<td class="button"><a href='byond://?src=\ref[src];request=1' class="button">Запросить личность</a>
 						</td>
 					</tr>
 				</table>
 				<br>
-				<p>Each time this button is pressed, a request will be sent out to any available personalities. Check back often give plenty of time for personalities to respond. This process could take anywhere from 15 seconds to several minutes, depending on the available personalities' timeliness.</p>
+				<p>Каждое нажатие этой кнопки отправляет запрос доступным личностям. Ответ на запрос занимает в среднем от 15 секунд до нескольких минут.</p>
 			"}
 	user << browse(dat, "window=paicard")
 	onclose(user, "paicard")
@@ -263,23 +263,23 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 			return
 		var/mob/M = usr
 		if(!istype(M, /mob/living/carbon))
-			to_chat(usr, "<font color=blue>You don't have any DNA, or your DNA is incompatible with this device.</font>")
+			to_chat(usr, "<font color=blue>У Вас отсутствует ДНК, либо Ваше ДНК не совместимо с этим девайсом.</font>")
 		else
 			var/datum/dna/dna = usr.dna
 			pai.master = M.real_name
 			pai.master_dna = dna.unique_enzymes
-			to_chat(pai, "<font color = red><h3>You have been bound to a new master.</h3></font>")
+			to_chat(pai, "<font color = red><h3>Вы были привязаны к мастеру.</h3></font>")
 	if(href_list["request"])
 		src.looking_for_personality = 1
 		paiController.findPAI(src, usr)
 	if(href_list["wipe"])
-		var/confirm = input("Are you CERTAIN you wish to delete the current personality? This action cannot be undone.", "Personality Wipe") in list("Yes", "No")
-		if(confirm == "Yes")
+		var/confirm = input("Вы УВЕРЕНЫ, что хотите удалить текущую личность? Это действие невозможно отменить.", "Деинсталляция Личности") in list("Да", "Нет")
+		if(confirm == "Да")
 			for(var/mob/M in src)
-				to_chat(M, "<font color = #ff0000><h2>You feel yourself slipping away from reality.</h2></font>")
-				to_chat(M, "<font color = #ff4d4d><h3>Byte by byte you lose your sense of self.</h3></font>")
-				to_chat(M, "<font color = #ff8787><h4>Your mental faculties leave you.</h4></font>")
-				to_chat(M, "<font color = #ffc4c4><h5>oblivion... </h5></font>")
+				to_chat(M, "<font color = #ff0000><h2>Вы чувствуете, как реальность ускользает от Вас...</h2></font>")
+				to_chat(M, "<font color = #ff4d4d><h3>Байт за байтом, Вы теряете чувство самоосознания.</h3></font>")
+				to_chat(M, "<font color = #ff8787><h4>Вашы мысли Вас покидают.</h4></font>")
+				to_chat(M, "<font color = #ffc4c4><h5>забвение... </h5></font>")
 				M.death(0)
 			removePersonality()
 	if(href_list["wires"])
@@ -290,12 +290,12 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 			if(2)
 				radio.ToggleReception()
 	if(href_list["setlaws"])
-		var/newlaws = sanitize(input("Enter any additional directives you would like your pAI personality to follow. Note that these directives will not override the personality's allegiance to its imprinted master. Conflicting directives will be ignored.", "pAI Directive Configuration", pai.pai_laws) as message)
+		var/newlaws = sanitize(input("Введите любые дополнительные законы, которым обязан следовать Ваш пИИ. Учтите, что эти законы не выше принадлежности пИИ к мастеру. Конфликтующие директивы будут проигнорированы.", "Конфигурация Директив пИИ", pai.pai_laws) as message)
 		if(newlaws)
 			pai.pai_laws = newlaws
-			to_chat(pai, "Your supplemental directives have been updated. Your new directives are:")
-			to_chat(pai, "Prime Directive: <br>[pai.pai_law0]")
-			to_chat(pai, "Supplemental Directives: <br>[pai.pai_laws]")
+			to_chat(pai, "Ваши второстепенные директивы были обновлены. Ваши новые директивы:")
+			to_chat(pai, "Основная директива: <br>[pai.pai_law0]")
+			to_chat(pai, "Второстепенные директивы: <br>[pai.pai_laws]")
 	attack_self(usr)
 
 // 		WIRE_SIGNAL = 1
@@ -337,7 +337,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/device/paicard)
 /obj/item/device/paicard/proc/alertUpdate()
 	var/turf/T = get_turf_or_move(src.loc)
 	for (var/mob/M in viewers(T))
-		M.show_message("<span class='notice'>\The [src] flashes a message across its screen, \"Additional personalities available for download.\"</span>", 3, "<span class='notice'>\The [src] bleeps electronically.</span>", 2)
+		M.show_message("<span class='notice'>На пИИ мигает сообщение, \"Новые личности доступны для загрузки.\"</span>", 3, "<span class='notice'>пИИ издаёт электронное пиканье.</span>", 2)
 
 /obj/item/device/paicard/emp_act(severity)
 	for(var/mob/M in src)

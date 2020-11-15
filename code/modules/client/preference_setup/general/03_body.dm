@@ -224,47 +224,47 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 		switch(name)
 			if(BP_TORSO)
-				organ_name = "torso"
+				organ_name = "торс"
 			if(BP_GROIN)
-				organ_name = "groin"
+				organ_name = "пах"
 			if(BP_HEAD)
-				organ_name = "head"
+				organ_name = "голова"
 			if(BP_L_ARM)
-				organ_name = "left arm"
+				organ_name = "левая рука"
 			if(BP_R_ARM)
-				organ_name = "right arm"
+				organ_name = "правая рука"
 			if(BP_L_LEG)
-				organ_name = "left leg"
+				organ_name = "левая нога"
 			if(BP_R_LEG)
-				organ_name = "right leg"
+				organ_name = "правая нога"
 			if(BP_L_FOOT)
-				organ_name = "left foot"
+				organ_name = "левая стопа"
 			if(BP_R_FOOT)
-				organ_name = "right foot"
+				organ_name = "правая стопа"
 			if(BP_L_HAND)
-				organ_name = "left hand"
+				organ_name = "левая кисть"
 			if(BP_R_HAND)
-				organ_name = "right hand"
+				organ_name = "правая кисть"
 			if(O_HEART)
-				organ_name = "heart"
+				organ_name = "сердце"
 			if(O_EYES)
-				organ_name = "eyes"
+				organ_name = "глаза"
 			if(O_VOICE)
-				organ_name = "larynx"
+				organ_name = "гортань"
 			if(O_BRAIN)
-				organ_name = "brain"
+				organ_name = "мозг"
 			if(O_LUNGS)
-				organ_name = "lungs"
+				organ_name = "легкие"
 			if(O_LIVER)
-				organ_name = "liver"
+				organ_name = "печень"
 			if(O_KIDNEYS)
-				organ_name = "kidneys"
+				organ_name = "почки"
 			if(O_SPLEEN)
-				organ_name = "spleen"
+				organ_name = "селезенка"
 			if(O_STOMACH)
-				organ_name = "stomach"
+				organ_name = "живот"
 			if(O_INTESTINE)
-				organ_name = "intestines"
+				organ_name = "кишечник"
 
 		if(status == "cyborg")
 			++ind
@@ -362,7 +362,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	. += "<b>Допустить особенности тела для синтов:</b> <a href='?src=\ref[src];synth_markings=1'><b>[pref.synth_markings ? "Да" : "Нет"]</b></a><br>"
 	. += "<b>Допустиь выбор цвета для синтов:</b> <a href='?src=\ref[src];synth_color=1'><b>[pref.synth_color ? "Да" : "Нет"]</b></a><br>"
 	if(pref.synth_color)
-		. += "<a href='?src=\ref[src];synth2_color=1'>Изм. цвет</a> [color_square(pref.r_synth, pref.g_synth, pref.b_synth)]"
+		. += "<a href='?src=\ref[src];synth2_color=1'>Изменить цвет</a> [color_square(pref.r_synth, pref.g_synth, pref.b_synth)]"
 
 	. = jointext(.,null)
 
@@ -381,13 +381,13 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/desc_id = href_list["change_descriptor"]
 			if(pref.body_descriptors[desc_id])
 				var/datum/mob_descriptor/descriptor = mob_species.descriptors[desc_id]
-				var/choice = input("Please select a descriptor.", "Descriptor") as null|anything in descriptor.chargen_value_descriptors
+				var/choice = input("Введите описание.", "Описание") as null|anything in descriptor.chargen_value_descriptors
 				if(choice && mob_species.descriptors[desc_id]) // Check in case they sneakily changed species.
 					pref.body_descriptors[desc_id] = descriptor.chargen_value_descriptors[choice]
 					return TOPIC_REFRESH
 
 	else if(href_list["blood_type"])
-		var/new_b_type = input(user, "Выберите группу крови Вашего персонажа:", "Character Preference") as null|anything in valid_bloodtypes
+		var/new_b_type = input(user, "Выберите группу крови Вашего персонажа:", "Изменение Персонажа") as null|anything in valid_bloodtypes
 		if(new_b_type && CanUseTopic(user))
 			pref.b_type = new_b_type
 			return TOPIC_REFRESH
@@ -429,7 +429,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				pref.h_style = pick(valid_hairstyles)
 			else
 				//this shouldn't happen
-				pref.h_style = hair_styles_list["Bald"]
+				pref.h_style = hair_styles_list["Лысая голова"]
 
 			//grab one of the valid facial hair styles for the newly chosen species
 			var/list/valid_facialhairstyles = pref.get_valid_facialhairstyles()
@@ -438,7 +438,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 				pref.f_style = pick(valid_facialhairstyles)
 			else
 				//this shouldn't happen
-				pref.f_style = facial_hair_styles_list["Shaved"]
+				pref.f_style = facial_hair_styles_list["Бритое лицо"]
 
 			//reset hair colour and skin colour
 			pref.r_hair = 0//hex2num(copytext_char(new_hair, 2, 4))
@@ -458,7 +458,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["hair_color"])
 		if(!has_flag(mob_species, HAS_HAIR_COLOR))
 			return TOPIC_NOACTION
-		var/new_hair = input(user, "Выберите цвет волос Вашего персонажа:", "Character Preference", rgb(pref.r_hair, pref.g_hair, pref.b_hair)) as color|null
+		var/new_hair = input(user, "Выберите цвет волос Вашего персонажа:", "Изменение Персонажа", rgb(pref.r_hair, pref.g_hair, pref.b_hair)) as color|null
 		if(new_hair && has_flag(mob_species, HAS_HAIR_COLOR) && CanUseTopic(user))
 			pref.r_hair = hex2num(copytext_char(new_hair, 2, 4))
 			pref.g_hair = hex2num(copytext_char(new_hair, 4, 6))
@@ -468,7 +468,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["grad_color"])
 		if(!has_flag(mob_species, HAS_HAIR_COLOR))
 			return TOPIC_NOACTION
-		var/new_grad = input(user, "Выберите вторичный цвет волос Вашего персонажа:", "Character Preference", rgb(pref.r_grad, pref.g_grad, pref.b_grad)) as color|null
+		var/new_grad = input(user, "Выберите вторичный цвет волос Вашего персонажа:", "Изменение Персонажа", rgb(pref.r_grad, pref.g_grad, pref.b_grad)) as color|null
 		if(new_grad && has_flag(mob_species, HAS_HAIR_COLOR) && CanUseTopic(user))
 			pref.r_grad = hex2num(copytext_char(new_grad, 2, 4))
 			pref.g_grad = hex2num(copytext_char(new_grad, 4, 6))
@@ -478,7 +478,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["hair_style"])
 		var/list/valid_hairstyles = pref.get_valid_hairstyles()
 
-		var/new_h_style = input(user, "Выберите прическу Вашего персонажа:", "Character Preference", pref.h_style)  as null|anything in valid_hairstyles
+		var/new_h_style = input(user, "Выберите прическу Вашего персонажа:", "Изменение Персонажа", pref.h_style)  as null|anything in valid_hairstyles
 		if(new_h_style && CanUseTopic(user))
 			pref.h_style = new_h_style
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -486,7 +486,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["grad_style"])
 		var/list/valid_gradients = GLOB.hair_gradients
 
-		var/new_grad_style = input(user, "Выберите вид градиента прически персонажа:", "Character Preference", pref.grad_style)  as null|anything in valid_gradients
+		var/new_grad_style = input(user, "Выберите вид градиента прически персонажа:", "Изменение Персонажа", pref.grad_style)  as null|anything in valid_gradients
 		if(new_grad_style && CanUseTopic(user))
 			pref.grad_style = new_grad_style
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -516,7 +516,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["facial_color"])
 		if(!has_flag(mob_species, HAS_HAIR_COLOR))
 			return TOPIC_NOACTION
-		var/new_facial = input(user, "Выберите цвет лицевой растительности персонажа:", "Character Preference", rgb(pref.r_facial, pref.g_facial, pref.b_facial)) as color|null
+		var/new_facial = input(user, "Выберите цвет лицевой растительности персонажа:", "Изменение Персонажа", rgb(pref.r_facial, pref.g_facial, pref.b_facial)) as color|null
 		if(new_facial && has_flag(mob_species, HAS_HAIR_COLOR) && CanUseTopic(user))
 			pref.r_facial = hex2num(copytext_char(new_facial, 2, 4))
 			pref.g_facial = hex2num(copytext_char(new_facial, 4, 6))
@@ -526,7 +526,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["eye_color"])
 		if(!has_flag(mob_species, HAS_EYE_COLOR))
 			return TOPIC_NOACTION
-		var/new_eyes = input(user, "Выберите цвет глаз Вашего персонажа:", "Character Preference", rgb(pref.r_eyes, pref.g_eyes, pref.b_eyes)) as color|null
+		var/new_eyes = input(user, "Выберите цвет глаз Вашего персонажа:", "Изменение Персонажа", rgb(pref.r_eyes, pref.g_eyes, pref.b_eyes)) as color|null
 		if(new_eyes && has_flag(mob_species, HAS_EYE_COLOR) && CanUseTopic(user))
 			pref.r_eyes = hex2num(copytext_char(new_eyes, 2, 4))
 			pref.g_eyes = hex2num(copytext_char(new_eyes, 4, 6))
@@ -536,7 +536,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["skin_tone"])
 		if(!has_flag(mob_species, HAS_SKIN_TONE))
 			return TOPIC_NOACTION
-		var/new_s_tone = input(user, "Выберите тон кожи Вашего персонажа:\n(Светлый 1-220 Темный)", "Character Preference", (-pref.s_tone) + 35)  as num|null
+		var/new_s_tone = input(user, "Выберите тон кожи Вашего персонажа:\n(Светлый 1-220 Темный)", "Изменение Персонажа", (-pref.s_tone) + 35)  as num|null
 		if(new_s_tone && has_flag(mob_species, HAS_SKIN_TONE) && CanUseTopic(user))
 			pref.s_tone = 35 - max(min( round(new_s_tone), 220),1)
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -544,7 +544,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["skin_color"])
 		if(!has_flag(mob_species, HAS_SKIN_COLOR))
 			return TOPIC_NOACTION
-		var/new_skin = input(user, "Выберите цвет кожи Вашего персонажа: ", "Character Preference", rgb(pref.r_skin, pref.g_skin, pref.b_skin)) as color|null
+		var/new_skin = input(user, "Выберите цвет кожи Вашего персонажа: ", "Изменение Персонажа", rgb(pref.r_skin, pref.g_skin, pref.b_skin)) as color|null
 		if(new_skin && has_flag(mob_species, HAS_SKIN_COLOR) && CanUseTopic(user))
 			pref.r_skin = hex2num(copytext_char(new_skin, 2, 4))
 			pref.g_skin = hex2num(copytext_char(new_skin, 4, 6))
@@ -554,7 +554,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["facial_style"])
 		var/list/valid_facialhairstyles = pref.get_valid_facialhairstyles()
 
-		var/new_f_style = input(user, "Выберите стиль волос на лице Вашего персонажа:", "Character Preference", pref.f_style)  as null|anything in valid_facialhairstyles
+		var/new_f_style = input(user, "Выберите стиль волос на лице Вашего персонажа:", "Изменение Персонажа", pref.f_style)  as null|anything in valid_facialhairstyles
 		if(new_f_style && has_flag(mob_species, HAS_HAIR_COLOR) && CanUseTopic(user))
 			pref.f_style = new_f_style
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -591,7 +591,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			else if(!(pref.species in S.species_allowed))
 				usable_markings -= M
 		*/ //VOREStation Removal End
-		var/new_marking = input(user, "Выберите особенности тела:", "Character Preference")  as null|anything in usable_markings
+		var/new_marking = input(user, "Выберите особенности тела:", "Особенности тела")  as null|anything in usable_markings
 		if(new_marking && CanUseTopic(user))
 			pref.body_markings[new_marking] = "#000000" //New markings start black
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -621,7 +621,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		if(start != 1)
 			move_locs -= pref.body_markings[start-1]
 
-		var/inject_after = input(user, "Move [M] ahead of...", "Character Preference") as null|anything in move_locs //Move ahead of any marking that isn't the current or previous one.
+		var/inject_after = input(user, "Подвинуть [M] выше...", "Изменение Персонажа") as null|anything in move_locs //Move ahead of any marking that isn't the current or previous one.
 		var/newpos = pref.body_markings.Find(inject_after)
 		if(newpos)
 			moveElement(pref.body_markings, start, newpos+1)
@@ -634,7 +634,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	else if(href_list["marking_color"])
 		var/M = href_list["marking_color"]
-		var/mark_color = input(user, "Выберите цвет [M]: ", "Character Preference", pref.body_markings[M]) as color|null
+		var/mark_color = input(user, "Выберите цвет [M]: ", "Изменение Персонажа", pref.body_markings[M]) as color|null
 		if(mark_color && CanUseTopic(user))
 			pref.body_markings[M] = "[mark_color]"
 			return TOPIC_REFRESH_UPDATE_PREVIEW
@@ -645,12 +645,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	else if(href_list["limbs"])
 
-		var/list/limb_selection_list = list("Лев. нога","Прав. нога","Лев. рука","Прав. рука","Лев. ступня","Прав. ступня","Лев. кисть","Прав. кисть","Всё тело")
+		var/list/limb_selection_list = list("Левая нога","Правая нога","Левая рука","Правая рука","Левая стопа","Правая стопа","Левая кисть","Правая кисть","Все тело")
 
 		// Full prosthetic bodies without a brain are borderline unkillable so make sure they have a brain to remove/destroy.
 		var/datum/species/current_species = GLOB.all_species[pref.species]
 		if(!current_species.has_organ["brain"])
-			limb_selection_list -= "Всё тело"
+			limb_selection_list -= "Все тело"
 		else if(pref.organ_data[BP_TORSO] == "cyborg")
 			limb_selection_list |= "Голова"
 
@@ -663,40 +663,40 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/third_limb = null  // if you try to unchange the hand, the arm should also change
 
 		// Do not let them amputate their entire body, ty.
-		var/list/choice_options = list("Без изменений","Ампутировано","Протезировано")
+		var/list/choice_options = list("Без изменений","Ампутация","Протез")
 		switch(organ_tag)
-			if("Лев. нога")
+			if("Левая нога")
 				limb =        BP_L_LEG
 				second_limb = BP_L_FOOT
-			if("Прав. нога")
+			if("Правая нога")
 				limb =        BP_R_LEG
 				second_limb = BP_R_FOOT
-			if("Лев. рука")
+			if("Левая рука")
 				limb =        BP_L_ARM
 				second_limb = BP_L_HAND
-			if("Прав. рука")
+			if("Правая рука")
 				limb =        BP_R_ARM
 				second_limb = BP_R_HAND
-			if("Лев. ступня")
+			if("Левая стопа")
 				limb =        BP_L_FOOT
 				third_limb =  BP_L_LEG
-			if("Прав. ступня")
+			if("Правая стопа")
 				limb =        BP_R_FOOT
 				third_limb =  BP_R_LEG
-			if("Лев. кисть")
+			if("Левая кисть")
 				limb =        BP_L_HAND
 				third_limb =  BP_L_ARM
-			if("Прав. кисть")
+			if("Правая кисть")
 				limb =        BP_R_HAND
 				third_limb =  BP_R_ARM
 			if("Голова")
 				limb =        BP_HEAD
-				choice_options = list("Протезировано")
+				choice_options = list("Протез")
 			if("Все тело")
 				limb =        BP_TORSO
 				second_limb = BP_HEAD
 				third_limb =  BP_GROIN
-				choice_options = list("Без изменений","Протезировано")
+				choice_options = list("Без изменений","Протез")
 
 		var/new_state = input(user, "В каком состоянии Вы хотите видеть конечность?") as null|anything in choice_options
 		if(!new_state || !CanUseTopic(user)) return TOPIC_NOACTION
@@ -716,7 +716,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 					pref.organ_data[third_limb] = null
 					pref.rlimb_data[third_limb] = null
 
-			if("Ампутировано")
+			if("Ампутация")
 				if(limb == BP_TORSO)
 					return
 				pref.organ_data[limb] = "amputated"
@@ -725,7 +725,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 					pref.organ_data[second_limb] = "amputated"
 					pref.rlimb_data[second_limb] = null
 
-			if("Протезировано")
+			if("Протез")
 				var/tmp_species = pref.species ? pref.species : SPECIES_HUMAN
 				var/list/usable_manufacturers = list()
 				for(var/company in chargen_robolimbs)
@@ -845,7 +845,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["synth2_color"])
-		var/new_color = input(user, "Выберите синтетический цвет Вашего персонажа: ", "Character Preference", rgb(pref.r_synth, pref.g_synth, pref.b_synth)) as color|null
+		var/new_color = input(user, "Выберите синтетический цвет Вашего персонажа: ", "Изменение Персонажа", rgb(pref.r_synth, pref.g_synth, pref.b_synth)) as color|null
 		if(new_color && CanUseTopic(user))
 			pref.r_synth = hex2num(copytext_char(new_color, 2, 4))
 			pref.g_synth = hex2num(copytext_char(new_color, 4, 6))

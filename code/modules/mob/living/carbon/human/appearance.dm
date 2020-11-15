@@ -53,7 +53,7 @@
 
 	update_hair()
 	return 1
-	
+
 /mob/living/carbon/human/proc/change_hair_gradient(var/hair_gradient)
 	if(!hair_gradient)
 		return
@@ -92,13 +92,13 @@
 		h_style = pick(valid_hairstyles)
 	else
 		//this shouldn't happen
-		h_style = "Bald"
+		h_style = "Лысая голова"
 
 	if(valid_facial_hairstyles.len)
 		f_style = pick(valid_facial_hairstyles)
 	else
 		//this shouldn't happen
-		f_style = "Shaved"
+		f_style = "Бритое лицо"
 
 	update_hair()
 
@@ -124,7 +124,7 @@
 
 	update_hair()
 	return 1
-	
+
 /mob/living/carbon/human/proc/change_grad_color(var/red, var/green, var/blue)
 	if(red == r_grad && green == g_grad && blue == b_grad)
 		return

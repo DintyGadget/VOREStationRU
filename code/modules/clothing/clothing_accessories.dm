@@ -69,7 +69,7 @@
 /obj/item/clothing/examine(var/mob/user)
 	. = ..(user)
 	if(LAZYLEN(accessories))
-		. += "It has the following attached: [counting_english_list(accessories)]"
+		. += "К одежде прикреплены: [counting_english_list(accessories)]"
 
 /**
  *  Attach accessory A to src
@@ -80,7 +80,7 @@
 /obj/item/clothing/proc/attempt_attach_accessory(obj/item/clothing/accessory/A, mob/user)
 	if(!valid_accessory_slots)
 		if(user)
-			to_chat(user, "<span class='warning'>You cannot attach accessories of any kind to \the [src].</span>")
+			to_chat(user, "<span class='warning'>Вы не можете прикрепить аксессуары к [src].</span>")
 		return FALSE
 
 	var/obj/item/clothing/accessory/acc = A
@@ -91,7 +91,7 @@
 		return TRUE
 	else
 		if(user)
-			to_chat(user, "<span class='warning'>You cannot attach more accessories of this type to [src].</span>")
+			to_chat(user, "<span class='warning'>Вы не можете прикрепить к [src] больше аксессуаров этого вида.</span>")
 		return FALSE
 
 
@@ -117,8 +117,8 @@
 		slowdown += A.slowdown
 
 /obj/item/clothing/proc/removetie_verb()
-	set name = "Remove Accessory"
-	set category = "Object"
+	set name = "Снять Аксессуар"
+	set category = "Объект"
 	set src in usr
 
 	if(!istype(usr, /mob/living))
@@ -133,7 +133,7 @@
 		if(accessory_amount == 1)
 			A = accessories[1] // If there's only one accessory, just remove it without any additional prompts.
 		else
-			A = input("Select an accessory to remove from \the [src]") as null|anything in accessories
+			A = input("Выберите аксессуар, который нужно снять с [src]") as null|anything in accessories
 
 	if(A)
 		remove_accessory(usr,A)

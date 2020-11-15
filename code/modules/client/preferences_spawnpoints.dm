@@ -38,16 +38,16 @@ var/list/spawntypes = list()
 	return get_turf(pick(turfs))
 
 /datum/spawnpoint/arrivals
-	display_name = "Arrivals Shuttle"
-	msg = "РїСЂРёР±С‹РІР°РµС‚ РЅР° С€Р°С‚С‚Р»Рµ"
+	display_name = "Шаттл Прибытия"
+	msg = "прибывает на станцию на шаттле"
 
 /datum/spawnpoint/arrivals/New()
 	..()
 	turfs = latejoin
 
 /datum/spawnpoint/gateway
-	display_name = "Gateway"
-	msg = "Р·Р°РІРµСЂС€Р°РµС‚ РїРµСЂРµС…РѕРґ СЃ РІРЅРµС€РЅРµРіРѕ С€Р»СЋР·Р°"
+	display_name = "Телепорт"
+	msg = "завершает переход через внестанционный телепорт"
 
 /datum/spawnpoint/gateway/New()
 	..()
@@ -62,8 +62,8 @@ var/list/spawntypes = list()
 	turfs = latejoin_elevator
 */
 /datum/spawnpoint/cryo
-	display_name = "Cryogenic Storage"
-	msg = "Р·Р°РІРµСЂС€Р°РµС‚ РєСЂРёРѕРіРµРЅРЅС‹Р№ СЃРѕРЅ"
+	display_name = "Криокамера"
+	msg = "завершает криогенную разморозку"
 	allowed_mob_types = JOB_CARBON
 
 /datum/spawnpoint/cryo/New()
@@ -71,8 +71,8 @@ var/list/spawntypes = list()
 	turfs = latejoin_cryo
 
 /datum/spawnpoint/cyborg
-	display_name = "Cyborg Storage"
-	msg = "Р°РєС‚РёРІРёСЂРѕРІР°РЅ РІ С…СЂР°РЅРёР»РёС‰Рµ"
+	display_name = "Хранилище Киборгов"
+	msg = "активируется из хранилища"
 	allowed_mob_types = JOB_SILICON
 
 /datum/spawnpoint/cyborg/New()

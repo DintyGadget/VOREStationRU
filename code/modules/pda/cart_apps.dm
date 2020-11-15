@@ -218,7 +218,7 @@
 	name = "Записи поставок"
 	icon = "file-word-o"
 	template = "pda_supply"
-	category = "Интендант"
+	category = "Квартирмейстер"
 
 /datum/data/pda/app/supply/update_ui(mob/user as mob, list/data)
 	var/supplyData[0]

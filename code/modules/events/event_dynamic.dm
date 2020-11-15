@@ -31,9 +31,9 @@ var/list/event_last_fired = list()
 
 	var/list/active_with_role = number_active_with_role()
 	//var/engineer_count = number_active_with_role("Engineer")
-	//var/security_count = number_active_with_role("Security")
-	//var/medical_count = number_active_with_role("Medical")
-	//var/AI_count = number_active_with_role("AI")
+	//var/security_count = number_active_with_role("Служба безопасности")
+	//var/medical_count = number_active_with_role("Медицинский отдел")
+	//var/AI_count = number_active_with_role("ИИ")
 	//var/janitor_count = number_active_with_role("Уборщик")
 
 	// Maps event names to event chances
@@ -59,11 +59,11 @@ var/list/event_last_fired = list()
 	possibleEvents[/datum/event/carp_migration] = 20 + 10 * active_with_role["Engineer"]
 	possibleEvents[/datum/event/brand_intelligence] = 20 + 25 * active_with_role["Уборщик"]
 
-	possibleEvents[/datum/event/rogue_drone] = 5 + 25 * active_with_role["Engineer"] + 25 * active_with_role["Security"]
+	possibleEvents[/datum/event/rogue_drone] = 5 + 25 * active_with_role["Engineer"] + 25 * active_with_role["Служба безопасности"]
 	possibleEvents[/datum/event/infestation] = 100 + 100 * active_with_role["Уборщик"]
 
-	possibleEvents[/datum/event/communications_blackout] = 50 + 25 * active_with_role["AI"] + active_with_role["Ученый"] * 25
-	possibleEvents[/datum/event/ionstorm] = active_with_role["AI"] * 25 + active_with_role["Cyborg"] * 25 + active_with_role["Engineer"] * 10 + active_with_role["Ученый"] * 5
+	possibleEvents[/datum/event/communications_blackout] = 50 + 25 * active_with_role["ИИ"] + active_with_role["Учёный"] * 25
+	possibleEvents[/datum/event/ionstorm] = active_with_role["ИИ"] * 25 + active_with_role["Киборг"] * 25 + active_with_role["Engineer"] * 10 + active_with_role["Учёный"] * 5
 	possibleEvents[/datum/event/grid_check] = 25 + 10 * active_with_role["Engineer"]
 	possibleEvents[/datum/event/electrical_storm] = 15 * active_with_role["Уборщик"] + 5 * active_with_role["Engineer"]
 	possibleEvents[/datum/event/wallrot] = 30 * active_with_role["Engineer"] + 50 * active_with_role["Садовник"]
@@ -74,15 +74,15 @@ var/list/event_last_fired = list()
 		possibleEvents[/datum/event/meteor_wave] = 10 * active_with_role["Engineer"]
 		possibleEvents[/datum/event/blob] = 10 * active_with_role["Engineer"]
 
-	if(active_with_role["Medical"] > 0)
-		possibleEvents[/datum/event/radiation_storm] = active_with_role["Medical"] * 10
-		possibleEvents[/datum/event/spontaneous_appendicitis] = active_with_role["Medical"] * 10
+	if(active_with_role["Медицинский отдел"] > 0)
+		possibleEvents[/datum/event/radiation_storm] = active_with_role["Медицинский отдел"] * 10
+		possibleEvents[/datum/event/spontaneous_appendicitis] = active_with_role["Медицинский отдел"] * 10
 
-	possibleEvents[/datum/event/prison_break] = active_with_role["Security"] * 50
-	if(active_with_role["Security"] > 0)
+	possibleEvents[/datum/event/prison_break] = active_with_role["Служба безопасности"] * 50
+	if(active_with_role["Служба безопасности"] > 0)
 		if(!sent_spiders_to_station)
-			possibleEvents[/datum/event/spider_infestation] = max(active_with_role["Security"], 5) + 5
-		possibleEvents[/datum/event/random_antag] = max(active_with_role["Security"], 5) + 2.5
+			possibleEvents[/datum/event/spider_infestation] = max(active_with_role["Служба безопасности"], 5) + 5
+		possibleEvents[/datum/event/random_antag] = max(active_with_role["Служба безопасности"], 5) + 2.5
 
 	for(var/event_type in event_last_fired) if(possibleEvents[event_type])
 		var/time_passed = world.time - event_last_fired[event_type]
@@ -180,11 +180,11 @@ var/list/event_last_fired = list()
 /proc/number_active_with_role()
 	var/list/active_with_role = list()
 	active_with_role["Engineer"] = 0
-	active_with_role["Medical"] = 0
-	active_with_role["Security"] = 0
-	active_with_role["Ученый"] = 0
-	active_with_role["AI"] = 0
-	active_with_role["Cyborg"] = 0
+	active_with_role["Медицинский отдел"] = 0
+	active_with_role["Служба безопасности"] = 0
+	active_with_role["Учёный"] = 0
+	active_with_role["ИИ"] = 0
+	active_with_role["Киборг"] = 0
 	active_with_role["Уборщик"] = 0
 	active_with_role["Садовник"] = 0
 
@@ -200,29 +200,29 @@ var/list/event_last_fired = list()
 				if(istype(R.module, /obj/item/weapon/robot_module/robot/engineering))
 					active_with_role["Engineer"]++
 				else if(istype(R.module, /obj/item/weapon/robot_module/robot/security))
-					active_with_role["Security"]++
+					active_with_role["Служба безопасности"]++
 				else if(istype(R.module, /obj/item/weapon/robot_module/robot/medical))
-					active_with_role["Medical"]++
+					active_with_role["Медицинский отдел"]++
 				else if(istype(R.module, /obj/item/weapon/robot_module/robot/research))
-					active_with_role["Ученый"]++
+					active_with_role["Учёный"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_ENGINEERING))
 			active_with_role["Engineer"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_MEDICAL))
-			active_with_role["Medical"]++
+			active_with_role["Медицинский отдел"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY))
-			active_with_role["Security"]++
+			active_with_role["Служба безопасности"]++
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_RESEARCH))
-			active_with_role["Ученый"]++
+			active_with_role["Учёный"]++
 
-		if(M.mind.assigned_role == "AI")
-			active_with_role["AI"]++
+		if(M.mind.assigned_role == "ИИ")
+			active_with_role["ИИ"]++
 
-		if(M.mind.assigned_role == "Cyborg")
-			active_with_role["Cyborg"]++
+		if(M.mind.assigned_role == "Киборг")
+			active_with_role["Киборг"]++
 
 		if(M.mind.assigned_role == "Уборщик")
 			active_with_role["Уборщик"]++

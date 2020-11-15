@@ -280,34 +280,34 @@
 
 // If they're in an FBP, what braintype.
 #define FBP_NONE	""
-#define FBP_CYBORG	"Cyborg"
+#define FBP_CYBORG	"Киборг"
 #define FBP_POSI	"Positronic"
 #define FBP_DRONE	"Drone"
 
 // Similar to above but for borgs.
 // Seperate defines are unfortunately required since borgs display the brain differently for some reason.
-#define BORG_BRAINTYPE_CYBORG	"Cyborg"
+#define BORG_BRAINTYPE_CYBORG	"Киборг"
 #define BORG_BRAINTYPE_POSI		"Robot"
 #define BORG_BRAINTYPE_DRONE	"Drone"
 #define BORG_BRAINTYPE_AI_SHELL	"AI Shell"
 
 // 'Regular' species.
-#define SPECIES_HUMAN			"Human"
-#define SPECIES_HUMAN_VATBORN	"Vatborn"
-#define SPECIES_UNATHI			"Unathi"
-#define SPECIES_SKRELL			"Skrell"
-#define SPECIES_TESHARI			"Teshari"
-#define SPECIES_TAJ				"Tajara"
-#define SPECIES_PROMETHEAN		"Promethean"
-#define SPECIES_DIONA			"Diona"
-#define SPECIES_VOX				"Vox"
-#define SPECIES_ZADDAT			"Zaddat"
+#define SPECIES_HUMAN			"Человек"
+#define SPECIES_HUMAN_VATBORN	"Искусственно Выращенный"
+#define SPECIES_UNATHI			"Унати"
+#define SPECIES_SKRELL			"Скрелл"
+#define SPECIES_TESHARI			"Тешари"
+#define SPECIES_TAJ				"Таджара"
+#define SPECIES_PROMETHEAN		"Прометеан"
+#define SPECIES_DIONA			"Диона"
+#define SPECIES_VOX				"Вокс"
+#define SPECIES_ZADDAT			"Заддат"
 
 // Monkey and alien monkeys.
-#define SPECIES_MONKEY			"Monkey"
-#define SPECIES_MONKEY_TAJ		"Farwa"
-#define SPECIES_MONKEY_SKRELL	"Neaera"
-#define SPECIES_MONKEY_UNATHI	"Stok"
+#define SPECIES_MONKEY			"Мартышка"
+#define SPECIES_MONKEY_TAJ		"Фарва"
+#define SPECIES_MONKEY_SKRELL	"Неера"
+#define SPECIES_MONKEY_UNATHI	"Сток"
 
 // Virtual Reality IDs.
 #define SPECIES_VR				"Virtual Reality Avatar"

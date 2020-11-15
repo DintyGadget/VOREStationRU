@@ -191,7 +191,7 @@
 
 /datum/poster/nanotrasen/nt_5
 	icon_state = "ntposter05"
-	name = "Promethean"
+	name = "Прометеан"
 	desc = "This poster displays a friendly-looking green Promethean in a labcoat. The fine-print around the edges talks about the benefits Prometheans give in laboratories."
 
 /datum/poster/nanotrasen/nt_6

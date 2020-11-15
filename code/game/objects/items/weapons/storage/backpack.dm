@@ -132,56 +132,56 @@
  */
 
 /obj/item/weapon/storage/backpack/dufflebag
-	name = "dufflebag"
-	desc = "A large dufflebag for holding extra things."
+	name = "вещмешок"
+	desc = "Крупный вещмешок для хранения принадлежностей."
 	icon_state = "duffle"
 	slowdown = 1
 	max_storage_space = INVENTORY_DUFFLEBAG_SPACE
 
 /obj/item/weapon/storage/backpack/dufflebag/syndie
-	name = "black dufflebag"
-	desc = "A large dufflebag for holding extra tactical supplies. This one appears to be made out of lighter material than usual."
+	name = "черный вещмешок"
+	desc = "Крупный вещмешок для хранения дополнительных тактических припасов. Этот, кажется, из более легкого материала, чем обычно."
 	icon_state = "duffle_syndie"
 	slowdown = 0
 
 /obj/item/weapon/storage/backpack/dufflebag/syndie/med
-	name = "medical dufflebag"
-	desc = "A large dufflebag for holding extra tactical medical supplies. This one appears to be made out of lighter material than usual."
+	name = "медицинский вещмешок"
+	desc = "Крупный вещмешок для хранения дополнительных медицинских припасов. Этот, кажется, из более легкого материала, чем обычно."
 	icon_state = "duffle_syndiemed"
 
 /obj/item/weapon/storage/backpack/dufflebag/syndie/ammo
-	name = "ammunition dufflebag"
-	desc = "A large dufflebag for holding extra weapons ammunition and supplies. This one appears to be made out of lighter material than usual."
+	name = "вещмешок для боеприпасов"
+	desc = "Крупный вещмешок для хранения дополнительных тактических припасов и патронов. Этот, кажется, из более легкого материала, чем обычно."
 	icon_state = "duffle_syndieammo"
 
 /obj/item/weapon/storage/backpack/dufflebag/captain
-	name = "site manager's dufflebag"
-	desc = "A large dufflebag for holding extra captainly goods."
+	name = "вещмешок Директора Колонии"
+	desc = "Крупный вещмешок для хранения директорских принадлежностей."
 	icon_state = "duffle_captain"
 
 /obj/item/weapon/storage/backpack/dufflebag/med
-	name = "medical dufflebag"
-	desc = "A large dufflebag for holding extra medical supplies."
+	name = "медицинский вещмешок"
+	desc = "Крупный вещмешок для хранения дополнительных медицинских припасов."
 	icon_state = "duffle_med"
 
 /obj/item/weapon/storage/backpack/dufflebag/emt
-	name = "EMT dufflebag"
-	desc = "A large dufflebag for holding extra medical supplies. This one has reflective stripes!"
+	name = "вещмешок парамедика"
+	desc = "Крупный вещмешок для хранения дополнительных медицинских припасов. На этом вещмешке есть светоотражательные полосы!"
 	icon_state = "duffle_emt"
 
 /obj/item/weapon/storage/backpack/dufflebag/sec
-	name = "security dufflebag"
-	desc = "A large dufflebag for holding extra security supplies and ammunition."
+	name = "вещмешок службы безопасности"
+	desc = "Крупный вещмешок для хранения дополнительных припасов и патронов службы безопасности."
 	icon_state = "duffle_sec"
 
 /obj/item/weapon/storage/backpack/dufflebag/eng
-	name = "industrial dufflebag"
-	desc = "A large dufflebag for holding extra tools and supplies."
+	name = "рабочий вещмешок"
+	desc = "Крупный вещмешок для хранения дополнительных припасов и инструментов."
 	icon_state = "duffle_eng"
 
 /obj/item/weapon/storage/backpack/dufflebag/sci
-	name = "science dufflebag"
-	desc = "A large dufflebag for holding circuits and beakers."
+	name = "научный вещмешок"
+	desc = "Крупный вещмешок для хранения всевозможных микросхем и мензурок."
 	icon_state = "duffle_sci"
 
 /*
@@ -347,8 +347,8 @@
 
 //Purses
 /obj/item/weapon/storage/backpack/purse
-	name = "purse"
-	desc = "A small, fashionable bag typically worn over the shoulder."
+	name = "сумочка"
+	desc = "Небольшая модная сумочка, надеваемая через плечо."
 	icon_state = "purse"
 	item_state_slots = list(slot_r_hand_str = "lgpurse", slot_l_hand_str = "lgpurse")
 	w_class = ITEMSIZE_LARGE

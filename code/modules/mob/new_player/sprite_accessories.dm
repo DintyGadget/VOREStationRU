@@ -49,457 +49,461 @@
 	var/flags
 
 /datum/sprite_accessory/hair/eighties
-	name = "80's"
+	name = "80'ые"
 	icon_state = "hair_80s"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/afro
-	name = "Afro"
+	name = "Афро"
 	icon_state = "hair_afro"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/afro2
-	name = "Afro 2"
+	name = "Афро 2"
 	icon_state = "hair_afro2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/afro_large
-	name = "Big Afro"
+	name = "Афро большое"
 	icon_state = "hair_bigafro"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/amazon
-	name = "Amazon"
+	name = "Амазонка"
 	icon_state = "hair_amazon"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/antenna
-	name = "Antenna"
+	name = "Антенна"
 	icon_state = "hair_antenna"
 
 /datum/sprite_accessory/hair/bald
-	name = "Bald"
+	name = "Лысая голова"
 	icon_state = "bald"
 	flags = HAIR_VERY_SHORT
 	species_allowed = list(SPECIES_HUMAN,SPECIES_UNATHI,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_VOX,SPECIES_TESHARI)
 
 /datum/sprite_accessory/hair/baldfade
-	name = "Balding Fade"
+	name = "Лысеющий градиент"
 	icon_state = "hair_baldfade"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/balding
-	name = "Balding Hair"
+	name = "Лысеющая голова"
 	icon_state = "hair_e"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/beachwave
-	name = "Beach Waves"
+	name = "Пляжные волны"
 	icon_state = "hair_beachwave"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bedhead
-	name = "Bedhead"
+	name = "Отлежанные"
 	icon_state = "hair_bedhead"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bedhead2
-	name = "Bedhead 2"
+	name = "Отлежанные 2"
 	icon_state = "hair_bedheadv2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bedhead3
-	name = "Bedhead 3"
+	name = "Отлежанные 3"
 	icon_state = "hair_bedheadv3"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bedheadlong
-	name = "Bedhead Long"
+	name = "Отлежанные длинные"
 	icon_state = "hair_long_bedhead"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bedheadlongest
-	name = "Bedhead Longest"
+	name = "Отлежанные длиннейшие"
 	icon_state = "hair_longest_bedhead"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/beehive
-	name = "Beehive"
+	name = "Пчелиный улей"
 	icon_state = "hair_beehive"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/beehive2
-	name = "Beehive 2"
+	name = "Пчелиный улей 2"
 	icon_state = "hair_beehive2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/belenko
-	name = "Belenko"
+	name = "Беленко"
 	icon_state = "hair_belenko"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/belenkotied
-	name = "Belenko Tied"
+	name = "Беленко в хвостик"
 	icon_state = "hair_belenkotied"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bob
-	name = "Bob"
+	name = "Каре"
 	icon_state = "hair_bobcut"
 	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bobcutalt
-	name = "Bob Chin Length"
+	name = "Каре до подбородка"
 	icon_state = "hair_bobcutalt"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bobcurl
-	name = "Bobcurl"
+	name = "Каре кудрявое"
 	icon_state = "hair_bobcurl"
 	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bowl
-	name = "Bowl"
+	name = "Горшок"
 	icon_state = "hair_bowlcut"
 
 /datum/sprite_accessory/hair/bowlcut2
-	name = "Bowl 2"
+	name = "Горшок 2"
 	icon_state = "hair_bowlcut2"
 
 /datum/sprite_accessory/hair/bowlcut2
-	name = "Bowl, Overeye"
+	name = "Горшок на глаза"
 	icon_state = "hair_overeyebowl"
 
 /datum/sprite_accessory/hair/grandebraid
-	name = "Braid Grande"
+	name = "Хвост"
 	icon_state = "hair_grande"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/braid2
-	name = "Braid Long"
+	name = "Хвост длинный"
 	icon_state = "hair_hbraid"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/mbraid
-	name = "Braid Medium"
+	name = "Хвост-коса"
 	icon_state = "hair_shortbraid"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/braid
-	name = "Braid Floorlength"
+	name = "Хвост до пола"
 	icon_state = "hair_braid"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/front_braid
-	name = "Braided front"
+	name = "Косички спереди"
 	icon_state = "hair_braidfront"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/braidtail
-	name = "Braided Tail"
+	name = "Косичка спереди"
 	icon_state = "hair_braidtail"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bun
-	name = "Bun"
+	name = "Пучок"
 	icon_state = "hair_bun"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bun2
-	name = "Bun 2"
+	name = "Пучок 2"
 	icon_state = "hair_bun2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bun3
-	name = "Bun 3"
+	name = "Пучок 3"
 	icon_state = "hair_bun3"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/bunhead
-	name = "Bun Head "
+	name = "Пучок по сторонам"
 	icon_state = "hair_bunhead"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/doublebun
-	name = "Bun Double"
+	name = "Пучок двойной"
 	icon_state = "hair_doublebun"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/tightbun
-	name = "Bun Tight"
+	name = "Пучок на всю голову"
 	icon_state = "hair_tightbun"
 	flags = HAIR_VERY_SHORT | HAIR_TIEABLE
 
+/datum/sprite_accessory/hair/manbun
+	name = "Пучок мужской"
+	icon_state = "hair_manbun"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/donutbun
+	name = "Пучок в кольцо"
+	icon_state = "hair_donutbun"
+
 /datum/sprite_accessory/hair/business
-	name = "Business Hair"
+	name = "Бизнес-прическа"
 	icon_state = "hair_business"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/business2
-	name = "Business Hair 2"
+	name = "Бизнес-прическа 2"
 	icon_state = "hair_business2"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/business3
-	name = "Business Hair 3"
+	name = "Бизнес-прическа 3"
 	icon_state = "hair_business3"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/business4
-	name = "Business Hair 4"
+	name = "Бизнес-прическа 4"
 	icon_state = "hair_business4"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/buzz
-	name = "Buzzcut"
+	name = "Короткая стрижка"
 	icon_state = "hair_buzzcut"
 	flags = HAIR_VERY_SHORT
 	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
 
 /datum/sprite_accessory/hair/celebcurls
-	name = "Celeb Curls"
+	name = "Гламурные кудри"
 	icon_state = "hair_celebcurls"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/crono
-	name = "Chrono"
+	name = "Хроно"
 	icon_state = "hair_toriyama"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/cia
-	name = "CIA"
+	name = "ЦРУ"
 	icon_state = "hair_cia"
 
 /datum/sprite_accessory/hair/coffeehouse
-	name = "Coffee House Cut"
+	name = "Бариста"
 	icon_state = "hair_coffeehouse"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/combover
-	name = "Combover"
+	name = "Начес"
 	icon_state = "hair_combover"
 
 /datum/sprite_accessory/hair/country
-	name = "Country"
+	name = "Кантри"
 	icon_state = "hair_country"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/crew
-	name = "Crewcut"
+	name = "Ёжик"
 	icon_state = "hair_crewcut"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/curls
-	name = "Curls"
+	name = "Кудри"
 	icon_state = "hair_curls"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/cut
-	name = "Cut Hair"
+	name = "Короткая стрижка"
 	icon_state = "hair_c"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/dave
-	name = "Dave"
+	name = "Дейв"
 	icon_state = "hair_dave"
 
 /datum/sprite_accessory/hair/devillock
-	name = "Devil Lock"
+	name = "Девилок"
 	icon_state = "hair_devilock"
 
-/datum/sprite_accessory/hair/donutbun
-	name = "Donut Bun"
-	icon_state = "hair_donutbun"
-
 /datum/sprite_accessory/hair/dreadlocks
-	name = "Dreadlocks"
+	name = "Хиппи"
 	icon_state = "hair_dreads"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/mahdrills
-	name = "Drillruru"
+	name = "Дриллруру"
 	icon_state = "hair_drillruru"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/emo
-	name = "Emo"
+	name = "Эмо"
 	icon_state = "hair_emo"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/emo2
-	name = "Emo Alt"
+	name = "Эмо альт"
 	icon_state = "hair_emo2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/fringeemo
-	name = "Emo Fringe"
+	name = "Эмо челка"
 	icon_state = "hair_emofringe"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/halfshaved
-	name = "Emo Half-Shaved"
+	name = "Эмо набок"
 	icon_state = "hair_halfshaved"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/longemo
-	name = "Emo Long"
+	name = "Эмо по бокам"
 	icon_state = "hair_emolong"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/highfade
-	name = "Fade High"
+	name = "Переход высокий"
 	icon_state = "hair_highfade"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/medfade
-	name = "Fade Medium"
+	name = "Переход средний"
 	icon_state = "hair_medfade"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/lowfade
-	name = "Fade Low"
+	name = "Переход низкий"
 	icon_state = "hair_lowfade"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/partfade
-	name = "Fade Parted"
+	name = "Переход разделенный"
 	icon_state = "hair_shavedpart"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/familyman
-	name = "Family Man"
+	name = "Семьянин"
 	icon_state = "hair_thefamilyman"
 
 /datum/sprite_accessory/hair/father
-	name = "Father"
+	name = "Отец"
 	icon_state = "hair_father"
 
 /datum/sprite_accessory/hair/feather
-	name = "Feather"
+	name = "Перо"
 	icon_state = "hair_feather"
 	flags = HAIR_TIEABLE
 
-/datum/sprite_accessory/hair/flair
-	name = "Flaired Hair"
-	icon_state = "hair_flair"
-	flags = HAIR_TIEABLE
-
 /datum/sprite_accessory/hair/sargeant
-	name = "Flat Top"
+	name = "Сержант"
 	icon_state = "hair_sargeant"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/flowhair
-	name = "Flow Hair"
+	name = "Укладка"
 	icon_state = "hair_f"
 
+/datum/sprite_accessory/hair/flair
+	name = "Секущиеся"
+	icon_state = "hair_flair"
+	flags = HAIR_TIEABLE
+
 /datum/sprite_accessory/hair/longfringe
-	name = "Fringe Long"
+	name = "Секущиеся 2"
 	icon_state = "hair_longfringe"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/longestalt
-	name = "Fringe Longer"
+	name = "Секущиеся 3"
 	icon_state = "hair_vlongfringe"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/fringetail
-	name = "Fringetail"
+	name = "Секущиеся, хвост"
 	icon_state = "hair_fringetail"
 	flags = HAIR_TIEABLE|HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/gelled
-	name = "Gelled Back"
+	name = "Начес назад"
 	icon_state = "hair_gelled"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/gentle
-	name = "Gentle"
+	name = "Нежная"
 	icon_state = "hair_gentle"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/gentle2
-	name = "Gentle 2, Long"
+	name = "Нежная 2"
 	icon_state = "hair_gentle2long"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/glossy
-	name = "Glossy"
+	name = "Блестящая"
 	icon_state = "hair_glossy"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/halfbang
-	name = "Half-banged Hair"
+	name = "Получелка"
 	icon_state = "hair_halfbang"
 
 /datum/sprite_accessory/hair/halfbangalt
-	name = "Half-banged Hair Alt"
+	name = "Получелка, альт"
 	icon_state = "hair_halfbang_alt"
 
 /datum/sprite_accessory/hair/hightight
-	name = "High and Tight"
+	name = "Ирокез короткий"
 	icon_state = "hair_hightight"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/himecut
-	name = "Hime Cut"
+	name = "Химе"
 	icon_state = "hair_himecut"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/himeup
-	name = "Hime Updo"
+	name = "Химе в хвост"
 	icon_state = "hair_himeup"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/shorthime
-	name = "Hime Cut Short"
+	name = "Химе короткаая"
 	icon_state = "hair_shorthime"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/hitop
-	name = "Hitop"
+	name = "Хай-топ"
 	icon_state = "hair_hitop"
 
 /datum/sprite_accessory/hair/jade
-	name = "Jade"
+	name = "Джейд"
 	icon_state = "hair_jade"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/jensen
-	name = "Jensen"
+	name = "Дженсен"
 	icon_state = "hair_jensen"
 
-
 /datum/sprite_accessory/hair/jessica
-	name = "Jessica"
+	name = "Джессика"
 	icon_state = "hair_jessica"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/joestar
-	name = "Joestar"
+	name = "Джостар"
 	icon_state = "hair_joestar"
 
 /datum/sprite_accessory/hair/kagami
-	name = "Kagami"
+	name = "Кагами"
 	icon_state = "hair_kagami"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/keanu
-	name = "Keanu Hair"
+	name = "Киану"
 	icon_state = "hair_keanu"
 
 /datum/sprite_accessory/hair/kusangi
-	name = "Kusanagi Hair"
+	name = "Кусанаги"
 	icon_state = "hair_kusanagi"
 
 /datum/sprite_accessory/hair/long
-	name = "Long Hair Shoulder-length"
+	name = "Длинные по плечи"
 	icon_state = "hair_b"
 	flags = HAIR_TIEABLE
 /*
@@ -510,422 +514,416 @@
 */
 
 /datum/sprite_accessory/hair/longer
-	name = "Long Hair"
+	name = "Длинные волосы"
 	icon_state = "hair_vlong"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/longeralt2
-	name = "Long Hair Alt 2"
+	name = "Длинные волосы 2"
 	icon_state = "hair_longeralt2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/sidepartlongalt
-	name = "Long Side Part"
+	name = "Длинные по сторонам"
 	icon_state = "hair_longsidepart"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/longest
-	name = "Very Long Hair"
+	name = "Очень длинные волосы"
 	icon_state = "hair_longest"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/lowbraid
-	name = "Low Braid"
+	name = "Длинная коса"
 	icon_state = "hair_hbraid"
 	flags = HAIR_TIEABLE
 
-/datum/sprite_accessory/hair/manbun
-	name = "Manbun"
-	icon_state = "hair_manbun"
-	flags = HAIR_TIEABLE
-
 /datum/sprite_accessory/hair/marysue
-	name = "Mary Sue"
+	name = "Мэри Сью"
 	icon_state = "hair_marysue"
 
 /datum/sprite_accessory/hair/miles
-	name = "Miles Hair"
+	name = "Майлз"
 	icon_state = "hair_miles"
 
 /datum/sprite_accessory/hair/modern
-	name = "Modern"
+	name = "Модерн"
 	icon_state = "hair_modern"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/mohawk
-	name = "Mohawk"
+	name = "Могавк"
 	icon_state = "hair_d"
 	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
 
 /datum/sprite_accessory/hair/regulationmohawk
-	name = "Mohawk Regulation"
+	name = "Могавк солдатский"
 	icon_state = "hair_shavedmohawk"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/reversemohawk
-	name = "Mohawk Reverse"
+	name = "Могавк наоборот"
 	icon_state = "hair_reversemohawk"
 
 /datum/sprite_accessory/hair/mohawkunshaven
-	name = "Mohawk Unshaven"
+	name = "Могавк нестриженный"
 	icon_state = "hair_unshaven_mohawk"
 
 /datum/sprite_accessory/hair/mulder
-	name = "Mulder"
+	name = "Мулдер"
 	icon_state = "hair_mulder"
 
 /datum/sprite_accessory/hair/newyou
-	name = "New You"
+	name = "Новое 'Ты'"
 	icon_state = "hair_newyou"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/nia
-	name = "Nia"
+	name = "Ниа"
 	icon_state = "hair_nia"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/nitori
-	name = "Nitori"
+	name = "Нитори"
 	icon_state = "hair_nitori"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/odango
-	name = "Odango"
+	name = "Оданго"
 	icon_state = "hair_odango"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/ombre
-	name = "Ombre"
+	name = "Омбре"
 	icon_state = "hair_ombre"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/oxton
-	name = "Oxton"
+	name = "Окстон"
 	icon_state = "hair_oxton"
 
-/datum/sprite_accessory/hair/longovereye
-	name = "Overeye Long"
-	icon_state = "hair_longovereye"
-	flags = HAIR_TIEABLE
+/datum/sprite_accessory/hair/veryshortovereye
+	name = "Челка, очень короткие"
+	icon_state = "hair_veryshortovereye"
+
+/datum/sprite_accessory/hair/veryshortovereyealternate
+	name = "Челка, очень короткие, альт"
+	icon_state = "hair_veryshortovereyealternate"
 
 /datum/sprite_accessory/hair/shortovereye
-	name = "Overeye Short"
+	name = "Челка, короткие"
 	icon_state = "hair_shortovereye"
 	flags = HAIR_TIEABLE
 
-/datum/sprite_accessory/hair/veryshortovereyealternate
-	name = "Overeye Very Short, Alternate"
-	icon_state = "hair_veryshortovereyealternate"
-
-/datum/sprite_accessory/hair/veryshortovereye
-	name = "Overeye Very Short"
-	icon_state = "hair_veryshortovereye"
+/datum/sprite_accessory/hair/longovereye
+	name = "Челка, длинные"
+	icon_state = "hair_longovereye"
+	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/parted
-	name = "Parted"
+	name = "По сторонам"
 	icon_state = "hair_parted"
 
 /datum/sprite_accessory/hair/partedalt
-	name = "Parted Alt"
+	name = "По сторонам, альт"
 	icon_state = "hair_partedalt"
 
-
 /datum/sprite_accessory/hair/pixie
-	name = "Pixie Cut"
+	name = "Пикси"
 	icon_state = "hair_pixie"
 
 /datum/sprite_accessory/hair/pompadour
-	name = "Pompadour"
+	name = "Помпадур"
 	icon_state = "hair_pompadour"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/dandypomp
-	name = "Pompadour Dandy"
+	name = "Помпадур пышнее"
 	icon_state = "hair_dandypompadour"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/ponytail1
-	name = "Ponytail 1"
+	name = "Хвостик 1"
 	icon_state = "hair_ponytail"
 	flags = HAIR_TIEABLE|HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/ponytail2
-	name = "Ponytail 2"
+	name = "Хвостик 2"
 	icon_state = "hair_pa"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/ponytail3
-	name = "Ponytail 3"
+	name = "Хвостик 3"
 	icon_state = "hair_ponytail3"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/ponytail4
-	name = "Ponytail 4"
+	name = "Хвостик 4"
 	icon_state = "hair_ponytail4"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/ponytail5
-	name = "Ponytail 5"
+	name = "Хвостик 5"
 	icon_state = "hair_ponytail5"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/ponytail6
-	name = "Ponytail 6"
+	name = "Хвостик 6"
 	icon_state = "hair_ponytail6"
 	flags = HAIR_TIEABLE|HAIR_VERY_SHORT
 
+/datum/sprite_accessory/hair/wisp
+	name = "Хвостик 7"
+	icon_state = "hair_wisp"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/zieglertail
+	name = "Хвостик Циглер"
+	icon_state = "hair_ziegler"
+	flags = HAIR_TIEABLE
+
 /datum/sprite_accessory/hair/sharpponytail
-	name = "Ponytail Sharp"
+	name = "Хвостик острый"
 	icon_state = "hair_sharpponytail"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/spikyponytail
-	name = "Ponytail Spiky"
+	name = "Хвостик с кончиками"
 	icon_state = "hair_spikyponytail"
 	flags = HAIR_TIEABLE
 
+/datum/sprite_accessory/hair/sideponytail
+	name = "Хвостик набок"
+	icon_state = "hair_stail"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/sideponytail4 //Not happy about this... but it's for the save files.
+	name = "Хвостик набок 2"
+	icon_state = "hair_ponytailf"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/sideponytail2
+	name = "Хвостик набок 3"
+	icon_state = "hair_oneshoulder"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/sideponytail3
+	name = "Хвостик набок 4"
+	icon_state = "hair_tressshoulder"
+	flags = HAIR_TIEABLE
+
 /datum/sprite_accessory/hair/poofy
-	name = "Poofy"
+	name = "Лохматая"
 	icon_state = "hair_poofy"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/poofy2
-	name = "Poofy 2"
+	name = "Лохматая 2"
 	icon_state = "hair_poofy2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/proper
-	name = "Proper"
+	name = "Ретро"
 	icon_state = "hair_proper"
 
 /datum/sprite_accessory/hair/quiff
-	name = "Quiff"
+	name = "Челка торчащая"
 	icon_state = "hair_quiff"
 
 /datum/sprite_accessory/hair/nofade
-	name = "Regulation Cut"
+	name = "Солдатская стрижка"
 	icon_state = "hair_nofade"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/newyou
-	name = "New You"
+	name = "Новое 'Ты'"
 	icon_state = "hair_newyou"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/ronin
-	name = "Ronin"
+	name = "Ронин"
 	icon_state = "hair_ronin"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/rosa
-	name = "Rosa"
+	name = "Роза"
 	icon_state = "hair_rosa"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/rows
-	name = "Rows"
+	name = "Ряды"
 	icon_state = "hair_rows1"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/rows2
-	name = "Rows 2"
+	name = "Ряды 2"
 	icon_state = "hair_rows2"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/rowbun
-	name = "Row Bun"
+	name = "Ряды в пучок"
 	icon_state = "hair_rowbun"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/rowdualbraid
-	name = "Row Dual Braid"
+	name = "Ряды в две косы"
 	icon_state = "hair_rowdualtail"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/rowbraid
-	name = "Row Braid"
+	name = "Ряды в косу"
 	icon_state = "hair_rowbraid"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/sabitsuki
-	name = "Sabitsuki"
+	name = "Сабитсуки"
 	icon_state = "hair_sabitsuki"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/scully
-	name = "Scully"
+	name = "Скалли"
 	icon_state = "hair_scully"
 
 /datum/sprite_accessory/hair/shavehair
-	name = "Shaved Hair"
+	name = "Сбритые волосы"
 	icon_state = "hair_shaved"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/shortbangs
-	name = "Short Bangs"
+	name = "Короткая челка"
 	icon_state = "hair_shortbangs"
 
 /datum/sprite_accessory/hair/short
-	name = "Short Hair"	  // try to capatilize the names please~
+	name = "Короткая стрижка"  // try to capatilize the names please~
 	icon_state = "hair_a" // you do not need to define _s or _l sub-states, game automatically does this for you
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/short2
-	name = "Short Hair 2"
+	name = "Короткая стрижка 2"
 	icon_state = "hair_shorthair3"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/short3
-	name = "Short Hair 3"
+	name = "Короткая стрижка 3"
 	icon_state = "hair_shorthair4"
 	flags = HAIR_VERY_SHORT
 
-/datum/sprite_accessory/hair/shy
-	name = "Shy"
-	icon_state = "hair_shy"
-	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/sideponytail
-	name = "Side Ponytail"
-	icon_state = "hair_stail"
-	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/sideponytail4 //Not happy about this... but it's for the save files.
-	name = "Side Ponytail 2"
-	icon_state = "hair_ponytailf"
-	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/sideponytail2
-	name = "Shoulder One"
-	icon_state = "hair_oneshoulder"
-	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/sideponytail3
-	name = "Shoulder Tress"
-	icon_state = "hair_tressshoulder"
-	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/sideundercut
-	name = "Side Undercut"
-	icon_state = "hair_sideundercut"
-	flags = HAIR_VERY_SHORT
-
-/datum/sprite_accessory/hair/skinhead
-	name = "Skinhead"
-	icon_state = "hair_skinhead"
-	flags = HAIR_VERY_SHORT
-
 /datum/sprite_accessory/hair/sleeze
-	name = "Sleeze"
+	name = "Короткая стрижка 4"
 	icon_state = "hair_sleeze"
 	flags = HAIR_VERY_SHORT
 
+/datum/sprite_accessory/hair/shy
+	name = "Неформал"
+	icon_state = "hair_shy"
+	flags = HAIR_TIEABLE
+
+/datum/sprite_accessory/hair/skinhead
+	name = "Скинхед"
+	icon_state = "hair_skinhead"
+	flags = HAIR_VERY_SHORT
+
 /datum/sprite_accessory/hair/protagonist
-	name = "Slightly Long"
+	name = "Длинноватые"
 	icon_state = "hair_protagonist"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/spiky
-	name = "Spiky"
+	name = "Шипы"
 	icon_state = "hair_spikey"
 	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
 
 /datum/sprite_accessory/hair/straightlong
-	name = "Straight Long"
+	name = "Длинные выпрямленные"
 	icon_state = "hair_straightlong"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/sweepshave
-	name = "Sweep Shave"
+	name = "Сбритый бок"
 	icon_state = "hair_sweepshave"
 
 /datum/sprite_accessory/hair/thinning
-	name = "Thinning"
+	name = "Выстриженная"
 	icon_state = "hair_thinning"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/thinningfront
-	name = "Thinning Front"
+	name = "Выстриженная спереди"
 	icon_state = "hair_thinningfront"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/thinningback
-	name = "Thinning Back"
+	name = "Выстриженная сзади"
 	icon_state = "hair_thinningrear"
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/topknot
-	name = "Topknot"
+	name = "Топ кнот"
 	icon_state = "hair_topknot"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/trimflat
-	name = "Trimmed Flat Top"
+	name = "Укороченные, плоский верх"
 	icon_state = "hair_trimflat"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/trimmed
-	name = "Trimmed"
+	name = "Укороченные"
 	icon_state = "hair_trimmed"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/twintail
-	name = "Twintail"
+	name = "Две косички"
 	icon_state = "hair_twintail"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/undercut1
-	name = "Undercut"
+	name = "Андеркат"
 	icon_state = "hair_undercut1"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/undercut2
-	name = "Undercut Swept Right"
+	name = "Андеркат направо"
 	icon_state = "hair_undercut2"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
 /datum/sprite_accessory/hair/undercut3
-	name = "Undercut Swept Left"
+	name = "Андеркат налево"
 	icon_state = "hair_undercut3"
 	gender = MALE
 	flags = HAIR_VERY_SHORT
 
+/datum/sprite_accessory/hair/sideundercut
+	name = "Андеркат набок"
+	icon_state = "hair_sideundercut"
+	flags = HAIR_VERY_SHORT
+
 /datum/sprite_accessory/hair/unkept
-	name = "Unkept"
+	name = "Небрежная"
 	icon_state = "hair_unkept"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/updo
-	name = "Updo"
+	name = "Хвост сверху"
 	icon_state = "hair_updo"
 	flags = HAIR_TIEABLE
 
 /datum/sprite_accessory/hair/vegeta
-	name = "Vegeta"
+	name = "Вегета"
 	icon_state = "hair_toriyama2"
 
 /datum/sprite_accessory/hair/vivi
-	name = "Vivi"
+	name = "Виви"
 	icon_state = "hair_vivi"
 
 /datum/sprite_accessory/hair/volaju
-	name = "Volaju"
+	name = "Воладжу"
 	icon_state = "hair_volaju"
-	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/wisp
-	name = "Wisp"
-	icon_state = "hair_wisp"
-	flags = HAIR_TIEABLE
-
-/datum/sprite_accessory/hair/zieglertail
-	name = "Zieglertail"
-	icon_state = "hair_ziegler"
 	flags = HAIR_TIEABLE
 
 /*
@@ -940,134 +938,134 @@
 	icon = 'icons/mob/Human_face.dmi'
 
 /datum/sprite_accessory/facial_hair/shaved
-	name = "Shaved"
+	name = "Бритое лицо"
 	icon_state = "bald"
 	gender = NEUTER
 	species_allowed = list(SPECIES_HUMAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI,SPECIES_TAJ,SPECIES_SKRELL, "Machine", SPECIES_TESHARI, SPECIES_TESHARI,SPECIES_PROMETHEAN)
 
 /datum/sprite_accessory/facial_hair/watson
-	name = "Watson Mustache"
+	name = "Усы Ватсона"
 	icon_state = "facial_watson"
 
 /datum/sprite_accessory/facial_hair/hogan
-	name = "Hulk Hogan Mustache"
+	name = "Усы Халка Хогана"
 	icon_state = "facial_hogan" //-Neek
 
 /datum/sprite_accessory/facial_hair/vandyke
-	name = "Van Dyke Mustache"
+	name = "Усы Ван Дайка"
 	icon_state = "facial_vandyke"
 
 /datum/sprite_accessory/facial_hair/chaplin
-	name = "Square Mustache"
+	name = "Усы квадратные"
 	icon_state = "facial_chaplin"
 
 /datum/sprite_accessory/facial_hair/selleck
-	name = "Selleck Mustache"
+	name = "Усы Селлека"
 	icon_state = "facial_selleck"
 
-/datum/sprite_accessory/facial_hair/neckbeard
-	name = "Neckbeard"
-	icon_state = "facial_neckbeard"
-
-/datum/sprite_accessory/facial_hair/fullbeard
-	name = "Full Beard"
-	icon_state = "facial_fullbeard"
-
-/datum/sprite_accessory/facial_hair/longbeard
-	name = "Long Beard"
-	icon_state = "facial_longbeard"
-
-/datum/sprite_accessory/facial_hair/vlongbeard
-	name = "Very Long Beard"
-	icon_state = "facial_wise"
-
-/datum/sprite_accessory/facial_hair/elvis
-	name = "Elvis Sideburns"
-	icon_state = "facial_elvis"
-	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
-
-/datum/sprite_accessory/facial_hair/abe
-	name = "Abraham Lincoln Beard"
-	icon_state = "facial_abe"
-
-/datum/sprite_accessory/facial_hair/chinstrap
-	name = "Chinstrap"
-	icon_state = "facial_chin"
-
-/datum/sprite_accessory/facial_hair/hip
-	name = "Hipster Beard"
-	icon_state = "facial_hip"
-
-/datum/sprite_accessory/facial_hair/gt
-	name = "Goatee"
-	icon_state = "facial_gt"
-
-/datum/sprite_accessory/facial_hair/jensen
-	name = "Adam Jensen Beard"
-	icon_state = "facial_jensen"
-
-/datum/sprite_accessory/facial_hair/volaju
-	name = "Volaju"
-	icon_state = "facial_volaju"
-
-/datum/sprite_accessory/facial_hair/dwarf
-	name = "Dwarf Beard"
-	icon_state = "facial_dwarf"
-
-/datum/sprite_accessory/facial_hair/threeOclock
-	name = "3 O'clock Shadow"
-	icon_state = "facial_3oclock"
-
-/datum/sprite_accessory/facial_hair/threeOclockstache
-	name = "3 O'clock Shadow and Moustache"
-	icon_state = "facial_3oclockmoustache"
-
-/datum/sprite_accessory/facial_hair/fiveOclock
-	name = "5 O'clock Shadow"
-	icon_state = "facial_5oclock"
-
-/datum/sprite_accessory/facial_hair/fiveOclockstache
-	name = "5 O'clock Shadow and Moustache"
-	icon_state = "facial_5oclockmoustache"
-
-/datum/sprite_accessory/facial_hair/sevenOclock
-	name = "7 O'clock Shadow"
-	icon_state = "facial_7oclock"
-
-/datum/sprite_accessory/facial_hair/sevenOclockstache
-	name = "7 O'clock Shadow and Moustache"
-	icon_state = "facial_7oclockmoustache"
+/datum/sprite_accessory/facial_hair/walrus
+	name = "Усы моржовые"
+	icon_state = "facial_walrus"
 
 /datum/sprite_accessory/facial_hair/mutton
-	name = "Mutton Chops"
+	name = "Бакенбарды"
 	icon_state = "facial_mutton"
 
 /datum/sprite_accessory/facial_hair/muttonstache
-	name = "Mutton Chops and Moustache"
+	name = "Бакенбарды с усами"
 	icon_state = "facial_muttonmus"
 
-/datum/sprite_accessory/facial_hair/walrus
-	name = "Walrus Moustache"
-	icon_state = "facial_walrus"
+/datum/sprite_accessory/facial_hair/elvis
+	name = "Бакенбарды Элвиса"
+	icon_state = "facial_elvis"
+	species_allowed = list(SPECIES_HUMAN,SPECIES_PROMETHEAN,SPECIES_HUMAN_VATBORN,SPECIES_UNATHI)
+
+/datum/sprite_accessory/facial_hair/threeOclock
+	name = "Щетина, три часа"
+	icon_state = "facial_3oclock"
+
+/datum/sprite_accessory/facial_hair/threeOclockstache
+	name = "Щетина, три часа с усами"
+	icon_state = "facial_3oclockmoustache"
+
+/datum/sprite_accessory/facial_hair/fiveOclock
+	name = "Щетина, пять часов"
+	icon_state = "facial_5oclock"
+
+/datum/sprite_accessory/facial_hair/fiveOclockstache
+	name = "Щетина, пять часов с усами"
+	icon_state = "facial_5oclockmoustache"
+
+/datum/sprite_accessory/facial_hair/sevenOclock
+	name = "Щетина, семь часов"
+	icon_state = "facial_7oclock"
+
+/datum/sprite_accessory/facial_hair/sevenOclockstache
+	name = "Щетина, семь часов с усами"
+	icon_state = "facial_7oclockmoustache"
+
+/datum/sprite_accessory/facial_hair/neckbeard
+	name = "Борода по шею"
+	icon_state = "facial_neckbeard"
+
+/datum/sprite_accessory/facial_hair/fullbeard
+	name = "Борода, полная"
+	icon_state = "facial_fullbeard"
+
+/datum/sprite_accessory/facial_hair/longbeard
+	name = "Борода, длинная"
+	icon_state = "facial_longbeard"
+
+/datum/sprite_accessory/facial_hair/vlongbeard
+	name = "Борода, очень длинная"
+	icon_state = "facial_wise"
+
+/datum/sprite_accessory/facial_hair/abe
+	name = "Борода Линкольна"
+	icon_state = "facial_abe"
+
+/datum/sprite_accessory/facial_hair/chinstrap
+	name = "Бородка под подбородком"
+	icon_state = "facial_chin"
+
+/datum/sprite_accessory/facial_hair/hip
+	name = "Борода хипстера"
+	icon_state = "facial_hip"
+
+/datum/sprite_accessory/facial_hair/gt
+	name = "Бородка козлиная"
+	icon_state = "facial_gt"
+
+/datum/sprite_accessory/facial_hair/jensen
+	name = "Борода Адама Дженсена"
+	icon_state = "facial_jensen"
+
+/datum/sprite_accessory/facial_hair/volaju
+	name = "Борода Воладжу"
+	icon_state = "facial_volaju"
+
+/datum/sprite_accessory/facial_hair/dwarf
+	name = "Борода гнома"
+	icon_state = "facial_dwarf"
 
 /datum/sprite_accessory/facial_hair/croppedbeard
-	name = "Full Cropped Beard"
+	name = "Борода укороченная"
 	icon_state = "facial_croppedfullbeard"
 
 /datum/sprite_accessory/facial_hair/chinless
-	name = "Chinless Beard"
+	name = "Борода без подбородка"
 	icon_state = "facial_chinlessbeard"
 
 /datum/sprite_accessory/facial_hair/tribeard
-	name = "Tribeard"
+	name = "Борода тройная"
 	icon_state = "facial_tribeard"
 
 /datum/sprite_accessory/facial_hair/moonshiner
-	name = "Moonshiner"
+	name = "Борода мудреца"
 	icon_state = "facial_moonshiner"
 
 /datum/sprite_accessory/facial_hair/martial
-	name = "Martial Artist"
+	name = "Борода мудреца, альт"
 	icon_state = "facial_martialartist"
 /*
 ///////////////////////////////////
@@ -1077,334 +1075,334 @@
 ///////////////////////////////////
 */
 
-/datum/sprite_accessory/hair/una_spines_long
-	name = "Long Unathi Spines"
-	icon_state = "soghun_longspines"
-	species_allowed = list(SPECIES_UNATHI)
-
 /datum/sprite_accessory/hair/una_spines_short
-	name = "Short Unathi Spines"
+	name = "Унати: Шипы короткие"
 	icon_state = "soghun_shortspines"
 	species_allowed = list(SPECIES_UNATHI)
 
-/datum/sprite_accessory/hair/una_frills_long
-	name = "Long Unathi Frills"
-	icon_state = "soghun_longfrills"
+/datum/sprite_accessory/hair/una_spines_long
+	name = "Унати: Шипы длинные"
+	icon_state = "soghun_longspines"
 	species_allowed = list(SPECIES_UNATHI)
 
-/datum/sprite_accessory/hair/una_frills_short
-	name = "Short Unathi Frills"
-	icon_state = "soghun_shortfrills"
+/datum/sprite_accessory/hair/una_smallhorns
+	name = "Унати: Рога короткие"
+	icon_state = "unathi_smallhorn"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/hair/una_horns
-	name = "Unathi Horns"
+	name = "Унати: Рога средние"
 	icon_state = "soghun_horns"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/hair/una_bighorns
-	name = "Unathi Big Horns"
+	name = "Унати: Рога большие"
 	icon_state = "unathi_bighorn"
 	species_allowed = list(SPECIES_UNATHI)
 
-/datum/sprite_accessory/hair/una_smallhorns
-	name = "Unathi Small Horns"
-	icon_state = "unathi_smallhorn"
-	species_allowed = list(SPECIES_UNATHI)
-
 /datum/sprite_accessory/hair/una_ramhorns
-	name = "Unathi Ram Horns"
+	name = "Унати: Рога округлые"
 	icon_state = "unathi_ramhorn"
 	species_allowed = list(SPECIES_UNATHI)
 
+/datum/sprite_accessory/hair/una_frills_short
+	name = "Унати: Плавники короткие"
+	icon_state = "soghun_shortfrills"
+	species_allowed = list(SPECIES_UNATHI)
+
+/datum/sprite_accessory/hair/una_frills_long
+	name = "Унати: Плавники средние"
+	icon_state = "soghun_longfrills"
+	species_allowed = list(SPECIES_UNATHI)
+
 /datum/sprite_accessory/hair/una_sidefrills
-	name = "Unathi Side Frills"
+	name = "Унати: Плавники большие"
 	icon_state = "unathi_sidefrills"
 	species_allowed = list(SPECIES_UNATHI)
 
 //Skrell 'hairstyles'
 /datum/sprite_accessory/hair/skr_tentacle_veryshort
-	name = "Skrell Short Tentacles"
+	name = "Скрелл: Очень короткие щупальца"
 	icon_state = "skrell_hair_short"
 	species_allowed = list(SPECIES_SKRELL)
 	gender = MALE
 
 /datum/sprite_accessory/hair/skr_tentacle_short
-	name = "Skrell Average Tentacles"
+	name = "Скрелл: Короткие щупальца"
 	icon_state = "skrell_hair_average"
 	species_allowed = list(SPECIES_SKRELL)
 
 /datum/sprite_accessory/hair/skr_tentacle_average
-	name = "Skrell Long Tentacles"
+	name = "Скрелл: Длинные щупальца"
 	icon_state = "skrell_hair_long"
 	species_allowed = list(SPECIES_SKRELL)
 
 /datum/sprite_accessory/hair/skr_tentacle_verylong
-	name = "Skrell Very Long Tentacles"
+	name = "Скрелл: Очень длинные щупальца"
 	icon_state = "skrell_hair_verylong"
 	species_allowed = list(SPECIES_SKRELL)
 
 //Tajaran hairstyles
 /datum/sprite_accessory/hair/taj_ears
-	name = "Tajaran Ears"
+	name = "Таджара: Уши"
 	icon_state = "ears_plain"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_clean
-	name = "Tajaran Clean"
+	name = "Таджара: Уши и волосы"
 	icon_state = "hair_clean"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_bangs
-	name = "Tajaran Bangs"
+	name = "Таджара: Дреды"
 	icon_state = "hair_bangs"
 	species_allowed = list(SPECIES_TAJ)
 
-
 /datum/sprite_accessory/hair/taj_ears_braid
-	name = "Tajaran Braid"
+	name = "Таджара: Косы"
 	icon_state = "hair_tbraid"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_shaggy
-	name = "Tajaran Shaggy"
+	name = "Таджара: Лохматые"
 	icon_state = "hair_shaggy"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_mohawk
-	name = "Tajaran Mohawk"
+	name = "Таджара: Могавк"
 	icon_state = "hair_mohawk"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_plait
-	name = "Tajaran Plait"
+	name = "Таджара: Хвостик"
 	icon_state = "hair_plait"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_straight
-	name = "Tajaran Straight"
+	name = "Таджара: Прямые"
 	icon_state = "hair_straight"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_long
-	name = "Tajaran Long"
+	name = "Таджара: Длинные"
 	icon_state = "hair_long"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_rattail
-	name = "Tajaran Rat Tail"
+	name = "Таджара: Крысиный хвост"
 	icon_state = "hair_rattail"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_spiky
-	name = "Tajaran Spiky"
+	name = "Таджара: Колючие"
 	icon_state = "hair_tajspiky"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_messy
-	name = "Tajaran Messy"
+	name = "Таджара: Неопрятные"
 	icon_state = "hair_messy"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_curls
-	name = "Tajaran Curly"
+	name = "Таджара: Кудрявые"
 	icon_state = "hair_curly"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_wife
-	name = "Tajaran Housewife"
+	name = "Таджара: Домоседка"
 	icon_state = "hair_wife"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_victory
-	name = "Tajaran Victory Curls"
+	name = "Таджара: Прическа в стиле виктори"
 	icon_state = "hair_victory"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_bob
-	name = "Tajaran Bob"
+	name = "Таджара: Каре"
 	icon_state = "hair_tbob"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/hair/taj_ears_fingercurl
-	name = "Tajaran Finger Curls"
+	name = "Таджара: Завитые локоны"
 	icon_state = "hair_fingerwave"
 	species_allowed = list(SPECIES_TAJ)
 
 //Teshari things
 /datum/sprite_accessory/hair/teshari
-	name = "Teshari Default"
+	name = "Тешари: Обычная"
 	icon_state = "teshari_default"
 	species_allowed = list(SPECIES_TESHARI)
 
 /datum/sprite_accessory/hair/teshari/altdefault
-	name = "Teshari Alt. Default"
+	name = "Тешари: Обычная, альт"
 	icon_state = "teshari_ears"
 
 /datum/sprite_accessory/hair/teshari/tight
-	name = "Teshari Tight"
+	name = "Тешари: Плотная"
 	icon_state = "teshari_tight"
 
 /datum/sprite_accessory/hair/teshari/excited
-	name = "Teshari Spiky"
+	name = "Тешари: Колючая"
 	icon_state = "teshari_spiky"
 
 /datum/sprite_accessory/hair/teshari/spike
-	name = "Teshari Spike"
+	name = "Тешари: Шипы"
 	icon_state = "teshari_spike"
 
 /datum/sprite_accessory/hair/teshari/long
-	name = "Teshari Overgrown"
+	name = "Тешари: Обросшие"
 	icon_state = "teshari_long"
 
 /datum/sprite_accessory/hair/teshari/burst
-	name = "Teshari Starburst"
+	name = "Тешари: Взрыв на макаронной фабрике"
 	icon_state = "teshari_burst"
 
 /datum/sprite_accessory/hair/teshari/shortburst
-	name = "Teshari Short Starburst"
+	name = "Тешари: Короткий взрыв на макаронной фабрике"
 	icon_state = "teshari_burst_short"
 
 /datum/sprite_accessory/hair/teshari/mohawk
-	name = "Teshari Mohawk"
+	name = "Тешари: Могавк"
 	icon_state = "teshari_mohawk"
 
 /datum/sprite_accessory/hair/teshari/pointy
-		name = "Teshari Pointy"
-		icon_state = "teshari_pointy"
+	name = "Тешари: По сторонам"
+	icon_state = "teshari_pointy"
 
 /datum/sprite_accessory/hair/teshari/upright
-	name = "Teshari Upright"
+	name = "Тешари: По сторонам и вверх"
 	icon_state = "teshari_upright"
 
 /datum/sprite_accessory/hair/teshari/mane
-	name = "Teshari Mane"
+	name = "Тешари: Грива"
 	icon_state = "teshari_mane"
 
 /datum/sprite_accessory/hair/teshari/droopy
-	name = "Teshari Droopy"
+	name = "Тешари: Вниз"
 	icon_state = "teshari_droopy"
 
 /datum/sprite_accessory/hair/teshari/mushroom
-	name = "Teshari Mushroom"
+	name = "Тешари: Гриб"
 	icon_state = "teshari_mushroom"
 
 //Tesh things ported from Ark Station
 
 /datum/sprite_accessory/hair/teshari/twies
-	name = "Teshari Twies"
+	name = "Тешари: Назад и вверх"
 	icon_state = "teshari_twies"
 
 /datum/sprite_accessory/hair/teshari/backstrafe
-	name = "Teshari Backstrafe"
+	name = "Тешари: Назад"
 	icon_state = "teshari_backstrafe"
 
 /datum/sprite_accessory/hair/teshari/_longway
-	name = "Teshari Long way"
+	name = "Тешари: Назад, длинные"
 	icon_state = "teshari_longway"
 
 /datum/sprite_accessory/hair/teshari/tree
-	name = "Teshari Tree"
+	name = "Тешари: Дерево"
 	icon_state = "teshari_tree"
 
 /datum/sprite_accessory/hair/teshari/fluffymohawk
-	name = "Teshari Fluffy Mohawk"
+	name = "Тешари: Пышный могавк"
 	icon_state = "teshari_fluffymohawk"
 
 // Vox things
-/datum/sprite_accessory/hair/vox_braid_long
-	name = "Long Vox braid"
-	icon_state = "vox_longbraid"
-	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_braid_short
-	name = "Short Vox Braid"
+	name = "Вокс: Короткая коса"
 	icon_state = "vox_shortbraid"
 	species_allowed = list(SPECIES_VOX)
 
+/datum/sprite_accessory/hair/vox_braid_long
+	name = "Вокс: Длинная коса"
+	icon_state = "vox_longbraid"
+	species_allowed = list(SPECIES_VOX)
+
 /datum/sprite_accessory/hair/vox_quills_short
-	name = "Short Vox Quills"
+	name = "Вокс: Короткие перья"
 	icon_state = "vox_shortquills"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_quills_kingly
-	name = "Kingly Vox Quills"
+	name = "Вокс: Королевские перья"
 	icon_state = "vox_kingly"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/hair/vox_quills_mohawk
-	name = "Quill Mohawk"
+	name = "Вокс: Могавк из перьев"
 	icon_state = "vox_mohawk"
 	species_allowed = list(SPECIES_VOX)
 
 /datum/sprite_accessory/facial_hair/taj_sideburns
-	name = "Tajaran Sideburns"
+	name = "Таджара: Бакенбарды"
 	icon_state = "facial_sideburns"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_mutton
-	name = "Tajaran Mutton"
+	name = "Таджара: Бакенбарды большие"
 	icon_state = "facial_mutton"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_pencilstache
-	name = "Tajaran Pencilstache"
+	name = "Таджара: Усы тонкие"
 	icon_state = "facial_pencilstache"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_moustache
-	name = "Tajaran Moustache"
+	name = "Таджара: Усы толстые"
 	icon_state = "facial_moustache"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_goatee
-	name = "Tajaran Goatee"
+	name = "Таджара: Козлиная бородка"
 	icon_state = "facial_goatee"
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/facial_hair/taj_smallstache
-	name = "Tajaran Smallsatche"
+	name = "Таджара: Козлиная бородка, альт"
 	icon_state = "facial_smallstache"
 	species_allowed = list(SPECIES_TAJ)
 
 //unathi horn beards and the like
 
 /datum/sprite_accessory/facial_hair/una_chinhorn
-	name = "Unathi Chin Horn"
+	name = "Унати: Рожки на подбородке"
 	icon_state = "facial_chinhorns"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/facial_hair/una_hornadorns
-	name = "Unathi Horn Adorns"
+	name = "Унати: Рога по лицу"
 	icon_state = "facial_hornadorns"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/facial_hair/una_spinespikes
-	name = "Unathi Spine Spikes"
+	name = "Унати: Шипы до спины"
 	icon_state = "facial_spikes"
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/facial_hair/una_dorsalfrill
-	name = "Unathi Dorsal Frill"
+	name = "Унати: Спинной плавник"
 	icon_state = "facial_dorsalfrill"
 	species_allowed = list(SPECIES_UNATHI)
 
 
 //Teshari things
 /datum/sprite_accessory/facial_hair/teshari_beard
-	name = "Teshari Beard"
+	name = "Тешари: Борода"
 	icon_state = "teshari_chin"
 	species_allowed = list(SPECIES_TESHARI)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/teshari_scraggly
-	name = "Teshari Scraggly"
+	name = "Тешари: Борода, альт"
 	icon_state = "teshari_scraggly"
 	species_allowed = list(SPECIES_TESHARI)
 	gender = NEUTER
 
 /datum/sprite_accessory/facial_hair/teshari_chops
-	name = "Teshari Chops"
+	name = "Тешари: Бакенбарды"
 	icon_state = "teshari_gap"
 	species_allowed = list(SPECIES_TESHARI)
 	gender = NEUTER
@@ -1427,233 +1425,234 @@
 	var/body_parts = list() //A list of bodyparts this covers, in organ_tag defines
 	//Reminder: BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD
 
-/datum/sprite_accessory/marking/tat_rheart
-	name = "Tattoo (Heart, R. Arm)"
-	icon_state = "tat_rheart"
-	body_parts = list(BP_R_ARM)
-
-/datum/sprite_accessory/marking/tat_lheart
-	name = "Tattoo (Heart, L. Arm)"
-	icon_state = "tat_lheart"
-	body_parts = list(BP_L_ARM)
 
 /datum/sprite_accessory/marking/tat_hive
-	name = "Tattoo (Hive, Back)"
+	name = "Тату: Спина"
 	icon_state = "tat_hive"
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/tat_nightling
-	name = "Tattoo (Nightling, Back)"
+	name = "Тату: Спина, альт"
 	icon_state = "tat_nightling"
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/tat_campbell
-	name = "Tattoo (Campbell, R.Arm)"
+	name = "Тату: Правая рука"
 	icon_state = "tat_campbell"
 	body_parts = list(BP_R_ARM)
-
+  
+/datum/sprite_accessory/marking/tat_rheart
+	name = "Тату: Правая рука, альт"
+	icon_state = "tat_rheart"
+	body_parts = list(BP_R_ARM)
+  
 /datum/sprite_accessory/marking/tat_campbell/left
-	name = "Tattoo (Campbell, L.Arm)"
+	name = "Тату: Левая рука"
 	body_parts = list(BP_L_ARM)
 
-/datum/sprite_accessory/marking/tat_campbell/rightleg
-	name = "Tattoo (Campbell, R.Leg)"
-	body_parts = list(BP_R_LEG)
-
+/datum/sprite_accessory/marking/tat_lheart
+	name = "Тату: Левая рука, альт"
+	icon_state = "tat_lheart"
+	body_parts = list(BP_L_ARM)
+  
 /datum/sprite_accessory/marking/tat_campbell/leftleg
-	name = "Tattoo (Campbell, L.Leg)"
+	name = "Тату: Левая нога"
 	body_parts = list (BP_L_LEG)
 
+/datum/sprite_accessory/marking/tat_silverburgh/left
+	name = "Тату: Левая нога, альт"
+	icon_state = "tat_silverburgh"
+	body_parts = list (BP_L_LEG)
+
+/datum/sprite_accessory/marking/tat_campbell/rightleg
+	name = "Тату: Правая нога"
+	body_parts = list(BP_R_LEG)
+
 /datum/sprite_accessory/marking/tat_silverburgh
-	name = "Tattoo (Silverburgh, R.Leg)"
+	name = "Tату: Правая нога, альт"
 	icon_state = "tat_silverburgh"
 	body_parts = list (BP_R_LEG)
 
-/datum/sprite_accessory/marking/tat_silverburgh/left
-	name = "Tattoo (Silverburgh, L.Leg)"
-	icon_state = "tat_silverburgh"
-	body_parts = list (BP_L_LEG)
-
 /datum/sprite_accessory/marking/tat_tiger
-	name = "Tattoo (Tiger Stripes, Body)"
+	name = "Тату: Тигриные полосы (всё тело)"
 	icon_state = "tat_tiger"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN)
 
-/datum/sprite_accessory/marking/taj_paw_socks
-	name = "Socks Coloration (Taj)"
-	icon_state = "taj_pawsocks"
-	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
-	species_allowed = list(SPECIES_TAJ)
-
-/datum/sprite_accessory/marking/una_paw_socks
-	name = "Socks Coloration (Una)"
-	icon_state = "una_pawsocks"
-	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
-	species_allowed = list(SPECIES_UNATHI)
-
 /datum/sprite_accessory/marking/paw_socks
-	name = "Socks Coloration (Generic)"
+	name = "Окрас носков (все расы)"
 	icon_state = "pawsocks"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/paw_socks_belly
-	name = "Socks,Belly Coloration (Generic)"
+	name = "Окрас носков, живота (все расы)"
 	icon_state = "pawsocksbelly"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/belly_hands_feet
-	name = "Hands,Feet,Belly Color (Minor)"
+	name = "Окрас ладоней, ступней, живота (меньше)"
 	icon_state = "bellyhandsfeetsmall"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/hands_feet_belly_full
-	name = "Hands,Feet,Belly Color (Major)"
+	name = "Окрас ладоней, ступней, живота (больше)"
 	icon_state = "bellyhandsfeet"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ, SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/hands_feet_belly_full_female
-	name = "Hands,Feet,Belly Color (Major, Female)"
+	name = "Окрас ладоней, ступней, живота (больше, жен.)"
 	icon_state = "bellyhandsfeet_female"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_GROIN,BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/patches
-	name = "Color Patches"
+	name = "Цветные пятна"
 	icon_state = "patches"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/patchesface
-	name = "Color Patches (Face)"
+	name = "Цветные пятна (лицо)"
 	icon_state = "patchesface"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/bands
-	name = "Color Bands"
+	name = "Цветные кольца"
 	icon_state = "bands"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN)
 
 /datum/sprite_accessory/marking/bandsface
-	name = "Color Bands (Face)"
+	name = "Цветные кольца (лицо)"
 	icon_state = "bandsface"
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/tiger_stripes
-	name = "Tiger Stripes"
+	name = "Тигр: Полосы"
 	icon_state = "tiger"
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_GROIN)
 	species_allowed = list(SPECIES_TAJ) //There's a tattoo for non-cats
 
 /datum/sprite_accessory/marking/tigerhead
-	name = "Tiger Stripes (Head, Minor)"
+	name = "Тигр: Полосы (голова, меньше)"
 	icon_state = "tigerhead"
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/tigerface
-	name = "Tiger Stripes (Head, Major)"
+	name = "Тигр: полосы (голова, больше)"
 	icon_state = "tigerface"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ) //There's a tattoo for non-cats
 
 /datum/sprite_accessory/marking/backstripe
-	name = "Back Stripe"
+	name = "Спина: Полосы"
 	icon_state = "backstripe"
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/heterochromia
-	name = "Heterochromia (right eye)"
+	name = "Глаза: Гетерохромия (правый)"
 	icon_state = "heterochromia"
 	body_parts = list(BP_HEAD)
 
 	//Taj specific stuff
 /datum/sprite_accessory/marking/taj_belly
-	name = "Belly Fur (Taj)"
+	name = "Таджара: Живот"
 	icon_state = "taj_belly"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_bellyfull
-	name = "Belly Fur Wide (Taj)"
+	name = "Таджара: Живот (шире)"
 	icon_state = "taj_bellyfull"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_earsout
-	name = "Outer Ear (Taj)"
+	name = "Таджара: Уши (внеш.)"
 	icon_state = "taj_earsout"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_earsin
-	name = "Inner Ear (Taj)"
+	name = "Таджара: Уши (внутр.)"
 	icon_state = "taj_earsin"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_nose
-	name = "Nose Color (Taj)"
+	name = "Таджара: Нос"
 	icon_state = "taj_nose"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_crest
-	name = "Chest Fur Crest (Taj)"
+	name = "Таджара: Грудь (крест)"
 	icon_state = "taj_crest"
 	body_parts = list(BP_TORSO)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_muzzle
-	name = "Muzzle Color (Taj)"
+	name = "Таджара: Морда"
 	icon_state = "taj_muzzle"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_face
-	name = "Cheeks Color (Taj)"
+	name = "Таджара: Щёки"
 	icon_state = "taj_face"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
 /datum/sprite_accessory/marking/taj_all
-	name = "All Taj Head (Taj)"
+	name = "Таджара: Голова (полностью)"
 	icon_state = "taj_all"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TAJ)
 
+/datum/sprite_accessory/marking/taj_paw_socks
+	name = "Таджара: Окрас носков"
+	icon_state = "taj_pawsocks"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
+	species_allowed = list(SPECIES_TAJ)
+
 	//Una specific stuff
 /datum/sprite_accessory/marking/una_face
-	name = "Face Color (Una)"
+	name = "Унати: Лицо"
 	icon_state = "una_face"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/una_facelow
-	name = "Face Color Low (Una)"
+	name = "Унати: Лицо (ниже)"
 	icon_state = "una_facelow"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_UNATHI)
 
 /datum/sprite_accessory/marking/una_scutes
-	name = "Scutes (Una)"
+	name = "Унати: Грудь"
 	icon_state = "una_scutes"
 	body_parts = list(BP_TORSO)
+	species_allowed = list(SPECIES_UNATHI)
+
+/datum/sprite_accessory/marking/una_paw_socks
+	name = "Унати: Окрас носков"
+	icon_state = "una_pawsocks"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND)
 	species_allowed = list(SPECIES_UNATHI)
 
 	//Tesh stuff.
 
 /datum/sprite_accessory/marking/teshi_fluff
-	name = "Underfluff (Teshari)"
+	name = "Тешари: Вторичный цвет"
 	icon_state = "teshi_fluff"
 	body_parts = list(BP_HEAD, BP_TORSO, BP_GROIN, BP_R_LEG, BP_L_LEG)
 	species_allowed = list(SPECIES_TESHARI)
 
 /datum/sprite_accessory/marking/teshi_heterochromia
-	name = "Heterochromia (Teshari) (right eye)"
+	name = "Тешари: Гетерохромия (правый глаз)"
 	icon_state = "teshi_heterochromia"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_TESHARI)
@@ -1661,41 +1660,41 @@
 	//Diona stuff.
 
 /datum/sprite_accessory/marking/diona_leaves
-	name = "Leaves (Diona)"
+	name = "Диона: Листва"
 	icon_state = "diona_leaves"
 	body_parts = list(BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_TORSO, BP_GROIN, BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 
 /datum/sprite_accessory/marking/diona_thorns
-	name = "Thorns (Diona)"
+	name = "Диона: Шипы"
 	icon_state = "diona_thorns"
 	body_parts =list(BP_TORSO, BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_flowers
-	name = "Flowers (Diona)"
+	name = "Диона: Цветы"
 	icon_state = "diona_flowers"
 	body_parts =list(BP_TORSO, BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_moss
-	name = "Moss (Diona)"
+	name = "Диона: Мох"
 	icon_state = "diona_moss"
 	body_parts =list(BP_TORSO)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_mushroom
-	name = "Mushroom (Diona)"
+	name = "Диона: Гриб"
 	icon_state = "diona_mushroom"
 	body_parts =list(BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)
 	do_colouration = 0
 
 /datum/sprite_accessory/marking/diona_antennae
-	name = "Antennae (Diona)"
+	name = "Диона: Антенна"
 	icon_state = "diona_antennae"
 	body_parts =list(BP_HEAD)
 	species_allowed = list(SPECIES_DIONA)

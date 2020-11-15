@@ -169,7 +169,7 @@
 					"Borgi" = "borgi-sec",
 					"Otieborg" = "oties"
 					)
-	channels = list("Security" = 1)
+	channels = list("Служба безопасности" = 1)
 	networks = list(NETWORK_SECURITY)
 	pto_type = PTO_SECURITY
 	can_be_pushed = 0
@@ -234,7 +234,7 @@
 
 /obj/item/weapon/robot_module/robot/medihound
 	name = "MediHound module"
-	channels = list("Medical" = 1)
+	channels = list("Медицинский отдел" = 1)
 	networks = list(NETWORK_MEDICAL)
 	subsystems = list(/mob/living/silicon/proc/subsystem_crew_monitor)
 	pto_type = PTO_MEDICAL
@@ -300,7 +300,7 @@
 
 /obj/item/weapon/robot_module/robot/ert
 	name = "Emergency Responce module"
-	channels = list("Security" = 1)
+	channels = list("Служба безопасности" = 1)
 	networks = list(NETWORK_SECURITY)
 	pto_type = PTO_SECURITY
 	can_be_pushed = 0
@@ -354,7 +354,7 @@
 					"Borgi" = "borgi-jani",
 					"Otieborg" = "otiej"
 					)
-	channels = list("Service" = 1)
+	channels = list("Сервис" = 1)
 	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
@@ -439,7 +439,7 @@
 					"SciHound" = "scihound",
 					"SciHoundDark" = "scihounddark"
 					)
-	channels = list("Science" = 1)
+	channels = list("Научный отдел" = 1)
 	pto_type = PTO_SCIENCE
 	can_be_pushed = 0
 
@@ -514,7 +514,7 @@
 					"EngiHound" = "engihound",
 					"EngiHoundDark" = "engihounddark"
 					)
-	channels = list("Engineering" = 1)
+	channels = list("Инженерный отдел" = 1)
 	networks = list(NETWORK_ENGINEERING)
 	pto_type = PTO_ENGINEERING
 	subsystems = list(/mob/living/silicon/proc/subsystem_power_monitor)
@@ -663,7 +663,7 @@
 					"ServicehoundV2" = "serve2",
 					"ServicehoundV2 Darkmode" = "servedark",
 					)
-	channels = list("Service" = 1)
+	channels = list("Сервис" = 1)
 	pto_type = PTO_CIVILIAN
 	can_be_pushed = 0
 
@@ -735,7 +735,7 @@
 					"CargoHound" = "cargohound",
 					"CargoHoundDark" = "cargohounddark"
 					)
-	channels = list("Supply" = 1)
+	channels = list("Снабжение" = 1)
 	pto_type = PTO_CARGO
 	can_be_pushed = 0
 

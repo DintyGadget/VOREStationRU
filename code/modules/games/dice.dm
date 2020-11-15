@@ -1,6 +1,6 @@
 /obj/item/weapon/dice
-	name = "d6"
-	desc = "A dice with six sides."
+	name = "шестигранный кубик"
+	desc = "Кубик с шестью гранями."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "d66"
 	w_class = ITEMSIZE_TINY
@@ -12,43 +12,43 @@
 	icon_state = "[name][rand(1,sides)]"
 
 /obj/item/weapon/dice/d4
-	name = "d4"
-	desc = "A dice with four sides."
+	name = "четырехгранный кубик"
+	desc = "Кубик с четырьмя гранями."
 	icon_state = "d44"
 	sides = 4
 	result = 4
 
 /obj/item/weapon/dice/d8
-	name = "d8"
-	desc = "A dice with eight sides."
+	name = "восьмигранный кубик"
+	desc = "Кубик с восьмью гранями."
 	icon_state = "d88"
 	sides = 8
 	result = 8
 
 /obj/item/weapon/dice/d10
-	name = "d10"
-	desc = "A dice with ten sides."
+	name = "десятигранный кубик"
+	desc = "Кубик с десятью гранями."
 	icon_state = "d1010"
 	sides = 10
 	result = 10
 
 /obj/item/weapon/dice/d12
-	name = "d12"
-	desc = "A dice with twelve sides."
+	name = "двенадцатигранный кубик"
+	desc = "Кубик с двенадцатью гранями."
 	icon_state = "d1212"
 	sides = 12
 	result = 12
 
 /obj/item/weapon/dice/d20
-	name = "d20"
-	desc = "A dice with twenty sides."
+	name = "двадцатигранный кубик"
+	desc = "Кубик с двадцатью гранями."
 	icon_state = "d2020"
 	sides = 20
 	result = 20
 
 /obj/item/weapon/dice/d100
-	name = "d100"
-	desc = "A dice with ten sides. This one is for the tens digit."
+	name = "стогранный кубик"
+	desc = "Кубик с десятью гранями. Выдает десятичные значения."
 	icon_state = "d10010"
 	sides = 10
 	result = 10
@@ -63,21 +63,21 @@
 	if(!silent)
 		var/comment = ""
 		if(sides == 20 && result == 20)
-			comment = "Nat 20!"
+			comment = "Нат 20!"
 		else if(sides == 20 && result == 1)
-			comment = "Ouch, bad luck."
+			comment = "Уф, не повезло."
 
-		user.visible_message("<span class='notice'>[user] has thrown [src]. It lands on [result]. [comment]</span>", \
-							 "<span class='notice'>You throw [src]. It lands on a [result]. [comment]</span>", \
-							 "<span class='notice'>You hear [src] landing on a [result]. [comment]</span>")
+		user.visible_message("<span class='notice'>[user] бросает [src]. Сверху число [result]. [comment]</span>", \
+							 "<span class='notice'>Вы бросаете [src]. Сверху число [result]. [comment]</span>", \
+							 "<span class='notice'>Вы видите, как [src] перекатывается цифрой [result] кверху. [comment]</span>")
 
 /*
  * Dice packs
  */
 
 /obj/item/weapon/storage/pill_bottle/dice	//7d6
-	name = "bag of dice"
-	desc = "It's a small bag with dice inside."
+	name = "мешочек игральных кубиков"
+	desc = "Небольшой мешочек с игральными кубиками внутри."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "dicebag"
 	drop_sound = 'sound/items/drop/hat.ogg'
@@ -89,8 +89,8 @@
 		new /obj/item/weapon/dice( src )
 
 /obj/item/weapon/storage/pill_bottle/dice_nerd	//DnD dice
-	name = "bag of gaming dice"
-	desc = "It's a small bag with gaming dice inside."
+	name = "мешочек многогранных кубиков"
+	desc = "Небольшой мешочек с кубиками для настольных игр внутри."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "magicdicebag"
 	drop_sound = 'sound/items/drop/hat.ogg'
@@ -111,8 +111,8 @@
  */
 
 /obj/item/weapon/storage/dicecup
-	name = "dice cup"
-	desc = "A cup used to conceal and hold dice."
+	name = "стакан для кубиков"
+	desc = "Небольшой стаканчик для скрывания или хранения кубиков."
 	icon = 'icons/obj/dice.dmi'
 	icon_state = "dicecup"
 	w_class = ITEMSIZE_SMALL
@@ -122,9 +122,9 @@
 		)
 
 /obj/item/weapon/storage/dicecup/attack_self(mob/user as mob)
-	user.visible_message("<span class='notice'>[user] shakes [src].</span>", \
-							 "<span class='notice'>You shake [src].</span>", \
-							 "<span class='notice'>You hear dice rolling.</span>")
+	user.visible_message("<span class='notice'>[user] встряхивает [src].</span>", \
+							 "<span class='notice'>Вы встряхиваете [src].</span>", \
+							 "<span class='notice'>Вы слышите звуки перекатывания кубиков.</span>")
 	rollCup(user)
 
 /obj/item/weapon/storage/dicecup/proc/rollCup(mob/user as mob)
@@ -135,23 +135,23 @@
 /obj/item/weapon/storage/dicecup/proc/revealDice(var/mob/viewer)
 	for(var/obj/item/weapon/dice/I in src.contents)
 		var/obj/item/weapon/dice/D = I
-		to_chat(viewer, "The [D.name] shows a [D.result].")
+		to_chat(viewer, "[D.name] показывает [D.result].")
 
 /obj/item/weapon/storage/dicecup/verb/peekAtDice()
-	set category = "Object"
-	set name = "Peek at Dice"
-	set desc = "Peek at the dice under your cup."
+	set category = "Объект"
+	set name = "Подсмотреть Кубики"
+	set desc = "Подсмотреть кубики в Вашем стаканчике."
 
 	revealDice(usr)
 
 /obj/item/weapon/storage/dicecup/verb/revealDiceHand()
 
-	set category = "Object"
-	set name = "Reveal Dice"
-	set desc = "Reveal the dice hidden under your cup."
+	set category = "Объект"
+	set name = "Показать Кубики"
+	set desc = "Показать кубики, скрытые под Вашим стаканчиком."
 
 	for(var/mob/living/player in viewers(3))
-		to_chat(player, "[usr] reveals their dice.")
+		to_chat(player, "[usr] показывает кубики.")
 		revealDice(player)
 
 

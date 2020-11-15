@@ -2,8 +2,8 @@
 
 //Utility
 /obj/item/clothing/head/soft/solgov
-	name = "\improper SolCom cap"
-	desc = "It's a blue ballcap in Terran Commonwealth Government colors."
+	name = "кепка Сол"
+	desc = "Это синяя бейсболка в расцветке Правительства Терранского Содружества."
 
 /obj/item/clothing/head/soft/solgov/veteranhat
 	name = "veteran hat"
@@ -98,8 +98,8 @@
 //Berets
 
 /obj/item/clothing/head/beret/solgov
-	name = "peacekeeper beret"
-	desc = "A beret in Terran Commonwealth Government colors. For peacekeepers that are more inclined towards style than safety."
+	name = "берет миротворца"
+	desc = "Берет в расцветке Правительства Терранского Содружества. Для миротворцев, для которых стиль превыше безопасности."
 
 /obj/item/clothing/head/beret/solgov/homeguard
 	name = "home guard beret"

@@ -161,7 +161,7 @@
 
 /datum/language/proc/can_speak_special(var/mob/speaker)
 	. = TRUE
-	if(name != "Noise")	// Audible Emotes
+	if(name != "Шум")	// Audible Emotes
 		if(ishuman(speaker))
 			var/mob/living/carbon/human/H = speaker
 			if(H.species.has_organ[O_VOICE] && !(flags & SIGNLANG) && !(flags & NONVERBAL)) // Does the species need a voicebox? Is the language even spoken?
@@ -205,7 +205,7 @@
 		log_debug("[src] attempted to speak a null language.")
 		return 0
 
-	if(speaking == GLOB.all_languages["Noise"])
+	if(speaking == GLOB.all_languages["Шум"])
 		return 1
 
 	if (only_species_language && speaking != GLOB.all_languages[species_language])
@@ -244,23 +244,23 @@
 	. = ""
 
 	if(default_language)
-		. += "Current default language: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br/><br/>"
+		. += "Текущий язык на умполчанию: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br/><br/>"
 
 	for(var/datum/language/L in languages)
 		if(!(L.flags & NONGLOBAL))
 			if(L == default_language)
-				. += "<b>[L.name] ([get_language_prefix()][L.key])</b> - default - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br/>[L.desc]<br/><br/>"
+				. += "<b>[L.name] ([get_language_prefix()][L.key])</b> - по умолчанию - <a href='byond://?src=\ref[src];default_lang=reset'>сменить</a><br/>[L.desc]<br/><br/>"
 			else if (can_speak(L))
-				. += "<b>[L.name] ([get_language_prefix()][L.key])</b> - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>set default</a><br/>[L.desc]<br/><br/>"
+				. += "<b>[L.name] ([get_language_prefix()][L.key])</b> - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>сделать по умолчанию</a><br/>[L.desc]<br/><br/>"
 			else
-				. += "<b>[L.name] ([get_language_prefix()][L.key])</b> - cannot speak!<br/>[L.desc]<br/><br/>"
+				. += "<b>[L.name] ([get_language_prefix()][L.key])</b> - не знаете!k!<br/>[L.desc]<br/><br/>"
 
 /mob/verb/check_languages()
-	set name = "Check Known Languages"
+	set name = "Проверить Известные Языки"
 	set category = "IC"
 	set src = usr
 
-	var/datum/browser/popup = new(src, "checklanguage", "Known Languages", 420, 470)
+	var/datum/browser/popup = new(src, "checklanguage", "Известные Язык", 420, 470)
 	popup.set_content(check_lang_data())
 	popup.open()
 

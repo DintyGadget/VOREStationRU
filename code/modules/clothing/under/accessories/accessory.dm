@@ -1,6 +1,6 @@
 /obj/item/clothing/accessory
-	name = "tie"
-	desc = "Галстук-клипса из неосилка."
+	name = "галстук"
+	desc = "Галстук-клипса из неошелка."
 	icon = 'icons/obj/clothing/ties.dmi'
 	icon_state = "bluetie"
 	item_state_slots = list(slot_r_hand_str = "", slot_l_hand_str = "")
@@ -83,7 +83,7 @@
 	has_suit.add_overlay(get_inv_overlay())
 
 	if(user)
-		to_chat(user, "<span class='notice'>Вы прикрепляете [src] к [has_suit].</span>")
+		to_chat(user, "<span class='notice'>Вы нацепляете [src] на [has_suit].</span>")
 		add_fingerprint(user)
 
 /obj/item/clothing/accessory/proc/on_removed(var/mob/user)
@@ -108,58 +108,58 @@
 	..()
 
 /obj/item/clothing/accessory/tie
-	name = "blue tie"
+	name = "синий галстук"
 	icon_state = "bluetie"
 	slot = ACCESSORY_SLOT_TIE
 
 /obj/item/clothing/accessory/tie/red
-	name = "red tie"
+	name = "красный галстук"
 	icon_state = "redtie"
 
 /obj/item/clothing/accessory/tie/blue_clip
-	name = "blue tie with a clip"
+	name = "синий галстук с клипсой"
 	icon_state = "bluecliptie"
 
 /obj/item/clothing/accessory/tie/blue_long
-	name = "blue long tie"
+	name = "синий длинный галстук"
 	icon_state = "bluelongtie"
 
 /obj/item/clothing/accessory/tie/red_clip
-	name = "red tie with a clip"
+	name = "красный галстук с клипсой"
 	icon_state = "redcliptie"
 
 /obj/item/clothing/accessory/tie/red_long
-	name = "red long tie"
+	name = "красный длинный галстук"
 	icon_state = "redlongtie"
 
 /obj/item/clothing/accessory/tie/black
-	name = "black tie"
+	name = "черный галстук"
 	icon_state = "blacktie"
 
 /obj/item/clothing/accessory/tie/darkgreen
-	name = "dark green tie"
+	name = "темно-зеленый галстук"
 	icon_state = "dgreentie"
 
 /obj/item/clothing/accessory/tie/yellow
-	name = "yellow tie"
+	name = "желтый галстук"
 	icon_state = "yellowtie"
 
 /obj/item/clothing/accessory/tie/navy
-	name = "navy tie"
+	name = "темно-синий галстук"
 	icon_state = "navytie"
 
 /obj/item/clothing/accessory/tie/white
-	name = "white tie"
+	name = "белый галстук"
 	icon_state = "whitetie"
 
 /obj/item/clothing/accessory/tie/horrible
-	name = "horrible tie"
-	desc = "Галстук-клипса из неосилка. Выглядит отвратительно."
+	name = "убогий галстук"
+	desc = "Галстук-клипса из неошелка. Выглядит отвратительно."
 	icon_state = "horribletie"
 
 /obj/item/clothing/accessory/stethoscope
-	name = "stethoscope"
-	desc = "Устаревший медицинский аппарат для прослушивания звуков человеческого тела. А еще вы выглядите так, словно знаете что делаете."
+	name = "стетоскоп"
+	desc = "Устаревший медицинский аппарат для прослушивания звуков человеческого тела. А ещё в них Вы выглядите так, словно знаете что делаете."
 	icon_state = "stethoscope"
 	slot = ACCESSORY_SLOT_TIE
 
@@ -174,53 +174,53 @@
 		if(user.a_intent == I_HELP)
 			var/body_part = parse_zone(user.zone_sel.selecting)
 			if(body_part)
-				var/their = "their"
+				var/their = "их"
 				switch(M.gender)
-					if(MALE)	their = "his"
-					if(FEMALE)	their = "her"
+					if(MALE)	their = "его"
+					if(FEMALE)	their = "её"
 
-				var/sound = "heartbeat"
-				var/sound_strength = "cannot hear"
+				var/sound = "сердцебиение"
+				var/sound_strength = "не слышите"
 				var/heartbeat = 0
 				var/obj/item/organ/internal/heart/heart = M.internal_organs_by_name[O_HEART]
 				if(heart && !(heart.robotic >= ORGAN_ROBOT))
 					heartbeat = 1
 				if(M.stat == DEAD || (M.status_flags&FAKEDEATH))
-					sound_strength = "cannot hear"
-					sound = "anything"
+					sound_strength = "не слышите"
+					sound = "ничего"
 				else
 					switch(body_part)
 						if(BP_TORSO)
-							sound_strength = "hear"
-							sound = "no heartbeat"
+							sound_strength = "замечаете"
+							sound = "отсутствие сердцебиения"
 							if(heartbeat)
 								if(heart.is_bruised() || M.getOxyLoss() > 50)
-									sound = "[pick("odd noises in","weak")] heartbeat"
+									sound = "[pick("необычные звуки в сердцебиении","слабое сердцебиение")]"
 								else
-									sound = "healthy heartbeat"
+									sound = "здоровое сердцебиение"
 
 							var/obj/item/organ/internal/heart/L = M.internal_organs_by_name[O_LUNGS]
 							if(!L || M.losebreath)
-								sound += " and no respiration"
+								sound += " и отсутствие дыхания"
 							else if(M.is_lung_ruptured() || M.getOxyLoss() > 50)
-								sound += " and [pick("wheezing","gurgling")] sounds"
+								sound += " и звуки [pick("затрудненного дыхания","удушья")]"
 							else
-								sound += " and healthy respiration"
+								sound += " и здоровое дыхание"
 						if(O_EYES,O_MOUTH)
-							sound_strength = "cannot hear"
-							sound = "anything"
+							sound_strength = "не слышите"
+							sound = "ничего"
 						else
 							if(heartbeat)
-								sound_strength = "hear a weak"
-								sound = "pulse"
+								sound_strength = "слышите слабый"
+								sound = "пульс"
 
-				user.visible_message("[user] places [src] against [M]'s [body_part] and listens attentively.", "You place [src] against [their] [body_part]. You [sound_strength] [sound].")
+				user.visible_message("[user] прикладывает [src] к  телу [M] ([body_part]) и внимательно слушает.", "Вы прикладываете [src] к [their] телу ([body_part]). Вы [sound_strength] [sound].")
 				return
 	return ..(M,user)
 
 //Medals
 /obj/item/clothing/accessory/medal
-	name = "bronze medal"
+	name = "бронзовая медаль"
 	desc = "Бронзовая медаль."
 	icon_state = "bronze"
 	slot = ACCESSORY_SLOT_MEDAL
@@ -228,122 +228,122 @@
 	pickup_sound = 'sound/items/pickup/accessory.ogg'
 
 /obj/item/clothing/accessory/medal/conduct
-	name = "distinguished conduct medal"
-	desc = "Бронзовая медаль присуждается за выдающееся поведение. Хотя это большая честь, это самая основная награда, которую мы предлагаем. Она часто вручается капитаном члену их экипажа."
+	name = "медаль за выдающиеся заслуги"
+	desc = "Данная бронзовая медаль присуждается за выдающееся поведение. Хоть это и большая честь, это самая простейшая награда, которую мы можем предложить. Зачастую вручается капитаном."
 
 /obj/item/clothing/accessory/medal/bronze_heart
-	name = "bronze heart medal"
+	name = "бронзовое сердце"
 	desc = "Бронзовая медаль в форме сердца, вручаемая за жертвоприношение. Она часто присуждается посмертно или за тяжелое увечье при исполнении служебных обязанностей."
 	icon_state = "bronze_heart"
 
 /obj/item/clothing/accessory/medal/nobel_science
-	name = "nobel sciences award"
+	name = "нобелевская премия"
 	desc = "Бронзовая медаль, которая представляет значительный вклад в области науки или техники."
 
 /obj/item/clothing/accessory/medal/silver
-	name = "silver medal"
+	name = "серебряная медаль"
 	desc = "Серебряная медаль."
 	icon_state = "silver"
 
 /obj/item/clothing/accessory/medal/silver/valor
-	name = "medal of valor"
+	name = "медаль за отвагу"
 	desc = "Серебряная медаль за особые подвиги."
 
 /obj/item/clothing/accessory/medal/silver/security
-	name = "robust security award"
-	desc = "Награда за выдающиеся боевые заслуги и самопожертвование в защите корпоративных коммерческих интересов. Часто присуждается сотрудникам Службы безопасности."
+	name = "награда за поддержание порядка"
+	desc = "Награда за выдающиеся боевые заслуги и самопожертвование в защите корпоративных коммерческих интересов. Часто присуждается сотрудникам службы безопасности."
 
 /obj/item/clothing/accessory/medal/gold
-	name = "gold medal"
+	name = "золотая медаль"
 	desc = "Престижная золотая медаль."
 	icon_state = "gold"
 
 /obj/item/clothing/accessory/medal/gold/captain
-	name = "medal of captaincy"
-	desc = "Золотая медаль присуждается исключительно тем, кто был повышен до директора/капитана. Это означает систематизированные обязанности директора/капитана и их неоспоримую власть над своей командой."
+	name = "медаль капитанства"
+	desc = "Данная золотая медаль присуждается исключительно тем, кто был повышен до должности Директора/Капитана. Она накладывает на носителя особую ответственность Директора/Капитана и дарует неоспоримую власть над экипажем."
 
 /obj/item/clothing/accessory/medal/gold/heroism
-	name = "medal of exceptional heroism"
-	desc = "Чрезвычайно редкая золотая медаль, вручаемая только высокопоставленным чиновникам. Получить такую медаль-это высшая честь, и как таковая существует в очень малом количестве. Эта медаль почти никогда не вручается никому, кроме заслуженных ветеранов."
+	name = "медаль за исключительный героизм"
+	desc = "Чрезвычайно редкая золотая медаль, вручаемая только высокопоставленными чиновниками. Получить такую медаль - большая честь, и как следствие, она существует в очень малом количестве. Эта медаль почти никогда не вручается никому, кроме заслуженных ветеранов."
 
 // Base type for 'medals' found in a "dungeon" submap, as a sort of trophy to celebrate the player's conquest.
 /obj/item/clothing/accessory/medal/dungeon
 
 /obj/item/clothing/accessory/medal/dungeon/alien_ufo
-	name = "alien captain's medal"
-	desc = "Она смутно напоминала звезду. Похоже, что-то такое носил капитан пришельцев. Возможно."
+	name = "медаль инопланетного капитана"
+	desc = "Смутно напоминает звезду. Похожа на что-то, что носил бы капитан пришельцев. Наверное."
 	icon_state = "alien_medal"
 
 //Scarves
 
 /obj/item/clothing/accessory/scarf
-	name = "green scarf"
-	desc = "Стильный шарф. Идеальный зимний аксессуар для тех, кто обладает острым чувством моды, и тех, кто просто не может справиться с холодным ветерком на шее."
+	name = "зеленый шарф"
+	desc = "Стильный шарф. Идеальный зимний аксессуар для тех, кто обладает острым чувством моды, и тех, кто просто не терпит холодок на шее."
 	icon_state = "greenscarf"
 	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/scarf/red
-	name = "red scarf"
+	name = "красный шарф"
 	icon_state = "redscarf"
 
 /obj/item/clothing/accessory/scarf/darkblue
-	name = "dark blue scarf"
+	name = "темно-синий шарф"
 	icon_state = "darkbluescarf"
 
 /obj/item/clothing/accessory/scarf/purple
-	name = "purple scarf"
+	name = "фиолетовый шарф"
 	icon_state = "purplescarf"
 
 /obj/item/clothing/accessory/scarf/yellow
-	name = "yellow scarf"
+	name = "желтый шарф"
 	icon_state = "yellowscarf"
 
 /obj/item/clothing/accessory/scarf/orange
-	name = "orange scarf"
+	name = "оранжевый шарф"
 	icon_state = "orangescarf"
 
 /obj/item/clothing/accessory/scarf/lightblue
-	name = "light blue scarf"
+	name = "голубой шарф"
 	icon_state = "lightbluescarf"
 
 /obj/item/clothing/accessory/scarf/white
-	name = "white scarf"
+	name = "белый шарф"
 	icon_state = "whitescarf"
 
 /obj/item/clothing/accessory/scarf/black
-	name = "black scarf"
+	name = "черный шарф"
 	icon_state = "blackscarf"
 
 /obj/item/clothing/accessory/scarf/zebra
-	name = "zebra scarf"
+	name = "полосатый шарф"
 	icon_state = "zebrascarf"
 
 /obj/item/clothing/accessory/scarf/christmas
-	name = "christmas scarf"
+	name = "рождественский шарф"
 	icon_state = "christmasscarf"
 
 /obj/item/clothing/accessory/scarf/stripedred
-	name = "striped red scarf"
+	name = "красный полосатый шарф"
 	icon_state = "stripedredscarf"
 
 /obj/item/clothing/accessory/scarf/stripedgreen
-	name = "striped green scarf"
+	name = "зеленый полосатый шарф"
 	icon_state = "stripedgreenscarf"
 
 /obj/item/clothing/accessory/scarf/stripedblue
-	name = "striped blue scarf"
+	name = "синий полосатый шарф"
 	icon_state = "stripedbluescarf"
 
 /obj/item/clothing/accessory/scarf/teshari/neckscarf
-	name = "small neckscarf"
-	desc = "шейный платок, который слишком мал для шеи человека"
+	name = "шейный платочек"
+	desc = "Шейный платок. Слишком мал для шеи человека."
 	icon_state = "tesh_neckscarf"
 	species_restricted = list(SPECIES_TESHARI)
 
 //bracelets
 
 /obj/item/clothing/accessory/bracelet
-	name = "bracelet"
+	name = "браслет"
 	desc = "Простой серебряный браслет с застежкой."
 	icon = 'icons/obj/clothing/ties.dmi'
 	icon_state = "bracelet"
@@ -352,19 +352,19 @@
 	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/bracelet/friendship
-	name = "friendship bracelet"
-	desc = "Красивый браслет дружбы во всех цветах радуги."
+	name = "браслет дружбы"
+	desc = "Красивый браслет дружбы всех цветов радуги."
 	icon_state = "friendbracelet"
 
 /obj/item/clothing/accessory/bracelet/friendship/verb/dedicate_bracelet()
-	set name = "Dedicate Bracelet"
+	set name = "Посвятить Браслет"
 	set category = "Object"
-	set desc = "Посвятите свой браслет дружбы особенному человеку."
+	set desc = "Посвящает Ваш браслет дружбы особенному человеку."
 	var/mob/M = usr
 	if(!M.mind)
 		return 0
 
-	var/input = sanitizeSafe(input("Кому вы хотите посвятить браслет?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(input("Кому Вы хотите посвятить браслет?", ,""), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
 		desc = "Красивый браслет дружбы во всех цветах радуги. Он посвящен [input]."
@@ -383,56 +383,56 @@
 	if(!istype(material))
 		qdel(src)
 		return
-	name = "[material.display_name] bracelet"
-	desc = "Браслет сделанный из [material.display_name]."
+	name = "браслет из [material.display_name]"
+	desc = "Браслет, сделанный из [material.display_name]."
 	color = material.icon_colour
 
 /obj/item/clothing/accessory/bracelet/material/get_material()
 	return material
 
 /obj/item/clothing/accessory/bracelet/material/wood/New(var/newloc)
-	..(newloc, "wood")
+	..(newloc, "дерева")
 
 /obj/item/clothing/accessory/bracelet/material/plastic/New(var/newloc)
-	..(newloc, "plastic")
+	..(newloc, "пластика")
 
 /obj/item/clothing/accessory/bracelet/material/iron/New(var/newloc)
-	..(newloc, "iron")
+	..(newloc, "железа")
 
 /obj/item/clothing/accessory/bracelet/material/steel/New(var/newloc)
-	..(newloc, "steel")
+	..(newloc, "стали")
 
 /obj/item/clothing/accessory/bracelet/material/silver/New(var/newloc)
-	..(newloc, "silver")
+	..(newloc, "серебра")
 
 /obj/item/clothing/accessory/bracelet/material/gold/New(var/newloc)
-	..(newloc, "gold")
+	..(newloc, "золота")
 
 /obj/item/clothing/accessory/bracelet/material/platinum/New(var/newloc)
-	..(newloc, "platinum")
+	..(newloc, "платины")
 
 /obj/item/clothing/accessory/bracelet/material/phoron/New(var/newloc)
-	..(newloc, "phoron")
+	..(newloc, "форона")
 
 /obj/item/clothing/accessory/bracelet/material/glass/New(var/newloc)
-	..(newloc, "glass")
+	..(newloc, "стекла")
 
 	..()
 
 /obj/item/clothing/accessory/halfcape
-	name = "half cape"
-	desc = "Со вкусом подобранный полупальто, подходящий для европейских аристократов и главных героев ретро-аниме."
+	name = "накидка"
+	desc = "Элегантный полуплащ, подходящий для европейских аристократов и главных героев ретро-аниме."
 	icon_state = "halfcape"
 	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/fullcape
-	name = "full cape"
-	desc = "Кричащий полный плащ. Ты ведь подумываешь надеть его, не так ли?"
+	name = "полный плащ"
+	desc = "Вызывающий плащ во всю длину. Так и хочется примерить, да?"
 	icon_state = "fullcape"
 	slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/sash
-	name = "sash"
+	name = "кушак"
 	desc = "Простой, ничем не украшенный пояс."
 	icon_state = "sash"
 	slot = ACCESSORY_SLOT_OVER

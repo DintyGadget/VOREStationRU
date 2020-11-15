@@ -144,11 +144,11 @@
 //        Secure Briefcase
 // -----------------------------
 /obj/item/weapon/storage/secure/briefcase
-	name = "secure briefcase"
+	name = "чемодан на замке"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "secure"
 	item_state_slots = list(slot_r_hand_str = "case", slot_l_hand_str = "case")
-	desc = "A large briefcase with a digital locking system."
+	desc = "Большой чемодан со встроенной системой защиты."
 	force = 8.0
 	throw_speed = 1
 	throw_range = 4
@@ -158,7 +158,7 @@
 
 	attack_hand(mob/user as mob)
 		if ((src.loc == user) && (src.locked == 1))
-			to_chat(user, "<span class='warning'>[src] is locked and cannot be opened!</span>")
+			to_chat(user, "<span class='warning'>Этот чемодан заблокирован!</span>")
 		else if ((src.loc == user) && (!src.locked))
 			src.open(usr)
 		else

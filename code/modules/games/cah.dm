@@ -3,14 +3,14 @@
 // https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode
 
 /obj/item/weapon/deck/cah
-	name = "\improper CAG deck (white)"
-	desc = "The ever-popular Cards Against The Galaxy word game. Warning: may include traces of broken fourth wall. This is the white deck."
+	name = "белая колода карт Карт Против Галактики"
+	desc = "Не выходящая из моды словесная игра: Карты Против Галактики. Предупреждение: может содержать остатки разрушенных четвертых стен. Это белая колода."
 	icon_state = "cag_white"
 	var/blanks = 5
 
 /obj/item/weapon/deck/cah/black
-	name = "\improper CAG deck (black)"
-	desc = "The ever-popular Cards Against The Galaxy word game. Warning: may include traces of broken fourth wall. This is the black deck."
+	name = "черная колода карт Карт Против Галактики"
+	desc = "Не выходящая из моды словесная игра: Карты Против Галактики. Предупреждение: может содержать остатки разрушенных четвертых стен. Это черная колода."
 	icon_state = "cag_black"
 	blanks = 0
 
@@ -27,6 +27,6 @@
 		return
 	for(var/x=1 to blanks)
 		P = new()
-		P.name = "Blank Card"
+		P.name = "Пустая Карта"
 		P.card_icon = "[icon_state]_card_back"
 		P.back_icon = "[icon_state]_card_back"
