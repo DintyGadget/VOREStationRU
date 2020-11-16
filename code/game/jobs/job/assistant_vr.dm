@@ -65,11 +65,6 @@
 	title_blurb = "Официант оказывает помощь работникам бара и кафе, в общем случае с доставкой еды. У официанта нет какой-либо реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/service/server
 
-
-//////////////////////////////////
-//		Visitor
-//////////////////////////////////
-
 /datum/job/intern/New()
 	..()
 	if(config)
@@ -82,11 +77,17 @@
 	else
 		return list()
 
+
+//////////////////////////////////
+//		Visitor
+//////////////////////////////////
+
 /datum/job/assistant		// Visitor
 	title = USELESS_JOB
 	supervisors = "... никем, в прочем. Вы тут не работаете."
 	job_description = "A Visitor is just there to visit the place. They have no real authority or responsibility."
 	timeoff_factor = 0
+	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler)
 
 /datum/job/assistant/New()
 	..()
@@ -96,3 +97,9 @@
 
 /datum/job/assistant/get_access()
 	return list()
+
+/datum/alt_title/guest
+	title = "Guest"
+
+/datum/alt_title/traveler
+	title = "Traveler"

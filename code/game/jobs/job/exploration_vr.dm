@@ -29,11 +29,13 @@ var/const/SAR 				=(1<<14)
 	color = "#bab421"
 	sorting_order = 2 // Same as cargo in importance.
 
+
+
 /datum/job/pathfinder
 	title = "Первопроходец"
 	flag = PATHFINDER
 	departments = list(DEPARTMENT_PLANET)
-	departments_managed = list(DEPARTMENT_PLANET, DEPARTMENT_COMMAND)
+	departments_managed = list(DEPARTMENT_PLANET)
 	sorting_order = 1 // above the other explorers
 	department_flag = MEDSCI
 	faction = "Station"
@@ -48,23 +50,16 @@ var/const/SAR 				=(1<<14)
 
 	access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
 	minimal_access = list(access_eva, access_maint_tunnels, access_external_airlocks, access_pilot, access_explorer, access_gateway)
-
 	outfit_type = /decl/hierarchy/outfit/job/pathfinder
 	job_description = "Работа Первопроходца заключается в проведении экспедиций, в которых он занимает роль лидера."
+	alt_titles = list("Ведущий скаут" = /datum/alt_title/expedition_lead, "Руководитель экспедиций" = /datum/alt_title/exploration_manager)
 
-// XenosStation Edit
-	alt_titles = list("Ведущий скаут" = /datum/alt_title/lead_scout,
-						"Руководитель экспедиции" = /datum/alt_title/expedition_manager)
-
-/datum/alt_title/pathfinder
-	title = "Первопроходец"
-
-/datum/alt_title/lead_scout
+/datum/alt_title/expedition_lead
 	title = "Ведущий скаут"
 
-/datum/alt_title/expedition_manager
+/datum/alt_title/exploration_manager
 	title = "Руководитель экспедиций"
-// End of XenosStation Edit
+
 
 /datum/job/pilot
 	title = "Пилот"
@@ -83,18 +78,15 @@ var/const/SAR 				=(1<<14)
 	minimal_access = list(access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 	job_description = "Пилот управляет различными шаттлами в системе Дева-Эригон."
+	alt_titles = list("Военный пилот" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator)
 
-	alt_titles = list("Авиатор" = /datum/alt_title/aviator,
-						"Военный пилот" = /datum/alt_title/combat_pilot)
-
-/datum/alt_title/pilot
-	title = "Пилот"
-
-/datum/alt_title/aviator
-	title = "Авиатор"
-
-/datum/alt_title/combat_pilot
+/datum/alt_title/co_pilot
 	title = "Военный пилот"
+	title_blurb = "A Co-Pilot is there primarily to assist main pilot as well as learn from them"
+
+/datum/alt_title/navigator
+	title = "Navigator"
+
 
 /datum/job/explorer
 	title = "Искатель"
@@ -112,14 +104,14 @@ var/const/SAR 				=(1<<14)
 	minimal_access = list(access_explorer, access_external_airlocks, access_eva)
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
 	job_description = "Искатель ищет на планетах интересные вещи и приносит их на станцию."
+	alt_titles = list("Surveyor" = /datum/alt_title/surveyor, "Offsite Scout" = /datum/alt_title/offsite_scout)
 
-	alt_titles = list("Полевой скаут" = /datum/alt_title/field_scout)
+/datum/alt_title/surveyor
+	title = "Surveyor"
 
-/datum/alt_title/explorer
-	title = "Искатель"
+/datum/alt_title/offsite_scout
+	title = "Offsite Scout"
 
-/datum/alt_title/field_scout
-	title = "Полевой скаут"
 
 /datum/job/sar
 	title = "Военврач"
@@ -129,7 +121,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Первопроходцем и Главврачом"
+	supervisors = "the Pathfinder and the Chief Medical Officer"
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3
@@ -137,26 +129,8 @@ var/const/SAR 				=(1<<14)
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_eva, access_maint_tunnels, access_external_airlocks, access_pilot)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
-	job_description = "Военврач работает полевым врачом экспедиционных отрядов."
+	job_description = "A Field medic works as the field doctor of expedition teams."
+	alt_titles = list("Expedition Medic" = /datum/alt_title/expedition_medic)
 
-/datum/alt_title/field_medic
-	title = "Военврач"
-
-/datum/job/offduty_exploration
-	title = "Искатель на отгуле"
-	latejoin_only = TRUE
-	timeoff_factor = -1
-	total_positions = -1
-	faction = "Station"
-	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "...никем! Наслаждайтесь отдыхом"
-	selection_color = "#999440"
-	access = list(access_maint_tunnels, access_external_airlocks)
-	minimal_access = list(access_maint_tunnels, access_external_airlocks)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/explorer
-	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
-	pto_type = PTO_EXPLORATION
-	economic_modifier = 5
-
-/datum/alt_title/offduty_exp
-	title = "Искатель на отгуле"
+/datum/alt_title/expedition_medic
+	title = "Expedition Medic"

@@ -23,7 +23,6 @@
 			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
-	alt_titles = list("Научный руководитель")
 
 	minimum_character_age = 25
 	minimal_player_age = 14
@@ -63,7 +62,7 @@
 	job_description = "Ученый — общее название профессий, связанных с научным отделом. Они обладают общим знанием о принципах и процессах, связанных с исследованиями и разработками, \
 						а также об их экспериментальной проверке и применении."
 	alt_titles = list("Ксеноархеолог" = /datum/alt_title/xenoarch, "Аномалист" = /datum/alt_title/anomalist, \
-						"Исследователь форона" = /datum/alt_title/phoron_research, "Младший учёный" = /datum/alt_title/junior_scientist)
+						"Исследователь форона" = /datum/alt_title/phoron_research)
 
 // Scientist Alt Titles
 /datum/alt_title/xenoarch
@@ -80,9 +79,6 @@
 	title = "Исследователь форона"
 	title_blurb = "Исследователь форона специализируется на практическом применении форона и обладает знанием о его эксплуатации и связанных с ней рисков. \
 					Многие исследователи форона заинтересованы во взрывных свойствах газообразного форона и его практическом применении в добыче руд."
-
-/datum/alt_title/junior_scientist
-	title = "Младший учёный"
 
 //////////////////////////////////
 //			Xenobiologist
