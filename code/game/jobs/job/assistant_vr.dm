@@ -3,73 +3,66 @@
 //////////////////////////////////
 
 /datum/job/intern
-	title = "Intern"
+	title = "Стажёр"
 	flag = INTERN
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC // Ran out of bits
 	faction = "Station"
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = "the staff from the department you're interning in"
-	selection_color = "#555555"
+	supervisors = "всем персоналом станции и закрепленным за Вам отделом"
+	selection_color = "#666666"
 	economic_modifier = 2
 	access = list()			//See /datum/job/intern/get_access()
 	minimal_access = list()	//See /datum/job/intern/get_access()
 	outfit_type = /decl/hierarchy/outfit/job/assistant/intern
-	alt_titles = list("Intern" = /datum/alt_title/intern,
-					  "Apprentice Engineer" = /datum/alt_title/intern_eng,
-					  "Medical Intern" = /datum/alt_title/intern_med,
-					  "Research Intern" = /datum/alt_title/intern_sci,
-					  "Security Cadet" = /datum/alt_title/intern_sec,
-					  "Jr. Cargo Tech" = /datum/alt_title/intern_crg,
-					  "Jr. Explorer" = /datum/alt_title/intern_exp,
-					  "Server" = /datum/alt_title/server)
-	job_description = "An Intern does whatever is requested of them, often doing so in process of learning \
-						another job. Though they are part of the crew, they have no real authority."
+	alt_titles = list("Стажёр" = /datum/alt_title/intern,
+					  "Инженер-практикант" = /datum/alt_title/intern_eng,
+					  "Врач-интерн" = /datum/alt_title/intern_med,
+					  "Научный лаборант" = /datum/alt_title/intern_sci,
+					  "Кадет службы безопасности" = /datum/alt_title/intern_sec,
+					  "Младший грузчик" = /datum/alt_title/intern_crg,
+					  "Младший скаут" = /datum/alt_title/intern_exp,
+					  "Официант" = /datum/alt_title/server)
+	job_description = "Стажёр делает все, что от него требуется, выполняя работу в процессе изучения другой профессии. Хотя он и является частью экипажа, у него нет никакой реальной власти."
 	timeoff_factor = 0 // Interns, noh
 
 /datum/alt_title/intern
-	title = "Intern"
+	title = "Стажёр"
 
 /datum/alt_title/intern_eng
-	title = "Apprentice Engineer"
-	title_blurb = "An Apprentice Engineer attempts to provide whatever the Engineering department needs. They are not proper Engineers, and are \
-					often in training to become an Engineer. An Apprentice Engineer has no real authority."
+	title = "Инженер-практикант"
+	title_blurb = "Инженер-практикант пытается выполнять все, что нужно инженерному отделу. Он не является настоящим инженером, а лишь набирается опыта на практике, чтобы им стать. Инженер-практикант не имеет не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/engineer
 
 /datum/alt_title/intern_med
-	title = "Medical Intern"
-	title_blurb = "A Medical Intern attempts to provide whatever the Medical department needs. They are not proper Doctors, and are \
-					often in training to become a Doctor. A Medical Intern has no real authority."
+	title = "Врач-интерн"
+	title_blurb = "Врач-интерн пытается выполнять все, что необходимо медицинскому отделу. Он не является настоящими доктором. Врач-интерн не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/medic
 
 /datum/alt_title/intern_sci
-	title = "Research Intern"
-	title_blurb = "A Research Intern attempts to provide whatever the Research department needs. They are not proper Scientists, and are \
-					often in training to become a Scientist. A Research Intern has no real authority."
+	title = "Научный лаборант"
+	title_blurb = "Научный лаборант обязан оказывать помощь исследовательскому отделу. Он не является настоящим ученым, а всего лишь проходит практику, чтобы им стать. Научный лаборант не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/scientist
 
 /datum/alt_title/intern_sec
-	title = "Security Cadet"
-	title_blurb = "A Security Cadet attempts to provide whatever the Security department needs. They are not proper Officers, and are \
-					often in training to become an Officer. A Security Cadet has no real authority."
+	title = "Кадет службы безопасности"
+	title_blurb = "Кадет службы безопасности обязан оказывать помощь службе безопасности. Он не является настоящим офицером, а лишь набирается опыта, чтобы им стать. Кадет службы безопасности не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/officer
 
 /datum/alt_title/intern_crg
-	title = "Jr. Cargo Tech"
-	title_blurb = "A Jr. Cargo Tech attempts to provide whatever the Cargo department needs. They are not proper Cargo Technicians, and are \
-					often in training to become a Cargo Technician. A Jr. Cargo Tech has no real authority."
+	title = "Младший грузчик"
+	title_blurb = "Младший грузчик обязан оказывать помощь отделу снабжения. Он не является настоящим грузчиком, а лишь проходит обучение, чтобы им стать. Младший грузчик не имеет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/cargo
 
 /datum/alt_title/intern_exp
-	title = "Jr. Explorer"
-	title_blurb = "A Jr. Explorer attempts to provide whatever the Exploration department needs. They are not proper Explorers, and are \
-					often in training to become an Explorer. A Jr. Explorer has no real authority."
+	title = "Младший скаут"
+	title_blurb = "Младший скаут обязан оказывать помощь отделу экспедиций. Он не является настоящим искателем, а всего лишь проходит обучение, чтобы им стать. У младшего скаута нет реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/explorer
 
 /datum/alt_title/server
-	title = "Server"
-	title_blurb = "A Server helps out kitchen and diner staff with various tasks, primarily food delivery. A Server has no real authority."
+	title = "Официант"
+	title_blurb = "Официант оказывает помощь работникам бара и кафе, в общем случае с доставкой еды. У официанта нет какой-либо реальной власти."
 	title_outfit = /decl/hierarchy/outfit/job/service/server
 
 /datum/job/intern/New()
@@ -91,7 +84,7 @@
 
 /datum/job/assistant		// Visitor
 	title = USELESS_JOB
-	supervisors = "nobody! You don't work here"
+	supervisors = "... никем, в прочем. Вы тут не работаете."
 	job_description = "A Visitor is just there to visit the place. They have no real authority or responsibility."
 	timeoff_factor = 0
 	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler)

@@ -97,14 +97,14 @@
 	total_positions = 3
 	spawn_positions = 3
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Custodian" = /datum/alt_title/custodian, "Sanitation Technician" = /datum/alt_title/sanitation_tech,
+	alt_titles = list("Дворник" = /datum/alt_title/custodian, "Сантехник" = /datum/alt_title/sanitation_tech,
 					"Maid" = /datum/alt_title/maid, "Garbage Collector" = /datum/alt_title/garbage_collector)
 
 /datum/alt_title/sanitation_tech
-	title = "Sanitation Technician"
+	title = "Сантехник"
 
 /datum/alt_title/maid
-	title = "Maid"
+	title = "Горничная"
 
 /datum/alt_title/garbage_collector
 	title = "Garbage Collector"
@@ -114,8 +114,8 @@
 /datum/job/librarian
 	total_positions = 2
 	spawn_positions = 2
-	alt_titles = list("Journalist" = /datum/alt_title/journalist, "Reporter" =  /datum/alt_title/reporter, "Writer" = /datum/alt_title/writer,
-					"Historian" = /datum/alt_title/historian, "Archivist" = /datum/alt_title/archivist, "Professor" = /datum/alt_title/professor,
+	alt_titles = list("Журналист" = /datum/alt_title/journalist, "Reporter" =  /datum/alt_title/reporter, "Писатель" = /datum/alt_title/writer,
+					"Историк" = /datum/alt_title/historian, "Archivist" = /datum/alt_title/archivist, "Профессор" = /datum/alt_title/professor,
 					"Academic" = /datum/alt_title/academic, "Philosopher" = /datum/alt_title/philosopher)
 	pto_type = PTO_CIVILIAN
 
@@ -124,7 +124,7 @@
 	title_blurb = "The Reporter uses the Library as a base of operations, from which they can report the news and goings-on on the station with their camera."
 
 /datum/alt_title/historian
-	title = "Historian"
+	title = "Историк"
 	title_blurb = "The Historian uses the Library as a base of operation to record any important events occuring on station."
 
 /datum/alt_title/archivist
@@ -132,7 +132,7 @@
 	title_blurb = "The Archivist uses the Library as a base of operation to record any important events occuring on station."
 
 /datum/alt_title/professor
-	title = "Professor"
+	title = "Профессор"
 	title_blurb = "The Professor uses the Library as a base of operations to share their vast knowledge with the crew."
 
 /datum/alt_title/academic
@@ -181,22 +181,22 @@
 //////////////////////////////////
 
 /datum/job/entertainer
-	title = "Entertainer"
+	title = "Аниматор"
 	flag = ENTERTAINER
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "the Head of Personnel"
+	supervisors = "Главой персонала"
 	selection_color = "#515151"
 	access = list(access_entertainment)
 	minimal_access = list(access_entertainment)
 	pto_type = PTO_CIVILIAN
 
 	outfit_type = /decl/hierarchy/outfit/job/assistant
-	job_description = "An entertainer does just that, entertains! Put on plays, play music, sing songs, tell stories, or read your favorite fanfic."
-	alt_titles = list("Performer" = /datum/alt_title/performer, "Musician" = /datum/alt_title/musician, "Stagehand" = /datum/alt_title/stagehand,
+	job_description = "Аниматор отвечает за развлечение персонала! Ставьте спектакли, играйте музыку, пойте песни, рассказывайте истории или читайте свои любимые фанфики."
+	alt_titles = list("Артист" = /datum/alt_title/performer, "Музыкант" = /datum/alt_title/musician, "Рабочий сцены" = /datum/alt_title/stagehand,
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian)
 
@@ -206,16 +206,16 @@
 	title_blurb = "An Actor is someone who acts out a role! Whatever sort of character it is, get into it and impress people with power of comedy and tragedy!"
 
 /datum/alt_title/performer
-	title = "Performer"
-	title_blurb = "A Performer is someone who performs! Whatever sort of performance will come to your mind, the world's a stage!"
+	title = "Артист"
+	title_blurb = "Артист - понятие растяжимое! Актерское мастерство, танцы, вокал и так далее!"
 
 /datum/alt_title/musician
-	title = "Musician"
-	title_blurb = "A Musician is someone who makes music with a wide variety of musical instruments!"
+	title = "Музыкант"
+	title_blurb = "Музыкант - это тот, кто создаёт музыку! Петь, играть на музыкальных инструментах, слогать стихами - это ваше дело!"
 
 /datum/alt_title/stagehand
-	title = "Stagehand"
-	title_blurb = "A Stagehand typically performs everything the rest of the entertainers don't. Operate lights, shutters, windows, or narrate through your voicebox!"
+	title = "Рабочий сцены"
+	title_blurb = "Рабочий сцены обычно выполняет все, что не делают остальные артисты: управляет светом, ставнями, окнами или рассказывает что-либо через микрофон на сцену!"
 
 /datum/alt_title/dancer
 	title = "Dancer"

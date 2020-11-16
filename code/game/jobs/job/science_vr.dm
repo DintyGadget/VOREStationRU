@@ -27,8 +27,8 @@
 /datum/job/scientist
 	spawn_positions = 5
 	pto_type = PTO_SCIENCE
-	alt_titles = list("Lab Assistant" = /datum/alt_title/lab_assistant, "Xenoarchaeologist" = /datum/alt_title/xenoarch, "Xenopaleontologist" = /datum/alt_title/xenopaleontologist, \
-						"Anomalist" = /datum/alt_title/anomalist, "Phoron Researcher" = /datum/alt_title/phoron_research, "Gas Physicist" = /datum/alt_title/gas_physicist, \
+	alt_titles = list("Lab Assistant" = /datum/alt_title/lab_assistant, "Ксеноархеолог" = /datum/alt_title/xenoarch, "Xenopaleontologist" = /datum/alt_title/xenopaleontologist, \
+						"Аномалист" = /datum/alt_title/anomalist, "Phoron Researcher" = /datum/alt_title/phoron_research, "Gas Physicist" = /datum/alt_title/gas_physicist, \
 						"Circuit Designer" = /datum/alt_title/circuit_designer, "Circuit Programmer" = /datum/alt_title/circuit_programmer)
 
 
@@ -52,9 +52,9 @@
 					of working with the substance in that state."
 
 /datum/alt_title/circuit_designer
-	title = "Circuit Designer"
-	title_blurb = "A Circuit Designer is a Scientist whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
-				   They work to create various useful devices using the capabilities of integrated circuitry."
+	title = "Программист микросхем"
+	title_blurb = "Программист микросхем является учёным, который специализируется на разработке интегральных микросхем. Он знаком с принципами работы этих схем и их программирования. \
+				   Используя их возможности, программист создаёт всевозможные полезные гаджеты."
 
 /datum/alt_title/circuit_programmer
 	title = "Circuit Programmer"
@@ -87,14 +87,14 @@
 //			Xenobotanist
 //////////////////////////////////
 /datum/job/xenobotanist
-	title = "Xenobotanist"
+	title = "Ксеноботаник"
 	flag = XENOBOTANIST
 	departments = list(DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Research Director"
+	supervisors = "Директором Исследований"
 	selection_color = "#633D63"
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobotany, access_hydroponics)
@@ -104,8 +104,8 @@
 	minimal_player_age = 14
 
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
-	job_description = "A Xenobotanist grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
-					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	job_description = "Ксеноботаник выращивает и ухаживает за ассортиментом необычайных и порой даже опасных растений. \
+					Если результаты таких экспериментов безопасны и даже полезны для персонала, ксеноботаник может поделиться своей находкой с остальным персоналом."
 	alt_titles = list("Xenoflorist" = /datum/alt_title/xenoflorist)
 
 /datum/alt_title/xenoflorist
