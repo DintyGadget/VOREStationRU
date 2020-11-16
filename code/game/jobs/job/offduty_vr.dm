@@ -3,115 +3,113 @@
 //
 
 /datum/job/offduty_civilian
-	title = "Рабочий на отгуле"
+	title = "Off-duty Worker"
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
 	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "...никем! Наслаждайтесь отдыхом"
+	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#9b633e"
 	access = list(access_maint_tunnels)
 	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/worker
-	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_CIVILIAN
 	economic_modifier = 2
 
-/datum/alt_title/offduty_civ
-	title = "Рабочий на отгуле"
-
 /datum/job/offduty_cargo
-	title = "Грузчик на отгуле"
+	title = "Off-duty Cargo"
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
 	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "...никем! Наслаждайтесь отдыхом"
+	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#9b633e"
 	access = list(access_maint_tunnels)
 	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/cargo
-	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_CARGO
 	economic_modifier = 2
 
-/datum/alt_title/offduty_crg
-	title = "Грузчик на отгуле"
-
 /datum/job/offduty_engineering
-	title = "Инженер на отгуле"
+	title = "Off-duty Engineer"
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
 	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "...никем! Наслаждайтесь отдыхом"
+	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#5B4D20"
 	access = list(access_maint_tunnels, access_external_airlocks, access_construction)
 	minimal_access = list(access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/engineer
-	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_ENGINEERING
 	economic_modifier = 5
 
-/datum/alt_title/offduty_eng
-	title = "Инженер на отгуле"
-
 /datum/job/offduty_medical
-	title = "Врач на отгуле"
+	title = "Off-duty Medic"
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
 	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "...никем! Наслаждайтесь отдыхом"
+	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#013D3B"
 	access = list(access_maint_tunnels, access_external_airlocks)
 	minimal_access = list(access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/medic
-	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_MEDICAL
 	economic_modifier = 5
 
-/datum/alt_title/offduty_med
-	title = "Врач на отгуле"
-
 /datum/job/offduty_science
-	title = "Учёный на отгуле"
+	title = "Off-duty Scientist"
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
 	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "...никем! Наслаждайтесь отдыхом"
+	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#633D63"
 	access = list(access_maint_tunnels)
 	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/scientist
-	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_SCIENCE
-	economic_modifier = 5
-
-/datum/alt_title/offduty_sci
-	title = "Учёный на отгуле"
+	economic_modifier = 5 
 
 /datum/job/offduty_security
-	title = "Офицер на отгуле"
+	title = "Off-duty Officer"
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
 	faction = "Station"
 	departments = list(DEPARTMENT_OFFDUTY)
-	supervisors = "...никем! Наслаждайтесь отдыхом"
+	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#601C1C"
 	access = list(access_maint_tunnels)
 	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant/officer
-	job_description = "Работники на отгуле не имеют никакой ответственности или власти и посещают станцию только ради заслуженного отдыха."
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_SECURITY
 	economic_modifier = 4
 
-/datum/alt_title/offduty_sec
-	title = "Офицер на отгуле"
+/datum/job/offduty_exploration
+	title = "Off-duty Explorer"
+	latejoin_only = TRUE
+	timeoff_factor = -1
+	total_positions = -1
+	faction = "Station"
+	departments = list(DEPARTMENT_OFFDUTY)
+	supervisors = "nobody! Enjoy your time off"
+	selection_color = "#999440"
+	access = list(access_maint_tunnels, access_external_airlocks)
+	minimal_access = list(access_maint_tunnels, access_external_airlocks)
+	outfit_type = /decl/hierarchy/outfit/job/assistant/explorer
+	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
+	pto_type = PTO_EXPLORATION
+	economic_modifier = 5

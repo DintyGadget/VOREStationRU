@@ -2,7 +2,7 @@
 //		Research Director
 //////////////////////////////////
 /datum/job/rd
-	title = "Директор исследований"
+	title = "Research Director"
 	flag = RD
 	departments_managed = list(DEPARTMENT_RESEARCH)
 	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_COMMAND)
@@ -11,7 +11,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Директором колонии"
+	supervisors = "the Site Manager"
 	selection_color = "#AD6BAD"
 	req_admin_notify = 1
 	economic_modifier = 15
@@ -23,35 +23,34 @@
 			            access_tox_storage, access_teleporter, access_sec_doors,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network)
-	alt_titles = list("Научный руководитель")
 
 	minimum_character_age = 25
 	minimal_player_age = 14
 	ideal_character_age = 50
 
 	outfit_type = /decl/hierarchy/outfit/job/science/rd
-	job_description = "Директор исследований отвечает за научный отдел. От него требуется обеспечение безопасности всего персонала, \
-						по крайней мере от всего, что связано с закрепленным за ними отделом. От них так же ожидается свовременное информирование персонала \
-						об опасностях, источником которых может стать научный отдел. Директор исследований обладает достаточным знанием обо всех науках, касающихся \
-						научного отдела, но ему рекомендуется позволить своим подручным выполнять свою работу самостоятельно."
-	alt_titles = list("Научный руководитель" = /datum/alt_title/research_supervisor)
+	job_description = "The Research Director manages and maintains the Research department. They are required to ensure the safety of the entire crew, \
+						at least with regards to anything occuring in the Research department, and to inform the crew of any disruptions that \
+						might originate from Research. The Research Director often has at least passing knowledge of most of the Research department, but \
+						are encouraged to allow their staff to perform their own duties."
+	alt_titles = list("Research Supervisor" = /datum/alt_title/research_supervisor)
 
 // Research Director Alt Titles
 /datum/alt_title/research_supervisor
-	title = "Научный руководитель"
+	title = "Research Supervisor"
 
 //////////////////////////////////
 //			Scientist
 //////////////////////////////////
 /datum/job/scientist
-	title = "Учёный"
+	title = "Scientist"
 	flag = SCIENTIST
 	departments = list(DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 5
 	spawn_positions = 3
-	supervisors = "Директором исследований"
+	supervisors = "the Research Director"
 	selection_color = "#633D63"
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
@@ -60,42 +59,41 @@
 	minimal_player_age = 14
 
 	outfit_type = /decl/hierarchy/outfit/job/science/scientist
-	job_description = "Ученый — общее название профессий, связанных с научным отделом. Они обладают общим знанием о принципах и процессах, связанных с исследованиями и разработками, \
-						а также об их экспериментальной проверке и применении."
-	alt_titles = list("Ксеноархеолог" = /datum/alt_title/xenoarch, "Аномалист" = /datum/alt_title/anomalist, \
-						"Исследователь форона" = /datum/alt_title/phoron_research, "Младший учёный" = /datum/alt_title/junior_scientist)
+	job_description = "A Scientist is a generalist working in the Research department, with general knowledge of the scientific process, as well as \
+						the principles and requirements of Research and Development. They may also formulate experiments of their own devising, if \
+						they find an appropriate topic."
+	alt_titles = list("Xenoarchaeologist" = /datum/alt_title/xenoarch, "Anomalist" = /datum/alt_title/anomalist, \
+						"Phoron Researcher" = /datum/alt_title/phoron_research)
 
 // Scientist Alt Titles
 /datum/alt_title/xenoarch
-	title = "Ксеноархеолог"
-	title_blurb = "Ксеноархеолог посещает места раскопок в поисках артефактов инопланетного происхождения. Эти места часто встречаются в вакууме и других необитаемых \
-					местностях, и в связи с этим ксеноархеолог должен быть способен выдержать суровые условия среды."
+	title = "Xenoarchaeologist"
+	title_blurb = "A Xenoarchaeologist enters digsites in search of artifacts of alien origin. These digsites are frequently in vacuum or other inhospitable \
+					locations, and as such a Xenoarchaeologist should be prepared to handle hostile evironmental conditions."
 
 /datum/alt_title/anomalist
-	title = "Аномалист"
-	title_blurb = "Аномалистом называется учёный, занимающийся исследованием и анализом инопланетных артефактов. Они знакомы с большинством наиболее распространненых методов \
-					изучения принципов действия артефактов. Они работают вместе с ксеноархеологами или шахтерами, если таковые присутствуют на станции."
+	title = "Anomalist"
+	title_blurb = "An Anomalist is a Scientist whose expertise is analyzing alien artifacts. They are familar with the most common methods of testing artifact \
+					function. They work closely with Xenoarchaeologists, or Miners, if either role is present."
 
 /datum/alt_title/phoron_research
-	title = "Исследователь форона"
-	title_blurb = "Исследователь форона специализируется на практическом применении форона и обладает знанием о его эксплуатации и связанных с ней рисков. \
-					Многие исследователи форона заинтересованы во взрывных свойствах газообразного форона и его практическом применении в добыче руд."
-
-/datum/alt_title/junior_scientist
-	title = "Младший учёный"
+	title = "Phoron Researcher"
+	title_blurb = "A Phoron Researcher is a specialist in the practical applications of phoron, and has knowledge of its practical uses and dangers. \
+					Many Phoron Researchers are interested in the combustability and explosive properties of gaseous phoron, as well as the specific hazards \
+					of working with the substance in that state."
 
 //////////////////////////////////
 //			Xenobiologist
 //////////////////////////////////
 /datum/job/xenobiologist
-	title = "Ксенобиолог"
+	title = "Xenobiologist"
 	flag = XENOBIOLOGIST
 	departments = list(DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 2
-	supervisors = "Директором исследований"
+	supervisors = "the Research Director"
 	selection_color = "#633D63"
 	economic_modifier = 7
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_hydroponics)
@@ -104,14 +102,14 @@
 	minimal_player_age = 14
 
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
-	job_description = "Ксенобиолог изучает инопланетные формы жизни в относительно безопасных лабораторных условиях. Они ищут способы практического применения \
-						остаточных продуктов этих форм жизни, и на данный момент их основной интерес — Гигантский Слизень."
+	job_description = "A Xenobiologist studies esoteric lifeforms, usually in the relative safety of their lab. They attempt to find ways to benefit \
+						from the byproducts of these lifeforms, and their main subject at present is the Giant Slime."
 /*VR edit start
-	alt_titles = list("Ксеноботаник" = /datum/alt_title/xenobot)
+	alt_titles = list("Xenobotanist" = /datum/alt_title/xenobot)
 
  Xenibiologist Alt Titles
 /datum/alt_title/xenobot
-	title = "Ксеноботаник"
+	title = "Xenobotanist"
 	title_blurb = "A Xenobotanist grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
 					is both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
 VR edit end*/
@@ -120,14 +118,14 @@ VR edit end*/
 //			Roboticist
 //////////////////////////////////
 /datum/job/roboticist
-	title = "Робототехник"
+	title = "Roboticist"
 	flag = ROBOTICIST
 	departments = list(DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Директором исследований"
+	supervisors = "the Research Director"
 	selection_color = "#633D63"
 	economic_modifier = 5
 	access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
@@ -135,17 +133,17 @@ VR edit end*/
 	minimal_player_age = 7
 
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
-	job_description = "Робототехник занимается обслуживанием и починкой всей синтетики станции, включая персонал с протезами. \
-						Они также могут помочь станции производством как простейших роботов, так и пилотируемых экзокостюмов."
-	alt_titles = list("Инженер-биомеханик" = /datum/alt_title/biomech, "Инженер-мехатроник" = /datum/alt_title/mech_tech)
+	job_description = "A Roboticist maintains and repairs the station's synthetics, including crew with prosthetic limbs. \
+						They can also assist the station by producing simple robots and even pilotable exosuits."
+	alt_titles = list("Biomechanical Engineer" = /datum/alt_title/biomech, "Mechatronic Engineer" = /datum/alt_title/mech_tech)
 
 // Roboticist Alt Titles
 /datum/alt_title/biomech
-	title = "Инженер-биомеханик"
-	title_blurb = "Инженер-биомеханик работает в первую очередь над протезами, а также сопряженными с ними органическими частями тела. \
-					У него могут быть знания об относительно простых хирургических операциях, необходимых для создания киборгов или присоединения протезов."
+	title = "Biomechanical Engineer"
+	title_blurb = "A Biomechanical Engineer primarily works on prosthetics, and the organic parts attached to them. They may have some \
+					knowledge of the relatively simple surgical procedures used in making cyborgs and attaching prosthesis."
 
 /datum/alt_title/mech_tech
-	title = "Инженер-мехатроник"
-	title_blurb = "Инженер-мехатроник специализируется на сооружении и обслуживании экзокостюмов, и разбирается в их применении. \
-					При необходимости он может также работать и над синтетикой или протезами."
+	title = "Mechatronic Engineer"
+	title_blurb = "A Mechatronic Engineer focuses on the construction and maintenance of Exosuits, and should be well versed in their use. \
+					They may also be called upon to work on synthetics and prosthetics, if needed."

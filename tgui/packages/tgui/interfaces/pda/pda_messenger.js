@@ -1,3 +1,4 @@
+import { decodeHtmlEntities } from 'common/string';
 import { filter } from 'common/collections';
 import { Fragment } from 'inferno';
 import { useBackend, useLocalState } from "../../backend";
@@ -18,6 +19,20 @@ export const pda_messenger = (props, context) => {
     return <ActiveConversation />;
   }
   return <MessengerList />;
+};
+
+const findClassMessage = (im, lastIndex, filterArray) => {
+  if (lastIndex < 0 || lastIndex > filterArray.length) {
+    return im.sent ? "TinderMessage_First_Sent" : "TinderMessage_First_Received";
+  }
+
+  let lastSent = filterArray[lastIndex].sent;
+  if (im.sent && lastSent) {
+    return "TinderMessage_Subsequent_Sent";
+  } else if (!im.sent && !lastSent) {
+    return "TinderMessage_Subsequent_Received";
+  }
+  return im.sent ? "TinderMessage_First_Sent" : "TinderMessage_First_Received";
 };
 
 const ActiveConversation = (props, context) => {
@@ -52,37 +67,16 @@ const ActiveConversation = (props, context) => {
         "height": "97%",
         "overflow-y": "auto",
       }}>
-        {filter(im => im.target === active_conversation)(messages).map((im, i) => (
+        {filter(im => im.target === active_conversation)(messages).map((im, i, filterArr) => (
           <Box
             textAlign={im.sent ? "right" : "left"}
-            position="relative"
             mb={1}
             key={i}>
-            <Icon
-              fontSize={2.5}
-              color={im.sent ? "#4d9121" : "#cd7a0d"}
-              position="absolute"
-              left={im.sent ? null : "0px"}
-              right={im.sent ? "0px" : null}
-              bottom="-4px"
-              style={{
-                "z-index": "0",
-                "transform": im.sent ? "scale(-1, 1)" : null,
-              }}
-              name="comment" />
             <Box
-              inline
-              backgroundColor={im.sent ? "#4d9121" : "#cd7a0d"}
-              p={1}
-              maxWidth="100%"
-              position="relative"
-              textAlign={im.sent ? "left" : "right"}
-              style={{
-                "z-index": "1",
-                "border-radius": "10px",
-                "word-break": "break-all",
-              }}>
-              {im.sent ? "You:" : "Them:"} {im.message}
+              maxWidth="75%"
+              className={findClassMessage(im, i - 1, filterArr)}
+              inline>
+              {decodeHtmlEntities(im.message)}
             </Box>
           </Box>
         ))}
@@ -116,18 +110,15 @@ const ActiveConversation = (props, context) => {
           {filter(im => im.target === active_conversation)(messages).map((im, i) => (
             <Box
               key={i}
-              color={im.sent ? "#4d9121" : "#cd7a0d"}
-              style={{
-                "word-break": "break-all",
-              }}>
-              {im.sent ? "Вы:" : "Им:"} <Box inline color={useRetro ? "black" : null}>{im.message}</Box>
+              className={im.sent ? "ClassicMessage_Sent" : "ClassicMessage_Received"}>
+              {im.sent ? "You:" : "Them:"} {decodeHtmlEntities(im.message)}
             </Box>
           ))}
         </Section>
         <Button
           icon="comment"
           onClick={() => act("Message", { "target": active_conversation })}
-          content="Ответить" />
+          content="Reply" />
       </Section>
     );
   }
@@ -135,7 +126,7 @@ const ActiveConversation = (props, context) => {
   return (
     <Box>
       <LabeledList>
-        <LabeledList.Item label="Функции месседжера">
+        <LabeledList.Item label="Messenger Functions">
           <Button
             icon="trash"
             color="bad"
@@ -165,23 +156,23 @@ const MessengerList = (props, context) => {
   return (
     <Box>
       <LabeledList>
-        <LabeledList.Item label="Функции месседжера">
+        <LabeledList.Item label="Messenger Functions">
           <Button
             selected={!silent}
             icon={silent ? "volume-mute" : "volume-up"}
             onClick={() => act("Toggle Ringer")}>
-            Звук: {silent ? "Выкл" : "Вкл"}
+            Ringer: {silent ? "Off" : "On"}
           </Button>
           <Button
             color={toff ? "bad" : "green"}
             icon="power-off"
             onClick={() => act("Toggle Messenger")}>
-            Месседжер: {toff ? "Выкл" : "Вкл"}
+            Messenger: {toff ? "Off" : "On"}
           </Button>
           <Button
             icon="bell"
             onClick={() => act("Ringtone")}>
-            Рингтон
+            Set Ringtone
           </Button>
           <Button
             icon="trash"
@@ -204,8 +195,8 @@ const MessengerList = (props, context) => {
             </Box>
           ) || (
             <Box>
-              <PDAList title="Текущие разговоры" pdas={convopdas} msgAct="Select Conversation" />
-              <PDAList title="Другие PDAs" pdas={pdas} msgAct="Message" />
+              <PDAList title="Current Conversations" pdas={convopdas} msgAct="Select Conversation" />
+              <PDAList title="Other PDAs" pdas={pdas} msgAct="Message" />
             </Box>
           )}
         </Box>

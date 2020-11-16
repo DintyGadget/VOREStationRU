@@ -33,7 +33,7 @@
 // Species-unique ears
 
 /datum/sprite_accessory/ears/shadekin
-	name = "Шейдкин (окрашиваемые)"
+	name = "Shadekin Ears, colorable"
 	desc = ""
 	icon_state = "shadekin"
 	do_colouration = 1
@@ -44,7 +44,7 @@
 // Ears avaliable to anyone
 
 /datum/sprite_accessory/ears/hyena
-	name = "Гиена (два цвета)"
+	name = "hyena ears, dual-color"
 	desc = ""
 	icon_state = "hyena"
 	do_colouration = 1
@@ -52,158 +52,158 @@
 	extra_overlay = "hyena-inner"
 
 /datum/sprite_accessory/ears/moth
-	name = "Мотылек"
+	name = "moth antennae"
 	desc = ""
 	icon_state = "moth"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/squirrel_orange
-	name = "Белка, оранжевые"
+	name = "squirel, orange"
 	desc = ""
 	icon_state = "squirrel-orange"
 
 /datum/sprite_accessory/ears/squirrel_red
-	name = "Белка, рыжие"
+	name = "squirrel, red"
 	desc = ""
 	icon_state = "squirrel-red"
 
 /datum/sprite_accessory/ears/bunny_white
-	name = "Кролик, белые"
+	name = "bunny, white"
 	desc = ""
 	icon_state = "bunny"
 
 /datum/sprite_accessory/ears/bear_brown
-	name = "Медведь, коричневые"
+	name = "bear, brown"
 	desc = ""
 	icon_state = "bear-brown"
 
 /datum/sprite_accessory/ears/bear_panda
-	name = "Медведь, панда"
+	name = "bear, panda"
 	desc = ""
 	icon_state = "panda"
 
 /datum/sprite_accessory/ears/wolf_grey
-	name = "Волк, серые"
+	name = "wolf, grey"
 	desc = ""
 	icon_state = "wolf-grey"
 
 /datum/sprite_accessory/ears/wolf_green
-	name = "Волк, зеленые"
+	name = "wolf, green"
 	desc = ""
 	icon_state = "wolf-green"
 
 /datum/sprite_accessory/ears/wisewolf
-	name = "Волк, светлые"
+	name = "wolf, wise"
 	desc = ""
 	icon_state = "wolf-wise"
 
 /datum/sprite_accessory/ears/mouse_grey
-	name = "Мышь: серые"
+	name = "mouse, grey"
 	desc = ""
 	icon_state = "mouse-grey"
 
 /datum/sprite_accessory/ears/bee
-	name = "Пчелиная антенна"
+	name = "bee antennae"
 	desc = ""
 	icon_state = "bee"
 
 /datum/sprite_accessory/ears/antennae
-	name = "Антенна (окр.)"
+	name = "antennae, colorable"
 	desc = ""
 	icon_state = "antennae"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/curly_bug
-	name = "Антенна круглая (окр.)"
+	name = "curly antennae, colorable"
 	desc = ""
 	icon_state = "curly_bug"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/dual_robot
-	name = "Синт, антенна (окр.)"
+	name = "synth antennae, colorable"
 	desc = ""
 	icon_state = "dual_robot_antennae"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/right_robot
-	name = "Синт, правая (окр.)"
+	name = "right synth, colorable"
 	desc = ""
 	icon_state = "right_robot_antennae"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/left_robot
-	name = "Синт, левая (окр.)"
+	name = "left synth, colorable"
 	desc = ""
 	icon_state = "left_robot_antennae"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/oni_h1
-	name = "Они, рога"
+	name = "oni horns"
 	desc = ""
 	icon_state = "oni-h1"
 
 /datum/sprite_accessory/ears/oni_h1_c
-	name = "Они, рога (окр.)"
+	name = "oni horns, colorable"
 	desc = ""
 	icon_state = "oni-h1_c"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/demon_horns1
-	name = "Демон, рога"
+	name = "demon horns"
 	desc = ""
 	icon_state = "demon-horns1"
 
 /datum/sprite_accessory/ears/demon_horns1_c
-	name = "Демон, рога (окр.)"
+	name = "demon horns, colorable"
 	desc = ""
 	icon_state = "demon-horns1_c"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/demon_horns2
-	name = "Демон, рога наружу (окр.)"
+	name = "demon horns, colorable(outward)"
 	desc = ""
 	icon_state = "demon-horns2"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/dragon_horns
-	name = "Дракон, рога (окр.)"
+	name = "dragon horns, colorable"
 	desc = ""
 	icon_state = "dragon-horns"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/foxears
-	name = "Зоррен, горный"
+	name = "highlander zorren ears"
 	desc = ""
 	icon_state = "foxears"
 
 /datum/sprite_accessory/ears/fenears
-	name = "Зоррен, равнинный"
+	name = "flatland zorren ears"
 	desc = ""
 	icon_state = "fenears"
 
 /datum/sprite_accessory/ears/sergal //Redundant
-	name = "Сергал"
+	name = "Sergal ears"
 	icon_state = "serg_plain_s"
 
 /datum/sprite_accessory/ears/foxearshc
-	name = "Зоррен, горный (окр.)"
+	name = "highlander zorren ears, colorable"
 	desc = ""
 	icon_state = "foxearshc"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/fenearshc
-	name = "Зоррен, равнинный (окр.)"
+	name = "flatland zorren ears, colorable"
 	desc = ""
 	icon_state = "fenearshc"
 	extra_overlay = "fenears-inner"
@@ -211,13 +211,13 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/sergalhc
-	name = "Сергал (окр.)"
+	name = "Sergal ears, colorable"
 	icon_state = "serg_plain_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/mousehc
-	name = "Мышь (окр.)"
+	name = "mouse, colorable"
 	desc = ""
 	icon_state = "mouse"
 	do_colouration = 1
@@ -225,14 +225,14 @@
 	extra_overlay = "mouseinner"
 
 /datum/sprite_accessory/ears/mousehcno
-	name = "Мышь, один цвет (окр.)"
+	name = "mouse, colorable, no inner"
 	desc = ""
 	icon_state = "mouse"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/wolfhc
-	name = "Волк (окр.)"
+	name = "wolf, colorable"
 	desc = ""
 	icon_state = "wolf"
 	do_colouration = 1
@@ -240,28 +240,28 @@
 	extra_overlay = "wolfinner"
 
 /datum/sprite_accessory/ears/bearhc
-	name = "Медведь (окр.)"
+	name = "bear, colorable"
 	desc = ""
 	icon_state = "bear"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/smallbear
-	name = "Медведь, маленькие (окр.)"
+	name = "small bear"
 	desc = ""
 	icon_state = "smallbear"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/squirrelhc
-	name = "Белка (окр.)"
+	name = "squirrel, colorable"
 	desc = ""
 	icon_state = "squirrel"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/kittyhc
-	name = "Кошка (окр.)"
+	name = "kitty, colorable"
 	desc = ""
 	icon_state = "kitty"
 	do_colouration = 1
@@ -269,21 +269,21 @@
 	extra_overlay = "kittyinner"
 
 /datum/sprite_accessory/ears/bunnyhc
-	name = "Кролик (окр.)"
+	name = "bunny, colorable"
 	desc = ""
 	icon_state = "bunny"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/antlers
-	name = "Олень, рога"
+	name = "antlers"
 	desc = ""
 	icon_state = "antlers"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/antlers_e
-	name = "Олень, рога и уши"
+	name = "antlers with ears"
 	desc = ""
 	icon_state = "cow-nohorns"
 	do_colouration = 1
@@ -291,14 +291,14 @@
 	extra_overlay = "antlers_mark"
 
 /datum/sprite_accessory/ears/smallantlers
-	name = "Олень, маленькие рога"
+	name = "small antlers"
 	desc = ""
 	icon_state = "smallantlers"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/smallantlers_e
-	name = "Олень, маленькие рога и уши"
+	name = "small antlers with ears"
 	desc = ""
 	icon_state = "smallantlers"
 	do_colouration = 1
@@ -306,40 +306,40 @@
 	extra_overlay = "deer"
 
 /datum/sprite_accessory/ears/deer
-	name = "Олень, уши"
+	name = "deer ears"
 	desc = ""
 	icon_state = "deer"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/cow
-	name = "Корова, рога"
+	name = "cow, horns"
 	desc = ""
 	icon_state = "cow"
 
 /datum/sprite_accessory/ears/cowc
-	name = "Корова, рога (окр.)"
+	name = "cow, horns, colorable"
 	desc = ""
 	icon_state = "cow-c"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/cow_nohorns
-	name = "Корова, уши (окр.)"
+	name = "cow, no horns"
 	desc = ""
 	icon_state = "cow-nohorns"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/caprahorns
-	name = "Козел (окр.)"
+	name = "caprine horns"
 	desc = ""
 	icon_state = "caprahorns"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/otie
-	name = "Оти (окр.)"
+	name = "otie, colorable"
 	desc = ""
 	icon_state = "otie"
 	do_colouration = 1
@@ -347,7 +347,7 @@
 	extra_overlay = "otie-inner"
 
 /datum/sprite_accessory/ears/donkey
-	name = "Осел (окр.)"
+	name = "donkey, colorable"
 	desc = ""
 	icon_state = "donkey"
 	do_colouration = 1
@@ -355,35 +355,35 @@
 	extra_overlay = "otie-inner"
 
 /datum/sprite_accessory/ears/zears
-	name = "Уши широкие"
+	name = "jagged ears"
 	desc = ""
 	icon_state = "zears"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/elfs
-	name = "Эльф"
+	name = "elven ears"
 	desc = ""
 	icon_state = "elfs"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/sleek
-	name = "Уши острые"
+	name = "sleek ears"
 	desc = ""
 	icon_state = "sleek"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/drake
-	name = "Дракон, бока"
+	name = "drake frills"
 	desc = ""
 	icon_state = "drake"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/vulp
-	name = "Вульпканин, два цвета"
+	name = "vulpkanin, dual-color"
 	desc = ""
 	icon_state = "vulp"
 	do_colouration = 1
@@ -391,14 +391,14 @@
 	extra_overlay = "vulp-inner"
 
 /datum/sprite_accessory/ears/vulp_short
-	name = "Вульпканин, короткие"
+	name = "vulpkanin short"
 	desc = ""
 	icon_state = "vulp_terrier"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/vulp_short_dc
-	name = "Вульпканин, короткие двухцветные"
+	name = "vulpkanin short, dual-color"
 	desc = ""
 	icon_state = "vulp_terrier"
 	do_colouration = 1
@@ -406,7 +406,7 @@
 	extra_overlay = "vulp_terrier-inner"
 
 /datum/sprite_accessory/ears/vulp_jackal
-	name = "Вульпканин, тонкие двухцветные"
+	name = "vulpkanin thin, dual-color"
 	desc = ""
 	icon_state = "vulp_jackal"
 	do_colouration = 1
@@ -414,14 +414,14 @@
 	extra_overlay = "vulp_jackal-inner"
 
 /datum/sprite_accessory/ears/bunny_floppy
-	name = "Кролик, свисающие (окр.)"
+	name = "floopy bunny ears (colorable)"
 	desc = ""
 	icon_state = "floppy_bun"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/teshari
-	name = "Тешари, мех (окр.)"
+	name = "Teshari (colorable)"
 	desc = ""
 	icon_state = "teshari"
 	do_colouration = 1
@@ -429,7 +429,7 @@
 	extra_overlay = "teshariinner"
 
 /datum/sprite_accessory/ears/tesharihigh
-	name = "Тешари, окрас верхнего меха"
+	name = "Teshari upper ears (colorable)"
 	desc = ""
 	icon_state = "tesharihigh"
 	do_colouration = 1
@@ -437,15 +437,31 @@
 	extra_overlay = "tesharihighinner"
 
 /datum/sprite_accessory/ears/tesharilow
-	name = "Тешари, окрас нижнего меха"
+	name = "Teshari lower ears (colorable)"
 	desc = ""
 	icon_state = "tesharilow"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "tesharilowinner"
 
+/datum/sprite_accessory/ears/tesh_pattern_ear_male
+	name = "Teshari male ear pattern (colorable)"
+	desc = ""
+	icon_state = "teshari"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshari_male_pattern"
+
+/datum/sprite_accessory/ears/tesh_pattern_ear_female
+	name = "Teshari female ear pattern (colorable)"
+	desc = ""
+	icon_state = "teshari"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshari_female_pattern"
+
 /datum/sprite_accessory/ears/inkling
-	name = "Кролик, взрослые свисающие"
+	name = "colorable mature inkling hair"
 	desc = ""
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_state = "inkling-colorable"
@@ -453,7 +469,7 @@
 	do_colouration = 1
 
 /datum/sprite_accessory/ears/large_dragon
-	name = "Дракон, огромные рога"
+	name = "Large dragon horns"
 	desc = ""
 	icon_state = "big_liz"
 	do_colouration = 1
@@ -554,7 +570,7 @@
     ckeys_allowed = list("phoaly")
 
 /datum/sprite_accessory/ears/elf_caprine_colorable
-	name = "Козел, рога с острыми ушами"
+	name = "Caprine horns with pointy ears, colorable"
 	desc = ""
 	icon_state = "elfs"
 	do_colouration = 1
@@ -562,7 +578,7 @@
 	extra_overlay = "caprahorns"
 
 /datum/sprite_accessory/ears/elf_oni_colorable
-	name = "Они, рога с острыми ушами"
+	name = "oni horns with pointy ears, colorable"
 	desc = ""
 	icon_state = "elfs"
 	do_colouration = 1
@@ -570,7 +586,7 @@
 	extra_overlay = "oni-h1_c"
 
 /datum/sprite_accessory/ears/elf_demon_colorable
-	name = "Демон, рога с острыми ушами"
+	name = "Demon horns with pointy ears, colorable"
 	desc = ""
 	icon_state = "elfs"
 	do_colouration = 1
@@ -578,7 +594,7 @@
 	extra_overlay = "demon-horns1_c"
 
 /datum/sprite_accessory/ears/elf_demon_outwards_colorable
-	name = "Демон, рога наружу с острыми ушами"
+	name = "Demon horns with pointy ears, outwards, colourable"
 	desc = ""
 	icon_state = "elfs"
 	do_colouration = 1
@@ -586,7 +602,7 @@
 	extra_overlay = "demon-horns2"
 
 /datum/sprite_accessory/ears/elf_dragon_colorable
-	name = "Дракон, рога с острыми ушами"
+	name = "Dragon horns with pointy ears, colourable"
 	desc = ""
 	icon_state = "elfs"
 	do_colouration = 1
@@ -619,33 +635,33 @@
 	ckeys_allowed = list("icowom")
 
 /datum/sprite_accessory/wing/featheredlarge //Made by Natje!
-	name = "Крылья перистые большие (окр.)"
+	name = "large feathered wings (colorable)"
 	desc = ""
 	icon_state = "feathered2"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/spider_legs //Not really /WINGS/ but they protrude from the back, kinda. Might as well have them here.
-	name = "Паук, ноги"
+	name = "spider legs"
 	desc = ""
 	icon_state = "spider-legs"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/moth
-	name = "Мотылек"
+	name = "moth wings"
 	desc = ""
 	icon_state = "moth"
 
 /datum/sprite_accessory/wing/mothc
-	name = "Мотылек (окр.)"
+	name = "moth wings, colorable"
 	desc = ""
 	icon_state = "moth"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/dragonfly
-	name = "Стрекоза"
+	name = "dragonfly"
 	desc = ""
 	icon_state = "dragonfly"
 	color_blend_mode = ICON_MULTIPLY
@@ -657,51 +673,51 @@
 	ckeys_allowed = list("kira72")
 
 /datum/sprite_accessory/wing/feathered
-	name = "Крылья перистые (окр.)"
+	name = "feathered wings, colorable"
 	desc = ""
 	icon_state = "feathered"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/feathered_medium
-	name = "Крылья перистые (окр.)" // Keekenox made these feathery things with a little bit more shape to them than the other wings. They are medium sized wing boys.
+	name = "medium feathered wings, colorable" // Keekenox made these feathery things with a little bit more shape to them than the other wings. They are medium sized wing boys.
 	desc = ""
 	icon_state = "feathered3"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/bat_black
-	name = "Летучая мышь, черные"
+	name = "bat wings, black"
 	desc = ""
 	icon_state = "bat-black"
 
 /datum/sprite_accessory/wing/bat_color
-	name = "Летучая мышь (окр.)"
+	name = "bat wings, colorable"
 	desc = ""
 	icon_state = "bat-color"
 	do_colouration = 1
 
 /datum/sprite_accessory/wing/bat_red
-	name = "Летучая мышь, красные"
+	name = "bat wings, red"
 	desc = ""
 	icon_state = "bat-red"
 
 /datum/sprite_accessory/wing/harpywings
-	name = "Гарпия (окр.)"
+	name = "harpy wings, colorable"
 	desc = ""
 	icon_state = "harpywings"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/feathered
-	name = "Крылья перистые (окр.)"
+	name = "feathered wings, colorable"
 	desc = ""
 	icon_state = "feathered"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/beewings
-	name = "Пчела (окр.)"
+	name = "bee wings"
 	desc = ""
 	icon_state = "beewings"
 
@@ -727,15 +743,15 @@
 	name = "gazer eyestalks"
 	desc = ""
 	icon_state = "liquidfirefly-eyestalks"
-	ckeys_allowed = list("liquidfirefly","seiga") //At request.
+	//ckeys_allowed = list("liquidfirefly","seiga") //At request.
 
 /datum/sprite_accessory/wing/moth_full
-	name = "Мотылек, с антенной"
+	name = "moth antenna and wings"
 	desc = ""
 	icon_state = "moth_full"
 
 /datum/sprite_accessory/wing/moth_full_gray
-	name = "Мотылек, с антенной (окр.)"
+	name = "moth antenna and wings, colorable"
 	desc = ""
 	icon_state = "moth_full_gray"
 	do_colouration = 1
@@ -748,31 +764,31 @@
 	ckeys_allowed = list("somekindofpony")
 
 /datum/sprite_accessory/wing/snag
-	name = "Ксеноморф"
+	name = "xenomorph backplate"
 	desc = ""
 	icon_state = "snag-backplate"
 
 /datum/sprite_accessory/wing/sepulchre_c_yw
-	name = "Демон (окр.)"
+	name = "demon wings (colorable)"
 	desc = ""
 	icon_state = "sepulchre_wingsc"
 	do_colouration = 1
 
 /datum/sprite_accessory/wing/cyberdragon
-	name = "Дракон-киборг (окр.)"
+	name = "Cyber dragon wing (colorable)"
 	desc = ""
 	icon_state = "cyberdragon_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/cyberdragon_red
-	name = "Дракон-киборг, красные"
+	name = "Cyber dragon wing (red)"
 	desc = ""
 	icon_state = "cyberdragon_red_s"
 	do_colouration = 0
 
 /datum/sprite_accessory/wing/cyberdoe
-	name = "Дракон-киборг, светлые"
+	name = "Cyber doe wing"
 	desc = ""
 	icon_state = "cyberdoe_s"
 	do_colouration = 0
@@ -811,43 +827,43 @@
 // Everyone tails
 
 /datum/sprite_accessory/tail/invisible
-	name = "Скрыть расовый хвост"
+	name = "hide species-sprite tail"
 	icon = null
 	icon_state = null
 
 /datum/sprite_accessory/tail/squirrel_orange
-	name = "Белка, оранжевый"
+	name = "squirel, orange"
 	desc = ""
 	icon_state = "squirrel-orange"
 
 /datum/sprite_accessory/tail/squirrel_red
-	name = "Белка, рыжий"
+	name = "squirrel, red"
 	desc = ""
 	icon_state = "squirrel-red"
 
 /datum/sprite_accessory/tail/squirrel
-	name = "Белка (окр.)"
+	name = "squirrel, colorable"
 	desc = ""
 	icon_state = "squirrel"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/kitty
-	name = "Кот, вниз (окр.)"
+	name = "kitty, colorable, downwards"
 	desc = ""
 	icon_state = "kittydown"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/kittyup
-	name = "Кот, вверх (окр.)"
+	name = "kitty, colorable, upwards"
 	desc = ""
 	icon_state = "kittyup"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/tiger_white
-	name = "Тигр (окр.)"
+	name = "tiger, colorable"
 	desc = ""
 	icon_state = "tiger"
 	do_colouration = 1
@@ -855,7 +871,7 @@
 	extra_overlay = "tigerinnerwhite"
 
 /datum/sprite_accessory/tail/stripey
-	name = "Таджара, полосатый (окр.)"
+	name = "stripey taj, colorable"
 	desc = ""
 	icon_state = "stripeytail"
 	do_colouration = 1
@@ -863,64 +879,64 @@
 	extra_overlay = "stripeytail_mark"
 
 /datum/sprite_accessory/tail/stripeytail_brown
-	name = "Таджара, полосатый коричневый"
+	name = "stripey taj, brown"
 	desc = ""
 	icon_state = "stripeytail-brown"
 
 /datum/sprite_accessory/tail/chameleon
-	name = "Хамелеон (окр.)"
+	name = "Chameleon, colorable"
 	desc = ""
 	icon_state = "chameleon"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/bunny
-	name = "Кролик (окр.)"
+	name = "bunny, colorable"
 	desc = ""
 	icon_state = "bunny"
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/bear_brown
-	name = "Медведь, коричневый"
+	name = "bear, brown"
 	desc = ""
 	icon_state = "bear-brown"
 
 /datum/sprite_accessory/tail/bear
-	name = "Медведь (окр.)"
+	name = "bear, colorable"
 	desc = ""
 	icon_state = "bear"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/dragon
-	name = "Дракон (окр.)"
+	name = "dragon, colorable"
 	desc = ""
 	icon_state = "dragon"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/wolf_grey
-	name = "Волк, серый"
+	name = "wolf, grey"
 	desc = ""
 	icon_state = "wolf-grey"
 
 /datum/sprite_accessory/tail/wolf_green
-	name = "Волк, зеленый"
+	name = "wolf, green"
 	desc = ""
 	icon_state = "wolf-green"
 
 /datum/sprite_accessory/tail/wisewolf
-	name = "Волк, светлый"
+	name = "wolf, wise"
 	desc = ""
 	icon_state = "wolf-wise"
 
 /datum/sprite_accessory/tail/blackwolf
-	name = "Волк, черный"
+	name = "wolf, black"
 	desc = ""
 	icon_state = "wolf"
 
 /datum/sprite_accessory/tail/wolf
-	name = "Волк (окр.)"
+	name = "wolf, colorable"
 	desc = ""
 	icon_state = "wolf"
 	do_colouration = 1
@@ -928,47 +944,47 @@
 	extra_overlay = "wolfinner"
 
 /datum/sprite_accessory/tail/mouse_pink
-	name = "Мышь, розовый"
+	name = "mouse, pink"
 	desc = ""
 	icon_state = "mouse-pink"
 
 /datum/sprite_accessory/tail/mouse
-	name = "Мышь (окр.)"
+	name = "mouse, colorable"
 	desc = ""
 	icon_state = "mouse"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/horse
-	name = "Лошадь (окр.)"
+	name = "horse tail, colorable"
 	desc = ""
 	icon_state = "horse"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/cow
-	name = "Корова (окр.)"
+	name = "cow tail, colorable"
 	desc = ""
 	icon_state = "cow"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/fantail
-	name = "Птичий веер (окр.)"
+	name = "avian fantail, colorable"
 	desc = ""
 	icon_state = "fantail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/wagtail
-	name = "Птичий виляющий (окр.)"
+	name = "avian wagtail, colorable"
 	desc = ""
 	icon_state = "wagtail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/nevreandc
-	name = "Невреан (два цвета)"
+	name = "nevrean tail, dual-color"
 	desc = ""
 	icon_state = "nevreantail_dc"
 	extra_overlay = "nevreantail_dc_tail"
@@ -976,7 +992,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/nevreanwagdc
-	name = "Невреан виляющий (окр.)"
+	name = "nevrean wagtail, dual-color"
 	desc = ""
 	icon_state = "wagtail"
 	extra_overlay = "wagtail_dc_tail"
@@ -984,7 +1000,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/nevreanwagdc_alt
-	name = "Невреан виляющий помеченный (два цвета)"
+	name = "nevrean wagtail, marked, dual-color"
 	desc = ""
 	icon_state = "wagtail2_dc"
 	extra_overlay = "wagtail2_dc_mark"
@@ -992,40 +1008,40 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/crossfox
-	name = "Лис"
+	name = "cross fox"
 	desc = ""
 	icon_state = "crossfox"
 
 /datum/sprite_accessory/tail/beethorax
-	name = "Пчела"
+	name = "bee thorax"
 	desc = ""
 	icon_state = "beethorax"
 
 /datum/sprite_accessory/tail/doublekitsune
-	name = "Китсуне двойной (окр.)"
+	name = "double kitsune tail, colorable"
 	desc = ""
 	icon_state = "doublekitsune"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/spade_color
-	name = "Хвост с пикой (окр.)"
+	name = "spade-tail (colorable)"
 	desc = ""
 	icon_state = "spadetail-black"
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/snag
-	name = "Ксеноморф"
+	name = "xenomorph tail 1"
 	desc = ""
 	icon_state = "snag"
 
 /datum/sprite_accessory/tail/xenotail
-	name = "Ксеноморф, альт"
+	name = "xenomorph tail 2"
 	desc = ""
 	icon_state = "xenotail"
 
 /datum/sprite_accessory/tail/eboop
-	name = "Меха EGN (окр.)"
+	name = "EGN mech tail (dual color)"
 	desc = ""
 	icon_state = "eboop"
 	do_colouration = 1
@@ -1107,25 +1123,25 @@
     ckeys_allowed = list("tucker0666")
 
 /datum/sprite_accessory/tail/ketrai_wag
-	name = "Хвост красно-желтый виляющий"
+	name = "fennix tail (vwag)"
 	desc = ""
 	icon_state = "ketraitail"
 	ani_state = "ketraitail_w"
 	//ckeys_allowed = list("ketrai") //They requested it to be enabled for everyone.
 
 /datum/sprite_accessory/tail/ketrainew_wag
-	name = "Хвост красно-желтый виляющий, альт"
+	name = "new fennix tail (vwag)"
 	desc = ""
 	icon_state = "ketraitailnew"
 	ani_state = "ketraitailnew_w"
 
 /datum/sprite_accessory/tail/redpanda
-	name = "Красная панда"
+	name = "red panda"
 	desc = ""
 	icon_state = "redpanda"
 
 /datum/sprite_accessory/tail/ringtail
-	name = "Хвост кольчатый"
+	name = "ringtail, colorable"
 	desc = ""
 	icon_state = "ringtail"
 	do_colouration = 1
@@ -1139,7 +1155,7 @@
 	ckeys_allowed = list("hoodoo")
 
 /datum/sprite_accessory/tail/satyr
-	name = "Козлиные ноги (окр.)"
+	name = "goat legs, colorable"
 	desc = ""
 	icon_state = "satyr"
 	color_blend_mode = ICON_MULTIPLY
@@ -1149,14 +1165,14 @@
 	clip_mask_state = "taur_clip_mask_def" //Used to clip off the lower part of suits & uniforms.
 
 /datum/sprite_accessory/tail/tailmaw
-	name = "Хвост с пастью (окр.)"
+	name = "tailmaw, colorable"
 	desc = ""
 	icon_state = "tailmaw"
 	color_blend_mode = ICON_MULTIPLY
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/curltail
-	name = "Хвост завивающийся (окр.)"
+	name = "curltail (vwag)"
 	desc = ""
 	icon_state = "curltail"
 	ani_state = "curltail_w"
@@ -1166,7 +1182,7 @@
 	extra_overlay_w = "curltail_mark_w"
 
 /datum/sprite_accessory/tail/shorttail
-	name = "Хвост короткий (окр.)"
+	name = "shorttail (vwag)"
 	desc = ""
 	icon_state = "straighttail"
 	ani_state = "straighttail_w"
@@ -1174,7 +1190,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/sneptail
-	name = "Хвост шерстистый (окр.)"
+	name = "Snep/Furry Tail (vwag)"
 	desc = ""
 	icon_state = "sneptail"
 	ani_state = "sneptail_w"
@@ -1185,7 +1201,7 @@
 
 
 /datum/sprite_accessory/tail/tiger_new
-	name = "Тигр, виляющий"
+	name = "tiger tail (vwag)"
 	desc = ""
 	icon_state = "tigertail"
 	ani_state = "tigertail_w"
@@ -1195,7 +1211,7 @@
 	extra_overlay_w = "tigertail_mark_w"
 
 /datum/sprite_accessory/tail/vulp_new
-	name = "Вульпканин, альт, виляющий"
+	name = "new vulp tail (vwag)"
 	desc = ""
 	icon_state = "vulptail"
 	ani_state = "vulptail_w"
@@ -1205,7 +1221,7 @@
 	extra_overlay_w = "vulptail_mark_w"
 
 /datum/sprite_accessory/tail/otietail
-	name = "Оти, виляющий"
+	name = "otie tail (vwag)"
 	desc = ""
 	icon_state = "otie"
 	ani_state = "otie_w"
@@ -1213,7 +1229,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/newtailmaw
-	name = "Хвост с челюстью, виляющий"
+	name = "new tailmaw (vwag)"
 	desc = ""
 	icon_state = "newtailmaw"
 	ani_state = "newtailmaw_w"
@@ -1221,28 +1237,28 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/ztail
-	name = "Хвост зазубренный"
+	name = "jagged flufftail"
 	desc = ""
 	icon_state = "ztail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/snaketail
-	name = "Змея"
+	name = "snake tail, colorable"
 	desc = ""
 	icon_state = "snaketail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/vulpan_alt
-	name = "Вульпканин, альт 2 (окр.)"
+	name = "vulpkanin alt style, colorable"
 	desc = ""
 	icon_state = "vulptail_alt"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/sergaltaildc
-	name = "Сергал (два цвета)"
+	name = "sergal, dual-color"
 	desc = ""
 	icon_state = "sergal"
 	do_colouration = 1
@@ -1250,7 +1266,7 @@
 	extra_overlay = "sergal_mark"
 
 /datum/sprite_accessory/tail/skunktail
-	name = "Скунс (два цвета)"
+	name = "skunk, dual-color"
 	desc = ""
 	icon_state = "skunktail"
 	do_colouration = 1
@@ -1258,23 +1274,63 @@
 	extra_overlay = "skunktail_mark"
 
 /datum/sprite_accessory/tail/deertail
-	name = "Олень (два цвета)"
+	name = "deer, dual-color"
 	desc = ""
 	icon_state = "deertail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "deertail_mark"
 
-/datum/sprite_accessory/tail/teshari_fluffytail
-	name = "Тешари, альт (окр.)"
+/datum/sprite_accessory/tail/tesh_feathered
+	name = "Teshari tail"
 	desc = ""
-	icon_state = "teshari_fluffytail"
-	extra_overlay = "teshari_fluffytail_mark"
+	icon_state = "teshtail_s"
 	do_colouration = 1
+	extra_overlay = "teshtail_feathers_s"
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/tail/teshari_fluffytail
+	name = "Teshari alternative, colorable"
+	desc = ""
+	icon_state = "teshari_fluffytail"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshari_fluffytail_mark"
+
+/datum/sprite_accessory/tail/tesh_pattern_male
+	name = "Teshari male tail pattern"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_male_tail"
+
+/datum/sprite_accessory/tail/tesh_pattern_male_alt
+	name = "Teshari male tail alt. pattern"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_male_alt"
+
+/datum/sprite_accessory/tail/tesh_pattern_fem
+	name = "Teshari female tail pattern"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_fem_tail"
+
+/datum/sprite_accessory/tail/tesh_pattern_fem_alt
+	name = "Teshari male tail alt. pattern"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_fem_alt"
+
 /datum/sprite_accessory/tail/nightstalker
-	name = "Ночной хищник (окр.)"
+	name = "Nightstalker, colorable"
 	desc = ""
 	icon_state = "nightstalker"
 	do_colouration = 1
@@ -1282,190 +1338,161 @@
 
 //For all species tails. Includes haircolored tails.
 /datum/sprite_accessory/tail/special
-	name = "Нет хвоста"
+	name = "Blank tail. Do not select."
 	icon = 'icons/effects/species_tails_vr.dmi'
 
 /datum/sprite_accessory/tail/special/unathi
-	name = "Унати"
+	name = "unathi tail"
 	desc = ""
 	icon_state = "sogtail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/tajaran
-	name = "Таджара"
+	name = "tajaran tail"
 	desc = ""
 	icon_state = "tajtail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/sergal
-	name = "Сергал"
+	name = "sergal tail"
 	desc = ""
 	icon_state = "sergtail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/akula
-	name = "Акула"
+	name = "akula tail"
 	desc = ""
 	icon_state = "sharktail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/nevrean
-	name = "Невреан"
+	name = "nevrean tail"
 	desc = ""
 	icon_state = "nevreantail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/armalis
-	name = "Армалис"
+	name = "armalis tail"
 	desc = ""
 	icon_state = "armalis_tail_humanoid_s"
 
 /datum/sprite_accessory/tail/special/xenodrone
-	name = "Ксеноморф, дрон"
+	name = "xenomorph drone tail"
 	desc = ""
 	icon_state = "xenos_drone_tail_s"
 
 /datum/sprite_accessory/tail/special/xenosentinel
-	name = "Ксеноморф, страж"
+	name = "xenomorph sentinel tail"
 	desc = ""
 	icon_state = "xenos_sentinel_tail_s"
 
 /datum/sprite_accessory/tail/special/xenohunter
-	name = "Ксеноморф, охотник"
+	name = "xenomorph hunter tail"
 	desc = ""
 	icon_state = "xenos_hunter_tail_s"
 
 /datum/sprite_accessory/tail/special/xenoqueen
-	name = "Ксеноморф, королева"
+	name = "xenomorph queen tail"
 	desc = ""
 	icon_state = "xenos_queen_tail_s"
 
 /datum/sprite_accessory/tail/special/monkey
-	name = "Обезьяна"
+	name = "monkey tail"
 	desc = ""
 	icon_state = "chimptail_s"
 
-/datum/sprite_accessory/tail/special/seromitail
-	name = "Тешари"
-	desc = ""
-	icon_state = "seromitail_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/tail/special/seromitailfeathered
-	name = "Тешари с перьями"
-	desc = ""
-	icon_state = "seromitail_s"
-	extra_overlay = "seromitail_feathers_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
 /datum/sprite_accessory/tail/special/unathihc
-	name = "Унати (окр.)"
+	name = "unathi tail, colorable"
 	desc = ""
 	icon_state = "sogtail_hc_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/tajaranhc
-	name = "Таджара (окр.)"
+	name = "tajaran tail, colorable"
 	desc = ""
 	icon_state = "tajtail_hc_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/sergalhc
-	name = "Сергал (окр.)"
+	name = "sergal tail, colorable"
 	desc = ""
 	icon_state = "sergtail_hc_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/akulahc
-	name = "Акула (окр.)"
+	name = "akula tail, colorable"
 	desc = ""
 	icon_state = "sharktail_hc_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/nevreanhc
-	name = "Невреан (окр.)"
+	name = "nevrean tail, colorable"
 	desc = ""
 	icon_state = "nevreantail_hc_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/foxhc
-	name = "Зоррен горный (окр.)"
+	name = "highlander zorren tail, colorable"
 	desc = ""
 	icon_state = "foxtail_hc_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/fennechc
-	name = "Зоррен равнинный (окр.)"
+	name = "flatland zorren tail, colorable"
 	desc = ""
 	icon_state = "fentail_hc_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/armalishc
-	name = "Армалис (окр.)"
+	name = "armalis tail, colorable"
 	desc = ""
 	icon_state = "armalis_tail_humanoid_hc_s"
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/special/xenodronehc
-	name = "Ксеноморф, дрон (окр.)"
+	name = "xenomorph drone tail, colorable"
 	desc = ""
 	icon_state = "xenos_drone_tail_hc_s"
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/special/xenosentinelhc
-	name = "Ксеноморф, страж (окр.)"
+	name = "xenomorph sentinel tail, colorable"
 	desc = ""
 	icon_state = "xenos_sentinel_tail_hc_s"
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/special/xenohunterhc
-	name = "Ксеноморф, охотник (окр.)"
+	name = "xenomorph hunter tail, colorable"
 	desc = ""
 	icon_state = "xenos_hunter_tail_hc_s"
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/special/xenoqueenhc
-	name = "Ксеноморф, королева (окр.)"
+	name = "xenomorph queen tail, colorable"
 	desc = ""
 	icon_state = "xenos_queen_tail_hc_s"
 	do_colouration = 1
 
 /datum/sprite_accessory/tail/special/monkeyhc
-	name = "Обезьяна (окр.)"
+	name = "monkey tail, colorable"
 	desc = ""
 	icon_state = "chimptail_hc_s"
 	do_colouration = 1
 
-/datum/sprite_accessory/tail/special/seromitailhc
-	name = "Тешари (окр.)"
-	desc = ""
-	icon_state = "seromitail_hc_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/tail/special/seromitailfeatheredhc
-	name = "Тешари с перьями (окр.)"
-	desc = ""
-	icon_state = "seromitail_feathers_hc_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
 /datum/sprite_accessory/tail/special/vulpan
-	name = "Вульпканин (окр.)"
+	name = "vulpkanin, colorable"
 	desc = ""
 	icon_state = "vulptail_s"
 	do_colouration = 1
@@ -1473,7 +1500,7 @@
 
 
 /datum/sprite_accessory/tail/zenghu_taj
-	name = "Тажара-синт Дзен-Ху (окр.)"
+	name = "Zeng-Hu Tajaran Synth tail"
 	desc = ""
 	icon_state = "zenghu_taj"
 
@@ -1482,14 +1509,14 @@
 //Buggo Abdomens!
 
 /datum/sprite_accessory/tail/buggo
-	name = "Жук (окр.)"
+	name = "Bug abdomen, colorable"
 	desc = ""
 	icon_state = "buggo_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/buggobee
-	name = "Жук, полосы сверху (два цвета)"
+	name = "Bug abdomen, bee top, dual-colorable"
 	desc = ""
 	icon_state = "buggo_s"
 	do_colouration = 1
@@ -1497,7 +1524,7 @@
 	extra_overlay = "buggobee_markings"
 
 /datum/sprite_accessory/tail/buggobeefull
-	name = "Жук, полосы везде (два цвета)"
+	name = "Bug abdomen, bee full, dual-colorable"
 	desc = ""
 	icon_state = "buggo_s"
 	do_colouration = 1
@@ -1505,7 +1532,7 @@
 	extra_overlay = "buggobeefull_markings"
 
 /datum/sprite_accessory/tail/buggounder
-	name = "Жук, цвет снизу (два цвета)"
+	name = "Bug abdomen, underside, dual-colorable"
 	desc = ""
 	icon_state = "buggo_s"
 	do_colouration = 1
@@ -1513,7 +1540,7 @@
 	extra_overlay = "buggounder_markings"
 
 /datum/sprite_accessory/tail/buggofirefly
-	name = "Жук, светлячок (два цвета)"
+	name = "Bug abdomen, firefly, dual-colorable"
 	desc = ""
 	icon_state = "buggo_s"
 	do_colouration = 1
@@ -1521,14 +1548,14 @@
 	extra_overlay = "buggofirefly_markings"
 
 /datum/sprite_accessory/tail/buggofat
-	name = "Жук жирный (окр.)"
+	name = "Fat bug abdomen, colorable"
 	desc = ""
 	icon_state = "buggofat_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/buggofatbee
-	name = "Жук жирный, полосы сверху (два цвета)"
+	name = "Fat bug abdomen, bee top, dual-colorable"
 	desc = ""
 	icon_state = "buggofat_s"
 	do_colouration = 1
@@ -1536,7 +1563,7 @@
 	extra_overlay = "buggofatbee_markings"
 
 /datum/sprite_accessory/tail/buggofatbeefull
-	name = "Жук жирный, полосы везде (два цвета)"
+	name = "Fat bug abdomen, bee full, dual-colorable"
 	desc = ""
 	icon_state = "buggofat_s"
 	do_colouration = 1
@@ -1544,7 +1571,7 @@
 	extra_overlay = "buggofatbeefull_markings"
 
 /datum/sprite_accessory/tail/buggofatunder
-	name = "Жук жирный, цвет снизу (два цвета)"
+	name = "Fat bug abdomen, underside, dual-colorable"
 	desc = ""
 	icon_state = "buggofat_s"
 	do_colouration = 1
@@ -1552,7 +1579,7 @@
 	extra_overlay = "buggofatunder_markings"
 
 /datum/sprite_accessory/tail/buggofatfirefly
-	name = "Жук жирный, светлячок (два цвета)"
+	name = "Fat bug abdomen, firefly, dual-colorable"
 	desc = ""
 	icon_state = "buggofat_s"
 	do_colouration = 1
@@ -1560,7 +1587,7 @@
 	extra_overlay = "buggofatfirefly_markings"
 
 /datum/sprite_accessory/tail/buggowag
-	name = "Жук, виляющий (окр.)"
+	name = "Bug abdomen, colorable, vwag change"
 	desc = ""
 	icon_state = "buggo_s"
 	ani_state = "buggofat_s"
@@ -1568,7 +1595,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/buggobeewag
-	name = "Жук, полосы сверху, виляющий (окр.)"
+	name = "Bug abdomen, bee top, dual color, vwag"
 	desc = ""
 	icon_state = "buggo_s"
 	ani_state = "buggofat_s"
@@ -1578,7 +1605,7 @@
 	extra_overlay_w = "buggofatbee_markings"
 
 /datum/sprite_accessory/tail/buggobeefullwag
-	name = "Жук, полосы везде, виляющий (два цвета)"
+	name = "Bug abdomen, bee full, dual color, vwag"
 	desc = ""
 	icon_state = "buggo_s"
 	ani_state = "buggofat_s"
@@ -1588,7 +1615,7 @@
 	extra_overlay_w = "buggofatbeefull_markings"
 
 /datum/sprite_accessory/tail/buggounderwag
-	name = "Жук, цвет снизу, виляющий (два цвета)"
+	name = "Bug abdomen, underside, dual color, vwag"
 	desc = ""
 	icon_state = "buggo_s"
 	ani_state = "buggofat_s"
@@ -1598,7 +1625,7 @@
 	extra_overlay_w = "buggofatunder_markings"
 
 /datum/sprite_accessory/tail/buggofireflywag
-	name = "Жук, светлячок, виляющий (два цвета)"
+	name = "Bug abdomen, firefly, dual color, vwag"
 	desc = ""
 	icon_state = "buggo_s"
 	ani_state = "buggofat_s"
@@ -1610,14 +1637,14 @@
 //Vass buggo variants!
 
 /datum/sprite_accessory/tail/buggovass
-	name = "Жук, с передом (окр.)"
+	name = "Bug abdomen, vass, colorable"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/buggovassbee
-	name = "Жук, полосы сверху с передом (два цвета)"
+	name = "Bug abdomen, bee top, dc, vass"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	do_colouration = 1
@@ -1625,7 +1652,7 @@
 	extra_overlay = "buggobee_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassbeefull
-	name = "Жук, полосы везде с передом (два цвета)"
+	name = "Bug abdomen, bee full, dc, vass"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	do_colouration = 1
@@ -1633,7 +1660,7 @@
 	extra_overlay = "buggobeefull_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassunder
-	name = "Жук, цвет снизу с передом (два цвета)"
+	name = "Bug abdomen, underside, dc, vass"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	do_colouration = 1
@@ -1641,7 +1668,7 @@
 	extra_overlay = "buggounder_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassfirefly
-	name = "Жук, светлячок с передом (два цвета)"
+	name = "Bug abdomen, firefly, dc, vass"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	do_colouration = 1
@@ -1649,14 +1676,14 @@
 	extra_overlay = "buggofirefly_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassfat
-	name = "Жук жирный, с передом (окр.)"
+	name = "Fat bug abdomen, vass, colorable"
 	desc = ""
 	icon_state = "buggofat_vass_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/buggovassfatbee
-	name = "Жук жирный, полосы сверху с передом (два цвета)"
+	name = "Fat bug abdomen, bee top, dc, vass"
 	desc = ""
 	icon_state = "buggofat_vass_s"
 	do_colouration = 1
@@ -1664,7 +1691,7 @@
 	extra_overlay = "buggofatbee_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassfatbeefull
-	name = "Жук жирный, полосы везде с передом (два цвета)"
+	name = "Fat bug abdomen, bee full, dc, vass"
 	desc = ""
 	icon_state = "buggofat_vass_s"
 	do_colouration = 1
@@ -1672,7 +1699,7 @@
 	extra_overlay = "buggofatbeefull_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassfatunder
-	name = "Жук жирный, цвет снизу с передом (два цвета)"
+	name = "Fat bug abdomen, underside, dc, vass"
 	desc = ""
 	icon_state = "buggofat_vass_s"
 	do_colouration = 1
@@ -1680,7 +1707,7 @@
 	extra_overlay = "buggofatunder_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassfatfirefly
-	name = "Жук жирный, светлячок с передом (два цвета)"
+	name = "Fat bug abdomen, firefly, dc, vass"
 	desc = ""
 	icon_state = "buggofat_vass_s"
 	do_colouration = 1
@@ -1688,7 +1715,7 @@
 	extra_overlay = "buggofatfirefly_vass_markings"
 
 /datum/sprite_accessory/tail/buggovasswag
-	name = "Жук, с передом, виляющий (окр.)"
+	name = "Bug abdomen, vass, colorable, vwag change"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	ani_state = "buggofat_vass_s"
@@ -1696,7 +1723,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/buggovassbeewag
-	name = "Жук, полосы сверху с передом, виляющий (два цвета)"
+	name = "Bug abdomen, bee top, dc, vass, vwag"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	ani_state = "buggofat_vass_s"
@@ -1706,7 +1733,7 @@
 	extra_overlay_w = "buggofatbee_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassbeefullwag
-	name = "Жук, полосы везде с передом (два цвета)"
+	name = "Bug abdomen, bee full, dc, vass, vwag"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	ani_state = "buggofat_vass_s"
@@ -1716,7 +1743,7 @@
 	extra_overlay_w = "buggofatbeefull_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassunderwag
-	name = "Жук, цвет снизу с передом, виляющий (два цвета)"
+	name = "Bug abdomen, underside, dc, vass, vwag"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	ani_state = "buggofat_vass_s"
@@ -1726,7 +1753,7 @@
 	extra_overlay_w = "buggofatunder_vass_markings"
 
 /datum/sprite_accessory/tail/buggovassfireflywag
-	name = "Жук, светлячок с передом, виляющий (два цвета)"
+	name = "Bug abdomen, firefly, dc, vass, vwag"
 	desc = ""
 	icon_state = "buggo_vass_s"
 	ani_state = "buggofat_vass_s"
@@ -1736,7 +1763,7 @@
 	extra_overlay_w = "buggofatfirefly_vass_markings"
 
 /datum/sprite_accessory/tail/tail_smooth
-	name = "Ящер, гладкий (окр.)"
+	name = "Smooth Lizard Tail, colorable"
 	desc = ""
 	icon_state = "tail_smooth"
 	ani_state = "tail_smooth_w"
@@ -1744,7 +1771,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/triplekitsune_colorable
-	name = "Китсуне, 3 хвоста (окр.)"
+	name = "Kitsune 3 tails, colorable"
 	desc = ""
 	icon_state = "triplekitsune"
 	do_colouration = 1
@@ -1752,7 +1779,7 @@
 	extra_overlay = "triplekitsune_tips"
 
 /datum/sprite_accessory/tail/ninekitsune_colorable
-	name = "Китсуне, 9 хвостов (окр.)"
+	name = "Kitsune 9 tails, colorable"
 	desc = ""
 	icon_state = "ninekitsune"
 	do_colouration = 1
@@ -1760,7 +1787,7 @@
 	extra_overlay = "ninekitsune-tips"
 
 /datum/sprite_accessory/tail/shadekin_short
-	name = "Шейдкин, короткий (окр.)"
+	name = "Shadekin Short Tail, colorable"
 	desc = ""
 	icon_state = "shadekin-short"
 	do_colouration = 1
@@ -1769,14 +1796,14 @@
 	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 /datum/sprite_accessory/tail/wartacosushi_tail //brightened +20RGB from matching roboparts
-	name = "Ward-Takahashi"
+	name = "Ward-Takahashi Tail"
 	desc = ""
 	icon_state = "wardtakahashi_vulp"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/wartacosushi_tail_dc
-	name = "Ward-Takahashi (два цвета)"
+	name = "Ward-Takahashi Tail, dual-color"
 	desc = ""
 	icon_state = "wardtakahashi_vulp_dc"
 	do_colouration = 1
