@@ -78,15 +78,20 @@ var/const/SAR 				=(1<<14)
 	minimal_access = list(access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/pilot
 	job_description = "Пилот управляет различными шаттлами в системе Дева-Эригон."
-	alt_titles = list("Военный пилот" = /datum/alt_title/co_pilot, "Navigator" = /datum/alt_title/navigator)
+	alt_titles = list("Запасной пилот" = /datum/alt_title/co_pilot, "Навигатор" = /datum/alt_title/navigator, "Авиатор" = /datum/alt_title/aviator, "Военный пилот" = /datum/alt_title/combat_pilot)
 
 /datum/alt_title/co_pilot
-	title = "Военный пилот"
-	title_blurb = "A Co-Pilot is there primarily to assist main pilot as well as learn from them"
+	title = "Запасной пилот"
+	title_blurb = "Запасной пилот помогает главному, а так же набирается от него опыта."
 
 /datum/alt_title/navigator
-	title = "Navigator"
+	title = "навигатор"
 
+/datum/alt_title/combat_pilot
+	title = "Военный пилот"
+
+/datum/alt_title/aviator
+	title = "Авиатор"
 
 /datum/job/explorer
 	title = "Искатель"
@@ -104,13 +109,13 @@ var/const/SAR 				=(1<<14)
 	minimal_access = list(access_explorer, access_external_airlocks, access_eva)
 	outfit_type = /decl/hierarchy/outfit/job/explorer2
 	job_description = "Искатель ищет на планетах интересные вещи и приносит их на станцию."
-	alt_titles = list("Surveyor" = /datum/alt_title/surveyor, "Offsite Scout" = /datum/alt_title/offsite_scout)
+	alt_titles = list("Геодезист" = /datum/alt_title/surveyor, "Полевой скаут" = /datum/alt_title/offsite_scout)
 
 /datum/alt_title/surveyor
-	title = "Surveyor"
+	title = "Геодезист"
 
 /datum/alt_title/offsite_scout
-	title = "Offsite Scout"
+	title = "Полевой скаут"
 
 
 /datum/job/sar
@@ -121,7 +126,7 @@ var/const/SAR 				=(1<<14)
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Pathfinder and the Chief Medical Officer"
+	supervisors = "Первопроходцем и Главврачом"
 	selection_color = "#999440"
 	economic_modifier = 6
 	minimal_player_age = 3
@@ -129,8 +134,8 @@ var/const/SAR 				=(1<<14)
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_eva, access_maint_tunnels, access_external_airlocks, access_pilot)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_pilot)
 	outfit_type = /decl/hierarchy/outfit/job/medical/sar
-	job_description = "A Field medic works as the field doctor of expedition teams."
-	alt_titles = list("Expedition Medic" = /datum/alt_title/expedition_medic)
+	job_description = "Военврач работает полевым врачом экспедиционных отрядов."
+	alt_titles = list("Экспедиционный врач" = /datum/alt_title/expedition_medic)
 
 /datum/alt_title/expedition_medic
-	title = "Expedition Medic"
+	title = "Экспедиционный врач"

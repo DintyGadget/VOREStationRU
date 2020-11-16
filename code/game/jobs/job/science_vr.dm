@@ -11,77 +11,55 @@
 			            access_tox_storage, access_teleporter,
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_xenoarch, access_eva, access_network, access_xenobotany)
-	alt_titles = list("Research Supervisor" = /datum/alt_title/research_supervisor, "Research Manager" = /datum/alt_title/research_manager,
-						"Head of Development" = /datum/alt_title/head_of_development,"Head Scientist" = /datum/alt_title/head_scientist)
+	alt_titles = list("Научный руководитель" = /datum/alt_title/research_supervisor, "Менеджер исследований" = /datum/alt_title/research_manager,
+						"Главный технолог" = /datum/alt_title/head_of_development,"Старший учёный" = /datum/alt_title/head_scientist)
 
 /datum/alt_title/research_manager
-	title = "Research Manager"
+	title = "Менеджер исследований"
 
 /datum/alt_title/head_of_development
-	title = "Head of Development"
+	title = "Главный технологий"
 
 /datum/alt_title/head_scientist
-	title = "Head Scientist"
+	title = "Старший учёный"
 
 
 /datum/job/scientist
 	spawn_positions = 5
 	pto_type = PTO_SCIENCE
-	alt_titles = list("Lab Assistant" = /datum/alt_title/lab_assistant, "Ксеноархеолог" = /datum/alt_title/xenoarch, "Xenopaleontologist" = /datum/alt_title/xenopaleontologist, \
-						"Аномалист" = /datum/alt_title/anomalist, "Phoron Researcher" = /datum/alt_title/phoron_research, "Gas Physicist" = /datum/alt_title/gas_physicist, \
-						"Circuit Designer" = /datum/alt_title/circuit_designer, "Circuit Programmer" = /datum/alt_title/circuit_programmer)
+	alt_titles = list("Лаборант" = /datum/alt_title/lab_assistant, "Ксеноархеолог" = /datum/alt_title/xenoarch, "Ксенопалеонтолог" = /datum/alt_title/xenopaleontologist, \
+						"Аномалист" = /datum/alt_title/anomalist, "Исследователь форона" = /datum/alt_title/phoron_research, \
+						"Программист микросхем" = /datum/alt_title/circuit_designer)
 
 
 	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch, access_xenobotany)
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)					// Unchanged (for now?), mostly here for reference
 
 /datum/alt_title/lab_assistant
-	title = "Lab Assistant"
-	title_blurb = "A Lab Assistant is a lower-level member of research staff, whose main purpose is to help scientists with their specialized work in more menial fashion, while also \
-					learning the specializations in process."
+	title = "Лаборант"
+	title_blurb = "Лаборант -- самый младший по званию ученый, чья работа состоит в оказании помощи другим ученым и вместе с этим набирании опыта."
 
 /datum/alt_title/xenopaleontologist
-	title = "Xenopaleontologist"
-	title_blurb = "A Xenopaleontologist enters digsites in search of fossils and other ancient remants of alien life. These digsites are frequently in vacuum or other inhospitable \
-					locations, and as such a Xenopaleontologist should be prepared to handle hostile evironmental conditions."
-
-/datum/alt_title/gas_physicist
-	title = "Gas Physicist"
-	title_blurb = "A Gas Physicist is a specialist in various practical applications of gasses, but currently focuses their attention on phoron, and has knowledge of its practical uses and dangers. \
-					Many Gas Physicists are interested in the combustability and explosive properties of gaseous phoron, as well as the specific hazards \
-					of working with the substance in that state."
+	title = "Ксенопалеонтолог"
+	title_blurb = "Ксенопалеонтолог посещает места раскопок в поисках артефактов инопланетного происхождения. Эти места часто встречаются в вакууме и других необитаемых \
+					местностях, и в связи с этим ксенопалеонтолог должен быть способен выдержать суровые условия среды."
 
 /datum/alt_title/circuit_designer
 	title = "Программист микросхем"
 	title_blurb = "Программист микросхем является учёным, который специализируется на разработке интегральных микросхем. Он знаком с принципами работы этих схем и их программирования. \
 				   Используя их возможности, программист создаёт всевозможные полезные гаджеты."
 
-/datum/alt_title/circuit_programmer
-	title = "Circuit Programmer"
-	title_blurb = "A Circuit Programmer is a Scientist whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
-				   They work to create various useful devices using the capabilities of integrated circuitry."
-
-
 /datum/job/xenobiologist
 	spawn_positions = 3
 	pto_type = PTO_SCIENCE
-	alt_titles = list("Xenozoologist" = /datum/alt_title/xenozoologist, "Xenoanthropologist" = /datum/alt_title/xenoanthropologist)
+	alt_titles = list("Ксенозоолог" = /datum/alt_title/xenozoologist, "Ксеноантрополог" = /datum/alt_title/xenoanthropologist)
 
 /datum/alt_title/xenozoologist
-	title = "Xenozoologist"
+	title = "Ксенозоолог"
 
 /datum/alt_title/xenoanthropologist
-	title = "Xenoanthropologist"
-	title_blurb = "Xenoanthropologist still heavily focuses their study on alien lifeforms, but their specialty leans more towards fellow sapient beings than simple animals."
-
-
-/datum/job/roboticist
-	total_positions = 3
-	pto_type = PTO_SCIENCE
-	alt_titles = list("Assembly Technician" = /datum/alt_title/assembly_tech, "Biomechanical Engineer" = /datum/alt_title/biomech, "Mechatronic Engineer" = /datum/alt_title/mech_tech)
-
-/datum/alt_title/assembly_tech
-	title = "Assembly Technician"
+	title = "Ксеноантрополог"
+	title_blurb = "Ксеноантрополог также изучает инопланетные формы жизни, однако специализируется именно на разумных."
 
 //////////////////////////////////
 //			Xenobotanist
@@ -106,7 +84,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/science/xenobiologist
 	job_description = "Ксеноботаник выращивает и ухаживает за ассортиментом необычайных и порой даже опасных растений. \
 					Если результаты таких экспериментов безопасны и даже полезны для персонала, ксеноботаник может поделиться своей находкой с остальным персоналом."
-	alt_titles = list("Xenoflorist" = /datum/alt_title/xenoflorist)
+	alt_titles = list("Ксенофлорист" = /datum/alt_title/xenoflorist)
 
 /datum/alt_title/xenoflorist
-	title = "Xenoflorist"
+	title = "Ксенофлорист"

@@ -12,38 +12,38 @@
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
 			            access_heads, access_construction,
 			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload)
-	alt_titles = list("Head Engineer" = /datum/alt_title/head_engineer, "Foreman" = /datum/alt_title/foreman, "Maintenance Manager" = /datum/alt_title/maintenance_manager)
+	alt_titles = list("Старший инженер" = /datum/alt_title/head_engineer, "Главный конструктор" = /datum/alt_title/foreman, "Главный техобслуживающий" = /datum/alt_title/maintenance_manager)
 
 /datum/alt_title/head_engineer
-	title = "Head Engineer"
+	title = "Старший инженер"
 
 /datum/alt_title/foreman
-	title = "Foreman"
+	title = "Главный конструктор"
 
 /datum/alt_title/maintenance_manager
-	title = "Maintenance Manager"
+	title = "Главный техобслуживающий"
 
 
 /datum/job/engineer
 	pto_type = PTO_ENGINEERING
-	alt_titles = list("Maintenance Technician" = /datum/alt_title/maint_tech, "Engine Technician" = /datum/alt_title/engine_tech,
-						"Electrician" = /datum/alt_title/electrician, "Construction Engineer" = /datum/alt_title/construction_engi)
+	alt_titles = list("Ремонтник" = /datum/alt_title/maint_tech, "Инженер двигателей" = /datum/alt_title/engine_tech,
+						"Электрик" = /datum/alt_title/electrician, "Инженер-конструктор" = /datum/alt_title/construction_engi)
 
 /datum/alt_title/construction_engi
-	title = "Construction Engineer"
-	title_blurb = "A Construction Engineer fulfills similar duties to other engineers, but usually occupies spare time with construction of extra facilities in dedicated areas or \
-					as additions to station layout."
+	title = "Инженер-конструктор"
+	title_blurb = "Инженер-конструктор имеет схожие обязанности с остальными инженерами, но обычно проводит свободное время за постройкой дополнительных комнат \
+					и ремонтом заброшенных мест."
 
 
 
 /datum/job/atmos
 	spawn_positions = 3
 	pto_type = PTO_ENGINEERING
-	alt_titles = list("Atmospherics Maintainer" = /datum/alt_title/atmos_maint, "Disposals Technician" = /datum/alt_title/disposals_tech)
+	alt_titles = list("Техобслуживающий атмосферы" = /datum/alt_title/atmos_maint, "Заведующий по выбросам" = /datum/alt_title/disposals_tech)
 
 /datum/alt_title/atmos_maint
-	title = "Atmospherics Maintainer"
+	title = "Техобслуживающий атмосферы"
 
 /datum/alt_title/disposals_tech
-	title = "Disposals Technician"
-	title_blurb = "A Disposals Technician is an Atmospheric Technician still and can fulfill all the same duties, although specializes more in disposals delivery system's operations and configurations."
+	title = "Заведующий по выбросам"
+	title_blurb = "Заведующий по выбросам занимается тем же, что и атмосферный техник, однако специализируется на работе системы выбросов."

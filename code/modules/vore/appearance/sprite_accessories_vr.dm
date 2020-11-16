@@ -445,7 +445,7 @@
 	extra_overlay = "tesharilowinner"
 
 /datum/sprite_accessory/ears/tesh_pattern_ear_male
-	name = "Teshari male ear pattern (colorable)"
+	name = "Тешари: Метки на уши, мужские"
 	desc = ""
 	icon_state = "teshari"
 	do_colouration = 1
@@ -453,7 +453,7 @@
 	extra_overlay = "teshari_male_pattern"
 
 /datum/sprite_accessory/ears/tesh_pattern_ear_female
-	name = "Teshari female ear pattern (colorable)"
+	name = "Тешари: Метки на уши, женские"
 	desc = ""
 	icon_state = "teshari"
 	do_colouration = 1
@@ -740,7 +740,7 @@
 	ckeys_allowed = list("scree")
 
 /datum/sprite_accessory/wing/liquidfirefly_gazer //I g-guess this could be considered wings?
-	name = "gazer eyestalks"
+	name = "Глаза смотрящего"
 	desc = ""
 	icon_state = "liquidfirefly-eyestalks"
 	//ckeys_allowed = list("liquidfirefly","seiga") //At request.
@@ -1282,7 +1282,7 @@
 	extra_overlay = "deertail_mark"
 
 /datum/sprite_accessory/tail/tesh_feathered
-	name = "Teshari tail"
+	name = "Тешари, пернатый"
 	desc = ""
 	icon_state = "teshtail_s"
 	do_colouration = 1
@@ -1298,7 +1298,7 @@
 	extra_overlay = "teshari_fluffytail_mark"
 
 /datum/sprite_accessory/tail/tesh_pattern_male
-	name = "Teshari male tail pattern"
+	name = "Тешари: Метки на хвост, мужские"
 	desc = ""
 	icon_state = "teshtail_s"
 	do_colouration = 1
@@ -1306,7 +1306,7 @@
 	extra_overlay = "teshpattern_male_tail"
 
 /datum/sprite_accessory/tail/tesh_pattern_male_alt
-	name = "Teshari male tail alt. pattern"
+	name = "Тешари: Метки на хвост, мужские, альт"
 	desc = ""
 	icon_state = "teshtail_s"
 	do_colouration = 1
@@ -1314,7 +1314,7 @@
 	extra_overlay = "teshpattern_male_alt"
 
 /datum/sprite_accessory/tail/tesh_pattern_fem
-	name = "Teshari female tail pattern"
+	name = "Тешари: Метки на хвост, женские"
 	desc = ""
 	icon_state = "teshtail_s"
 	do_colouration = 1
@@ -1322,7 +1322,7 @@
 	extra_overlay = "teshpattern_fem_tail"
 
 /datum/sprite_accessory/tail/tesh_pattern_fem_alt
-	name = "Teshari male tail alt. pattern"
+	name = "Тешари: Метки на хвост, женские, альт"
 	desc = ""
 	icon_state = "teshtail_s"
 	do_colouration = 1
@@ -1796,14 +1796,14 @@
 	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 /datum/sprite_accessory/tail/wartacosushi_tail //brightened +20RGB from matching roboparts
-	name = "Ward-Takahashi Tail"
+	name = "Ward-Takahashi"
 	desc = ""
 	icon_state = "wardtakahashi_vulp"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/wartacosushi_tail_dc
-	name = "Ward-Takahashi Tail, (два цвета)"
+	name = "Ward-Takahashi, (два цвета)"
 	desc = ""
 	icon_state = "wardtakahashi_vulp_dc"
 	do_colouration = 1
