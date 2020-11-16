@@ -143,7 +143,7 @@
 /datum/gear/uniform/job_skirt/cargo
 	display_name = "Карго: Юбка карго"
 	path = /obj/item/clothing/under/rank/cargotech/skirt
-	allowed_roles = list("Квартирмейстер","Грузчик")
+	allowed_roles = list("Квартирмейстер","Грузовой техник")
 
 /datum/gear/uniform/job_skirt/qm
 	display_name = "Карго: Юбка Квартирмейстера"
@@ -198,12 +198,12 @@
 /datum/gear/uniform/jeans_cargo
 	display_name = "Карго: Джинсы"
 	path = /obj/item/clothing/under/rank/cargotech/jeans
-	allowed_roles = list("Квартирмейстер","Грузчик")
+	allowed_roles = list("Квартирмейстер","Грузовой техник")
 
 /datum/gear/uniform/jeans_cargof
 	display_name = "Карго: Джинсы, женские"
 	path = /obj/item/clothing/under/rank/cargotech/jeans/female
-	allowed_roles = list("Квартирмейстер","Грузчик")
+	allowed_roles = list("Квартирмейстер","Грузовой техник")
 
 /datum/gear/uniform/suit/lawyer
 	display_name = "Костюм, официальный (выбор)"

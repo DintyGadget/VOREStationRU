@@ -2,13 +2,13 @@
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
 	dept_time_required = 80 //Pending something more complicated
-	alt_titles = list("Overseer"= /datum/alt_title/overseer, "Facility Director" = /datum/alt_title/facility_director, "Chief Supervisor" = /datum/alt_title/chief_supervisor)
+	alt_titles = list("Смотритель"= /datum/alt_title/overseer, "Руководитель станции" = /datum/alt_title/facility_director, "Главный супервайзер" = /datum/alt_title/chief_supervisor)
 
 /datum/alt_title/facility_director
-	title = "Facility Director"
+	title = "Руководитель станции"
 
 /datum/alt_title/chief_supervisor
-	title = "Chief Supervisor"
+	title = "Главный супервайзер"
 
 
 /datum/job/hop
@@ -18,8 +18,8 @@
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
 	dept_time_required = 60
 
-	alt_titles = list("Менеджер экипажа" = /datum/alt_title/cro, "Deputy Manager" = /datum/alt_title/deputy_manager, "Staff Manager" = /datum/alt_title/staff_manager,
-						"Директор по кадрам" = /datum/alt_title/facility_steward)
+	alt_titles = list("Менеджер экипажа" = /datum/alt_title/cro, "Директор по кадрам" = /datum/alt_title/deputy_manager, "Кадровый менеджер" = /datum/alt_title/staff_manager,
+						"Замдиректор Колонии" = /datum/alt_title/facility_steward)
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,
 			            access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,
@@ -38,26 +38,26 @@
 	title = "Директор по кадрам"
 
 /datum/alt_title/staff_manager
-	title = "Staff Manager"
+	title = "Кадровый менеджер"
 
 /datum/alt_title/facility_steward
-	title = "Facility Steward"
+	title = "Замдиректор колонии"
 
 
 /datum/job/secretary
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Command Liaison" = /datum/alt_title/command_liaison, "Bridge Secretary" = /datum/alt_title/bridge_secretary,
-						"Command Assistant" = /datum/alt_title/command_assistant, "Command Intern" = /datum/alt_title/command_intern)
+	alt_titles = list("Связист командования" = /datum/alt_title/command_liaison, "Секретарь мостика" = /datum/alt_title/bridge_secretary,
+						"Ассистент командования" = /datum/alt_title/command_assistant, "Стажёр командования" = /datum/alt_title/command_intern)
 
 /datum/alt_title/command_liaison
-	title = "Command Liaison"
+	title = "Связист командования"
 
 /datum/alt_title/bridge_secretary
-	title = "Bridge Secretary"
+	title = "Секретарь мостика"
 
 /datum/alt_title/command_assistant
-	title = "Command Assistant"
+	title = "Ассистент командования"
 
 /datum/alt_title/command_intern
-	title = "Command Intern"
+	title = "Стажёр командования"

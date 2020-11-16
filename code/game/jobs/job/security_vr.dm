@@ -11,47 +11,43 @@
 						access_forensics_lockers, access_morgue, access_maint_tunnels, access_all_personal_lockers,
 						access_construction,
 						access_heads, access_hos, access_RC_announce, access_keycard_auth, access_external_airlocks)
-	alt_titles = list("Security Commander" = /datum/alt_title/sec_commander, "Chief of Security" = /datum/alt_title/sec_chief, "Security Manager" = /datum/alt_title/security_manager)
+	alt_titles = list("Главный командир" = /datum/alt_title/sec_commander, "Директор обороны" = /datum/alt_title/sec_chief, "Директор безопасности" = /datum/alt_title/security_manager)
 
 /datum/alt_title/security_manager
-	title = "Security Manager"
+	title = "Директор безопасности"
 
 
 /datum/job/warden
 	pto_type = PTO_SECURITY
 	dept_time_required = 20
-	alt_titles = list("Brig Sentry" = /datum/alt_title/brig_sentry, "Armory Superintendent" = /datum/alt_title/armory_superintendent)
+	alt_titles = list("Сторож брига" = /datum/alt_title/brig_sentry, "Заведующий арсеналом" = /datum/alt_title/armory_superintendent)
 
 /datum/alt_title/brig_sentry
-	title = "Brig Sentry"
+	title = "Сторож брига"
 
 /datum/alt_title/armory_superintendent
-	title = "Armory Superintendent"
+	title = "Заведующий арсеналом"
 
 
 /datum/job/detective
 	pto_type = PTO_SECURITY
-	alt_titles = list("Investigator" = /datum/alt_title/investigator, "Security Inspector" = /datum/alt_title/security_inspector, "Forensic Technician" = /datum/alt_title/forensic_tech)
+	alt_titles = list("Сыщик" = /datum/alt_title/investigator, "Инспектор службы безопасности" = /datum/alt_title/security_inspector, "Криминалист" = /datum/alt_title/forensic_tech)
 
 /datum/alt_title/investigator
-	title = "Investigator"
+	title = "Сыщик"
 
 /datum/alt_title/security_inspector
-	title = "Security Inspector"
+	title = "Инспектор службы безопасности"
 
 
 /datum/job/officer
 	total_positions = 5
 	spawn_positions = 5
 	pto_type = PTO_SECURITY
-	alt_titles = list("Patrol Officer" = /datum/alt_title/patrol_officer, "Security Guard" = /datum/alt_title/security_guard,
-						"Security Deputy" = /datum/alt_title/security_guard, "Junior Officer" = /datum/alt_title/junior_officer)
+	alt_titles = list("Патрульный офицер" = /datum/alt_title/patrol_officer, "Охранник" = /datum/alt_title/security_guard, "Младший офицер" = /datum/alt_title/junior_officer)
 
 /datum/alt_title/patrol_officer
-	title = "Patrol Officer"
+	title = "Патрульный офицер"
 
 /datum/alt_title/security_guard
-	title = "Security Guard"
-
-/datum/alt_title/security_deputy
-	title = "Security Deputy"
+	title = "Охранник"

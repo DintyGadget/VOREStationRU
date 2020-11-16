@@ -85,9 +85,9 @@
 /datum/job/assistant		// Visitor
 	title = USELESS_JOB
 	supervisors = "... никем, в прочем. Вы тут не работаете."
-	job_description = "A Visitor is just there to visit the place. They have no real authority or responsibility."
+	job_description = "Гость всего лишь посещает это место. У него авторитета или ответственности."
 	timeoff_factor = 0
-	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler)
+	alt_titles = list("Посетитель" = /datum/alt_title/guest, "Путешественник" = /datum/alt_title/traveler)
 
 /datum/job/assistant/New()
 	..()
@@ -99,7 +99,7 @@
 	return list()
 
 /datum/alt_title/guest
-	title = "Guest"
+	title = "Посетитель"
 
 /datum/alt_title/traveler
-	title = "Traveler"
+	title = "Путешественник"

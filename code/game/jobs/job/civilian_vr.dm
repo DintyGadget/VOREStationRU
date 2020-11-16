@@ -1,96 +1,90 @@
 /datum/job/bartender
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Barkeeper" = /datum/alt_title/barkeeper, "Barmaid" = /datum/alt_title/barmaid, "Barista" = /datum/alt_title/barista, "Mixologist" = /datum/alt_title/mixologist)
-
-/datum/alt_title/barkeeper
-	title = "Barkeeper"
-
-/datum/alt_title/barmaid
-	title = "Barmaid"
+	alt_titles = list("Бариста" = /datum/alt_title/barista, "Миксолог" = /datum/alt_title/mixologist)
 
 /datum/alt_title/mixologist
-	title = "Mixologist"
+	title = "Миксолог"
 
 
 /datum/job/chef
 	total_positions = 2 //IT TAKES A LOT TO MAKE A STEW
 	spawn_positions = 2 //A PINCH OF SALT AND LAUGHTER, TOO
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Sous-chef" = /datum/alt_title/souschef,"Cook" = /datum/alt_title/cook, "Kitchen Worker" = /datum/alt_title/kitchen_worker)
+	alt_titles = list("Су-шеф" = /datum/alt_title/souschef,"Повар" = /datum/alt_title/cook, "Кухонный работник" = /datum/alt_title/kitchen_worker)
 
 /datum/alt_title/souschef
-	title = "Sous-chef"
+	title = "Су-шеф"
 
 /datum/alt_title/kitchen_worker
-	title = "Kitchen Worker"
-	title_blurb = "A Kitchen Worker has the same duties, though they may be less experienced."
+	title = "Кухонный работник"
+	title_blurb = "Кухонный работник выполняет те же обязанности, что и повар, однако менее опытен."
 
 
 /datum/job/hydro
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Hydroponicist" = /datum/alt_title/hydroponicist, "Cultivator" = /datum/alt_title/cultivator, "Farmer" = /datum/alt_title/farmer,
-						"Gardener" = /datum/alt_title/gardener, "Florist" = /datum/alt_title/florsit)
+	alt_titles = list("Гидропонист" = /datum/alt_title/hydroponicist, "Культиватор" = /datum/alt_title/cultivator, "Фермер" = /datum/alt_title/farmer,
+						"Gardener" = /datum/alt_title/gardener, "Флорист" = /datum/alt_title/florsit)
 
 /datum/alt_title/hydroponicist
-	title = "Hydroponicist"
+	title = "Гидропонист"
 
 /datum/alt_title/cultivator
-	title = "Cultivator"
+	title = "Культиватор"
 
 /datum/alt_title/farmer
-	title = "Farmer"
+	title = "Фермер"
 
 /datum/alt_title/florsit
-	title = "Florist"
-	title_blurb = "A Florist may be less professional than their counterparts, and are more likely to tend to the public gardens if they aren't needed elsewhere."
+	title = "Флорист"
+	title_blurb = "Флорист менее опытен, и, вероятнее всего, присматривает за общим ботаническим садом, если от него ничего не требуется."
 
 
 /datum/job/qm
 	pto_type = PTO_CARGO
 	dept_time_required = 20
-	alt_titles = list("Supply Chief" = /datum/alt_title/supply_chief, "Logistics Manager" = /datum/alt_title/logistics_manager)
+	alt_titles = list("Начальник снабжения" = /datum/alt_title/supply_chief, "Менеджер логистики" = /datum/alt_title/logistics_manager)
 
 /datum/alt_title/logistics_manager
-	title = "Logistics Manager"
+	title = "Менеджер логистики"
 
 
 /datum/job/cargo_tech
 	total_positions = 3
 	spawn_positions = 3
 	pto_type = PTO_CARGO
-	alt_titles = list("Cargo Loader" = /datum/alt_title/cargo_loader, "Cargo Handler" = /datum/alt_title/cargo_handler, "Supply Courier" = /datum/alt_title/supply_courier,
-					"Disposals Sorter" = /datum/alt_title/disposal_sorter)
+	alt_titles = list("Погрузчик" = /datum/alt_title/cargo_loader, "Поставщик груза" = /datum/alt_title/cargo_handler, "Курьер" = /datum/alt_title/supply_courier,
+					"Сортировщик" = /datum/alt_title/disposal_sorter)
 
 /datum/alt_title/supply_courier
-	title = "Supply Courier"
-	title_blurb = "A Supply Courier is usually tasked with devlivering packages or cargo directly to whoever requires it."
+	title = "Курьер"
+	title_blurb = "На плечи курьера обычно возлагается обязанность доставлять полученный груз по месту назначения."
 
 /datum/alt_title/cargo_loader
-	title = "Cargo Loader"
-	title_blurb = "A Cargo Loader is usually tasked with more menial labor within Supply department, such as loading and unloading supply shuttle."
+	title = "Погрузчик"
+	title_blurb = "Погрузчик обычно занимается более скучной работой в отделе снабжения - разгрузкой и возвратом ящиков."
 
 /datum/alt_title/cargo_handler
-	title = "Cargo Handler"
-	title_blurb = "A Cargo Loader is usually tasked with more menial labor within Supply department, such as loading and unloading supply shuttle."
+	title = "Поставщик груза"
+	title_blurb = "Поставщик груза обычно занимается более скучной работой в отделе снабжения - разгрузкой и возвратом ящиков."
 
 /datum/alt_title/disposal_sorter
-	title = "Disposals Sorter"
-	title_blurb = "A Disposals Sorter is usually tasked with operating disposals delivery system, sorting the trash and tagging parcels for delivery."
+	title = "Сортировщик"
+	title_blurb = "Сортировщик обычно занимается сортировкой того, что приходит по трубам, а также доставкой посылок в нужные отделы."
 
 
 /datum/job/mining
 	total_positions = 4
 	spawn_positions = 4
 	pto_type = PTO_CARGO
-	alt_titles = list("Deep Space Miner" = /datum/alt_title/deep_space_miner, "Drill Technician" = /datum/alt_title/drill_tech, "Prospector" = /datum/alt_title/prospector)
+	alt_titles = list("Шахтёр астероидов" = /datum/alt_title/deep_space_miner, "Бурильщик" = /datum/alt_title/drill_tech, "Старатель" = /datum/alt_title/prospector)
 
 /datum/alt_title/deep_space_miner
-	title = "Deep Space Miner"
-	title_blurb = "A Deep Space Miner specializes primarily in mining operations in zero-g environments, mostly in asteroid and debris fields."
+	title = "Шахтёр астероидов"
+	title_blurb = "Шахтёр астероидов специализируется на добыче руд в вакууме, а именно на астероидах."
 
 /datum/alt_title/prospector
-	title = "Prospector"
+	title = "Старатель"
 
 
 /datum/job/janitor //Lots of janitor substations on station.
@@ -98,7 +92,7 @@
 	spawn_positions = 3
 	pto_type = PTO_CIVILIAN
 	alt_titles = list("Дворник" = /datum/alt_title/custodian, "Сантехник" = /datum/alt_title/sanitation_tech,
-					"Maid" = /datum/alt_title/maid, "Garbage Collector" = /datum/alt_title/garbage_collector)
+					"Горничная" = /datum/alt_title/maid, "Мусорщик" = /datum/alt_title/garbage_collector)
 
 /datum/alt_title/sanitation_tech
 	title = "Сантехник"
@@ -107,72 +101,72 @@
 	title = "Горничная"
 
 /datum/alt_title/garbage_collector
-	title = "Garbage Collector"
-	title_blurb = "A Garbage Collector keeps the station clean, though focuses moreso on collecting larger trash, with wet cleaning being secondary task."
+	title = "Мусорщик"
+	title_blurb = "Мусорщик специализируется на более крупном мусоре. Влажная чистка для него на втором плане."
 
 
 /datum/job/librarian
 	total_positions = 2
 	spawn_positions = 2
-	alt_titles = list("Журналист" = /datum/alt_title/journalist, "Reporter" =  /datum/alt_title/reporter, "Писатель" = /datum/alt_title/writer,
-					"Историк" = /datum/alt_title/historian, "Archivist" = /datum/alt_title/archivist, "Профессор" = /datum/alt_title/professor,
-					"Academic" = /datum/alt_title/academic, "Philosopher" = /datum/alt_title/philosopher)
+	alt_titles = list("Журналист" = /datum/alt_title/journalist, "Репортёр" =  /datum/alt_title/reporter, "Писатель" = /datum/alt_title/writer,
+					"Историк" = /datum/alt_title/historian, "Архивист" = /datum/alt_title/archivist, "Профессор" = /datum/alt_title/professor,
+					"Преподаватель" = /datum/alt_title/academic, "Философ" = /datum/alt_title/philosopher)
 	pto_type = PTO_CIVILIAN
 
 /datum/alt_title/reporter
-	title = "Reporter"
-	title_blurb = "The Reporter uses the Library as a base of operations, from which they can report the news and goings-on on the station with their camera."
+	title = "Репортёр"
+	title_blurb = "Репортёр использует библиотеку как оперативную базу, откуда он может сообщать новости и происходящее на станции с помощью своей камеры."
 
 /datum/alt_title/historian
 	title = "Историк"
-	title_blurb = "The Historian uses the Library as a base of operation to record any important events occuring on station."
+	title_blurb = "Историк использует библиотеку в качестве своей базы для записи важных событий, происходящих на станции."
 
 /datum/alt_title/archivist
-	title = "Archivist"
-	title_blurb = "The Archivist uses the Library as a base of operation to record any important events occuring on station."
+	title = "Архивист"
+	title_blurb = "Архивист использует библиотеку в качестве своей базы для записи важных событий, происходящих на станции."
 
 /datum/alt_title/professor
 	title = "Профессор"
-	title_blurb = "The Professor uses the Library as a base of operations to share their vast knowledge with the crew."
+	title_blurb = "Профессор использует библиотеку как персональную аудиторию для просвещения экипажа."
 
 /datum/alt_title/academic
-	title = "Academic"
-	title_blurb = "The Academic uses the Library as a base of operations to share their vast knowledge with the crew."
+	title = "Преподаватель"
+	title_blurb = "Преподаватель использует библиотеку как персональную аудиторию для просвещения экипажа."
 
 /datum/alt_title/philosopher
-	title = "Philosopher"
-	title_blurb = "The Philosopher uses the Library as a base of operation to ruminate on nature of life and other great questions, and share their opinions with the crew."
+	title = "Философ"
+	title_blurb = "Философ использует библиотеку как форум для рассуждений о величайших вопросах жизни и их обсуждения с экипажем."
 
 
 /datum/job/lawyer
 	disallow_jobhop = TRUE
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Internal Affairs Liaison" = /datum/alt_title/ia_liaison, "Internal Affairs Delegate" = /datum/alt_title/ia_delegate,
-						"Internal Affairs Investigator" = /datum/alt_title/ia_investigator)
+	alt_titles = list("Связист внутренних дел" = /datum/alt_title/ia_liaison, "Делегат внутренних дел" = /datum/alt_title/ia_delegate,
+						"Следователь внутренних дел" = /datum/alt_title/ia_investigator)
 
 /datum/alt_title/ia_liaison
-	title = "Internal Affairs Liaison"
+	title = "Связист внутренних дел"
 
 /datum/alt_title/ia_delegate
-	title = "Internal Affairs Delegate"
+	title = "Делегат внутренних дел"
 
 /datum/alt_title/ia_investigator
-	title = "Internal Affairs Investigator"
+	title = "Следователь внутренних дел"
 
 
 /datum/job/chaplain
 	pto_type = PTO_CIVILIAN
-	alt_titles = list("Missionary" = /datum/alt_title/missionary, "Preacher" = /datum/alt_title/preacher, "Counselor" = /datum/alt_title/counselor, "Guru" = /datum/alt_title/guru)
+	alt_titles = list("Миссионер" = /datum/alt_title/missionary, "Проповедник" = /datum/alt_title/preacher, "Гуру" = /datum/alt_title/guru)
 
 /datum/alt_title/guru
-	title = "Guru"
-	title_blurb = "The Guru primarily tries to offer spiritual guidance to those who come seeking it."
+	title = "Гуру"
+	title_blurb = "Гуру в общих чертах предоставляет духовный совет тем, кто в нём нуждается."
 
 /datum/alt_title/missionary
-	title = "Missionary"
+	title = "Миссионер"
 
 /datum/alt_title/preacher
-	title = "Preacher"
+	title = "Проповедник"
 
 
 
@@ -197,13 +191,13 @@
 	outfit_type = /decl/hierarchy/outfit/job/assistant
 	job_description = "Аниматор отвечает за развлечение персонала! Ставьте спектакли, играйте музыку, пойте песни, рассказывайте истории или читайте свои любимые фанфики."
 	alt_titles = list("Артист" = /datum/alt_title/performer, "Музыкант" = /datum/alt_title/musician, "Рабочий сцены" = /datum/alt_title/stagehand,
-						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
-						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian)
+						"Актёр" = /datum/alt_title/actor, "Танцор" = /datum/alt_title/dancer, "Певец" = /datum/alt_title/singer,
+						"Фокусник" = /datum/alt_title/magician, "Комедиант" = /datum/alt_title/comedian, "Трагик" = /datum/alt_title/tragedian)
 
 // Entertainer Alt Titles
 /datum/alt_title/actor
-	title = "Actor"
-	title_blurb = "An Actor is someone who acts out a role! Whatever sort of character it is, get into it and impress people with power of comedy and tragedy!"
+	title = "Актёр"
+	title_blurb = "Актёр отыгрывает роли! Каким бы ни был его персонаж, он должен полностью в него влиться и впечатлять людей силой трагедии и комедии!"
 
 /datum/alt_title/performer
 	title = "Артист"
@@ -218,21 +212,21 @@
 	title_blurb = "Рабочий сцены обычно выполняет все, что не делают остальные артисты: управляет светом, ставнями, окнами или рассказывает что-либо через микрофон на сцену!"
 
 /datum/alt_title/dancer
-	title = "Dancer"
-	title_blurb = "A Dancer is someone who impresses people through power of their own body! From waltz to breakdance, as long as crowd as cheering!"
+	title = "Танцор"
+	title_blurb = "Танцор впечатляет людей своим телом! От вальса до брейкданса, лишь бы публика была довольна."
 
 /datum/alt_title/singer
-	title = "Singer"
-	title_blurb = "A Singer is someone with gift of melodious voice! Impress people with your vocal range!"
+	title = "Певец"
+	title_blurb = "Певец одарён мелодичным голосом! Впечатлите людей своим вокалом!"
 
 /datum/alt_title/magician
-	title = "Magician"
-	title_blurb = "A Magician is someone who awes those around them with impossible! Show off your repertoire of magic tricks, while keeping the secret hidden!"
+	title = "Фокусник"
+	title_blurb = "Фокусник поражает своих зрителей невозможными трюками. Демонстрируйте свой репертуар, оставляя секрет фокусов за кулисами!"
 
 /datum/alt_title/comedian
-	title = "Comedian"
-	title_blurb = "A Comedian will focus on making people laugh with the power of wit! Telling jokes, stand-up comedy, you are here to make others smile!"
+	title = "Комедиант"
+	title_blurb = "Комедиант поднимает людям настроение при помощи юмора и острого ума! Анекдоты, стендапы, лишь бы люди улыбались!"
 
 /datum/alt_title/tragedian
-	title = "Tragedian"
-	title_blurb = "A Tragedian will focus on making people think about life and world around them! Life is a tragedy, and who's better to convey its emotions than you?"
+	title = "Трагик"
+	title_blurb = "Трагик специализируется на донесении до людей мыслей о жизни и о мире вокруг них самих. Жизнь - трагедия, и кто же лучше Вас передаст её эмоции?"
