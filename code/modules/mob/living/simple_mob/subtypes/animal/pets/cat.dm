@@ -62,7 +62,7 @@
 			return FALSE // Cats and mice can never get along.
 
 /mob/living/simple_mob/animal/passive/cat/verb/become_friends()
-	set name = "Become Friends"
+	set name = "Подружиться"
 	set category = "IC"
 	set src in view(1)
 
@@ -72,24 +72,24 @@
 
 	if(friend)
 		if(friend == usr)
-			to_chat(L, span("notice", "\The [src] is already your friend! Meow!"))
+			to_chat(L, span("notice", "[src] уже Ваш друг! Мяу!"))
 			return
 		else
-			to_chat(L, span("warning", "\The [src] ignores you."))
+			to_chat(L, span("warning", "[src] игнорирует Вас."))
 			return
 
 	//VOREStation Edit Start - Adds friend_name var checks
 	if(!friend_name || L.real_name == friend_name)
 		friend = L
 		face_atom(L)
-		to_chat(L, span("notice", "\The [src] is now your friend! Meow."))
-		visible_emote(pick("nuzzles [friend].", "brushes against [friend].", "rubs against [friend].", "purrs."))
+		to_chat(L, span("notice", "[src] теперь Ваш друг! Мяу!"))
+		visible_emote(pick("обтирается о [friend].", "обнюхивает [friend].", "трётся о [friend].", "мурчит."))
 
 		if(has_AI())
 			var/datum/ai_holder/AI = ai_holder
 			AI.set_follow(friend)
 	else
-		to_chat(L, span("notice", "[src] ignores you."))
+		to_chat(L, span("notice", "[src] игнорирует Вас."))
 	//VOREStation Edit End
 
 

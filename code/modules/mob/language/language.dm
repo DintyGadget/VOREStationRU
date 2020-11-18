@@ -260,7 +260,7 @@
 	set category = "IC"
 	set src = usr
 
-	var/datum/browser/popup = new(src, "checklanguage", "Известные Язык", 420, 470)
+	var/datum/browser/popup = new(src, "checklanguage", "Известные Языки", 420, 470)
 	popup.set_content(check_lang_data())
 	popup.open()
 

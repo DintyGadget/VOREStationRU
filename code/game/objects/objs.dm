@@ -21,6 +21,16 @@
 	var/show_examine = TRUE	// Does this pop up on a mob when the mob is examined?
 	var/register_as_dangerous_object = FALSE // Should this tell its turf that it is dangerous automatically?
 
+// XenosStation Edit
+	var/rugender = "unset"
+	var/ncase = "ncase"
+	var/gcase = "gcase"
+	var/dcase = "dcase"
+	var/acase = "acase"
+	var/icase = "icase"
+	var/pcase = "pcase"
+// XenosStation Edit
+
 /obj/Initialize()
 	if(register_as_dangerous_object)
 		register_dangerous_to_step()

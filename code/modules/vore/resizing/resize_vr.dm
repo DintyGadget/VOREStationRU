@@ -106,16 +106,16 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 
 
 /mob/living/proc/set_size()
-	set name = "Adjust Mass"
-	set category = "Abilities" //Seeing as prometheans have an IC reason to be changing mass.
+	set name = "Отрегулировать Массу"
+	set category = "Способности" //Seeing as prometheans have an IC reason to be changing mass.
 
-	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (DO NOT ABUSE)"
-	var/new_size = input(nagmessage, "Pick a Size") as num|null
+	var/nagmessage = "Отрегулировать Вашу массу в пределах 25-200% (НЕ АБУЗИТЬ)."
+	var/new_size = input(nagmessage, "Выберите размер") as num|null
 	if(new_size && ISINRANGE(new_size, 25, 200))
 		resize(new_size/100)
 		// I'm not entirely convinced that `src ? ADMIN_JMP(src) : "null"` here does anything
 		// but just in case it does, I'm leaving the null-src checking
-		message_admins("[key_name(src)] used the resize command in-game to be [new_size]% size. [src ? ADMIN_JMP(src) : "null"]")
+		message_admins("[key_name(src)] использовал команду изменения размера до [new_size]%. [src ? ADMIN_JMP(src) : "null"]")
 
 /*
 //Add the set_size() proc to usable verbs. By commenting this out, we can leave the proc and hand it to species that need it.
@@ -139,7 +139,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 		if(!SA.has_hands)
 			return 0
 	if(buckled)
-		to_chat(usr,"<span class='notice'>You have to unbuckle \the [M] before you pick them up.</span>")
+		to_chat(usr,"<span class='notice'>Вам нужно сперва отстегнуть [M] прежде чем подбирать.</span>")
 		return 0
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL)
 		holder_type = /obj/item/weapon/holder/micro
@@ -173,8 +173,8 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 
 		//Smaller person being stepped onto
 		if(get_effective_size() > tmob.get_effective_size() && ishuman(src))
-			src_message = "You carefully step over [tmob]."
-			tmob_message = "[src] steps over you carefully!"
+			src_message = "Вы аккуратно обходите [tmob]."
+			tmob_message = "[src] аккуратно обходит Вас!"
 			var/mob/living/carbon/human/H = src
 			if(H.flying)
 				return TRUE //Silently pass without a message.
@@ -185,8 +185,8 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 
 		//Smaller person stepping under larger person
 		else if(get_effective_size() < tmob.get_effective_size() && ishuman(tmob))
-			src_message = "You run between [tmob]'s legs."
-			tmob_message = "[src] runs between your legs."
+			src_message = "Вы пробегаете между ног [tmob]"
+			tmob_message = "[src] пробегает между Ваших ног."
 			var/mob/living/carbon/human/H = tmob
 			if(isTaurTail(H.tail_style))
 				var/datum/sprite_accessory/tail/taur/tail = H.tail_style
@@ -244,8 +244,8 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 		return FALSE
 
 	if(tmob.a_intent != I_HELP && prob(35))
-		to_chat(pred, "<span class='danger'>[prey] dodges out from under your foot!</span>")
-		to_chat(prey, "<span class='danger'>You narrowly avoid [pred]'s foot!</span>")
+		to_chat(pred, "<span class='danger'>[prey] уворачивается от прижатия ногой!</span>")
+		to_chat(prey, "<span class='danger'>Вы еле как увернулись от ноги [pred]!</span>")
 		return FALSE
 
 	now_pushing = 0
@@ -275,33 +275,33 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 	if(a_intent == I_GRAB)
 		// You can only grab prey if you have no shoes on.
 		if(pred.shoes)
-			message_pred = "You step down onto [prey], squishing them and forcing them down to the ground!"
-			message_prey = "[pred] steps down and squishes you with their foot, forcing you down to the ground!"
+			message_pred = "Вы наступаете на [prey], придавливая существо и прижимая к полу!"
+			message_prey = "[pred] наступает на Вас, придавливая Вас к полу своей ногой!"
 			if(tail)
 				message_pred = STEP_TEXT_OWNER(tail.msg_owner_grab_fail)
 				message_prey = STEP_TEXT_PREY(tail.msg_prey_grab_fail)
 			add_attack_logs(pred, prey,"Grabbed underfoot ([tail ? "taur" : "nontaur"], shoes)")
 		else
-			message_pred = "You pin [prey] down onto the floor with your foot and curl your toes up around their body, trapping them inbetween them!"
-			message_prey = "[pred] pins you down to the floor with their foot and curls their toes up around your body, trapping you inbetween them!"
+			message_pred = "Вы прижимаете [prey] к полу свой ногой и сгибаете свои пальцы, зажимая существо между ними!"
+			message_prey = "[pred] прижимает Вас к полу своей ногой и сгибает свои пальцы, зажимая Вас между ними!"
 			if(tail)
 				message_pred = STEP_TEXT_OWNER(tail.msg_owner_grab_success)
 				message_prey = STEP_TEXT_PREY(tail.msg_prey_grab_success)
 			equip_to_slot_if_possible(prey.get_scooped(pred), slot_shoes, 0, 1)
-			add_attack_logs(pred, prey, "Grabbed underfoot ([tail ? "taur" : "nontaur"], no shoes)")
+			add_attack_logs(pred, prey, "Схватил под ногу, ([tail ? "тавр" : "нетавр"], без обуви)")
 
 	if(m_intent == "run")
 		switch(a_intent)
 			if(I_DISARM)
-				message_pred = "You quickly push [prey] to the ground with your foot!"
-				message_prey = "[pred] pushes you down to the ground with their foot!"
+				message_pred = "Вы быстро толкаете [prey] на пол своей ногой!"
+				message_prey = "[pred] толкает Вас на пол своей ногой!"
 				if(tail)
 					message_pred = STEP_TEXT_OWNER(tail.msg_owner_disarm_run)
 					message_prey = STEP_TEXT_PREY(tail.msg_prey_disarm_run)
-				add_attack_logs(pred, prey, "Pinned underfoot (run, no halloss)")
+				add_attack_logs(pred, prey, "Зажал под ногу (бег, без урона)")
 			if(I_HURT)
-				message_pred = "You carelessly step down onto [prey], crushing them!"
-				message_prey = "[pred] steps carelessly on your body, crushing you!"
+				message_pred = "Вы неосторожно проходите, растаптывая [prey]!"
+				message_prey = "[pred] неосторожно проходится по Вам, растаптывая Вас!"
 				if(tail)
 					message_pred = STEP_TEXT_OWNER(tail.msg_owner_harm_run)
 					message_prey = STEP_TEXT_PREY(tail.msg_prey_harm_run)
@@ -309,20 +309,20 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 				for(var/obj/item/organ/external/I in prey.organs)
 					I.take_damage(calculated_damage, 0) // 5 damage min, 26.25 damage max, depending on size & RNG. If they're only stepped on once, the damage will (probably not...) heal over time.
 				prey.drip(0.1)
-				add_attack_logs(pred, prey, "Crushed underfoot (run, about [calculated_damage] damage)")
+				add_attack_logs(pred, prey, "Раздавил ногой (бег, примерно [calculated_damage] урона)")
 	else
 		switch(a_intent)
 			if(I_DISARM)
-				message_pred = "You firmly push your foot down on [prey], painfully but harmlessly pinning them to the ground!"
-				message_prey = "[pred] firmly pushes their foot down on you, quite painfully but harmlessly pinning you to the ground!"
+				message_pred = "Вы плотно наступаете на [prey] ногой, больно но безвредно придавливая существо к полу!"
+				message_prey = "[pred] плотно наступает на Вас ногой, больно но безвредно прижимая Вас к полу!"
 				if(tail)
 					message_pred = STEP_TEXT_OWNER(tail.msg_owner_disarm_walk)
 					message_prey = STEP_TEXT_PREY(tail.msg_prey_disarm_walk)
-				add_attack_logs(pred, prey, "Pinned underfoot (walk, about [damage] halloss)")
+				add_attack_logs(pred, prey, "Зажал под ногу (ходьба, примерно [damage] ослабления)")
 				tmob.Weaken(2) //Removed halloss because it was being abused
 			if(I_HURT)
-				message_pred = "You methodically place your foot down upon [prey]'s body, slowly applying pressure, crushing them against the floor below!"
-				message_prey = "[pred] methodically places their foot upon your body, slowly applying pressure, crushing you against the floor below!"
+				message_pred = "Вы намеренно наступаете ногой на тело [prey], постепенно вдавливая существо в пол!"
+				message_prey = "[pred] намеренно наступает на Вас ногой, постепенно вдавливая Вас в пол!"
 				if(tail)
 					message_pred = STEP_TEXT_OWNER(tail.msg_owner_harm_walk)
 					message_prey = STEP_TEXT_PREY(tail.msg_prey_harm_walk)
@@ -331,7 +331,7 @@ var/const/RESIZE_A_SMALLTINY = (RESIZE_SMALL + RESIZE_TINY) / 2
 				for(var/obj/item/organ/I in prey.organs)
 					I.take_damage(calculated_damage, 0)
 				prey.drip(3)
-				add_attack_logs(pred, prey, "Crushed underfoot (walk, about [calculated_damage] damage)")
+				add_attack_logs(pred, prey, "Раздавил ногой (ходьба, примерно [calculated_damage] урона)")
 
 	to_chat(pred, "<span class='danger'>[message_pred]</span>")
 	to_chat(prey, "<span class='danger'>[message_prey]</span>")

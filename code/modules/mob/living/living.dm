@@ -54,8 +54,8 @@
 
 //mob verbs are faster than object verbs. See mob/verb/examine.
 /mob/living/verb/pulled(atom/movable/AM as mob|obj in oview(1))
-	set name = "Pull"
-	set category = "Object"
+	set name = "Потянуть"
+	set category = "Объект"
 
 	if(AM.Adjacent(src))
 		src.start_pulling(AM)
@@ -111,12 +111,12 @@ default behaviour is:
 		for(var/mob/living/M in range(tmob, 1))
 			if(tmob.pinned.len ||  ((M.pulling == tmob && ( tmob.restrained() && !( M.restrained() ) && M.stat == 0)) || locate(/obj/item/weapon/grab, tmob.grabbed_by.len)) )
 				if ( !(world.time % 5) )
-					to_chat(src, "<span class='warning'>[tmob] is restrained, you cannot push past</span>")
+					to_chat(src, "<span class='warning'>[tmob] связан, Вы не можете протолкнуться!</span>")
 				now_pushing = 0
 				return
 			if( tmob.pulling == M && ( M.restrained() && !( tmob.restrained() ) && tmob.stat == 0) )
 				if ( !(world.time % 5) )
-					to_chat(src, "<span class='warning'>[tmob] is restraining [M], you cannot push past</span>")
+					to_chat(src, "<span class='warning'>[tmob] связывает [M], Вы не можете протолкнуться!</span>")
 				now_pushing = 0
 				return
 
@@ -886,19 +886,19 @@ default behaviour is:
 
 
 /mob/living/proc/Examine_OOC()
-	set name = "Examine Meta-Info (OOC)"
+	set name = "Осмотреть Метаинформацию (OOC)"
 	set category = "OOC"
 	set src in view()
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
 	if(config.allow_Metadata)
 		if(ooc_notes)
-			to_chat(usr, "[src]'s Metainfo:<br>[ooc_notes]")
+			to_chat(usr, "Метаинформация [src]:<br>[ooc_notes]")
 		else if(client)
-			to_chat(usr, "[src]'s Metainfo:<br>[client.prefs.metadata]")
+			to_chat(usr, "Метаинформация [src]:<br>[client.prefs.metadata]")
 		else
-			to_chat(usr, "[src] does not have any stored infomation!")
+			to_chat(usr, "У [src] нет такой информации!")
 	else
-		to_chat(usr, "OOC Metadata is not supported by this server!")
+		to_chat(usr, "Метаинформация ООС не поддерживается этим сервером!")
 	//VOREStation Edit End - Making it so SSD people have prefs with fallback to original style.
 
 	return
@@ -935,7 +935,7 @@ default behaviour is:
 	var/area/A = get_area(src)
 	if(lying && !buckled && pull_damage() && A.has_gravity() && (prob(getBruteLoss() * 200 / maxHealth)))
 		adjustBruteLoss(2)
-		visible_message("<span class='danger'>\The [src]'s [isSynthetic() ? "state" : "wounds"] worsen terribly from being dragged!</span>")
+		visible_message("<span class='danger'>[isSynthetic() ? "Состояние" : "Ранения"] [src] заметно ухудшаются от того, что тело тащат!")
 
 /mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
 	. = ..()
@@ -1043,7 +1043,7 @@ default behaviour is:
 		resisting++
 		G.handle_resist()
 	if(resisting)
-		visible_message("<span class='danger'>[src] resists!</span>")
+		visible_message("<span class='danger'>[src] сопротивляется!</span>")
 
 /mob/living/proc/resist_fire()
 	return
@@ -1052,11 +1052,11 @@ default behaviour is:
 	return
 
 /mob/living/verb/lay_down()
-	set name = "Отдохнуть"
+	set name = "Лечь"
 	set category = "IC"
 
 	resting = !resting
-	to_chat(src, "<span class='notice'>Вы [resting ? "отдыхаете" : "поднимаетесь"]</span>")
+	to_chat(src, "<span class='notice'>Вы [resting ? "ложитесь на пол" : "поднимаетесь с пола"].</span>")
 	update_canmove()
 
 //called when the mob receives a bright flash
@@ -1070,7 +1070,7 @@ default behaviour is:
 
 /mob/living/proc/cannot_use_vents()
 	if(mob_size > MOB_SMALL)
-		return "Вы не можете пролезть в это отверстие"
+		return "Вы не можете пролезть в это отверстие."
 	return null
 
 /mob/living/proc/has_brain()
@@ -1102,7 +1102,7 @@ default behaviour is:
 					inertia_dir = 1
 				else if(y >= world.maxy -TRANSITIONEDGE)
 					inertia_dir = 2
-				to_chat(src, "<span class='warning'>Something you are carrying is preventing you from leaving.</span>")
+				to_chat(src, "<span class='warning'>Вы имеете при себе что-то, что не позволяет Вам уйти.</span>")
 				return
 
 	..()
@@ -1126,7 +1126,7 @@ default behaviour is:
 	if(!lastpuke)
 		lastpuke = 1
 		if(isSynthetic())
-			to_chat(src, "<span class='danger'>A sudden, dizzying wave of internal feedback rushes over you!</span>")
+			to_chat(src, "<span class='danger'>Неожиданный прилив в Вашей глотке застаёт Вас врасплох!</span>")
 			src.Weaken(5)
 		else
 			if (nutrition <= 100)
@@ -1146,7 +1146,7 @@ default behaviour is:
 				spawn()
 					if(!skip_wait)
 						sleep(150)	//15 seconds until second warning
-						to_chat(src, "<span class='warning'>Вы чувствуете, что вас вот-вот вырвет!</span>")
+						to_chat(src, "<span class='warning'>Вы чувствуете, что Вас вот-вот вырвет!</span>")
 						sleep(100)	//and you have 10 more for mad dash to the bucket
 
 					//Damaged livers cause you to vomit blood.
@@ -1159,7 +1159,7 @@ default behaviour is:
 									blood_vomit = 1
 
 					Stun(5)
-					src.visible_message("<span class='warning'>[src] блюет!</span>","<span class='warning'>Вы блеванули!</span>")
+					src.visible_message("<span class='warning'>[src] вырвало!</span>","<span class='warning'>Вас вырвало!</span>")
 					playsound(src, 'sound/effects/splat.ogg', 50, 1)
 
 					var/turf/simulated/T = get_turf(src)	//TODO: Make add_blood_floor remove blood from human mobs
@@ -1391,7 +1391,7 @@ default behaviour is:
 		return
 
 	//actually throw it!
-	src.visible_message("<span class='warning'>[src] has thrown [item].</span>")
+	src.visible_message("<span class='warning'>[src] бросает [lowerize(item)].</span>")
 
 	if((isspace(src.loc)) || (src.lastarea?.has_gravity == 0))
 		src.inertia_dir = get_dir(target, src)

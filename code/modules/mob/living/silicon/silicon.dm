@@ -1,6 +1,6 @@
 /mob/living/silicon
 	gender = NEUTER
-	voice_name = "synthesized voice"
+	voice_name = "синтезированный голос"
 	var/syndicate = 0
 	var/const/MAIN_CHANNEL = "Main Frequency"
 	var/lawchannel = MAIN_CHANNEL // Default channel on which to state laws
@@ -255,18 +255,18 @@
 	hudmode = sensor_type //This is checked in examine.dm on humans, so they can see medical/security records depending on mode
 
 /mob/living/silicon/verb/pose()
-	set name = "Set Pose"
-	set desc = "Sets a description which will be shown when someone examines you."
+	set name = "Установить Позу"
+	set desc = "Установить описание, отображаемое при осмотре Вашего персонажа."
 	set category = "IC"
 
 	pose =  sanitize(input(usr, "This is [src]. It is...", "Pose", null)  as text)
 
 /mob/living/silicon/verb/set_flavor()
-	set name = "Set Flavour Text"
-	set desc = "Sets an extended description of your character's features."
+	set name = "Установить Описание Персонажа"
+	set desc = "Установить расширенное описание внешности Вашего персонажа."
 	set category = "IC"
 
-	flavor_text =  sanitize(input(usr, "Please enter your new flavour text.", "Flavour text", null)  as text)
+	flavor_text =  sanitize(input(usr, "Пожалуйста, введите новое описание персонажа.", "Описание Персонажа", null)  as text)
 
 /mob/living/silicon/binarycheck()
 	return 1

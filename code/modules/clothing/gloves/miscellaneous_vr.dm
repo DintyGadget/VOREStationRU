@@ -6,7 +6,7 @@
 // Armor Versions Here
 /obj/item/clothing/gloves/combat/knight
 	desc = "Старые добрые бронированные наручи."
-	name = "рыцарские перчатки"
+	name = "Рыцарские перчатки"
 	icon_state = "black"
 	item_state = "black"
 	siemens_coefficient = 2
@@ -19,14 +19,14 @@
 
 /obj/item/clothing/gloves/combat/knight/brown
 	desc = "Старые добрые бронированные наручи."
-	name = "рыцарские перчатки"
+	name = "Рыцарские перчатки"
 	icon_state = "brown"
 	item_state = "brown"
 
 // Costume Versions Here
 /obj/item/clothing/gloves/combat/knight_costume
 	desc = "Старые добрые бронированные наручи."
-	name = "рыцарские перчатки"
+	name = "Рыцарские перчатки"
 	icon_state = "black"
 	item_state = "black"
 	siemens_coefficient = 2
@@ -39,6 +39,6 @@
 
 /obj/item/clothing/gloves/combat/knight_costume/brown
 	desc = "Старые добрые бронированные наручи."
-	name = "рыцарские перчатки"
+	name = "Рыцарские перчатки"
 	icon_state = "brown"
 	item_state = "brown"

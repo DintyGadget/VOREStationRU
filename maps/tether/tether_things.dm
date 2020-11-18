@@ -224,11 +224,11 @@
 	can_atmos_pass = ATMOS_PASS_NO
 	base_icon_state = "door_closed"
 	occupied_icon_state = "door_locked"
-	desc = "Станция, с которой вы могли зайти. Вы можете легко покинуть базу, используя это."
-	on_store_message = "has departed on the tram."
-	on_store_name = "Travel Oversight"
-	on_enter_occupant_message = "Состав подъезжает к платформе; вы заходите внутрь и садитесь."
-	on_store_visible_message_1 = "'s ,динамики издают звон, бъявляя о прибытии состава"
+	desc = "Вокзал, с которого Вы, вероятно, и прибыли. На нём же можно и покинуть станцию."
+	on_store_message = "уезжает на трамвае."
+	on_store_name = "Надзор Перевозок"
+	on_enter_occupant_message = "Состав подъезжает к платформе; Вы заходите внутрь и садитесь."
+	on_store_visible_message_1 = "содрогается со звоном, объявляющим о прибытии состава"
 	on_store_visible_message_2 = "в колонию"
 	time_till_despawn = 10 SECONDS
 	spawnpoint_type = /datum/spawnpoint/tram
@@ -251,7 +251,7 @@
 
 	var/mob/living/carbon/human/user = AM
 
-	var/choice = alert("Вы хотите уехать? Ваш персонаж выйдет из раунда.","Departure","Да","Нет")
+	var/choice = alert("Вы хотите уехать? Ваш персонаж выйдет из раунда.","Выезд","Да","Нет")
 	if(user && Adjacent(user) && choice == "Да")
 		var/mob/observer/dead/newghost = user.ghostize()
 		newghost.timeofdeath = world.time

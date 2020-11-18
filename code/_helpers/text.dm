@@ -253,6 +253,11 @@
 /proc/capitalize(var/t as text)
 	return (uppertext(copytext_char(t, 1, 2)) + copytext_char(t, 2))
 
+//XenosStation Edit: This is absolutely dumb but I'll have to make do with this for now
+/proc/lowerize(var/t as text)
+	return (lowertext(copytext_char(t, 1, 2)) + copytext_char(t, 2))
+//End of XenosStation Edit
+
 //This proc strips html properly, remove < > and all text between
 //for complete text sanitizing should be used sanitize()
 /proc/strip_html_properly(var/input)

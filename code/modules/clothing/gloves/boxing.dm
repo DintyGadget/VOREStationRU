@@ -1,5 +1,5 @@
 /obj/item/clothing/gloves/boxing
-	name = "боксерские перчатки"
+	name = "Боксёрские перчатки"
 	desc = "Потому что руки так и чешутся."
 	icon_state = "boxing"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
@@ -25,7 +25,7 @@
 	item_state_slots = list(slot_r_hand_str = "yellow", slot_l_hand_str = "yellow")
 
 /obj/item/clothing/gloves/white
-	name = "белые перчатки"
+	name = "Белые перчатки"
 	desc = "На вид весьма модные."
 	icon_state = "latex"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")

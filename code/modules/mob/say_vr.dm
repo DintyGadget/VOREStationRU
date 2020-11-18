@@ -3,12 +3,12 @@
 //////////////////////////////////////////////////////
 
 /mob/verb/me_verb_subtle(message as message) //This would normally go in say.dm
-	set name = "Subtle"
+	set name = "Скрытый Эмоут"
 	set category = "IC"
-	set desc = "Emote to nearby people (and your pred/prey)"
+	set desc = "Отправить эмоут людям поблизости (а также охотнику/добыче)"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "Speech is currently admin-disabled.")
+		to_chat(usr, "Речь на данный момент отключена админами.")
 		return
 
 	message = sanitize_or_reflect(message,src) //VOREStation Edit - Reflect too-long messages (within reason)
@@ -23,7 +23,7 @@
 
 /mob/proc/custom_emote_vr(var/m_type=1,var/message = null) //This would normally go in emote.dm
 	if(stat || !use_me && usr == src)
-		to_chat(src, "You are unable to emote.")
+		to_chat(src, "Вы не можете сейчас отправлять эмоуты.")
 		return
 
 	var/muzzled = is_muzzled()
@@ -31,7 +31,7 @@
 
 	var/input
 	if(!message)
-		input = sanitize_or_reflect(input(src,"Choose an emote to display.") as text|null, src)
+		input = sanitize_or_reflect(input(src,"Введите эмоут для отображения.") as text|null, src)
 	else
 		input = message
 
@@ -42,7 +42,7 @@
 		return
 
 	if (message)
-		var/undisplayed_message = "<span class='emote'><B>[src]</B> <I>does something too subtle for you to see.</I></span>"
+		var/undisplayed_message = "<span class='emote'><B>[src]</B> <I>делает что-то скрытное, что нельзя разглядеть.</I></span>"
 		message = encode_html_emphasis(message)
 
 		var/list/vis = get_mobs_and_objs_in_view_fast(get_turf(src),1,2) //Turf, Range, and type 2 is emote
@@ -93,11 +93,11 @@
 
 /proc/fail_to_chat(user,message)
 	if(!message)
-		to_chat(user, "<span class='danger'>Your message was NOT SENT, either because it was FAR too long, or sanitized to nothing at all.</span>")
+		to_chat(user, "<span class='danger'>Ваше сообщение НЕ БЫЛО отправлено, либо потому что оно СЛИШКОМ длинное, либо вычищено системой до пустоты.</span>")
 		return
 
 	var/length = length(message)
 	var/posts = CEILING((length/MAX_MESSAGE_LEN), 1)
 	to_chat(user,message)
-	to_chat(user, "<span class='danger'>^ This message was NOT SENT ^ -- It was [length] characters, and the limit is [MAX_MESSAGE_LEN]. It would fit in [posts] separate messages.</span>")
+	to_chat(user, "<span class='danger'>^ Это сообщение НЕ БЫЛО отправлено ^ -- В нём [length] знаков, а предел - [MAX_MESSAGE_LEN]. Разбейте его на [posts] сообщения.</span>")
 #undef MAX_HUGE_MESSAGE_LEN

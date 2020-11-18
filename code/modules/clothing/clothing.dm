@@ -89,11 +89,11 @@
 					wearable = 1
 
 			if(!wearable && !(slot in list(slot_l_store, slot_r_store, slot_s_store)))
-				to_chat(H, "<span class='danger'>Ваша раса не может надеть [src].</span>")
+				to_chat(H, "<span class='danger'>Ваша раса не может надеть [src.acase == "acase" ? src : src.acase].</span>")
 				return 0
 	return 1
 
-/obj/item/clothing/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/clothing/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "удар")
 	. = ..()
 	if((. == 0) && LAZYLEN(accessories))
 		for(var/obj/item/I in accessories)
@@ -320,7 +320,7 @@
 	var/punch_damtype = BRUTE	//What type of damage does this make fists be?
 	body_parts_covered = HANDS
 	slot_flags = SLOT_GLOVES
-	attack_verb = list("challenged")
+	attack_verb = list("вызывает на дуэль")
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/seromi/gloves.dmi',
 		SPECIES_VOX = 'icons/mob/species/vox/gloves.dmi'
@@ -374,13 +374,13 @@
 		if(istype(G))
 			ring = H.gloves
 			if(ring.glove_level >= src.glove_level)
-				to_chat(user, "Вы не можете надеть [src], так как на Вас уже [H.gloves].")
+				to_chat(user, "Вы не можете надеть [src.acase == "acase" ? src : src.acase], так как на Вас уже [H.gloves].")
 				ring = null
 				return 0
 			else
 				H.drop_from_inventory(ring)	//Remove the ring (or other under-glove item in the hand slot?) so you can put on the gloves.
 				ring.forceMove(src)
-				to_chat(user, "Вы надеваете [src] поверх [src.ring].")
+				to_chat(user, "Вы надеваете [src.acase == "acase" ? src : src.acase] поверх кольца.")
 				if(!(flags & THICKMATERIAL))
 					punch_force += ring.punch_force
 		else
@@ -518,7 +518,7 @@
 	else if(success == 2)
 		to_chat(user, "<span class='warning'>На Вас уже есть головной убор.</span>")
 	else if(success == 1)
-		to_chat(user, "<span class='notice'>Вы забираетесь под [src].</span>")
+		to_chat(user, "<span class='notice'>Вы забираетесь под [src.acase == "acase" ? src : src.acase].</span>")
 	return 1
 
 /obj/item/clothing/head/update_icon(var/mob/user)
@@ -663,12 +663,12 @@
 	 istype(I, /obj/item/weapon/material/kitchen/utensil) || \
 	 istype(I, /obj/item/weapon/material/knife/tacknife)))
 		if(holding)
-			to_chat(user, "<span class='warning'>[src] уже держит [holding].</span>")
+			to_chat(user, "<span class='warning'>[src.ncase] уже держит [holding.acase == "acase" ? holding : holding.acase].</span>")
 			return
 		user.unEquip(I)
 		I.forceMove(src)
 		holding = I
-		user.visible_message("<span class='notice'>[user] вставляет [I] в [src].</span>")
+		user.visible_message("<span class='notice'>[user] вставляет [I.acase == "acase" ? I : I.acase] в [src.acase == "acase" ? src : src.acase].</span>")
 		verbs |= /obj/item/clothing/shoes/proc/draw_knife
 		update_icon()
 	else
@@ -679,7 +679,7 @@
 	set category = "Объект"
 
 	if(shoes_under_pants == -1)
-		to_chat(usr, "<span class='notice'>[src] нельзя носить поверх Вашего костюма!</span>")
+		to_chat(usr, "<span class='notice'>[src.ncase] нельзя носить поверх Вашего костюма!</span>")
 		return
 	shoes_under_pants = !shoes_under_pants
 	update_icon()
@@ -989,7 +989,7 @@
 
 	update_rolldown_status()
 	if(rolled_down == -1)
-		to_chat(usr, "<span class='notice'>Вы не можете опустить рукава [src]!</span>")
+		to_chat(usr, "<span class='notice'>Вы не можете опустить рукава [src.gcase == "gcase" ? src : src.gcase]!</span>")
 		return
 	if((rolled_sleeves == 1) && !(rolled_down))
 		rolled_sleeves = 0
@@ -1004,13 +1004,13 @@
 		else
 			item_state_slots[slot_w_uniform_str] = "[worn_state]_d"
 
-		to_chat(usr, "<span class='notice'>Вы опустили рукава [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы опустили рукава [src.gcase == "gcase" ? src : src.gcase].</span>")
 	else
 		body_parts_covered = initial(body_parts_covered)
 		if(icon_override == rolled_down_icon)
 			icon_override = initial(icon_override)
 		item_state_slots[slot_w_uniform_str] = "[worn_state]"
-		to_chat(usr, "<span class='notice'>Вы закатили рукава [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы закатили рукава [src.gcase == "gcase" ? src : src.gcase].</span>")
 	update_clothing_icon()
 
 /obj/item/clothing/under/verb/rollsleeves()
@@ -1022,10 +1022,10 @@
 
 	update_rollsleeves_status()
 	if(rolled_sleeves == -1)
-		to_chat(usr, "<span class='notice'>Вы не можете закатить рукава [src]!</span>")
+		to_chat(usr, "<span class='notice'>Вы не можете закатить рукава [src.gcase == "gcase" ? src : src.gcase]!</span>")
 		return
 	if(rolled_down == 1)
-		to_chat(usr, "<span class='notice'>Нужно сначала закатить рукава [src]!</span>")
+		to_chat(usr, "<span class='notice'>Нужно сначала закатить рукава [src.gcase == "gcase" ? src : src.gcase]!</span>")
 		return
 
 	rolled_sleeves = !rolled_sleeves
@@ -1036,13 +1036,13 @@
 			item_state_slots[slot_w_uniform_str] = "[worn_state]"
 		else
 			item_state_slots[slot_w_uniform_str] = "[worn_state]_r"
-		to_chat(usr, "<span class='notice'>Вы закатили рукава [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы закатили рукава [src.gcase == "gcase" ? src : src.gcase].</span>")
 	else
 		body_parts_covered = initial(body_parts_covered)
 		if(icon_override == rolled_down_sleeves_icon)
 			icon_override = initial(icon_override)
 		item_state_slots[slot_w_uniform_str] = "[worn_state]"
-		to_chat(usr, "<span class='notice'>Вы опустили рукава [src].</span>")
+		to_chat(usr, "<span class='notice'>Вы опустили рукава [src.gcase == "gcase" ? src : src.gcase].</span>")
 	update_clothing_icon()
 
 

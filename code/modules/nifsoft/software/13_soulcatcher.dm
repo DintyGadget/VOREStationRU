@@ -477,8 +477,8 @@
 ///////////////////
 //Verbs for humans
 /mob/living/carbon/human/proc/nsay(message as text|null)
-	set name = "NSay"
-	set desc = "Speak into your NIF's Soulcatcher."
+	set name = "Сказать (НИФ)"
+	set desc = "Сказать что-либо вслух в Ваш НИФ."
 	set category = "IC"
 
 	if(!nif)
@@ -498,8 +498,8 @@
 		SC.say_into(sane_message,src)
 
 /mob/living/carbon/human/proc/nme(message as text|null)
-	set name = "NMe"
-	set desc = "Emote into your NIF's Soulcatcher."
+	set name = "Эмоут (НИФ)"
+	set desc = "Сделать эмоут в Ваш НИФ."
 	set category = "IC"
 
 	if(!nif)

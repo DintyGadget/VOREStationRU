@@ -2,24 +2,24 @@
 	return
 
 /mob/verb/whisper(message as text)
-	set name = "Whisper"
+	set name = "Шептать"
 	set category = "IC"
 
 	usr.say(message,whispering=1)
 
 /mob/verb/say_verb(message as text)
-	set name = "Say"
+	set name = "Сказать"
 	set category = "IC"
 
 	set_typing_indicator(FALSE)
 	usr.say(message)
 
 /mob/verb/me_verb(message as message)
-	set name = "Me"
+	set name = "Эмоут"
 	set category = "IC"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<font color='red'>Speech is currently admin-disabled.</font>")
+		to_chat(usr, "<font color='red'>Речь на данный момент отключена админами.</font>")
 		return
 
 	//VOREStation Edit Start
@@ -36,7 +36,7 @@
 
 /mob/proc/say_dead(var/message)
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+		to_chat(usr, "<span class='danger'>Речь на данный момент отключена админами.</span>")
 		return
 
 	if(!client)
@@ -44,16 +44,16 @@
 
 	if(!client.holder)
 		if(!config.dsay_allowed)
-			to_chat(src, "<span class='danger'>Deadchat is globally muted.</span>")
+			to_chat(src, "<span class='danger'>Чат мёртвых глобально отключён.</span>")
 			return
 
 	if(!is_preference_enabled(/datum/client_preference/show_dsay))
-		to_chat(usr, "<span class='danger'>You have deadchat muted.</span>")
+		to_chat(usr, "<span class='danger'>Ваш чат мёртвых замучен.</span>")
 		return
 
 	message = encode_html_emphasis(message)
 
-	say_dead_direct("[pick("complains","moans","whines","laments","blubbers")], <span class='message'>\"[message]\"</span>", src)
+	say_dead_direct("[pick("жалуется","стонет","хныкает","ноет","бормочет")], <span class='message'>\"[message]\"</span>", src)
 
 /mob/proc/say_understands(var/mob/other, var/datum/language/speaking = null)
 	if(stat == DEAD)
@@ -93,16 +93,16 @@
 	return FALSE
 
 /mob/proc/say_quote(var/message, var/datum/language/speaking = null)
-	var/verb = "says"
+	var/verb = "говорит"
 	var/ending = copytext_char(message, length(message))
 
 	if(speaking)
 		verb = speaking.get_spoken_verb(ending)
 	else
 		if(ending == "!")
-			verb = pick("exclaims", "shouts", "yells")
+			verb = pick("восклицает", "кричит")
 		else if(ending == "?")
-			verb = "asks"
+			verb = "спрашивает"
 	return verb
 
 

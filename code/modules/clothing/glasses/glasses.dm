@@ -12,7 +12,7 @@ BLIND     // can't see anything
 ///////////////////////////////////////////////////////////////////////
 
 /obj/item/clothing/glasses
-	name = "очки"
+	name = "Очки"
 	icon = 'icons/obj/clothing/glasses.dmi'
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_EYES
@@ -76,17 +76,17 @@ BLIND     // can't see anything
 /obj/item/clothing/glasses/attack_self(mob/user)
 	if(toggleable)
 		if(!can_toggle(user))
-			to_chat(user, span("warning", "Вы не можете переключить [src] здесь."))
+			to_chat(user, span("warning", "У Вас не получается переключить [src.acase] здесь."))
 		else
 			toggle_active(user)
 			if(active)
-				to_chat(user, span("notice", "Вы активируете оптическую матрицу [src]."))
+				to_chat(user, span("notice", "Вы включаете оптическую матрицу [src.gcase]."))
 			else
-				to_chat(user, span("notice", "Вы деактивируете оптическую матрицу [src]."))
+				to_chat(user, span("notice", "Вы выключаете оптическую матрицу [src.gcase]."))
 	..()
 
 /obj/item/clothing/glasses/meson
-	name = "мезонный сканер"
+	name = "Мезонный сканер"
 	desc = "Позволяет видеть стены, полы и объекты сквозь другие объекты."
 	icon_state = "meson"
 	item_state_slots = list(slot_r_hand_str = "meson", slot_l_hand_str = "meson")
@@ -101,12 +101,12 @@ BLIND     // can't see anything
 	overlay = global_hud.meson
 
 /obj/item/clothing/glasses/meson/prescription
-	name = "мезонный сканер (близ.)"
+	name = "Мезонный сканер (близ.)"
 	desc = "Оптический мезонный сканер с линзами для близоруких."
 	prescription = 1
 
 /obj/item/clothing/glasses/meson/aviator
-	name = "инженерные очки-авиаторы"
+	name = "Инженерные очки-авиаторы"
 	icon_state = "aviator_eng"
 	off_state = "aviator"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
@@ -114,12 +114,12 @@ BLIND     // can't see anything
 	activation_sound = 'sound/effects/pop.ogg'
 
 /obj/item/clothing/glasses/meson/aviator/prescription
-	name = "инженерные очки-авиаторы (близ.)"
+	name = "Инженерные очки-авиаторы (близ.)"
 	desc = "Инженерные очки-авиаторы с линзами для близоруких."
 	prescription = 1
 
 /obj/item/clothing/glasses/hud/health/aviator
-	name = "медицинские очки-авиаторы"
+	name = "Медицинские очки-авиаторы"
 	desc = "Модифицированные очки-авиаторы с медицинским HUD."
 	icon_state = "aviator_med"
 	off_state = "aviator"
@@ -128,12 +128,12 @@ BLIND     // can't see anything
 	activation_sound = 'sound/effects/pop.ogg'
 
 /obj/item/clothing/glasses/hud/health/aviator/prescription
-	name = "медицинские очки-авиаторы (близ.)"
+	name = "Медицинские очки-авиаторы (близ.)"
 	desc = "Модифицированные очки-авиаторы с медицинским HUD. В комплект входят линзы для близоруких."
 	prescription = 6
 
 /obj/item/clothing/glasses/science
-	name = "научные очки"
+	name = "Научные очки"
 	desc = "Эти очки ничего не делают!"
 	icon_state = "purple"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -146,7 +146,7 @@ BLIND     // can't see anything
 	overlay = global_hud.science
 
 /obj/item/clothing/glasses/goggles
-	name = "защитные очки"
+	name = "Защитные очки"
 	desc = "Самые что ни на есть обыкновенные защитные очки."
 	icon_state = "plaingoggles"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -154,7 +154,7 @@ BLIND     // can't see anything
 	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/night
-	name = "очки ночного видения"
+	name = "Очки ночного видения"
 	desc = "Теперь точно всё видно в темноте!"
 	icon_state = "night"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -167,7 +167,7 @@ BLIND     // can't see anything
 	enables_planes = list(VIS_FULLBRIGHT)
 
 /obj/item/clothing/glasses/night/vox
-	name = "инопланетные очки"
+	name = "Инопланетные очки"
 	species_restricted = list("Вокс")
 	flags = PHORONGUARD
 
@@ -176,7 +176,7 @@ BLIND     // can't see anything
 	overlay = global_hud.nvg
 
 /obj/item/clothing/glasses/eyepatch
-	name = "повязка на глаз"
+	name = "Повязка на глаз"
 	desc = "Йо-хо-хо."
 	icon_state = "eyepatch"
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
@@ -187,7 +187,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses/eyepatch/verb/switcheye()
 	set name = "Сменить Положение Повязки"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
@@ -200,7 +200,7 @@ BLIND     // can't see anything
 	update_clothing_icon()
 
 /obj/item/clothing/glasses/eyepatchwhite
-	name = "повязка на глаз"
+	name = "Повязка на глаз"
 	desc = "Простая повязка на глаз, сделанная из ленточки ткани."
 	icon_state = "eyepatch_white"
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
@@ -211,7 +211,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses/eyepatchwhite/verb/switcheye()
 	set name = "Сменить Положение Повязки"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
@@ -224,14 +224,14 @@ BLIND     // can't see anything
 	update_clothing_icon()
 
 /obj/item/clothing/glasses/monocle
-	name = "монокль"
+	name = "Монокль"
 	desc = "Какой элегантный аксессуар!"
 	icon_state = "monocle"
 	item_state_slots = list(slot_r_hand_str = "headset", slot_l_hand_str = "headset")
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/material
-	name = "сканер материалов"
+	name = "Визор материалов"
 	desc = "Очки, имеющие свойство запутывать носителя."
 	icon_state = "material"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -246,11 +246,11 @@ BLIND     // can't see anything
 	overlay = global_hud.material
 
 /obj/item/clothing/glasses/material/prescription
-	name = "сканер материалов (близ.)"
+	name = "Материальный визор (близ.)"
 	prescription = 1
 
 /obj/item/clothing/glasses/graviton
-	name = "гравитонный визор"
+	name = "Материальный визор"
 	desc = "Тайны космических путешествий... не в Ваших руках."
 	icon_state = "grav"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -268,7 +268,7 @@ BLIND     // can't see anything
 	overlay = global_hud.material
 
 /obj/item/clothing/glasses/regular
-	name = "очки (близ.)"
+	name = "Очки (близ.)"
 	desc = "Изготовлены Zadr Inc."
 	icon_state = "glasses"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -276,12 +276,12 @@ BLIND     // can't see anything
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/regular/scanners
-	name = "сканирующий визор"
+	name = "Сканирующий визор"
 	desc = "Визор крайне престранной формы с торчащими по бокам проводами. Он приглушенно гудит."
 	icon_state = "uzenwa_sissra_1"
 
 /obj/item/clothing/glasses/regular/hipster
-	name = "хипстерские очки"
+	name = "Хипстерские очки"
 	desc = "Изготовлены Nu Takoe Inc."
 	icon_state = "hipster_glasses"
 
@@ -293,38 +293,38 @@ BLIND     // can't see anything
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/gglasses
-	name = "зеленые очки"
+	name = "Зеленые очки"
 	desc = "Очки зеленого цвета, придающие Вам довольно зловещий вид."
 	icon_state = "gglasses"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/regular/rimless
-	name = "очки без оправы (близ.)"
+	name = "Очки без оправы (близ.)"
 	desc = "Стильные современные очки из одной крупной линзы."
 	icon_state = "glasses_rimless"
 
 /obj/item/clothing/glasses/rimless
-	name = "очки без оправы"
+	name = "Очки без оправы"
 	desc = "Стильные современные очки из одной крупной линзы."
 	icon_state = "glasses_rimless"
 	prescription = 0
 
 /obj/item/clothing/glasses/regular/thin
-	name = "очки в тонкой оправе (близ.)"
+	name = "Очки в тонкой оправе (близ.)"
 	desc = "Очки в оправе — прошлый век."
 	icon_state = "glasses_thin"
 	prescription = 1
 
 /obj/item/clothing/glasses/thin
-	name = "очки в тонкой оправе"
+	name = "Очки в тонкой оправе"
 	desc = "Очки в оправе — прошлый век."
 	icon_state = "glasses_thin"
 	prescription = 0
 
 
 /obj/item/clothing/glasses/sunglasses
-	name = "солнцезащитные очки"
+	name = "Солнцезащитные очки"
 	desc = "На удивление древняя технология, предоставляющая примитивную защиту глаз. Утолщенные линзы защищают от некоторых вспышек."
 	icon_state = "sun"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
@@ -332,12 +332,12 @@ BLIND     // can't see anything
 	flash_protection = FLASH_PROTECTION_MODERATE
 
 /obj/item/clothing/glasses/sunglasses/aviator
-	name = "очки-авиаторы"
+	name = "Очки-авиаторы"
 	desc = "Дизайнерские очки."
 	icon_state = "aviator"
 
 /obj/item/clothing/glasses/welding
-	name = "маска для сварки"
+	name = "Маска для сварки"
 	desc = "Защищает глаза во время сварки. Одобрена ассоциацией безумных учёных."
 	icon_state = "welding-g"
 	item_state_slots = list(slot_r_hand_str = "welding-g", slot_l_hand_str = "welding-g")
@@ -352,8 +352,8 @@ BLIND     // can't see anything
 	toggle()
 
 /obj/item/clothing/glasses/welding/verb/toggle()
-	set category = "Object"
-	set name = "Отрегулировать маску для сварки"
+	set category = "Объект"
+	set name = "Отрегулировать Маску Для Сварки"
 	set src in usr
 
 	if(usr.canmove && !usr.stat && !usr.restrained())
@@ -364,7 +364,7 @@ BLIND     // can't see anything
 			icon_state = initial(icon_state)
 			flash_protection = initial(flash_protection)
 			tint = initial(tint)
-			to_chat(usr, "Вы опускаете маску для сварки, защищая глаза.")
+			to_chat(usr, "Вы опускаете [src.acase], защищая глаза.")
 		else
 			src.up = !src.up
 			flags_inv &= ~HIDEEYES
@@ -372,18 +372,18 @@ BLIND     // can't see anything
 			icon_state = "[initial(icon_state)]up"
 			flash_protection = FLASH_PROTECTION_NONE
 			tint = TINT_NONE
-			to_chat(usr, "Вы приподнимаете маску для сварки со своего лица.")
+			to_chat(usr, "Вы приподнимаете [src.acase] со своего лица.")
 		update_clothing_icon()
 		usr.update_action_buttons()
 
 /obj/item/clothing/glasses/welding/superior
-	name = "улучшенные очки для сварки"
+	name = "Улучшенные очки для сварки"
 	desc = "Очки для сварки, изготовленные из более дорогих материалов и почему-то пахнущие картошкой."
 	icon_state = "rwelding-g"
 	tint = TINT_MODERATE
 
 /obj/item/clothing/glasses/sunglasses/blindfold
-	name = "повязка на глаза"
+	name = "Повязка на глаза"
 	desc = "Закрывает глаза, препятствуя зрению."
 	icon_state = "blindfold"
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
@@ -393,7 +393,7 @@ BLIND     // can't see anything
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
 
 /obj/item/clothing/glasses/sunglasses/blindfold/tape
-	name = "кусочек скотча"
+	name = "Кусочек скотча"
 	desc = "Прочная самодельная повязка на глаза!"
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "tape_cross"
@@ -401,7 +401,7 @@ BLIND     // can't see anything
 	w_class = ITEMSIZE_TINY
 
 /obj/item/clothing/glasses/sunglasses/prescription
-	name = "солнечные очки (близ.)"
+	name = "Солнцезащитные очки (близ.)"
 	prescription = 1
 
 /obj/item/clothing/glasses/sunglasses/big
@@ -409,24 +409,24 @@ BLIND     // can't see anything
 	icon_state = "bigsunglasses"
 
 /obj/item/clothing/glasses/fakesunglasses //Sunglasses without flash immunity
-	name = "стильные солнечные очки"
+	name = "Солнечные очки"
 	desc = "Дизайнерские солнечные очки. Вряд ли помогают против вспышек."
 	icon_state = "sun"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
 
 /obj/item/clothing/glasses/fakesunglasses/aviator
-	name = "стильные очки-авиаторы"
+	name = "Солнечные очки-авиаторы"
 	desc = "Дизайнерские солнечные очки. Вряд ли помогают против вспышек."
 	icon_state = "aviator"
 
 /obj/item/clothing/glasses/sunglasses/sechud
-	name = "солнцезащитный HUD"
-	desc = "Солнцезащитные очки с HUD."
+	name = "Солнцезащитный HUD"
+	desc = "Солнцезащитные очки с HUD службы безопасности."
 	icon_state = "sunSecHud"
 	enables_planes = list(VIS_CH_ID,VIS_CH_WANTED,VIS_CH_IMPTRACK,VIS_CH_IMPLOYAL,VIS_CH_IMPCHEM)
 
 /obj/item/clothing/glasses/sunglasses/sechud/tactical
-	name = "тактический HUD"
+	name = "Тактический HUD"
 	desc = "Визор со встроенной боевой информацией и записями Службы Безопасности. Предоставляют защиту от вспышек."
 	icon_state = "swatgoggles"
 
@@ -447,12 +447,12 @@ BLIND     // can't see anything
 			flash_protection = FLASH_PROTECTION_NONE
 			enables_planes = away_planes
 			away_planes = null
-			to_chat(usr, "Вы переключаете [src] в режим HUD.")
+			to_chat(usr, "Вы переключаете [src.acase] в режим HUD.")
 		else
 			flash_protection = initial(flash_protection)
 			away_planes = enables_planes
 			enables_planes = null
-			to_chat(usr, "Вы переключаете [src] в режим защиты от вспышек.")
+			to_chat(usr, "Вы переключаете [src.acase] в режим защиты от вспышек.")
 		update_icon()
 		user << activation_sound
 		user.recalculate_vis()
@@ -471,13 +471,13 @@ BLIND     // can't see anything
 	prescription = 6
 
 /obj/item/clothing/glasses/sunglasses/medhud
-	name = "солнцезащитный HUD"
-	desc = "Солнцезащитный визор с HUD."
+	name = "Солнцезащитный HUD"
+	desc = "Солнцезащитный визор с медицинским HUD."
 	icon_state = "sunMedHud"
 	enables_planes = list(VIS_CH_STATUS,VIS_CH_HEALTH)
 
 /obj/item/clothing/glasses/thermal
-	name = "тепловой сканер"
+	name = "Тепловой визор"
 	desc = "Тепловой сканер в формате очков."
 	icon_state = "thermal"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
@@ -491,7 +491,7 @@ BLIND     // can't see anything
 	emp_act(severity)
 		if(istype(src.loc, /mob/living/carbon/human))
 			var/mob/living/carbon/human/M = src.loc
-			to_chat(M, "<font color='red'>Оптический тепловой сканер перезагружается и ослепляет Вас!</font>")
+			to_chat(M, "<font color='red'>Ваш [capitalize(src.acase)] перегружается и ослепляет Вас!</font>")
 			if(M.glasses == src)
 				M.Blind(3)
 				M.eye_blurry = 5
@@ -507,7 +507,7 @@ BLIND     // can't see anything
 	overlay = global_hud.thermal
 
 /obj/item/clothing/glasses/thermal/syndi	//These are now a traitor item, concealed as mesons.	-Pete
-	name = "мезонный сканер"
+	name = "Мезонный сканер"
 	desc = "Позволяет видеть стены, полы и объекты сквозь другие объекты."
 	icon_state = "meson"
 	item_state_slots = list(slot_r_hand_str = "meson", slot_l_hand_str = "meson")
@@ -519,8 +519,8 @@ BLIND     // can't see anything
 	action_button_name = null
 
 /obj/item/clothing/glasses/thermal/plain/monocle
-	name = "термоноколь"
-	desc = "Тепловой сканер в монокле."
+	name = "Термоноколь"
+	desc = "Тепловой визор виде монокля."
 	icon_state = "thermoncle"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
 	toggleable = 1
@@ -530,7 +530,7 @@ BLIND     // can't see anything
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/thermal/plain/eyepatch
-	name = "повязка с тепловым сканером"
+	name = "Повязка с тепловым визором"
 	desc = "Повязка со встроенным оптическим тепловым сканером."
 	icon_state = "eyepatch"
 	item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
@@ -539,7 +539,7 @@ BLIND     // can't see anything
 	action_button_name = "Переключить Повязку"
 
 /obj/item/clothing/glasses/thermal/plain/jensen
-	name = "импланты с тепловым сканером"
+	name = "Имплантанты с тепловым визором"
 	desc = "Набор вживляемых линз, предназначенных для расширения зрения."
 	icon_state = "thermalimplants"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
