@@ -1,16 +1,16 @@
 /mob/verb/up()
-	set name = "Move Upwards"
+	set name = "Переместиться Вверх"
 	set category = "IC"
 
 	if(zMove(UP))
-		to_chat(src, "<span class='notice'>You move upwards.</span>")
+		to_chat(src, "<span class='notice'>Вы передвигаетесь вверх.</span>")
 
 /mob/verb/down()
-	set name = "Move Down"
+	set name = "Переместиться Вниз"
 	set category = "IC"
 
 	if(zMove(DOWN))
-		to_chat(src, "<span class='notice'>You move down.</span>")
+		to_chat(src, "<span class='notice'>Вы передвигаетесь вниз.</span>")
 
 /mob/proc/zMove(direction)
 	if(eyeobj)
@@ -20,17 +20,17 @@
 		return mech.relaymove(src,direction)
 
 	if(!can_ztravel())
-		to_chat(src, "<span class='warning'>You lack means of travel in that direction.</span>")
+		to_chat(src, "<span class='warning'>У Вас нет возможности переместиться в этом направлении.</span>")
 		return
 
 	var/turf/start = loc
 	if(!istype(start))
-		to_chat(src, "<span class='notice'>You are unable to move from here.</span>")
+		to_chat(src, "<span class='notice'>Вы не можете отсюда сдвинуться.</span>")
 		return 0
 
 	var/turf/destination = (direction == UP) ? GetAbove(src) : GetBelow(src)
 	if(!destination)
-		to_chat(src, "<span class='notice'>There is nothing of interest in this direction.</span>")
+		to_chat(src, "<span class='notice'>В этом направлении ничего интересного нет.</span>")
 		return 0
 
 	if(is_incorporeal())
@@ -43,11 +43,11 @@
 			return ladder.climbLadder(src, (direction == UP ? ladder.target_up : ladder.target_down))
 
 	if(!start.CanZPass(src, direction))
-		to_chat(src, "<span class='warning'>\The [start] is in the way.</span>")
+		to_chat(src, "<span class='warning'>[start] мешается.</span>")
 		return 0
 
 	if(!destination.CanZPass(src, direction))
-		to_chat(src, "<span class='warning'>\The [destination] blocks your way.</span>")
+		to_chat(src, "<span class='warning'>[destination] не даёт пройти.</span>")
 		return 0
 
 	var/area/area = get_area(src)
@@ -58,56 +58,56 @@
 
 			if(lattice)
 				var/pull_up_time = max(5 SECONDS + (src.movement_delay() * 10), 1)
-				to_chat(src, "<span class='notice'>You grab \the [lattice] and start pulling yourself upward...</span>")
-				destination.audible_message("<span class='notice'>You hear something climbing up \the [lattice].</span>")
+				to_chat(src, "<span class='notice'>Вы хватаетесь за [lattice] и начинаете карабкаться вверх...</span>")
+				destination.audible_message("<span class='notice'>Вы слышите, как что-то карабкается по [lattice].</span>")
 				if(do_after(src, pull_up_time))
-					to_chat(src, "<span class='notice'>You pull yourself up.</span>")
+					to_chat(src, "<span class='notice'>Вы взбираетесь наверх.</span>")
 				else
-					to_chat(src, "<span class='warning'>You gave up on pulling yourself up.</span>")
+					to_chat(src, "<span class='warning'>Вы передумали взбираться наверх.</span>")
 					return 0
 
 			else if(catwalk?.hatch_open)
 				var/pull_up_time = max(5 SECONDS + (src.movement_delay() * 10), 1)
-				to_chat(src, "<span class='notice'>You grab the edge of \the [catwalk] and start pulling yourself upward...</span>")
+				to_chat(src, "<span class='notice'>Вы хватаетесь за край [catwalk] и начинаете карабкаться вверх...</span>")
 				var/old_dest = destination
 				destination = get_step(destination, dir) // mob's dir
 				if(!destination?.Enter(src, old_dest))
-					to_chat(src, "<span class='notice'>There's something in the way up above in that direction, try another.</span>")
+					to_chat(src, "<span class='notice'>Вам что-то мешается сверху в этом направлении, попробуйте другое.</span>")
 					return 0
-				destination.audible_message("<span class='notice'>You hear something climbing up \the [catwalk].</span>")
+				destination.audible_message("<span class='notice'>Вы слышите, как что-то взбирается по [catwalk].</span>")
 				if(do_after(src, pull_up_time))
-					to_chat(src, "<span class='notice'>You pull yourself up.</span>")
+					to_chat(src, "<span class='notice'>Вы взбираетесь наверх.</span>")
 				else
-					to_chat(src, "<span class='warning'>You gave up on pulling yourself up.</span>")
+					to_chat(src, "<span class='warning'>Вы передумали взбираться наверх.</span>")
 					return 0
 
 			else if(ismob(src)) //VOREStation Edit Start. Are they a mob, and are they currently flying??
 				var/mob/H = src
 				if(H.flying)
 					if(H.incapacitated(INCAPACITATION_ALL))
-						to_chat(src, "<span class='notice'>You can't fly in your current state.</span>")
+						to_chat(src, "<span class='notice'>Вы не можете взлететь в таком состоянии.</span>")
 						H.stop_flying() //Should already be done, but just in case.
 						return 0
 					var/fly_time = max(7 SECONDS + (H.movement_delay() * 10), 1) //So it's not too useful for combat. Could make this variable somehow, but that's down the road.
-					to_chat(src, "<span class='notice'>You begin to fly upwards...</span>")
-					destination.audible_message("<span class='notice'>You hear the flapping of wings.</span>")
-					H.audible_message("<span class='notice'>[H] begins to flap \his wings, preparing to move upwards!</span>")
+					to_chat(src, "<span class='notice'>Вы начинаете взлетать вверх...</span>")
+					destination.audible_message("<span class='notice'>Вы слышите взмахи крыльев.</span>")
+					H.audible_message("<span class='notice'>[H] начинает взмахивать крыльями, готовясь взлететь вверх!</span>")
 					if(do_after(H, fly_time) && H.flying)
-						to_chat(src, "<span class='notice'>You fly upwards.</span>")
+						to_chat(src, "<span class='notice'>Вы взлетаете.</span>")
 					else
-						to_chat(src, "<span class='warning'>You stopped flying upwards.</span>")
+						to_chat(src, "<span class='warning'>Вы прекращаете взлетать.</span>")
 						return 0
 				else
-					to_chat(src, "<span class='warning'>Gravity stops you from moving upward.</span>")
+					to_chat(src, "<span class='warning'>Гравитация не позволяет Вам взлететь.</span>")
 					return 0 //VOREStation Edit End.
 
 			else
-				to_chat(src, "<span class='warning'>Gravity stops you from moving upward.</span>")
+				to_chat(src, "<span class='warning'>Гравитация не позволяет Вам взлететь вверх.</span>")
 				return 0
 
 	for(var/atom/A in destination)
 		if(!A.CanPass(src, start, 1.5, 0))
-			to_chat(src, "<span class='warning'>\The [A] blocks you.</span>")
+			to_chat(src, "<span class='warning'>Вам не позволяет [A].</span>")
 			return 0
 	if(!Move(destination))
 		return 0

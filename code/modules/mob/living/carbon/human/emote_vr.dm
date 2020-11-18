@@ -11,111 +11,111 @@
 		if("vwag")
 			if(toggle_tail_vr(message = 1))
 				m_type = 1
-				message = "[wagging ? "starts" : "stops"] wagging their tail."
+				message = "[wagging ? "начинает" : "прекращает"] вилять хвостом."
 			else
 				return 1
 		if("vflap")
 			if(toggle_wing_vr(message = 1))
 				m_type = 1
-				message = "[flapping ? "starts" : "stops"] flapping their wings."
+				message = "[flapping ? "начинает" : "прекращает"] взмахивать крыльями."
 			else
 				return 1
 		if("mlem")
-			message = "mlems [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] tongue up over [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] nose. Mlem."
+			message = "делает млем своим язычком себе к носу. Млем."
 			m_type = 1
 		if("blep")
-			message = "bleps [get_visible_gender() == MALE ? "his" : get_visible_gender() == FEMALE ? "her" : "their"] tongue out. Blep."
+			message = "показывает свой язык. Блеп."
 			m_type = 1
 		if("awoo")
 			m_type = 2
-			message = "lets out an awoo."
+			message = "издаёт 'Авууу!'."
 			playsound(src, 'sound/voice/awoo.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("awoo2")
 			m_type = 2
-			message = "lets out an awoo."
+			message = "издаёт 'Авууу!'."
 			playsound(src, 'sound/voice/long_awoo.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("growl")
 			m_type = 2
-			message = "lets out a growl."
+			message = "издаёт рык."
 			playsound(src, 'sound/voice/growl.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("woof")
 			m_type = 2
-			message = "lets out a woof."
+			message = "издаёт 'Вуф!'."
 			playsound(src, 'sound/voice/woof.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("woof2")
 			m_type = 2
-			message = "lets out a woof."
+			message = "издаёт 'Вуф!'."
 			playsound(src, 'sound/voice/woof2.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("nya")
-			message = "някает."
+			message = "издаёт 'Ня!'."
 			m_type = 2
 			playsound(src, 'sound/voice/nya.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("mrowl")
-			message = "mrowls."
+			message = "издаёт 'Мрряур!'."
 			m_type = 2
 			playsound(src, 'sound/voice/mrow.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("peep")
-			message = "peeps like a bird."
+			message = "чирикает как птичка."
 			m_type = 2
 			playsound(src, 'sound/voice/peep.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("chirp")
-			message = "chirps!"
+			message = "чирикает!"
 			playsound(src, 'sound/misc/nymphchirp.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 			m_type = 2
 		if("hoot")
-			message = "hoots!"
+			message = "гудит по-филински!"
 			playsound(src, 'sound/voice/hoot.ogg', 50, 1, ,-1, preference = /datum/client_preference/emote_noises)
 			m_type = 2
 		if("weh")
-			message = "lets out a weh."
+			message = "издаёт 'Вех!'."
 			m_type = 2
 			playsound(src, 'sound/voice/weh.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("merp")
-			message = "lets out a merp."
+			message = "издаёт 'Мерп!'.'"
 			m_type = 2
 			playsound(src, 'sound/voice/merp.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("myarp")
-			message = "lets out a myarp."
+			message = "издаёт 'Мярп!'."
 			m_type = 2
 			playsound(src, 'sound/voice/myarp.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("bark")
-			message = "lets out a bark."
+			message = "издаёт 'Гав!'."
 			m_type = 2
 			playsound(src, 'sound/voice/bark2.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("bork")
 			m_type = 2
-			message = "lets out a bork."
+			message = "издаёт 'Гов!'."
 			playsound(src, 'sound/voice/bork.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if ("mrow")
 			m_type = 2
-			message = "lets out a mrow."
+			message = "издаёт 'Мряу!'."
 			playsound(src, 'sound/voice/mrow.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if ("hypno")
 			m_type = 2
-			message = "lets out a mystifying tone."
+			message = "загадочно гудит."
 			playsound(src, 'sound/voice/hypno.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("hiss")
 			message = "шипит."
 			m_type = 2
 			playsound(src, 'sound/voice/hiss.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("rattle")
-			message = "rattles!"
+			message = "крокочет!"
 			m_type = 2
 			playsound(src, 'sound/voice/rattle.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("squeak")
-			message = "lets out a squeak."
+			message = "издаёт писк."
 			m_type = 2
 			playsound(src, 'sound/effects/mouse_squeak.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("geck")
-			message = "geckers!"
+			message = "издаёт 'Гекеке!'.!"
 			m_type = 2
 			playsound(src, 'sound/voice/geck.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("baa")
-			message = "lets out a baa."
+			message = "издаёт 'Бее!'."
 			m_type = 2
 			playsound(src, 'sound/voice/baa.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("baa2")
-			message = "bleats."
+			message = "блеет."
 			m_type = 2
 			playsound(src, 'sound/voice/baa2.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("deathgasp2")
@@ -123,35 +123,35 @@
 			m_type = 1
 			playsound(src, 'sound/voice/deathgasp2.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("mar")
-			message = "lets out a mar."
+			message = "издаёт 'Мар!'."
 			m_type = 2
 			playsound(src, 'sound/voice/mar.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("wurble")
-			message = "lets out a wurble."
+			message = "издаёт бурлыканье."
 			m_type = 2
 			playsound(src, 'sound/voice/wurble.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("snort")
-			message = "snorts!"
+			message = "фыркает от смеха!"
 			m_type = 2
 			playsound(src, 'sound/voice/Snort.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("meow")
-			message = "gently meows!"
+			message = "нежно мяукает!"
 			m_type = 2
 			playsound(src, 'sound/voice/Meow.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("moo")
-			message = "takes a breath and lets out a moo."
+			message = "вдыхает и издаёт 'Муу!'.."
 			m_type = 2
 			playsound(src, 'sound/voice/Moo.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("croak")
-			message = "rumbles their throat, puffs their cheeks and croaks."
+			message = "крокочет в глотке, раздувая щёки."
 			m_type = 2
 			playsound(src, 'sound/voice/Croak.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("gao")
-			message = "lets out a gao."
+			message = "издаёт 'Гао!'."
 			m_type = 2
 			playsound(src, 'sound/voice/gao.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("cackle")
-			message = "cackles hysterically!"
+			message = "истерически ржёт!"
 			m_type = 2
 			playsound(src, 'sound/voice/YeenCackle.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("nsay")
@@ -164,12 +164,12 @@
 			var/list/involved_parts = list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
 			//Check if they are physically capable
 			if(sleeping || resting || buckled || weakened || restrained() || involved_parts.len < 2)
-				to_chat(src, "<span class='warning'>You can't *flip in your current state!</span>")
+				to_chat(src, "<span class='warning'>Вы не можете сделать сальто в таком состоянии!</span>")
 				return 1
 			else
 				nextemote += 12 //Double delay
 				handle_flip_vr()
-				message = "does a flip!"
+				message = "делает сальто!"
 				m_type = 1
 		if("vhelp") //Help for Virgo-specific emotes.
 			to_chat(src, "vwag, vflap, mlem, blep, awoo, awoo2, growl, nya, peep, chirp, hoot, weh, merp, myarp, bark, bork, mrow, mrowl, hypno, hiss, rattle, squeak, geck, baa, baa2, mar, wurble, snort, meow, moo, croak, gao, cackle, nsay, nme, flip")
@@ -210,7 +210,7 @@
 /mob/living/carbon/human/proc/toggle_tail_vr(var/setting,var/message = 0)
 	if(!tail_style || !tail_style.ani_state)
 		if(message)
-			to_chat(src, "<span class='warning'>You don't have a tail that supports this.</span>")
+			to_chat(src, "<span class='warning'>Ваш хвост такое не поддерживает.</span>")
 		return 0
 
 	var/new_wagging = isnull(setting) ? !wagging : setting
@@ -222,7 +222,7 @@
 /mob/living/carbon/human/proc/toggle_wing_vr(var/setting,var/message = 0)
 	if(!wing_style || !wing_style.ani_state)
 		if(message)
-			to_chat(src, "<span class='warning'>You don't have a tail that supports this.</span>")
+			to_chat(src, "<span class='warning'>Ваш хвост такое не поддерживает.</span>")
 		return 0
 
 	var/new_flapping = isnull(setting) ? !flapping : setting
@@ -232,32 +232,32 @@
 	return 1
 
 /mob/living/carbon/human/verb/toggle_gender_identity_vr()
-	set name = "Set Gender Identity"
-	set desc = "Sets the pronouns when examined and performing an emote."
+	set name = "Установить Гендер"
+	set desc = "Установить местоимения в тексте вашего Осмотра и эмоутах."
 	set category = "IC"
-	var/new_gender_identity = input("Please select a gender Identity.") as null|anything in list(FEMALE, MALE, NEUTER, PLURAL, HERM)
+	var/new_gender_identity = input("Пожалуйста, выберите свой новый гендер.") as null|anything in list(FEMALE, MALE, NEUTER, PLURAL, HERM)
 	if(!new_gender_identity)
 		return 0
 	change_gender_identity(new_gender_identity)
 	return 1
 
 /mob/living/carbon/human/verb/switch_tail_layer()
-	set name = "Switch tail layer"
+	set name = "Сменить Слой Хвоста"
 	set category = "IC"
-	set desc = "Switch tail layer on top."
+	set desc = "Сменить преобладающий слой хвоста."
 	tail_alt = !tail_alt
 	update_tail_showing()
 	
 /mob/living/carbon/human/verb/hide_wings_vr()
-	set name = "Show/Hide wings"
+	set name = "Спрятать/Показать Крылья"
 	set category = "IC"
-	set desc = "Hide your wings, or show them if you already hid them."
+	set desc = "Спрятать крылья, или показать, если они уже запрятаны."
 	wings_hidden = !wings_hidden
 	update_wing_showing()
 	var/message = ""
 	if(!wings_hidden)
-		message = "reveals their wings!"
+		message = "раскрывает свои крылья!"
 	else
-		message = "hides their wings."
+		message = "прячет свои крылья."
 	visible_message("[src] [message]")
 	

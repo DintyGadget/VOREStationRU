@@ -31,16 +31,16 @@
 			if(loss_feedback_tag) feedback_set_details("round_end_result","[loss_feedback_tag]")
 
 /mob/living/proc/write_ambition()
-	set name = "Set Ambition"
+	set name = "Установить Амбиции"
 	set category = "IC"
 	set src = usr
 
 	if(!mind)
 		return
 	if(!is_special_character(mind))
-		to_chat(src, "<span class='warning'>Хотя у вас могут быть цели, этот глагол должен быть виден только антагонистам. Пожалуйста, сообщите об ошибке!</span>")
+		to_chat(src, "<span class='warning'>Хоть у Вас и могут быть цели, этот глагол должен быть виден только антагонистам. Пожалуйста, сообщите об ошибке!</span>")
 		return
-	var/new_ambitions = input(src, "Напишите короткое предложение о том, чего ваш персонаж надеется достичь сегодня как антагонист. Помните, что это совершенно необязательно. Оно будет показан в конце раунда всем остальным.", "Ambitions", mind.ambitions) as null|message
+	var/new_ambitions = input(src, "Напишите короткое предложение о том, чего ваш персонаж надеется достичь сегодня как антагонист. Помните, что это совершенно необязательно. Оно будет показан в конце раунда всем остальным.", "Амбиции", mind.ambitions) as null|message
 	if(isnull(new_ambitions))
 		return
 	new_ambitions = sanitize(new_ambitions)
@@ -49,4 +49,4 @@
 		to_chat(src, "<span class='notice'>Вы поставили перед собой цель '[new_ambitions]'.</span>")
 	else
 		to_chat(src, "<span class='notice'>Вы оставляете свои амбиции позади.</span>")
-	log_and_message_admins("has set their ambitions to now be: [new_ambitions].")
+	log_and_message_admins("установил новые амбиции: [new_ambitions].")

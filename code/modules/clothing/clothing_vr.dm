@@ -11,10 +11,10 @@
 
 /obj/item/clothing/shoes/New()
 	inside_emotes = list(
-		"<font color='red'>Вы чувствуете невесомость, пока [name] поднимаются наверх.</font>",
-		"<font color='red'>Волей-неволей, Вы двигаетесь вместе с шагами носителя [name].</font>",
-		"<font color='red'>Носитель [name] шагает, придавливая Вас.</font>",
-		"<font color='red'>[name] движутся вперёд, ступнями надавливая на Вас сверху.</font>"
+		"<font color='red'>Вы чувствуете невесомость, пока [name] поднимается наверх.</font>",
+		"<font color='red'>Волей-неволей, Вы двигаетесь вместе с шагами [name].</font>",
+		"<font color='red'>[name] шагает, придавливая Вас.</font>",
+		"<font color='red'>[name] движется вперёд, ступнями надавливая на Вас сверху.</font>"
 	)
 
 	..()
@@ -37,35 +37,35 @@
 		for(var/mob/M in src)
 			full++
 		if(full >= 2)
-			to_chat(user, "<span class='warning'>В [src] больше никто не поместится!</span>")
+			to_chat(user, "<span class='warning'>В [src.acase == "acase" ? src : src.acase] больше никто не поместится!</span>")
 		else
 			var/obj/item/weapon/holder/micro/holder = I
 			if(holder.held_mob && holder.held_mob in holder)
-				to_chat(holder.held_mob, "<span class='warning'>[user] запихивает Вас в [src]!</span>")
+				to_chat(holder.held_mob, "<span class='warning'>[user] запихивает Вас в [src.acase == "acase" ? src : src.acase]!</span>")
 				holder.held_mob.forceMove(src)
-				to_chat(user, "<span class='notice'>Вы запихиваете [holder.held_mob] в [src]!</span>")
+				to_chat(user, "<span class='notice'>Вы запихиваете [holder.held_mob] в [src.acase == "acase" ? src : src.acase]!</span>")
 	else
 		..()
 
 /obj/item/clothing/shoes/attack_self(var/mob/user)
 	for(var/mob/M in src)
 		M.forceMove(get_turf(user))
-		to_chat(M, "<span class='warning'>[user] вытряхивает Вас из [src]!</span>")
-		to_chat(user, "<span class='notice'>Вы вытряхиваете [M] из [src]!</span>")
+		to_chat(M, "<span class='warning'>[user] вытряхивает Вас из [src.gcase == "gcase" ? src : src.gcase]!</span>")
+		to_chat(user, "<span class='notice'>Вы вытряхиваете [M] из [src.gcase == "gcase" ? src : src.gcase]!</span>")
 
 	..()
 
 /obj/item/clothing/shoes/container_resist(mob/living/micro)
 	var/mob/living/carbon/human/macro = loc
 	if(!istype(macro))
-		to_chat(micro, "<span class='notice'>Вы начинаете выбираться из [src]!</span>")
+		to_chat(micro, "<span class='notice'>Вы начинаете выбираться из [src.gcase == "gcase" ? src : src.gcase]!</span>")
 		if(do_after(micro, 50, src))
-			to_chat(micro, "<span class='notice'>Вы выбираетесь из [src]!</span>")
+			to_chat(micro, "<span class='notice'>Вы выбираетесь из [src.gcase == "gcase" ? src : src.gcase]!</span>")
 			micro.forceMove(loc)
 		return
 
-	var/escape_message_micro = "Вы начинаете выбираться из [src]!"
-	var/escape_message_macro = "Кто-то пытается выбраться из Ваших [src]!"
+	var/escape_message_micro = "Вы начинаете выбираться из [src.gcase == "gcase" ? src : src.gcase]!"
+	var/escape_message_macro = "Кто-то пытается выбраться из Ваших [src.gcase == "gcase" ? src : src.gcase]!"
 	var/escape_time = 60
 
 	if(macro.shoes == src)
@@ -79,8 +79,8 @@
 		to_chat(macro, "<span class='danger'>Вы прижимаете сбежавшего ногой!</span>")
 		return
 
-	to_chat(micro, "<span class='notice'>Вы смогли выбраться из [src]!</span>")
-	to_chat(macro, "<span class='danger'>Кто-то сбежал из Ваших [src]!</span>")
+	to_chat(micro, "<span class='notice'>Вы смогли выбраться из [src.gcase == "gcase" ? src : src.gcase]!</span>")
+	to_chat(macro, "<span class='danger'>Кто-то сбежал из Ваших [src.gcase == "gcase" ? src : src.gcase]!</span>")
 	micro.forceMove(macro.loc)
 
 /obj/item/clothing/gloves
@@ -107,11 +107,11 @@
 	if(ishuman(src.loc))
 		var/mob/living/carbon/human/H = src.loc
 		if(H.shoes == src)
-			to_chat(H, "<font color='red'>Крохотное туловище [user] прижато к Вам внутри [src], дёргаясь!</font>")
+			to_chat(H, "<font color='red'>Крохотное туловище [user] прижато к Вам внутри [src.gcase == "gcase" ? src : src.gcase], дёргаясь!</font>")
 			to_chat(user, "<font color='red'>Ваше тело прижато к [H]! Не повезло Вам с размером!</font>")
 		else
-			to_chat(H, "<font color='red'>Туловище [user] дрыгается внутри [src]!</font>")
-			to_chat(user, "<font color='red'>Вы пытаетесь дрыгаться внутри [src], безуспешно.</font>")
+			to_chat(H, "<font color='red'>Туловище [user] дрыгается внутри [src.gcase == "gcase" ? src : src.gcase]!</font>")
+			to_chat(user, "<font color='red'>Вы пытаетесь дрыгаться внутри [src.gcase == "gcase" ? src : src.gcase], безуспешно.</font>")
 	else
 		src.visible_message("<font color='red'>[src] малость сдвигается!</font>")
 		to_chat(user, "<font color='red'>Вы оказываете противодействие [src]!</font>")

@@ -30,8 +30,8 @@
 
 // Armor Versions Here
 /obj/item/clothing/head/helmet/combat/crusader
-	name = "crusader helmet"
-	desc = "ye olde armored helmet"
+	name = "Шлем крестоносца"
+	desc = "Старый добрый шлем."
 	icon_state = "crusader"
 	icon = 'icons/obj/clothing/hats_vr.dmi'
 	icon_override = 'icons/obj/clothing/hats_vr.dmi'
@@ -39,8 +39,8 @@
 	siemens_coefficient = 2
 
 /obj/item/clothing/head/helmet/combat/bedevere
-	name = "bedevere's helmet"
-	desc = "ye olde armored helmet"
+	name = "Шлем Бедивера"
+	desc = "Старый добрый шлем."
 	icon_state = "bedevere_helmet"
 	icon = 'icons/obj/clothing/hats_vr.dmi'
 	icon_override = 'icons/obj/clothing/hats_vr.dmi'
@@ -55,8 +55,8 @@
 	toggle()
 
 /obj/item/clothing/head/helmet/combat/bedevere/verb/toggle()
-	set category = "Object"
-	set name = "Adjust helmet visor"
+	set category = "Объект"
+	set name = "Сдвинуть Забрало"
 	set src in usr
 
 	if(!base_state)
@@ -69,7 +69,7 @@
 			flags_inv |= (HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = base_state
 			tint = initial(tint)
-			to_chat(usr, "You flip the [src] down to protect yourself from the horrors of this universe. Narry a creature shall harm you with its beams of light.")
+			to_chat(usr, "Вы опускаете забрало [src.gcase], дабы защитить свой взор от ужасов этой вселенной. Никто теперь не сможет ранить Вас лучами света!")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		else
 			src.up = !src.up
@@ -77,7 +77,7 @@
 			flags_inv &= ~(HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = "[base_state]_up"
 			tint = TINT_NONE
-			to_chat(usr, "You push the [src] up out of your face, ineffectively clearing your vision.")
+			to_chat(usr, "Вы приподнимаете забрало [src.gcase].")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		update_clothing_icon()	//so our mob-overlays
 		if (ismob(src.loc)) //should allow masks to update when it is opened/closed
@@ -87,7 +87,7 @@
 
 // Costume Versions Here
 /obj/item/clothing/head/helmet/combat/crusader_costume
-	name = "шлем костюма крестоносца"
+	name = "Шлем костюма крестоносца"
 	desc = "Старый добрый шлем."
 	icon_state = "crusader"
 	icon = 'icons/obj/clothing/hats_vr.dmi'
@@ -96,7 +96,7 @@
 	siemens_coefficient = 1
 
 /obj/item/clothing/head/helmet/combat/bedevere_costume
-	name = "шлем костюма бедивера"
+	name = "Шлем костюма Бедивера"
 	desc = "Старый добрый шлем."
 	icon_state = "bedevere_helmet"
 	icon = 'icons/obj/clothing/hats_vr.dmi'
@@ -126,7 +126,7 @@
 			flags_inv |= (HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = base_state
 			tint = initial(tint)
-			to_chat(usr, "Вы опускаете забрало, дабы защитить свой взор от ужасов этой вселенной. Никто теперь не сможет ранить Вас лучами света!")
+			to_chat(usr, "Вы опускаете забрало [src.gcase], дабы защитить свой взор от ужасов этой вселенной. Никто теперь не сможет ранить Вас лучами света!")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		else
 			src.up = !src.up
@@ -134,7 +134,7 @@
 			flags_inv &= ~(HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = "[base_state]_up"
 			tint = TINT_NONE
-			to_chat(usr, "Вы приподнимаете забрало.")
+			to_chat(usr, "Вы приподнимаете забрало [src.gcase].")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		update_clothing_icon()	//so our mob-overlays
 		if (ismob(src.loc)) //should allow masks to update when it is opened/closed

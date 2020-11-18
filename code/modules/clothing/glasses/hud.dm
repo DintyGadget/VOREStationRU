@@ -1,11 +1,11 @@
 /obj/item/clothing/glasses/hud
 	name = "HUD"
-	desc = "Индикатор, отображающий важную информацию на стекле (почти) в реальном времени."
+	desc = "Индикатор, отображающий важную информацию на стекле в (почти) реальном времени."
 	flags = 0 //doesn't protect eyes because it's a monocle, duh
 	origin_tech = list(TECH_MAGNET = 3, TECH_BIO = 2)
 
 /obj/item/clothing/glasses/hud/health
-	name = "медицинский HUD"
+	name = "Медицинский HUD"
 	desc = "Индикатор, сканирующий людей в поле зрения и отображающий на стекле информацию об их состоянии."
 	icon_state = "healthhud"
 	item_state_slots = list(slot_r_hand_str = "headset", slot_l_hand_str = "headset")
@@ -13,7 +13,7 @@
 	enables_planes = list(VIS_CH_STATUS,VIS_CH_HEALTH)
 
 /obj/item/clothing/glasses/hud/health/prescription
-	name = "медицинский HUD (близ.)"
+	name = "Медицинский HUD (близ.)"
 	desc = "Медицинский HUD, интегрированный в рецептурные очки."
 	prescription = 1
 	icon_state = "healthhudpresc"
@@ -35,7 +35,7 @@
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 
 /obj/item/clothing/glasses/hud/security/jensenshades
-	name = "поляризованные очки"
+	name = "Поляризованные очки"
 	desc = "Поляризованные очки, предназначенные для расширения объема получаемой зрением информации."
 	icon_state = "jensenshades"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")

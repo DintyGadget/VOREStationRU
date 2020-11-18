@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/arm_guard
-	name = "arm guards"
-	desc = "These arm guards will protect your hands and arms."
+	name = "Защитные перчатки"
+	desc = "Эти перчатки защищают Ваши ладони и руки."
 	body_parts_covered = HANDS|ARMS
 	overgloves = 1
 	punch_force = 3
@@ -21,7 +21,7 @@
 		return 1
 
 /obj/item/clothing/gloves/arm_guard/laserproof
-	name = "абляционные перчатки"
+	name = "Абляционные перчатки"
 	desc = "Эти перчатки защищают ладони и руки от энергетического оружия."
 	icon_state = "arm_guards_laser"
 	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
@@ -29,7 +29,7 @@
 	armor = list(melee = 10, bullet = 10, laser = 80, energy = 50, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/arm_guard/bulletproof
-	name = "пуленепробиваемые перчатки"
+	name = "Пуленепробиваемые перчатки"
 	desc = "Эти перчатки защищают ладони и руки от баллистического оружия."
 	icon_state = "arm_guards_bullet"
 	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
@@ -37,7 +37,7 @@
 	armor = list(melee = 10, bullet = 80, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/arm_guard/riot
-	name = "милицейские перчатки"
+	name = "Милицейские перчатки"
 	desc = "Эти перчатки защищают ладони и руки от оружия ближнего боя."
 	icon_state = "arm_guards_riot"
 	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
@@ -45,7 +45,7 @@
 	armor = list(melee = 80, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/arm_guard/combat
-	name = "боевые перчатки"
+	name = "Боевые перчатки"
 	desc = "Эти перчатки защищают ладони и руки от различного оружия."
 	icon_state = "arm_guards_combat"
 	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
@@ -53,8 +53,8 @@
 	armor = list(melee = 50, bullet = 50, laser = 50, energy = 30, bomb = 30, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/arm_guard/flexitac
-	name = "тактические перчатки"
-	desc = "Эти перчатки защищают ладони и руки от различного оружия, при этом позволяя свободно передвигаться."
+	name = "Тактические перчатки"
+	desc = "Эти перчатки защищают ладони и руки от различного оружия, при этом не ограничивая передвижение."
 	icon_state = "arm_guards_flexitac"
 	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
 	siemens_coefficient = 0.6

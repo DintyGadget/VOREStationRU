@@ -59,27 +59,27 @@
 
 
 /mob/living/silicon/robot/verb/robot_nom(var/mob/living/T in living_mobs(1))
-	set name = "Robot Nom"
+	set name = "Робо Ням"
 	set category = "IC"
-	set desc = "Allows you to eat someone."
+	set desc = "Позволяет кого-нибудь скушать."
 
 	if (stat != CONSCIOUS)
 		return
 	return feed_grabbed_to_self(src,T)
 
 /mob/living/silicon/robot/proc/rest_style()
-	set name = "Switch Rest Style"
+	set name = "Сменить Позу Отдыха"
 	set category = "IC"
-	set desc = "Select your resting pose."
+	set desc = "Выбрать свою позу отдыха."
 	sitting = FALSE
 	bellyup = FALSE
-	var/choice = alert(src, "Select resting pose", "", "Resting", "Sitting", "Belly up")
+	var/choice = alert(src, "Выберите позыу отдыха", "", "Лёжа", "Сидя", "Пузик кверху")
 	switch(choice)
-		if("Resting")
+		if("Лёжа")
 			return 0
-		if("Sitting")
+		if("Сидя")
 			sitting = TRUE
-		if("Belly up")
+		if("Пузик кверху")
 			bellyup = TRUE
 
 /mob/living/silicon/robot/updateicon()

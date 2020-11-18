@@ -7,9 +7,9 @@
 // Simple nom proc for if you get ckey'd into a simple_mob mob! Avoids grabs.
 //
 /mob/living/simple_mob/proc/animal_nom(mob/living/T in living_mobs(1))
-	set name = "Animal Nom"
+	set name = "Животный Ням"
 	set category = "IC"
-	set desc = "Since you can't grab, you get a verb!"
+	set desc = "Раз у Вас нет захвата, вот Вам глагол!"
 
 	if(stat != CONSCIOUS)
 		return
@@ -18,7 +18,7 @@
 		// Mice can't eat logged out players!
 		return
 	if(client && IsAdvancedToolUser())
-		to_chat(src, "<span class='warning'>Put your hands to good use instead!</span>")
+		to_chat(src, "<span class='warning'>Займитесь своими руками лучше чем-нибудь полезным!</span>")
 		return
 	feed_grabbed_to_self(src,T)
 	update_icon()

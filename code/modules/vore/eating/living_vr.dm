@@ -75,8 +75,8 @@
 		var/obj/belly/B = new /obj/belly(src)
 		vore_selected = B
 		B.immutable = TRUE
-		B.name = "Stomach"
-		B.desc = "It appears to be rather warm and wet. Makes sense, considering it's inside \the [name]."
+		B.name = "Живот"
+		B.desc = "Довольно влажно и тепло. Ожидаемо, если учитывать, что это [name]."
 		B.can_taste = TRUE
 		return TRUE
 
@@ -106,44 +106,44 @@
 			///// If user clicked on themselves
 			if(src == G.assailant && is_vore_predator(src))
 				if(!G.affecting.devourable)
-					to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
-					log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					to_chat(user, "<span class='notice'>Это существо нельзя поглотить.</span>")
+					log_and_message_admins("[key_name_admin(src)] попытался поглотить [key_name_admin(G.affecting)] вопреки предпочтениям ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
 					return FALSE
 
 				if(feed_grabbed_to_self(src, G.affecting))
 					qdel(G)
 					return TRUE
 				else
-					log_debug("[attacker] attempted to feed [G.affecting] to [user] ([user.type]) but it failed.")
+					log_debug("[attacker] попытался скормить [G.affecting] [user] ([user.type]), но не смог.")
 
 			///// If user clicked on their grabbed target
 			else if((src == G.affecting) && (attacker.a_intent == I_GRAB) && (attacker.zone_sel.selecting == BP_TORSO) && (is_vore_predator(G.affecting)))
 				if(!G.affecting.feeding)
-					to_chat(user, "<span class='notice'>[G.affecting] isn't willing to be fed.</span>")
-					log_and_message_admins("[key_name_admin(src)] attempted to feed themselves to [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					to_chat(user, "<span class='notice'>[G.affecting] не хочет быть покормленным.</span>")
+					log_and_message_admins("[key_name_admin(src)] попытался скормить себя [key_name_admin(G.affecting)] вопреки предпочтениям ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
 					return FALSE
 
 				if(attacker.feed_self_to_grabbed(attacker, G.affecting))
 					qdel(G)
 					return TRUE
 				else
-					log_debug("[attacker] attempted to feed [user] to [G.affecting] ([G.affecting ? G.affecting.type : "null"]) but it failed.")
+					log_debug("[attacker] попытался скормить [user] [G.affecting] ([G.affecting ? G.affecting.type : "null"]), но не смог.")
 
 			///// If user clicked on anyone else but their grabbed target
 			else if((src != G.affecting) && (src != G.assailant) && (is_vore_predator(src)))
 				if(!feeding)
-					to_chat(user, "<span class='notice'>[src] isn't willing to be fed.</span>")
-					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against predator's prefs ([src ? ADMIN_JMP(src) : "null"])")
+					to_chat(user, "<span class='notice'>[src] не хочет быть покормленным.</span>")
+					log_and_message_admins("[key_name_admin(attacker)] попытался скормить [key_name_admin(G.affecting)] [key_name_admin(src)] вопреки предпочтениям хищника ([src ? ADMIN_JMP(src) : "null"])")
 					return FALSE
 				if(!(G.affecting.devourable))
-					to_chat(user, "<span class='notice'>[G.affecting] isn't able to be devoured.</span>")
-					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against prey's prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
+					to_chat(user, "<span class='notice'>[G.affecting] не может быть поглощен.</span>")
+					log_and_message_admins("[key_name_admin(attacker)] попытался скормить [key_name_admin(G.affecting)] [key_name_admin(src)] вопреки предпочтениям жертвы ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
 					return FALSE
 				if(attacker.feed_grabbed_to_other(attacker, G.affecting, src))
 					qdel(G)
 					return TRUE
 				else
-					log_debug("[attacker] attempted to feed [G.affecting] to [src] ([type]) but it failed.")
+					log_debug("[attacker] попытался скормить [G.affecting] [src] ([type]), но не смог.")
 
 	//Handle case: /obj/item/weapon/holder
 	else if(istype(I, /obj/item/weapon/holder))
@@ -160,20 +160,20 @@
 						H.held_mob = null
 			return TRUE //return TRUE to exit upper procs
 		else
-			log_debug("[attacker] attempted to feed [H.contents] to [src] ([type]) but it failed.")
+			log_debug("[attacker] попытался скормить [H.contents] [src] ([type]), но не смог.")
 
 	//Handle case: /obj/item/device/radio/beacon
 	else if(istype(I,/obj/item/device/radio/beacon))
 		var/confirm = alert(user,
-			"[src == user ? "Eat the beacon?" : "Feed the beacon to [src]?"]",
+			"[src == user ? "Съесть маячок?" : "Скормить маячок [src]?"]",
 			"Confirmation",
 			"Yes!", "Cancel")
 		if(confirm == "Yes!")
-			var/obj/belly/B = input("Which belly?", "Select A Belly") as null|anything in vore_organs
+			var/obj/belly/B = input("В какой живот?", "Выбор Живота") as null|anything in vore_organs
 			if(!istype(B))
 				return TRUE
-			visible_message("<span class='warning'>[user] is trying to stuff a beacon into [src]'s [lowertext(B.name)]!</span>",
-				"<span class='warning'>[user] is trying to stuff a beacon into you!</span>")
+			visible_message("<span class='warning'>[user] пытается запихать маячок в [lowertext(B.name)] [src]!</span>",
+				"<span class='warning'>[user] пытается запихать в Вас маячок!</span>")
 			if(do_after(user,30,src))
 				user.drop_item()
 				I.forceMove(B)
@@ -327,9 +327,9 @@
 // Clearly super important. Obviously.
 //
 /mob/living/proc/lick(mob/living/tasted in living_mobs(1))
-	set name = "Lick"
+	set name = "Лизнуть"
 	set category = "IC"
-	set desc = "Lick someone nearby!"
+	set desc = "Лизнуть кого-то поблизости!"
 	set popup_menu = FALSE // Stop licking by accident!
 
 	if(!istype(tasted))
@@ -340,7 +340,7 @@
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 
-	visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+	visible_message("<span class='warning'>[src] лижет [tasted]!</span>","<span class='notice'>Вы лижете [tasted]. На вкус как [tasted.get_taste_message()].</span>","<b>Хлюп!</b>")
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -353,24 +353,24 @@
 	else
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
-			taste_message += "a normal [H.custom_species ? H.custom_species : H.species.name]"
+			taste_message += "обыкновенный [H.custom_species ? H.custom_species : H.species.name]"
 		else
-			taste_message += "a plain old normal [src]"
+			taste_message += "обыкновенный [src]"
 
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 		if(H.touching.reagent_list.len) //Just the first one otherwise I'll go insane.
 			var/datum/reagent/R = H.touching.reagent_list[1]
-			taste_message += " You also get the flavor of [R.taste_description] from something on them"
+			taste_message += " Вы также слышите привкус [R.taste_description]."
 	return taste_message
 
 
 
 //This is just the above proc but switched about.
 /mob/living/proc/smell(mob/living/smelled in living_mobs(1))
-	set name = "Smell"
+	set name = "Понюхать"
 	set category = "IC"
-	set desc = "Smell someone nearby!"
+	set desc = "Понюхать кого-нибудь поблизости!"
 	set popup_menu = FALSE
 
 	if(!istype(smelled))
@@ -379,7 +379,7 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+	visible_message("<span class='warning'>[src] нюхает [smelled]!</span>","<span class='notice'>Вы нюхаете [smelled]. На запах будто [smelled.get_smell_message()].</span>","<b>Мфф!</b>")
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
@@ -391,9 +391,9 @@
 	else
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
-			smell_message += "a normal [H.custom_species ? H.custom_species : H.species.name]"
+			smell_message += "обыкновенный [H.custom_species ? H.custom_species : H.species.name]"
 		else
-			smell_message += "a plain old normal [src]"
+			smell_message += "обыкновенный [src]"
 
 	return smell_message
 
@@ -559,31 +559,31 @@
 	return perform_the_nom(user, prey, user, belly, delay = 1) //1/10th of a second is probably fine.
 
 /mob/living/proc/glow_toggle()
-	set name = "Glow (Toggle)"
-	set category = "Abilities"
-	set desc = "Toggle your glowing on/off!"
+	set name = "Светиться (Переключить)"
+	set category = "Способности"
+	set desc = "Сключить или выключить Ваше свечение!"
 
 	//I don't really see a point to any sort of checking here.
 	//If they're passed out, the light won't help them. Same with buckled. Really, I think it's fine to do this whenever.
 	glow_toggle = !glow_toggle
 
-	to_chat(src,"<span class='notice'>You <b>[glow_toggle ? "en" : "dis"]</b>able your body's glow.</span>")
+	to_chat(src,"<span class='notice'>Вы <b>[glow_toggle ? "в" : "вы"]</b>ключаете свечение Вашего тела.</span>")
 
 /mob/living/proc/glow_color()
-	set name = "Glow (Set Color)"
-	set category = "Abilities"
-	set desc = "Pick a color for your body's glow."
+	set name = "Светиться (Установить Цвет)"
+	set category = "Способности"
+	set desc = "Выбрать цвет свечения Вашего тела."
 
 	//Again, no real need for a check on this. I'm unsure how it could be somehow abused.
 	//Even if they open the box 900 times, who cares, they get the wrong color and do it again.
-	var/new_color = input(src,"Select a new color","Body Glow",glow_color) as color
+	var/new_color = input(src,"Выберите новый цвет.","Свечение Тела",glow_color) as color
 	if(new_color)
 		glow_color = new_color
 
 /mob/living/proc/eat_trash()
-	set name = "Eat Trash"
-	set category = "Abilities"
-	set desc = "Consume held garbage."
+	set name = "Есть Мусор"
+	set category = "Способности"
+	set desc = "Поглотить мусор в руке."
 
 	if(!vore_selected)
 		to_chat(src,"<span class='warning'>You either don't have a belly selected, or don't have a belly!</span>")
@@ -691,9 +691,9 @@
 	return
 
 /mob/living/proc/eat_minerals() //Actual eating abstracted so the user isn't given a prompt due to an argument in this verb.
-	set name = "Eat Minerals"
-	set category = "Abilities"
-	set desc = "Consume held raw ore, gems and refined minerals. Snack time!"
+	set name = "Есть Минералы"
+	set category = "Способности"
+	set desc = "Поглотить сырую руду, самоцветы или обработанные ресурсы в руке. Пора перекусить!"
 
 	handle_eat_minerals()
 
@@ -818,15 +818,15 @@
 		to_chat(src, "<span class='notice'>You pause for a moment to examine [I] and realize it's not even worth the energy to chew.</span>") //If it ain't ore or the type of sheets we can eat, bugger off!
 
 /mob/living/proc/switch_scaling()
-	set name = "Switch scaling mode"
+	set name = "Переключить Режим Скалирования"
 	set category = "Настройки"
-	set desc = "Switch sharp/fuzzy scaling for current mob."
+	set desc = "Переключить режим скалирования персонажа между резким и расплывчатым."
 	appearance_flags ^= PIXEL_SCALE
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
 	if(showvoreprefs)
-		. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Мех. настройки Vore\]</a></span>"
+		. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Механические настройки vore\]</a></span>"
 
 /mob/living/Topic(href, href_list)	//Can't find any instances of Topic() being overridden by /mob/living in polaris' base code, even though /mob/living/carbon/human's Topic() has a ..() call
 	if(href_list["vore_prefs"])
@@ -846,7 +846,7 @@
 	dispvoreprefs += "<b>Пожирание:</b> [devourable ? "Вкл" : "Выкл"]<br>"
 	dispvoreprefs += "<b>Питаемость:</b> [feeding ? "Вкл" : "Выкл"]<br>"
 	dispvoreprefs += "<b>Разрешение на поглощение:</b> [absorbable ? "Разрешено" : "Запрещено"]<br>"
-	dispvoreprefs += "<b>Leaves Remains:</b> [digest_leave_remains ? "Вкл" : "Выкл"]<br>"
+	dispvoreprefs += "<b>Оставить останки:</b> [digest_leave_remains ? "Вкл" : "Выкл"]<br>"
 	dispvoreprefs += "<b>Vore для мобов:</b> [allowmobvore ? "Вкл" : "Выкл"]<br>"
 	dispvoreprefs += "<b>Разрешение на лечение:</b> [permit_healbelly ? "Разрешено" : "Запрещено"]<br>"
 	dispvoreprefs += "<b>Спонтанная добыча vore:</b> [can_be_drop_prey ? "Вкл" : "Выкл"]<br>"

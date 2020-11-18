@@ -2,7 +2,7 @@
 
 /obj/item/clothing/gloves/yellow
 	desc = "Эти перчатки защищают носителя от удара током."
-	name = "изолирующие перчатки"
+	name = "Изолирующие перчатки"
 	icon_state = "yellow"
 	siemens_coefficient = 0
 	permeability_coefficient = 0.05
@@ -11,7 +11,7 @@
 
 /obj/item/clothing/gloves/fyellow                             //Cheap Chinese Crap
 	desc = "Эти перчатки - дешевая копия настоящих изолирующих перчаток. Что могло бы пойти не так?"
-	name = "дешевые изолирующие перчатки"
+	name = "Дешёвые изолирующие перчатки"
 	icon_state = "yellow"
 	siemens_coefficient = 1			//Set to a default of 1, gets overridden in initialize()
 	permeability_coefficient = 0.05
@@ -26,7 +26,7 @@
 
 /obj/item/clothing/gloves/black
 	desc = "Эти перчатки толстые и огнеустойчивые."
-	name = "черные перчатки"
+	name = "Чёрные перчатки"
 	icon_state = "black"
 	permeability_coefficient = 0.05
 
@@ -36,53 +36,53 @@
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 
 /obj/item/clothing/gloves/orange
-	name = "оранжевые перчатки"
+	name = "Оранжевые перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "orange"
 
 /obj/item/clothing/gloves/red
-	name = "красные перчатки"
+	name = "Красные перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "red"
 
 /obj/item/clothing/gloves/rainbow
-	name = "радужные перчатки"
+	name = "Радужные перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "rainbow"
 
 /obj/item/clothing/gloves/blue
-	name = "синие перчатки"
+	name = "Синие перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "blue"
 
 /obj/item/clothing/gloves/purple
-	name = "фиолетовые перчатки"
+	name = "Фиолетовые перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "purple"
 
 /obj/item/clothing/gloves/green
-	name = "зеленые перчатки"
+	name = "Зелёные перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "green"
 
 /obj/item/clothing/gloves/grey
-	name = "серые перчатки"
+	name = "Серые перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "gray"
 
 /obj/item/clothing/gloves/light_brown
-	name = "светло-коричневые перчатки"
+	name = "Светло-коричневые перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "lightbrown"
 
 /obj/item/clothing/gloves/brown
-	name = "коричневые перчатки"
+	name = "Коричневые перчатки"
 	desc = "Пара перчаток, в них нет ничего особенного."
 	icon_state = "brown"
 
 /obj/item/clothing/gloves/evening
 	desc = "Пара перчаток длиной по локоть. Стильно!"
-	name = "вечерние перчатки"
+	name = "Вечерние перчатки"
 	icon_state = "evening_gloves"
 	addblends = "evening_gloves_a"
 
@@ -93,6 +93,6 @@
 
 obj/item/clothing/gloves/fingerless
 	desc = "Пара перчаток, совсем не защищающих пальцы."
-	name = "перчатки без пальцев"
+	name = "Перчатки без пальцев"
 	icon_state = "fingerlessgloves"
 	fingerprint_chance = 100

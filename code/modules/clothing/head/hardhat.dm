@@ -1,5 +1,5 @@
 /obj/item/clothing/head/hardhat
-	name = "каска"
+	name = "Каска"
 	desc = "Головной убор со встроенным фонариком, защищающий голову при работе в опасных условиях."
 	icon_state = "hardhat0_yellow"
 	brightness_on = 4 //luminosity when on
@@ -15,11 +15,11 @@
 
 /obj/item/clothing/head/hardhat/orange
 	icon_state = "hardhat0_orange"
-	name = "оранжевая каска"
+	name = "Оранжевая каска"
 
 /obj/item/clothing/head/hardhat/red
 	icon_state = "hardhat0_red"
-	name = "пожарная каска"
+	name = "Пожарная каска"
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	min_pressure_protection = 0.2* ONE_ATMOSPHERE
@@ -28,21 +28,21 @@
 
 /obj/item/clothing/head/hardhat/white
 	icon_state = "hardhat0_white"
-	name = "глянцевая каска"
+	name = "Глянцевая каска"
 	heat_protection = HEAD
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
 	min_pressure_protection = 0.2* ONE_ATMOSPHERE
 	max_pressure_protection = 20 * ONE_ATMOSPHERE
 
 /obj/item/clothing/head/hardhat/dblue
-	name = "синяя каска"
+	name = "Синяя каска"
 	icon_state = "hardhat0_dblue"
 
 /obj/item/clothing/head/hardhat/ranger
 	var/hatcolor = "white"
-	name = "шлем рейнджера"
+	name = "Шлем рейнджера"
 	desc = "Особый шлем Гоу-Гоу ГЭР-Рейнджеров, предоставляющий защиту в вакууме и воздух, а также фильтрующий газы. \
-	Обладает инфракрасными визором и, иногда, мезонным сканером для поиска пробитий, а также радио... Ну, в сериале, конечно. У этого же шлема есть только фонарик."
+	Обладает инфракрасными визором и, иногда, мезонным визором для поиска пробитий, а также радио... Ну, в сериале, конечно. У этого же шлема есть только фонарик."
 	icon = 'icons/obj/clothing/ranger.dmi'
 	icon_state = "ranger_helmet"
 	light_overlay = "helmet_light"
@@ -55,24 +55,24 @@
 
 /obj/item/clothing/head/hardhat/ranger/black
 	hatcolor = "black"
-	name = "шлем черного рейнджера"
+	name = "Шлем чёрного рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/pink
 	hatcolor = "pink"
-	name = "шлем розового рейнджера"
+	name = "Шлем розового рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/green
 	hatcolor = "green"
-	name = "шлем зеленого рейнджера"
+	name = "Шлем зелёного рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/cyan
 	hatcolor = "cyan"
-	name = "шлем бирюзового рейнджера"
+	name = "Шлем бирюзового рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/orange
 	hatcolor = "orange"
-	name = "шлем оранжевого рейнджера"
+	name = "Шлем оранжевого рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/yellow
 	hatcolor = "yellow"
-	name = "шлем желтого рейнджера"
+	name = "Шлем жёлтого рейнджера"

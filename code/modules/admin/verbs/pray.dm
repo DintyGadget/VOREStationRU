@@ -1,6 +1,6 @@
 /mob/verb/pray(msg as text)
 	set category = "IC"
-	set name = "Молиться богам"
+	set name = "Молиться Богам"
 
 	if(say_disabled)	//This is here to try to identify lag problems
 		to_chat(usr, "<font color='red'>Речь в настоящее время отключена администратором.</font>")
@@ -13,7 +13,7 @@
 		if(msg)
 			client.handle_spam_prevention(MUTE_PRAY)
 			if(usr.client.prefs.muted & MUTE_PRAY)
-				to_chat(usr, "<font color='red'> Вы не можете молиться (мут).</font>")
+				to_chat(usr, "<font color='red'>Вы не можете молиться (мут).</font>")
 				return
 
 	var/image/cross = image('icons/obj/storage.dmi',"bible")

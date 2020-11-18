@@ -80,7 +80,7 @@
 		M.loc = src.loc
 		for(var/mob/N in viewers(src, null))
 			if(N.client)
-				N.show_message(text("<font color='red'><B>[M] bursts out of [src]!</B></font>"), 2)
+				N.show_message(text("<font color='red'><B>[M] вылезает из [src]!</B></font>"), 2)
 	..()
 
 /mob/living/carbon/attack_hand(mob/M as mob)
@@ -91,7 +91,7 @@
 		if (H.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(temp && !temp.is_usable())
-			to_chat(H, "<font color='red'>You can't use your [temp.name]</font>")
+			to_chat(H, "<font color='red'>Вы не можете использовать [temp.name].</font>")
 			return
 
 	return
@@ -108,21 +108,21 @@
 	var/weaken_dur = (rand(2,4)-severity)*species.emp_stun_mod //0-3 knockdown, on par with.. you get the idea
 	var/blind_dur = (rand(3,6)-severity)*species.emp_stun_mod //0-5 blind
 	if(species.emp_sensitivity) //receive warning message and basic effects
-		to_chat(src, "<span class='danger'><B>*BZZZT*</B></span>")
+		to_chat(src, "<span class='danger'><B>*БЗЗЗТ*</B></span>")
 		switch(severity)
 			if(1)
-				to_chat(src, "<span class='danger'>DANGER: Extreme EM flux detected!</span>")
+				to_chat(src, "<span class='danger'>ОПАСНОСТЬ: Обнаружен ЭМ поток экстремальной мощности!</span>")
 			if(2)
-				to_chat(src, "<span class='danger'>Danger: High EM flux detected!</span>")
+				to_chat(src, "<span class='danger'>Опасность: Обнаружен ЭМ поток высокой мощности!</span>")
 			if(3)
-				to_chat(src, "<span class='danger'>Warning: Moderate EM flux detected!</span>")
+				to_chat(src, "<span class='danger'>Внимание: Обнаружен ЭМ поток средней мощности!</span>")
 			if(4)
-				to_chat(src, "<span class='danger'>Warning: Minor EM flux detected!</span>")
+				to_chat(src, "<span class='danger'>Внимание: Обнаружен ЭМ поток слабой мощности!</span>")
 		if(prob(90-(10*severity))) //50-80% chance to fire an emote. most are harmless, but vomit might reduce your nutrition level which could suck (so the whole thing is padded out with extras)
 			src.emote(pick("twitch", "twitch_v", "choke", "pale", "blink", "blink_r", "shiver", "sneeze", "vomit", "gasp", "cough", "drool"))
 		//stun effects block, effects vary wildly
 		if(species.emp_sensitivity & EMP_PAIN)
-			to_chat(src, "<span class='danger'>A wave of intense pain washes over you.</span>")
+			to_chat(src, "<span class='danger'>Вас накрывает волна невыносимой боли.</span>")
 			src.adjustHalLoss(agony_str)
 		if(species.emp_sensitivity & EMP_BLIND)
 			if(blind_dur >= 1) //don't flash them unless they actually roll a positive blind duration
@@ -133,11 +133,11 @@
 			src.ear_deaf = max(src.ear_deaf,deafen_dur)
 		if(species.emp_sensitivity & EMP_CONFUSE)
 			if(confuse_dur >= 1)
-				to_chat(src, "<span class='danger'>Oh god, everything's spinning!</span>")
+				to_chat(src, "<span class='danger'>О боже, всё кружится!</span>")
 			Confuse(max(0,confuse_dur))
 		if(species.emp_sensitivity & EMP_WEAKEN)
 			if(weaken_dur >= 1)
-				to_chat(src, "<span class='danger'>Your limbs go slack!</span>")
+				to_chat(src, "<span class='danger'>Ваши конечности сдают!</span>")
 			Weaken(max(0,weaken_dur))
 		//physical damage block, deals (minor-4) 5-15, 10-20, 15-25, 20-30 (extreme-1) of *each* type
 		if(species.emp_sensitivity & EMP_BRUTE_DMG)
@@ -167,13 +167,13 @@
 	playsound(src, "sparks", 50, 1, -1)
 	if (shock_damage > 15)
 		src.visible_message(
-			"<span class='warning'>[src] ударило током[source ? " [source]" : ""]!</span>", \
+			"<span class='warning'>[src] ударило током [source ? " [source]" : ""]!</span>", \
 			"<span class='danger'>Вы чувствуете мощный удар шоком по всему телу!</span>", \
 			"<span class='warning'>Вы слышите тяжелый электрический треск.</span>" \
 		)
 	else
 		src.visible_message(
-			"<span class='warning'>[src] шокировало[source ? " [source]" : ""].</span>", \
+			"<span class='warning'>[src] шокировало [source ? " [source]" : ""].</span>", \
 			"<span class='warning'>Вы чувствуете, как шок проходит по всему телу.</span>", \
 			"<span class='warning'>Вы слышите какой-то треск.</span>" \
 		)
@@ -266,7 +266,7 @@
 					M.IgniteMob()
 					if (M.on_fire)
 						M.visible_message("<span class='danger'>Огонь распространяется от [src] до [M]!</span>",
-						"<span class='danger'>Огонь распространяется и на вас!</span>")
+						"<span class='danger'>Огонь распространяется и на Вас!</span>")
 					else
 						src.adjust_fire_stacks(-0.5) //Less effective than stop, drop, and roll - also accounting for the fact that it takes half as long.
 						if (src.fire_stacks <= 0)
@@ -291,8 +291,8 @@
 				if(src.sleeping == 0)
 					src.resting = 0
 				if(H) H.in_stasis = 0 //VOREStation Add - Just In Case
-				M.visible_message("<span class='notice'>[M] трясет и пытается разбудить [src]!</span>", \
-									"<span class='notice'>Вы трясете и пытаетесь разбудить [src]!</span>")
+				M.visible_message("<span class='notice'>[M] трясёт и пытается разбудить [src]!</span>", \
+									"<span class='notice'>Вы трясёте и пытаетесь разбудить [src]!</span>")
 			else
 				var/mob/living/carbon/human/hugger = M
 				//var/datum/gender/TM = gender_datums[M.get_visible_gender()]
@@ -309,8 +309,8 @@
 				else if(istype(hugger))
 					hugger.species.hug(hugger,src)
 				else
-					M.visible_message("<span class='notice'>[M] hugs [src] to make [T.him] feel better!</span>", \
-								"<span class='notice'>You hug [src] to make [T.him] feel better!</span>")
+					M.visible_message("<span class='notice'>[M] обнимает [src], чтобы поднять [T.him] настроение!</span>", \
+								"<span class='notice'>Вы обнимаете [src], чтобы поднять [T.him] настроение!</span>")
 				if(M.fire_stacks >= (src.fire_stacks + 3))
 					src.adjust_fire_stacks(1)
 					M.adjust_fire_stacks(-1)
@@ -392,15 +392,15 @@
 			temp = rand(120, 160)
 			return num2text(method ? temp : temp + rand(-10, 10))
 		if(PULSE_THREADY)
-			return method ? ">250" : "extremely weak and fast, patient's artery feels like a thread"
+			return method ? ">250" : "крайне слабый и быстрый, артерия пациента ощущается как нить"
 //			output for machines^	^^^^^^^output for people^^^^^^^^^
 
 /mob/living/carbon/verb/mob_sleep()
-	set name = "Sleep"
+	set name = "Спать"
 	set category = "IC"
 
 	if(usr.sleeping)
-		to_chat(usr, "<font color='red'>Вы уже спите</font>")
+		to_chat(usr, "<font color='red'>Вы уже спите.</font>")
 		return
 	if(alert(src,"Вы уверены, что хотите немного поспать?","Спать","Да","Нет") == "Да")
 		usr.AdjustSleeping(20)
@@ -419,7 +419,7 @@
 	if(buckled)
 		return 0
 	stop_pulling()
-	to_chat(src, "<span class='warning'>You slipped on [slipped_on]!</span>")
+	to_chat(src, "<span class='warning'>Вы подскользнулись на [slipped_on]!</span>")
 	playsound(src, 'sound/misc/slip.ogg', 50, 1, -3)
 	Weaken(FLOOR(stun_duration/2, 1))
 	return 1

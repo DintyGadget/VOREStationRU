@@ -2,24 +2,24 @@
 	var/datum/language/default_language
 
 /mob/living/verb/set_default_language(language as null|anything in languages)
-	set name = "Set Default Language"
+	set name = "Установить Основной Язык"
 	set category = "IC"
 
 	if (only_species_language && language != GLOB.all_languages[src.species_language])
-		to_chat(src, "<span class='notice'>You can only speak your species language, [src.species_language].</span>")
+		to_chat(src, "<span class='notice'>Вы знаете только язык Вашей расы, [src.species_language].</span>")
 		return 0
 
 	if(language == GLOB.all_languages[src.species_language])
-		to_chat(src, "<span class='notice'>You will now speak your standard default language, [language ? language : "common"], if you do not specify a language when speaking.</span>")
+		to_chat(src, "<span class='notice'>Вы теперь будете разговаривать на своём основном языке, [language ? language : "Общий"], если не укажете в сообщении другой язык.</span>")
 	else if (language)
 
 		if(language && !can_speak(language))
-			to_chat(src, "<span class='notice'>You are unable to speak that language.</span>")
+			to_chat(src, "<span class='notice'>Вы не можете говорить на этом языке.</span>")
 			return
 
-		to_chat(src, "<span class='notice'>You will now speak [language] if you do not specify a language when speaking.</span>")
+		to_chat(src, "<span class='notice'>Вы теперь будете разговаривать на языке [language], если не укажете в сообщении другой язык.</span>")
 	else
-		to_chat(src, "<span class='notice'>You will now speak whatever your standard default language is if you do not specify one when speaking.</span>")
+		to_chat(src, "<span class='notice'>Вы теперь будете разговаривать на своём основном языке, если не укажете в сообщении другой язык.</span>")
 	default_language = language
 
 // Silicons can't neccessarily speak everything in their languages list
@@ -27,10 +27,10 @@
 	..()
 
 /mob/living/verb/check_default_language()
-	set name = "Check Default Language"
+	set name = "Проверить Основной Язык"
 	set category = "IC"
 
 	if(default_language)
-		to_chat(src, "<span class='notice'>You are currently speaking [default_language] by default.</span>")
+		to_chat(src, "<span class='notice'>Вы сейчас говорите на языке [default_language] по умолчанию.</span>")
 	else
-		to_chat(src, "<span class='notice'>Your current default language is your species or mob type default.</span>")
+		to_chat(src, "<span class='notice'>Ваш текущий основной язык по умолчанию принадлежит Вашей расе или типу моба.</span>")

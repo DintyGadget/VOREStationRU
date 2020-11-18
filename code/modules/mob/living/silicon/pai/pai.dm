@@ -218,7 +218,7 @@
 
 /mob/living/silicon/pai/cancel_camera()
 	set category = "pAI Commands"
-	set name = "Cancel Camera View"
+	set name = "Сбросить Вид Камеры"
 	src.reset_view(null)
 	src.unset_machine()
 	src.cameraFollow = null
@@ -364,7 +364,7 @@
 	speak_query = sayverbs[(sayverbs.len>2 ? 3 : sayverbs.len)]
 
 /mob/living/silicon/pai/lay_down()
-	set name = "Отдохнуть"
+	set name = "Лечь"
 	set category = "IC"
 
 	// Pass lying down or getting up to our pet human, if we're in a rig.
