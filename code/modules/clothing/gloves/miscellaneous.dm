@@ -1,19 +1,19 @@
 /obj/item/clothing/gloves/captain
 	desc = "Роскошные синие перчатки с золотыми краями. Красотища."
-	name = "перчатки Директора Колонии"
+	name = "Перчатки Директора колонии"
 	icon_state = "captain"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 
 /obj/item/clothing/gloves/cyborg
 	desc = "бип-буп"
-	name = "перчатки киборга"
+	name = "Перчатки киборга"
 	icon_state = "black"
 	item_state = "r_hands"
 	siemens_coefficient = 1.0
 
 /obj/item/clothing/gloves/forensic
 	desc = "Перчатки, предназначенные специально для криминалистов. Люминесцентные нитки вшиты в основной материал."
-	name = "перчатки криминалиста"
+	name = "Перчатки криминалиста"
 	icon_state = "forensic"
 	item_state = "black"
 	permeability_coefficient = 0.05
@@ -25,7 +25,7 @@
 
 /obj/item/clothing/gloves/swat
 	desc = "Боевые перчатки, частично защищающие от огня и ударов."
-	name = "перчатки СОБР"
+	name = "Перчатки СОБР"
 	icon_state = "swat"
 	item_state = "swat"
 	siemens_coefficient = 0.50
@@ -37,7 +37,7 @@
 
 /obj/item/clothing/gloves/combat //Combined effect of SWAT gloves and insulated gloves
 	desc = "Боевые перчатки, частично защищающие от огня и ударов."
-	name = "боевые перчатки"
+	name = "Боевые перчатки"
 	icon_state = "swat"
 	item_state = "swat"
 	siemens_coefficient = 0
@@ -66,11 +66,11 @@
 	qdel(src)*/
 
 /obj/item/clothing/gloves/sterile/latex
-	name = "латексные перчатки"
+	name = "Латексные перчатки"
 	desc = "Стерильные латексные перчатки."
 
 /obj/item/clothing/gloves/sterile/nitrile
-	name = "нитриловые перчатки"
+	name = "Нитриловые перчатки"
 	desc = "Стерильные нитриловые перчатки."
 	icon_state = "nitrile"
 	item_state = "ngloves"
@@ -78,7 +78,7 @@
 
 /obj/item/clothing/gloves/botanic_leather
 	desc = "Эти кожаные перчатки защищают от шипов и прочих вредоносных объектов растительного происхождения."
-	name = "кожаные перчатки ботаника"
+	name = "Кожаные перчатки ботаника"
 	icon_state = "leather"
 	item_state_slots = list(slot_r_hand_str = "lightbrown", slot_l_hand_str = "lightbrown")
 	permeability_coefficient = 0.05
@@ -88,14 +88,14 @@
 
 /obj/item/clothing/gloves/duty
 	desc = "Эти коричневые рабочие перчатки изготовлены из прочного синтетического материала."
-	name = "рабочие перчатки"
+	name = "Рабочие перчатки"
 	icon_state = "work"
 	item_state = "wgloves"
 	armor = list(melee = 10, bullet = 10, laser = 10, energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/gloves/tactical
 	desc = "Эти коричневые боевые перчатки изготовлены из прочного синтетического материала и имеют упрочненные костяшки."
-	name = "тактические перчатки"
+	name = "Защитные рабочие перчатки"
 	icon_state = "work"
 	item_state = "wgloves"
 	force = 5
@@ -106,7 +106,7 @@
 
 /obj/item/clothing/gloves/vox
 	desc = "Эти странные наручи, кажется, хорошо сядут на... птичьи когти?"
-	name = "изолирующие рукавицы"
+	name = "Изолирующие рукавицы"
 	icon_state = "gloves-vox"
 	item_state = "gloves-vox"
 	flags = PHORONGUARD
@@ -122,11 +122,11 @@
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 
 /obj/item/clothing/gloves/knuckledusters
-	name = "кастет"
+	name = "Кастеты"
 	desc = "Пара латунных кастетов, усиливающих удары носителя."
 	icon_state = "knuckledusters"
 	matter = list(DEFAULT_WALL_MATERIAL = 500)
-	attack_verb = list("punched", "beaten", "struck")
+	attack_verb = list("ударяет", "стукает", "врезает")
 	flags = THICKMATERIAL	// Stops rings from increasing hit strength
 	siemens_coefficient = 1
 	fingerprint_chance = 100
@@ -138,7 +138,7 @@
 
 /obj/item/clothing/gloves/ranger
 	var/glovecolor = "white"
-	name = "перчатки рейнджера"
+	name = "Перчатки рейнджера"
 	desc = "Перчатки Рейнджеров - самая незапоминающаяся часть их внешнего вида. В сериале они даже не изолирующие, \
 	чтобы детям не хотелось разбирать всякие тостеры без необходимых мер предосторожности. Они нужны лишь для завершения стильного костюма."
 	icon = 'icons/obj/clothing/ranger.dmi'
@@ -147,7 +147,6 @@
 /obj/item/clothing/gloves/ranger/Initialize()
 	. = ..()
 	if(icon_state == "ranger_gloves")
-		name = "перчатки рейнджера"
 		icon_state = "[glovecolor]_ranger_gloves"
 
 /obj/item/clothing/gloves/ranger/black

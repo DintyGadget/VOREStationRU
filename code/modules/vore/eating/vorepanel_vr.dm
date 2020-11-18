@@ -12,7 +12,7 @@
 	var/datum/vore_look/vorePanel
 
 /mob/living/proc/insidePanel()
-	set name = "Настройка желудка"
+	set name = "Настройка Vore"
 	set category = "IC"
 
 	if(!vorePanel)

@@ -1,5 +1,5 @@
 /obj/item/clothing/head/woodcirclet
-	name = "деревянный венец"
+	name = "Деревянный венец"
 	desc = "Небольшой деревянный венец для изготовления цветочных венков."
 	icon_state = "woodcirclet"
 	w_class = ITEMSIZE_SMALL
@@ -32,7 +32,7 @@
 //Flower crowns
 
 /obj/item/clothing/head/sunflower_crown
-	name = "подсолнечный венок"
+	name = "Подсолнечный венок"
 	desc = "Цветочный венок, обвитый подсолнухами."
 	icon_state = "sunflower_crown"
 	body_parts_covered = 0
@@ -40,7 +40,7 @@
 	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 /obj/item/clothing/head/lavender_crown
-	name = "лавандовый венок"
+	name = "Лавандовый венок"
 	desc = "Цветочный венок, обвитый лавандой."
 	icon_state = "lavender_crown"
 	body_parts_covered = 0
@@ -48,7 +48,7 @@
 	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 /obj/item/clothing/head/poppy_crown
-	name = "маковый венок"
+	name = "Маковый венок"
 	desc = "Цветочный венок, обвитый маком."
 	icon_state = "poppy_crown"
 	body_parts_covered = 0
@@ -56,7 +56,7 @@
 	pickup_sound = 'sound/items/pickup/herb.ogg'
 
 /obj/item/clothing/head/rose_crown
-	name = "розовый венок"
+	name = "Розовый венок"
 	desc = "Цветочный венок, обвитый розами."
 	icon_state = "poppy_crown"
 	body_parts_covered = 0

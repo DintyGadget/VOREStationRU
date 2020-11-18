@@ -4,55 +4,55 @@ var/global/send_beruang = 0
 var/can_call_traders = 1
 
 /client/proc/trader_ship()
-	set name = "Dispatch Beruang Trader Ship"
-	set category = "Спец. команды"
+	set name = "Отправить Торговый Корабль Беруанг"
+	set category = "Особые Команды"
 	set desc = "Пригласите игроков присоединиться к Беруангу."
 
 	if(!holder)
-		to_chat(usr, "<span class='danger'>Only administrators may use this command.</span>")
+		to_chat(usr, "<span class='danger'>Эту команду могут использовать только администраторы.</span>")
 		return
 	if(!ticker)
-		to_chat(usr, "<span class='danger'>The game hasn't started yet!</span>")
+		to_chat(usr, "<span class='danger'>Игра ещё не началась!</span>")
 		return
 	if(ticker.current_state == 1)
-		to_chat(usr, "<span class='danger'>The round hasn't started yet!</span>")
+		to_chat(usr, "<span class='danger'>Раунд ещё не начался!</span>")
 		return
 	if(send_beruang)
-		to_chat(usr, "<span class='danger'>The Beruang has already been sent this round!</span>")
+		to_chat(usr, "<span class='danger'>Беруанг уже был отправлен в этом раунде!</span>")
 		return
-	if(alert("Do you want to dispatch the Beruang trade ship?",,"Yes","No") != "Yes")
+	if(alert("Хотите ли Вы отправить корабль Беруанг?",,"Да","Нет") != "Да")
 		return
 	if(get_security_level() == "red") // Allow admins to reconsider if the alert level is Red
-		switch(alert("The station is in red alert. Do you still want to send traders?",,"Yes","No"))
-			if("No")
+		switch(alert("На станции красная тревога. Вы уверены в своём решении отправить торговцев?",,"Да","Нет"))
+			if("Нет")
 				return
 	if(send_beruang)
-		to_chat(usr, "<span class='danger'>Looks like somebody beat you to it!</span>")
+		to_chat(usr, "<span class='danger'>Кто-то Вас уже опередил!</span>")
 		return
 
-	message_admins("[key_name_admin(usr)] is dispatching the Beruang.", 1)
-	log_admin("[key_name(usr)] used Dispatch Beruang Trader Ship.")
+	message_admins("[key_name_admin(usr)] отправляет Беруанг.", 1)
+	log_admin("[key_name(usr)] использовал Отправить Торговый Корабль Беруанг.")
 	trigger_trader_visit()
 
 client/verb/JoinTraders()
 
-	set name = "Join Trader Visit"
+	set name = "Присоединиться К Торговцам"
 	set category = "IC"
 
 	if(!MayRespawn(1))
-		to_chat(usr, "<span class='warning'>You cannot join the traders.</span>")
+		to_chat(usr, "<span class='warning'>Вы не можете присоединиться к торговцам.</span>")
 		return
 
 	if(istype(usr,/mob/observer/dead) || istype(usr,/mob/new_player))
 		if(!send_beruang)
-			to_chat(usr, "The Beruang is not currently heading to the station.")
+			to_chat(usr, "Беруанг сейчас не направляется в сторону станции.")
 			return
 		if(traders.current_antagonists.len >= traders.hard_cap)
-			to_chat(usr, "The number of trader slots is already full!")
+			to_chat(usr, "Все слоты торговцев уже заполнены!")
 			return
 		traders.create_default(usr)
 	else
-		to_chat(usr, "You need to be an observer or new player to use this.")
+		to_chat(usr, "Чтобы использовать это, необходимо быть в режиме наблюдателя или новым игроком.")
 
 proc/trigger_trader_visit()
 	if(!can_call_traders)
@@ -60,7 +60,7 @@ proc/trigger_trader_visit()
 	if(send_beruang)
 		return
 
-	command_announcement.Announce("Incoming cargo hauler: Beruang (Reg: VRS 22EB1F11C2).", "[station_name()] Traffic Control")
+	command_announcement.Announce("Приближающийся перевозчик груза: Беруанг (Рег: VRS 22EB1F11C2).", "Контроль Трафика [station_name()]")
 
 	can_call_traders = 0 // Only one call per round.
 	send_beruang = 1

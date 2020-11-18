@@ -143,20 +143,20 @@
 	var/msg_owner_help_run		= "Вы аккуратно обходите %prey."
 	var/msg_owner_harm_walk		= "Вы намеренно наступаете ногой на тело %prey, постепенно вдавливая существо в пол!"
 	var/msg_owner_harm_run		= "Вы неосторожно проходите, растаптывая %prey!"
-	var/msg_owner_disarm_walk	= "Вы плотно наступаете на %prey ногой, больно но безвредно придавливая существо к земле!"
-	var/msg_owner_disarm_run	= "Вы быстро толкаете %prey на землю своей ногой!"
-	var/msg_owner_grab_fail		= "Вы наступаете на %prey, придавливая существо и прижимая к земле!"
-	var/msg_owner_grab_success	= "Вы прижимаете %prey к полу свой ногой, зажимая существо между своими пальцами!"
+	var/msg_owner_disarm_walk	= "Вы плотно наступаете на %prey ногой, больно но безвредно придавливая существо к полу!"
+	var/msg_owner_disarm_run	= "Вы быстро толкаете %prey на пол своей ногой!"
+	var/msg_owner_grab_fail		= "Вы наступаете на %prey, придавливая существо и прижимая к полу!"
+	var/msg_owner_grab_success	= "Вы прижимаете %prey к полу свой ногой и сгибаете свои пальцы, зажимая существо между ними!"
 
 	//Messages to prey when stepping on/over
 	var/msg_prey_help_walk		= "%owner осторожно проходит над Вами!"
 	var/msg_prey_help_run		= "%owner осторожно проходит над Вами!"
 	var/msg_prey_harm_walk		= "%owner намеренно наступает на Вас ногой, постепенно вдавливая Вас в пол!"
 	var/msg_prey_harm_run		= "%owner неосторожно проходится по Вам, растаптывая Вас!"
-	var/msg_prey_disarm_walk	= "%owner плотно наступает на Вас ногой, больно но безвредно прижимая Вас к земле!"
-	var/msg_prey_disarm_run		= "%owner толкает Вас на землю своей ногой!"
-	var/msg_prey_grab_fail		= "%owner наступает на Вас, придавливая Вас к земле своей ногой!"
-	var/msg_prey_grab_success	= "%owner прижимает Вас к полу своей ногой, зажимая Вас между своими пальцами!"
+	var/msg_prey_disarm_walk	= "%owner плотно наступает на Вас ногой, больно но безвредно прижимая Вас к полу!"
+	var/msg_prey_disarm_run		= "%owner толкает Вас на пол своей ногой!"
+	var/msg_prey_grab_fail		= "%owner наступает на Вас, придавливая Вас к полу своей ногой!"
+	var/msg_prey_grab_success	= "%owner  прижимает Вас к полу своей ногой и сгибает свои пальцы, зажимая Вас между ними!"
 
 	//Messages for smalls moving under larges
 	var/msg_owner_stepunder		= "%owner пробегает между Ваших ног." //Weird becuase in the case this is used, %owner is the 'bumper' (src)

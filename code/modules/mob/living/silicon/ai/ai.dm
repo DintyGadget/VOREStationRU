@@ -533,7 +533,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/cancel_camera()
 	set category = "AI Commands"
-	set name = "Cancel Camera View"
+	set name = "Сбросить Вид Камеры"
 	view_core()
 
 //Replaces /mob/living/silicon/ai/verb/change_network() in ai.dm & camera.dm
@@ -886,7 +886,7 @@ var/list/ai_verbs_default = list(
 
 // Pass lying down or getting up to our pet human, if we're in a rig.
 /mob/living/silicon/ai/lay_down()
-	set name = "Отдохнуть"
+	set name = "Лечь"
 	set category = "IC"
 
 	resting = 0

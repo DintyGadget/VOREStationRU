@@ -4,16 +4,16 @@
 	//Look it's really not that fancy. It's not ACTUALLY unique scrip data.
 	if(prescription)
 		name = "[initial(name)] (близ.)"
-		user.visible_message("[user] вставляет линзы в [src] в соответствии с новым рецептом.")
+		user.visible_message("[user] заменяет линзы в [src.pcase] на новые рецептурные.")
 	else
 		name = "[initial(name)]"
-		user.visible_message("[user] вставляет в [src] обыкновенные линзы.")
+		user.visible_message("[user] заменяет линзы в [src.pcase] на обыкновенные.")
 
 	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 
 //Prescription kit
 /obj/item/device/glasses_kit
-	name = "набор рецептурных линз"
+	name = "Набор рецептурных линз"
 	desc = "Набор всех необходимых линз и инструментов для изготовления очков для слабовидящих."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "modkit"
@@ -27,14 +27,14 @@
 
 	//Too difficult
 	if(target == user)
-		to_chat(user, "<span class='warning'>Вы не можете использовать это на своих глазах самостоятельно! Попросите Вам помочь.</span>")
+		to_chat(user, "<span class='warning'>Вы не можете использовать это на своих глазах самостоятельно! Попросите кого-нибудь Вам помочь.</span>")
 		return
 
 	//We're applying a prescription
 	if(istype(target,/obj/item/clothing/glasses))
 		var/obj/item/clothing/glasses/G = target
 		if(!scrip_loaded)
-			to_chat(user, "<span class='warning'>Вам нужно сначала получить рецепт! Используйте набор на ком-либо.</span>")
+			to_chat(user, "<span class='warning'>Вам нужно сначала получить рецепт! Используйте набор на ком-нибудь.</span>")
 			return
 
 		if(do_after(user,5 SECONDS))
@@ -45,10 +45,10 @@
 	else if(ishuman(target))
 		var/mob/living/carbon/human/T = target
 		if(T.glasses || (T.head && T.head.flags_inv & HIDEEYES))
-			to_chat(user, "<span class='warning'>Глаза этого персонажа должны быть видны!</span>")
+			to_chat(user, "<span class='warning'>Глаза не должны быть ничем закрыты!</span>")
 			return
 
-		T.visible_message("[user] начинает измерять толщину рецептурных линз для [target].","[user] начинает проверять Ваши глаза. Не двигайтесь!")
+		T.visible_message("[user] начинает проводить измерения для рецептурных линз [target].","[user] начинает проверять Ваши глаза. Не двигайтесь!")
 		if(do_after(user,5 SECONDS,T))
 			T.flash_eyes()
 			scrip_loaded = 1
@@ -62,7 +62,7 @@
 	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/graviton/medgravpatch
-	name = "медицинская гравитонная повязка на глаз"
+	name = "Медицинская гравитонная повязка на глаз"
 	desc = "Гравитонная повязка на глаз с медицинским оверлеем."
 	icon = 'icons/obj/clothing/glasses_vr.dmi'
 	icon_override = 'icons/mob/eyes_vr.dmi'
@@ -75,8 +75,8 @@
 /*---Tajaran-specific Eyewear---*/
 
 /obj/item/clothing/glasses/tajblind
-	name = "вышитая повязка на глаза"
-	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза."
+	name = "Вышитая повязка на глаза"
+	desc = "Вышитая повязка, носимая таджара и позволяющая носителю видеть, однако скрывающая его глаза."
 	icon = 'icons/obj/clothing/glasses_vr.dmi'
 	icon_override = 'icons/mob/eyes_vr.dmi'
 	icon_state = "tajblind"
@@ -85,8 +85,8 @@
 	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/hud/health/tajblind
-	name = "легкая повязка на глаза"
-	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен медицинский HUD."
+	name = "Легкая повязка на глаза"
+	desc = "Вышитая повязка, носимая таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен медицинский HUD."
 	icon = 'icons/obj/clothing/glasses_vr.dmi'
 	icon_override = 'icons/mob/eyes_vr.dmi'
 	icon_state = "tajblind_med"
@@ -94,8 +94,8 @@
 	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/sunglasses/sechud/tajblind
-	name = "глянцевая повязка на глаза"
-	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен HUD службы безопасности."
+	name = "Глянцевая повязка на глаза"
+	desc = "Вышитая повязка, носимая таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен HUD службы безопасности."
 	icon = 'icons/obj/clothing/glasses_vr.dmi'
 	icon_override = 'icons/mob/eyes_vr.dmi'
 	icon_state = "tajblind_sec"
@@ -104,8 +104,8 @@
 	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/meson/prescription/tajblind
-	name = "промышленная повязка на глаза"
-	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен мезонный сканер."
+	name = "Промышленная повязка на глаза"
+	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен мезонный визор."
 	icon = 'icons/obj/clothing/glasses_vr.dmi'
 	icon_override = 'icons/mob/eyes_vr.dmi'
 	icon_state = "tajblind_meson"
@@ -114,8 +114,8 @@
 	body_parts_covered = EYES
 
 /obj/item/clothing/glasses/material/prescription/tajblind
-	name = "шахтёрская повязка на глаза"
-	desc = "Вышитая повязка, носимая Таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен сканер материалов."
+	name = "Шахтёрская повязка на глаза"
+	desc = "Вышитая повязка, носимая таджара и позволяющая носителю видеть, однако скрывающая его глаза. В эту установлен материальный визор."
 	icon = 'icons/obj/clothing/glasses_vr.dmi'
 	icon_override = 'icons/mob/eyes_vr.dmi'
 	icon_state = "tajblind_meson"

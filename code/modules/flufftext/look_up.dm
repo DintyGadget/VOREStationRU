@@ -1,15 +1,15 @@
 // Implements a verb to make your character look upward, mostly intended for the surface.
 
 /mob/living/verb/look_up()
-	set name = "Смотреть вверх"
+	set name = "Посмотреть Наверх"
 	set category = "IC"
-	set desc = "Look above you, and hope there's no ceiling spiders."
+	set desc = "Посмотреть вверх в надежде на то, что на потолке нет пауков."
 
 	to_chat(usr, "Вы смотрите вверх...")
 
 	var/turf/T = get_turf(usr)
 	if(!T) // In null space.
-		to_chat(usr, span("warning", "Вы, кажется, находитесь в месте, где нет никакого понятия о направлении. У вас есть проблемы посерьезнее."))
+		to_chat(usr, span("warning", "Вы, кажется, находитесь в месте, где нет никакого понятия о направлении. У Вас есть проблемы посерьезнее."))
 		return
 
 	if(!T.outdoors) // They're inside.
@@ -39,22 +39,22 @@
 				var/sun_message = null
 				switch(P.sun_position)
 					if(0 to 0.4) // Night
-						sun_message = "It is night time, [P.sun_name] is not visible."
+						sun_message = "Сейчас ночь, и [P.sun_name] не видно."
 					if(0.4 to 0.5) // Twilight
-						sun_message = "The sky is in twilight, however [P.sun_name] is not visible."
+						sun_message = "Сейчас сумерки, однако [P.sun_name] не видно."
 					if(0.5 to 0.7) // Sunrise/set.
-						sun_message = "[P.sun_name] is slowly [!afternoon ? "rising from" : "setting on"] the horizon."
+						sun_message = "[P.sun_name] постепенно [!afternoon ? "восходит" : "заходит"] на горизонте."
 					if(0.7 to 0.9) // Morning/evening
-						sun_message = "[P.sun_name]'s position implies it is currently [!afternoon ? "early" : "late"] in the day."
+						sun_message = "[P.sun_name] находится [!afternoon ? "за зенитом" : "дальше зенита"]."
 					if(0.9 to 1.0) // Noon
-						sun_message = "It's high noon. [P.sun_name] hangs directly above you."
+						sun_message = "Ровно полдень. [P.sun_name] прямо над Вами."
 
 				to_chat(usr, sun_message)
 
 			// Now for the moon.
 			if(P.moon_name)
 				if(P.moon_phase == MOON_PHASE_NEW_MOON)
-					to_chat(usr, "[P.moon_name] is not visible. It must be a new moon.")
+					to_chat(usr, "[P.moon_name] не видна. Вероятно, новолуние.")
 				else
-					to_chat(usr, "[P.moon_name] appears to currently be a [P.moon_phase].")
+					to_chat(usr, "[P.moon_name] сейчас в фазе [P.moon_phase].")
 

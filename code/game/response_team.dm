@@ -8,45 +8,45 @@ var/can_call_ert
 var/silent_ert = 0
 
 /client/proc/response_team()
-	set name = "Диспетчерская группа аварийного реагирования"
-	set category = "Спец. команды"
-	set desc = "Send an emergency response team to the station"
+	set name = "Отправить Группу Аварийного Реагирования"
+	set category = "Особые Команды"
+	set desc = "Отправляет на станцию группу аварийного реагирования."
 
 	if(!holder)
 		to_chat(usr, "<span class='danger'>Только администраторы могут использовать эту команду.</span>")
 		return
 	if(!ticker)
-		to_chat(usr, "<span class='danger'>Игра еще не началась!</span>")
+		to_chat(usr, "<span class='danger'>Игра ещё не началась!</span>")
 		return
 	if(ticker.current_state == 1)
-		to_chat(usr, "<span class='danger'>Раунд еще не начался!</span>")
+		to_chat(usr, "<span class='danger'>Раунд ещё не начался!</span>")
 		return
 	if(send_emergency_team)
 		to_chat(usr, "<span class='danger'>[using_map.boss_name] уже отправил группу экстренного реагирования!</span>")
 		return
-	if(alert("Вы хотите отправить бригаду экстренного реагирования?",,"Да","Нет") != "Да")
+	if(alert("Хотите ли Вы отправить бригаду экстренного реагирования?",,"Да","Нет") != "Да")
 		return
-	if(alert("Вы хотите, чтобы было объявлено об этой группе реагирования?",,"Да","Нет") != "Да")
+	if(alert("Хотите ли Вы, чтобы было объявлено об этой группе реагирования?",,"Да","Нет") != "Да")
 		silent_ert = 1
 	if(get_security_level() != "red") // Allow admins to reconsider if the alert level isn't Red
-		switch(alert("Станция не в красной тревоге. Вы все еще хотите отправить группу реагирования?",,"Да","Нет"))
+		switch(alert("На станции не красная тревога. Вы уверены в своём решении отправить группу реагирования?",,"Да","Нет"))
 			if("Нет")
 				return
 	if(send_emergency_team)
 		to_chat(usr, "<span class='danger'>Похоже, кто-то вас опередил!</span>")
 		return
 
-	message_admins("[key_name_admin(usr)] is dispatching an Emergency Response Team.", 1)
-	log_admin("[key_name(usr)] used Dispatch Response Team.")
+	message_admins("[key_name_admin(usr)] отправляет группу аварийного реагирования.", 1)
+	log_admin("[key_name(usr)] использовал Отправить Группу Аварийного Реагирования.")
 	trigger_armed_response_team(1)
 
 client/verb/JoinResponseTeam()
 
-	set name = "Присоединиться к группе реагирования"
+	set name = "Присоединиться К Группе Реагирования"
 	set category = "IC"
 
 	if(!MayRespawn(1))
-		to_chat(usr, "<span class='warning'>В настоящее время вы не можете присоединиться к группе реагирования.</span>")
+		to_chat(usr, "<span class='warning'>В настоящее время Вы не можете присоединиться к группе реагирования.</span>")
 		return
 
 	if(istype(usr,/mob/observer/dead) || istype(usr,/mob/new_player))
@@ -61,7 +61,7 @@ client/verb/JoinResponseTeam()
 			return
 		ert.create_default(usr)
 	else
-		to_chat(usr, "Чтобы использовать это, вы должны быть наблюдателем или новым игроком.")
+		to_chat(usr, "Чтобы использовать это, Вы должны быть наблюдателем или новым игроком.")
 
 // returns a number of dead players in %
 proc/percentage_dead()
@@ -127,7 +127,7 @@ proc/trigger_armed_response_team(var/force = 0)
 		can_call_ert = 0 // Only one call per round, ladies.
 		return
 	if(silent_ert == 0)
-		command_announcement.Announce("Похоже, для [station_name()]была запрошена группа аварийного реагирования. Мы подготовим и отправим их в кратчайшие сроки.", "[using_map.boss_name]")
+		command_announcement.Announce("Похоже, для [station_name()]была запрошена группа аварийного реагирования. Мы подготовим и отправим её в кратчайшие сроки.", "[using_map.boss_name]")
 
 	can_call_ert = 0 // Only one call per round, gentleman.
 	send_emergency_team = 1

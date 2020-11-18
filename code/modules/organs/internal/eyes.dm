@@ -33,13 +33,13 @@
 			color = H.species.blood_color
 
 /obj/item/organ/internal/eyes/proc/change_eye_color()
-	set name = "Change Eye Color"
-	set desc = "Changes your robotic eye color instantly."
+	set name = "Изменить Цвет Глаз"
+	set desc = "Моментально изменить цвет Ваших роботических глаз."
 	set category = "IC"
 	set src in usr
 
 	var/current_color = rgb(eye_colour[1],eye_colour[2],eye_colour[3])
-	var/new_color = input("Pick a new color for your eyes.","Eye Color", current_color) as null|color
+	var/new_color = input("Выберите новый цвет для Ваших глаз.","Цвет Глаз", current_color) as null|color
 	if(new_color && owner)
 		// input() supplies us with a hex color, which we can't use, so we convert it to rbg values.
 		var/list/new_color_rgb_list = hex2rgb(new_color)

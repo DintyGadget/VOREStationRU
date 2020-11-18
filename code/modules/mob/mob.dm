@@ -196,11 +196,11 @@
 
 //mob verbs are faster than object verbs. See http://www.byond.com/forum/?post=1326139&page=2#comment8198716 for why this isn't atom/verb/examine()
 /mob/verb/examinate(atom/A as mob|obj|turf in view())
-	set name = "Examine"
+	set name = "Осмотреть"
 	set category = "IC"
 
 	if((is_blind(src) || usr.stat) && !isobserver(src))
-		to_chat(src, "<span class='notice'>Тут что-то есть, но вы этого не видите.</span>")
+		to_chat(src, "<span class='notice'>Тут что-то есть, но Вам этого не видно.</span>")
 		return 1
 
 	//Could be gone by the time they finally pick something
@@ -215,7 +215,7 @@
 
 /mob/verb/pointed(atom/A as mob|obj|turf in view())
 	set name = "Указать на"
-	set category = "Object"
+	set category = "Объект"
 
 	if(!src || !isturf(src.loc) || !(A in view(src.loc)))
 		return 0
@@ -249,8 +249,8 @@
 	return
 
 /mob/verb/mode()
-	set name = "Activate Held Object"
-	set category = "Object"
+	set name = "Использовать Предмет В Руке"
+	set category = "Объект"
 	set src = usr
 
 	return
@@ -272,10 +272,10 @@
 	if(mind)
 		mind.show_memory(src)
 	else
-		to_chat(src, "Игра, похоже, неуместна для вашего разума, поэтому мы не можем показать вам ваши заметки.")
+		to_chat(src, "Игра, похоже, неуместна для Вашего разума, поэтому мы не можем показать Вам Ваши заметки.")
 
 /mob/verb/add_memory(msg as message)
-	set name = "Доб. Заметку"
+	set name = "Добавить Заметку"
 	set category = "IC"
 
 	msg = sanitize(msg)
@@ -283,7 +283,7 @@
 	if(mind)
 		mind.store_memory(msg)
 	else
-		to_chat(src, "Похоже, что игра потеряла ваши мысленные данные, поэтому мы не можем показать вам ваши заметки.")
+		to_chat(src, "Похоже, что игра потеряла Ваши мысленные данные, поэтому мы не можем показать Вам Ваши заметки.")
 
 /mob/proc/store_memory(msg as message, popup, sane = 1)
 	msg = copytext_char(msg, 1, MAX_MESSAGE_LEN)
@@ -302,15 +302,15 @@
 /mob/proc/update_flavor_text()
 	set src in usr
 	if(usr != src)
-		to_chat(usr, "No.")
-	var/msg = sanitize(input(usr,"Set the flavor text in your 'examine' verb.","Flavor Text",html_decode(flavor_text)) as message|null, extra = 0)	//VOREStation Edit: separating out OOC notes
+		to_chat(usr, "Нет.")
+	var/msg = sanitize(input(usr,"Укажите своё описание на глаголе Осмотреть.","Описание Персонажа",html_decode(flavor_text)) as message|null, extra = 0)	//VOREStation Edit: separating out OOC notes
 
 	if(msg != null)
 		flavor_text = msg
 
 /mob/proc/warn_flavor_changed()
 	if(flavor_text && flavor_text != "") // don't spam people that don't use it!
-		to_chat(src, "<h2 class='alert'>OOC Warning:</h2>")
+		to_chat(src, "<h2 class='alert'>Предпреждение OOC:</h2>")
 		to_chat(src, "<span class='alert'>Ваше описание персонажа, вероятно, устарело! <a href='byond://?src=\ref[src];flavor_change=1'>Изменить</a></span>")
 
 /mob/proc/print_flavor_text()
@@ -363,7 +363,7 @@
 		return // Don't set it, no need
 
 /mob/verb/abandon_mob()
-	set name = "Вернуться в меню"
+	set name = "Вернуться В Меню"
 	set category = "OOC"
 
 	if(stat != DEAD || !ticker)
@@ -372,7 +372,7 @@
 
 	// Final chance to abort "respawning"
 	if(mind && timeofdeath) // They had spawned before
-		var/choice = alert(usr, "Возврат в меню предотвратит возрождение вашего персонажа в раунде. Вы уверены?", "Confirmation", "Нет", "Да")
+		var/choice = alert(usr, "Возврат в меню предотвратит возрождение Вашего персонажа в раунде. Вы уверены?", "Подтверждение", "Нет", "Да")
 		if(choice == "Нет")
 			return
 
@@ -402,7 +402,7 @@
 	return
 
 /client/verb/changes()
-	set name = "Изменения"
+	set name = "Список Изменений"
 	set category = "OOC"
 	src << browse('html/changelog.html', "window=changes;size=675x650")
 	if(prefs.lastchangelog != changelog_hash)
@@ -411,14 +411,14 @@
 		winset(src, "rpane.changelog", "background-color=none;font-style=;")
 
 /mob/verb/observe()
-	set name = "Наблюдать"
+	set name = "Наблюдать За"
 	set category = "OOC"
 	var/is_admin = 0
 
 	if(client.holder && (client.holder.rights & R_ADMIN|R_EVENT))
 		is_admin = 1
 	else if(stat != DEAD || istype(src, /mob/new_player))
-		to_chat(usr, "<font color='blue'>Вы должны наблюдать, чтобы использовать это!</font>")
+		to_chat(usr, "<font color='blue'>Вы должны быть в режиме наблюдателя, чтобы использовать это!</font>")
 		return
 
 	if(is_admin && stat == DEAD)
@@ -437,7 +437,7 @@
 
 	var/eye_name = null
 
-	var/ok = "[is_admin ? "Admin Observe" : "Observe"]"
+	var/ok = "[is_admin ? "Админское Наблюдение" : "Наблюдение"]"
 	eye_name = input("Выберите игрока!", ok, null, null) as null|anything in targets
 
 	if (!eye_name)
@@ -453,7 +453,7 @@
 				client.adminobs = 0
 
 /mob/verb/cancel_camera()
-	set name = "Cancel Camera View"
+	set name = "Сбросить Вид Камеры"
 	set category = "OOC"
 	unset_machine()
 	reset_view(null)
@@ -478,15 +478,15 @@
 
 /mob/verb/stop_pulling()
 
-	set name = "Перестать тянуть"
+	set name = "Перестать Тянуть"
 	set category = "IC"
 
 	if(pulling)
 		if(ishuman(pulling))
 			var/mob/living/carbon/human/H = pulling
-			visible_message(SPAN_WARNING("\The [src] lets go of \the [H]."), SPAN_NOTICE("You let go of \the [H]."), exclude_mobs = list(H))
+			visible_message(SPAN_WARNING("[src] отпускает [H]."), SPAN_NOTICE("Вы отпускаете [H]."), exclude_mobs = list(H))
 			if(!H.stat)
-				to_chat(H, SPAN_WARNING("\The [src] lets go of you."))
+				to_chat(H, SPAN_WARNING("[src] отпускает Вас."))
 		pulling.pulledby = null
 		pulling = null
 		if(pullin)
@@ -498,22 +498,22 @@
 		return
 
 	if (AM.anchored)
-		to_chat(src, "<span class='warning'>It won't budge!</span>")
+		to_chat(src, "<span class='warning'>Не получается сдвинуть с места!</span>")
 		return
 
 	var/mob/M = AM
 	if(ismob(AM))
 
 		if(!can_pull_mobs || !can_pull_size)
-			to_chat(src, "<span class='warning'>They won't budge!</span>")
+			to_chat(src, "<span class='warning'>Не получается сдвинуть с места!</span>")
 			return
 
 		if((mob_size < M.mob_size) && (can_pull_mobs != MOB_PULL_LARGER))
-			to_chat(src, "<span class='warning'>[M] is too large for you to move!</span>")
+			to_chat(src, "<span class='warning'>[M] слишком большого размера, нельзя потянуть!</span>")
 			return
 
 		if((mob_size == M.mob_size) && (can_pull_mobs == MOB_PULL_SMALLER))
-			to_chat(src, "<span class='warning'>[M] is too heavy for you to move!</span>")
+			to_chat(src, "<span class='warning'>[M] слишком большого размера, нельзя потянуть!</span>")
 			return
 
 		// If your size is larger than theirs and you have some
@@ -529,7 +529,7 @@
 				else
 					qdel(G)
 			if(!.)
-				to_chat(src, "<span class='warning'>Somebody has a grip on them!</span>")
+				to_chat(src, "<span class='warning'>Кто-то уже тянет это существо!</span>")
 				return
 
 		if(!iscarbon(src))
@@ -540,7 +540,7 @@
 	else if(isobj(AM))
 		var/obj/I = AM
 		if(!can_pull_size || can_pull_size < I.w_class)
-			to_chat(src, "<span class='warning'>It won't budge!</span>")
+			to_chat(src, "<span class='warning'>Не получается сдвинуть с места!</span>")
 			return
 
 	if(pulling)
@@ -559,17 +559,17 @@
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
 		if(H.lying) // If they're on the ground we're probably dragging their arms to move them
-			visible_message(SPAN_WARNING("\The [src] leans down and grips \the [H]'s arms."), SPAN_NOTICE("You lean down and grip \the [H]'s arms."), exclude_mobs = list(H))
+			visible_message(SPAN_WARNING("[src] наклоняется на берётся за руки [H]."), SPAN_NOTICE("Вы наклоняетесь и берётесь за руки [H]."), exclude_mobs = list(H))
 			if(!H.stat)
-				to_chat(H, SPAN_WARNING("\The [src] leans down and grips your arms."))
+				to_chat(H, SPAN_WARNING("[src] наклоняется и берёт Вас за руки."))
 		else //Otherwise we're probably just holding their arm to lead them somewhere
-			visible_message(SPAN_WARNING("\The [src] grips \the [H]'s arm."), SPAN_NOTICE("You grip \the [H]'s arm."), exclude_mobs = list(H))
+			visible_message(SPAN_WARNING("[src] берётся за руку [H]"), SPAN_NOTICE("Вы берётесь за руку [H]."), exclude_mobs = list(H))
 			if(!H.stat)
-				to_chat(H, SPAN_WARNING("\The [src] grips your arm."))
+				to_chat(H, SPAN_WARNING("[src] берёт Вас за руку."))
 		playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25) //Quieter than hugging/grabbing but we still want some audio feedback
 
 		if(H.pull_damage())
-			to_chat(src, "<font color='red'><B>Pulling \the [H] in their current condition would probably be a bad idea.</B></font>")
+			to_chat(src, "<font color='red'><B>Тащить [H] в таком состоянии -- не лучшая идея.</B></font>")
 
 	//Attempted fix for people flying away through space when cuffed and dragged.
 	if(ismob(AM))
@@ -614,45 +614,45 @@
 	. = (is_client_active(10 MINUTES))
 
 	if(.)
-		if(statpanel("Status"))
-			stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
+		if(statpanel("Статус"))
+			stat(null, "Замедление времени: [round(SStime_track.time_dilation_current,1)]% в среднем:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 			if(ticker && ticker.current_state != GAME_STATE_PREGAME)
-				stat("Station Time", stationtime2text())
-				stat("Station Date", stationdate2text())
-				stat("Round Duration", roundduration2text())
+				stat("Время на станции", stationtime2text())
+				stat("Дата на станции", stationdate2text())
+				stat("Длительность раунда", roundduration2text())
 
 		if(client.holder)
-			if(statpanel("Status"))
-				stat("Location:", "([x], [y], [z]) [loc]")
+			if(statpanel("Статус"))
+				stat("Локация:", "([x], [y], [z]) [loc]")
 				stat("CPU:","[world.cpu]")
-				stat("Instances:","[world.contents.len]")
-				stat(null, "Time Dilation: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
+				stat("Инстанции:","[world.contents.len]")
+				stat(null, "Замедление времени: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 
 			if(statpanel("MC"))
-				stat("Location:", "([x], [y], [z]) [loc]")
+				stat("Локация:", "([x], [y], [z]) [loc]")
 				stat("CPU:","[world.cpu]")
-				stat("Instances:","[world.contents.len]")
-				stat("World Time:", world.time)
-				stat("Real time of day:", REALTIMEOFDAY)
+				stat("Инстанций:","[world.contents.len]")
+				stat("Мировое время:", world.time)
+				stat("Реальное время суток:", REALTIMEOFDAY)
 				stat(null)
 				if(GLOB)
 					GLOB.stat_entry()
 				else
-					stat("Globals:", "ERROR")
+					stat("Глобальные переменные:", "ОШИБКА")
 				if(Master)
 					Master.stat_entry()
 				else
-					stat("Master Controller:", "ERROR")
+					stat("Главный контроллер:", "ОШИБКА")
 				if(Failsafe)
 					Failsafe.stat_entry()
 				else
-					stat("Failsafe Controller:", "ERROR")
+					stat("Безопасный контроллер:", "ОШИБКА")
 				if(Master)
 					stat(null)
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
 
-			if(statpanel("Tickets"))
+			if(statpanel("Тикеты"))
 				GLOB.ahelp_tickets.stat_entry()
 
 
@@ -862,9 +862,9 @@
 	return (embedded.len > 0)
 
 mob/proc/yank_out_object()
-	set category = "Object"
-	set name = "Выдернуть инородный объект"
-	set desc = "Удалите внедренный элемент ценой кровотечения и боли."
+	set category = "Объект"
+	set name = "Выдернуть Инородный Объект"
+	set desc = "Удалить вставленный объект ценой кровотечения и боли."
 	set src in view(1)
 
 	if(!isliving(usr) || !usr.checkClickCooldown())
@@ -872,11 +872,11 @@ mob/proc/yank_out_object()
 	usr.setClickCooldown(20)
 
 	if(usr.stat == 1)
-		to_chat(usr, "Вы без сознательния и не можете этого сделать!")
+		to_chat(usr, "Вы без сознания и не можете этого сделать!")
 		return
 
 	if(usr.restrained())
-		to_chat(usr, "Вы ограничены и не можете этого сделать!")
+		to_chat(usr, "Вы ограничены в передвижении и не можете этого сделать!")
 		return
 
 	var/mob/S = src
@@ -890,12 +890,12 @@ mob/proc/yank_out_object()
 	valid_objects = get_visible_implants(0)
 	if(!valid_objects.len)
 		if(self)
-			to_chat(src, "У вас нет ничего застрявшего в вашем теле, что было бы достаточно большим, чтобы удалить.")
+			to_chat(src, "В Вашем теле не застряло ничего настолько большого, что можно было бы вытащить.")
 		else
-			to_chat(U, "[src] не имеет ничего застрявшего в ранах, что было бы достаточно большим, чтобы удалить.")
+			to_chat(U, "В ранах [src] не застряло ничего настолько большого, чтобы можно было вытащить.")
 		return
 
-	var/obj/item/weapon/selection = input("Что вы хотите вытащить?", "Embedded objects") in valid_objects
+	var/obj/item/weapon/selection = input("Что вы хотите вытащить?", "Вставленные объекты") in valid_objects
 
 	if(self)
 		to_chat(src, "<span class='warning'>Вы пытаетесь крепко ухватиться за [selection] в своем теле.</span>")
@@ -908,9 +908,9 @@ mob/proc/yank_out_object()
 		return
 
 	if(self)
-		visible_message("<span class='warning'><b>[src] вырывает [selection] из их тела.</b></span>","<span class='warning'><b>Вы вырываете [selection] из своего тела.</b></span>")
+		visible_message("<span class='warning'><b>[src] вырывает [selection] из своего тела.</b></span>","<span class='warning'><b>Вы вырываете [selection] из своего тела.</b></span>")
 	else
-		visible_message("<span class='warning'><b>[usr] вырывает [selection] из тела [src].</b></span>","<span class='warning'><b>[usr] вырывает [selection] из вашего тела.</b></span>")
+		visible_message("<span class='warning'><b>[usr] вырывает [selection] из тела [src].</b></span>","<span class='warning'><b>[usr] вырывает [selection] из Вашего тела.</b></span>")
 	valid_objects = get_visible_implants(0)
 	if(valid_objects.len == 1) //Yanking out last object - removing verb.
 		src.verbs -= /mob/proc/yank_out_object
@@ -932,7 +932,7 @@ mob/proc/yank_out_object()
 		if(prob(selection.w_class * 5) && (affected.robotic < ORGAN_ROBOT)) //I'M SO ANEMIC I COULD JUST -DIE-.
 			var/datum/wound/internal_bleeding/I = new (min(selection.w_class * 5, 15))
 			affected.wounds += I
-			H.custom_pain("Что-то мягко рвется в: [affected], когда [selection] извлекается!", 50)
+			H.custom_pain("С извлечением [selection] что-то рвется внутри [affected] с влажным звуком!", 50)
 
 		if (ishuman(U))
 			var/mob/living/carbon/human/human_user = U
@@ -973,16 +973,16 @@ mob/proc/yank_out_object()
 
 /mob/verb/face_direction()
 
-	set name = "Face Direction"
+	set name = "Повернуться"
 	set category = "IC"
 	set src = usr
 
 	set_face_dir()
 
 	if(!facing_dir)
-		to_chat(usr, "Теперь вы никуда не смотрите.")
+		to_chat(usr, "Вы теперь ни к чему не повёрнуты.")
 	else
-		to_chat(usr, "Теперь вы смотрите [dir2text(facing_dir)].")
+		to_chat(usr, "Вы теперь повёрнуты на [dir2text(facing_dir)].")
 
 /mob/proc/set_face_dir(var/newdir)
 	if(newdir == facing_dir)
@@ -1097,7 +1097,7 @@ mob/verb/shifteast()
 /mob/proc/amend_exploitable(var/obj/item/I)
 	if(istype(I))
 		exploit_addons |= I
-		var/exploitmsg = html_decode("\n" + "Has " + I.name + ".")
+		var/exploitmsg = html_decode("\n" + "Имеет " + I.name + ".")
 		exploit_record += exploitmsg
 
 /client/proc/check_has_body_select()

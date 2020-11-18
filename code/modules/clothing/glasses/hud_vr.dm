@@ -1,5 +1,5 @@
 /obj/item/clothing/glasses/omnihud
-	name = "AR-очки"
+	name = "Очки AR"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
 	Нередко используются персоналом для взаимодействия с виртуальными интерфейсами. \
 	<br>Обладают переключаемыми декоративными электрохромными линзами. \
@@ -41,22 +41,22 @@
 		if(prob(10))
 			icon_state = "3d"
 			if(ishuman(loc))
-				to_chat(loc, "<span class='warning'>[src.name] дают сбой!</span>")
+				to_chat(loc, "<span class='warning'>Линзы ваших [src.gcase] дают сбой!</span>")
 	..()
 
 /obj/item/clothing/glasses/omnihud/proc/flashed()
 	if(flash_prot && ishuman(loc))
-		to_chat(loc, "<span class='warning'>Ваши [src.name] затемняются, чтобы защитить Вас от вспышки!</span>")
+		to_chat(loc, "<span class='warning'>Ваши [src.ncase] затемняются, чтобы защитить Вас от вспышки!</span>")
 
 /obj/item/clothing/glasses/omnihud/prescribe(var/mob/user)
 	prescription = !prescription
 	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 	if(prescription)
-		user.visible_message("[user] загружает новый рецепт в [src.name] и перенастраивает линзы.")
+		user.visible_message("[user] загружает новый рецепт в [src.acase] и перенастраивает линзы.")
 		name = "[initial(name)] (близ.)" //change the name *after* the text so the message above is accurate
 		icon_state = "[initial(icon_state)]" //reset the icon state just to be safe
 	else
-		user.visible_message("[user] берёт в руки [src.name] и перенастраивает линзы, удаляя старый рецепт.")
+		user.visible_message("[user] удаляет рецепт из [src.gcase] и перенастраивает линзы.")
 		name = "[initial(name)]"
 		icon_state = "[initial(icon_state)]"
 
@@ -66,21 +66,21 @@
 
 	var/mob/living/carbon/human/H = user
 	if(!H.glasses || !(H.glasses == src))
-		to_chat(user, "<span class='warning'>Нам нужно носить [src] на себе, чтобы увидеть дисплей.</span>")
+		to_chat(user, "<span class='warning'>Вам нужно носить [src.acase] на себе, чтобы увидеть оверлей.</span>")
 	else
 		if(!ar_interact(H))
-			to_chat(user, "<span class='warning'>[src] не имеет никаких особых дисплеев.</span>")
+			to_chat(user, "<span class='warning'>У [src.gcase] нет каких-либо особых оверлеев.</span>")
 
 //cosmetic shading, doesn't enhance eye protection
 /obj/item/clothing/glasses/omnihud/verb/chromatize()
-	set name = "Переключить Затенение AR-очков"
-	set desc = "Переключает косметическое затенение AR-очков."
-	set category = "Object"
+	set name = "Переключить Затенение Очков AR"
+	set desc = "Переключает косметическое затенение очков AR."
+	set category = "Объект"
 	set src in usr
 	if(!usr.canmove || usr.stat || usr.restrained())
 		return
 	if(icon_state == "3d")
-		to_chat(usr, "Вы переключаете электрохромные линзы в нормальный режим.")
+		to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в нормальный режим.")
 		if(prescription)
 			name = "[initial(name)] (pr)"
 		else
@@ -88,37 +88,37 @@
 		icon_state = "[initial(icon_state)]"
 	else if(prescription)
 		if(icon_state == "glasses")
-			to_chat(usr, "Вы переключаете электрохромные линзы в режим односторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в режим односторонней прозрачности.")
 			name = "[initial(name)] (затененные, близ.)"
 			icon_state = "sun"
 		else if(icon_state == "sun")
-			to_chat(usr, "Вы переключаете электрохромные линзы в стандартный режим двухсторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в стандартный режим двухсторонней прозрачности.")
 			name = "[initial(name)] (близ.)"
 			icon_state = "glasses"
 		else
-			to_chat(usr, "The [src] don't seem to support this functionality.")
+			to_chat(usr, "У [src.gcase] нет такой функции.")
 	else if(!prescription)
 		if(icon_state == "glasses")
-			to_chat(usr, "Вы переключаете электрохромные линзы в режим односторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в режим односторонней прозрачности.")
 			name = "[initial(name)] (затененные)"
 			icon_state = "sun"
 		else if(icon_state == "sun")
-			to_chat(usr, "Вы переключаете электрохромные линзы в стандартный режим двухсторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в стандартный режим двухсторонней прозрачности.")
 			name = "[initial(name)]"
 			icon_state = "glasses"
 		else
-			to_chat(usr, "[src] не обладают такой функцией.")
+			to_chat(usr, "У [src.gcase] нет такой функции.")
 	update_clothing_icon()
 
 /obj/item/clothing/glasses/omnihud/proc/ar_interact(var/mob/living/carbon/human/user)
 	return 0 //The base models do nothing.
 
 /obj/item/clothing/glasses/omnihud/prescription
-	name = "AR-очки (близ.)"
+	name = "Очки AR (близ.)"
 	prescription = 1
 
 /obj/item/clothing/glasses/omnihud/med
-	name = "AR-M очки"
+	name = "Очки AR-M"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
 	В эти встроен доступ к медицинским записям и базе данных о вирусах. \
 	Они также отображают активные датчики, используя систему отслеживания персонала."
@@ -133,7 +133,7 @@
 		return 1
 
 /obj/item/clothing/glasses/omnihud/sec
-	name = "AR-S очки"
+	name = "Очки AR-S"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
 	В эти встроен доступ к записям службы безопасности и защита от вспышек. \
 	Они также имеют доступ к тревогам камер и датчиков движения."
@@ -149,7 +149,7 @@
 		return 1
 
 /obj/item/clothing/glasses/omnihud/eng
-	name = "AR-E очки"
+	name = "Очки AR-S"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
 	В эти встроены улучшенные электрохромные линзы для защиты глаз при сварке, \
 	а также отображение атмосферных и пожарных тревог и сбоев питания."
@@ -164,13 +164,13 @@
 		return 1
 
 /obj/item/clothing/glasses/omnihud/rnd
-	name = "AR-R очки"
+	name = "Очки AR-R"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
 	Они... вроде ничего особо интересного не делают? Зато выглядят по-научному как-то, тоже неплохо."
 	mode = "sci"
 
 /obj/item/clothing/glasses/omnihud/eng/meson
-	name = "HUD с мезонным сканером"
+	name = "HUD с мезонным визором"
 	desc = "Гарнитура со встроенным в линзы сканером и ретинальным проектором. Не защищает глаза, однако более удобная, чем защитные очки."
 	icon = 'icons/vore/custom_items_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
@@ -188,7 +188,7 @@
 
 /obj/item/clothing/glasses/omnihud/eng/meson/verb/toggleprojector()
 	set name = "Переключить Проектор"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
@@ -198,17 +198,17 @@
 			icon_state = off_state
 			item_state = "[initial(item_state)]-off"
 			usr.update_inv_glasses()
-			to_chat(usr, "Вы деактивируете ретинальный проектор.")
+			to_chat(usr, "Вы деактивируете ретинальный проектор своих [src.gcase].")
 		else
 			active = 1
 			icon_state = initial(icon_state)
 			item_state = initial(item_state)
 			usr.update_inv_glasses()
-			to_chat(usr, "Вы активируете ретинальный проектор.")
+			to_chat(usr, "Вы активируете ретинальный проектор своих [src.gcase].")
 		usr.update_action_buttons()
 
 /obj/item/clothing/glasses/omnihud/all
-	name = "AR-B очки"
+	name = "Очки AR-B"
 	desc = "Очки AR модели ARG-62, отображающие информацию о других. \
 	В эти встроен (почти) весь функционал предшествующих моделей. Уже интересно. \
 	<br>Предоставляет полную защиту от вспышек/сварки и полный доступ к системе тревог."
@@ -225,7 +225,7 @@
 
 /obj/item/clothing/glasses/hud/security/eyepatch
     name = "HUD-повязка службы безопасности"
-    desc = "Повязка на глаз со встроенным сканером людей в поле зрения, предоставляющая информацию об их идентификации и записях Службы Безопасности."
+    desc = "Повязка на глаз со встроенным сканером людей в поле зрения, предоставляющая информацию об их идентификации и записях службы безопасности."
     icon_state = "eyepatch"
     item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
     body_parts_covered = 0
@@ -234,7 +234,7 @@
 
 /obj/item/clothing/glasses/hud/security/eyepatch/verb/switcheye()
 	set name = "Сменить Повязку"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
@@ -248,7 +248,7 @@
 
 
 /obj/item/clothing/glasses/hud/health/eyepatch
-    name = "медицинская HUD-повязка"
+    name = "Медицинская HUD-повязка"
     desc = "Повязка на глаз со встроенным сканером людей в поле зрения, предоставляющая информацию об их состоянии здоровья."
     icon_state = "eyepatch"
     item_state_slots = list(slot_r_hand_str = "blindfold", slot_l_hand_str = "blindfold")
@@ -258,7 +258,7 @@
 
 /obj/item/clothing/glasses/hud/health/eyepatch/verb/switcheye()
 	set name = "Сменить Повязку"
-	set category = "Object"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
