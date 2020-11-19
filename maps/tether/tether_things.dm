@@ -226,10 +226,10 @@
 	occupied_icon_state = "door_locked"
 	desc = "Вокзал, с которого Вы, вероятно, и прибыли. На нём же можно и покинуть станцию."
 	on_store_message = "уезжает на трамвае."
-	on_store_name = "Надзор Перевозок"
+	on_store_name = "Проходной контроль"
 	on_enter_occupant_message = "Состав подъезжает к платформе; Вы заходите внутрь и садитесь."
-	on_store_visible_message_1 = "содрогается со звоном, объявляющим о прибытии состава"
-	on_store_visible_message_2 = "в колонию"
+	on_store_visible_message_1 = "содрогается со звоном, объявляющим о прибытии состава."
+	on_store_visible_message_2 = "возвращается в колонию"
 	time_till_despawn = 10 SECONDS
 	spawnpoint_type = /datum/spawnpoint/tram
 /obj/machinery/cryopod/robot/door/tram/process()

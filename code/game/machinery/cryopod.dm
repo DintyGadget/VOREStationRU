@@ -9,8 +9,8 @@
 //Main cryopod console.
 
 /obj/machinery/computer/cryopod
-	name = "cryogenic oversight console"
-	desc = "An interface between crew and the cryogenic storage oversight systems."
+	name = "Консоль криогенного контроля"
+	desc = "Пользовательский интерфейс между экипажем и системой криогенного надзора."
 	icon = 'icons/obj/Cryogenic2_vr.dmi' //VOREStation Edit - New Icon
 	icon_state = "cellconsole"
 	circuit = /obj/item/weapon/circuitboard/cryopodcontrol
@@ -24,7 +24,7 @@
 	var/list/_admin_logs = list() // _ so it shows first in VV
 
 	var/storage_type = "crewmembers"
-	var/storage_name = "Cryogenic Oversight Control"
+	var/storage_name = "Контроль криогенного контроля"
 	var/allow_items = 1
 
 	req_one_access = list(access_heads) //VOREStation Add
@@ -37,41 +37,41 @@
 		icon_state = initial(icon_state)
 
 /obj/machinery/computer/cryopod/robot
-	name = "robotic storage console"
-	desc = "An interface between crew and the robotic storage systems"
+	name = "Консоль робототехнического хранения"
+	desc = "Пользовательский интерфейс между экипажем и системой робототехнического хранения."
 	icon = 'icons/obj/robot_storage.dmi'
 	icon_state = "console"
 	circuit = /obj/item/weapon/circuitboard/robotstoragecontrol
 
 	storage_type = "cyborgs"
-	storage_name = "Robotic Storage Control"
+	storage_name = "Контроль робототехнического хранения"
 	allow_items = 0
 
 /obj/machinery/computer/cryopod/dorms
-	name = "residential oversight console"
-	desc = "An interface between visitors and the residential oversight systems tasked with keeping track of all visitors in the deeper section of the colony."
+	name = "Консоль мониторинга жителей"
+	desc = "Интерфейс между посетителями станции и системами мониторинга жителей, регистрирующих всех посетителей на территории колонии."
 	circuit = "/obj/item/weapon/circuitboard/robotstoragecontrol"
 
 	storage_type = "visitors"
-	storage_name = "Residential Oversight Control"
+	storage_name = "Контроль мониторинга жителей"
 	allow_items = 1
 
 /obj/machinery/computer/cryopod/travel
-	name = "docking oversight console"
-	desc = "An interface between visitors and the docking oversight systems tasked with keeping track of all visitors who enter or exit from the docks."
+	name = "Консоль мониторинга доков"
+	desc = "Интерфейс между посетителями станции и системами мониторинга доков, регистрирующих всех посетителей, приходящих через них."
 	circuit = "/obj/item/weapon/circuitboard/robotstoragecontrol"
 
 	storage_type = "visitors"
-	storage_name = "Travel Oversight Control"
+	storage_name = "Проходной контроль"
 	allow_items = 1
 
 /obj/machinery/computer/cryopod/gateway
-	name = "gateway oversight console"
-	desc = "An interface between visitors and the gateway oversight systems tasked with keeping track of all visitors who enter or exit from the gateway."
+	name = "Консоль мониторинга телепорта"
+	desc = "Интерфейс между посетителями станции и системами мониторинга телепорта, регистрирующих всех посетителей, приходящих через него."
 	circuit = "/obj/item/weapon/circuitboard/robotstoragecontrol"
 
 	storage_type = "visitors"
-	storage_name = "Travel Oversight Control"
+	storage_name = "Проходной контроль"
 	allow_items = 1
 
 /obj/machinery/computer/cryopod/attack_ai(mob/user)
@@ -123,15 +123,15 @@
 				return
 
 			if(!LAZYLEN(frozen_items))
-				to_chat(usr, "<span class='notice'>There is nothing to recover from storage.</span>")
+				to_chat(usr, "<span class='notice'>Внутри нечего доставать.</span>")
 				return
 
 			var/obj/item/I = locate(params["ref"]) in frozen_items
 			if(!I)
-				to_chat(usr, "<span class='notice'>\The [I] is no longer in storage.</span>")
+				to_chat(usr, "<span class='notice'>[I] больше не находится внутри.</span>")
 				return
 
-			visible_message("<span class='notice'>The console beeps happily as it disgorges [I].</span>")
+			visible_message("<span class='notice'>Консоль радостно пикает, выплёвывая [I].</span>")
 
 			I.forceMove(get_turf(src))
 			frozen_items -= I
@@ -140,10 +140,10 @@
 				return
 
 			if(!LAZYLEN(frozen_items))
-				to_chat(usr, "<span class='notice'>There is nothing to recover from storage.</span>")
+				to_chat(usr, "<span class='notice'>Внутри нечего доставать.</span>")
 				return
 
-			visible_message("<span class='notice'>The console beeps happily as it disgorges the desired objects.</span>")
+			visible_message("<span class='notice'>Консоль радостно пикает, выплёвывая нужные объекты.</span>")
 
 			for(var/obj/item/I in frozen_items)
 				I.forceMove(get_turf(src))
@@ -151,35 +151,35 @@
 
 
 /obj/item/weapon/circuitboard/cryopodcontrol
-	name = "Circuit board (Cryogenic Oversight Console)"
+	name = "Печатная плата (Консоль криогенного контроля)"
 	build_path = "/obj/machinery/computer/cryopod"
 	origin_tech = list(TECH_DATA = 3)
 
 /obj/item/weapon/circuitboard/robotstoragecontrol
-	name = "Circuit board (Robotic Storage Console)"
+	name = "Печатная плата (Консоль робототехнического мониторинга)"
 	build_path = "/obj/machinery/computer/cryopod/robot"
 	origin_tech = list(TECH_DATA = 3)
 
 /obj/item/weapon/circuitboard/dormscontrol
-	name = "Circuit board (Residential Oversight Console)"
+	name = "Печатная плата (Консоль мониторинга жителей)"
 	build_path = "/obj/machinery/computer/cryopod/door/dorms"
 	origin_tech = list(TECH_DATA = 3)
 
 /obj/item/weapon/circuitboard/travelcontrol
-	name = "Circuit board (Travel Oversight Console - Docks)"
+	name = "Печатная плата (Консоль проходного контроля - Доки)"
 	build_path = "/obj/machinery/computer/cryopod/door/travel"
 	origin_tech = list(TECH_DATA = 3)
 
 /obj/item/weapon/circuitboard/gatewaycontrol
-	name = "Circuit board (Travel Oversight Console - Gateway)"
+	name = "Печатная плата (Консоль проходного контроля - Телепорт)"
 	build_path = "/obj/machinery/computer/cryopod/door/gateway"
 	origin_tech = list(TECH_DATA = 3)
 
 //Decorative structures to go alongside cryopods.
 /obj/structure/cryofeed
 
-	name = "cryogenic feed"
-	desc = "A bewildering tangle of machinery and pipes."
+	name = "Криогенная система"
+	desc = "Удивительная путаница из механизмов и труб."
 	icon = 'icons/obj/Cryogenic2_vr.dmi' //VOREStation Edit - New Icon
 	icon_state = "cryo_rear"
 	anchored = 1
@@ -187,8 +187,8 @@
 
 //Cryopods themselves.
 /obj/machinery/cryopod
-	name = "cryogenic freezer"
-	desc = "A man-sized pod for entering suspended animation."
+	name = "Криокамера"
+	desc = "Криогенный морозильник размером с человека для длительного хранения."
 	icon = 'icons/obj/Cryogenic2_vr.dmi' //VOREStation Edit - New Icon
 	icon_state = "cryopod_0" //VOREStation Edit - New Icon
 	density = 1
@@ -197,13 +197,13 @@
 
 	var/base_icon_state = "cryopod_0" //VOREStation Edit - New Icon
 	var/occupied_icon_state = "cryopod_1" //VOREStation Edit - New Icon
-	var/on_store_message = "��������� �� ���������� ��������."
-	var/on_store_name = "Cryogenic Oversight"
-	var/on_enter_visible_message = "starts climbing into the"
-	var/on_enter_occupant_message = "�� ����������, ��� ��� �������� ���������� ������. �� �������� ��������� ������."
-	var/on_store_visible_message_1 = "����� � ����� ��� ��������" //We need two variables because byond doesn't let us have variables inside strings at compile-time.
-	var/on_store_visible_message_2 = "� ���������."
-	var/announce_channel = "�����"
+	var/on_store_message = "поступает на длительное хранение."
+	var/on_store_name = "Криогенный мониторинг"
+	var/on_enter_visible_message = "начинает залезать в"
+	var/on_enter_occupant_message = "Вас окутывает прохладный воздух. Ваше тело начинает быстро неметь."
+	var/on_store_visible_message_1 = "шипит и гудит, перемещая" //We need two variables because byond doesn't let us have variables inside strings at compile-time.
+	var/on_store_visible_message_2 = "в хранилище."
+	var/announce_channel = "Общий"
 	var/allow_occupant_types = list(/mob/living/carbon/human)
 	var/disallow_occupant_types = list()
 
@@ -217,28 +217,28 @@
 	var/applies_stasis = 0	//VOREStation Edit: allow people to change their mind
 
 /obj/machinery/cryopod/robot
-	name = "robotic storage unit"
-	desc = "A storage unit for robots."
+	name = "Ячейка робототехнического хранения"
+	desc = "Ячейка для длительного хранения роботов."
 	icon = 'icons/obj/robot_storage.dmi'
 	icon_state = "pod_0"
 	base_icon_state = "pod_0"
 	occupied_icon_state = "pod_1"
-	on_store_message = "has entered robotic storage."
-	on_store_name = "Robotic Storage Oversight"
-	on_enter_occupant_message = "���� �������� �������� ��� ������ ���. ���� ������� �������� �����������, � �� ���������� � ����� ����������� �����������������."
+	on_store_message = "поступает на робототехническое хранение."
+	on_store_name = "Робототехнический мониторинг"
+	on_enter_occupant_message = "Ячейка хранения воспроизводит сигнал на сон. Ваши системы отключаются, и Вы входите в режим экономии энергии."
 	allow_occupant_types = list(/mob/living/silicon/robot)
 	//disallow_occupant_types = list(/mob/living/silicon/robot/drone) //VOREStation Removal - Why? How else do they leave?
 	applies_stasis = 0
 
 /obj/machinery/cryopod/robot/door
 	//This inherits from the robot cryo, so synths can be properly cryo'd.  If a non-synth enters and is cryo'd, ..() is called and it'll still work.
-	name = "Airlock of Wonders"
-	desc = "An airlock that isn't an airlock, and shouldn't exist.  Yell at a coder/mapper."
+	name = "Шлюз чудес"
+	desc = "Это как бы шлюз, но как бы и нет. Наорите на кодера/маппера."
 	icon = 'icons/obj/doors/Doorint.dmi'
 	icon_state = "door_open"
 	base_icon_state = "door_open"
 	occupied_icon_state = "door_closed"
-	on_enter_visible_message = "steps into the"
+	on_enter_visible_message = "входит в"
 
 	time_till_despawn = 600 //1 minute. We want to be much faster then normal cryo, since waiting in an elevator for half an hour is a special kind of hell.
 
@@ -246,35 +246,35 @@
 	disallow_occupant_types = list(/mob/living/silicon/robot/drone)
 
 /obj/machinery/cryopod/robot/door/dorms
-	name = "Residential District Elevator"
-	desc = "��������� ����, ������������ � ����� �������� ����� �������."
-	on_store_message = "����� � ���� ����������."
-	on_store_name = "Residential Oversight"
-	on_enter_occupant_message = "����� ����� �������� �����������, ������� ��������� ��� � ����� �����."
-	on_store_visible_message_1 = "������ ����, ����� ��������"
-	on_store_visible_message_2 = "� ����� �����."
+	name = "Лифт жилого дистрикта"
+	desc = "Небольшой лифт, ведущий в нижнюю секцию колонии."
+	on_store_message = "отправляется в жилой дистрикт на лифте."
+	on_store_name = "Проходной контроль"
+	on_enter_occupant_message = "Дверь лифта медленно закрывается перед тем, как отправиться вниз в жилой дистрикт."
+	on_store_visible_message_1 = "издаёт звон."
+	on_store_visible_message_2 = "отправляется в жилой дистрикт."
 
 /obj/machinery/cryopod/robot/door/travel
-	name = "Passenger Elevator"
-	desc = "��������� ����, ������� ���������� � ������������ ����� �����."
-	on_store_message = "is slated to depart from the colony."
-	on_store_name = "Travel Oversight"
-	on_enter_occupant_message = "����� ����� �������� �����������, ������� ��������� ��� � ��, ������� �������� ������������ ������-������."
-	on_store_visible_message_1 = "������ ����, ����� ��������"
-	on_store_visible_message_2 = "�� ������������ ������."
+	name = "Пассажирский лифт"
+	desc = "Небольшой лифт, ведущий в пассажирское отделение звездолёта."
+	on_store_message = "подготавливается к отправке с колонии."
+	on_store_name = "Проходной контроль"
+	on_enter_occupant_message = "Дверь лифта медленно закрывается перед тем, как отправить Вас в ад под названием 'эконом-класс'."
+	on_store_visible_message_1 = "издаёт звон."
+	on_store_visible_message_2 = "отправляется в пассажирский дек."
 
 /obj/machinery/cryopod/robot/door/gateway
-	name = "Gateway"
-	desc = "The gateway you might've came in from.  You could leave the colony easily using this."
+	name = "Телепорт"
+	desc = "Телепорт, через который Вы могли попасть на станцию. Через него же можно её и покинуть."
 	icon = 'icons/obj/machines/gateway.dmi'
 	icon_state = "offcenter"
 	base_icon_state = "offcenter"
 	occupied_icon_state = "oncenter"
-	on_store_message = "has departed from the colony."
-	on_store_name = "Travel Oversight"
-	on_enter_occupant_message = "����� ������������, � �� ������� � ���������� ������."
-	on_store_visible_message_1 = "������ �������� ����� ����� �����"
-	on_store_visible_message_2 = "finishes walking across it."
+	on_store_message = "покидает колонию через внестанционный телепорт."
+	on_store_name = "Проходной контроль"
+	on_enter_occupant_message = "Телепорт активируется, и Вы проходите во вращающийся портал."
+	on_store_visible_message_1 = "исчезает, после того как в него проходит"
+	on_store_visible_message_2 = "."
 
 	time_till_despawn = 60 //1 second, because gateway.
 
@@ -304,8 +304,8 @@
 
 	// Don't send messages unless we *need* the computer, and less than five minutes have passed since last time we messaged
 	if(!control_computer && urgent && last_no_computer_message + 5 MINUTES < world.time)
-		log_admin("Cryopod in [my_area] could not find control computer!")
-		message_admins("Cryopod in [my_area] could not find control computer!")
+		log_admin("Криокамера в [my_area] не смогла найти контрольный компьютер!")
+		message_admins("Криокамера в [my_area] не смогла найти контрольный компьютер!")
 		last_no_computer_message = world.time
 
 	return control_computer != null
@@ -453,7 +453,7 @@
 		// them win or lose based on cryo is silly so we remove the objective.
 		if(O.target == to_despawn.mind)
 			if(O.owner && O.owner.current)
-				to_chat(O.owner.current, "<span class='warning'>�� ����������, ��� ���� ���� ������ �� ��������� � �������� ����� ������������...</span>")
+				to_chat(O.owner.current, "<span class='warning'>Вы ощущаете, как Ваша цель ускользает из Ваших рук...</span>")
 			qdel(O)
 
 	//VOREStation Edit - Resleeving.
@@ -502,7 +502,7 @@
 	//Make an announcement and log the person entering storage.
 	control_computer.frozen_crew += "[to_despawn.real_name], [to_despawn.mind.role_alt_title] - [stationtime2text()]"
 	control_computer._admin_logs += "[key_name(to_despawn)] ([to_despawn.mind.role_alt_title]) at [stationtime2text()]"
-	log_and_message_admins("[key_name(to_despawn)] ([to_despawn.mind.role_alt_title]) entered cryostorage.")
+	log_and_message_admins("[key_name(to_despawn)] ([to_despawn.mind.role_alt_title]) поступает на криохранение.")
 
 	announce.autosay("[to_despawn.real_name], [to_despawn.mind.role_alt_title], [on_store_message]", "[on_store_name]", announce_channel, using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE))
 	//visible_message("<span class='notice'>\The [initial(name)] hums and hisses as it moves [to_despawn.real_name] into storage.</span>", 3)
@@ -527,7 +527,7 @@
 
 		var/obj/item/weapon/grab/grab = G
 		if(occupant)
-			to_chat(user, "<span class='notice'>\The [src] is in use.</span>")
+			to_chat(user, "<span class='notice'>[src] уже кем-то используется.</span>")
 			return
 
 		if(!ismob(grab.affecting))
@@ -538,8 +538,8 @@
 
 
 /obj/machinery/cryopod/verb/eject()
-	set name = "Eject Pod"
-	set category = "Object"
+	set name = "Раскрыть Капсулу"
+	set category = "Объект"
 	set src in oview(1)
 	if(usr.stat != 0)
 		return
@@ -564,21 +564,21 @@
 	return
 
 /obj/machinery/cryopod/verb/move_inside()
-	set name = "Enter Pod"
-	set category = "Object"
+	set name = "Войти В Капсулу"
+	set category = "Объект"
 	set src in oview(1)
 
 	if(usr.stat != 0 || !check_occupant_allowed(usr))
 		return
 
 	if(occupant)
-		to_chat(usr, "<span class='notice'><B>\The [src] is in use.</B></span>")
+		to_chat(usr, "<span class='notice'><B>[src] уже кем-то используется.</B></span>")
 		return
 
 	if(isliving(usr))
 		var/mob/living/L = usr
 		if(L.has_buckled_mobs())
-			to_chat(L, span("warning", "� ��� ���� ������ ��������, ����������� � ���. ������� ������� ��."))
+			to_chat(L, span("warning", "На Вас есть другие существа. Сначала разберитесь с ними."))
 			return
 
 	visible_message("[usr] [on_enter_visible_message] [src].", 3)
@@ -589,7 +589,7 @@
 			return
 
 		if(occupant)
-			to_chat(usr, "<span class='notice'><B>\The [src] is in use.</B></span>")
+			to_chat(usr, "<span class='notice'><B>[src] уже кем-то используется.</B></span>")
 			return
 
 		usr.stop_pulling()
@@ -606,7 +606,7 @@
 		icon_state = occupied_icon_state
 
 		to_chat(usr, "<span class='notice'>[on_enter_occupant_message]</span>")
-		to_chat(usr, "<span class='notice'><b>���� �� ������� � ����� ��������, ������� �� ������� ��� �������� ���� ������, � ��� �������� ������ ����� �������� ������ �� ������.</b></span>")
+		to_chat(usr, "<span class='notice'><b>Если Вы войдёте в режим призрака, выйдете из аккаунта или закроете клиент, Ваш персонаж будет вскоре удалён из раунда.</b></span>")
 
 		time_entered = world.time
 
@@ -661,13 +661,13 @@
 	if(!M)
 		return
 	if(occupant)
-		to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
+		to_chat(user, "<span class='warning'>[src] уже кем-то используется.</span>")
 		return
 
 	var/willing = null //We don't want to allow people to be forced into despawning.
 
 	if(M.client)
-		if(alert(M,"�� ������ �� ���� ������������ ��������?",,"��","���") == "��")
+		if(alert(M,"Хотите ли Вы поступить на длительное хранение?",,"Да","Нет") == "Да")
 			if(!M) return
 			willing = 1
 	else
@@ -677,11 +677,11 @@
 		if(M == user)
 			visible_message("[usr] [on_enter_visible_message] [src].", 3)
 		else
-			visible_message("\The [user] starts putting [M] into \the [src].", 3)
+			visible_message("[user] начинает складывать [M] в [src].", 3)
 
 		if(do_after(user, 20))
 			if(occupant)
-				to_chat(user, "<span class='warning'>[src] ��� �����.</span>")
+				to_chat(user, "<span class='warning'>[src] уже кем-то используется.</span>")
 				return
 			M.forceMove(src)
 
@@ -693,7 +693,7 @@
 		icon_state = occupied_icon_state
 
 		to_chat(M, "<span class='notice'>[on_enter_occupant_message]</span>")
-		to_chat(M, "<span class='notice'><b>���� �� ������� � ����� ��������, ������� �� ������� ��� �������� ���� ������, � ��� �������� ������ ����� �������� ������ �� ������.</b></span>")
+		to_chat(M, "<span class='notice'><b>Если Вы войдёте в режим призрака, выйдете из аккаунта или закроете клиент, Ваш персонаж будет вскоре удалён из раунда.</b></span>")
 		set_occupant(M)
 		time_entered = world.time
 		if(ishuman(M) && applies_stasis)
@@ -704,8 +704,8 @@
 
 		// Book keeping!
 		var/turf/location = get_turf(src)
-		log_admin("[key_name_admin(M)] has entered a stasis pod. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)")
-		message_admins("<span class='notice'>[key_name_admin(M)] has entered a stasis pod.</span>")
+		log_admin("[key_name_admin(M)] входит в капсулу стазиса. (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[location.x];Y=[location.y];Z=[location.z]'>JMP</a>)")
+		message_admins("<span class='notice'>[key_name_admin(M)] входит в капсулу стазиса.</span>")
 
 		//Despawning occurs when process() is called with an occupant without a client.
 		add_fingerprint(M)

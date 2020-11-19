@@ -2,7 +2,7 @@
 
 //Utility
 /obj/item/clothing/head/soft/solgov
-	name = "кепка Сол"
+	name = "Кепка Сол"
 	desc = "Это синяя бейсболка в расцветке Правительства Терранского Содружества."
 
 /obj/item/clothing/head/soft/solgov/veteranhat
@@ -98,7 +98,7 @@
 //Berets
 
 /obj/item/clothing/head/beret/solgov
-	name = "берет миротворца"
+	name = "Берет миротворца"
 	desc = "Берет в расцветке Правительства Терранского Содружества. Для миротворцев, для которых стиль превыше безопасности."
 
 /obj/item/clothing/head/beret/solgov/homeguard

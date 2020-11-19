@@ -34,44 +34,44 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 						date = unix2date(unix_time)
 				break
 
-	to_world_log("-Revision Info-")
-	to_world_log("Branch: [branch]")
-	to_world_log("Date: [date]")
-	to_world_log("Revision: [revision]")
+	to_world_log("-Информация о билде-")
+	to_world_log("Ветка: [branch]")
+	to_world_log("Дата: [date]")
+	to_world_log("Ревизия: [revision]")
 
 /datum/getrev/proc/GetTestMergeInfo(header = TRUE)
 	. = list()
 	if(!testmerge.len)
 		return
 	if(header)
-		. += "The following pull requests are currently test merged:"
+		. += "Следующие пулл реквесты в режиме тестового мержа:"
 	for(var/line in testmerge)
 		var/datum/tgs_revision_information/test_merge/tm = line
 		var/cm = tm.pull_request_commit
-		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
+		var/details = ": '" + html_encode(tm.title) + "' от " + html_encode(tm.author) + " в коммите " + html_encode(copytext_char(cm, 1, 11))
 		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.holder))
 			continue
 		. += "<a href=\"[config.githuburl]/pull/[tm.number]\">#[tm.number][details]</a>"
 
 client/verb/showrevinfo()
 	set category = "OOC"
-	set name = "Show Server Revision"
-	set desc = "Check the current server code revision"
+	set name = "Показать Ревизию Сервера"
+	set desc = "Проверить ревизию текущего билда."
 
 	if(!GLOB.revdata)
-		to_chat(src, "<span class='warning'>Please wait until server initializations are complete.</span>")
+		to_chat(src, "<span class='warning'>Пожалуйста, дождитесь окончания инициализации.</span>")
 		return
 	
 	var/list/msg = list()
 	
 	if(GLOB.revdata.revision)
-		msg += "<b>Server revision:</b> B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
+		msg += "<b>Ревизия сервера:</b> В:[GLOB.revdata.branch] Д:[GLOB.revdata.date]"
 		if(config.githuburl)
-			msg += "<b>Commit:</b> <a href='[config.githuburl]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>"
+			msg += "<b>Коммит:</b> <a href='[config.githuburl]/commit/[GLOB.revdata.revision]'>[GLOB.revdata.revision]</a>"
 		else
-			msg += "<b>Commit:</b> GLOB.revdata.revision"
+			msg += "<b>Коммит:</b> GLOB.revdata.revision"
 	else
-		msg += "<b>Server revision:</b> Unknown"
+		msg += "<b>Ревизия сервера:</b> Неизвестна"
 
 	if(world.TgsAvailable())
 		var/datum/tgs_version/version = world.TgsVersion()

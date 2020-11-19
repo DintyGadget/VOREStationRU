@@ -36,7 +36,7 @@
 /mob/living/carbon/human/proc/tackle()
 	set category = "Способности"
 	set name = "Наброситься"
-	set desc = "Tackle someone down."
+	set desc = "Наброситься на кого-либо."
 
 	if(last_special > world.time)
 		return

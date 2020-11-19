@@ -626,7 +626,7 @@
 				stat("Локация:", "([x], [y], [z]) [loc]")
 				stat("CPU:","[world.cpu]")
 				stat("Инстанции:","[world.contents.len]")
-				stat(null, "Замедление времени: [round(SStime_track.time_dilation_current,1)]% AVG:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
+				stat(null, "Замедление времени: [round(SStime_track.time_dilation_current,1)]% в среднем:([round(SStime_track.time_dilation_avg_fast,1)]%, [round(SStime_track.time_dilation_avg,1)]%, [round(SStime_track.time_dilation_avg_slow,1)]%)")
 
 			if(statpanel("MC"))
 				stat("Локация:", "([x], [y], [z]) [loc]")

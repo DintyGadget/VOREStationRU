@@ -1,5 +1,5 @@
 /obj/item/clothing/mask/gas
-	name = "противогаз"
+	name = "Противогаз"
 	desc = "Маска, которая закрывает лицо и может быть подсоединена к источнику воздуха. Фильтрует вредные газы."
 	icon_state = "gas_alt"
 	item_flags = BLOCK_GAS_SMOKE_EFFECT | AIRTIGHT | ALLOW_SURVIVALFOOD
@@ -29,14 +29,14 @@
 	return gas_filtered
 
 /obj/item/clothing/mask/gas/clear
-	name = "противогаз"
+	name = "Противогаз"
 	desc = "Маска, которая закрывает лицо прозрачным защитным экраном и может быть подсоединена к источнику воздуха. Фильтрует вредные газы."
 	icon_state = "gas_clear"
 	flags_inv = null
 
 /obj/item/clothing/mask/gas/half
-	name = "респиратор"
-	desc = "Компактный, но надежный противогаз, который может быть подсоединен к источнику воздуха."
+	name = "Респиратор"
+	desc = "Компактный, но надёжный противогаз, который может быть подсоединен к источнику воздуха."
 	icon_state = "halfgas"
 	siemens_coefficient = 0.7
 	body_parts_covered = FACE
@@ -62,15 +62,15 @@
 
 //Plague Dr suit can be found in clothing/suits/bio.dm
 /obj/item/clothing/mask/gas/plaguedoctor
-	name = "маска чумного доктора"
-	desc = "Модернизированная вариация классического дизайна. Эта маска не только очищает входящий воздух от форона, но и может быть подсоединена к источнику воздуха."
+	name = "Маска чумного доктора"
+	desc = "Старый дизайн на новый лад. Эта маска не только очищает входящий воздух от форона, но и может быть подсоединена к источнику воздуха."
 	icon_state = "plaguedoctor"
 	item_state_slots = list(slot_r_hand_str = "gas", slot_l_hand_str = "gas")
 	armor = list(melee = 0, bullet = 0, laser = 2,energy = 2, bomb = 0, bio = 90, rad = 0)
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/mask/gas/swat
-	name = "маска СОБР"
+	name = "Маска СОБР"
 	desc = "Плотно прилегающая маска, которая может быть подсоединена к источнику воздуха."
 	icon_state = "swat"
 	siemens_coefficient = 0.7
@@ -78,7 +78,7 @@
 
 // Vox mask, has special code for eating
 /obj/item/clothing/mask/gas/swat/vox
-	name = "маска пришельца"
+	name = "Маска пришельца"
 	desc = "Изготовлена явно не на человеческое лицо."
 	flags = PHORONGUARD
 	item_flags = BLOCK_GAS_SMOKE_EFFECT | AIRTIGHT
@@ -103,7 +103,7 @@
 	..()
 
 /obj/item/clothing/mask/gas/zaddat
-	name = "противогаз заддат"
+	name = "Противогаз заддат"
 	desc = "Маска, фильтрующая азот - жизненно необходима для заддат. Может быть подсоединена к источнику воздуха и перенастроена для безопасного принятия пищи."
 	icon_state = "zaddat_mask"
 	item_state = "vax_mask"
@@ -113,13 +113,13 @@
 	filtered_gases = list("phoron", "nitrogen", "nitrous_oxide")
 
 /obj/item/clothing/mask/gas/syndicate
-	name = "тактическая маска"
+	name = "Тактическая маска"
 	desc = "Плотно прилегающая маска, которая может быть подсоединена к источнику воздуха."
 	icon_state = "swat"
 	siemens_coefficient = 0.7
 
 /obj/item/clothing/mask/gas/explorer
-	name = "противогаз искателя"
+	name = "Противогаз искателя"
 	desc = "Противогаз военного качества, который может быть подсоединен к источнику воздуха."
 	icon_state = "explorer"
 	item_state_slots = list(slot_r_hand_str = "gas", slot_l_hand_str = "gas")
@@ -127,55 +127,55 @@
 	siemens_coefficient = 0.9
 
 /obj/item/clothing/mask/gas/clown_hat
-	name = "парик и маска клоуна"
-	desc = "Клоун - не клоун без своего парика и маски."
+	name = "Парик и маска клоуна"
+	desc = "Клоун -- не клоун без своего парика и маски."
 	icon_state = "clown"
 	item_state_slots = list(slot_r_hand_str = "clown_hat", slot_l_hand_str = "clown_hat")
 
 /obj/item/clothing/mask/gas/sexyclown
-	name = "парик и маска сексапильного клоуна"
+	name = "Парик и маска сексапильного клоуна"
 	desc = "Женская маска клоуна для заинтересованных трансвеститов или представителей профессии среди женского пола."
 	icon_state = "sexyclown"
 	item_state_slots = list(slot_r_hand_str = "clown_hat", slot_l_hand_str = "clown_hat")
 
 /obj/item/clothing/mask/gas/mime
-	name = "маска мима"
+	name = "Маска мима"
 	desc = "Традиционная маска мима. Выражение лица стремноватое."
 	icon_state = "mime"
 	item_state_slots = list(slot_r_hand_str = "mime", slot_l_hand_str = "mime")
 
 /obj/item/clothing/mask/gas/monkeymask
-	name = "маска мартышки"
+	name = "Маска мартышки"
 	desc = "Маска, необходимая при отыгрыше обезьяны."
 	icon_state = "monkeymask"
 	body_parts_covered = HEAD|FACE|EYES
 
 /obj/item/clothing/mask/gas/sexymime
-	name = "маска сексапильного мима"
+	name = "Маска сексапильного мима"
 	desc = "Традиционная маска мима женского пола."
 	icon_state = "sexymime"
 	item_state_slots = list(slot_r_hand_str = "mime", slot_l_hand_str = "mime")
 
 /obj/item/clothing/mask/gas/guy
-	name = "маска Гая Фокса"
+	name = "Маска Гая Фокса"
 	desc = "Маска в стиле Гая Фокса."
 	icon_state = "guyfawkes"
 	flags_inv = HIDEEARS|HIDEFACE
 	item_state_slots = list(slot_r_hand_str = "mime", slot_l_hand_str = "mime")
 
 /obj/item/clothing/mask/gas/commando
-	name = "противогаз коммандо"
+	name = "Противогаз коммандо"
 	icon_state = "fullgas"
 	item_state_slots = list(slot_r_hand_str = "swat", slot_l_hand_str = "swat")
 	siemens_coefficient = 0.2
 
 /obj/item/clothing/mask/gas/cyborg
-	name = "визор киборга"
+	name = "Визор киборга"
 	desc = "Бип буп."
 	icon_state = "death"
 
 /obj/item/clothing/mask/gas/owl_mask
-	name = "маска филина"
+	name = "Маска филина"
 	desc = "Уух!"
 	icon_state = "owl"
 	body_parts_covered = HEAD|FACE|EYES

@@ -4,12 +4,12 @@
 	dir = NORTH
 
 /client/verb/spinleft()
-	set name = "Spin View CCW"
+	set name = "Повернуть Вид Против Стрелки"
 	set category = "OOC"
 	dir = turn(dir, 90)
 
 /client/verb/spinright()
-	set name = "Spin View CW"
+	set name = "Повернуть Вид По Стрелке"
 	set category = "OOC"
 	dir = turn(dir, -90)
 

@@ -202,13 +202,13 @@
 		else
 			f_name += "oil-stained [name][infix]."
 
-	var/list/output = list("[bicon(src)] That's [f_name] [suffix]", desc)
+	var/list/output = list("[bicon(src)] [f_name] [suffix]", desc)
 
 	if(user.client?.prefs.examine_text_mode == EXAMINE_MODE_INCLUDE_USAGE)
 		output += description_info
 
 	if(user.client?.prefs.examine_text_mode == EXAMINE_MODE_SWITCH_TO_PANEL)
-		user.client.statpanel = "Examine" // Switch to stat panel
+		user.client.statpanel = "Осмотреть" // Switch to stat panel
 
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, output)
 	return output

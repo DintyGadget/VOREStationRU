@@ -211,16 +211,16 @@
 	var/size
 	switch(src.w_class)
 		if(ITEMSIZE_TINY)
-			size = "крохотный"
+			size = "крохотного"
 		if(ITEMSIZE_SMALL)
-			size = "маленький"
+			size = "маленького"
 		if(ITEMSIZE_NORMAL)
-			size = "среднего размера"
+			size = "среднего"
 		if(ITEMSIZE_LARGE)
-			size = "крупноватый"
+			size = "крупного"
 		if(ITEMSIZE_HUGE)
-			size = "огромный"
-	return ..(user, "", "Это [size] предмет.")
+			size = "огромного"
+	return ..(user, "", "Этот предмет [size] размера.")
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return

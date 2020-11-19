@@ -1,7 +1,7 @@
 //Pilot
 
 /obj/item/clothing/head/pilot
-	name = "шлем пилота"
+	name = "Шлем пилота"
 	desc = "Стандартный авиационный шлем. Защищает голову от ударов."
 	icon_state = "pilot_helmet1"
 	item_icons = list(slot_head_str = 'icons/mob/pilot_helmet.dmi')
@@ -186,7 +186,7 @@
 		user.client.images -= raw_images
 
 /obj/item/clothing/head/pilot/alt
-	name = "шлем пилота"
+	name = "Шлем пилота"
 	desc = "Стандартный авиационный шлем. Защищает голову от ударов. Этот обладает регулируемым визором."
 	icon_state = "pilot_helmet2"
 	action_button_name = "Переключить Визор"

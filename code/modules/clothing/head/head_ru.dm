@@ -350,66 +350,6 @@
 	icase = "шлемом рейнджера"
 	pcase = "шлеме рейнджера"
 
-/obj/item/clothing/head/hardhat/ranger/black
-	name = "Шлем чёрного рейнджера"
-	rugender = "male"
-	ncase = "шлем чёрного рейнджера"
-	gcase = "шлема чёрного рейнджера"
-	dcase = "шлему чёрного рейнджера"
-	acase = "шлем чёрного рейнджера"
-	icase = "шлемом чёрного рейнджера"
-	pcase = "шлеме чёрного рейнджера"
-
-/obj/item/clothing/head/hardhat/ranger/pink
-	name = "Шлем розового рейнджера"
-	rugender = "male"
-	ncase = "шлем розового рейнджера"
-	gcase = "шлема розового рейнджера"
-	dcase = "шлему розового рейнджера"
-	acase = "шлем розового рейнджера"
-	icase = "шлемом розового рейнджера"
-	pcase = "шлеме розового рейнджера"
-
-/obj/item/clothing/head/hardhat/ranger/green
-	name = "Шлем зелёного рейнджера"
-	rugender = "male"
-	ncase = "шлем зелёного рейнджера"
-	gcase = "шлема зелёного рейнджера"
-	dcase = "шлему зелёного рейнджера"
-	acase = "шлем зелёного рейнджера"
-	icase = "шлемом зелёного рейнджера"
-	pcase = "шлеме зелёного рейнджера"
-
-/obj/item/clothing/head/hardhat/ranger/cyan
-	name = "Шлем бирюзового рейнджера"
-	rugender = "male"
-	ncase = "шлем бирюзового рейнджера"
-	gcase = "шлема бирюзового рейнджера"
-	dcase = "шлему бирюзового рейнджера"
-	acase = "шлем бирюзового рейнджера"
-	icase = "шлемом бирюзового рейнджера"
-	pcase = "шлеме бирюзового рейнджера"
-
-/obj/item/clothing/head/hardhat/ranger/orange
-	name = "Шлем оранжевого рейнджера"
-	rugender = "male"
-	ncase = "шлем оранжевого рейнджера"
-	gcase = "шлема оранжевого рейнджера"
-	dcase = "шлему оранжевого рейнджера"
-	acase = "шлем оранжевого рейнджера"
-	icase = "шлемом оранжевого рейнджера"
-	pcase = "шлеме оранжевого рейнджера"
-
-/obj/item/clothing/head/hardhat/ranger/yellow
-	name = "Шлем жёлтого рейнджера"
-	rugender = "male"
-	ncase = "шлем жёлтого рейнджера"
-	gcase = "шлема жёлтого рейнджера"
-	dcase = "шлему жёлтого рейнджера"
-	acase = "шлем жёлтого рейнджера"
-	icase = "шлемом жёлтого рейнджера"
-	pcase = "шлеме жёлтого рейнджера"
-
 //
 // helmet.dm
 //
@@ -1003,7 +943,7 @@ obj/item/clothing/head/helmet/solgov
 
 /obj/item/clothing/head/beret
 	name = "Берет"
-	desc = "Берет, излюбленный художниками головной убор."
+	desc = "Берет: излюбленный художниками головной убор."
 	rugender = "male"
 	ncase = "берет"
 	gcase = "берета"
@@ -1166,8 +1106,8 @@ obj/item/clothing/head/helmet/solgov
 	gcase = "инженерного берета"
 	dcase = "инженерному берету"
 	acase = "инженерный берет"
-	icase = "инженерым беретом"
-	pcase = "инженером берете"
+	icase = "инженерным беретом"
+	pcase = "инженерном берете"
 
 /obj/item/clothing/head/beret/purple
 	name = "Фиолетовый берет"
@@ -1213,7 +1153,6 @@ obj/item/clothing/head/helmet/solgov
 	icase = "беретом офицера"
 	pcase = "берете офицера"
 
-//Medical
 /obj/item/clothing/head/surgery
 	name = "Хирургическая шапочка"
 	desc = "Шапочка, которую носят хирурги во время операций, чтобы их волосы не щекотали Вам внутренние органы."
@@ -1254,3 +1193,1449 @@ obj/item/clothing/head/helmet/solgov
 	acase = "полузамкнутый шлем типа 34С"
 	icase = "полузамкнутого шлема типа 34С"
 	pcase = "полузамкнутом шлеме типа 34С"
+
+//
+// misc.dm
+//
+
+/obj/item/clothing/head/centhat
+	name = "Головной убор ЦК"
+	icon_state = "centcom"
+	desc = "Приятно быть императором."
+	rugender = "male"
+	ncase = "головной убор ЦК"
+	gcase = "головного убора ЦК"
+	dcase = "головному убору ЦК"
+	acase = "головной убор ЦК"
+	icase = "головным убором"
+	pcase = "головном уборе ЦК"
+
+/obj/item/clothing/head/centhat/customs
+	name = "Таможенная фуражка"
+	desc = "Формальный головной убор офицеров таможни Сол."
+	rugender = "female"
+	ncase = "таможенная фуражка"
+	gcase = "таможенной фуражки"
+	dcase = "таможенной фуражке"
+	acase = "таможенную фуражку"
+	icase = "таможенной фуражкой"
+	pcase = "таможенной фуражке"
+
+/obj/item/clothing/head/pin
+	name = "Заколка для волос"
+	desc = "Милая заколочка для волос."
+	rugender = "female"
+	ncase = "заколка для волос"
+	gcase = "заколки для волос"
+	dcase = "заколке для волос"
+	acase = "заколку для волос"
+	icase = "заколкой для волос"
+	pcase = "заколке для волос"
+
+/obj/item/clothing/head/pin/pink
+	name = "Розовая заколка"
+	rugender = "female"
+	ncase = "розовая заколка"
+	gcase = "розовой заколки"
+	dcase = "розовой заколке"
+	acase = "розовую заколку"
+	icase = "розовой заколкой"
+	pcase = "розовой заколке"
+
+/obj/item/clothing/head/pin/clover
+	name = "Заколка с клевером"
+	desc = "Заколка в форме листа клевера."
+	rugender = "female"
+	ncase = "заколка с клевером"
+	gcase = "заколки с клевером"
+	dcase = "заколке с клевером"
+	acase = "заколку с клевером"
+	icase = "заколкой с клевером"
+	pcase = "заколке с клевером"
+
+/obj/item/clothing/head/pin/butterfly
+	name = "Заколка с бабочкой"
+	desc = "Заколка в форме яркой голубой бабочки."
+	rugender = "female"
+	ncase = "заколка с бабочкой"
+	gcase = "заколки с бабочкой"
+	dcase = "заколке с бабочкой"
+	acase = "заколку с бабочкой"
+	icase = "заколкой с бабочкой"
+	pcase = "заколке с бабочкой"
+
+/obj/item/clothing/head/pin/magnetic
+	name = "Магнитная 'заколка'"
+	desc = "Наконец-то, заколка, которую могут использовать даже роботы."
+	rugender = "female"
+	ncase = "магнитная заколка"
+	gcase = "магнитной заколки"
+	dcase = "магнитной заколке"
+	acase = "магнитную заколку"
+	icase = "магнитной заколкой"
+	pcase = "магнитной заколке"
+
+/obj/item/clothing/head/pin/flower
+	name = "Красная цветочная заколка"
+	desc = "Приятно пахнет."
+	rugender = "female"
+	ncase = "красная цветочная заколка"
+	gcase = "красной цветочной заколки"
+	dcase = "красной цветочной заколке"
+	acase = "красную цветочную заколку"
+	icase = "красной цветочной заколкой"
+	pcase = "красной цветочной заколке"
+
+/obj/item/clothing/head/pin/flower/blue
+	name = "Синяя цветочная заколка"
+	rugender = "female"
+	ncase = "синяя цветочная заколка"
+	gcase = "синей цветочной заколки"
+	dcase = "синей цветочной заколке"
+	acase = "синюю цветочную заколку"
+	icase = "синей цветочной заколкой"
+	pcase = "синей цветочной заколке"
+
+/obj/item/clothing/head/pin/flower/pink
+	name = "Розовая цветочная заколка"
+	rugender = "female"
+	ncase = "розовая цветочная заколка"
+	gcase = "розовой цветочной заколки"
+	dcase = "розовой цветочной заколке"
+	acase = "розовую цветочную заколку"
+	icase = "розовой цветочной заколкой"
+	pcase = "розовой цветочной заколке"
+
+/obj/item/clothing/head/pin/flower/yellow
+	name = "Жёлтая цветочная заколка"
+	rugender = "female"
+	ncase = "жёлтая цветочная заколка"
+	gcase = "жёлтой цветочной заколки"
+	dcase = "жёлтой цветочной заколке"
+	acase = "жёлтую цветочную заколку"
+	icase = "жёлтой цветочной заколкой"
+	pcase = "жёлтой цветочной заколке"
+
+/obj/item/clothing/head/pin/flower/violet
+	name = "Фиолетовая цветочная заколка"
+	rugender = "female"
+	ncase = "фиолетовая цветочная заколка"
+	gcase = "фиолетовой цветочной заколки"
+	dcase = "фиолетовой цветочной заколке"
+	acase = "фиолетовую цветочную заколку"
+	icase = "фиолетовой цветочной заколкой"
+	pcase = "фиолетовой цветочной заколке"
+
+/obj/item/clothing/head/pin/flower/orange
+	name = "Оранжевая цветочная заколка"
+	rugender = "female"
+	ncase = "оранжевая цветочная заколка"
+	gcase = "оранжевой цветочной заколки"
+	dcase = "оранжевой цветочной заколке"
+	acase = "оранжевую цветочную заколку"
+	icase = "оранжевой цветочной заколкой"
+	pcase = "оранжевой цветочной заколке"
+
+/obj/item/clothing/head/pin/flower/white
+	name = "Цветочная заколка"
+	rugender = "female"
+	ncase = "цветочная цветочная заколка"
+	gcase = "цветочной цветочной заколки"
+	dcase = "цветочной цветочной заколке"
+	acase = "цветочную цветочную заколку"
+	icase = "цветочной цветочной заколкой"
+	pcase = "цветочной цветочной заколке"
+
+/obj/item/clothing/head/pin/bow
+	name = "Бантик"
+	desc = "Ленточка, завязанная в бантик с зажимом для крепления на волосы."
+	rugender = "male"
+	ncase = "бантик"
+	gcase = "бантика"
+	dcase = "бантику"
+	acase = "бантик"
+	icase = "бантиком"
+	pcase = "бантике"
+
+/obj/item/clothing/head/pin/bow/big
+	name = "Ленточка"
+	rugender = "female"
+	ncase = "ленточка"
+	gcase = "ленточки"
+	dcase = "ленточке"
+	acase = "ленточку"
+	icase = "ленточкой"
+	pcase = "ленточке"
+
+/obj/item/clothing/head/pin/bow/big/red
+	name = "Красная ленточка"
+	rugender = "female"
+	ncase = "красная ленточка"
+	gcase = "красной ленточки"
+	dcase = "красной ленточке"
+	acase = "красную ленточку"
+	icase = "красной ленточкой"
+	pcase = "красной ленточке"
+
+/obj/item/clothing/head/powdered_wig
+	name = "Пудрёный парик"
+	desc = "Это пудрёный парик."
+	rugender = "male"
+	ncase = "пудрёный парик"
+	gcase = "пудрёного парика"
+	dcase = "пудрёному парику"
+	acase = "пудрёный парик"
+	icase = "пудрёным париком"
+	pcase = "пудрёном парике"
+
+/obj/item/clothing/head/that
+	name = "Цилиндр"
+	desc = "Цилиндр. На вид весьма еврейский."
+	rugender = "male"
+	ncase = "цилиндр"
+	gcase = "цилиндра"
+	dcase = "цилиндру"
+	acase = "цилиндр"
+	icase = "цилиндром"
+	pcase = "цилиндре"
+
+/obj/item/clothing/head/redcoat
+	name = "Шапка красного мундира"
+	desc = "<i>'Не путать с красногвардейцами.'</i>"
+	rugender = "female"
+	ncase = "шапка красного мундира"
+	gcase = "шапки красного мундира"
+	dcase = "шапке красного мундира"
+	acase = "шапку красного мундира"
+	icase = "шапкой красного мундира"
+	pcase = "шапке красного мундира"
+
+/obj/item/clothing/head/mailman
+	name = "Фуражка почтальона"
+	desc = "<i>Чух-чух!</i>"
+	rugender = "female"
+	ncase = "фуражка почтальона"
+	gcase = "фуражки почтальона"
+	dcase = "фуражке почтальона"
+	acase = "фуражку почтальона"
+	icase = "фуражкой почтальона"
+	pcase = "фуражке почтальона"
+
+/obj/item/clothing/head/plaguedoctorhat
+	name = "Шляпа чумного доктора"
+	desc = "Такие шляпы носили чумные докторы. Они так, для красоты."
+	rugender = "female"
+	ncase = "шляпа чумного доктора"
+	gcase = "шляпи чумного доктора"
+	dcase = "шляпе чумного доктора"
+	acase = "шляпу чумного доктора"
+	icase = "шляпой чумного доктора"
+	pcase = "шляпе чумного доктора"
+
+/obj/item/clothing/head/hasturhood
+	name = "Капюшон Хастура"
+	desc = "Невыразимо стильный."
+	rugender = "male"
+	ncase = "капюшон Хастура"
+	gcase = "капюшона Хастура"
+	dcase = "капюшону Хастура"
+	acase = "капюшон Хастура"
+	icase = "капюшоном Хастура"
+	pcase = "капюшоне Хастура"
+
+/obj/item/clothing/head/nursehat
+	name = "Головной убор медсестры"
+	desc = "Позволяет быстро опознать обученный медицинский персонал."
+	rugender = "female"
+	ncase = "головной убор медсестры"
+	gcase = "головного убора медсестры"
+	dcase = "головному убору медсестры"
+	acase = "головной убор медсестры"
+	icase = "головным убором медсестры"
+	pcase = "головном уборе медсестры"
+
+/obj/item/clothing/head/syndicatefake
+	name = "Муляжный красный шлем"
+	desc = "Пластиковый поддельный космический шлем кровожадных наемников. Это лишь муляж, в космос в нём выходить не следует!"
+	rugender = "male"
+	ncase = "муляжный красный шлем"
+	gcase = "муляжного красного шлема"
+	dcase = "муляжному красному шлему"
+	acase = "муляжный красный шлем"
+	icase = "муляжным красным шлемом"
+	pcase = "муляжном красном шлеме"
+
+/obj/item/clothing/head/cueball
+	name = "Шлем-сфера"
+	desc = "Огромная неприметная сфера, которая надевается на голову. Что вообще в ней можно увидеть?"
+	rugender = "male"
+	ncase = "шлем-сфера"
+	gcase = "шлема-сферы"
+	dcase = "шлему-сфере"
+	acase = "шлем-сферу"
+	icase = "шлемом-сферой"
+	pcase = "шлема-сферы"
+
+/obj/item/clothing/head/greenbandana
+	name = "Зелёная бандана"
+	desc = "Зеленая бандана с искусно вышитой полосой."
+	rugender = "female"
+	ncase = "зелёная бандана"
+	gcase = "зелёной банданы"
+	dcase = "зелёной бандане"
+	acase = "зелёную бандану"
+	icase = "зелёной банданой"
+	pcase = "зелёной бандане"
+
+/obj/item/clothing/head/cardborg
+	name = "Шлем картонного киборга"
+	desc = "Шлем, изготовленный из коробки."
+	rugender = "male"
+	ncase = "шлем картонного киборга"
+	gcase = "шлема картонного киборга"
+	dcase = "шлему картонного киборга"
+	acase = "шлем картонного киборга"
+	icase = "шлемом картонного киборга"
+	pcase = "шлеме картонного киборга"
+
+/obj/item/clothing/head/justice
+	name = "Головной убор справедливости"
+	desc = "Боритесь за правое дело!"
+
+/obj/item/clothing/head/rabbitears
+	name = "Кроличьи ушки"
+	desc = "Делают носителя на вид абсолютно бесполезным, однако придают особый шарм."
+	rugender = "plural"
+	ncase = "кроличьи ушки"
+	gcase = "кроличьих ушек"
+	dcase = "кроличьим ушкам"
+	acase = "кроличьи ушки"
+	icase = "кроличьими ушками"
+	pcase = "кроличьих ушках"
+
+/obj/item/clothing/head/flatcap
+	name = "Плоская кепка"
+	desc = "Кепка работяги."
+	rugender = "female"
+	ncase = "плоская кепка"
+	gcase = "плоской кепки"
+	dcase = "плоской кепке"
+	acase = "плоскую кепку"
+	icase = "плоской кепкой"
+	pcase = "плоской кепке"
+
+/obj/item/clothing/head/pirate
+	name = "Пиратская шляпа"
+	desc = "Йо-хо-хо."
+	rugender = "female"
+	ncase = "пиратская шляпа"
+	gcase = "пиратской шляпы"
+	dcase = "пиратской шляпе"
+	acase = "пиратскую шляпу"
+	icase = "пиратской шляпой"
+	pcase = "пиратской шляпе"
+
+/obj/item/clothing/head/hgpiratecap
+	name = "Пиратская шляпа"
+	desc = "Йо-хо-хо."
+	rugender = "female"
+	ncase = "пиратская шляпа"
+	gcase = "пиратской шляпы"
+	dcase = "пиратской шляпе"
+	acase = "пиратскую шляпу"
+	icase = "пиратской шляпой"
+	pcase = "пиратской шляпе"
+
+/obj/item/clothing/head/bandana
+	name = "Пиратская бандана"
+	desc = "Йо-хо-хо."
+	rugender = "female"
+	ncase = "пиратская бандана"
+	gcase = "пиратской банданы"
+	dcase = "пиратской бандане"
+	acase = "пиратскую бандану"
+	icase = "пиратской банданой"
+	pcase = "пиратской бандане"
+
+/obj/item/clothing/head/bowler
+	name = "Котелок"
+	desc = "Клуб истинных джентльменов!"
+	rugender = "male"
+	ncase = "котелок"
+	gcase = "котелка"
+	dcase = "котелку"
+	acase = "котелок"
+	icase = "котелком"
+	pcase = "котелка"
+
+/obj/item/clothing/head/bowlerhat
+	name = "Котелок"
+	desc = "Для исключительных джентльменов."
+	rugender = "male"
+	ncase = "котелок"
+	gcase = "котелка"
+	dcase = "котелку"
+	acase = "котелок"
+	icase = "котелком"
+	pcase = "котелка"
+
+/obj/item/clothing/head/beaverhat
+	name = "Бобровая шапка"
+	desc = "Мягкий и теплый мех и согревает, и придает стиль."
+	rugender = "female"
+	ncase = "бобровая шапка"
+	gcase = "бобровой шапки"
+	dcase = "бобровой шапке"
+	acase = "бобровую шапку"
+	icase = "бобровой шапкой"
+	pcase = "бобровой шапке"
+
+/obj/item/clothing/head/boaterhat
+	name = "Шляпа лодочника"
+	desc = "Последний писк летней моды."
+	rugender = "female"
+	ncase = "шляпа лодочника"
+	gcase = "шляпы лодочника"
+	dcase = "шляпой лодочника"
+	acase = "шляпу лодочника"
+	icase = "шляпой лодочника"
+	pcase = "шляпе лодочника"
+
+/obj/item/clothing/head/fedora
+	name = "Федора"
+	desc = "Стильный головной убор."
+	rugender = "female"
+	ncase = "федора"
+	gcase = "федоры"
+	dcase = "федоре"
+	acase = "федору"
+	icase = "федорой"
+	pcase = "федоре"
+
+/obj/item/clothing/head/fedora/brown
+	name = "Федора"
+	desc = "Коричневая федора. В зависимости от носителя, является либо последним писком детективной моды, либо убогой попыткой выглядеть круто."
+	rugender = "female"
+	ncase = "федора"
+	gcase = "федоры"
+	dcase = "федоре"
+	acase = "федору"
+	icase = "федорой"
+	pcase = "федоре"
+
+/obj/item/clothing/head/fedora/grey
+	name = "Федора"
+	desc = "Серая федора. В зависимости от носителя, является либо последним писком детективной моды, либо убогой попыткой выглядеть круто."
+	rugender = "female"
+	ncase = "федора"
+	gcase = "федоры"
+	dcase = "федоре"
+	acase = "федору"
+	icase = "федорой"
+	pcase = "федоре"
+
+/obj/item/clothing/head/feathertrilby
+	name = "Фётровая шляпа"
+	desc = "Стильная шляпа с пёрышком."
+	rugender = "female"
+	ncase = "фётровая шляпа"
+	gcase = "фётровой шляпы"
+	dcase = "фётровой шляпе"
+	acase = "фётровую шляпу"
+	icase = "фётровой шляпой"
+	pcase = "фётровой шляпе"
+
+/obj/item/clothing/head/fez
+	name = "Феска"
+	desc = "Всем стоит носить по феске. Они прикольные."
+	rugender = "female"
+	ncase = "феска"
+	gcase = "фески"
+	dcase = "феске"
+	acase = "феску"
+	icase = "феской"
+	pcase = "феске"
+
+/obj/item/clothing/head/cowboy_hat
+	name = "Ковбойская шляпа"
+	desc = "Для тех, у кого очень громкие шпоры."
+	rugender = "female"
+	ncase = "ковбойская шляпа"
+	gcase = "ковбойской шляпы"
+	dcase = "ковбойской шляпе"
+	acase = "ковбойскую шляпу"
+	icase = "ковбойской шляпой"
+	pcase = "ковбойской шляпе"
+
+/obj/item/clothing/head/cowboy_hat/black
+	name = "Чёрная ковбойская шляпа"
+	desc = "В ней порой мерещится старое кантри."
+	rugender = "female"
+	ncase = "чёрная ковбойская шляпа"
+	gcase = "чёрной ковбойской шляпы"
+	dcase = "чёрной ковбойской шляпе"
+	acase = "чёрную ковбойскую шляпу"
+	icase = "чёрной ковбойской шляпой"
+	pcase = "чёрной ковбойской шляпе"
+
+/obj/item/clothing/head/cowboy_hat/wide
+	name = "Широкая ковбойская шляпа"
+	desc = "Потому что справедливость сама себя не восстановит."
+	rugender = "female"
+	ncase = "широкая ковбойская шляпа"
+	gcase = "широкой ковбойской шляпы"
+	dcase = "широкой ковбойской шляпе"
+	acase = "широкую ковбойскую шляпу"
+	icase = "широкой ковбойской шляпой"
+	pcase = "широкой ковбойской шляпе"
+
+/obj/item/clothing/head/cowboy_hat/small
+	name = "Маленькая ковбойская шляпа"
+	desc = "Для самых крохотных ковбоев."
+	rugender = "female"
+	ncase = "маленькая ковбойская шляпа"
+	gcase = "маленькой ковбойской шляпы"
+	dcase = "маленькой ковбойской шляпе"
+	acase = "маленькую ковбойскую шляпу"
+	icase = "маленькой ковбойской шляпой"
+	pcase = "маленькой ковбойской шляпе"
+
+/obj/item/clothing/head/witchwig
+	name = "Парик костюма ведьмы"
+	desc = "Ииииии~хихихихихихи!"
+	rugender = "male"
+	ncase = "парик костюма ведьмы"
+	gcase = "парика костюма ведьмы"
+	dcase = "парику костюма ведьмы"
+	acase = "парик костюма ведьмы"
+	icase = "париком костюма ведьмы"
+	pcase = "парике костюма ведьмы"
+
+/obj/item/clothing/head/chicken
+	name = "Голова куриного костюма"
+	desc = "Кудах!"
+	rugender = "female"
+	ncase = "голова куриного костюма"
+	gcase = "головы куриного костюма"
+	dcase = "голове куриного костюма"
+	acase = "голову куриного костюма"
+	icase = "головой куриного костюма"
+	pcase = "голове куриного костюма"
+
+/obj/item/clothing/head/bearpelt
+	name = "Медвежья шапка"
+	desc = "Пушистая."
+	rugender = "female"
+	ncase = "медвежья шапка"
+	gcase = "медвежьей шапки"
+	dcase = "медвежьей шапке"
+	acase = "медвежью шапку"
+	icase = "медвежьей шапкой"
+	pcase = "медвежьей шапке"
+
+/obj/item/clothing/head/xenos
+	name = "Ксеноморфный шлем"
+	desc = "Изготовлен из инопланетной хитиновой шкуры."
+	rugender = "male"
+	ncase = "ксеноморфный шлем"
+	gcase = "ксеноморфного шлема"
+	dcase = "ксеноморфному шлему"
+	acase = "ксеноморфный шлем"
+	icase = "ксеноморфным шлемом"
+	pcase = "ксеноморфном шлеме"
+
+/obj/item/clothing/head/philosopher_wig
+	name = "Парик философа"
+	desc = "Модная катастрофа из эпохи Возрождения старой Земли. Неотъемлемый элемент философских дискуссий."
+	rugender = "male"
+	ncase = "парик философа"
+	gcase = "парика философа"
+	dcase = "парику философа"
+	acase = "парик философа"
+	icase = "париком философа"
+	pcase = "парике философа"
+
+/obj/item/clothing/head/orangebandana
+	name = "Оранжевая бандана"
+	desc = "Оранжевая ткань, предназначенная для ношения на голове."
+	rugender = "female"
+	ncase = "оранжевая бандана"
+	gcase = "оранжевой банданы"
+	dcase = "оранжевой бандане"
+	acase = "оранжевую бандану"
+	icase = "оранжевой банданой"
+	pcase = "оранжевой бандане"
+
+/obj/item/clothing/head/hijab
+	name = "Хиджаб"
+	desc = "Используется для прикрытия головы и груди."
+	rugender = "male"
+	ncase = "хиджаб"
+	gcase = "хиджаба"
+	dcase = "хиджабу"
+	acase = "хиджаб"
+	icase = "хиджабом"
+	pcase = "хиджабе"
+
+/obj/item/clothing/head/kippa
+	name = "Ермолка"
+	desc = "Небольшой головной убор без полей."
+	rugender = "female"
+	ncase = "ермолка"
+	gcase = "ермолки"
+	dcase = "ермолке"
+	acase = "ермолку"
+	icase = "ермолкой"
+	pcase = "ермолке"
+
+/obj/item/clothing/head/turban
+	name = "Тюрбан"
+	desc = "Кусок ткани, обмотанный вокруг головы."
+	rugender = "male"
+	ncase = "тюрбан"
+	gcase = "тюрбана"
+	dcase = "тюрбану"
+	acase = "тюрбан"
+	icase = "тюрбаном"
+	pcase = "тюрбане"
+
+/obj/item/clothing/head/taqiyah
+	name = "Тафья"
+	desc = "Плоская круглая шапочка, плотно закрывающая макушку."
+	rugender = "female"
+	ncase = "тафья"
+	gcase = "тафьи"
+	dcase = "тафье"
+	acase = "тафью"
+	icase = "тафьёй"
+	pcase = "тафье"
+
+/obj/item/clothing/head/beanie
+	name = "Шапка"
+	desc = "Теплая зимняя шапка без полей. Эта плотно прилегает к голове."
+	rugender = "female"
+	ncase = "шапка"
+	gcase = "шапки"
+	dcase = "шапкой"
+	acase = "шапку"
+	icase = "шапкой"
+	pcase = "шапке"
+
+/obj/item/clothing/head/beanie_loose
+	name = "Свисающая шапка"
+	desc = "Теплая зимняя шапка без полей. Эта свисает с головы."
+	rugender = "female"
+	ncase = "свисающая шапка"
+	gcase = "свисающей шапки"
+	dcase = "свисающей шапкой"
+	acase = "свисающую шапку"
+	icase = "свисающей шапкой"
+	pcase = "свисающей шапке"
+
+/obj/item/clothing/head/beretg
+	name = "Берет"
+	desc = "Берет: излюбленный художниками головной убор."
+	rugender = "male"
+	ncase = "берет"
+	gcase = "берета"
+	dcase = "берету"
+	acase = "берет"
+	icase = "беретом"
+	pcase = "берете"
+
+/obj/item/clothing/head/sombrero
+	name = "Сомбреро"
+	desc = "Головной убор с широкими полями, популярный в Мексике."
+	rugender = "neuter"
+	ncase = "сомбреро"
+	gcase = "сомбреро"
+	dcase = "сомбреро"
+	acase = "сомбреро"
+	icase = "сомбреро"
+	pcase = "сомбреро"
+
+/obj/item/clothing/head/headband/maid
+	name = "Повязка горничной"
+	desc = "Благодаря этой повязке волосы не мешаются во время оказания... услуг."
+	rugender = "female"
+	ncase = "повязка горничной"
+	gcase = "повязки горничной"
+	dcase = "повязке горничной"
+	acase = "повязку горничной"
+	icase = "повязкой горничной"
+	pcase = "повязке горничной"
+
+/obj/item/clothing/head/maangtikka
+	name = "Манг тикка"
+	desc = "Индийский аксессуар, инкрустированный самоцветами."
+	rugender = "female"
+	ncase = "манг тикка"
+	gcase = "манг тикки"
+	dcase = "манг тикке"
+	acase = "манг тикку"
+	icase = "манг тиккой"
+	pcase = "манг тикке"
+
+/obj/item/clothing/head/jingasa
+	name = "Дзингаса"
+	desc = "Широкая плоская шляпа из Японии, прикрывающая от дождя."
+	rugender = "female"
+	ncase = "дзингаса"
+	gcase = "дзингасы"
+	dcase = "дзингасе"
+	acase = "дзингасу"
+	icase = "дзингасой"
+	pcase = "дзингасе"
+
+/obj/item/clothing/head/cowl
+	name = "Чёрный капюшон"
+	desc = "Черный капюшон с золотым обрамлением. От него отдает культом, но смотрится он стильно."
+	rugender = "male"
+	ncase = "чёрный капюшон"
+	gcase = "чёрного капюшона"
+	dcase = "чёрному капюшону"
+	acase = "чёрный капюшон"
+	icase = "чёрным капюшоном"
+	pcase = "чёрном капюшоне"
+
+/obj/item/clothing/head/cowl
+	name = "Белый капюшон"
+	desc = "Белый капюшон с золотым обрамлением. От него отдает культом, но смотрится он стильно."
+	ncase = "белый капюшон"
+	gcase = "белого капюшона"
+	dcase = "белому капюшону"
+	acase = "белый капюшон"
+	icase = "белым капюшоном"
+	pcase = "белом капюшоне"
+
+/obj/item/clothing/head/blackngoldheaddress
+	name = "Чёрно-золотая тиара"
+	desc = "Очень странная тиара, которая каким-то образом даже закрывает глаза."
+	ncase = "чёрно-золотая тиара"
+	gcase = "чёрно-золотой тиары"
+	dcase = "чёрно-золотой тиаре"
+	acase = "чёрно-золотую тиару"
+	icase = "чёрно-золотой тиарой"
+	pcase = "чёрно-золотой тиаре"
+
+//
+// misc_special.dm
+//
+
+/obj/item/clothing/head/welding
+	name = "Сварочная маска"
+	desc = "Закрепляемая на голове маска, защищающая глаза носителя от воздействия сварочной дуги."
+	rugender = "female"
+	ncase = "сварочная маска"
+	gcase = "сварочной маски"
+	dcase = "сварочной маске"
+	acase = "сварочную маску"
+	icase = "сварочной маской"
+	pcase = "сварочной маске"
+
+/obj/item/clothing/head/welding/demon
+	name = "Демоническая сварочная маска"
+	desc = "Разрисованная сварочная маска с изображением лица демона."
+	rugender = "female"
+	ncase = "демоническая сварочная маска"
+	gcase = "демонической сварочной маски"
+	dcase = "демонической сварочной маске"
+	acase = "демоническую сварочную маску"
+	icase = "демонической сварочной маской"
+	pcase = "демонической сварочной маске"
+
+/obj/item/clothing/head/welding/knight
+	name = "Рыцарская сварочная маска"
+	desc = "Разрисованная сварочная маска, похожая на рыцарский шлем."
+	rugender = "female"
+	ncase = "рыцарская сварочная маска"
+	gcase = "рыцарской сварочной маски"
+	dcase = "рыцарской сварочной маске"
+	acase = "рыцарскую сварочную маску"
+	icase = "рыцарской сварочной маской"
+	pcase = "рыцарской сварочной маске"
+
+/obj/item/clothing/head/welding/fancy
+	name = "Модная сварочная маска"
+	desc = "Сварочная маска, элегантно расписанная черным и золотым цветами."
+	rugender = "female"
+	ncase = "модная сварочная маска"
+	gcase = "модной сварочной маски"
+	dcase = "модной сварочной маске"
+	acase = "модную сварочную маску"
+	icase = "модной сварочной маской"
+	pcase = "модной сварочной маске"
+
+/obj/item/clothing/head/welding/engie
+	name = "Инженерная сварочная маска"
+	desc = "Сварочная маска, расписанная инженерными цветами."
+	rugender = "female"
+	ncase = "инженерная сварочная маска"
+	gcase = "инженерной сварочной маски"
+	dcase = "инженерной сварочной маске"
+	acase = "инженерную сварочную маску"
+	icase = "инженерной сварочной маской"
+	pcase = "инженерной сварочной маске"
+
+/obj/item/clothing/head/cakehat
+	name = "Торт-шляпа"
+	desc = "На вид вкусно!"
+	rugender = "female"
+	ncase = "торт-шляпа"
+	gcase = "торта-шляпы"
+	dcase = "торту-шляпе"
+	acase = "торт-шляпу"
+	icase = "тортом-шляпой"
+	pcase = "торте-шляпе"
+
+/obj/item/clothing/head/ushanka
+	name = "Ушанка"
+	desc = "Самое то для зимы в Сибири, товарищ."
+	rugender = "female"
+	ncase = "ушанка"
+	gcase = "ушанки"
+	dcase = "ушанке"
+	acase = "ушанку"
+	icase = "ушанкой"
+	pcase = "ушанке"
+
+/obj/item/clothing/head/pumpkinhead
+	name = "Вырезанная тыква"
+	desc = "Фонарь Джека! Отпугивает злых духов."
+	rugender = "female"
+	ncase = "вырезанная тыква"
+	gcase = "вырезанную тыкву"
+	dcase = "вырезанной тыкве"
+	acase = "вырезанную тыкву"
+	icase = "вырезанной тыквой"
+	pcase = "вырезанной тыкве"
+
+/obj/item/clothing/head/kitty
+	name = "Кошачьи ушки"
+	desc = "Пара кошачьих ушек. Мяу!"
+	rugender = "plural"
+	ncase = "кошачьи ушки"
+	gcase = "кошачьих ушек"
+	dcase = "кошачьим ушкам"
+	acase = "кошачьи ушки"
+	icase = "кошачьими ушками"
+	pcase = "кошачьих ушках"
+
+/obj/item/clothing/head/richard
+	name = "Куриная маска"
+	desc = "Вам слышатся звуки евробита."
+	rugender = "female"
+	ncase = "куриная маска"
+	gcase = "куриной маски"
+	dcase = "куриной маске"
+	acase = "куриную маску"
+	icase = "куриной маской"
+	pcase = "куриной маске"
+
+/obj/item/clothing/head/santa
+	name = "Шапка Санты"
+	desc = "Праздничная шапка, в красной вариации!"
+	rugender = "female"
+	ncase = "шапка Санты"
+	gcase = "шапки Санты"
+	dcase = "шапке Санты"
+	acase = "шапку Санты"
+	icase = "шапкой Санты"
+	pcase = "шапке Санты"
+
+/obj/item/clothing/head/santa/green
+	name = "Зелёная шапка Санты"
+	desc = "Праздничная шапка, в зеленой вариации!"
+	rugender = "female"
+	ncase = "зелёная шапка Санты"
+	gcase = "зелёной шапки Санты"
+	dcase = "зелёной шапке Санты"
+	acase = "зелёную шапку Санты"
+	icase = "зелёной шапкой Санты"
+	pcase = "зелёной шапке Санты"
+
+/obj/item/clothing/head/psy_crown
+	name = "Разбитая корона"
+	desc = "Терновый венец, лишенный самоцвета."
+	rugender = "female"
+	ncase = "разбитая корона"
+	gcase = "разбитую корону"
+	dcase = "разбитой короне"
+	acase = "разбитую корону"
+	icase = "разбитой короной"
+	pcase = "разбитой короне"
+
+/obj/item/clothing/head/psy_crown/wrath
+	name = "Красная корона"
+	desc = "Терновый венец с красным самоцветом, отдающим неестественное свечение. Как-то жутковато его трогать."
+	rugender = "female"
+	ncase = "красная корона"
+	gcase = "красную корону"
+	dcase = "красной короне"
+	acase = "красную корону"
+	icase = "красной короной"
+	pcase = "красной короне"
+
+/obj/item/clothing/head/psy_crown/gluttony
+	name = "Зелёная корона"
+	desc = "Терновый венец с зелёным самоцветом, отдающим неестественное свечение. Как-то жутковато его трогать."
+	rugender = "female"
+	ncase = "зелёная корона"
+	gcase = "зелёную корону"
+	dcase = "зелёной короне"
+	acase = "зелёную корону"
+	icase = "зелёной короной"
+	pcase = "зелёной короне"
+
+/obj/item/clothing/head/cone
+	name = "Огородительный конус"
+	desc = "Этот конус хочет Вас о чём-то предупредить!"
+	rugender = "male"
+	ncase = "огородительный конус"
+	gcase = "огородительного конуса"
+	dcase = "огородительному конусу"
+	acase = "огородительного конуса"
+	icase = "огородительным конусом"
+	pcase = "огородительном конусе"
+
+//
+// misc_vr.dm
+//
+
+/obj/item/clothing/head/fish
+	name = "Череп рыбы"
+	desc = "Вы же... не собираетесь реально его надевать?"
+	rugender = "male"
+	ncase = "череп рыбы"
+	gcase = "черепа рыбы"
+	dcase = "черепу рыбы"
+	acase = "череп рыбы"
+	icase = "черепом рыбы"
+	pcase = "черепе рыбы"
+
+/obj/item/clothing/head/crown
+	name = "Корона"
+	desc = "Какая роскошь!"
+	rugender = "female"
+	ncase = "корона"
+	gcase = "корону"
+	dcase = "короне"
+	acase = "корону"
+	icase = "короной"
+	pcase = "короне"
+
+/obj/item/clothing/head/fancy_crown
+	name = "Роскошная корона"
+	desc = "Какая необычнайная роскошь!"
+	rugender = "female"
+	ncase = "роскошная корона"
+	gcase = "роскошную корону"
+	dcase = "роскошной короне"
+	acase = "роскошную корону"
+	icase = "роскошной короной"
+	pcase = "роскошной короне"
+
+/obj/item/clothing/head/shiny_hood
+	name = "Блестящий капюшон"
+	desc = "В нём любой похож на супергероя! Нужно только не забыть костюм!"
+	rugender = "male"
+	ncase = "блестящий капюшон"
+	gcase = "блестящего капюшона"
+	dcase = "блестящему капюшону"
+	acase = "блестящий капюшон"
+	icase = "блестящим капюшоном"
+	pcase = "блестящем капюшоне"
+
+/obj/item/clothing/head/shiny_hood/poly
+	name = "Полихромный блестящий капюшон"
+	rugender = "male"
+	ncase = "полихромный блестящий капюшон"
+	gcase = "полихромного блестящего капюшона"
+	dcase = "полихромному блестящему капюшону"
+	acase = "полихромный блестящий капюшон"
+	icase = "полихромным блестящим капюшоном"
+	pcase = "полихромном блестящем капюшоне"
+
+/obj/item/clothing/head/shiny_hood/closed
+	name = "Блестящий капюшон"
+	desc = "В нём любой похож на супергероя! Нужно только не забыть свои сверхсилы!"
+	rugender = "male"
+	ncase = "блестящий капюшон"
+	gcase = "блестящего капюшона"
+	dcase = "блестящему капюшону"
+	acase = "блестящий капюшон"
+	icase = "блестящим капюшоном"
+	pcase = "блестящем капюшоне"
+
+/obj/item/clothing/head/shiny_hood/closed/poly
+	name = "Полихромный блестящий капюшон"
+	rugender = "male"
+	ncase = "полихромный блестящий капюшон"
+	gcase = "полихромного блестящего капюшона"
+	dcase = "полихромному блестящему капюшону"
+	acase = "полихромный блестящий капюшон"
+	icase = "полихромным блестящим капюшоном"
+	pcase = "полихромном блестящем капюшоне"
+
+//
+// pilot_helmet.dm
+//
+
+/obj/item/clothing/head/pilot
+	name = "Шлем пилота"
+	desc = "Стандартный авиационный шлем. Защищает голову от ударов."
+	rugender = "male"
+	ncase = "шлем пилота"
+	gcase = "шлема пилота"
+	dcase = "шлему пилота"
+	acase = "шлем пилота"
+	icase = "шлемом пилота"
+	pcase = "шлема пилота"
+
+/obj/item/clothing/head/pilot/alt
+	name = "Шлем пилота"
+	desc = "Стандартный авиационный шлем. Защищает голову от ударов. Этот обладает регулируемым визором."
+	rugender = "male"
+	ncase = "шлем пилота"
+	gcase = "шлема пилота"
+	dcase = "шлему пилота"
+	acase = "шлем пилота"
+	icase = "шлемом пилота"
+	pcase = "шлема пилота"
+
+//
+// soft_caps.dm
+//
+
+/obj/item/clothing/head/soft
+	name = "Кепка грузчика"
+	desc = "Простая бейсболка скудного желтого цвета."
+	rugender = "female"
+	ncase = "кепка грузчика"
+	gcase = "кепки грузчика"
+	dcase = "кепке грузчика"
+	acase = "кепку грузчика"
+	icase = "кепкой грузчика"
+	pcase = "кепке грузчика"
+
+/obj/item/clothing/head/soft/red
+	name = "Красная кепка"
+	desc = "Простая бейсболка скудного красного цвета."
+	rugender = "female"
+	ncase = "красная кепка"
+	gcase = "красной кепки"
+	dcase = "красной кепке"
+	acase = "красную кепку"
+	icase = "красной кепкой"
+	pcase = "красной кепке"
+
+/obj/item/clothing/head/soft/blue
+	name = "Синяя кепка"
+	desc = "Простая бейсболка скудного синего цвета."
+	rugender = "female"
+	ncase = "синяя кепка"
+	gcase = "синей кепки"
+	dcase = "синей кепке"
+	acase = "синюю кепку"
+	icase = "синей кепкой"
+	pcase = "синей кепке"
+
+/obj/item/clothing/head/soft/green
+	name = "Зелёная кепка"
+	desc = "Простая бейсболка скудного зелёного цвета."
+	rugender = "female"
+	ncase = "зелёная кепка"
+	gcase = "зелёной кепки"
+	dcase = "зелёной кепке"
+	acase = "зелёную кепку"
+	icase = "зелёной кепкой"
+	pcase = "зелёной кепке"
+
+/obj/item/clothing/head/soft/yellow
+	name = "Жёлтая кепка"
+	desc = "Простая бейсболка скудного жёлтого цвета."
+	rugender = "female"
+	ncase = "жёлтая кепка"
+	gcase = "жёлтой кепки"
+	dcase = "жёлтой кепке"
+	acase = "жёлтую кепку"
+	icase = "жёлтой кепкой"
+	pcase = "жёлтой кепке"
+
+/obj/item/clothing/head/soft/grey
+	name = "Серая кепка"
+	desc = "Простая бейсболка скудного серого цвета."
+	rugender = "female"
+	ncase = "серая кепка"
+	gcase = "серой кепки"
+	dcase = "серой кепке"
+	acase = "серую кепку"
+	icase = "серой кепкой"
+	pcase = "серой кепке"
+
+/obj/item/clothing/head/soft/orange
+	name = "Оранжевая кепка"
+	desc = "Простая бейсболка скудного оранжевого цвета."
+	rugender = "female"
+	ncase = "оранжевая кепка"
+	gcase = "оранжевой кепки"
+	dcase = "оранжевой кепке"
+	acase = "оранжевую кепку"
+	icase = "оранжевой кепкой"
+	pcase = "оранжевой кепке"
+
+/obj/item/clothing/head/soft/mime
+	name = "Белая кепка"
+	desc = "Простая бейсболка скудного белого цвета."
+	rugender = "female"
+	ncase = "белая кепка"
+	gcase = "белой кепки"
+	dcase = "белой кепке"
+	acase = "белую кепку"
+	icase = "белой кепкой"
+	pcase = "белой кепке"
+
+/obj/item/clothing/head/soft/purple
+	name = "Фиолетовая кепка"
+	desc = "Простая бейсболка скудного фиолетового цвета."
+	rugender = "female"
+	ncase = "фиолетовая кепка"
+	gcase = "фиолетовой кепки"
+	dcase = "фиолетовой кепке"
+	acase = "фиолетовую кепку"
+	icase = "фиолетовой кепкой"
+	pcase = "фиолетовой кепке"
+
+/obj/item/clothing/head/soft/rainbow
+	name = "Радужная кепка"
+	desc = "Яркая бейсболка всех цветов радуги."
+	rugender = "female"
+	ncase = "радужная кепка"
+	gcase = "радужной кепки"
+	dcase = "радужной кепке"
+	acase = "радужную кепку"
+	icase = "радужной кепкой"
+	pcase = "радужной кепке"
+
+/obj/item/clothing/head/soft/sec
+	name = "Офицерская фуражка"
+	desc = "Яркая полевая фуражка красного цвета."
+	rugender = "female"
+	ncase = "офицерская фуражка"
+	gcase = "офицерской фуражки"
+	dcase = "офицерской фуражке"
+	acase = "офицерскую фуражку"
+	icase = "офицерской фуражкой"
+	pcase = "офицерской фуражке"
+
+/obj/item/clothing/head/soft/sec/corp
+	name = "Фирменная офицерская фуражка"
+	desc = "Полевая фуражка в фирменной расцветке."
+	rugender = "female"
+	ncase = "фирменная офицерская фуражка"
+	gcase = "фирменной офицерской фуражки"
+	dcase = "фирменной офицерской фуражке"
+	acase = "фирменную офицерскую фуражку"
+	icase = "фирменной офицерской фуражкой"
+	pcase = "фирменной офицерской фуражке"
+
+/obj/item/clothing/head/soft/black
+	name = "Чёрная кепка"
+	desc = "Простая бейсболка скудного чёрного цвета."
+	rugender = "female"
+	ncase = "чёрная кепка"
+	gcase = "чёрной кепки"
+	dcase = "чёрной кепке"
+	acase = "чёрную кепку"
+	icase = "чёрной кепкой"
+	pcase = "чёрной кепке"
+
+/obj/item/clothing/head/soft/mbill
+	name = "Кепка доставщика"
+	desc = "Бейсболка в расцветке компании Major Bill's Shipping."
+	rugender = "female"
+	ncase = "кепка доставщика"
+	gcase = "кепки доставщика"
+	dcase = "кепке доставщика"
+	acase = "кепку доставщика"
+	icase = "кепкой доставщика"
+	pcase = "кепке доставщика"
+	
+//
+// solgov.dm is skipped entirely. honestly at this point fuck solgov items
+//
+
+//
+// solgov_vr.dm 
+//
+
+/obj/item/clothing/head/soft/solgov
+	name = "кепка Сол"
+	desc = "Это синяя бейсболка в расцветке Правительства Терранского Содружества."
+	rugender = "female"
+	ncase = "кепка Сол"
+	gcase = "кепки Сол"
+	dcase = "кепке Сол"
+	acase = "кепку Сол"
+	icase = "кепкой Сол"
+	pcase = "кепке Сол"
+
+/obj/item/clothing/head/soft/solgov/veteranhat
+	name = "veteran hat"
+	desc = "It's a tacky black ballcap bearing the yellow service ribbon of the Gaia Conflict."
+
+/obj/item/clothing/head/soft/solgov/sifguard
+	name = "\improper NDF cap"
+	desc = "It's a black ballcap bearing a Nanotrasen Defense Force crest."
+
+/obj/item/clothing/head/soft/solgov/sifguard/co
+	name = "\improper NDF captain's cap"
+	desc = "It's a black ballcap bearing the Nanotrasen Defense Force crest. The brim has gold trim."
+
+/obj/item/clothing/head/soft/solgov/fleet
+	name = "fleet cap"
+	desc = "It's a navy blue ballcap with a TCG Fleet crest."
+
+/obj/item/clothing/head/utility/fleet
+	name = "fleet utility cover"
+	desc = "A navy blue utility cover bearing the crest of a TCG Fleet."
+
+/obj/item/clothing/head/utility/army
+	name = "marine utility cover"
+	desc = "A green utility cover bearing the crest of the TCG Marines."
+
+/obj/item/clothing/head/utility/army/tan
+	name = "tan utility cover"
+	desc = "A tan utility cover bearing the crest of the TCG Marines."
+
+/obj/item/clothing/head/utility/army/urban
+	name = "urban utility cover"
+	desc = "A grey utility cover bearing the crest of the TCG Marines."
+
+/obj/item/clothing/head/service/sifguard
+	name = "\improper NDF peaked cap"
+	desc = "A peaked black uniform cap belonging to the Nanotrasen Defense Force Corps."
+
+/obj/item/clothing/head/service/sifguard/command
+	name = "\improper NDF officer's peaked cap"
+	desc = "A peaked black uniform cap belonging to the Nanotrasen Defense Force. This one is trimmed in gold."
+
+/obj/item/clothing/head/service/sifguard/captain
+	name = "\improper NDF captain's peaked cap"
+	desc = "A gold-trimmed peaked black uniform cap belonging to a Captain of the Nanotrasen Defense Force."
+
+/obj/item/clothing/head/service/sifguard/senior_command
+	name = "senior NDF officer's peaked cap"
+	desc = "A peaked grey uniform cap belonging to the Nanotrasen Defense Force. This one is trimmed in gold and blue."
+
+/obj/item/clothing/head/service/army
+	name = "marine wheel cover"
+	desc = "A green service uniform cover with an TCG Marine crest."
+
+/obj/item/clothing/head/service/army/command
+	name = "marine officer's wheel cover"
+	desc = "A green service uniform cover with an TCG Marine crest and gold stripe."
+
+/obj/item/clothing/head/service/army/garrison
+	name = "marine garrison cap"
+	desc = "A green garrison cap belonging to the TCG Marine."
+
+/obj/item/clothing/head/service/army/garrison/command
+	name = "marine officer's garrison cap"
+	desc = "A green garrison cap belonging to the TCG Marine. This one has a gold pin."
+
+/obj/item/clothing/head/service/army/campaign
+	name = "campaign cover"
+	desc = "A green campaign cover with an TCG Marine crest. Only found on the heads of Drill Sergeants."
+
+/obj/item/clothing/head/dress/fleet/garrison
+	name = "fleet garrison cap"
+	desc = "A white dress uniform cap. The classic sailor's choice."
+
+/obj/item/clothing/head/dress/fleet
+	name = "fleet dress wheel cover"
+	desc = "A white dress uniform cover. This one has an TCG Fleet crest."
+
+/obj/item/clothing/head/dress/fleet/command
+	name = "fleet officer's dress wheel cover"
+	desc = "A white dress uniform cover. This one has a gold stripe and an TCG Fleet crest."
+
+/obj/item/clothing/head/dress/army
+	name = "marine dress wheel cover"
+	desc = "A white dress uniform cover with an TCG Marine crest."
+
+/obj/item/clothing/head/dress/army/command
+	name = "marine officer's dress wheel cover"
+	desc = "A white dress uniform cover with an TCG Marine crest and gold stripe."
+
+/obj/item/clothing/head/beret/solgov
+	name = "Берет миротворца"
+	desc = "Берет в расцветке Правительства Терранского Содружества. Для миротворцев, для которых стиль превыше безопасности."
+	rugender = "male"
+	ncase = "берет миротворца"
+	gcase = "берета миротворца"
+	dcase = "берету миротворца"
+	acase = "берет миротворца"
+	icase = "беретом миротворца"
+	pcase = "берете миротворца"
+
+/obj/item/clothing/head/beret/solgov/homeguard
+	name = "home guard beret"
+	desc = "A red beret denoting service in the Sol Home Guard. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/gateway
+	name = "gateway administration beret"
+	desc = "An orange beret denoting service in the Gateway Administration. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/customs
+	name = "customs and trade beret"
+	desc = "A purple beret denoting service in the Customs and Trade Bureau. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/orbital
+	name = "orbital assault beret"
+	desc = "A blue beret denoting orbital assault training. For helljumpers that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/research
+	name = "government research beret"
+	desc = "A green beret denoting service in the Bureau of Research. For explorers that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/health
+	name = "health service beret"
+	desc = "A white beret denoting service in the Interstellar Health Service. For medics that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/marcom
+	name = "\improper MARSCOM beret"
+	desc = "A red beret with a gold insignia, denoting service in the TCGDF Mars Central Command. For brass who are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/stratcom
+	name = "\improper STRATCOM beret"
+	desc = "A grey beret with a silver insignia, denoting service in the TCGDF Strategic Command. For intelligence personnel who are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/diplomatic
+	name = "diplomatic security beret"
+	desc = "A tan beret denoting service in the TCG Marines Diplomatic Security Group. For security personnel who are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/borderguard
+	name = "border security beret"
+	desc = "A green beret with a silver emblem, denoting service in the Bureau of Border Security. For border guards who are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard
+	name = "\improper NDF beret"
+	desc = "A black beret belonging to the Nanotrasen Defense Force. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/security
+	name = "\improper NDF security beret"
+	desc = "A Nanotrasen Defense Force beret with a security crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/medical
+	name = "\improper NDF medical beret"
+	desc = "A Nanotrasen Defense Force beret with a medical crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/engineering
+	name = "\improper NDF engineering beret"
+	desc = "A Nanotrasen Defense Force beret with an engineering crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/supply
+	name = "\improper NDF supply beret"
+	desc = "A Nanotrasen Defense Force beret with a supply crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/service
+	name = "\improper NDF service beret"
+	desc = "An Nanotrasen Defense Force beret with a service crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/command
+	name = "\improper NDF command beret"
+	desc = "A Nanotrasen Defense Force beret with a command crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/branch
+	name = "\improper Field Operations beret"
+	desc = "An Nanotrasen Defense Force beret carrying insignia of the Field Operations section of the Nanotrasen Defense Force. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/sifguard/branch/observatory
+	name = "\improper Observatory beret"
+	desc = "An Nanotrasen Defense Force beret carrying insignia of the Observatory section of the Nanotrasen Defense Force. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet
+	name = "fleet beret"
+	desc = "A navy blue beret belonging to the TCG Fleet. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/security
+	name = "fleet security beret"
+	desc = "An TCG Fleet beret with a security crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/medical
+	name = "fleet medical beret"
+	desc = "An TCG Fleet beret with a medical crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/engineering
+	name = "fleet engineering beret"
+	desc = "An TCG Fleet with an engineering crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/supply
+	name = "fleet supply beret"
+	desc = "An TCG Fleet beret with a supply crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/service
+	name = "fleet service beret"
+	desc = "An TCG Fleet beret with a service crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/exploration
+	name = "fleet exploration beret"
+	desc = "An TCG Fleet beret with an exploration crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/command
+	name = "fleet command beret"
+	desc = "An TCG Fleet beret with a command crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/dress
+	name = "fleet dress beret"
+	desc = "A white TCG Fleet beret. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/dress/command
+	name = "fleet officer's dress beret"
+	desc = "A white TCG Fleet beret with a golden crest. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/branch
+	name = "first fleet beret"
+	desc = "An TCG Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_navy_first"
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/second
+	name = "second fleet beret"
+	desc = "An TCG Fleet beret carrying insignia of Second Fleet, the Home Guard, tasked with defense of Sol territories. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/third
+	name = "third fleet beret"
+	desc = "An TCG Fleet beret carrying insignia of Third Fleet, the Border Guard, guarding borders of Sol territory against Vox and pirates. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/fourth
+	name = "fourth fleet beret"
+	desc = "An TCG Fleet beret carrying insignia of Fourth Fleet, stationed on Skrell border. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/fifth
+	name = "fifth fleet beret"
+	desc = "An TCG Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/ushanka/solgov
+	name = "\improper NDF fur hat"
+	desc = "An Nanotrasen Defense Force synthfur-lined hat for operating in cold environments."
+
+/obj/item/clothing/head/ushanka/solgov/fleet
+	name = "fleet fur hat"
+	desc = "An TCG Fleet synthfur-lined hat for operating in cold environments."
+
+/obj/item/clothing/head/ushanka/solgov/army
+	name = "marine fur hat"
+	desc = "An TCG Marine synthfur-lined hat for operating in cold environments."
+
+/obj/item/clothing/head/ushanka/solgov/army/green
+	name = "green marine fur hat"
+	desc = "An TCG Marine synthfur-lined hat for operating in cold environments."
+
+/obj/item/clothing/head/terran/navy/service
+	name = "Ares service cover"
+	desc = "A service uniform cover, worn by low-ranking crew within the Ares Confederation Navy."
+
+/obj/item/clothing/head/terran/navy/service/command
+	name = "Ares command service cover"
+	desc = "A service uniform cover, worn by high-ranking crew within the Ares Confederation Navy."

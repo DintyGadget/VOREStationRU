@@ -1451,7 +1451,7 @@
 	},
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
@@ -1784,7 +1784,7 @@
 	},
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Field Medic"
+	name = "Военврач"
 	},
 /obj/machinery/status_display{
 	pixel_y = 30
@@ -1807,7 +1807,7 @@
 	},
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /obj/machinery/light_switch{
 	dir = 2;
@@ -2191,7 +2191,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Field Medic"
+	name = "Военврач"
 	},
 /obj/machinery/recharger/wallcharger{
 	pixel_x = -28
@@ -2236,7 +2236,7 @@
 	},
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Pilot"
+	name = "Пилот"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
@@ -2482,7 +2482,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Pilot"
+	name = "Пилот"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
@@ -2571,7 +2571,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
@@ -3147,7 +3147,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start{
-	name = "Pilot"
+	name = "Пилот"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/crew)
@@ -3161,7 +3161,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -9601,7 +9601,7 @@
 	},
 /obj/structure/table/bench/wooden,
 /obj/effect/landmark/start{
-	name = "Pilot"
+	name = "Пилот"
 	},
 /obj/machinery/alarm{
 	dir = 4;
@@ -9634,7 +9634,7 @@
 "oF" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/landmark/start{
-	name = "Pilot"
+	name = "Пилот"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/equipment)
@@ -10037,7 +10037,7 @@
 "pu" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/landmark/start{
-	name = "Field Medic"
+	name = "Военврач"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/equipment)
@@ -10165,7 +10165,7 @@
 "pF" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/equipment)
@@ -10393,7 +10393,7 @@
 	},
 /obj/structure/table/bench/wooden,
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/exploration/equipment)
@@ -13269,7 +13269,7 @@
 "wj" = (
 /obj/structure/bed/chair/office/light,
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
@@ -13317,7 +13317,7 @@
 "wm" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/biostorage)
@@ -13356,7 +13356,7 @@
 	dir = 10
 	},
 /obj/effect/landmark/start{
-	name = "Cyborg"
+	name = "Киборг"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_cyborg_station)
@@ -13389,7 +13389,7 @@
 /area/medical/biostorage)
 "ws" = (
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/biostorage)
@@ -13735,7 +13735,7 @@
 /area/medical/resleeving)
 "wZ" = (
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/biostorage)
@@ -14236,7 +14236,7 @@
 "xX" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/landmark/start{
-	name = "Cyborg"
+	name = "Киборг"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_cyborg_station)
@@ -14632,7 +14632,7 @@
 	dir = 6
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -15336,7 +15336,7 @@
 "Ax" = (
 /obj/structure/table/bench/wooden,
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/wood,
 /area/medical/surgery_hallway)
@@ -16352,7 +16352,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Pathfinder"
+	name = "Первопроходец"
 	},
 /obj/machinery/firealarm{
 	dir = 1;
@@ -17630,7 +17630,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/pink/border,
@@ -17681,7 +17681,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
@@ -19032,7 +19032,7 @@
 	icon_state = "2-8"
 	},
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -19132,7 +19132,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Explorer"
+	name = "Искатель"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9

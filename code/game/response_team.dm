@@ -42,7 +42,7 @@ var/silent_ert = 0
 
 client/verb/JoinResponseTeam()
 
-	set name = "Присоединиться К Группе Реагирования"
+	set name = "Присоединиться К ГЭР"
 	set category = "IC"
 
 	if(!MayRespawn(1))

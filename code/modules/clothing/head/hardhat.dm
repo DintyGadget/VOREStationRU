@@ -55,24 +55,18 @@
 
 /obj/item/clothing/head/hardhat/ranger/black
 	hatcolor = "black"
-	name = "Шлем чёрного рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/pink
 	hatcolor = "pink"
-	name = "Шлем розового рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/green
 	hatcolor = "green"
-	name = "Шлем зелёного рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/cyan
 	hatcolor = "cyan"
-	name = "Шлем бирюзового рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/orange
 	hatcolor = "orange"
-	name = "Шлем оранжевого рейнджера"
 
 /obj/item/clothing/head/hardhat/ranger/yellow
 	hatcolor = "yellow"
-	name = "Шлем жёлтого рейнджера"

@@ -155,7 +155,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/carpet/blue,
 /area/tether/surfacebase/security/breakroom)
@@ -359,7 +359,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/carpet/blue,
 /area/tether/surfacebase/security/breakroom)
@@ -715,7 +715,7 @@
 	pixel_y = -10
 	},
 /obj/effect/landmark/start{
-	name = "Chief Medical Officer"
+	name = "Главврач"
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/medical/cmo)
@@ -1855,7 +1855,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/triage)
@@ -1881,7 +1881,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/triage)
@@ -2870,7 +2870,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/processing)
@@ -3007,7 +3007,7 @@
 /obj/structure/bed/chair/office/light,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/lobby)
@@ -3016,7 +3016,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -3064,7 +3064,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -5729,7 +5729,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/frontdesk)
@@ -6137,7 +6137,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/frontdesk)
@@ -11075,7 +11075,7 @@
 "atp" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Scientist"
+	name = "Учёный"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
@@ -11191,7 +11191,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Scientist"
+	name = "Учёный"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
@@ -11291,7 +11291,7 @@
 "atO" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/effect/landmark/start{
-	name = "Chef"
+	name = "Шеф-повар"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
@@ -11880,7 +11880,7 @@
 "auP" = (
 /obj/structure/bed/chair/office/light,
 /obj/effect/landmark/start{
-	name = "Xenobotanist"
+	name = "Ксеноботаник"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenoflora)
@@ -12446,7 +12446,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /obj/effect/landmark/start{
-	name = "Scientist"
+	name = "Учёный"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research)
@@ -13289,7 +13289,7 @@
 "axo" = (
 /obj/structure/bed/chair/comfy,
 /obj/effect/landmark/start{
-	name = "Bartender"
+	name = "Бармен"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
@@ -14447,7 +14447,7 @@
 	dir = 6
 	},
 /obj/effect/landmark/start{
-	name = "Librarian"
+	name = "Библиотекарь"
 	},
 /obj/machinery/power/apc{
 	cell_type = /obj/item/weapon/cell/super;
@@ -16614,7 +16614,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/landmark/start{
-	name = "Roboticist"
+	name = "Робототехник"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/assembly/robotics)
@@ -17900,7 +17900,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Librarian"
+	name = "Библиотекарь"
 	},
 /turf/simulated/floor/carpet,
 /area/library)
@@ -18695,7 +18695,7 @@
 	},
 /obj/item/weapon/stool/padded,
 /obj/effect/landmark/start{
-	name = "Entertainer"
+	name = "Аниматор"
 	},
 /turf/simulated/floor/lino,
 /area/tether/surfacebase/entertainment/backstage)
@@ -20406,7 +20406,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Bartender"
+	name = "Бармен"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
@@ -21595,7 +21595,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Chef"
+	name = "Шеф-повар"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
@@ -22647,7 +22647,7 @@
 "aNg" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Roboticist"
+	name = "Робототехник"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/assembly/robotics)
@@ -23628,7 +23628,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Site Manager"
+	name = "Директор колонии"
 	},
 /obj/machinery/button/remote/blast_door{
 	dir = 8;
@@ -23711,7 +23711,7 @@
 /area/bridge)
 "aPq" = (
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -23792,7 +23792,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Xenobiologist"
+	name = "Ксенобиолог"
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "xenobiolockdown";
@@ -23810,7 +23810,7 @@
 /area/rnd/outpost/xenobiology/outpost_office)
 "aPz" = (
 /obj/effect/landmark/start{
-	name = "Xenobiologist"
+	name = "Ксенобиолог"
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -24346,7 +24346,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Xenobiologist"
+	name = "Ксенобиолог"
 	},
 /turf/simulated/floor/wood,
 /area/rnd/outpost/xenobiology/outpost_office)
@@ -25174,7 +25174,7 @@
 /area/tether/surfacebase/medical/outfitting)
 "aSq" = (
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -26809,7 +26809,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Chemist"
+	name = "Химик"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -28549,7 +28549,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start{
-	name = "Librarian"
+	name = "Библиотекарь"
 	},
 /turf/simulated/floor/wood,
 /area/library)
@@ -29268,7 +29268,7 @@
 "aYW" = (
 /obj/structure/bed/chair/comfy/brown,
 /obj/effect/landmark/start{
-	name = "Head of Personnel"
+	name = "Глава персонала"
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hop)
@@ -31744,7 +31744,7 @@
 /area/tether/surfacebase/entertainment/stage)
 "bcY" = (
 /obj/effect/landmark/start{
-	name = "Entertainer"
+	name = "Аниматор"
 	},
 /obj/structure/bed/chair/wood{
 	dir = 1
@@ -32055,7 +32055,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Botanist"
+	name = "Ботаник"
 	},
 /turf/simulated/floor/tiled,
 /area/hydroponics)
@@ -32590,7 +32590,7 @@
 "beC" = (
 /obj/structure/table/bench/standard,
 /obj/effect/landmark/start{
-	name = "Botanist"
+	name = "Ботаник"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -32751,7 +32751,7 @@
 /area/tether/surfacebase/entertainment/stage)
 "beS" = (
 /obj/effect/landmark/start{
-	name = "Entertainer"
+	name = "Аниматор"
 	},
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood,
@@ -33505,7 +33505,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Entertainer"
+	name = "Аниматор"
 	},
 /turf/simulated/floor/wood,
 /area/tether/surfacebase/entertainment)
@@ -35399,7 +35399,7 @@
 /area/tether/surfacebase/medical/admin)
 "bjM" = (
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -35528,7 +35528,7 @@
 /area/tether/surfacebase/medical/outfitting)
 "bjW" = (
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -36757,7 +36757,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Chemist"
+	name = "Химик"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -37157,7 +37157,7 @@
 "iQr" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/landmark/start{
-	name = "Scientist"
+	name = "Учёный"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/testingrange)
@@ -39284,7 +39284,7 @@
 /area/shuttle/tourbus/general)
 "wKZ" = (
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/structure/bed/chair/office/light,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -39404,7 +39404,7 @@
 "xog" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Chemist"
+	name = "Химик"
 	},
 /obj/structure/cable/green{
 	d1 = 1;
