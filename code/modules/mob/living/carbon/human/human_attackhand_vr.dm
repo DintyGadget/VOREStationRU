@@ -6,7 +6,7 @@
 	set category = "IC"
 	set src = usr
 
-	var/dat = "<b><font size = 5>Известные атаки</font></b><br/><br/>"
+	var/dat = "<meta charset="utf-8"><b><font size = 5>Известные атаки</font></b><br/><br/>"
 
 	for(var/datum/unarmed_attack/u_attack in species.unarmed_attacks)
 		dat += "<b>Основная: [u_attack.attack_name] </b><br/><br/><br/>"
@@ -24,7 +24,7 @@
 		if(u_attack == default_attack)
 			dat += "<b>Основная: [u_attack.attack_name]</b> - по умолчанию - <a href='byond://?src=\ref[src];default_attk=reset_attk'>сбросить</a><br/><br/><br/>"
 		else
-			dat += "<b>Primarily [u_attack.attack_name]</b> - <a href='byond://?src=\ref[src];default_attk=\ref[u_attack]'>поставить по умолчанию</a><br/><br/><br/>"
+			dat += "<b>Основная [u_attack.attack_name]</b> - <a href='byond://?src=\ref[src];default_attk=\ref[u_attack]'>поставить по умолчанию</a><br/><br/><br/>"
 
 	src << browse(dat, "window=checkattack")
 

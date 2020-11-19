@@ -149,17 +149,17 @@
  * Conveniently, also allows devs to force a dev server reattach without relogging, since it yeets windows.
  */
 /client/verb/tgui_fix_white()
-	set desc = "Only use this if you have a broken TGUI window occupying your screen!"
-	set name = "Fix TGUI"
+	set desc = "Используйте это только если на экране застряло окно TGUI!"
+	set name = "Починить TGUI"
 	set category = "OOC"
 
-	if(alert(src, "Only use this verb if you have a white TGUI window stuck on your screen.", "Fix TGUI", "Continue", "Nevermind") != "Continue")
+	if(alert(src, "Используйте это только если на экране застряло окно TGUI.", "Починить TGUI", "Продолжить", "Отмена") != "Продолжить")
 		return
 
 	SStgui.close_user_uis(mob)
-	if(alert(src, "Did that fix the problem?", "Fix TGUI", "Yes", "No") == "No")
+	if(alert(src, "Это помогло?", "Починить TGUI", "Да", "Нет") == "Нет")
 		SStgui.force_close_all_windows(mob)
-		alert(src, "UIs should be fixed now. If not, please cry to your nearest coder.", "Fix TGUI")
+		alert(src, "Все интерфейсы должны быть починены. Если нет, пожалуйтесь на ближайшего кодера.", "Починить TGUI")
 
 /**
  * verb

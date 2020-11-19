@@ -1,11 +1,11 @@
 /obj/item/voice_changer
-	name = "модулятор голоса"
+	name = "Модулятор голоса"
 	desc = "Модуль искажения голоса. Если Вы это видите, это баг, о котором стоит доложить."
 	var/voice = null //If set and item is present in mask/suit, this name will be used for the wearer's speech.
 	var/active = TRUE
 
 /obj/item/clothing/mask/gas/voice
-	name = "газовая маска"
+	name = "Противогаз"
 	desc = "Закрывающая лицо маска, которую можно подсоединить к источнику воздуха. Внутри, кажется, какая-то странная электроника."
 	var/obj/item/voice_changer/changer
 	origin_tech = list(TECH_ILLEGAL = 4)

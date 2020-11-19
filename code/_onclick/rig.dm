@@ -8,8 +8,8 @@
 	var/hardsuit_click_mode = MIDDLE_CLICK
 
 /client/verb/toggle_hardsuit_mode()
-	set name = "Toggle Hardsuit Activation Mode"
-	set desc = "Switch between hardsuit activation modes."
+	set name = "Переключить Активацию Скафандра"
+	set desc = "Переключиться между режимами активации жёсткого скафандра."
 	set category = "OOC"
 
 	hardsuit_click_mode++
@@ -18,11 +18,11 @@
 
 	switch(hardsuit_click_mode)
 		if(MIDDLE_CLICK)
-			to_chat(src, "Hardsuit activation mode set to middle-click.")
+			to_chat(src, "Активация жесткого скафандра назначена на среднюю кнопку мыши.")
 		if(ALT_CLICK)
-			to_chat(src, "Hardsuit activation mode set to alt-click.")
+			to_chat(src, "Активация жесткого скафандра назначена на альт-клик.")
 		if(CTRL_CLICK)
-			to_chat(src, "Hardsuit activation mode set to control-click.")
+			to_chat(src, "Активация жесткого скафандра назначена на Ctrl-клик.")
 		else
 			// should never get here, but just in case:
 			soft_assert(0, "Bad hardsuit click mode: [hardsuit_click_mode] - expected 0 to [MAX_HARDSUIT_CLICK_MODE]")

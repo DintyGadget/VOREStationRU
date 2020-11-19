@@ -21,45 +21,45 @@
 
 /obj/item/clothing/gloves/ring/material/wood/New(var/newloc)
 	..(newloc, "wood")
-	name = "деревянное кольцо"
+	name = "Деревянное кольцо"
 	desc = "Кольцо из дерева."
 
 /obj/item/clothing/gloves/ring/material/plastic/New(var/newloc)
 	..(newloc, "plastic")
-	name = "пластиковое кольцо"
-	desc = " Кольцо из пластика."
+	name = "Пластиковое кольцо"
+	desc = "Кольцо из пластика."
 
 /obj/item/clothing/gloves/ring/material/iron/New(var/newloc)
 	..(newloc, "iron")
-	name = "железное кольцо"
+	name = "Железное кольцо"
 	desc = "Кольцо из железа."
 
 /obj/item/clothing/gloves/ring/material/steel/New(var/newloc)
 	..(newloc, "steel")
-	name = "стальное кольцо"
+	name = "Стальное кольцо"
 	desc = "Кольцо из стали."
 
 /obj/item/clothing/gloves/ring/material/silver/New(var/newloc)
 	..(newloc, "silver")
-	name = "серебряное кольцо"
+	name = "Серебряное кольцо"
 	desc = "Кольцо из серебра."
 
 /obj/item/clothing/gloves/ring/material/gold/New(var/newloc)
 	..(newloc, "gold")
-	name = "золотое кольцо"
+	name = "Золотое кольцо"
 	desc = "Кольцо из золота."
 
 /obj/item/clothing/gloves/ring/material/platinum/New(var/newloc)
 	..(newloc, "platinum")
-	name = "платиновое кольцо"
+	name = "Платиновое кольцо"
 	desc = "Кольцо из платины."
 
 /obj/item/clothing/gloves/ring/material/phoron/New(var/newloc)
 	..(newloc, "phoron")
-	name = "фороновое кольцо"
+	name = "Фороновое кольцо"
 	desc = "Кольцо из форона."
 
 /obj/item/clothing/gloves/ring/material/glass/New(var/newloc)
 	..(newloc, "glass")
-	name = "стеклянное кольцо"
+	name = "Стеклянное кольцо"
 	desc = "Кольцо из стекла."

@@ -37,10 +37,10 @@
 
 /obj/item/clothing/under/chameleon
 //starts off as black
-	name = "black jumpsuit"
+	name = "Чёрный комбинезон"
 	icon_state = "black"
 	worn_state = "black"
-	desc = "It's a plain jumpsuit. It seems to have a small dial on the wrist."
+	desc = "Чёрный комбинезон. На запястье некий циферблат."
 	origin_tech = list(TECH_ILLEGAL = 3)
 	var/global/list/clothing_choices
 
@@ -51,16 +51,16 @@
 		clothing_choices = generate_chameleon_choices(/obj/item/clothing/under, blocked)
 
 /obj/item/clothing/under/chameleon/emp_act(severity)
-	name = "psychedelic"
-	desc = "Groovy!"
+	name = "Психоделика"
+	desc = "Фигасе!"
 	icon_state = "psyche"
 	item_state_slots[slot_w_uniform_str] = "psyche"
 	update_icon()
 	update_clothing_icon()
 
 /obj/item/clothing/under/chameleon/verb/change(picked in clothing_choices)
-	set name = "Change Jumpsuit Appearance"
-	set category = "Chameleon Items"
+	set name = "Изменить Вид Комбинезона"
+	set category = "Маскировка"
 	set src in usr
 
 	if(!ispath(clothing_choices[picked]))
@@ -74,9 +74,9 @@
 //*****************
 
 /obj/item/clothing/head/chameleon
-	name = "grey cap"
+	name = "Серая кепка"
 	icon_state = "greysoft"
-	desc = "It looks like a plain hat, but upon closer inspection, there's an advanced holographic array installed inside. It seems to have a small dial inside."
+	desc = "Похожа на обыкновенную кепку, однако если присмотреться, внутри голографический проектор и небольшой циферблат."
 	origin_tech = list(TECH_ILLEGAL = 3)
 	body_parts_covered = 0
 	var/global/list/clothing_choices
@@ -88,15 +88,15 @@
 		clothing_choices = generate_chameleon_choices(/obj/item/clothing/head, blocked)
 
 /obj/item/clothing/head/chameleon/emp_act(severity) //Because we don't have psych for all slots right now but still want a downside to EMP.  In this case your cover's blown.
-	name = "grey cap"
-	desc = "It's a baseball hat in a tasteful grey colour."
+	name = "Серая кепка"
+	desc = "Простая бейсболка скудного серого цвета."
 	icon_state = "greysoft"
 	update_icon()
 	update_clothing_icon()
 
 /obj/item/clothing/head/chameleon/verb/change(picked in clothing_choices)
-	set name = "Change Hat/Helmet Appearance"
-	set category = "Chameleon Items"
+	set name = "Изменить Вид Кепки/Шлема"
+	set category = "Маскировка"
 	set src in usr
 
 	if(!ispath(clothing_choices[picked]))
@@ -231,9 +231,9 @@
 //********************
 
 /obj/item/clothing/gloves/chameleon
-	name = "black gloves"
+	name = "Чёрные перчатки"
 	icon_state = "black"
-	desc = "It looks like a pair of gloves, but it seems to have a small dial inside."
+	desc = "Похожи на пару перчаток, однако внутри виднеется небольшой циферблат."
 	origin_tech = list(TECH_ILLEGAL = 3)
 	var/global/list/clothing_choices
 
@@ -243,15 +243,15 @@
 		clothing_choices = generate_chameleon_choices(/obj/item/clothing/gloves, list(src.type))
 
 /obj/item/clothing/gloves/chameleon/emp_act(severity) //Because we don't have psych for all slots right now but still want a downside to EMP.  In this case your cover's blown.
-	name = "black gloves"
-	desc = "It looks like a pair of gloves, but it seems to have a small dial inside."
+	name = "Чёрные перчатки"
+	desc = "Похожи на пару перчаток, однако внутри виднеется небольшой циферблат."
 	icon_state = "black"
 	update_icon()
 	update_clothing_icon()
 
 /obj/item/clothing/gloves/chameleon/verb/change(picked in clothing_choices)
-	set name = "Change Gloves Appearance"
-	set category = "Chameleon Items"
+	set name = "Изменить Вид Перчаток"
+	set category = "Маскировка"
 	set src in usr
 
 	if(!ispath(clothing_choices[picked]))
@@ -265,9 +265,9 @@
 //******************
 
 /obj/item/clothing/mask/chameleon
-	name = "gas mask"
+	name = "Противогаз"
 	icon_state = "gas_alt"
-	desc = "It looks like a plain gask mask, but on closer inspection, it seems to have a small dial inside."
+	desc = "Похож на обыкновенный противогаз, однако внутри виднеется небольшой циферблат."
 	origin_tech = list(TECH_ILLEGAL = 3)
 	var/global/list/clothing_choices
 
@@ -277,15 +277,15 @@
 		clothing_choices = generate_chameleon_choices(/obj/item/clothing/mask, list(src.type))
 
 /obj/item/clothing/mask/chameleon/emp_act(severity) //Because we don't have psych for all slots right now but still want a downside to EMP.  In this case your cover's blown.
-	name = "gas mask"
-	desc = "It's a gas mask."
+	name = "Противогаз"
+	desc = "Это противогаз."
 	icon_state = "gas_alt"
 	update_icon()
 	update_clothing_icon()
 
 /obj/item/clothing/mask/chameleon/verb/change(picked in clothing_choices)
-	set name = "Change Mask Appearance"
-	set category = "Chameleon Items"
+	set name = "Изменить Вид Маски"
+	set category = "Маскировка"
 	set src in usr
 
 	if(!ispath(clothing_choices[picked]))
@@ -299,10 +299,10 @@
 //*********************
 
 /obj/item/clothing/glasses/chameleon
-	name = "Optical Meson Scanner"
+	name = "Мезонный визор"
 	icon_state = "meson"
 	item_state_slots = list(slot_r_hand_str = "meson", slot_l_hand_str = "meson")
-	desc = "It looks like a plain set of mesons, but on closer inspection, it seems to have a small dial inside."
+	desc = "Похож на обыкновенный мезонный визор, однако внутри виднеется небольшой циферблат."
 	origin_tech = list(TECH_ILLEGAL = 3)
 	var/list/global/clothing_choices
 
@@ -312,15 +312,15 @@
 		clothing_choices = generate_chameleon_choices(/obj/item/clothing/glasses, list(src.type))
 
 /obj/item/clothing/glasses/chameleon/emp_act(severity) //Because we don't have psych for all slots right now but still want a downside to EMP.  In this case your cover's blown.
-	name = "Optical Meson Scanner"
-	desc = "It's a set of mesons."
+	name = "Мезонный визор"
+	desc = "Это мезонный визор."
 	icon_state = "meson"
 	update_icon()
 	update_clothing_icon()
 
 /obj/item/clothing/glasses/chameleon/verb/change(picked in clothing_choices)
-	set name = "Change Glasses Appearance"
-	set category = "Chameleon Items"
+	set name = "Изменить Вид Очков"
+	set category = "Маскировка"
 	set src in usr
 
 	if(!ispath(clothing_choices[picked]))
@@ -409,8 +409,8 @@
 //**Chameleon Gun**
 //*****************
 /obj/item/weapon/gun/energy/chameleon
-	name = "desert eagle"
-	desc = "A hologram projector in the shape of a gun. There is a dial on the side to change the gun's disguise."
+	name = "Desert Eagle"
+	desc = "Голографический проектор в форме оружия. Циферблат сбоку позволяет изменять внешний вид оружия."
 	icon_state = "deagle"
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ILLEGAL = 4)
@@ -451,8 +451,8 @@
 	return P
 
 /obj/item/weapon/gun/energy/chameleon/emp_act(severity)
-	name = "desert eagle"
-	desc = "It's a desert eagle."
+	name = "Desert Eagle"
+	desc = "Это Desert Eagle."
 	icon_state = "deagle"
 	update_icon()
 	if (ismob(src.loc))
@@ -479,8 +479,8 @@
 		//charge_meter = 0
 
 /obj/item/weapon/gun/energy/chameleon/verb/change(picked in gun_choices)
-	set name = "Change Gun Appearance"
-	set category = "Chameleon Items"
+	set name = "Изменить Вид Оружия"
+	set category = "Маскировка"
 	set src in usr
 
 	if(!ispath(gun_choices[picked]))

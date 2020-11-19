@@ -600,7 +600,7 @@
 /area/tether/surfacebase/medical/paramed)
 "aaY" = (
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -771,7 +771,7 @@
 "abi" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -1139,7 +1139,7 @@
 /area/tether/surfacebase/medical/mentalhealth)
 "abV" = (
 /obj/effect/landmark/start{
-	name = "Psychiatrist"
+	name = "Психиатр"
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -1305,7 +1305,7 @@
 "ach" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4;
@@ -5118,7 +5118,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Scientist"
+	name = "Учёный"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/chemistry_lab)
@@ -7543,14 +7543,14 @@
 /area/storage/primary)
 "amG" = (
 /obj/effect/landmark/start{
-	name = "Assistant"
+	name = "Ассистент"
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "amH" = (
 /obj/item/weapon/stool,
 /obj/effect/landmark/start{
-	name = "Assistant"
+	name = "Ассистент"
 	},
 /turf/simulated/floor/tiled,
 /area/storage/primary)
@@ -12650,7 +12650,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
@@ -13837,7 +13837,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
@@ -14280,7 +14280,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -18102,7 +18102,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -19506,7 +19506,7 @@
 	dir = 10
 	},
 /obj/effect/landmark/start{
-	name = "Bartender"
+	name = "Бармен"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/visitor_dining)
@@ -20077,7 +20077,7 @@
 "aGs" = (
 /obj/structure/bed/chair/sofa/brown/corner,
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -22590,7 +22590,7 @@
 /area/tether/surfacebase/surface_one_hall)
 "aKI" = (
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -22712,7 +22712,7 @@
 "aKV" = (
 /obj/item/weapon/stool,
 /obj/effect/landmark/start{
-	name = "Atmospheric Technician"
+	name = "Атмосферный техник"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -24200,7 +24200,7 @@
 /area/engineering/atmos)
 "aNI" = (
 /obj/effect/landmark/start{
-	name = "Atmospheric Technician"
+	name = "Атмосферный техник"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)

@@ -394,13 +394,13 @@ var/list/infomorph_emotions = list(
 		to_chat(src, "<span class='notice'>You block access modfications.</span>")
 
 /mob/living/silicon/infomorph/verb/wipe_software()
-	set name = "Suspend Self"
+	set name = "Войти В Гибернацию"
 	set category = "OOC"
-	set desc = "Wipe yourself from your hardware. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
+	set desc = "Полностью стереть себя с машины. Это эквивалентно крио и освобождает Ваш слот."
 
 	// Make sure people don't kill themselves accidentally
-	if(alert("WARNING: This will immediately remove you from the round, and remove your mind backups from storage, similar to cryo. Are you entirely sure you want to do this?",
-					"Suspend Self", "No", "No", "Yes") != "Yes")
+	if(alert("ВНИМАНИЕ: Это мгновенно удалит Вас из раунда вместе с Вашими бэкапами, как крио. Вы точно уверены в своём решении?",
+					"Войти В Гибернацию", "Нет", "Нет", "Да") != "Да")
 		return
 
 	close_up()

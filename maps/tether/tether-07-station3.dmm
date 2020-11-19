@@ -1038,7 +1038,7 @@
 /area/security/warden)
 "abE" = (
 /obj/effect/landmark/start{
-	name = "Warden"
+	name = "Надзиратель"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
@@ -2094,7 +2094,7 @@
 "ads" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/carpet,
 /area/security/breakroom)
@@ -2594,7 +2594,7 @@
 	},
 /obj/structure/table/bench/steel,
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
@@ -2760,7 +2760,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
@@ -5513,7 +5513,7 @@
 "ajC" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Detective"
+	name = "Детектив"
 	},
 /turf/simulated/floor/carpet,
 /area/security/breakroom)
@@ -5643,7 +5643,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/carpet,
 /area/security/breakroom)
@@ -5747,7 +5747,7 @@
 /area/ai)
 "akm" = (
 /obj/effect/landmark/start{
-	name = "AI"
+	name = "ИИ"
 	},
 /obj/machinery/requests_console{
 	department = "AI";
@@ -7382,7 +7382,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled,
 /area/security/briefing_room)
@@ -7439,7 +7439,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/landmark/start{
-	name = "Detective"
+	name = "Детектив"
 	},
 /turf/simulated/floor/carpet,
 /area/security/breakroom)
@@ -7890,7 +7890,7 @@
 	req_access = list(2)
 	},
 /obj/effect/landmark/start{
-	name = "Head of Security"
+	name = "Глава службы безопасности"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -7979,7 +7979,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/carpet,
 /area/security/breakroom)
@@ -8992,7 +8992,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/carpet,
 /area/security/breakroom)
@@ -11028,7 +11028,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Detective"
+	name = "Детектив"
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
@@ -11046,7 +11046,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Detective"
+	name = "Детектив"
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
@@ -12885,7 +12885,7 @@
 "avX" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -12995,7 +12995,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -13631,7 +13631,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Internal Affairs Agent"
+	name = "Агент внутренних дел"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
@@ -13703,7 +13703,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Internal Affairs Agent"
+	name = "Агент внутренних дел"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
@@ -15989,7 +15989,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Quartermaster"
+	name = "Квартирмейстер"
 	},
 /turf/simulated/floor/wood,
 /area/quartermaster/qm)
@@ -16301,7 +16301,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -16931,7 +16931,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -17583,7 +17583,7 @@
 /area/medical/reception)
 "aEI" = (
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -17625,7 +17625,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Chemist"
+	name = "Химик"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -17981,7 +17981,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -18099,7 +18099,7 @@
 "aFJ" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/landmark/start{
-	name = "Chemist"
+	name = "Химик"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -18762,7 +18762,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -20114,27 +20114,27 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Chemist"
+	name = "Химик"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "aJo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "aJp" = (
 /obj/effect/landmark/start{
-	name = "Chemist"
+	name = "Химик"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "aJq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -20501,7 +20501,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -20557,7 +20557,7 @@
 /area/medical/sleeper)
 "aKp" = (
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -21260,7 +21260,7 @@
 /area/crew_quarters/heads/hos)
 "aLT" = (
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -21824,7 +21824,7 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -21991,7 +21991,7 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/diagonal,
 /obj/effect/landmark/start{
-	name = "Paramedic"
+	name = "Парамедик"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -22993,7 +22993,7 @@
 /area/maintenance/station/cargo)
 "aQE" = (
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/structure/bed/chair{
 	dir = 1
@@ -23931,7 +23931,7 @@
 /area/maintenance/station/ai)
 "aSy" = (
 /obj/effect/landmark/start{
-	name = "Cargo Technician"
+	name = "Грузовой техник"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -23958,7 +23958,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/carpet,
 /area/security/breakroom)
@@ -23984,7 +23984,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
@@ -23998,7 +23998,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled,
 /area/security/briefing_room)
@@ -24203,7 +24203,7 @@
 /area/quartermaster/belterdock/gear)
 "aTh" = (
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/structure/bed/chair{
 	dir = 8
@@ -24747,7 +24747,7 @@
 /area/quartermaster/belterdock)
 "aUt" = (
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/structure/bed/chair{
 	dir = 4
@@ -24907,7 +24907,7 @@
 /area/security/security_bathroom)
 "aUX" = (
 /obj/effect/landmark/start{
-	name = "Shaft Miner"
+	name = "Шахтёр"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/belterdock/gear)
@@ -24974,7 +24974,7 @@
 /area/quartermaster/belterdock/refinery)
 "aVk" = (
 /obj/effect/landmark/start{
-	name = "Shaft Miner"
+	name = "Шахтёр"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
@@ -24996,7 +24996,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -25085,7 +25085,7 @@
 /area/quartermaster/belterdock/surface_mining_outpost_shuttle_hangar)
 "aVA" = (
 /obj/effect/landmark/start{
-	name = "Medical Doctor"
+	name = "Врач"
 	},
 /obj/structure/bed/chair,
 /obj/effect/floor_decal/corner/paleblue/diagonal,
@@ -25788,7 +25788,7 @@
 /area/shuttle/medivac/engines)
 "aXY" = (
 /obj/effect/landmark/start{
-	name = "Shaft Miner"
+	name = "Шахтёр"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -27795,7 +27795,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start{
-	name = "Security Officer"
+	name = "Офицер безопасности"
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)

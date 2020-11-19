@@ -446,7 +446,7 @@ client/proc/MayRespawn()
 	return 0
 
 client/verb/character_setup()
-	set name = "Character Setup"
+	set name = "Редактор Персонажа"
 	set category = "Настройки"
 	if(prefs)
 		prefs.ShowChoices(usr)
@@ -470,12 +470,12 @@ client/verb/character_setup()
 	return ..()
 
 /client/verb/reload_vchat()
-	set name = "Reload VChat"
+	set name = "Перезагрузить VChat"
 	set category = "OOC"
 
 	//Timing
 	if(src.chatOutputLoadedAt > (world.time - 10 SECONDS))
-		alert(src, "You can only try to reload VChat every 10 seconds at most.")
+		alert(src, "Перезагружать VChat можно раз в 10 секунд.")
 		return
 
 	verbs -= /client/proc/vchat_export_log

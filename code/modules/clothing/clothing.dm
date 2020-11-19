@@ -89,7 +89,7 @@
 					wearable = 1
 
 			if(!wearable && !(slot in list(slot_l_store, slot_r_store, slot_s_store)))
-				to_chat(H, "<span class='danger'>Ваша раса не может надеть [src.acase == "acase" ? src : src.acase].</span>")
+				to_chat(H, "<span class='danger'>Ваша раса не может носить [src.acase == "acase" ? src : src.acase].</span>")
 				return 0
 	return 1
 
@@ -939,7 +939,7 @@
 		if(2)
 			. += "Датчики жизненно важных органов, кажется, включены."
 		if(3)
-			. += "Датчики органов и маячок отслеживания, кажется, включен."
+			. += "Датчики органов и маячок отслеживания, кажется, включены."
 
 /obj/item/clothing/under/proc/set_sensors(mob/usr as mob)
 	var/mob/M = usr
