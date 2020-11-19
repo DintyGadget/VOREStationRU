@@ -503,7 +503,7 @@ datum/gear/suit/duster
 /datum/gear/suit/snowsuit/cargo
 	display_name = "Карго: Зимняя куртка"
 	path = /obj/item/clothing/suit/storage/snowsuit/cargo
-	allowed_roles = list("Квартирмейстер","Шахтёр","Грузчик","Глава персонала")
+	allowed_roles = list("Квартирмейстер","Шахтёр","Грузовой техник","Глава персонала")
 
 /datum/gear/suit/miscellaneous/cardigan
 	display_name = "Кардиган (окрашиваемый)"

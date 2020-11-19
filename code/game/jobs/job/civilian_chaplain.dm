@@ -18,7 +18,7 @@
 
 // Chaplain Alt Titles
 /datum/alt_title/priest
-	title = "Советник"
+	title = "Священник"
 
 /datum/job/chaplain/equip(var/mob/living/carbon/human/H, var/alt_title, var/ask_questions = TRUE)
 	. = ..()

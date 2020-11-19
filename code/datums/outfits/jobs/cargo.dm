@@ -13,7 +13,7 @@
 	pda_type = /obj/item/device/pda/quartermaster
 
 /decl/hierarchy/outfit/job/cargo/cargo_tech
-	name = OUTFIT_JOB_NAME("Грузчик")
+	name = OUTFIT_JOB_NAME("Грузовой техник")
 	uniform = /obj/item/clothing/under/rank/cargotech
 	id_type = /obj/item/weapon/card/id/cargo
 	pda_type = /obj/item/device/pda/cargo

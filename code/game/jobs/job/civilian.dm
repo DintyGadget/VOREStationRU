@@ -113,7 +113,7 @@
 //			Cargo Tech
 //////////////////////////////////
 /datum/job/cargo_tech
-	title = "Грузчик"
+	title = "Грузовой техник"
 	flag = CARGOTECH
 	departments = list(DEPARTMENT_CARGO)
 	department_flag = CIVILIAN
@@ -126,7 +126,7 @@
 	minimal_access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting)
 
 	outfit_type = /decl/hierarchy/outfit/job/cargo/cargo_tech
-	job_description = "Грузчик заполняет и доставляет заказы на груз. Им рекомендуется вернуть доставленные ящики в грузовой шаттл, \
+	job_description = "Грузовой техник заполняет и доставляет заказы на груз. Им рекомендуется вернуть доставленные ящики в грузовой шаттл, \
 						потому что Центральное Командование дает за это частичный возврат денег."
 
 //////////////////////////////////

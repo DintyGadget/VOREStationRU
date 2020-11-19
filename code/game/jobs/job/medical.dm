@@ -21,7 +21,7 @@
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_genetics, access_heads,
 			access_chemistry, access_virology, access_cmo, access_surgery, access_RC_announce,
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_external_airlocks, access_maint_tunnels)
-	alt_titles = list("Главный хирург" = /datum/alt_title/chief_surgeon)
+	alt_titles = list("Старший хирург" = /datum/alt_title/chief_surgeon)
 
 	minimum_character_age = 25
 	minimal_player_age = 10
@@ -33,7 +33,7 @@
 						безопасной транспортировке на лечение в медцентр. От них требуется информировать персонал об угрозах для здоровья, а также о важности нательных датчиков на костюмах."
 
 /datum/alt_title/chief_surgeon
-	title = "Главный хирург"
+	title = "Старший хирург"
 //////////////////////////////////
 //		Medical Doctor
 //////////////////////////////////

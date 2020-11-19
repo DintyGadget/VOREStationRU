@@ -1,11 +1,11 @@
 /datum/job/centcom_officer //For Business
-	title = "CentCom Officer"
+	title = "Офицер Центрального Командования"
 	departments = list("Central Command")
 	department_accounts = list(DEPARTMENT_COMMAND, DEPARTMENT_ENGINEERING, DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH, DEPARTMENT_SECURITY, DEPARTMENT_CARGO, DEPARTMENT_PLANET, DEPARTMENT_CIVILIAN)
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
-	supervisors = "company officials and Corporate Regulations"
+	supervisors = "уполномоченными лицами корпорации и Корпоративным Регулированием"
 	selection_color = "#1D1D4F"
 	access = list()
 	minimal_access = list()
@@ -67,28 +67,28 @@
 		return access*/
 
 /datum/job/clown
-	title = "Clown"
+	title = "Клоун"
 	flag = CLOWN
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = "the spirit of laughter"
+	supervisors = "святым духом рофланов"
 	selection_color = "#515151"
 	economic_modifier = 1
-	job_description = "A Clown is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
-	alt_titles = list("Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/jester)
+	job_description = "Клоун обязуется развлекать персонал и поддерживать хороший настрой силой безвредных розыгрышей и смешных шуток!"
 	whitelist_only = 1
 	latejoin_only = 1
 	outfit_type = /decl/hierarchy/outfit/job/clown
 	pto_type = PTO_CIVILIAN
-
-/datum/alt_title/clown
-	title = "Clown"
+	alt_titles = list("Шут" = /datum/alt_title/jester, "Дурак" = /datum/alt_title/fool)
 
 /datum/alt_title/jester
-	title = "Jester"
+	title = "Шут"
+
+/datum/alt_title/fool
+	title = "Дурак"
 
 /datum/job/clown/get_access()
 	if(config.assistant_maint)
@@ -97,28 +97,25 @@
 		return list(access_entertainment)
 
 /datum/job/mime
-	title = "Mime"
+	title = "Мим"
 	flag = MIME
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = "Station"
 	total_positions = -1
 	spawn_positions = -1
-	supervisors = "the spirit of performance"
+	supervisors = "святым духом искусства"
 	selection_color = "#515151"
 	economic_modifier = 1
-	job_description = "A Mime is there to entertain the crew and keep high morale using unbelievable performances and acting skills!"
-	alt_titles = list("Mime" = /datum/alt_title/mime, "Interpretive Dancer" = /datum/alt_title/interpretive_dancer)
+	job_description = "Мим развлекает персонал и поддерживает настрой силой невероятных выступлений и актёрской игры!"
+	alt_titles = list("Позёр" = /datum/alt_title/poseur)
 	whitelist_only = 1
 	latejoin_only = 1
 	outfit_type = /decl/hierarchy/outfit/job/mime
 	pto_type = PTO_CIVILIAN
 
-/datum/alt_title/mime
-	title = "Mime"
-
-/datum/alt_title/interpretive_dancer
-	title = "Interpretive Dancer"
+/datum/alt_title/poseur
+	title = "Позёр"
 
 /datum/job/mime/get_access()
 	if(config.assistant_maint)

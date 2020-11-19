@@ -200,7 +200,7 @@
 /datum/gear/uniform/dept/undercoat/cargo
 	display_name = "Тешари: Накидка карго"
 	path = /obj/item/clothing/under/seromi/undercoat/jobs/cargo
-	allowed_roles = list("Грузчик","Квартирмейстер","Шахтёр")
+	allowed_roles = list("Грузовой техник","Квартирмейстер","Шахтёр")
 
 /datum/gear/uniform/dept/undercoat/mining
 	display_name = "Тешари: Накидка шахтёра"
@@ -289,7 +289,7 @@
 /datum/gear/suit/dept/cloak/cargo
 	display_name = "Тешари: Плащ карго"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/jobs/cargo
-	allowed_roles = list("Грузчик","Квартирмейстер","Шахтёр")
+	allowed_roles = list("Грузовой техник","Квартирмейстер","Шахтёр")
 
 /datum/gear/suit/dept/cloak/mining
 	display_name = "Тешари: Плащ шахтёра"

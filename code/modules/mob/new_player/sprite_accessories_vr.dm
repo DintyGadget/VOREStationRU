@@ -82,6 +82,12 @@
 		icon = 'icons/mob/human_face_vr.dmi'
 		icon_add = 'icons/mob/human_face_vr_add.dmi'
 		icon_state = "hair_twincurl"
+	
+	crescent_moon
+		name = "Полумесяц"
+		icon = 'icons/mob/human_face_vr.dmi'
+		icon_add = 'icons/mob/human_face_vr_add.dmi'
+		icon_state = "crescent_moon"
 
 	bald
 		name = "Лысая голова"
@@ -1184,3 +1190,70 @@
 		icon_state = "vas_toes"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_FOOT,BP_R_FOOT)
+
+	//CitRP stuff
+	vox_alt
+		name = "Вокс: Тело, альт"
+		icon_state = "bay_vox"
+		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+		species_allowed = list(SPECIES_VOX)
+
+	vox_alt_eyes
+		name = "Вокс: Глаза, альт"
+		icon_state = "bay_vox_eyes"
+		body_parts = list(BP_HEAD)
+		species_allowed = list(SPECIES_VOX)
+
+	c_beast_body
+		name = "Кибер: Тело"
+		icon_state = "c_beast_body"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_GROIN)
+
+	c_beast_plating
+		name = "Кибер: Пластины (к телу)"
+		icon_state = "c_beast_plating"
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM)
+
+	c_beast_band
+		name = "Кибер: Круг (к голове Cybertech)"
+		icon_state = "c_beast_band"
+		body_parts = list(BP_HEAD)
+
+	c_beast_cheek_a
+		name = "Кибер: Щёки А (использовать с Б)"
+		icon_state = "c_beast_add_a"
+		body_parts = list(BP_HEAD)
+
+	c_beast_cheek_b
+		name = "Кибер: Щёки А (использовать с А)"
+		icon_state = "c_beast_add_b"
+		body_parts = list(BP_HEAD)
+
+	teshari_large_eyes
+		name = "Тешари: Большие глаза"
+		icon_state = "teshlarge_eyes"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+		species_allowed = list(SPECIES_TESHARI)
+
+	teshari_coat
+		name = "Тешари: Накидка"
+		icon_state = "tesh_coat"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_HEAD)
+		species_allowed = list(SPECIES_TESHARI)
+
+	teshari_pattern_male
+		name = "Тешари: Метки, мужские"
+		icon_state = "tesh-pattern-male"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+		species_allowed = list(SPECIES_TESHARI)
+
+	teshari_pattern_female
+		name = "Тешари: Метки, женские"
+		icon_state = "tesh-pattern-fem"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+		species_allowed = list(SPECIES_TESHARI)

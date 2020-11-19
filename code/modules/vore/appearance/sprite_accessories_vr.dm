@@ -444,6 +444,22 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "tesharilowinner"
 
+/datum/sprite_accessory/ears/tesh_pattern_ear_male
+	name = "Тешари: Метки на уши, мужские"
+	desc = ""
+	icon_state = "teshari"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshari_male_pattern"
+
+/datum/sprite_accessory/ears/tesh_pattern_ear_female
+	name = "Тешари: Метки на уши, женские"
+	desc = ""
+	icon_state = "teshari"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshari_female_pattern"
+
 /datum/sprite_accessory/ears/inkling
 	name = "Кролик, взрослые свисающие"
 	desc = ""
@@ -724,10 +740,10 @@
 	ckeys_allowed = list("scree")
 
 /datum/sprite_accessory/wing/liquidfirefly_gazer //I g-guess this could be considered wings?
-	name = "gazer eyestalks"
+	name = "Глаза смотрящего"
 	desc = ""
 	icon_state = "liquidfirefly-eyestalks"
-	ckeys_allowed = list("liquidfirefly","seiga") //At request.
+	//ckeys_allowed = list("liquidfirefly","seiga") //At request.
 
 /datum/sprite_accessory/wing/moth_full
 	name = "Мотылек, с антенной"
@@ -1265,13 +1281,53 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "deertail_mark"
 
+/datum/sprite_accessory/tail/tesh_feathered
+	name = "Тешари, пернатый"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	extra_overlay = "teshtail_feathers_s"
+	color_blend_mode = ICON_MULTIPLY
+
 /datum/sprite_accessory/tail/teshari_fluffytail
 	name = "Тешари, альт (окр.)"
 	desc = ""
 	icon_state = "teshari_fluffytail"
-	extra_overlay = "teshari_fluffytail_mark"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshari_fluffytail_mark"
+
+/datum/sprite_accessory/tail/tesh_pattern_male
+	name = "Тешари: Метки на хвост, мужские"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_male_tail"
+
+/datum/sprite_accessory/tail/tesh_pattern_male_alt
+	name = "Тешари: Метки на хвост, мужские, альт"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_male_alt"
+
+/datum/sprite_accessory/tail/tesh_pattern_fem
+	name = "Тешари: Метки на хвост, женские"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_fem_tail"
+
+/datum/sprite_accessory/tail/tesh_pattern_fem_alt
+	name = "Тешари: Метки на хвост, женские, альт"
+	desc = ""
+	icon_state = "teshtail_s"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+	extra_overlay = "teshpattern_fem_alt"
 
 /datum/sprite_accessory/tail/nightstalker
 	name = "Ночной хищник (окр.)"
@@ -1349,21 +1405,6 @@
 	name = "Обезьяна"
 	desc = ""
 	icon_state = "chimptail_s"
-
-/datum/sprite_accessory/tail/special/seromitail
-	name = "Тешари"
-	desc = ""
-	icon_state = "seromitail_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/tail/special/seromitailfeathered
-	name = "Тешари с перьями"
-	desc = ""
-	icon_state = "seromitail_s"
-	extra_overlay = "seromitail_feathers_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/unathihc
 	name = "Унати (окр.)"
@@ -1449,20 +1490,6 @@
 	desc = ""
 	icon_state = "chimptail_hc_s"
 	do_colouration = 1
-
-/datum/sprite_accessory/tail/special/seromitailhc
-	name = "Тешари (окр.)"
-	desc = ""
-	icon_state = "seromitail_hc_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
-
-/datum/sprite_accessory/tail/special/seromitailfeatheredhc
-	name = "Тешари с перьями (окр.)"
-	desc = ""
-	icon_state = "seromitail_feathers_hc_s"
-	do_colouration = 1
-	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/special/vulpan
 	name = "Вульпканин (окр.)"
@@ -1776,7 +1803,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/wartacosushi_tail_dc
-	name = "Ward-Takahashi (два цвета)"
+	name = "Ward-Takahashi, (два цвета)"
 	desc = ""
 	icon_state = "wardtakahashi_vulp_dc"
 	do_colouration = 1
