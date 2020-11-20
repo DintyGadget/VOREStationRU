@@ -202,7 +202,7 @@
 		else
 			f_name += "oil-stained [name][infix]."
 
-	var/list/output = list("[bicon(src)] [f_name] [suffix]", desc)
+	var/list/output = list("Это [bicon(src)] [f_name] [suffix]", desc)
 
 	if(user.client?.prefs.examine_text_mode == EXAMINE_MODE_INCLUDE_USAGE)
 		output += description_info

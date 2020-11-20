@@ -19,7 +19,7 @@
 		to_chat(usr, "<span class='notice'>Теперь <b>[key_to_ignore]</b> игнорируется.</span>")
 
 /client/verb/unignore(key_to_unignore as text)
-	set name = "Заблокировать Игрока"
+	set name = "Разблокировать Игрока"
 	set category = "OOC"
 	set desc = "Отменяет игнорирование игрока."
 

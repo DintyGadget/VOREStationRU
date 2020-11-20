@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes/magboots
 	desc = "Магнитные ботинки, зачастую используемые во время внекорабельной деятельности для поддержания сцепления с поверхностью корабля. Достаточно большие для ношения поверх другой обуви."
-	name = "магнитные ботинки"
+	name = "Магнитные ботинки"
 	icon_state = "magboots0"
 	flags = PHORONGUARD
 	item_state_slots = list(slot_r_hand_str = "magboots", slot_l_hand_str = "magboots")
@@ -50,7 +50,7 @@
 		shoes = H.shoes
 		if(shoes.overshoes)
 			if(slot && slot == slot_shoes)
-				to_chat(user, "Вы не можете надеть [src], так как Вам мешают [H.shoes].")
+				to_chat(user, "Вы не можете надеть [src.acase], так как Вам меша[H.shoes.rugender == "plural" ? "ют" : "ет"] [H.shoes.ncase].")
 			shoes = null
 			return 0
 		H.drop_from_inventory(shoes)	//Remove the old shoes so you can put on the magboots.
@@ -64,7 +64,7 @@
 
 	if (shoes)
 		if(slot && slot == slot_shoes)
-			to_chat(user, "Вы надеваете [src] поверх своей обуви.")
+			to_chat(user, "Вы надеваете [src.acase] поверх сво[shoes.rugender == "male" ? "его" : shoes.rugender == "female" ? "ей" : shoes.rugender == "neuter" ? "его" : "их"] [shoes.gcase].")
 	set_slowdown()
 	wearer = H
 	return 1
@@ -85,7 +85,7 @@
 /obj/item/clothing/shoes/magboots/vox
 
 	desc = "Пара тяжелых, бронированных когтей, предназначенных, по всей видимости, для велоцирапторов."
-	name = "магнитные когти"
+	name = "Магнитные когти"
 	item_state = "boots-vox"
 	icon_state = "boots-vox"
 	flags = PHORONGUARD
@@ -105,7 +105,7 @@
 			return
 		var/mob/living/carbon/human/H = user
 		if (H.shoes != src)
-			to_chat(user, "Вам нужно сперва надеть [src].")
+			to_chat(user, "Вам нужно сперва надеть [src.acase].")
 			return
 
 		item_flags |= NOSLIP
@@ -118,7 +118,7 @@
 /obj/item/clothing/shoes/magboots/vox/dropped(mob/user as mob)
 	..()
 	if(src.magpulse)
-		user.visible_message("Магнитные когти отключаются, будучи снятыми с [usr]'s feet.", "Магнитные когти отключаются, будучи снятыми с Ваших лап.")
+		user.visible_message("Магнитные когти отключаются, будучи снятыми с ног [usr].", "Магнитные когти отключаются, будучи снятыми с Ваших ног.")
 		item_flags &= ~NOSLIP
 		magpulse = 0
 		canremove = 1
