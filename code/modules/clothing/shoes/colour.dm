@@ -1,99 +1,99 @@
 
 /obj/item/clothing/shoes/black
-	name = "черные кроссовки"
+	name = "Чёрные кроссовки"
 	icon_state = "black"
-	desc = "Пара кроссовок черного цвета."
+	desc = "Пара кроссовок чёрного цвета."
 
 /obj/item/clothing/shoes/brown
-	name = "коричневые кроссовки"
+	name = "Коричневые кроссовки"
 	desc = "Пара кроссовок коричневого цвета."
 	icon_state = "brown"
 
 /obj/item/clothing/shoes/blue
-	name = "синие кроссовки"
+	name = "Синие кроссовки"
 	desc = "Пара кроссовок синего цвета."
 	icon_state = "blue"
 
 /obj/item/clothing/shoes/green
-	name = "зеленые кроссовки"
-	desc = "Пара кроссовок зеленого цвета."
+	name = "Зелёные кроссовки"
+	desc = "Пара кроссовок зелёного цвета."
 	icon_state = "green"
 
 /obj/item/clothing/shoes/yellow
-	name = "желтые кроссовки"
-	desc = "Пара кроссовок желтого цвета."
+	name = "Жёлтые кроссовки"
+	desc = "Пара кроссовок жёлтого цвета."
 	icon_state = "yellow"
 
 /obj/item/clothing/shoes/purple
-	name = "фиолетовые кроссовки"
+	name = "Фиолетовые кроссовки"
 	desc = "Пара кроссовок фиолетового цвета."
 	icon_state = "purple"
 
 /obj/item/clothing/shoes/red
-	name = "красные кроссовки"
+	name = "Красные кроссовки"
 	desc = "Пара кроссовок красного цвета."
 	icon_state = "red"
 
 /obj/item/clothing/shoes/white
-	name = "белые кроссовки"
+	name = "Белые кроссовки"
 	desc = "Пара кроссовок белого цвета."
 	icon_state = "white"
 	permeability_coefficient = 0.01
 
 /obj/item/clothing/shoes/rainbow
-	name = "радужные кроссовки"
+	name = "Радужные кроссовки"
 	desc = "Пара ярких разноцветных кроссовок."
 	icon_state = "rain_bow"
 
 /obj/item/clothing/shoes/flats
-	name = "черные балетки"
-	desc = "Стильные черные балетки."
+	name = "Чёрные балетки"
+	desc = "Стильные чёрные балетки."
 	icon_state = "flatsblack"
 	item_state_slots = list(slot_r_hand_str = "black", slot_l_hand_str = "black")
 
 /obj/item/clothing/shoes/flats/white
-	name = "белые балетки"
+	name = "Белые балетки"
 	desc = "Яркие белые балетки."
 	icon_state = "flatswhite"
 	addblends = "flatswhite_a"
 	item_state_slots = list(slot_r_hand_str = "white", slot_l_hand_str = "white")
 
 /obj/item/clothing/shoes/flats/white/color
-	name = "балетки"
+	name = "Балетки"
 	desc = "Стильные балетки."
 
 /obj/item/clothing/shoes/flats/red
-	name = "красные балетки"
+	name = "Красные балетки"
 	desc = "Балетки рубинового красного цвета."
 	icon_state = "flatsred"
 	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
 
 /obj/item/clothing/shoes/flats/purple
-	name = "фиолетовые балетки"
+	name = "Фиолетовые балетки"
 	desc = "Балетки королевского фиолетового цвета."
 	icon_state = "flatspurple"
 	item_state_slots = list(slot_r_hand_str = "purple", slot_l_hand_str = "purple")
 
 /obj/item/clothing/shoes/flats/blue
-	name = "синие балетки"
+	name = "Синие балетки"
 	desc = "Яркие синие балетки."
 	icon_state = "flatsblue"
 	item_state_slots = list(slot_r_hand_str = "blue", slot_l_hand_str = "blue")
 
 /obj/item/clothing/shoes/flats/brown
-	name = "коричневые балетки"
+	name = "Коричневые балетки"
 	desc = "Яркие балетки коричневого цвета."
 	icon_state = "flatsbrown"
 	item_state_slots = list(slot_r_hand_str = "brown", slot_l_hand_str = "brown")
 
 /obj/item/clothing/shoes/flats/orange
-	name = "оранжевые балетки"
+	name = "Оранжевые балетки"
 	desc = "Блестящие балетки оранжевого цвета."
 	icon_state = "flatsorange"
 	item_state_slots = list(slot_r_hand_str = "orange", slot_l_hand_str = "orange")
 
 /obj/item/clothing/shoes/orange
-	name = "оранжевые кроссовки"
+	name = "Оранжевые кроссовки"
 	desc = "Пара кроссовок оранжевого цвета."
 	icon_state = "orange"
 	var/obj/item/weapon/handcuffs/chained = null
@@ -127,38 +127,38 @@
 		attach_cuffs(H, user)
 
 /obj/item/clothing/shoes/hitops
-	name = "охотничьи ботинки"
+	name = "Охотничьи ботинки"
 	desc = "Пара ботинок, достигающих дальше лодыжек. Основаны на не выходящем из моды дизайне многовековой давности."
 	icon_state = "whitehi"
 
 /obj/item/clothing/shoes/hitops/red
-	name = "красные охотничьи ботинки"
+	name = "Красные охотничьи ботинки"
 	icon_state = "redhi"
 
 /obj/item/clothing/shoes/hitops/brown
-	name = "коричневые охотничьи ботинки"
+	name = "Коричневые охотничьи ботинки"
 	icon_state = "brownhi"
 
 /obj/item/clothing/shoes/hitops/black
-	name = "черные охотничьи ботинки"
+	name = "Чёрные охотничьи ботинки"
 	icon_state = "blackhi"
 
 /obj/item/clothing/shoes/hitops/orange
-	name = "оранжевые охотничьи ботинки"
+	name = "Оранжевые охотничьи ботинки"
 	icon_state = "orangehi"
 
 /obj/item/clothing/shoes/hitops/blue
-	name = "синие охотничьи ботинки"
+	name = "Синие охотничьи ботинки"
 	icon_state = "bluehi"
 
 /obj/item/clothing/shoes/hitops/green
-	name = "зеленые охотничьи ботинки"
+	name = "Зелёные охотничьи ботинки"
 	icon_state = "greenhi"
 
 /obj/item/clothing/shoes/hitops/purple
-	name = "фиолетовые охотничьи ботинки"
+	name = "Фиолетовые охотничьи ботинки"
 	icon_state = "purplehi"
 
 /obj/item/clothing/shoes/hitops/yellow
-	name = "желтые охотничьи ботинки"
+	name = "Жёлтые охотничьи ботинки"
 	icon_state = "yellowhi"

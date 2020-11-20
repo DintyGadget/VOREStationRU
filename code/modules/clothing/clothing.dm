@@ -374,7 +374,7 @@
 		if(istype(G))
 			ring = H.gloves
 			if(ring.glove_level >= src.glove_level)
-				to_chat(user, "Вы не можете надеть [src.acase == "acase" ? src : src.acase], так как на Вас уже [H.gloves].")
+				to_chat(user, "Вы не можете надеть [src.acase == "acase" ? src : src.acase], так как Вы уже в [H.gloves.pcase].")
 				ring = null
 				return 0
 			else
@@ -663,7 +663,7 @@
 	 istype(I, /obj/item/weapon/material/kitchen/utensil) || \
 	 istype(I, /obj/item/weapon/material/knife/tacknife)))
 		if(holding)
-			to_chat(user, "<span class='warning'>[src.ncase] уже держит [holding.acase == "acase" ? holding : holding.acase].</span>")
+			to_chat(user, "<span class='warning'>В [src.pcase] уже есть [holding.acase == "acase" ? holding : holding.acase].</span>")
 			return
 		user.unEquip(I)
 		I.forceMove(src)
@@ -679,7 +679,7 @@
 	set category = "Объект"
 
 	if(shoes_under_pants == -1)
-		to_chat(usr, "<span class='notice'>[src.ncase] нельзя носить поверх Вашего костюма!</span>")
+		to_chat(usr, "<span class='notice'>[capitalize(src.ncase)] нельзя носить поверх Вашего костюма!</span>")
 		return
 	shoes_under_pants = !shoes_under_pants
 	update_icon()

@@ -1,5 +1,5 @@
 /obj/item/clothing/shoes/boots/hoof
-	name = "ботинки-копыта"
+	name = "Ботинки-копыта"
 	desc = "Пара ботинок на высоких каблуках с копытами перед подошвой, позволяющая скрыть свои следы."
 	icon_state = "hoofboots"
 	icon = 'icons/obj/clothing/shoes_vr.dmi'

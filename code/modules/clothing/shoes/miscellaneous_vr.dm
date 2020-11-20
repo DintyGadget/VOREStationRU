@@ -1,13 +1,13 @@
 /obj/item/clothing/shoes/griffin
-	name = "ботинки грифона"
-	desc = "Пара ботинок для костюма грифона, исполненные в стиле птичьих когтей."
+	name = "Ботинки Грифона"
+	desc = "Пара ботинок для костюма Грифона, исполненные в стиле птичьих когтей."
 	icon_state = "griffinboots"
 	item_state = "griffinboots"
 	icon = 'icons/obj/clothing/shoes_vr.dmi'
 	icon_override = 'icons/mob/feet_vr.dmi'
 
 /obj/item/clothing/shoes/bhop
-	name = "джет-ботинки"
+	name = "Реактивные ботинки"
 	desc = "Специализированная пара военных ботинок со встроенной системой подачи импульса для быстрого передвижения."
 	icon_state = "jetboots"
 	item_state = "jetboots"
@@ -42,7 +42,7 @@
 	recharging_time = world.time + recharging_rate
 
 /obj/item/clothing/shoes/magboots/adv
-	name = "улучшенные магнитные ботинки"
+	name = "Улучшенные магнитные ботинки"
 	desc = "Усовершенствованные магнитные ботинки для продвинутых пользователей. В них слабее магнитное сцепление, что позволяет носителю передвигаться быстрее."
 	icon = 'icons/obj/clothing/shoes_vr.dmi'
 	icon_override = 'icons/mob/feet_vr.dmi'
@@ -62,7 +62,7 @@
 
 // Armor Versions Here
 /obj/item/clothing/shoes/knight
-	name = "рыцарские ботинки"
+	name = "Рыцарские ботинки"
 	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots1"
 	item_state = "knight_boots1"
@@ -71,14 +71,14 @@
 	armor = list(melee = 80, bullet = 50, laser = 10, energy = 0, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/shoes/knight/black
-	name = "рыцарские ботинки"
+	name = "Рыцарские ботинки"
 	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots2"
 	item_state = "knight_boots2"
 
 // Costume Versions Here
 /obj/item/clothing/shoes/knight_costume
-	name = "рыцарские ботинки"
+	name = "Рыцарские ботинки"
 	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots1"
 	item_state = "knight_boots1"
@@ -86,7 +86,7 @@
 	icon_override = 'icons/obj/clothing/shoes_vr.dmi'
 
 /obj/item/clothing/shoes/knight_costume/black
-	name = "рыцарские ботинки"
+	name = "Рыцарские ботинки"
 	desc = "Пара древних рыцарских ботинок."
 	icon_state = "knight_boots2"
 	item_state = "knight_boots2"
