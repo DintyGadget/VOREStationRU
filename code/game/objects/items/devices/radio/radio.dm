@@ -154,7 +154,7 @@ var/global/list/default_medbay_channels = list(
 /obj/item/device/radio/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "Радио", name, parent_ui)
+		ui = new(user, src, "Radio", name, parent_ui)
 		ui.open()
 
 /obj/item/device/radio/tgui_data(mob/user)

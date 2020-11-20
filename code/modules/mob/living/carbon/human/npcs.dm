@@ -4,7 +4,7 @@
 	icon_state = "punpun"
 	worn_state = "punpun"
 	has_sensor = 0
-	species_restricted = list("Monkey")
+	species_restricted = list("Мартышка")
 
 /mob/living/carbon/human/monkey/punpun/Initialize()
 	. = ..()
