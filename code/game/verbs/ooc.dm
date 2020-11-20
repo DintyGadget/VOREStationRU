@@ -82,7 +82,7 @@
 
 /client/verb/looc(msg as text)
 	set name = "LOOC"
-	set desc = "Local OOC, seen only by those in view."
+	set desc = "Локальный ООС-чат, видимый только для тех, кто на экране."
 	set category = "OOC"
 
 	if(say_disabled)	//This is here to try to identify lag problems

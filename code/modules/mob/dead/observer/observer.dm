@@ -209,8 +209,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 */
 /mob/living/verb/ghost()
 	set category = "OOC"
-	set name = "Гостануться"
-	set desc = "Откажитесь от своей жизни и войдите в страну мертвых."
+	set name = "Режим Призрака"
+	set desc = "Отказаться от своей жизни и войти в страну мертвых."
 
 	if(stat == DEAD && !forbid_seeing_deadchat)
 		announce_ghost_joinleave(ghostize(1))
@@ -820,17 +820,17 @@ mob/observer/dead/MayRespawn(var/feedback = 0)
 //Culted Ghosts
 
 /mob/observer/dead/proc/ghost_whisper()
-	set name = "Призрачный шепот"
+	set name = "Призрачный Шёпот"
 	set category = "IC"
 
 	if(is_manifest)  //Only able to whisper if it's hit with a tome.
 		var/list/options = list()
 		for(var/mob/living/Ms in view(src))
 			options += Ms
-		var/mob/living/M = input(src, "Выберите, кому шептать:", "Шепот?", null) as null|mob in options
+		var/mob/living/M = input(src, "Выберите, кому шептать:", "Шёпот?", null) as null|mob in options
 		if(!M)
 			return 0
-		var/msg = sanitize(input(src, "Сообщение:", "Spectral Whisper") as text|null)
+		var/msg = sanitize(input(src, "Сообщение:", "Спектральный Шёпот") as text|null)
 		if(msg)
 			log_say("(SPECWHISP to [key_name(M)]): [msg]", src)
 			to_chat(M, "<span class='warning'> Вы слышите в своей голове странный, неизвестный голос ... <font color='purple'>[msg]</font></span>")

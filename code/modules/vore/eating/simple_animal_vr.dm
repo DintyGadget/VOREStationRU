@@ -28,8 +28,8 @@
 // Added as a verb in /mob/living/simple_mob/init_vore() if vore is enabled for this mob.
 //
 /mob/living/simple_mob/proc/toggle_digestion()
-	set name = "Toggle Animal's Digestion"
-	set desc = "Enables digestion on this mob for 20 minutes."
+	set name = "Переключить Переваривание Зверем"
+	set desc = "Включить переваривание этого моба на 20 минут."
 	set category = "OOC"
 	set src in oview(1)
 
@@ -37,42 +37,42 @@
 	if(!istype(user) || user.stat) return
 
 	if(!vore_selected)
-		to_chat(user, "<span class='warning'>[src] isn't planning on eating anything much less digesting it.</span>")
+		to_chat(user, "<span class='warning'>[src] ничего не планирует есть, и уж тем более переваривать.</span>")
 		return
 	if(ai_holder.retaliate || (ai_holder.hostile && faction != user.faction))
-		to_chat(user, "<span class='warning'>This predator isn't friendly, and doesn't give a shit about your opinions of it digesting you.</span>")
+		to_chat(user, "<span class='warning'>Этот хищник не дружелюбен, ему поебать на Ваше мнение о переваривании.</span>")
 		return
 	if(vore_selected.digest_mode == DM_HOLD)
-		var/confirm = alert(user, "Enabling digestion on [name] will cause it to digest all stomach contents. Using this to break OOC prefs is against the rules. Digestion will reset after 20 minutes.", "Enabling [name]'s Digestion", "Enable", "Cancel")
-		if(confirm == "Enable")
+		var/confirm = alert(user, "Включение переваривания у [name] приведёт к перевариванию всего содержимого в животе. Использование этого для нарушения предпочтений против правил. Переваривание выключится через 20 минут.", "Включить Переваривание [name]", "Включить", "Отмена")
+		if(confirm == "Включить")
 			vore_selected.digest_mode = DM_DIGEST
 			addtimer(VARSET_CALLBACK(vore_selected, digest_mode, vore_default_mode), 20 MINUTES)
 	else
-		var/confirm = alert(user, "This mob is currently set to process all stomach contents. Do you want to disable this?", "Disabling [name]'s Digestion", "Disable", "Cancel")
+		var/confirm = alert(user, "Этот моб сейчас переваривает всё содержимое живота. Хотите ли Вы это отключить?", "Отключение Переваривания [name]", "Отключить", "Отмена")
 		if(confirm == "Disable")
 			vore_selected.digest_mode = DM_HOLD
 
 // Added as a verb in /mob/living/simple_mob/init_vore() if vore is enabled for this mob.
 /mob/living/simple_mob/proc/toggle_fancygurgle()
-	set name = "Toggle Animal's Gurgle sounds"
-	set desc = "Switches between Fancy and Classic sounds on this mob."
+	set name = "Звуки Переваривания Зверя"
+	set desc = "Переключить звуки переваривания этого зверя с классических на красивые."
 	set category = "OOC"
 	set src in oview(1)
 
 	var/mob/living/user = usr	//I mean, At least ghosts won't use it.
 	if(!istype(user) || user.stat) return
 	if(!vore_selected)
-		to_chat(user, "<span class='warning'>[src] isn't vore capable.</span>")
+		to_chat(user, "<span class='warning'>[src] не способен на vore.</span>")
 		return
 
 	vore_selected.fancy_vore = !vore_selected.fancy_vore
-	to_chat(user, "[src] is now using [vore_selected.fancy_vore ? "Fancy" : "Classic"] vore sounds.")
+	to_chat(user, "[src] теперь переваривает с [vore_selected.fancy_vore ? "красивыми" : "классическими"] звуками.")
 
 /mob/living/simple_mob/attackby(var/obj/item/O, var/mob/user)
 	if(istype(O, /obj/item/weapon/newspaper) && !(ckey || (ai_holder.hostile && faction != user.faction)) && isturf(user.loc))
 		if(ai_holder.retaliate && prob(vore_pounce_chance/2)) // This is a gamble!
 			user.Weaken(5) //They get tackled anyway whether they're edible or not.
-			user.visible_message("<span class='danger'>[user] swats [src] with [O] and promptly gets tackled!</span>!")
+			user.visible_message("<span class='danger'>[user] нападает на [src] с [O.icase == "icase" ? O : O.icase], но [src] нападает в ответ!</span>!")
 			if(will_eat(user))
 				set_AI_busy(TRUE)
 				animal_nom(user)
@@ -83,7 +83,7 @@
 				//AttackTarget() //VOREStation AI Temporary Removal
 				//LoseTarget() // only make one attempt at an attack rather than going into full rage mode
 		else
-			user.visible_message("<span class='info'>[user] swats [src] with [O]!</span>")
+			user.visible_message("<span class='info'>[user] нападает на [src] с [O.icase == "icase" ? O : O.icase]!</span>")
 			release_vore_contents()
 			for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
 				if(!(L in prey_excludes)) // Unless they're already on it, just to avoid fuckery.

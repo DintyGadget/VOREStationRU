@@ -633,16 +633,16 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		return ..()
 
 /mob/living/carbon/human/proc/set_nif_examine()
-	set name = "NIF Appearance"
-	set desc = "If your NIF alters your appearance in some way, describe it here."
+	set name = "Внешность НИФ"
+	set desc = "Если Ваш НИФ Вас видоизменяет, опишите это здесь."
 	set category = "OOC"
 
 	if(!nif)
 		verbs -= /mob/living/carbon/human/proc/set_nif_examine
-		to_chat(src,"<span class='warning'>You don't have a NIF, not sure why this was here.</span>")
+		to_chat(src,"<span class='warning'>У Вас нету НИФа, чёрт знает, почему Вы это видите.</span>")
 		return
 
-	var/new_flavor = sanitize(input(src,"Describe how your NIF alters your appearance, like glowy eyes or metal plate on your head, etc. Be sensible. Clear this for no examine text. 128ch max.","Describe NIF", nif.examine_msg) as null|text, max_length = 128)
+	var/new_flavor = sanitize(input(src,"Опишите, как Ваш НИФ влияет на Вашу внешность. Например, светящиеся глаза, или металлическая пластина на голове. Соблюдайте здравый смысл. Оставьте поле пустым, чтобы ничего не показывалось при Осмотре Вашего персонажа. 128 символов максимум.","Опишите НИФ", nif.examine_msg) as null|text, max_length = 128)
 	//They clicked cancel or meanwhile lost their NIF
 	if(!nif || isnull(new_flavor))
 		return //No changes

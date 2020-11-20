@@ -534,19 +534,19 @@ proc/get_nt_opposed()
 		obj_count++
 
 /mob/verb/check_round_info()
-	set name = "Check Round Info"
+	set name = "Информация О Раунде"
 	set category = "OOC"
 
 	if(!ticker || !ticker.mode)
-		to_chat(usr, "<span class='warning'>Something is terribly wrong; there is no gametype.</span>")
+		to_chat(usr, "<span class='warning'>Что-то пошло очень не так; неизвестен тип игры.</span>")
 		return
 
 	if(master_mode != "secret")
-		to_chat(usr, "<span class='notice'><b>The roundtype is [capitalize(ticker.mode.name)]</b></span>")
+		to_chat(usr, "<span class='notice'><b>Сейчас идёт [capitalize(ticker.mode.name)] раунд!</b></span>")
 		if(ticker.mode.round_description)
 			to_chat(usr, "<span class='notice'><i>[ticker.mode.round_description]</i></span>")
 		if(ticker.mode.extended_round_description)
 			to_chat(usr, "<span class='notice'>[ticker.mode.extended_round_description]</span>")
 	else
-		to_chat(usr, "<span class='notice'><i>Shhhh</i>. It's a secret.</span>")
+		to_chat(usr, "<span class='notice'><i>Тссс</i>. Это секрет.</span>")
 	return

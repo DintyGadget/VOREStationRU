@@ -374,7 +374,7 @@ var/global/datum/controller/occupations/job_master
 				var/list/spawn_props = LateSpawn(H.client, rank)
 				var/turf/T = spawn_props["turf"]
 				if(!T)
-					to_chat(H, "<span class='critical'>Вы не смогли появиться в выбранной вами точке позднего присоединения. Пожалуйста, проверьте, что ваша комбинация профессии/точки появления указана правильно, или попробуйте другую.</span>")
+					to_chat(H, "<span class='critical'>Вы не смогли появиться в выбранной Вами точке позднего присоединения. Пожалуйста, проверьте, что Ваша комбинация профессии/точки появления указана правильно, или попробуйте другую.</span>")
 					return
 				else
 					H.forceMove(T)
@@ -426,7 +426,7 @@ var/global/datum/controller/occupations/job_master
 						if(G.slot == slot_wear_mask || G.slot == slot_wear_suit || G.slot == slot_head)
 							custom_equip_leftovers += thing
 						else if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
-							to_chat(H, "<span class='notice'>[thing] была одета на вас!</span>")
+							to_chat(H, "<span class='notice'>На Вас [thing]!</span>")
 							if(G.slot != slot_tie)
 								custom_equip_slots.Add(G.slot)
 						else
@@ -455,12 +455,12 @@ var/global/datum/controller/occupations/job_master
 				else
 					var/metadata = H.client.prefs.gear[G.display_name]
 					if(H.equip_to_slot_or_del(G.spawn_item(H, metadata), G.slot))
-						to_chat(H, "<span class='notice'>Equipping you with \the [thing]!</span>")
+						to_chat(H, "<span class='notice'>На Вас [thing]!</span>")
 						custom_equip_slots.Add(G.slot)
 					else
 						spawn_in_storage += thing
 		else
-			to_chat(H, "Your job is [rank] and the game just can't handle it! Please report this bug to an administrator.")
+			to_chat(H, "Ваша работа [rank], и игре это не нравится! Сообщите администратору.")
 
 		H.job = rank
 		log_game("JOINED [key_name(H)] as \"[rank]\"")
@@ -530,10 +530,10 @@ var/global/datum/controller/occupations/job_master
 		to_chat(H, "<B>Вы [alt_title ? alt_title : rank].</B>")
 
 		if(job.supervisors)
-			to_chat(H, "<b>Как [alt_title ? alt_title : rank] вы отвечаете перед [job.supervisors]. Но особые обстоятельства могут это изменить.</b>")
+			to_chat(H, "<b>Как [alt_title ? alt_title : rank], Вы отвечаете перед [job.supervisors]. Но особые обстоятельства могут это изменить.</b>")
 		if(job.has_headset)
 			H.equip_to_slot_or_del(new /obj/item/device/radio/headset(H), slot_l_ear)
-			to_chat(H, "<b>Чтобы говорить по радиоканалу вашего отдела, используйте в чате :h . Для общения на других каналах используйте свою гарнитуру.</b>")
+			to_chat(H, "<b>Чтобы говорить по радиоканалу Вашего отдела, используйте в чате :h . Осмотрите свою гарнитуру, чтобы узнать её каналы.</b>")
 
 		if(job.req_admin_notify)
 			to_chat(H, "<b>Вы играете за профессию, которая важна для развития игры. Если вам придется отключиться, пожалуйста, сообщите об этом администраторам через adminhelp.</b>")
@@ -657,7 +657,7 @@ var/global/datum/controller/occupations/job_master
 	if(C && C.prefs.spawnpoint)
 		if(!(C.prefs.spawnpoint in using_map.allowed_spawns))
 			if(fail_deadly)
-				to_chat(C, "<span class='warning'>Выбранная вами точка спавна недоступна для этой карты или ваша профессия требует определенной точки спавна. Пожалуйста, исправьте свой выбор точки спавна.</span>")
+				to_chat(C, "<span class='warning'>Выбранная вами точка спавна недоступна для этой карты, или Ваша профессия требует определенной точки спавна. Пожалуйста, исправьте свой выбор точки спавна.</span>")
 				return
 			else
 				to_chat(C, "<span class='warning'>Выбранная вами точка спавна ([C.prefs.spawnpoint]) недоступна для текущей карты. Вместо этого вы начнете игру в одной из включенных точек спавна.</span>")
@@ -674,12 +674,12 @@ var/global/datum/controller/occupations/job_master
 			.["channel"] = spawnpos.announce_channel
 		else
 			if(fail_deadly)
-				to_chat(C, "<span class='warning'>Выбранная вами точка спавна ([spawnpos.display_name]) недоступна для выбранной вами профессии. Пожалуйста, исправьте свой выбор точки спавна.</span>")
+				to_chat(C, "<span class='warning'>Выбранная Вами точка спавна ([spawnpos.display_name]) недоступна для выбранной Вами профессии. Пожалуйста, исправьте свой выбор точки спавна.</span>")
 				return
-			to_chat(C, "Выбранная вами точка спавна ([spawnpos.display_name]) недоступна для выбранной вами профессии. Вместо этого вас заставнят в шаттле прибытия.")
+			to_chat(C, "Выбранная Вами точка спавна ([spawnpos.display_name]) недоступна для выбранной Вами профессии. Вместо этого Вас заспавнят в шаттле прибытия.")
 			var/spawning = pick(latejoin)
 			.["turf"] = get_turf(spawning)
-			.["msg"] = "прибудет на станцию в ближайшее врем"  //VOREStation Edit - Grammar but mostly 'shuttle' reference removal, and this also applies to notified spawn-character verb use
+			.["msg"] = "прибудет на станцию в ближайшее время"  //VOREStation Edit - Grammar but mostly 'shuttle' reference removal, and this also applies to notified spawn-character verb use
 	else if(!fail_deadly)
 		var/spawning = pick(latejoin)
 		.["turf"] = get_turf(spawning)

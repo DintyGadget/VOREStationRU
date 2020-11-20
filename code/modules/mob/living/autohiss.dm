@@ -18,22 +18,22 @@
 	var/autohiss_mode = AUTOHISS_OFF
 
 /client/verb/toggle_autohiss()
-	set name = "Toggle Auto-Hiss"
-	set desc = "Toggle automatic hissing as Unathi and r-rolling as Taj"
+	set name = "Переключить Авто-Шипение"
+	set desc = "Включить или выключить автоматические шипение унати или звонкие 'р' таджар."
 	set category = "OOC"
 
 	autohiss_mode = (autohiss_mode + 1) % AUTOHISS_NUM
 	switch(autohiss_mode)
 		if(AUTOHISS_OFF)
-			to_chat(src, "Auto-hiss is now OFF.")
+			to_chat(src, "Авто-шипение ВЫКЛЮЧЕНО.")
 		if(AUTOHISS_BASIC)
-			to_chat(src, "Auto-hiss is now BASIC.")
+			to_chat(src, "Авто-шипение СЛАБОЕ.")
 		if(AUTOHISS_FULL)
-			to_chat(src, "Auto-hiss is now FULL.")
+			to_chat(src, "Авто-шипение ПОЛНОЕ")
 		else
 			soft_assert(0, "invalid autohiss value [autohiss_mode]")
 			autohiss_mode = AUTOHISS_OFF
-			to_chat(src, "Auto-hiss is now OFF.")
+			to_chat(src, "Авто-шипение ВЫКЛЮЧЕНО.")
 
 /datum/species
 	var/list/autohiss_basic_map = null

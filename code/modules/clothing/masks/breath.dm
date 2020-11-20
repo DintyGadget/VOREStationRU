@@ -1,6 +1,6 @@
 /obj/item/clothing/mask/breath
 	desc = "Плотно прилегающая дыхательная маска, которую можно присоединить к системе подачи воздуха."
-	name = "дыхательная маска"
+	name = "Дыхательная маска"
 	icon_state = "breath"
 	item_state_slots = list(slot_r_hand_str = "breath", slot_l_hand_str = "breath")
 	item_flags = AIRTIGHT|FLEXIBLEMATERIAL

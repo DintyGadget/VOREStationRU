@@ -71,7 +71,7 @@
 			m_type = 2
 			playsound(src, 'sound/voice/weh.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("merp")
-			message = "издаёт 'Мерп!'.'"
+			message = "издаёт 'Мерп!'."
 			m_type = 2
 			playsound(src, 'sound/voice/merp.ogg', 50, 1, -1, preference = /datum/client_preference/emote_noises)
 		if("myarp")
@@ -139,7 +139,7 @@
 			m_type = 2
 			playsound(src, 'sound/voice/Meow.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("moo")
-			message = "вдыхает и издаёт 'Муу!'.."
+			message = "вдыхает и издаёт 'Муу!'."
 			m_type = 2
 			playsound(src, 'sound/voice/Moo.ogg', 50, 0, preference = /datum/client_preference/emote_noises)
 		if("croak")

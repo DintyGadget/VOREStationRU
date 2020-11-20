@@ -27,13 +27,13 @@
 // normal verb for players to view info
 /client/verb/cmd_view_custom_event()
 	set category = "OOC"
-	set name = "Custom Event Info"
+	set name = "Проверить Авторские Эвенты"
 
 	if(!custom_event_msg || custom_event_msg == "")
-		to_chat(src, "<span class='filter_notice'>There currently is no known custom event taking place.</span>")
-		to_chat(src, "<span class='filter_notice'>Keep in mind: it is possible that an admin has not properly set this.</span>")
+		to_chat(src, "<span class='filter_notice'>Сейчас не происходит никаких эвентов.</span>")
+		to_chat(src, "<span class='filter_notice'>Не исключено, что админ не настроил эту информацию.</span>")
 		return
 
-	to_chat(src, "<h1 class='filter_notice alert'>Custom Event</h1>")
-	to_chat(src, "<h2 class='filter_notice alert'>A custom event is taking place. OOC Info:</h2>")
+	to_chat(src, "<h1 class='filter_notice alert'>Авторский эвент</h1>")
+	to_chat(src, "<h2 class='filter_notice alert'>Сейчас происходит авторский эвент. OOC информация:</h2>")
 	to_chat(src, "<span class='filter_notice alert'>[custom_event_msg]<br></span>")

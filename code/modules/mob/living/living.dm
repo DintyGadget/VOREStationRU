@@ -886,15 +886,15 @@ default behaviour is:
 
 
 /mob/living/proc/Examine_OOC()
-	set name = "Осмотреть Метаинформацию (OOC)"
+	set name = "Осмотреть Заметки ООС"
 	set category = "OOC"
 	set src in view()
 	//VOREStation Edit Start - Making it so SSD people have prefs with fallback to original style.
 	if(config.allow_Metadata)
 		if(ooc_notes)
-			to_chat(usr, "Метаинформация [src]:<br>[ooc_notes]")
+			to_chat(usr, "Заметки ООС [src]:<br>[ooc_notes]")
 		else if(client)
-			to_chat(usr, "Метаинформация [src]:<br>[client.prefs.metadata]")
+			to_chat(usr, "Заметки ООС [src]:<br>[client.prefs.metadata]")
 		else
 			to_chat(usr, "У [src] нет такой информации!")
 	else
@@ -1391,7 +1391,7 @@ default behaviour is:
 		return
 
 	//actually throw it!
-	src.visible_message("<span class='warning'>[src] бросает [lowerize(item)].</span>")
+	src.visible_message("<span class='warning'>[src] бросает [lowertext(item)].</span>")
 
 	if((isspace(src.loc)) || (src.lastarea?.has_gravity == 0))
 		src.inertia_dir = get_dir(target, src)

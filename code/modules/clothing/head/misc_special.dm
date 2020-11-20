@@ -14,7 +14,7 @@
  * Welding mask
  */
 /obj/item/clothing/head/welding
-	name = "сварочная маска"
+	name = "Сварочная маска"
 	desc = "Закрепляемая на голове маска, защищающая глаза носителя от воздействия сварочной дуги."
 	icon_state = "welding"
 	item_state_slots = list(slot_r_hand_str = "welding", slot_l_hand_str = "welding")
@@ -52,7 +52,7 @@
 			icon_state = base_state
 			flash_protection = FLASH_PROTECTION_MAJOR
 			tint = initial(tint)
-			to_chat(usr, "Вы опускаете сварочную маску на лицо, защищая глаза.")
+			to_chat(usr, "Вы опускаете [src.acase] на лицо, защищая глаза.")
 		else
 			src.up = !src.up
 			body_parts_covered &= ~(EYES|FACE)
@@ -60,7 +60,7 @@
 			icon_state = "[base_state]up"
 			flash_protection = FLASH_PROTECTION_NONE
 			tint = TINT_NONE
-			to_chat(usr, "Вы приподнимаете сварочную маску с лица.")
+			to_chat(usr, "Вы приподнимаете [src.acase] с лица.")
 		update_clothing_icon()	//so our mob-overlays
 		if (ismob(src.loc)) //should allow masks to update when it is opened/closed
 			var/mob/M = src.loc
@@ -68,7 +68,7 @@
 		usr.update_action_buttons()
 
 /obj/item/clothing/head/welding/demon
-	name = "демоническая сварочная маска"
+	name = "Демоническая сварочная маска"
 	desc = "Разрисованная сварочная маска с изображением лица демона."
 	icon_state = "demonwelding"
 	item_state_slots = list(
@@ -77,7 +77,7 @@
 		)
 
 /obj/item/clothing/head/welding/knight
-	name = "рыцарская сварочная маска"
+	name = "Рыцарская сварочная маска"
 	desc = "Разрисованная сварочная маска, похожая на рыцарский шлем."
 	icon_state = "knightwelding"
 	item_state_slots = list(
@@ -86,7 +86,7 @@
 		)
 
 /obj/item/clothing/head/welding/fancy
-	name = "модная сварочная маска"
+	name = "Модная сварочная маска"
 	desc = "Сварочная маска, элегантно расписанная черным и золотым цветами."
 	icon_state = "fancywelding"
 	item_state_slots = list(
@@ -95,7 +95,7 @@
 		)
 
 /obj/item/clothing/head/welding/engie
-	name = "инженерная сварочная маска"
+	name = "Инженерная сварочная маска"
 	desc = "Сварочная маска, расписанная инженерными цветами."
 	icon_state = "engiewelding"
 	item_state_slots = list(
@@ -107,7 +107,7 @@
  * Cakehat
  */
 /obj/item/clothing/head/cakehat
-	name = "шляпа из торта"
+	name = "Торт-шляпа"
 	desc = "На вид вкусно!"
 	icon_state = "cake0"
 	var/onfire = 0
@@ -145,7 +145,7 @@
  * Ushanka
  */
 /obj/item/clothing/head/ushanka
-	name = "ушанка"
+	name = "Ушанка"
 	desc = "Самое то для зимы в Сибири, товарищ."
 	icon_state = "ushankadown"
 	flags_inv = HIDEEARS
@@ -162,7 +162,7 @@
  * Pumpkin head
  */
 /obj/item/clothing/head/pumpkinhead
-	name = "вырезанная тыква"
+	name = "Вырезанная тыква"
 	desc = "Фонарь Джека! Отпугивает злых духов."
 	icon_state = "hardhat0_pumpkin"//Could stand to be renamed
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|BLOCKHAIR
@@ -177,7 +177,7 @@
  * Kitty ears
  */
 /obj/item/clothing/head/kitty
-	name = "кошачьи ушки"
+	name = "Кошачьи ушки"
 	desc = "Пара кошачьих ушек. Мяу!"
 	icon_state = "kitty"
 	body_parts_covered = 0
@@ -193,7 +193,7 @@
 		ears.Blend(earbit, ICON_OVERLAY)
 
 /obj/item/clothing/head/richard
-	name = "куриная маска"
+	name = "Куриная маска"
 	desc = "Вам слышатся звуки евробита."
 	icon_state = "richard"
 	item_state_slots = list(slot_r_hand_str = "chickenhead", slot_l_hand_str = "chickenhead")
@@ -201,14 +201,14 @@
 	flags_inv = BLOCKHAIR
 
 /obj/item/clothing/head/santa
-	name = "шапка Санты"
+	name = "Шапка Санты"
 	desc = "Праздничная шапка, в красной вариации!"
 	icon_state = "santahatnorm"
 	item_state_slots = list(slot_r_hand_str = "santahat", slot_l_hand_str = "santahat")
 	body_parts_covered = 0
 
 /obj/item/clothing/head/santa/green
-	name = "зеленая шапка Санты"
+	name = "Зелёная шапка Санты"
 	desc = "Праздничная шапка, в зеленой вариации!"
 	icon_state = "santahatgreen"
 	item_state_slots = list(slot_r_hand_str = "santahatgreen", slot_l_hand_str = "santahatgreen")
@@ -221,8 +221,8 @@
 // Triggers an effect when the wearer is 'in grave danger'.
 // Causes brainloss when it happens.
 /obj/item/clothing/head/psy_crown
-	name = "broken crown"
-	desc = "A crown-of-thorns with a missing gem."
+	name = "Разбитая корона"
+	desc = "Терновый венец, лишенный самоцвета."
 	var/tension_threshold = 125
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 3 MINUTES // How long the cooldown should be.
@@ -235,7 +235,7 @@
 /obj/item/clothing/head/psy_crown/proc/activate_ability(var/mob/living/wearer)
 	cooldown = world.time + cooldown_duration
 	to_chat(wearer, flavor_activate)
-	to_chat(wearer, "<span class='danger'>The inside of your head hurts...</span>")
+	to_chat(wearer, "<span class='danger'>Ваша голова раскалывается...</span>")
 	wearer.adjustBrainLoss(brainloss_cost)
 
 /obj/item/clothing/head/psy_crown/equipped(var/mob/living/carbon/human/H)
@@ -265,37 +265,37 @@
 
 
 /obj/item/clothing/head/psy_crown/wrath
-	name = "red crown"
-	desc = "A crown-of-thorns set with a red gemstone that seems to glow unnaturally. It feels rather disturbing to touch."
-	description_info = "This has a chance to cause the wearer to become extremely angry when in extreme danger."
+	name = "Красная корона"
+	desc = "Терновый венец с красным самоцветом, отдающим неестественное свечение. Как-то жутковато его трогать."
+	description_info = "Имеет шанс возбудить в носителе ярость в стрессовой ситуации."
 	icon_state = "wrathcrown"
-	flavor_equip = "<span class='warning'>You feel a bit angrier after putting on this crown.</span>"
-	flavor_unequip = "<span class='notice'>You feel calmer after removing the crown.</span>"
-	flavor_drop = "<span class='notice'>You feel much calmer after letting go of the crown.</span>"
-	flavor_activate = "<span class='danger'>An otherworldly feeling seems to enter your mind, and it ignites your mind in fury!</span>"
+	flavor_equip = "<span class='warning'>Надев на себя эту корону, Вы чувствуете себя немного злее.</span>"
+	flavor_unequip = "<span class='notice'>Сняв корону, Вы чувствуете себя спокойнее.</span>"
+	flavor_drop = "<span class='notice'>Вы чувствуете себя гораздо спокойнее, отпустив эту корону.</span>"
+	flavor_activate = "<span class='danger'>В Ваш разум проникает чужеродное ощущение, разжигающее внутри Вас непреодолимую ярость!</span>"
 
 /obj/item/clothing/head/psy_crown/wrath/activate_ability(var/mob/living/wearer)
 	..()
 	wearer.add_modifier(/datum/modifier/berserk, 30 SECONDS)
 
 /obj/item/clothing/head/psy_crown/gluttony
-	name = "green crown"
-	desc = "A crown-of-thorns set with a green gemstone that seems to glow unnaturally. It feels rather disturbing to touch."
-	description_info = "This has a chance to cause the wearer to become extremely durable, but hungry when in extreme danger."
+	name = "Зелёная корона"
+	desc = "Терновый венец с зелёным самоцветом, отдающим неестественное свечение. Как-то жутковато его трогать."
+	description_info = "Имеет шанс сделать носителя невероятно стойким, однако запредельно голодным в стрессовой ситуации."
 	icon_state = "gluttonycrown"
-	flavor_equip = "<span class='warning'>You feel a bit hungrier after putting on this crown.</span>"
-	flavor_unequip = "<span class='notice'>You feel sated after removing the crown.</span>"
-	flavor_drop = "<span class='notice'>You feel much more sated after letting go of the crown.</span>"
-	flavor_activate = "<span class='danger'>An otherworldly feeling seems to enter your mind, and it drives your mind into gluttony!</span>"
+	flavor_equip = "<span class='warning'>Надев на себя эту корону, Вы чувствуете себя немного голоднее.</span>"
+	flavor_unequip = "<span class='notice'>Сняв корону, Вы чувствуете себя насыщеннее.</span>"
+	flavor_drop = "<span class='notice'>Вы чувствуете себя гораздо насыщеннее, отпустив эту корону.</span>"
+	flavor_activate = "<span class='danger'>В Ваш разум проникает чужеродное ощущение, вселяя в Вас непреодолимый голод!</span>"
 
 /obj/item/clothing/head/psy_crown/gluttony/activate_ability(var/mob/living/wearer)
 	..()
 	wearer.add_modifier(/datum/modifier/gluttonyregeneration, 45 SECONDS)
 
 /obj/item/clothing/head/cone
-	name = "warning cone"
-	desc = "This cone is trying to warn you of something!"
-	description_info = "It looks like you can wear it in your head slot."
+	name = "Огородительный конус"
+	desc = "Этот конус хочет Вас о чём-то предупредить!"
+	description_info = "Похоже, он хорошо поместится на голове."
 	icon_state = "cone"
 	item_state = "cone"
 	drop_sound = 'sound/items/drop/shoes.ogg'
@@ -305,5 +305,5 @@
 	throw_range = 5
 	w_class = 2
 	body_parts_covered = HEAD
-	attack_verb = list("warned", "cautioned", "smashed")
+	attack_verb = list("предупрждает", "остерегает", "вмазывает")
 	armor = list("melee" = 5, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

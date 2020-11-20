@@ -53,16 +53,16 @@
 	var/datum/media_manager/media = null
 
 /client/verb/change_volume()
-	set name = "Set Volume"
+	set name = "Установить Громкость"
 	set category = "OOC"
-	set desc = "Set jukebox volume"
+	set desc = "Отрегулировать громкость проигрывателя."
 	set_new_volume(usr)
 
 /client/proc/set_new_volume(var/mob/user)
 	if(!QDELETED(src.media) || !istype(src.media))
-		to_chat(user, "<span class='warning'>You have no media datum to change, if you're not in the lobby tell an admin.</span>")
+		to_chat(user, "<span class='warning'>У Вас отсутствует датум медиа. Если Вы не в лобби -- доложите админу.</span>")
 		return
-	var/value = input("Choose your Jukebox volume.", "Jukebox volume", media.volume)
+	var/value = input("Выберите громкость проигрывателя.", "Громкость Проигрывателя", media.volume)
 	value = round(max(0, min(100, value)))
 	media.update_volume(value)
 

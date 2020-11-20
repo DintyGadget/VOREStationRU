@@ -44,12 +44,12 @@ avoid code duplication. This includes items that may sometimes act as a standard
 /atom/movable/attackby(obj/item/W, mob/user, var/attack_modifier, var/click_parameters)
 	. = ..()
 	if(!. && !(W.flags & NOBLUDGEON))
-		visible_message("<span class='danger'>[user] наносит удар [src] с помощью [W.gcase == "gcase" ? W : W.gcase].</span>")
+		visible_message("<span class='danger'>[user] наносит удар [src] [W.icase == "icase" ? W : W.icase].</span>")
 
 /mob/living/attackby(obj/item/I, mob/user, var/attack_modifier, var/click_parameters)
 	if(!ismob(user))
 		return 0
-	if(can_operate(src) && I.do_surgery(src,user))
+	if(can_operate(src, user) && I.do_surgery(src,user))
 		return 1
 	if(attempt_vr(src,"vore_attackby",args)) return //VOREStation Add - The vore, of course.
 	return I.attack(src, user, user.zone_sel.selecting, attack_modifier)

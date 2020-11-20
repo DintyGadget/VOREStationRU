@@ -196,14 +196,14 @@
 
 		if("flap")
 			if(!restrained())
-				message = "порхает [T.his] крыльями."
+				message = "порхает своими крыльями."
 				m_type = 2
 				if(miming)
 					m_type = 1
 
 		if("aflap")
 			if(!restrained())
-				message = "НЕДОВОЛЬНО [T.his] порхает крыльями!"
+				message = "НЕДОВОЛЬНО порхает своими крыльями!"
 				m_type = 2
 				if(miming)
 					m_type = 1

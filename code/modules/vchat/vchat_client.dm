@@ -380,21 +380,21 @@ var/to_chat_src
 		target << output(jsEncode(tojson), "htmloutput:putmessage")
 
 /client/proc/vchat_export_log()
-	set name = "Export chatlog"
+	set name = "Сохранить Лог"
 	set category = "OOC"
 
 	if(chatOutput.broken)
-		to_chat(src, "<span class='warning'>Error: VChat isn't processing your messages!</span>")
+		to_chat(src, "<span class='warning'>Ошибка: VChat не обрабатывает Ваши сообщения!</span>")
 		return
 
 	var/list/results = vchat_get_messages(ckey)
 	if(!LAZYLEN(results))
-		to_chat(src, "<span class='warning'>Error: No messages found! Please inform a dev if you do have messages!</span>")
+		to_chat(src, "<span class='warning'>Ошибка: Сообщения не найдены! Скажите разработчику, если они действительно есть!</span>")
 		return
 
 	var/o_file = "data/chatlog_tmp/[ckey]_chat_log"
 	if(fexists(o_file) && !fdel(o_file))
-		to_chat(src, "<span class='warning'>Error: Your chat log is already being prepared. Please wait until it's been downloaded before trying to export it again.</span>")
+		to_chat(src, "<span class='warning'>Ошибка: Ваш лог уже обрабатывается. Дождитесь его загрузки, прежде чем сохранять его по новой.</span>")
 		return
 
 	// Write the CSS file to the log

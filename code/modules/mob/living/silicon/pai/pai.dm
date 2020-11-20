@@ -488,16 +488,16 @@
 		to_chat(src, "<span class='notice'>You block access modfications.</span>")
 
 /mob/living/silicon/pai/verb/wipe_software()
-	set name = "Wipe Software"
+	set name = "Удалить ПО"
 	set category = "OOC"
-	set desc = "Wipe your software. This is functionally equivalent to cryo or robotic storage, freeing up your job slot."
+	set desc = "Удалить своё программное обеспечение. Это равносильно крио и освобождает Ваш слот."
 
 	// Make sure people don't kill themselves accidentally
-	if(alert("WARNING: This will immediately wipe your software and ghost you, removing your character from the round permanently (similar to cryo and robotic storage). Are you entirely sure you want to do this?",
-					"Wipe Software", "No", "No", "Yes") != "Yes")
+	if(alert("ВНИМАНИЕ: Это мгновенно сотрёт Ваше программное обеспечение и переведёт Вас в режим призрака, удаляя Вашего персонажа из раунда (равносильно крио). Вы точно уверены в своём решении?",
+					"Удалить ПО", "Нет", "Нет", "Да") != "Да")
 		return
 
 	close_up()
-	visible_message("<b>[src]</b> fades away from the screen, the pAI device goes silent.")
+	visible_message("<b>[src]</b> исчезает с экрана, и пИИ полностью замолкает.")
 	card.removePersonality()
 	clear_client()

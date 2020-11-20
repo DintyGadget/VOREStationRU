@@ -404,14 +404,14 @@
 // OOC Escape code for pref-breaking or AFK preds
 //
 /mob/living/proc/escapeOOC()
-	set name = "OOC Escape"
+	set name = "Сбежать OOC"
 	set category = "OOC"
 
 	//You're in a belly!
 	if(isbelly(loc))
 		var/obj/belly/B = loc
-		var/confirm = alert(src, "You're in a mob. Don't use this as a trick to get out of hostile animals. This is for escaping from preference-breaking and if you're otherwise unable to escape from endo (pred AFK for a long time).", "Confirmation", "Okay", "Cancel")
-		if(!confirm == "Okay" || loc != B)
+		var/confirm = alert(src, "Вы находитесь в мобе. Не используйте это, чтобы выбраться из враждебных зверей. Этот глагол для побега из нарушающих предпочтения хищников или ситуаций, когда нельзя покинуть эндо сцену (хищник в АФК).", "Подтверждение", "Продолжить", "Отмена")
+		if(!confirm == "Продолжить" || loc != B)
 			return
 		//Actual escaping
 		absorbed = 0	//Make sure we're not absorbed
@@ -419,7 +419,7 @@
 		forceMove(get_turf(src)) //Just move me up to the turf, let's not cascade through bellies, there's been a problem, let's just leave.
 		for(var/mob/living/simple_mob/SA in range(10))
 			SA.prey_excludes[src] = world.time
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("[key_name(src)] использовал ООС побег, чтобы сбежать из [key_name(B.owner)] ([B.owner ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
 
 		if(!ishuman(B.owner))
 			B.owner.update_icons()
@@ -429,22 +429,22 @@
 		var/mob/living/silicon/pred = loc.loc //Thing holding the belly!
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
-		var/confirm = alert(src, "You're in a dogborg sleeper. This is for escaping from preference-breaking or if your predator disconnects/AFKs. If your preferences were being broken, please admin-help as well.", "Confirmation", "Okay", "Cancel")
+		var/confirm = alert(src, "Вы в слипере догборга. Этот глагол для побега из нарушающих предпочтения или афкшаших хищников. Если Ваши предпочтения нарушены, рекомендуем также обратиться в админхелп.", "Подтверждение", "Продолжить", "Отмена")
 		if(!confirm == "Okay" || loc != belly)
 			return
 		//Actual escaping
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(pred)] (BORG) ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("[key_name(src)] использовал ООС побег, чтобы сбежать из [key_name(pred)] (БОРГ) ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
 		belly.go_out(src) //Just force-ejects from the borg as if they'd clicked the eject button.
 
 	//You're in an AI hologram!
 	else if(istype(loc, /obj/effect/overlay/aiholo))
 		var/obj/effect/overlay/aiholo/holo = loc
 		holo.drop_prey() //Easiest way
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(holo.master)] (AI HOLO) ([holo ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("[key_name(src)] использовал ООС побег, чтобы сбежать из [key_name(holo.master)] (ГОЛОГРАММА ИИ) ([holo ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])")
 
 	//Don't appear to be in a vore situation
 	else
-		to_chat(src,"<span class='alert'>You aren't inside anyone, though, is the thing.</span>")
+		to_chat(src,"<span class='alert'>Но ведь Вы же сейчас ни в ком не находитесь.</span>")
 
 //
 // Eating procs depending on who clicked what
@@ -491,11 +491,11 @@
 
 	// Prepare messages
 	if(user == pred) //Feeding someone to yourself
-		attempt_msg = "<span class='warning'>[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
-		success_msg = "<span class='warning'>[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
+		attempt_msg = "<span class='warning'>[pred] пытается [lowertext(belly.vore_verb)] [prey] [lowertext(belly.name)]!</span>"
+		success_msg = "<span class='warning'>[pred] смог [lowertext(belly.vore_verb)] [prey] [lowertext(belly.name)]!</span>"
 	else //Feeding someone to another person
-		attempt_msg = "<span class='warning'>[user] is attempting to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
-		success_msg = "<span class='warning'>[user] manages to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
+		attempt_msg = "<span class='warning'>[user] пытается заставить [pred] [lowertext(belly.vore_verb)] [prey] [lowertext(belly.name)]!</span>"
+		success_msg = "<span class='warning'>[user] успешно заставляет [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 
 	// Announce that we start the attempt!
 	user.visible_message(attempt_msg)
@@ -518,10 +518,6 @@
 	belly.nom_mob(prey, user)
 	if(!ishuman(user))
 		user.update_icons()
-
-	// Flavor handling
-	if(belly.can_taste && prey.get_taste_message(FALSE))
-		to_chat(belly.owner, "<span class='notice'>[prey] tastes of [prey.get_taste_message(FALSE)].</span>")
 
 	// Inform Admins
 	if(pred == user)
