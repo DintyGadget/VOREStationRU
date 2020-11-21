@@ -6,7 +6,7 @@
 	set category = "IC"
 	set src = usr
 
-	var/dat = "<meta charset="utf-8"><b><font size = 5>Известные атаки</font></b><br/><br/>"
+	var/dat = "<meta charset=\"utf-8\"><b><font size = 5>Известные атаки</font></b><br/><br/>"
 
 	for(var/datum/unarmed_attack/u_attack in species.unarmed_attacks)
 		dat += "<b>Основная: [u_attack.attack_name] </b><br/><br/><br/>"
