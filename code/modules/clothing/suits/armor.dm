@@ -13,10 +13,10 @@
 	if(..()) //This will only run if no other problems occured when equiping.
 		for(var/obj/item/clothing/I in list(H.gloves, H.shoes))
 			if(I && (src.body_parts_covered & ARMS && I.body_parts_covered & ARMS) )
-				to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [I], it's in the way.</span>")
+				to_chat(H, "<span class='warning'>Вы не можете надеть [src.acase == "acase" ? src : src.acase] поверх [I.gcase == "gcase" ? I : I.gcase].</span>")
 				return 0
 			if(I && (src.body_parts_covered & LEGS && I.body_parts_covered & LEGS) )
-				to_chat(H, "<span class='warning'>You can't wear \the [src] with \the [I], it's in the way.</span>")
+				to_chat(H, "<span class='warning'>Вы не можете надеть [src.acase == "acase" ? src : src.acase] поверх [I.gcase == "gcase" ? I : I.gcase].</span>")
 				return 0
 		return 1
 

@@ -3,7 +3,7 @@
 	starting_accessories = list(/obj/item/clothing/accessory/armband/med/cross)
 
 /obj/item/clothing/suit/storage/hooded/techpriest
-	name = "облачение техносвященника"
+	name = "Облачение техносвященника"
 	desc = "Слава Омниссии."
 	icon = 'icons/obj/clothing/suits_vr.dmi'
 	icon_override = 'icons/mob/suit_vr.dmi'
@@ -14,7 +14,7 @@
 
 // Regular armor versions here, costumes below
 /obj/item/clothing/suit/storage/hooded/knight
-	name = "броня крестоносца"
+	name = "Броня крестоносца"
 	desc = "Старый воин восстаёт вновь."
 	icon_state = "galahad"
 	icon = 'icons/obj/clothing/knights_vr.dmi'
@@ -25,19 +25,19 @@
 	action_button_name = "Отрегулировать Рыцарский Шлем"
 
 /obj/item/clothing/suit/storage/hooded/knight/galahad
-	name = "броня крестоносца"
+	name = "Броня крестоносца"
 	desc = "Старый воин восстаёт вновь."
 	icon_state = "galahad"
 	hoodtype = /obj/item/clothing/head/hood/galahad
 
 /obj/item/clothing/suit/storage/hooded/knight/lancelot
-	name = "броня крестоносца"
+	name = "Броня крестоносца"
 	desc = "Старый воин восстаёт вновь."
 	icon_state = "lancelot"
 	hoodtype = /obj/item/clothing/head/hood/lancelot
 
 /obj/item/clothing/suit/storage/hooded/knight/robin
-	name = "броня крестоносца"
+	name = "Броня крестоносца"
 	desc = "Старый воин восстаёт вновь. Эта броня, кажется, легче остальных, однако предоставляет меньше защиты."
 	icon_state = "robin"
 	hoodtype = /obj/item/clothing/head/hood/robin
@@ -47,7 +47,7 @@
 
 // Costume Knight Gear Here
 /obj/item/clothing/suit/storage/hooded/knight_costume
-	name = "костюм крестоносца"
+	name = "Костюм крестоносца"
 	desc = "Старый воин восстаёт вновь."
 	icon_state = "galahad"
 	icon = 'icons/obj/clothing/knights_vr.dmi'
@@ -64,7 +64,7 @@
 	hoodtype = /obj/item/clothing/head/hood/lancelot_costume
 
 /obj/item/clothing/suit/storage/hooded/knight_costume/robin
-	name = "броня крестоносца"
+	name = "Костюм крестоносца"
 	desc = "Старый воин восстаёт вновь. Эта броня, кажется, легче остальных, однако предоставляет меньше защиты."
 	icon_state = "robin"
 	hoodtype = /obj/item/clothing/head/hood/robin_costume
