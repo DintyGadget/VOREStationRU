@@ -411,7 +411,7 @@
 	if(isbelly(loc))
 		var/obj/belly/B = loc
 		var/confirm = alert(src, "Вы находитесь в мобе. Не используйте это, чтобы выбраться из враждебных зверей. Этот глагол для побега из нарушающих предпочтения хищников или ситуаций, когда нельзя покинуть эндо сцену (хищник в АФК).", "Подтверждение", "Продолжить", "Отмена")
-		if(!confirm == "Продолжить" || loc != B)
+		if(confirm != "Продолжить" || loc != B)
 			return
 		//Actual escaping
 		absorbed = 0	//Make sure we're not absorbed
@@ -429,8 +429,8 @@
 		var/mob/living/silicon/pred = loc.loc //Thing holding the belly!
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
-		var/confirm = alert(src, "Вы в слипере догборга. Этот глагол для побега из нарушающих предпочтения или афкшаших хищников. Если Ваши предпочтения нарушены, рекомендуем также обратиться в админхелп.", "Подтверждение", "Продолжить", "Отмена")
-		if(!confirm == "Okay" || loc != belly)
+		var/confirm = alert(src, "Вы в слипере догборга. Этот глагол для побега из нарушающих предпочтения или афкшащих хищников. Если Ваши предпочтения нарушены, рекомендуем также обратиться в админхелп.", "Подтверждение", "Продолжить", "Отмена")
+		if(confirm != "Okay" || loc != belly)
 			return
 		//Actual escaping
 		log_and_message_admins("[key_name(src)] использовал ООС побег, чтобы сбежать из [key_name(pred)] (БОРГ) ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")

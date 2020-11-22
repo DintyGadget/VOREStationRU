@@ -380,6 +380,7 @@
 /datum/gear/suit/cloakcolor/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
+
 /datum/gear/suit/labcoat_tesh
 	display_name = "Тешари: Лаб. халат (окрашиваемый)"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/teshari
@@ -398,7 +399,6 @@
 
 /datum/gear/suit/teshcoat/New()
 	..()
-
 	gear_tweaks += gear_tweak_free_color_choice
 
 /datum/gear/suit/teshcoatwhite
@@ -425,7 +425,6 @@
 	display_name = "Ботинки, без пальцев"
 	path = /obj/item/clothing/shoes/boots/jackboots/toeless
 
-
 /datum/gear/shoes/toelessknee
 	display_name = "Ботинки, без пальцев, по колени"
 	path = /obj/item/clothing/shoes/boots/jackboots/toeless/knee
@@ -433,3 +432,9 @@
 /datum/gear/shoes/toelessthigh
 	display_name = "Ботинки, без пальцев, по бёдра"
 	path = /obj/item/clothing/shoes/boots/jackboots/toeless/thigh
+
+/datum/gear/eyes/aerogelgoggles
+	display_name = "Тешари: Очки, плотные оранжевые"
+	path = /obj/item/clothing/glasses/aerogelgoggles
+	whitelisted = SPECIES_TESHARI
+	sort_category = "Расовая одежда"

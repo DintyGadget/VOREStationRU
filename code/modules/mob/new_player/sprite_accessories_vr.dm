@@ -82,7 +82,7 @@
 		icon = 'icons/mob/human_face_vr.dmi'
 		icon_add = 'icons/mob/human_face_vr_add.dmi'
 		icon_state = "hair_twincurl"
-	
+
 	crescent_moon
 		name = "Полумесяц"
 		icon = 'icons/mob/human_face_vr.dmi'
@@ -1213,21 +1213,31 @@
 	c_beast_plating
 		name = "Кибер: Пластины (к телу)"
 		icon_state = "c_beast_plating"
+		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM)
 
 	c_beast_band
 		name = "Кибер: Круг (к голове Cybertech)"
 		icon_state = "c_beast_band"
+		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	c_beast_cheek_a
-		name = "Кибер: Щёки А (использовать с Б)"
-		icon_state = "c_beast_add_a"
+		name = "Кибер: Щёки А (использовать с А, B и C)"
+		icon_state = "c_beast_a"
+		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	c_beast_cheek_b
-		name = "Кибер: Щёки А (использовать с А)"
-		icon_state = "c_beast_add_b"
+		name = "Кибер: Щёки B (использовать с А, B и C)"
+		icon_state = "c_beast_b"
+		color_blend_mode = ICON_MULTIPLY
+		body_parts = list(BP_HEAD)
+
+	c_beast_cheek_c
+		name = "Кибер: Щёки C (использовать с А, B и C)"
+		icon_state = "c_beast_c"
+		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	teshari_large_eyes

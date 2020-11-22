@@ -300,7 +300,7 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	if(can_use(usr))
 		start_program(find_program(/datum/data/pda/app/main_menu))
 		notifying_programs.Cut()
-		overlays -= image('icons/obj/pda.dmi', "pda-r")
+		overlays -= image(icon, "pda-r")
 		to_chat(usr, "<span class='notice'>Вы нажимаете кнопку сброса на [src].</span>")
 	else
 		to_chat(usr, "<span class='notice'>Вы не можете этого сделать, пока вас сдерживают.</span>")
