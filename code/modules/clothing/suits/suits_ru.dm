@@ -4,13 +4,604 @@
 // armor.dm
 //
 
+/obj/item/clothing/suit/armor/vest
+	name = "Бронежилет"
+	desc = "Бронированный жилет, предоставляющий защиту от некоторых повреждений."
+	rugender = "male"
+	ncase = "бронежилет"
+	gcase = "бронежилета"
+	dcase = "бронежилету"
+	acase = "бронежилет"
+	icase = "бронежилетом"
+	pcase = "бронежилете"
 
+/obj/item/clothing/suit/armor/vest/alt
+	name = "Бронежилет службы безопасности"
+	desc = "Бронированный жилет, предоставляющий защиту от некоторых повреждений. На нём лого NanoTrasen."
+	rugender = "male"
+	ncase = "бронежилет службы безопасности"
+	gcase = "бронежилета службы безопасности"
+	dcase = "бронежилету службы безопасности"
+	acase = "бронежилет службы безопасности"
+	icase = "бронежилетом службы безопасности"
+	pcase = "бронежилете службы безопасности"
+
+/obj/item/clothing/suit/armor/vest/security
+	name = "Бронежилет службы безопасности"
+	desc = "Бронированный жилет, предоставляющий защиту от некоторых повреждений. На нём лого NanoTrasen."
+	rugender = "male"
+	ncase = "бронежилет службы безопасности"
+	gcase = "бронежилета службы безопасности"
+	dcase = "бронежилету службы безопасности"
+	acase = "бронежилет службы безопасности"
+	icase = "бронежилетом службы безопасности"
+	pcase = "бронежилете службы безопасности"
+
+/obj/item/clothing/suit/armor/riot
+	name = "Милицейский бронежилет"
+	desc = "Бронированный жилет с плотной подкладкой для защиты от атак ближнего боя."
+	rugender = "male"
+	ncase = "милицейский бронежилет"
+	gcase = "милицейского бронежилета"
+	dcase = "милицейскому бронежилету"
+	acase = "милицейский бронежилет"
+	icase = "милицейским бронежилетом"
+	pcase = "милицейском бронежилете"
+
+/obj/item/clothing/suit/armor/bulletproof
+	name = "Пуленепробиваемый бронежилет"
+	desc = "Бронированный жилет, защищающий носителя от высокоскоростных баллистических снарядов."
+	rugender = "male"
+	ncase = "пуленепробиваемый бронежилет"
+	gcase = "пуленепробиваемого бронежилета"
+	dcase = "пуленепробиваемому бронежилету"
+	acase = "пуленепробиваемый бронежилет"
+	icase = "пуленепробиваемым бронежилетом"
+	pcase = "пуленепробиваемом бронежилете"
+
+/obj/item/clothing/suit/armor/laserproof
+	name = "Абляционный бронежилет"
+	desc = "Бронированный жилет, защищающий носителя от энергетических снарядов."
+	rugender = "male"
+	ncase = "абляционный бронежилет"
+	gcase = "абляционного бронежилета"
+	dcase = "абляционному бронежилету"
+	acase = "абляционный бронежилет"
+	icase = "абляционным бронежилетом"
+	pcase = "абляционном бронежилете"
+
+/obj/item/clothing/suit/armor/combat
+	name = "Боевой бронежилет"
+	desc = "Бронированный жилет, защищающий носителя от некоторых распространненых видов оружия."
+	rugender = "male"
+	ncase = "боевой бронежилет"
+	gcase = "боевого бронежилета"
+	dcase = "боевому бронежилету"
+	acase = "боевоой бронежилет"
+	icase = "боевым бронежилетом"
+	pcase = "боевом бронежилете"
+
+/obj/item/clothing/suit/armor/tactical
+	name = "Тактическая броня"
+	desc = "Бронированный костюм, используемый отрядами специального назначения. Включает в себя пластинчатый жилет с карманами, а также наплечники и наколенники."
+	rugender = "female"
+	ncase = "тактическая броня"
+	gcase = "тактической брони"
+	dcase = "тактической броне"
+	acase = "тактическую броню"
+	icase = "тактической бронёй"
+	pcase = "тактической броне"
+
+/obj/item/clothing/suit/armor/swat
+	name = "Броня СОБР"
+	desc = "Бронированный костюм, защищающий носителя от повреждений средней тяжести. Используется в операциях специального назначения."
+	rugender = "female"
+	ncase = "броня СОБР"
+	gcase = "брони СОБР"
+	dcase = "броне СОБР"
+	acase = "броню СОБР"
+	icase = "бронёй СОБР"
+	pcase = "броне СОБР"
+
+/obj/item/clothing/suit/armor/swat/officer
+	name = "Пиджак офицера"
+	desc = "Бронированный пиджак, используемый в операциях специального назначения."
+	rugender = "male"
+	ncase = "пиджак офицера"
+	gcase = "пиджака офицера"
+	dcase = "пиджаку офицера"
+	acase = "пиджак офицера"
+	icase = "пиджаком офицера"
+	pcase = "пиджаке офицера"
+
+/obj/item/clothing/suit/armor/det_suit
+	name = "Бронежилет детектива"
+	desc = "Бронированный жилет с бейджиком детектива."
+	rugender = "male"
+	ncase = "бронежилет детектива"
+	gcase = "бронежилета детектива"
+	dcase = "бронежилету детектива"
+	acase = "бронежилет детектива"
+	icase = "бронежилетом детектива"
+	pcase = "бронежилете детектива"
+
+/obj/item/clothing/suit/armor/reactive
+	name = "Reactive Teleport Armor"
+	desc = "Someone separated our Research Director from their own head!"
+
+/obj/item/clothing/suit/armor/alien
+	name = "Инопланетный усиливающий жилет"
+	desc = "Очень странный элемент брони, похожий на жилет. На вид весьма лёгкий и удобный. Что удивительно, подходит человеку по форме."
+	description_info = "Имеет 20%-ный шанс полностью заблокировать входящую атаку и делает носителя слегка быстрее."
+	rugender = "male"
+	ncase = "инопланетный усиливающий жилет"
+	gcase = "инопланетного усиливающего жилета"
+	dcase = "инопланетному усиливающему жилету"
+	acase = "инопланетный усиливающий жилет"
+	icase = "инопланетным усиливающим жилетом"
+	pcase = "инопланетном усиливающем жилете"
+
+/obj/item/clothing/suit/armor/alien/tank
+	name = "Инопланетный защитный костюм"
+	desc = "Очень устойчивый, пускай и легковесный, костюм -- вероятно, броня. Что удивительно, подходит человеку по форме."
+	description_info = "Имеет 40%-ный шанс полностью заблокировать входящую атаку."
+	rugender = "male"
+	ncase = "инопланетный защитный костюм"
+	gcase = "инопланетного защитного костюма"
+	dcase = "инопланетному защитному костюму"
+	acase = "инопланетный защитный костюм"
+	icase = "инопланетным защитным костюмом"
+	pcase = "инопланетном защитном костюме"
+
+/obj/item/clothing/suit/armor/vest/ert
+	name = "emergency response team armor"
+	desc = "A set of armor worn by members of the Emergency Response Team."
+
+/obj/item/clothing/suit/armor/vest/ert/command
+	name = "emergency response team commander armor"
+	desc = "A set of armor worn by the commander of an Emergency Response Team. Has blue highlights."
+
+/obj/item/clothing/suit/armor/vest/ert/security
+	name = "emergency response team security armor"
+	desc = "A set of armor worn by security members of the Emergency Response Team. Has red highlights."
+
+/obj/item/clothing/suit/armor/vest/ert/engineer
+	name = "emergency response team engineer armor"
+	desc = "A set of armor worn by engineering members of the Emergency Response Team. Has orange highlights."
+	
+/obj/item/clothing/suit/armor/vest/ert/medical
+	name = "emergency response team medical armor"
+	desc = "A set of armor worn by medical members of the Emergency Response Team. Has blue and white highlights."
+
+/obj/item/clothing/suit/storage/vest
+	name = "Бронежилет"
+	desc = "Обыкновенный кевларовый разгрузочный жилет."
+	rugender = "male"
+	ncase = "бронежилет"
+	gcase = "бронежилета"
+	dcase = "бронежилету"
+	acase = "бронежилет"
+	icase = "бронежилетом"
+	pcase = "бронежилете"
+
+/obj/item/clothing/suit/storage/vest/officer
+	name = "Бронежилет офицера"
+	desc = "Обыкновенный кевларовый разгрузочный жилет. У этого жилета к груди прикреплён голобейдж."
+	rugender = "male"
+	ncase = "бронежилет офицера"
+	gcase = "бронежилета офицера"
+	dcase = "бронежилету офицера"
+	acase = "бронежилет офицера"
+	icase = "бронежилетом офицера"
+	pcase = "бронежилете офицера"
+
+/obj/item/clothing/suit/storage/vest/warden
+	name = "Бронежилет надзирателя"
+	desc = "Обыкновенный кевларовый разгрузочный жилет. У этого жилета к груди прикреплён серебряный бейдж."
+	rugender = "male"
+	ncase = "бронежилет надзирателя"
+	gcase = "бронежилета надзирателя"
+	dcase = "бронежилету надзирателя"
+	acase = "бронежилет надзирателя"
+	icase = "бронежилетом надзирателя"
+	pcase = "бронежилете надзирателя"
+
+/obj/item/clothing/suit/storage/vest/wardencoat
+	name = "Пиджак надзирателя"
+	desc = "Бронированный пиджак с серебряными нашивками."
+	rugender = "male"
+	ncase = "пиджак надзирателя"
+	gcase = "пиджака надзирателя"
+	dcase = "пиджаку надзирателя"
+	acase = "пиджак надзирателя"
+	icase = "пиджаком надзирателя"
+	pcase = "пиджаке надзирателя"
+
+/obj/item/clothing/suit/storage/vest/wardencoat/alt
+	name = "Пиджак надзирателя"
+	desc = "Бронированный пиджак с серебряными нашивками."
+	rugender = "male"
+	ncase = "пиджак надзирателя"
+	gcase = "пиджака надзирателя"
+	dcase = "пиджаку надзирателя"
+	acase = "пиджак надзирателя"
+	icase = "пиджаком надзирателя"
+	pcase = "пиджаке надзирателя"
+
+/obj/item/clothing/suit/storage/vest/hos
+	name = "Бронежилет Главы службы безопасности"
+	desc = "Обыкновенный кевларовый разгрузочный жилет. У этого жилета к груди прикреплен золотой бейдж."
+	rugender = "male"
+	ncase = "бронежилет Главы службы безопасности"
+	gcase = "бронежилета Главы службы безопасности"
+	dcase = "бронежилету Главы службы безопасности"
+	acase = "бронежилет Главы службы безопасности"
+	icase = "бронежилетом Главы службы безопасности"
+	pcase = "бронежилете Главы службы безопасности"
+
+/obj/item/clothing/suit/storage/vest/hoscoat
+	name = "Бронированная шинель"
+	desc = "Шинель, укреплённая особым сплавом и предоставляющая как защиту, так и стильный внешний вид."
+	rugender = "female"
+	ncase = "бронированная шинель"
+	gcase = "бронированной шинели"
+	dcase = "бронированной шинели"
+	acase = "бронированную шинель"
+	icase = "бронированной шинелью"
+	pcase = "бронированной шинели"
+
+/obj/item/clothing/suit/storage/vest/hoscoat/jensen
+	name = "Бронированный тренчкот"
+	desc = "Тренчкот, укреплённый особым сплавом и предоставляющий как защиту, так и стильный внешний вид."
+	rugender = "male"
+	ncase = "бронированный тренчкот"
+	gcase = "бронированного тренчкота"
+	dcase = "бронированному тренчкоту"
+	acase = "броинрованный тренчкот"
+	icase = "бронированным тренчкотом"
+	pcase = "бронированном тренчкоте"
+
+/obj/item/clothing/suit/storage/vest/pcrc
+	name = "Бронежилет PCRC"
+	desc = "Обыкновенный кевларовый разгрузочный жилет, принадлежащий Proxima Centauri Risk Control. К груди прикреплена эмблема PCRC."
+	rugender = "male"
+	ncase = "бронежилет PCRC"
+	gcase = "бронежилета PCRC"
+	dcase = "бронежилету PCRC"
+	acase = "бронежилет PCRC"
+	icase = "бронежилетом PCRC"
+	pcase = "бронежилете PCRC"
+
+/obj/item/clothing/suit/storage/vest/solgov
+	name = "\improper Solar Confederate Government armored vest"
+	desc = "A synthetic armor vest. This one is marked with the crest of the Solar Confederate Government."
+
+/obj/item/clothing/suit/storage/vest/solgov/heavy
+	name = "\improper Solar Confederate Government heavy armored vest"
+	desc = "A synthetic armor vest with PEACEKEEPER printed in distinctive blue lettering on the chest. This one has added webbing and ballistic plates."
+
+/obj/item/clothing/suit/storage/vest/solgov/security
+	name = "master at arms heavy armored vest"
+	desc = "A synthetic armor vest with MASTER AT ARMS printed in silver lettering on the chest. This one has added webbing and ballistic plates."
+
+/obj/item/clothing/suit/storage/vest/solgov/command
+	name = "command heavy armored vest"
+	desc = "A synthetic armor vest with Solar Confederate Government printed in detailed gold lettering on the chest. This one has added webbing and ballistic plates."
+
+/obj/item/clothing/suit/storage/vest/tactical
+	name = "tactical armored vest"
+	desc = "A heavy armored vest in a fetching tan. It is surprisingly flexible and light, even with the extra webbing and advanced ceramic plates."
+
+/obj/item/clothing/suit/storage/vest/heavy/flexitac
+	name = "Тактический легковесный жилет"
+	desc = "Бронированный жилет, изготовленный из гибких керамических пластин. Не самый красивый, однако очень удобный в ношении."
+	rugender = "male"
+	ncase = "тактический легковесный жилет"
+	gcase = "тактического легковесного жилета"
+	dcase = "тактическому легковесному жилету"
+	acase = "тактический легковесный жилет"
+	icase = "тактическим легковесным жилетом"
+	pcase = "тактическом легковесном жилете"
+
+/obj/item/clothing/suit/storage/vest/detective
+	name = "Бронежилет детектива"
+	desc = "Обыкновенный кевларовый разгрузочный жилет винтажного коричневого цвета. На груди закреплён бейдж, на котором написано 'Частный Сыщик'."
+	rugender = "male"
+	ncase = "бронежилет детектива"
+	gcase = "бронежилета детектива"
+	dcase = "бронежилету детектива"
+	acase = "бронежилет детектива"
+	icase = "бронежилетом детектива"
+	pcase = "бронежилете детектива"
+
+/obj/item/clothing/suit/storage/vest/press
+	name = "Бронежилет прессы"
+	desc = "Обыкновенный кевларовый разгрузочный жилет. На спине и груди вышивки с надписью 'Пресса'."
+	rugender = "male"
+	ncase = "бронежилет прессы"
+	gcase = "бронежилета прессы"
+	dcase = "бронежилету прессы"
+	acase = "бронежилет прессы"
+	icase = "бронежилетом прессы"
+	pcase = "бронежилете прессы"
+
+/obj/item/clothing/suit/storage/vest/heavy
+	name = "Тяжёлый бронежилет"
+	desc = "Тяжелый кевларовый разгрузочный жилет с прикреплёнными к нему лямками."
+	rugender = "male"
+	ncase = "тяжёлый бронежилет"
+	gcase = "тяжёлого бронежилета"
+	dcase = "тяжёлому бронежилету"
+	acase = "тяжёлый бронежилет"
+	icase = "тяжёлый бронежилет"
+	pcase = "тяжёлом бронежилете"
+
+/obj/item/clothing/suit/storage/vest/heavy/officer
+	name = "Тяжёлый бронежилет офицера"
+	desc = "Тяжелый кевларовый разгрузочный жилет с прикреплёнными к нему лямками. На груди закреплён голобейдж."
+	rugender = "male"
+	ncase = "тяжёлый бронежилет офицера"
+	gcase = "тяжёлого бронежилета офицера"
+	dcase = "тяжёлому бронежилету офицера"
+	acase = "тяжёлый бронежилет офицера"
+	icase = "тяжёлый бронежилет офицера"
+	pcase = "тяжёлом бронежилете офицера"
+
+/obj/item/clothing/suit/storage/vest/heavy/warden
+	name = "Тяжёлый бронежилет надзирателя"
+	desc = "Тяжелый кевларовый разгрузочный жилет с прикреплёнными к нему лямками. На груди закреплён серебряный бейдж."
+	rugender = "male"
+	ncase = "тяжёлый бронежилет надзирателя"
+	gcase = "тяжёлого бронежилета надзирателя"
+	dcase = "тяжёлому бронежилету надзирателя"
+	acase = "тяжёлый бронежилет надзирателя"
+	icase = "тяжёлый бронежилет надзирателя"
+	pcase = "тяжёлом бронежилете надзирателя"
+
+/obj/item/clothing/suit/storage/vest/heavy/hos
+	name = "Тяжёлый бронежилет Главы службы безопасности"
+	desc = "Тяжелый кевларовый разгрузочный жилет с прикреплёнными к нему лямками. На груди закреплён золотой бейдж."
+	rugender = "male"
+	ncase = "тяжёлый бронежилет Главы службы безопасности"
+	gcase = "тяжёлого бронежилета Главы службы безопасности"
+	dcase = "тяжёлому бронежилету Главы службы безопасности"
+	acase = "тяжёлый бронежилет Главы службы безопасности"
+	icase = "тяжёлый бронежилет Главы службы безопасности"
+	pcase = "тяжёлом бронежилете Главы службы безопасности"
+
+/obj/item/clothing/suit/storage/vest/heavy/pcrc
+	name = "Тяжёлый бронежилет PCRC"
+	desc = "Тяжелый кевларовый разгрузочный жилет, принадлежащий Proxima Centauri Risk Control с прикреплёнными к нему лямками. На груди закреплена эмблема PCRC."
+	rugender = "male"
+	ncase = "тяжёлый бронежилет PCRC"
+	gcase = "тяжёлого бронежилета PCRC"
+	dcase = "тяжёлому бронежилету PCRC"
+	acase = "тяжёлый бронежилет PCRC"
+	icase = "тяжёлый бронежилет PCRC"
+	pcase = "тяжёлом бронежилете PCRC"
+
+/obj/item/clothing/suit/storage/vest/heavy/merc
+	name = "Тяжёлый бронежилет"
+	desc = "Тяжелый кевларовый разгрузочный жилет высокого качества. На удивление гибкий -- вероятно, изготовлен из отличного материала."
+	rugender = "male"
+	ncase = "тяжёлый бронежилет"
+	gcase = "тяжёлого бронежилета"
+	dcase = "тяжёлому бронежилету"
+	acase = "тяжёлый бронежилет"
+	icase = "тяжёлый бронежилет"
+	pcase = "тяжёлом бронежилете"
+
+/obj/item/clothing/suit/armor/centcomm
+	name = "CentCom armor"
+	desc = "A suit that protects against some damage."
+
+/obj/item/clothing/suit/armor/heavy
+	name = "Тяжёлая броня"
+	desc = "Бронированный костюм старого военного стандарта. Крайне устойчив против прямого урона! Однако предоставляет малую защиту против энергетических снарядов, что вкупе с его размерами делает этот костюм крайне устаревшим."
+	rugender = "female"
+	ncase = "тяжёлая броня"
+	gcase = "тяжёлой брони"
+	dcase = "тяжёлой броне"
+	acase = "тяжёлую броню"
+	icase = "тяжёлой бронёй"
+	pcase = "тяжёлой броне"
+
+/obj/item/clothing/suit/armor/tdome/red
+	name = "Красный костюм Громарены"
+	desc = "Красноватая броня."
+	rugender = "male"
+	ncase = "красный костюм Громарены"
+	gcase = "красного костюма Громарены"
+	dcase = "красному костюму Громарены"
+	acase = "красный костюм Громарены"
+	icase = "красным костюмом Громарены"
+	pcase = "красном костюме Громарены"
+
+/obj/item/clothing/suit/armor/tdome/green
+	name = "Зелёный костюм Громарены"
+	desc = "Броня блевотного цвета."
+	rugender = "male"
+	ncase = "зелёный костюм Громарены"
+	gcase = "зелёного костюма Громарены"
+	dcase = "зелёному костюму Громарены"
+	acase = "зелёный костюм Громарены"
+	icase = "зелёным костюмом Громарены"
+	pcase = "зелёном костюме Громарены"
+
+/obj/item/clothing/suit/armor/pcarrier
+	name = "Разгрузочный жилет"
+	desc = "Легковесный разгрузочный жилет чёрного цвета. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+	rugender = "male"
+	ncase = "разгрузочный жилет"
+	gcase = "разгрузочного жилета"
+	dcase = "разгрузочному жилету"
+	acase = "разгрузочный жилет"
+	icase = "разгрузочным жилетом"
+	pcase = "разгрузочном жилете"
+
+/obj/item/clothing/suit/armor/pcarrier/blue
+	name = "Синий разгрузочный жилет"
+	desc = "Легковесный разгрузочный жилет синий цвета. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+	rugender = "male"
+	ncase = "синий разгрузочный жилет"
+	gcase = "синего разгрузочного жилета"
+	dcase = "синему разгрузочному жилету"
+	acase = "синий разгрузочный жилет"
+	icase = "синим разгрузочным жилетом"
+	pcase = "синем разгрузочном жилете"
+
+/obj/item/clothing/suit/armor/pcarrier/press
+	name = "Голубой разгрузочный жилет"
+	desc = "Легковесный разгрузочный жилет голубого цвета. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+	rugender = "male"
+	ncase = "голубой разгрузочный жилет"
+	gcase = "голубого разгрузочного жилета"
+	dcase = "голубому разгрузочному жилету"
+	acase = "голубой разгрузочный жилет"
+	icase = "голубым разгрузочным жилетом"
+	pcase = "голубом разгрузочном жилете"
+
+/obj/item/clothing/suit/armor/pcarrier/blue/sol
+	name = "Разгрузочный жилет миротворца"
+	desc = "Легковесный разгрузочный жилет в цветах миротворца ЦПС. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+	rugender = "male"
+	ncase = "разгрузочный жилет миротворца"
+	gcase = "разгрузочного жилета миротворца"
+	dcase = "разгрузочному жилету миротворца"
+	acase = "разгрузочный жилет миротворца"
+	icase = "разгрузочным жилетом миротворца"
+	pcase = "разгрузочном жилете миротворца"
+
+/obj/item/clothing/suit/armor/pcarrier/green
+	name = "Зелёный разгрузочный жилет"
+	desc = "Легковесный разгрузочный жилет зелёного цвета. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+	rugender = "male"
+	ncase = "зелёный разгрузочный жилет"
+	gcase = "зелёного разгрузочного жилета"
+	dcase = "зелёному разгрузочному жилету"
+	acase = "зелёный разгрузочный жилет"
+	icase = "зелёным разгрузочным жилетом"
+	pcase = "зелёном разгрузочном жилете"
+
+/obj/item/clothing/suit/armor/pcarrier/navy
+	name = "Тёмно-синий разгрузочный жилет"
+	desc = "Легковесный разгрузочный жилет тёмно-синего цвета. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+	rugender = "male"
+	ncase = "тёмно-синий разгрузочный жилет"
+	gcase = "тёмно-синего разгрузочного жилета"
+	dcase = "тёмно-синему разгрузочному жилету"
+	acase = "тёмно-синий разгрузочный жилет"
+	icase = "тёмно-синим разгрузочным жилетом"
+	pcase = "тёмно-синем разгрузочном жилете"
+
+/obj/item/clothing/suit/armor/pcarrier/tan
+	name = "Бежевый разгрузочный жилет"
+	desc = "Легковесный разгрузочный жилет бежевого цвета. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+	rugender = "male"
+	ncase = "бежевый разгрузочный жилет"
+	gcase = "бежевого разгрузочного жилета"
+	dcase = "бежевому разгрузочному жилету"
+	acase = "бежевый разгрузочный жилет"
+	icase = "бежевым разгрузочным жилетом"
+	pcase = "бежевом разгрузочном жилете"
+
+/obj/item/clothing/suit/armor/pcarrier/tan/tactical
+	name = "Тактический разгрузочный жилет"
+	rugender = "male"
+	ncase = "тактический разгрузочный жилет"
+	gcase = "тактического разгрузочного жилета"
+	dcase = "тактическому разгрузочному жилету"
+	acase = "тактический разгрузочный жилет"
+	icase = "тактическим разгрузочным жилетом"
+	pcase = "тактическом разгрузочном жилете"
 
 //
 // armor_vr.dm
 //
 
+/obj/item/clothing/suit/armor/vest/wolftaur
+	name = "Волкотавровый бронежилет"
+	desc = "Бронированный жилет, предоставляющий небольшую защиту от урона. Похоже, сделан с расчётом на волкотавров."
+	rugender = "male"
+	ncase = "волкотавровый бронежилет"
+	gcase = "волкотаврового бронежилета"
+	dcase = "волкотавровому бронежилету"
+	acase = "волкотавровый бронежилет"
+	icase = "волкотавровым бронежилетом"
+	pcase = "волкотавровом бронежилете"
 
+
+/obj/item/clothing/suit/storage/vest/solgov
+	name = "peacekeeper armored vest"
+	desc = "Легковесный разгрузочный жилет в цветах миротворца ЦПС. Сам по себе не предоставляет защиты, однако может быть совмещён с пластинами брони."
+
+/obj/item/clothing/suit/storage/vest/solgov/heavy
+	name = "peacekeeper heavy armored vest"
+	desc = "A synthetic armor vest with PEACEKEEPER printed in distinctive blue lettering on the chest. This one has added webbing and ballistic plates."
+
+/obj/item/clothing/suit/storage/vest/solgov/security
+	name = "master at arms heavy armored vest"
+	desc = "A synthetic armor vest with MASTER AT ARMS printed in silver lettering on the chest. This one has added webbing and ballistic plates."
+
+/obj/item/clothing/suit/storage/vest/solgov/command
+	name = "commander heavy armored vest"
+	desc = "A synthetic armor vest with COMMANDER printed in detailed gold lettering on the chest. This one has added webbing and ballistic plates."
+
+/obj/item/clothing/suit/armor/combat/USDF
+	name = "marine body armor"
+	desc = "When I joined the Corps, we didn't have any fancy-schmanzy armor. We had sticks! Two sticks, and a rock for the whole platoon-and we had to <i>share</i> the rock!"
+
+/obj/item/clothing/suit/armor/combat/imperial
+	name = "imperial soldier armor"
+	desc = "Made out of an especially light metal, it lets you conquer in style."
+
+/obj/item/clothing/suit/armor/combat/imperial/centurion
+	name = "imperial centurion armor"
+	desc = "Not all heroes wear capes, but it'd be cooler if they did."
+
+/obj/item/clothing/suit/armor/combat/crusader
+	name = "Броня крестоносца"
+	desc = "Старый рыцарь восстал вновь."
+	rugender = "female"
+	ncase = "броня крестоносца"
+	gcase = "брони крестоносца"
+	dcase = "броне крестоносца"
+	acase = "броню крестоносца"
+	icase = "бронёй крестоносца"
+	pcase = "броне крестоносца"
+
+/obj/item/clothing/suit/armor/combat/crusader/bedevere
+	name = "Броня Бедивера"
+	desc = "Старый рыцарь восстал вновь."
+	rugender = "female"
+	ncase = "броня Бедивера"
+	gcase = "брони Бедивера"
+	dcase = "броне Бедивера"
+	acase = "броню Бедивера"
+	icase = "бронёй Бедивера"
+	pcase = "броне Бедивера"
+
+/obj/item/clothing/suit/armor/combat/crusader_costume
+	name = "Костюм крестоносца"
+	desc = "Старый рыцарь восстал вновь."
+	rugender = "male"
+	ncase = "костюм крестоносца"
+	gcase = "костюма крестоносца"
+	dcase = "костюму крестоносца"
+	acase = "костюм крестоносца"
+	icase = "костюмом крестоносца"
+	pcase = "костюме крестоносца"
+
+/obj/item/clothing/suit/armor/combat/crusader_costume/bedevere
+	name = "Костюм Бедивера"
+	desc = "Старый рыцарь восстал вновь."
+	rugender = "male"
+	ncase = "костюм Бедивера"
+	gcase = "костюма Бедивера"
+	dcase = "костюму Бедивера"
+	acase = "костюм Бедивера"
+	icase = "костюмом Бедивера"
+	pcase = "костюме Бедивера"
 
 //
 // bio.dm
@@ -69,7 +660,7 @@
 	icase = "костюмом карпа"
 	pcase = "костюме карпа"
 
-/obj/item/clothing/suit/storage/hooded/ian_costume	//It's Ian, rub his bell- oh god what happened to his inside parts?
+/obj/item/clothing/suit/storage/hooded/ian_costume
 	name = "Костюм корги"
 	desc = "Костюм, исполненный в виде человекоподобного корги. Не гарантирует, что Вам погладят пузик."
 	rugender = "male"
@@ -1837,7 +2428,6 @@ obj/item/clothing/suit/kamishimo
 
 /obj/item/clothing/suit/storage/snowsuit/command
 	name = "Зимняя куртка Управления"
-	icon_state = "snowsuit_command"
 	rugender = "female"
 	ncase = "зимняя куртка Управления"
 	gcase = "зимней куртки Управления"
