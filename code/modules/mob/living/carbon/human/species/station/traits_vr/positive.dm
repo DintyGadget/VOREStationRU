@@ -63,8 +63,8 @@
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws, /datum/unarmed_attack/bite/sharp, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/fangs
-	name = "Numbing Fangs"
-	desc = "Provides fangs that makes the person bit unable to feel their body or pain."
+	name = "Обезбаливающие клыки"
+	desc = "Дарует Вам клыки, которые оказывают на жертву обезбаливающий эффект, из-за чего она не способна чувствовать боль или своё тело в целом."
 	cost = 1
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
 

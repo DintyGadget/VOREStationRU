@@ -17,8 +17,12 @@
 /obj/item/weapon/storage/fancy/
 	icon = 'icons/obj/food.dmi'
 	icon_state = "donutbox6"
-	name = "коробка для пончиков"
+	name = "Коробка для пончиков"
 	var/icon_type = "donut"
+	var/ru_icon_type_1 = "пончик"
+	var/ru_icon_type_2 = "пончика"
+	var/ru_icon_type_3 = "пончиков"
+	var/ru_icon_type_4 = "остался последний пончик"
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
@@ -29,14 +33,14 @@
 
 /obj/item/weapon/storage/fancy/examine(mob/user)
 	. = ..()
-
+	var/ru_counter = ru_countitems(contents, single_text = ru_icon_type_1, few_text = ru_icon_type_2, many_text = ru_icon_type_3)
 	if(Adjacent(user))
 		if(!contents.len)
-			. += "Внутри не осталось [icon_type]."
+			. += "В [src.pcase] не осталось [ru_icon_type_3]."
 		else if(contents.len == 1)
-			. += "В коробке остался только один предмет ([icon_type])."
+			. += "В [src.pcase] [ru_icon_type_4]."
 		else
-			. += "Внутри осталось [icon_type] предметов."
+			. += "В [src.pcase] [ru_counter]."
 
 /*
  * Egg Box
@@ -46,7 +50,11 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "eggbox"
 	icon_type = "egg"
-	name = "коробка яиц"
+	ru_icon_type_1 = "яйцо"
+	ru_icon_type_2 = "яйца"
+	ru_icon_type_3 = "яиц"
+	ru_icon_type_4 = "осталось последнее яйцо"
+	name = "Коробка яиц"
 	center_of_mass = list("x" = 16,"y" = 7)
 	storage_slots = 12
 	can_hold = list(
@@ -60,8 +68,12 @@
  */
 
 /obj/item/weapon/storage/fancy/candle_box
-	name = "набор красных свечек"
+	name = "Набор красных свечек"
 	desc = "Комплект красных свечек."
+	ru_icon_type_1 = "красная свечка"
+	ru_icon_type_2 = "красных свечки"
+	ru_icon_type_3 = "красных свечек"
+	ru_icon_type_4 = "осталась последняя красная свечка"
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "candlebox5"
 	icon_type = "candle"
@@ -72,8 +84,12 @@
 	starts_with = list(/obj/item/weapon/flame/candle = 5)
 
 /obj/item/weapon/storage/fancy/whitecandle_box
-	name = "набор белых свечек"
+	name = "Набор белых свечек"
 	desc = "Комплект белых свечек."
+	ru_icon_type_1 = "белая свечка"
+	ru_icon_type_2 = "белых свечки"
+	ru_icon_type_3 = "белых свечек"
+	ru_icon_type_4 = "осталась последняя свечка"
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "whitecandlebox5"
 	icon_type = "whitecandle"
@@ -84,8 +100,12 @@
 	starts_with = list(/obj/item/weapon/flame/candle/white = 5)
 
 /obj/item/weapon/storage/fancy/blackcandle_box
-	name = "набор черных свечек"
+	name = "Набор чёрных свечек"
 	desc = "Комплект черных свечек."
+	ru_icon_type_1 = "чёрная свечка"
+	ru_icon_type_2 = "чёрных свечки"
+	ru_icon_type_3 = "чёрных свечек"
+	ru_icon_type_4 = "осталась последняя свечка"
 	icon = 'icons/obj/candle.dmi'
 	icon_state = "blackcandlebox5"
 	icon_type = "blackcandle"

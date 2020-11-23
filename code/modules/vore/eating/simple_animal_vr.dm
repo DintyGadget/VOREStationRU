@@ -49,7 +49,7 @@
 			addtimer(VARSET_CALLBACK(vore_selected, digest_mode, vore_default_mode), 20 MINUTES)
 	else
 		var/confirm = alert(user, "Этот моб сейчас переваривает всё содержимое живота. Хотите ли Вы это отключить?", "Отключение Переваривания [name]", "Отключить", "Отмена")
-		if(confirm == "Disable")
+		if(confirm == "Отключить")
 			vore_selected.digest_mode = DM_HOLD
 
 // Added as a verb in /mob/living/simple_mob/init_vore() if vore is enabled for this mob.
@@ -62,7 +62,7 @@
 	var/mob/living/user = usr	//I mean, At least ghosts won't use it.
 	if(!istype(user) || user.stat) return
 	if(!vore_selected)
-		to_chat(user, "<span class='warning'>[src] не способен на vore.</span>")
+		to_chat(user, "<span class='warning'>[src] не способен на Vore.</span>")
 		return
 
 	vore_selected.fancy_vore = !vore_selected.fancy_vore

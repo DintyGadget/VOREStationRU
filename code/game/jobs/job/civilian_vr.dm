@@ -24,7 +24,7 @@
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
 	alt_titles = list("Гидропонист" = /datum/alt_title/hydroponicist, "Культиватор" = /datum/alt_title/cultivator, "Фермер" = /datum/alt_title/farmer,
-						"Gardener" = /datum/alt_title/gardener, "Флорист" = /datum/alt_title/florsit)
+						"Садовник" = /datum/alt_title/gardener, "Флорист" = /datum/alt_title/florsit)
 
 /datum/alt_title/hydroponicist
 	title = "Гидропонист"
