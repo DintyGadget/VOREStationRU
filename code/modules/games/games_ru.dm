@@ -14,10 +14,7 @@
 	acase = "шестигранный кубик"
 	icase = "шестигранным кубиком"
 	pcase = "шестигранном кубике"
-
-/obj/item/weapon/dice/New()
-	icon_state = "[diceicon][rand(1,sides)]"
-
+	
 /obj/item/weapon/dice/d4
 	name = "Четырёхгранный кубик"
 	desc = "Кубик с четырьмя гранями."

@@ -529,13 +529,13 @@
 			if(H.gloves.body_parts_covered & ARMS)
 				for(var/obj/item/clothing/accessory/A in src)
 					if(A.body_parts_covered & ARMS)
-						to_chat(H, "<span class='warning'>Вы не можете надеть [A.acase] поверх [H.gloves.gcase], нужно сперва их снять.</span>")
+						to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(A, "acase")] поверх [ru_getcase(H.gloves. "gcase")], нужно сперва их снять.</span>")
 						return 0
 		if(H.shoes)
 			if(H.shoes.body_parts_covered & LEGS)
 				for(var/obj/item/clothing/accessory/A in src)
 					if(A.body_parts_covered & LEGS)
-						to_chat(H, "<span class='warning'>Вы не можете надеть [A.acase] поверх [H.shoes.gcase], нужно сперва их снять.</span>")
+						to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(A, "acase")] поверх [ru_getcase(H.shoes. "gcase")], нужно сперва их снять.</span>")
 						return 0
 		return 1
 

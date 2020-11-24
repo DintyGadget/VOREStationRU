@@ -1200,7 +1200,6 @@ obj/item/clothing/head/helmet/solgov
 
 /obj/item/clothing/head/centhat
 	name = "Головной убор ЦК"
-	icon_state = "centcom"
 	desc = "Приятно быть императором."
 	rugender = "male"
 	ncase = "головной убор ЦК"
@@ -2598,7 +2597,6 @@ obj/item/clothing/head/helmet/solgov
 /obj/item/clothing/head/beret/solgov/fleet/branch
 	name = "first fleet beret"
 	desc = "An TCG Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety."
-	icon_state = "beret_navy_first"
 
 /obj/item/clothing/head/beret/solgov/fleet/branch/second
 	name = "second fleet beret"

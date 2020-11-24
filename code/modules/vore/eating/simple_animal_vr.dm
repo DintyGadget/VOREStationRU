@@ -72,7 +72,7 @@
 	if(istype(O, /obj/item/weapon/newspaper) && !(ckey || (ai_holder.hostile && faction != user.faction)) && isturf(user.loc))
 		if(ai_holder.retaliate && prob(vore_pounce_chance/2)) // This is a gamble!
 			user.Weaken(5) //They get tackled anyway whether they're edible or not.
-			user.visible_message("<span class='danger'>[user] нападает на [src] с [O.icase == "icase" ? O : O.icase], но [src] нападает в ответ!</span>!")
+			user.visible_message("<span class='danger'>[user] нападает на [src] с [ru_getcase(O, "icase")], но [src] нападает в ответ!</span>!")
 			if(will_eat(user))
 				set_AI_busy(TRUE)
 				animal_nom(user)
@@ -83,7 +83,7 @@
 				//AttackTarget() //VOREStation AI Temporary Removal
 				//LoseTarget() // only make one attempt at an attack rather than going into full rage mode
 		else
-			user.visible_message("<span class='info'>[user] нападает на [src] с [O.icase == "icase" ? O : O.icase]!</span>")
+			user.visible_message("<span class='info'>[user] нападает на [src] с [ru_getcase(O, "icase")]!</span>")
 			release_vore_contents()
 			for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
 				if(!(L in prey_excludes)) // Unless they're already on it, just to avoid fuckery.

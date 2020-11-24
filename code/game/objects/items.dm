@@ -664,7 +664,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 
 /obj/item/proc/showoff(mob/user)
 	for (var/mob/M in view(user))
-		M.show_message("[user] показывает [src.acase == "acase" ? src : src.acase]. <a HREF=?src=\ref[M];lookitem=\ref[src]>Осмотреть поближе.</a>",1)
+		M.show_message("[user] показывает [ru_getcase(src, "acase")]. <a HREF=?src=\ref[M];lookitem=\ref[src]>Осмотреть поближе.</a>",1)
 
 /mob/living/carbon/verb/showoff()
 	set name = "Показать Предмет В Руке"

@@ -14,11 +14,11 @@
 	if(..()) //This will only run if no other problems occured when equiping.
 		if(H.wear_suit)
 			if(H.wear_suit.body_parts_covered & LEGS)
-				to_chat(H, "<span class='warning'>Вы не можете надеть [src.acase], так как Вам мешает [H.wear_suit == "ncase" ? H.wear_suit : H.wear_suit.ncase].</span>")
+				to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(src, "acase")], так как Вам [ru_g_obj(H.wear_suit, "меша", "ет", "ет", "ет", "ют")] [ru_getcase(H.wear_suit, "ncase")].</span>")
 				return 0
 			for(var/obj/item/clothing/accessory/A in H.wear_suit)
 				if(A.body_parts_covered & LEGS)
-					to_chat(H, "<span class='warning'>Вы не можете надеть [src.acase], так как Вам мешает [A] [H.wear_suit == "gcase" ? H.wear_suit : H.wear_suit.gcase].</span>")
+					to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(src, "acase")], так как Вам [ru_g_obj(H.wear_suit, "меша", "ет", "ет", "ет", "ют")] [ru_getcase(A, "ncase"] [ru_getcase(H.wear_suit, "gcase")].</span>")
 					return 0
 		return 1
 

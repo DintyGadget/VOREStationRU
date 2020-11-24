@@ -80,7 +80,7 @@
 /obj/item/clothing/proc/attempt_attach_accessory(obj/item/clothing/accessory/A, mob/user)
 	if(!valid_accessory_slots)
 		if(user)
-			to_chat(user, "<span class='warning'>Вы не можете прикрепить аксессуары к [src.dcase == "dcase" ? src : src.dcase].</span>")
+			to_chat(user, "<span class='warning'>Вы не можете прикрепить аксессуары к [ru_getcase(src, "dcase")].</span>")
 		return FALSE
 
 	var/obj/item/clothing/accessory/acc = A
@@ -91,7 +91,7 @@
 		return TRUE
 	else
 		if(user)
-			to_chat(user, "<span class='warning'>Вы не можете прикрепить к [src.dcase == "dcase" ? src : src.dcase] больше аксессуаров этого вида.</span>")
+			to_chat(user, "<span class='warning'>Вы не можете прикрепить к [ru_getcase(src, "dcase")] больше аксессуаров этого вида.</span>")
 		return FALSE
 
 
@@ -133,7 +133,7 @@
 		if(accessory_amount == 1)
 			A = accessories[1] // If there's only one accessory, just remove it without any additional prompts.
 		else
-			A = input("Выберите аксессуар, который нужно снять с [src.gcase == "gcase" ? src : src.gcase]") as null|anything in accessories
+			A = input("Выберите аксессуар, который нужно снять с [ru_getcase(src, "gcase")) as null|anything in accessories
 
 	if(A)
 		remove_accessory(usr,A)

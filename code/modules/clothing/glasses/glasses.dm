@@ -76,13 +76,13 @@ BLIND     // can't see anything
 /obj/item/clothing/glasses/attack_self(mob/user)
 	if(toggleable)
 		if(!can_toggle(user))
-			to_chat(user, span("warning", "У Вас не получается переключить [src.acase] здесь."))
+			to_chat(user, span("warning", "У Вас не получается переключить [ru_getcase(src, "acase")] здесь."))
 		else
 			toggle_active(user)
 			if(active)
-				to_chat(user, span("notice", "Вы включаете оптическую матрицу [src.gcase]."))
+				to_chat(user, span("notice", "Вы включаете оптическую матрицу [ru_getcase(src, "gcase")]."))
 			else
-				to_chat(user, span("notice", "Вы выключаете оптическую матрицу [src.gcase]."))
+				to_chat(user, span("notice", "Вы выключаете оптическую матрицу [ru_getcase(src, "gcase")]."))
 	..()
 
 /obj/item/clothing/glasses/meson
@@ -364,7 +364,7 @@ BLIND     // can't see anything
 			icon_state = initial(icon_state)
 			flash_protection = initial(flash_protection)
 			tint = initial(tint)
-			to_chat(usr, "Вы опускаете [src.acase], защищая глаза.")
+			to_chat(usr, "Вы опускаете [ru_getcase(src, "acase")], защищая глаза.")
 		else
 			src.up = !src.up
 			flags_inv &= ~HIDEEYES
@@ -372,7 +372,7 @@ BLIND     // can't see anything
 			icon_state = "[initial(icon_state)]up"
 			flash_protection = FLASH_PROTECTION_NONE
 			tint = TINT_NONE
-			to_chat(usr, "Вы приподнимаете [src.acase] со своего лица.")
+			to_chat(usr, "Вы приподнимаете [ru_getcase(src, "acase")] со своего лица.")
 		update_clothing_icon()
 		usr.update_action_buttons()
 
@@ -427,7 +427,7 @@ BLIND     // can't see anything
 
 /obj/item/clothing/glasses/sunglasses/sechud/tactical
 	name = "Тактический HUD"
-	desc = "Визор со встроенной боевой информацией и записями Службы Безопасности. Предоставляют защиту от вспышек."
+	desc = "Визор со встроенной боевой информацией и записями службы безопасности. Предоставляют защиту от вспышек."
 	icon_state = "swatgoggles"
 
 /obj/item/clothing/glasses/sunglasses/sechud/aviator
@@ -447,12 +447,12 @@ BLIND     // can't see anything
 			flash_protection = FLASH_PROTECTION_NONE
 			enables_planes = away_planes
 			away_planes = null
-			to_chat(usr, "Вы переключаете [src.acase] в режим HUD.")
+			to_chat(usr, "Вы переключаете [ru_getcase(src, "acase")] в режим HUD.")
 		else
 			flash_protection = initial(flash_protection)
 			away_planes = enables_planes
 			enables_planes = null
-			to_chat(usr, "Вы переключаете [src.acase] в режим защиты от вспышек.")
+			to_chat(usr, "Вы переключаете [ru_getcase(src, "acase")] в режим защиты от вспышек.")
 		update_icon()
 		user << activation_sound
 		user.recalculate_vis()
@@ -491,7 +491,7 @@ BLIND     // can't see anything
 	emp_act(severity)
 		if(istype(src.loc, /mob/living/carbon/human))
 			var/mob/living/carbon/human/M = src.loc
-			to_chat(M, "<font color='red'>Ваш [capitalize(src.acase)] перегружается и ослепляет Вас!</font>")
+			to_chat(M, "<font color='red'[capitalize(src.ncase)] [ru_g_obj(src, "перегружа", "ется", "ется", "ется", "ются"], ослепляя Вас!</font>")
 			if(M.glasses == src)
 				M.Blind(3)
 				M.eye_blurry = 5
@@ -545,11 +545,11 @@ BLIND     // can't see anything
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
 
 /obj/item/clothing/glasses/aerogelgoggles
-	name = "orange goggles"
-	desc = "Teshari designed lightweight goggles."
+	name = "Оранжевые очки"
+	desc = "Легковесные очки, предназначенные для тешари."
 	icon_state = "orange-g"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
-	action_button_name = "Adjust Orange Goggles"
+	action_button_name = "Настроить Оранжевые Очки"
 	var/up = 0
 	item_flags = AIRTIGHT
 	body_parts_covered = EYES
@@ -559,8 +559,8 @@ BLIND     // can't see anything
 	toggle()
 
 /obj/item/clothing/glasses/aerogelgoggles/verb/toggle()
-	set category = "Object"
-	set name = "Adjust Orange Goggles"
+	set category = "Объект"
+	set name = "Настроить Оранжевые Очки"
 	set src in usr
 
 	if(usr.canmove && !usr.stat && !usr.restrained())
@@ -569,12 +569,12 @@ BLIND     // can't see anything
 			flags_inv |= HIDEEYES
 			body_parts_covered |= EYES
 			icon_state = initial(icon_state)
-			to_chat(usr, "You flip \the [src] down to protect your eyes.")
+			to_chat(usr, "Вы опускаете [ru_getcase(src, "acase")], чтобы защитить свои глаза.")
 		else
 			src.up = !src.up
 			flags_inv &= ~HIDEEYES
 			body_parts_covered &= ~EYES
 			icon_state = "[initial(icon_state)]up"
-			to_chat(usr, "You push \the [src] up from in front of your eyes.")
+			to_chat(usr, "Вы приподнимаете [ru_getcase(src, "acase")] со своих глаз.")
 		update_clothing_icon()
 		usr.update_action_buttons()

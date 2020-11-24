@@ -65,19 +65,19 @@
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(reagents && reagents.reagent_list.len)
-			. += "<span class='notice'>В [src.rugender == "male" ? "нём" : src.rugender == "female" ? "ней" : src.rugender == "plural" ? "них" : "нём"] содержится [ru_countreagents(reagents.total_volume)] жидкости.</span>"
+			. += "<span class='notice'>В [ru_g_obj(src, "нём", "ней", "нём", "них")] содержится [ru_countreagents(reagents.total_volume)] жидкости.</span>"
 		else
-			. += "<span class='notice'>[src.rugender == "male" ? "Он" : src.rugender == "female" ? "Она" : src.rugender == "plural" ? "Они" : "Оно"] [src.rugender == "male" ? "пуст" : src.rugender == "female" ? "пуста" : src.rugender == "plural" ? "пусты" : "пусто"].</span>"
+			. += "<span class='notice'>[ru_g_obj(src, "Он", "Она", "Оно", "Они")] пуст[ru_g_obj(src, "", "а", "о", "ы")].</span>"
 		if(!is_open_container())
-			. += "<span class='notice'>На [src.rugender == "male" ? "нём" : src.rugender == "female" ? "ней" : src.rugender == "plural" ? "них" : "нём"] плотная крышка.</span>"
+			. += "<span class='notice'>На [ru_g_obj(src, "нём", "ней", "нём", "них")] плотная крышка.</span>"
 
 /obj/item/weapon/reagent_containers/glass/attack_self()
 	..()
 	if(is_open_container())
-		to_chat(usr, "<span class = 'notice'>Вы надеваете на [src.acase == "acase" ? src : src.acase] крышку.</span>")
+		to_chat(usr, "<span class = 'notice'>Вы надеваете на [ru_getcase(src, "acase")] крышку.</span>")
 		flags ^= OPENCONTAINER
 	else
-		to_chat(usr, "<span class = 'notice'>Вы снимаете крышку с [src.gcase == "gcase" ? src : src.gcase].</span>")
+		to_chat(usr, "<span class = 'notice'>Вы снимаете крышку с [ru_getcase(src, "gcase")].</span>")
 		flags |= OPENCONTAINER
 	update_icon()
 
@@ -92,14 +92,14 @@
 
 /obj/item/weapon/reagent_containers/glass/standard_feed_mob(var/mob/user, var/mob/target)
 	if(!is_open_container())
-		to_chat(user, "<span class='notice'>Вам нужно сперва открыть [src.acase == "acase" ? src : src.acase].</span>")
+		to_chat(user, "<span class='notice'>Вам нужно сперва открыть [ru_getcase(src, "acase")].</span>")
 		return 1
 	if(user.a_intent == I_HURT)
 		return 1
 	return ..()
 
 /obj/item/weapon/reagent_containers/glass/self_feed_message(var/mob/user)
-	to_chat(user, "<span class='notice'>Вы делаете глоток из [src.gcase == "gcase" ? src : src.gcase].</span>")
+	to_chat(user, "<span class='notice'>Вы делаете глоток из [ru_getcase(src, "gcase")].</span>")
 
 /obj/item/weapon/reagent_containers/glass/afterattack(var/obj/target, var/mob/user, var/proximity)
 	if(!is_open_container() || !proximity) //Is the container open & are they next to whatever they're clicking?
@@ -115,14 +115,14 @@
 		if(standard_splash_mob(user,target))
 			return 1
 		if(reagents && reagents.total_volume)
-			to_chat(user, "<span class='notice'>Вы расплёскиваете жидкость на [target.acase == "acase" ? src : src.acase].</span>") //They are on harm intent, aka wanting to spill it.
+			to_chat(user, "<span class='notice'>Вы расплёскиваете жидкость на [ru_getcase(target)].</span>") //They are on harm intent, aka wanting to spill it.
 			reagents.splash(target, reagents.total_volume)
 			return 1
 	..()
 
 /obj/item/weapon/reagent_containers/glass/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/pen) || istype(W, /obj/item/device/flashlight/pen))
-		var/tmp_label = sanitizeSafe(input(user, "Подпишите [acase == "acase" ? name : acase]", "Подпись", label_text), MAX_NAME_LEN)
+		var/tmp_label = sanitizeSafe(input(user, "Подпишите [ru_getcase(src, "acase")]", "Подпись", label_text), MAX_NAME_LEN)
 		if(length(tmp_label) > 50)
 			to_chat(user, "<span class='notice'>Подпись не может быть длиннее 50 символов.</span>")
 		else if(length(tmp_label) > 10)
@@ -136,7 +136,7 @@
 	if(istype(W,/obj/item/weapon/storage/bag))
 		..()
 	if(W && W.w_class <= w_class && (flags & OPENCONTAINER) && user.a_intent != I_HELP)
-		to_chat(user, "<span class='notice'>Вы окунаете [W.acase == "acase" ? W : W.acase] в [src.acase == "acase" ? src : src.acase].</span>")
+		to_chat(user, "<span class='notice'>Вы окунаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase")].</span>")
 		reagents.touch_obj(W, reagents.total_volume)
 
 /obj/item/weapon/reagent_containers/glass/proc/update_name_label()
@@ -272,14 +272,14 @@
 
 /obj/item/weapon/reagent_containers/glass/bucket/attackby(var/obj/item/D, mob/user as mob)
 	if(isprox(D))
-		to_chat(user, "Вы заливаете [D.acase == "acase" ? D : D.acase] в [src.acase == "acase" ? src : src.acase].")
+		to_chat(user, "Вы заливаете [ru_getcase(D, "acase")] в [ru_getcase(src, "acase")].")
 		qdel(D)
 		user.put_in_hands(new /obj/item/weapon/bucket_sensor)
 		user.drop_from_inventory(src)
 		qdel(src)
 		return
 	else if(D.is_wirecutter())
-		to_chat(user, "<span class='notice'>Вы вырезаете в [src.pcase == "pcase" ? src : src.pcase] огромную дыру при помощи [src.gcase == "gcase" ? src : src.gcase].  Теперь это и не ведро даже.</span>")
+		to_chat(user, "<span class='notice'>Вы вырезаете в [ru_getcase(src, "pcase")] огромную дыру при помощи [ru_getcase(D, "gcase")].  Теперь это и не ведро даже.</span>")
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket)
 		user.drop_from_inventory(src)
 		qdel(src)
@@ -298,10 +298,10 @@
 			to_chat(user, "<span class='warning'>Чтобы снарядить корпус робота, Вам понадобится один лист металла.</span>")
 	else if(istype(D, /obj/item/weapon/mop) || istype(D, /obj/item/weapon/soap) || istype(D, /obj/item/weapon/reagent_containers/glass/rag))  //VOREStation Edit - "Allows soap and rags to be used on buckets"
 		if(reagents.total_volume < 1)
-			to_chat(user, "<span class='warning'>В [src.pcase == "pcase" ? src : src.pcase] ничего нет!</span>")
+			to_chat(user, "<span class='warning'>В [ru_getcase(src, "pcase")] ничего нет!</span>")
 		else
 			reagents.trans_to_obj(D, 5)
-			to_chat(user, "<span class='notice'>Вы промочили [D.acase == "acase" ? D : D.acase] в [src.pcase == "pcase" ? src : src.pcase].</span>")
+			to_chat(user, "<span class='notice'>Вы промочили [ru_getcase(D, "acase")] в [ru_getcase(src, "pcase")].</span>")
 			playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 	else
 		return ..()
@@ -334,17 +334,17 @@ obj/item/weapon/reagent_containers/glass/bucket/wood
 		to_chat(user, "Это деревянное ведро не подходит для электроники.")
 		return
 	else if(istype(D, /obj/item/weapon/material/knife/machete/hatchet))
-		to_chat(user, "<span class='notice'>Вы вырезаете в [src.pcase == "pcase" ? src : src.pcase] огромную дыру при помощи [src.gcase == "gcase" ? src : src.gcase].  Теперь это и не ведро даже.</span>")
+		to_chat(user, "<span class='notice'>Вы вырезаете в [ru_getcase(src, "pcase")] огромную дыру при помощи [ru_getcase(D, "gcase")].  Теперь это и не ведро даже.</span>")
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket/wood)
 		user.drop_from_inventory(src)
 		qdel(src)
 		return
 	else if(istype(D, /obj/item/weapon/mop))
 		if(reagents.total_volume < 1)
-			to_chat(user, "<span class='warning'>В [src.pcase == "pcase" ? src : src.pcase] ничего нет!</span>")
+			to_chat(user, "<span class='warning'>В [ru_getcase(src, "pcase")] ничего нет!</span>")
 		else
 			reagents.trans_to_obj(D, 5)
-			to_chat(user, "<span class='notice'>Вы промочили [D.acase == "acase" ? D : D.acase] в [src.pcase == "pcase" ? src : src.pcase].</span>")
+			to_chat(user, "<span class='notice'>Вы промочили [ru_getcase(D, "acase")] в [ru_getcase(src, "pcase")].</span>")
 			playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 		return
 	else
