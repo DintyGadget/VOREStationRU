@@ -146,7 +146,7 @@
 
 /obj/item/clothing/mask/gas/monkeymask
 	name = "Маска мартышки"
-	desc = "Маска, необходимая при отыгрыше обезьяны."
+	desc = "Маска, необходимая при отыгрыше мартышки."
 	icon_state = "monkeymask"
 	body_parts_covered = HEAD|FACE|EYES
 

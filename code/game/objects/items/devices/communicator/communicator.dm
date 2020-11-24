@@ -16,7 +16,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 #define SETTTAB 9
 
 /obj/item/device/communicator
-	name = "коммуникатор"
+	name = "Коммуникатор"
 	desc = "Личный девайс, позволяющий двум пользователям общаться несмотря на огромные расстояния. Текущая инфраструктура телекоммуникаций позволяет \
 	поддерживать связь на разных станциях, планетах, и даже звездных системах."
 	icon = 'icons/obj/device.dmi'
@@ -347,7 +347,7 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 //It's the 26th century. We should have smart watches by now.
 /obj/item/device/communicator/watch
-	name = "наручный коммуникатор"
+	name = "Наручный коммуникатор"
 	desc = "Личный девайс, позволяющий двум пользователям общаться несмотря на огромные расстояния. Текущая инфраструктура телекоммуникаций позволяет \
 	поддерживать связь на разных станциях, планетах, и даже звездных системах. Этот коммуникатор можно носить на запастье!"
 	icon = 'icons/obj/device.dmi'

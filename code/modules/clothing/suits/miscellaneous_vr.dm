@@ -12,7 +12,7 @@
 
 
 /obj/item/clothing/suit/drake_cloak
-	name = "плащ драконовидных"
+	name = "Плащ драконовидных"
 	desc = "Простой плащ для драконотавров."
 	icon = 'icons/mob/taursuits_drake_vr.dmi'
 	icon_state = "cloak"
@@ -46,17 +46,17 @@
 
 //Bardings are medieval suits of armor.
 /obj/item/clothing/suit/barding/agatha
-	name = "бард Агата"
+	name = "Бард Агата"
 	desc = "Рыцарские доспехи для скакуна, который не нуждается в наезднике. Эти доспехи с эмблемой дома Агата."
 	icon_state = "Agatha_barding"
 
 /obj/item/clothing/suit/barding/alt_agatha
-	name = "бард Агата"
+	name = "Бард Агата"
 	desc = "Рыцарские доспехи для скакуна, который не нуждается в наезднике. Эти доспехи с эмблемой дома Агата."
 	icon_state = "Agatha_barding_alt"
 
 /obj/item/clothing/suit/barding/mason
-	name = "бард Масон"
+	name = "Бард Масон"
 	desc = "Рыцарские доспехи для скакуна, который не нуждается в наезднике. Эти доспехи с эмблемой дома Масон."
 	icon_state = "Mason_barding"
 
@@ -66,13 +66,13 @@
 	pixel_x = -16
 
 /obj/item/clothing/suit/taur_dress/white
-	name = "белое свадебное платье"
+	name = "Белое свадебное платье"
 	desc = "Дорогое белое платье для тавров."
 	icon_state = "whitedress1"
 	flags_inv = HIDESHOES
 
 /obj/item/clothing/suit/storage/det_trench/alt
-	name = "элегантное пальто"
+	name = "Элегантное пальто"
 	desc = "Глянцевое пальто, изготовленное из неоламинированной ткани. На внутренней стороне располагается карман."
 	icon = 'icons/obj/clothing/suits_vr.dmi'
 	icon_override = 'icons/mob/suit_vr.dmi'
@@ -80,7 +80,7 @@
 	item_state = "cyberpunksleek"
 
 /obj/item/clothing/suit/storage/det_trench/alt2
-	name = "длинное элегантное пальто"
+	name = "Длинное элегантное пальто"
 	desc = "Длинное глянцевое пальто, изготовленное из неоламинированной ткани. На внутренней стороне располагается карман."
 	icon = 'icons/obj/clothing/suits_vr.dmi'
 	icon_override = 'icons/mob/suit_vr.dmi'

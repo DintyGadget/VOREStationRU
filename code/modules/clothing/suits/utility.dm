@@ -10,7 +10,7 @@
  */
 
 /obj/item/clothing/suit/fire
-	name = "противопожарный костюм"
+	name = "Противопожарный костюм"
 	desc = "Костюм, предоставляющий защиту от огня и жара."
 	icon_state = "fire"
 	w_class = ITEMSIZE_LARGE//bulky item
@@ -32,7 +32,7 @@
 	icon_state = "firesuit"
 
 /obj/item/clothing/suit/fire/heavy //Is this even used?? -S2-
-	name = "противопожарный костюм"
+	name = "Противопожарный костюм"
 	desc = "Костюм, предоставляющий защиту от особо опасного огня и жара."
 	//icon_state = "thermal"
 	item_state_slots = list(slot_r_hand_str = "black_suit", slot_l_hand_str = "black_suit")
@@ -43,7 +43,7 @@
  * Bomb protection
  */
 /obj/item/clothing/head/bomb_hood
-	name = "бомбоустойчивый капюшон"
+	name = "Бомбоустойчивый капюшон"
 	desc = "Используется в случае бомб."
 	icon_state = "bombsuit"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 100, bio = 0, rad = 0)
@@ -52,7 +52,7 @@
 	siemens_coefficient = 0
 
 /obj/item/clothing/suit/bomb_suit
-	name = "бомбоустойчивый костюм"
+	name = "Бомбоустойчивый костюм"
 	desc = "Используется в качестве меры предосторожности при операциях со взрывчаткой."
 	icon_state = "bombsuit"
 	w_class = ITEMSIZE_LARGE//bulky item
@@ -78,7 +78,7 @@
  * Radiation protection
  */
 /obj/item/clothing/head/radiation
-	name = "антирадиационный капюшон"
+	name = "Антирадиационный капюшон"
 	icon_state = "rad"
 	desc = "Капюшон с антирадиационными свойствами. Бирка: Изготовлено с использованием свинца, не употребляйте изоляцию."
 	flags_inv = BLOCKHAIR
@@ -87,7 +87,7 @@
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 60, rad = 100)
 
 /obj/item/clothing/suit/radiation
-	name = "Radiation suit"
+	name = "Антирадиационный костюм"
 	desc = "Костюм, предоставляющий защиту от радиации. Бирка: Изготовлено с использованием свинца, не употребляйте изоляцию."
 	icon_state = "rad"
 	w_class = ITEMSIZE_LARGE//bulky item

@@ -42,14 +42,14 @@
 			open = 0
 			icon_state = initial(icon_state)
 			flags_inv = HIDETIE|HIDEHOLSTER
-			to_chat(usr, "Вы застегиваете верхнюю одежду.")
+			to_chat(usr, "Вы застегиваете сво[src.rugender == "male" ? "й" : src.rugender == "female" ? "ю" : src.rugender == "neuter" ? "ё" : "и"] [src.acase].")
 		else if(open == 0)
 			open = 1
 			icon_state = "[icon_state]_open"
 			flags_inv = HIDEHOLSTER
-			to_chat(usr, "Вы расстегиваете верхнюю одежду.")
+			to_chat(usr, "Вы расстегиваете сво[src.rugender == "male" ? "й" : src.rugender == "female" ? "ю" : src.rugender == "neuter" ? "ё" : "и"] [src.acase].")
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на своем [src], прежде чем сразу понимаете, насколько Вы глупы.")
+			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на сво[src.rugender == "male" ? "ём" : src.rugender == "female" ? "ей" : src.rugender == "neuter" ? "ём" : "их"] [src.pcase], прежде чем сразу понимаете, насколько Вы глупы.")
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -68,14 +68,14 @@
 			open = 0
 			icon_state = initial(icon_state)
 			flags_inv = HIDETIE|HIDEHOLSTER
-			to_chat(usr, "Вы застегиваете верхнюю одежду.")
+			to_chat(usr, "Вы застегиваете сво[src.rugender == "male" ? "й" : src.rugender == "female" ? "ю" : src.rugender == "neuter" ? "ё" : "и"] [src.acase].")
 		else if(open == 0)
 			open = 1
 			icon_state = "[icon_state]_open"
 			flags_inv = HIDEHOLSTER
 			to_chat(usr, "Вы расстегиваете верхнюю одежду.")
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на своем [src], прежде чем сразу понимаете, насколько Вы глупы.")
+			to_chat(usr, "Вы пытаетесь застегнуть пуговицу на сво[src.rugender == "male" ? "ём" : src.rugender == "female" ? "ей" : src.rugender == "neuter" ? "ём" : "их"] [src.pcase], прежде чем сразу понимаете, насколько Вы глупы.")
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -99,12 +99,12 @@
 
 		if(icon_state == icon_badge)
 			icon_state = icon_nobadge
-			to_chat(usr, "Вы скрываете бейдж [src].")
+			to_chat(usr, "Вы скрываете бейдж на сво[src.rugender == "male" ? "ём" : src.rugender == "female" ? "ей" : src.rugender == "neuter" ? "ём" : "их"] [src.pcase].")
 		else if(icon_state == icon_nobadge)
 			icon_state = icon_badge
-			to_chat(usr, "Вы показываете бейдж [src].")
+			to_chat(usr, "Вы показываете бейдж на сво[src.rugender == "male" ? "ём" : src.rugender == "female" ? "ей" : src.rugender == "neuter" ? "ём" : "их"] [src.pcase].")
 		else
-			to_chat(usr, "[src] не имеет бейджа.")
+			to_chat(usr, "[capitalize(src.ncase)] не имеет бейджа.")
 			return
 		update_clothing_icon()
 
