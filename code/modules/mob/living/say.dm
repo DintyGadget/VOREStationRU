@@ -4,17 +4,17 @@ var/list/department_radio_keys = list(
 	  ":i" = "intercom",	".i" = "intercom",
 	  ":h" = "department",	".h" = "department",
 	  ":+" = "special",		".+" = "special", //activate radio-specific special functions
-	  ":c" = " ÓÏ‡Ì‰Ó‚‡ÌËÂ",		".c" = " ÓÏ‡Ì‰Ó‚‡ÌËÂ",
-	  ":n" = "Õ‡Û˜Ì˚È ÓÚ‰ÂÎ",		".n" = "Õ‡Û˜Ì˚È ÓÚ‰ÂÎ",
-	  ":m" = "ÃÂ‰ËˆËÌÒÍËÈ ÓÚ‰ÂÎ",		".m" = "ÃÂ‰ËˆËÌÒÍËÈ ÓÚ‰ÂÎ",
-	  ":e" = "»ÌÊÂÌÂÌ˚È ÓÚ‰ÂÎ", ".e" = "»ÌÊÂÌÂÌ˚È ÓÚ‰ÂÎ",
+	  ":c" = "–ö–æ–º–∞–Ω–¥–æ–≤–∞–Ω–∏–µ",		".c" = "–ö–æ–º–∞–Ω–¥–æ–≤–∞–Ω–∏–µ",
+	  ":n" = "–ù–∞—É—á–Ω—ã–π –æ—Ç–¥–µ–ª",		".n" = "–ù–∞—É—á–Ω—ã–π –æ—Ç–¥–µ–ª",
+	  ":m" = "–ú–µ–¥–∏—Ü–∏–Ω—Å–∫–∏–π –æ—Ç–¥–µ–ª",		".m" = "–ú–µ–¥–∏—Ü–∏–Ω—Å–∫–∏–π –æ—Ç–¥–µ–ª",
+	  ":e" = "–ò–Ω–∂–µ–Ω–µ—Ä–Ω—ã–π –æ—Ç–¥–µ–ª", ".e" = "–ò–Ω–∂–µ–Ω–µ—Ä–Ω—ã–π –æ—Ç–¥–µ–ª",
 	  ":k" = "Response Team",	".k" = "Response Team",	//TFF 11/3/20 - Add Response Team to channels usable rather than resorting to :H or such.,
-	  ":s" = "—ÎÛÊ·‡ ·ÂÁÓÔ‡ÒÌÓÒÚË",	".s" = "—ÎÛÊ·‡ ·ÂÁÓÔ‡ÒÌÓÒÚË",
+	  ":s" = "–°–ª—É–∂–±–∞ –±–µ–∑–æ–ø–∞—Å–Ω–æ—Å—Ç–∏",	".s" = "–°–ª—É–∂–±–∞ –±–µ–∑–æ–ø–∞—Å–Ω–æ—Å—Ç–∏",
 	  ":w" = "whisper",		".w" = "whisper",
 	  ":t" = "Mercenary",	".t" = "Mercenary",
 	  ":x" = "Raider",		".x" = "Raider",
-	  ":u" = "—Ì‡·ÊÂÌËÂ",		".u" = "—Ì‡·ÊÂÌËÂ",
-	  ":v" = "—Â‚ËÒ",		".v" = "—Â‚ËÒ",
+	  ":u" = "–°–Ω–∞–±–∂–µ–Ω–∏–µ",		".u" = "–°–Ω–∞–±–∂–µ–Ω–∏–µ",
+	  ":v" = "–°–µ—Ä–≤–∏—Å",		".v" = "–°–µ—Ä–≤–∏—Å",
 	  ":p" = "AI Private",	".p" = "AI Private",
 	  ":y" = "Explorer",	".y" = "Explorer",
 	  ":a" = "Talon",		".a" = "Talon", //VOREStation Add,
@@ -23,35 +23,35 @@ var/list/department_radio_keys = list(
 	  ":L" = "left ear",	".L" = "left ear",
 	  ":I" = "intercom",	".I" = "intercom",
 	  ":H" = "department",	".H" = "department",
-	  ":C" = " ÓÏ‡Ì‰Ó‚‡ÌËÂ",		".C" = " ÓÏ‡Ì‰Ó‚‡ÌËÂ",
-	  ":N" = "Õ‡Û˜Ì˚È ÓÚ‰ÂÎ",		".N" = "Õ‡Û˜Ì˚È ÓÚ‰ÂÎ",
-	  ":M" = "ÃÂ‰ËˆËÌÒÍËÈ ÓÚ‰ÂÎ",		".M" = "ÃÂ‰ËˆËÌÒÍËÈ ÓÚ‰ÂÎ",
-	  ":E" = "»ÌÊÂÌÂÌ˚È ÓÚ‰ÂÎ",	".E" = "»ÌÊÂÌÂÌ˚È ÓÚ‰ÂÎ",
+	  ":C" = "–ö–æ–º–∞–Ω–¥–æ–≤–∞–Ω–∏–µ",		".C" = "–ö–æ–º–∞–Ω–¥–æ–≤–∞–Ω–∏–µ",
+	  ":N" = "–ù–∞—É—á–Ω—ã–π –æ—Ç–¥–µ–ª",		".N" = "–ù–∞—É—á–Ω—ã–π –æ—Ç–¥–µ–ª",
+	  ":M" = "–ú–µ–¥–∏—Ü–∏–Ω—Å–∫–∏–π –æ—Ç–¥–µ–ª",		".M" = "–ú–µ–¥–∏—Ü–∏–Ω—Å–∫–∏–π –æ—Ç–¥–µ–ª",
+	  ":E" = "–ò–Ω–∂–µ–Ω–µ—Ä–Ω—ã–π –æ—Ç–¥–µ–ª",	".E" = "–ò–Ω–∂–µ–Ω–µ—Ä–Ω—ã–π –æ—Ç–¥–µ–ª",
 	  ":k" = "Response Team",	".k" = "Response Team",	//TFF 11/3/20 - Add Response Team to channels usable rather than resorting to :H or such.,
-	  ":S" = "—ÎÛÊ·‡ ·ÂÁÓÔ‡ÒÌÓÒÚË",	".S" = "—ÎÛÊ·‡ ·ÂÁÓÔ‡ÒÌÓÒÚË",
+	  ":S" = "–°–ª—É–∂–±–∞ –±–µ–∑–æ–ø–∞—Å–Ω–æ—Å—Ç–∏",	".S" = "–°–ª—É–∂–±–∞ –±–µ–∑–æ–ø–∞—Å–Ω–æ—Å—Ç–∏",
 	  ":W" = "whisper",		".W" = "whisper",
 	  ":T" = "Mercenary",	".T" = "Mercenary",
 	  ":X" = "Raider",		".X" = "Raider",
-	  ":U" = "—Ì‡·ÊÂÌËÂ",		".U" = "—Ì‡·ÊÂÌËÂ",
-	  ":V" = "—Â‚ËÒ",		".V" = "—Â‚ËÒ",
+	  ":U" = "–°–Ω–∞–±–∂–µ–Ω–∏–µ",		".U" = "–°–Ω–∞–±–∂–µ–Ω–∏–µ",
+	  ":V" = "–°–µ—Ä–≤–∏—Å",		".V" = "–°–µ—Ä–≤–∏—Å",
 	  ":P" = "AI Private",	".P" = "AI Private",
 	  ":Y" = "Explorer",	".Y" = "Explorer",
 	  ":A" = "Talon",		".A" = "Talon", //VOREStation Add,
 
 	  //kinda localization -- rastaf0
 	  //same keys as above, but on russian keyboard layout. This file uses cp1251 as encoding.
-	  ":Í" = "right ear",	".Í" = "right ear",
-	  ":‰" = "left ear",	".‰" = "left ear",
-	  ":¯" = "intercom",	".¯" = "intercom",
-	  ":" = "department",	"." = "department",
-	  ":Ò" = " ÓÏ‡Ì‰Ó‚‡ÌËÂ",		".Ò" = " ÓÏ‡Ì‰Ó‚‡ÌËÂ",
-	  ":Ú" = "Õ‡Û˜Ì˚È ÓÚ‰ÂÎ",		".Ú" = "Õ‡Û˜Ì˚È ÓÚ‰ÂÎ",
-	  ":¸" = "ÃÂ‰ËˆËÌÒÍËÈ ÓÚ‰ÂÎ",		".¸" = "ÃÂ‰ËˆËÌÒÍËÈ ÓÚ‰ÂÎ",
-	  ":Û" = "»ÌÊÂÌÂÌ˚È ÓÚ‰ÂÎ",	".Û" = "»ÌÊÂÌÂÌ˚È ÓÚ‰ÂÎ",
-	  ":˚" = "—ÎÛÊ·‡ ·ÂÁÓÔ‡ÒÌÓÒÚË",	".˚" = "—ÎÛÊ·‡ ·ÂÁÓÔ‡ÒÌÓÒÚË",
-	  ":ˆ" = "whisper",		".ˆ" = "whisper",
-	  ":Â" = "Mercenary",	".Â" = "Mercenary",
-	  ":È" = "—Ì‡·ÊÂÌËÂ",		".È" = "—Ì‡·ÊÂÌËÂ",
+	  ":–ø" = "right ear",	".–ø" = "right ear",
+	  ":–ª" = "left ear",	".–ª" = "left ear",
+	  ":–Ω" = "intercom",	".–Ω" = "intercom",
+	  ":–¥" = "department",	".–¥" = "department",
+	  ":–∫" = "–ö–æ–º–∞–Ω–¥–æ–≤–∞–Ω–∏–µ",		".–∫" = "–ö–æ–º–∞–Ω–¥–æ–≤–∞–Ω–∏–µ",
+	  ":—É" = "–ù–∞—É—á–Ω—ã–π –æ—Ç–¥–µ–ª",		".—É" = "–ù–∞—É—á–Ω—ã–π –æ—Ç–¥–µ–ª",
+	  ":–º" = "–ú–µ–¥–∏—Ü–∏–Ω—Å–∫–∏–π –æ—Ç–¥–µ–ª",		".–º" = "–ú–µ–¥–∏—Ü–∏–Ω—Å–∫–∏–π –æ—Ç–¥–µ–ª",
+	  ":–∏" = "–ò–Ω–∂–µ–Ω–µ—Ä–Ω—ã–π –æ—Ç–¥–µ–ª",	".–∏" = "–ò–Ω–∂–µ–Ω–µ—Ä–Ω—ã–π –æ—Ç–¥–µ–ª",
+	  ":–±" = "–°–ª—É–∂–±–∞ –±–µ–∑–æ–ø–∞—Å–Ω–æ—Å—Ç–∏",	".–±" = "–°–ª—É–∂–±–∞ –±–µ–∑–æ–ø–∞—Å–Ω–æ—Å—Ç–∏",
+	  ":—à" = "whisper",		".—à" = "whisper",
+	  ":–∞" = "Mercenary",	".–∞" = "Mercenary",
+	  ":—Å" = "–°–Ω–∞–±–∂–µ–Ω–∏–µ",		".—Å" = "–°–Ω–∞–±–∂–µ–Ω–∏–µ",
 )
 
 
@@ -93,20 +93,20 @@ proc/get_radio_key_from_channel(var/channel)
 
 		if((HULK in mutations) && health >= 25 && length(S.message))
 			S.message = "[uppertext(S.message)]!!!"
-			verb = pick("yells","roars","hollers")
+			verb = pick("–æ—Ä—ë—Ç","–≤–æ–ø–∏—Ç","–∫—Ä–∏—á–∏—Ç")
 			whispering = 0
 			. = 1
 		if(slurring)
 			S.message = slur(S.message)
-			verb = pick("slobbers","slurs")
+			verb = pick("–±–æ—Ä–º–æ—á–µ—Ç","–±—É–±–Ω–∏—Ç")
 			. = 1
 		if(stuttering)
 			S.message = stutter(S.message)
-			verb = pick("stammers","stutters")
+			verb = pick("–∑–∞–ø–∏–Ω–∞–µ—Ç—Å—è","–µ–ª–µ –≤—ã–≥–æ–≤–∞—Ä–∏–≤–∞–µ—Ç")
 			. = 1
 		//VOREStation Edit Start
 		if(muffled)
-			verb = pick("muffles")
+			verb = pick("–±—É–±–Ω–∏—Ç")
 			whispering = 1
 			. = 1
 		//VOREStation Edit End
@@ -130,9 +130,9 @@ proc/get_radio_key_from_channel(var/channel)
 
 /mob/living/proc/get_speech_ending(verb, var/ending)
 	if(ending == "!")
-		return pick("exclaims","shouts","yells")
+		return pick("–≤–æ—Å–∫–ª–∏—Ü–∞–µ—Ç","–∫—Ä–∏—á–∏—Ç","–æ—Ä—ë—Ç")
 	if(ending == "?")
-		return "asks"
+		return "—Å–ø—Ä–∞—à–∏–≤–∞–µ—Ç"
 	return verb
 
 /mob/living/say(var/message, var/whispering = 0)
@@ -141,7 +141,7 @@ proc/get_radio_key_from_channel(var/channel)
 		if(message)
 			client.handle_spam_prevention(MUTE_IC)
 			if((client.prefs.muted & MUTE_IC) || say_disabled)
-				to_chat(src, "<span class='warning'>You cannot speak in IC (Muted).</span>")
+				to_chat(src, "<span class='warning'>–í—ã –Ω–µ –º–æ–∂–µ—Ç–µ –≥–æ–≤–æ—Ä–∏—Ç—å IC (–º—É—Ç).</span>")
 				return
 
 	//Redirect to say_dead if talker is dead
@@ -191,7 +191,7 @@ proc/get_radio_key_from_channel(var/channel)
 	// If you're muzzled, you can only speak sign language
 	// However, sign language is handled above.
 	if(is_muzzled())
-		to_chat(src, "<span class='danger'>You're muzzled and cannot speak!</span>")
+		to_chat(src, "<span class='danger'>–í–∞—à —Ä–æ—Ç –∑–∞—Ç–∫–Ω—É—Ç!</span>")
 		return
 
 	//Whisper vars
@@ -206,11 +206,11 @@ proc/get_radio_key_from_channel(var/channel)
 		verb = say_quote(message, first_piece.speaking)
 	else if(whispering && first_piece.speaking.whisper_verb) //Language has defined whisper verb
 		verb = first_piece.speaking.whisper_verb
-		w_not_heard = "[verb] something"
+		w_not_heard = "[verb] —á—Ç–æ-—Ç–æ"
 	else //Whispering but language has no whisper verb, use say verb
 		w_adverb = pick("quietly", "softly")
 		verb = first_piece.speaking.speech_verb
-		w_not_heard = "[first_piece.speaking.speech_verb] something [w_adverb]"
+		w_not_heard = "[first_piece.speaking.speech_verb] —á—Ç–æ-—Ç–æ [w_adverb]"
 
 	//For speech disorders (hulk, slurring, stuttering)
 	var/list/message_data = list(message_pieces, verb, whispering)
@@ -220,7 +220,7 @@ proc/get_radio_key_from_channel(var/channel)
 
 		if(verb != message_data[2]) //They changed our verb
 			if(whispering)
-				w_adverb = pick("quietly", "softly")
+				w_adverb = pick("—Ç–∏—Ö–æ", "–º—è–≥–∫–æ")
 			verb = message_data[2]
 
 	//Whisper may have adverbs, add those if one was set
@@ -254,7 +254,7 @@ proc/get_radio_key_from_channel(var/channel)
 			message_range = first_piece.speaking.get_talkinto_msg_range(message)
 		var/msg
 		if(!first_piece.speaking || !(first_piece.speaking.flags & NO_TALK_MSG))
-			msg = "<span class='notice'>[src] talks into [used_radios[1]]</span>"
+			msg = "<span class='notice'>[src] [ru_g_mob(src, "–≥–æ–≤–æ—Ä", "–∏—Ç", "–∏—Ç", "–∏—Ç", "—è—Ç")] –≤ [used_radios[1]]</span>"
 
 		if(msg)
 			for(var/mob/living/M in hearers(5, src) - src)
@@ -400,7 +400,7 @@ proc/get_radio_key_from_channel(var/channel)
 
 	//Log the message to file
 	if(message_mode)
-		message = "([message_mode == "headset" ? "Œ·˘ËÈ" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
+		message = "([message_mode == "headset" ? "–û–±—â–∏–π" : capitalize(message_mode)]) [message]" //Adds radio keys used if available
 	if(whispering)
 		log_whisper(message, src)
 	else

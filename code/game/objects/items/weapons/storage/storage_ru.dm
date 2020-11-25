@@ -4,10 +4,6 @@
 // backpack.dm
 //
 
-/*
- * Backpack
- */
-
 /obj/item/weapon/storage/backpack
 	name = "Рюкзак"
 	desc = "Он надевается на спину и используется для хранения предметов."

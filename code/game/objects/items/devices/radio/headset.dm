@@ -1,6 +1,6 @@
 /obj/item/device/radio/headset
-	name = "гарнитура"
-	desc = "Обновленный, модулярный интерком, надеваемый на голову. Поддерживает ключи шифрования."
+	name = "Гарнитура"
+	desc = "Обновлённый, модулярный интерком, надеваемый на голову. Поддерживает ключи шифрования."
 	var/radio_desc = ""
 	icon_state = "headset"
 	item_state = null //To remove the radio's state
@@ -109,93 +109,93 @@
 	ks1type = /obj/item/device/encryptionkey/binary
 
 /obj/item/device/radio/headset/headset_sec
-	name = "security radio headset"
-	desc = "This is used by your elite security force."
+	name = "Гарнитура службы безопасности"
+	desc = "Используется элитными охранниками порядка."
 	icon_state = "sec_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_sec
 
 /obj/item/device/radio/headset/headset_sec/alt
-	name = "security bowman headset"
-	desc = "This is used by your elite security force."
+	name = "Наушник службы безопасности"
+	desc = "Используется элитными охранниками порядка."
 	icon_state = "sec_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/headset_sec
 
 /obj/item/device/radio/headset/headset_eng
-	name = "engineering radio headset"
-	desc = "When the engineers wish to chat like girls."
+	name = "Гарнитура инженерного отдела"
+	desc = "Инженеры тоже любят сплетничать."
 	icon_state = "eng_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_eng
 
 /obj/item/device/radio/headset/headset_eng/alt
-	name = "engineering bowman headset"
-	desc = "When the engineers wish to chat like girls."
+	name = "Наушник инженерного отдела"
+	desc = "Инженеры тоже любят сплетничать."
 	icon_state = "eng_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/headset_eng
 
 /obj/item/device/radio/headset/headset_rob
-	name = "robotics radio headset"
-	desc = "Made specifically for the roboticists who cannot decide between departments."
+	name = "Гарнитура робототехника"
+	desc = "Специально для робототехников, которые не могут определиться со своим отделом."
 	icon_state = "rob_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_rob
 
 /obj/item/device/radio/headset/headset_med
-	name = "medical radio headset"
-	desc = "A headset for the trained staff of the medbay."
+	name = "Гарнитура медицинского отдела"
+	desc = "Для работников медицинского отдела."
 	icon_state = "med_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_med
 
 /obj/item/device/radio/headset/headset_med/alt
-	name = "medical bowman headset"
-	desc = "A headset for the trained staff of the medbay."
+	name = "Наушник медицинского отдела"
+	desc = "Для работников медицинского отдела."
 	icon_state = "med_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/headset_med
 
 /obj/item/device/radio/headset/headset_sci
-	name = "science radio headset"
-	desc = "A sciency headset. Like usual."
+	name = "Гарнитура научного отдела"
+	desc = "Гарнитура учёного. Ничего необычного."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_sci
 
 /obj/item/device/radio/headset/headset_medsci
-	name = "medical research radio headset"
-	desc = "A headset that is a result of the mating between medical and science."
+	name = "Гарнитура научно-медицинских отдела"
+	desc = "Потому что кто-то никак не мог определиться между наукой и медициной."
 	icon_state = "med_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_medsci
 
 /obj/item/device/radio/headset/headset_com
-	name = "command radio headset"
-	desc = "A headset with a commanding channel."
+	name = "Гарнитура Управления"
+	desc = "Гарнитура с доступом в канал Управления."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_com
 
 /obj/item/device/radio/headset/headset_com/alt
-	name = "command bowman headset"
-	desc = "A headset with a commanding channel."
+	name = "Наушник Управления"
+	desc = "Гарнитура с доступом в канал Управления."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/headset_com
 
 
 /obj/item/device/radio/headset/heads/captain
-	name = "site manager's headset"
-	desc = "The headset of the boss."
+	name = "Гарнитура Директора колонии"
+	desc = "Гарнитура босса."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/captain
 
 /obj/item/device/radio/headset/heads/captain/alt
-	name = "site manager's bowman headset"
-	desc = "The headset of the boss."
+	name = "Наушник Директора колонии"
+	desc = "Гарнитура босса."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/captain
 
 /obj/item/device/radio/headset/heads/captain/sfr
-	name = "SFR headset"
-	desc = "A headset belonging to a Sif Free Radio DJ. SFR, best tunes in the wilderness."
+	name = "Гарнитура БРС"
+	desc = "Гарнитура, принадлежащая диджею Бесплатного Радио Сифа. БРС, лучшие треки необитываемых территорий."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/captain
 
 /obj/item/device/radio/headset/heads/ai_integrated //No need to care about icons, it should be hidden inside the AI anyway.
-	name = "\improper AI subspace transceiver"
-	desc = "Integrated AI radio transceiver."
+	name = "Субкосмический трансивер ИИ"
+	desc = "Интегрированный трансивер радио для ИИ."
 	icon = 'icons/obj/robot_component.dmi'
 	icon_state = "radio"
 	item_state = "headset"
@@ -209,101 +209,101 @@
 	return ..(freq, level, 1)
 
 /obj/item/device/radio/headset/heads/rd
-	name = "research director's headset"
-	desc = "Headset of the researching God."
+	name = "Гарнитура Директора исследований"
+	desc = "Гарнитура бога науки."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/rd
 
 /obj/item/device/radio/headset/heads/rd/alt
-	name = "research director's bowman headset"
-	desc = "Headset of the researching God."
+	name = "Наушник Директора исследований"
+	desc = "Гарнитура бога науки."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/rd
 
 /obj/item/device/radio/headset/heads/hos
-	name = "head of security's headset"
-	desc = "The headset of the man who protects your worthless lifes."
+	name = "Гарнитура Главы службы безопасности"
+	desc = "Гарнитура того, кто защищает все ваши никчёмные жизни."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hos
 
 /obj/item/device/radio/headset/heads/hos/alt
-	name = "head of security's bowman headset"
-	desc = "The headset of the man who protects your worthless lifes."
+	name = "Наушник Главы службы безопасности"
+	desc = "Гарнитура того, кто защищает все ваши никчёмные жизни."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/hos
 
 /obj/item/device/radio/headset/heads/ce
-	name = "chief engineer's headset"
-	desc = "The headset of the guy who is in charge of morons"
+	name = "Гарнитура Главного инженера"
+	desc = "Гарнитура того, кто отвечает за кучку идиотов."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/ce
 
 /obj/item/device/radio/headset/heads/ce/alt
-	name = "chief engineer's bowman headset"
-	desc = "The headset of the guy who is in charge of morons"
+	name = "Наушник Главного инженера"
+	desc = "Гарнитура того, кто отвечает за кучку идиотов."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/ce
 
 /obj/item/device/radio/headset/heads/cmo
-	name = "chief medical officer's headset"
-	desc = "The headset of the highly trained medical chief."
+	name = "Гарнитура Главврача"
+	desc = "Гарнитура опытного главного врача."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/cmo
 
 /obj/item/device/radio/headset/heads/cmo/alt
-	name = "chief medical officer's bowman headset"
-	desc = "The headset of the highly trained medical chief."
+	name = "Наушник Главврача"
+	desc = "Гарнитура опытного главного врача."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/cmo
 
 /obj/item/device/radio/headset/heads/hop
-	name = "head of personnel's headset"
-	desc = "The headset of the guy who will one day be Site Manager."
+	name = "Гарнитура Главы персонала"
+	desc = "Гарнитура того, кто однажды станет Директором колонии."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hop
 
 /obj/item/device/radio/headset/heads/hop/alt
-	name = "head of personnel's bowman headset"
-	desc = "The headset of the guy who will one day be Site Manager."
+	name = "Наушник Главы персонала"
+	desc = "Гарнитура того, кто однажды станет Директором колонии."
 	icon_state = "com_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/heads/hop
 
 /obj/item/device/radio/headset/headset_mine
-	name = "mining radio headset"
-	desc = "Headset used by miners. Has inbuilt short-band radio for when comms are down."
+	name = "Гарнитура шахтёра"
+	desc = "Гарнитура, используемая шахтёрами. Имеет встроенное короткочастотное радио на случай отключения связи."
 	icon_state = "mine_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/headset_cargo
 
 /obj/item/device/radio/headset/headset_cargo
-	name = "supply radio headset"
-	desc = "A headset used by the QM and his slaves."
+	name = "Гарнитура отдела снабжения"
+	desc = "Гарнитура, используемая Квартирмейстерами и их рабами."
 	icon_state = "cargo_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_cargo
 
 /obj/item/device/radio/headset/headset_cargo/alt
-	name = "supply bowman headset"
-	desc = "A bowman headset used by the QM and his slaves."
+	name = "Наушник отдела снабжения"
+	desc = "Гарнитура, используемая Квартирмейстерами и их рабами."
 	icon_state = "cargo_headset_alt"
 	ks2type = /obj/item/device/encryptionkey/headset_cargo
 
 /obj/item/device/radio/headset/headset_service
-	name = "service radio headset"
-	desc = "Headset used by the service staff, tasked with keeping the station full, happy and clean."
+	name = "Гарнитура обслуживающего персонала"
+	desc = "Гарнитура, используемая обслуживающим персоналом, поддерживающем станцию в чистоте и хорошем настроении."
 	icon_state = "srv_headset"
 	ks2type = /obj/item/device/encryptionkey/headset_service
 
 /obj/item/device/radio/headset/ert
-	name = "emergency response team radio headset"
-	desc = "The headset of the boss's boss."
+	name = "Гарнитура группы экстренного реагирования"
+	desc = "Гарнитура босса Вашего босса."
 	icon_state = "com_headset"
 	centComm = 1
 //	freerange = 1
 	ks2type = /obj/item/device/encryptionkey/ert
 
 /obj/item/device/radio/headset/ert/alt
-	name = "emergency response team bowman headset"
-	desc = "The headset of the boss's boss."
+	name = "Наушник группы экстренного реагирования"
+	desc = "Гарнитура босса Вашего босса."
 	icon_state = "com_headset_alt"
 //	freerange = 1
 	ks2type = /obj/item/device/encryptionkey/ert
@@ -312,14 +312,14 @@
 	ks2type = /obj/item/device/encryptionkey/omni
 
 /obj/item/device/radio/headset/ia
-	name = "internal affair's headset"
-	desc = "The headset of your worst enemy."
+	name = "Гарнитура агента внутренних дел"
+	desc = "Гарнитура Вашего самого заклятого врага."
 	icon_state = "com_headset"
 	ks2type = /obj/item/device/encryptionkey/heads/hos
 
 /obj/item/device/radio/headset/mmi_radio
-	name = "brain-integrated radio"
-	desc = "MMIs and synthetic brains are often equipped with these."
+	name = "Вживлённая рация"
+	desc = "Такие обычно имеются у ЧМИ и синтетиков."
 	icon = 'icons/obj/robot_component.dmi'
 	icon_state = "radio"
 	item_state = "headset"
@@ -361,15 +361,15 @@
 					keyslot2 = null
 
 			recalculateChannels()
-			to_chat(user, "You pop out the encryption keys in the headset!")
+			to_chat(user, "Вы достаёте ключ шифрования из гарнитуры!")
 			playsound(src, W.usesound, 50, 1)
 
 		else
-			to_chat(user, "This headset doesn't have any encryption keys!  How useless...")
+			to_chat(user, "В этой гарнитуре нет ключей шифрования! И на кой она тогда вообще...")
 
 	if(istype(W, /obj/item/device/encryptionkey/))
 		if(keyslot1 && keyslot2)
-			to_chat(user, "The headset can't hold another key!")
+			to_chat(user, "Сюда не вместится ещё один ключ!")
 			return
 
 		if(!keyslot1)
@@ -431,7 +431,14 @@
 		if(!radio_controller)
 			sleep(30) // Waiting for the radio_controller to be created.
 		if(!radio_controller)
-			src.name = "broken radio headset"
+			src.name = "Сломанная гарнитура"
+			src.rugender = "female"
+			src.ncase = "сломанная гарнитура"
+			src.gcase = "сломанной гарнитуры"
+			src.dcase = "сломанной гарнитуре"
+			src.acase = "сломанную гарнитуру"
+			src.icase = "сломанной гарнитурой"
+			src.pcase = "сломанной гарнитуре"
 			return
 
 		secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
