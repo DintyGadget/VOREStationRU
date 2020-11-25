@@ -133,7 +133,7 @@
 		if(accessory_amount == 1)
 			A = accessories[1] // If there's only one accessory, just remove it without any additional prompts.
 		else
-			A = input("Выберите аксессуар, который нужно снять с [ru_getcase(src, "gcase")) as null|anything in accessories
+			A = input("Выберите аксессуар, который нужно снять с [ru_getcase(src, "gcase")]") as null|anything in accessories
 
 	if(A)
 		remove_accessory(usr,A)

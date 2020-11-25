@@ -97,7 +97,7 @@
 /obj/item/clothing/mask/gas/sechailer/emag_act(mob/user)
 	if(safety)
 		safety = 0
-		to_chat(user, "<span class='warning'>Вы тихонечко замыкаете голосую микросхему [src.gcase] при помощи криптографического секвенсера.</span>")
+		to_chat(user, "<span class='warning'>Вы тихонечко замыкаете голосую микросхему [ru_getcase(src, "gcase")] при помощи криптографического секвенсера.</span>")
 	else
 		return
 

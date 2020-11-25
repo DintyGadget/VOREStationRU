@@ -50,7 +50,7 @@
 		shoes = H.shoes
 		if(shoes.overshoes)
 			if(slot && slot == slot_shoes)
-				to_chat(user, "Вы не можете надеть [ru_getcase(src, "acase")], так как Вам меша[H.shoes.rugender == "plural" ? "ют" : "ет"] [H.shoes.ncase].")
+				to_chat(user, "Вы не можете надеть [ru_getcase(src, "acase")], так как Вам [ru_g_obj(H.shoes, "меша", "ет", "ет", "ет", "ют")] [ru_getcase(H.shoes, "ncase")].")
 			shoes = null
 			return 0
 		H.drop_from_inventory(shoes)	//Remove the old shoes so you can put on the magboots.
@@ -64,7 +64,7 @@
 
 	if (shoes)
 		if(slot && slot == slot_shoes)
-			to_chat(user, "Вы надеваете [ru_getcase(src, "acase")] поверх сво[shoes.rugender == "male" ? "его" : shoes.rugender == "female" ? "ей" : shoes.rugender == "neuter" ? "его" : "их"] [shoes.gcase].")
+			to_chat(user, "Вы надеваете [ru_getcase(src, "acase")] поверх [ru_g_obj(shoes, "сво", "его", "её", "его", "их")] [ru_getcase(shoes, "gcase")].")
 	set_slowdown()
 	wearer = H
 	return 1

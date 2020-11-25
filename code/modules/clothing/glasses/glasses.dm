@@ -491,7 +491,7 @@ BLIND     // can't see anything
 	emp_act(severity)
 		if(istype(src.loc, /mob/living/carbon/human))
 			var/mob/living/carbon/human/M = src.loc
-			to_chat(M, "<font color='red'[capitalize(src.ncase)] [ru_g_obj(src, "перегружа", "ется", "ется", "ется", "ются"], ослепляя Вас!</font>")
+			to_chat(M, "<font color='red'[capitalize(src.ncase)] [ru_g_obj(src, "перегружа", "ется", "ется", "ется", "ются")], ослепляя Вас!</font>")
 			if(M.glasses == src)
 				M.Blind(3)
 				M.eye_blurry = 5

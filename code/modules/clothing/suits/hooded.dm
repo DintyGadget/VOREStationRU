@@ -49,7 +49,7 @@
 		if(ishuman(loc))
 			var/mob/living/carbon/human/H = src.loc
 			if(H.wear_suit != src)
-				to_chat(H, "<span class='warning'>Нужно сперва надеть на себя [src.acase]!</span>")
+				to_chat(H, "<span class='warning'>Нужно сперва надеть на себя [ru_getcase(src, "acase")]!</span>")
 				return
 			if(H.head)
 				to_chat(H, "<span class='warning'>У Вас уже надето что-то на голову!</span>")

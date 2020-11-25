@@ -43,19 +43,21 @@
 	if(case == "pcase" && obj.rugender != "unset") return obj.pcase	
 	return obj.name
 
-/proc/ru_g_end(var/mob/user, base_verb = "", he_end = "", she_end = "а", it_end = "о", they_end = "и")
+//Gives the mob verbs an ending
+/proc/ru_g_mob(var/mob/user, base_verb = "", he_end = "", she_end = "а", it_end = "о", they_end = "и")
 	var/datum/gender/user_gender = gender_datums[user.get_visible_gender()]
 	switch(user_gender.ru_g_ncase)
 		if("он") return "[base_verb][he_end]"
 		if("она") return "[base_verb][she_end]"
 		if("оно") return "[base_verb][it_end]"
 		if("они") return "[base_verb][they_end]"
-		else return
+		else return "[base_verb][he_end]"
 
-/proc/ru_g_obj(var/obj/obj, male_pronoun = "он", female_pronoun = "она", neuter_pronoun = "оно", plural_pronoun = "они")
+// Gives the object verb an ending
+/proc/ru_g_obj(var/obj/obj, base_verb = "", male_pronoun = "", female_pronoun = "а", neuter_pronoun = "о", plural_pronoun = "ы")
 	switch(obj.rugender)
-		if("male") return male_pronoun
-		if("female") return female_pronoun
-		if("neuter") return neuter_pronoun
-		if("plural") return plural_pronoun
-		else return neuter_pronoun
+		if("male") return "[base_verb][male_pronoun]"
+		if("female") return "[base_verb][female_pronoun]"
+		if("neuter") return "[base_verb][neuter_pronoun]"
+		if("plural") return "[base_verb][plural_pronoun]"
+		else return "[base_verb][male_pronoun]"

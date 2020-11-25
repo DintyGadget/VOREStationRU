@@ -41,22 +41,22 @@
 		if(prob(10))
 			icon_state = "3d"
 			if(ishuman(loc))
-				to_chat(loc, "<span class='warning'>Линзы ваших [src.gcase] дают сбой!</span>")
+				to_chat(loc, "<span class='warning'>Линзы ваших [ru_getcase(src, "gcase")] дают сбой!</span>")
 	..()
 
 /obj/item/clothing/glasses/omnihud/proc/flashed()
 	if(flash_prot && ishuman(loc))
-		to_chat(loc, "<span class='warning'>Ваши [src.ncase] затемняются, чтобы защитить Вас от вспышки!</span>")
+		to_chat(loc, "<span class='warning'>Ваши [ru_getcase(src, "ncase")] затемняются, чтобы защитить Вас от вспышки!</span>")
 
 /obj/item/clothing/glasses/omnihud/prescribe(var/mob/user)
 	prescription = !prescription
 	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 	if(prescription)
-		user.visible_message("[user] загружает новый рецепт в [src.acase] и перенастраивает линзы.")
+		user.visible_message("[user] загружает новый рецепт в [ru_getcase(src, "acase")] и перенастраивает линзы.")
 		name = "[initial(name)] (близ.)" //change the name *after* the text so the message above is accurate
 		icon_state = "[initial(icon_state)]" //reset the icon state just to be safe
 	else
-		user.visible_message("[user] удаляет рецепт из [src.gcase] и перенастраивает линзы.")
+		user.visible_message("[user] удаляет рецепт из [ru_getcase(src, "gcase")] и перенастраивает линзы.")
 		name = "[initial(name)]"
 		icon_state = "[initial(icon_state)]"
 
@@ -66,10 +66,10 @@
 
 	var/mob/living/carbon/human/H = user
 	if(!H.glasses || !(H.glasses == src))
-		to_chat(user, "<span class='warning'>Вам нужно носить [src.acase] на себе, чтобы увидеть оверлей.</span>")
+		to_chat(user, "<span class='warning'>Вам нужно носить [ru_getcase(src, "acase")] на себе, чтобы увидеть оверлей.</span>")
 	else
 		if(!ar_interact(H))
-			to_chat(user, "<span class='warning'>У [src.gcase] нет каких-либо особых оверлеев.</span>")
+			to_chat(user, "<span class='warning'>У [ru_getcase(src, "gcase")] нет каких-либо особых оверлеев.</span>")
 
 //cosmetic shading, doesn't enhance eye protection
 /obj/item/clothing/glasses/omnihud/verb/chromatize()
@@ -80,7 +80,7 @@
 	if(!usr.canmove || usr.stat || usr.restrained())
 		return
 	if(icon_state == "3d")
-		to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в нормальный режим.")
+		to_chat(usr, "Вы переключаете электрохромные линзы своих [ru_getcase(src, "gcase")] в нормальный режим.")
 		if(prescription)
 			name = "[initial(name)] (pr)"
 		else
@@ -88,26 +88,26 @@
 		icon_state = "[initial(icon_state)]"
 	else if(prescription)
 		if(icon_state == "glasses")
-			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в режим односторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [ru_getcase(src, "gcase")] в режим односторонней прозрачности.")
 			name = "[initial(name)] (затененные, близ.)"
 			icon_state = "sun"
 		else if(icon_state == "sun")
-			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в стандартный режим двухсторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [ru_getcase(src, "gcase")] в стандартный режим двухсторонней прозрачности.")
 			name = "[initial(name)] (близ.)"
 			icon_state = "glasses"
 		else
-			to_chat(usr, "У [src.gcase] нет такой функции.")
+			to_chat(usr, "У [ru_getcase(src, "gcase")] нет такой функции.")
 	else if(!prescription)
 		if(icon_state == "glasses")
-			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в режим односторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [ru_getcase(src, "gcase")] в режим односторонней прозрачности.")
 			name = "[initial(name)] (затененные)"
 			icon_state = "sun"
 		else if(icon_state == "sun")
-			to_chat(usr, "Вы переключаете электрохромные линзы своих [src.gcase] в стандартный режим двухсторонней прозрачности.")
+			to_chat(usr, "Вы переключаете электрохромные линзы своих [ru_getcase(src, "gcase")] в стандартный режим двухсторонней прозрачности.")
 			name = "[initial(name)]"
 			icon_state = "glasses"
 		else
-			to_chat(usr, "У [src.gcase] нет такой функции.")
+			to_chat(usr, "У [ru_getcase(src, "gcase")] нет такой функции.")
 	update_clothing_icon()
 
 /obj/item/clothing/glasses/omnihud/proc/ar_interact(var/mob/living/carbon/human/user)
@@ -198,13 +198,13 @@
 			icon_state = off_state
 			item_state = "[initial(item_state)]-off"
 			usr.update_inv_glasses()
-			to_chat(usr, "Вы деактивируете ретинальный проектор своих [src.gcase].")
+			to_chat(usr, "Вы деактивируете ретинальный проектор своих [ru_getcase(src, "gcase")].")
 		else
 			active = 1
 			icon_state = initial(icon_state)
 			item_state = initial(item_state)
 			usr.update_inv_glasses()
-			to_chat(usr, "Вы активируете ретинальный проектор своих [src.gcase].")
+			to_chat(usr, "Вы активируете ретинальный проектор своих [ru_getcase(src, "gcase")].")
 		usr.update_action_buttons()
 
 /obj/item/clothing/glasses/omnihud/all

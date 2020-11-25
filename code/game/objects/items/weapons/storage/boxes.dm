@@ -20,8 +20,8 @@
  */
 
 /obj/item/weapon/storage/box
-	name = "box"
-	desc = "Это просто обычная коробка."
+	name = "Коробка"
+	desc = "Это просто обыкновенная коробка."
 	icon_state = "box"
 	item_state = "syringe_kit"
 	center_of_mass = list("x" = 13,"y" = 10)
@@ -51,7 +51,7 @@
 		if (!found)	// User is too far away
 			return
 		// Now make the cardboard
-		to_chat(user, "<span class='notice'>You fold [src] flat.</span>")
+		to_chat(user, "<span class='notice'>Вы сдавливаете [ru_getcase(src, "acase")] в плоскую форму.</span>")
 		playsound(src, 'sound/items/storage/boxfold.ogg', 30, 1)
 		new foldable(get_turf(src))
 		qdel(src)
@@ -59,10 +59,10 @@
 	//try to crush it
 	if(ispath(trash))
 		if(contents.len &&  user.a_intent == I_HURT)  // only crumple with things inside on harmintent.
-			user.visible_message(SPAN_DANGER("[user] crushes \the [src], spilling its contents everywhere!"), SPAN_DANGER("You crush \the [src], spilling its contents everywhere!"))
+			user.visible_message(SPAN_DANGER("[user] [ru_g_end(user, "смина", "ет", "ет", "ет", "ют")] [ru_getcase(src, "acase")], выбрасывая содержимое!"), SPAN_DANGER("Вы сминаете [ru_getcase(src, "acase")], выбрасывая содержимое!"))
 			spill()
 		else
-			to_chat(user, SPAN_NOTICE("You crumple up \the [src].")) //make trash
+			to_chat(user, SPAN_NOTICE("Вы сминаете [ru_getcase(src, "acase"].")) //make trash
 		playsound(src.loc, 'sound/items/drop/wrapper.ogg', 30, 1)
 		var/obj/item/trash = new src.trash()
 		qdel(src)
@@ -70,21 +70,21 @@
 
 
 /obj/item/weapon/storage/box/survival
-	name = "emergency supply box"
-	desc = "Спасательный набор, выдаваемый членам экипажа для использования в чрезвычайных ситуациях."
+	name = "Коробка аварийных припасов"
+	desc = "Коробка, содержащая припасы на случай чрезвычайных ситуаций."
 	starts_with = list(
 		/obj/item/clothing/mask/breath
 	)
 
 /obj/item/weapon/storage/box/survival/synth
-	name = "synthetic supply box"
-	desc = "Набор выживания, выдаваемая синтетическим членам экипажа для использования в чрезвычайных ситуациях."
+	name = "Коробка синтетических припасов"
+	desc = "Коробка, содержащая припасы для синтетических членов экипажа на случай чрезвычайных ситуаций."
 	starts_with = list(
 	)
 
 /obj/item/weapon/storage/box/survival/comp
-	name = "emergency supply box"
-	desc = "Комплексный набор выживания, выдаваемый членам экипажа для использования в чрезвычайных ситуациях. Содержит дополнительные материалы."
+	name = "Коробка аварийных припасов"
+	desc = "Коробка, содержащая большое количество припасов на случай чрезвычайных ситуаций."
 	icon_state = "survival"
 	starts_with = list(
 		/obj/item/weapon/reagent_containers/hypospray/autoinjector,
@@ -95,46 +95,46 @@
 	)
 
 /obj/item/weapon/storage/box/gloves
-	name = "box of latex gloves"
+	name = "Коробка латексных перчаток"
 	desc = "Содержит белые перчатки."
 	icon_state = "latex"
 	starts_with = list(/obj/item/clothing/gloves/sterile/latex = 7)
 
 /obj/item/weapon/storage/box/masks
-	name = "box of sterile masks"
-	desc = "Эта коробка содержит стерильные маски."
+	name = "Коробка стерильных масок"
+	desc = "Содержит стерильные маски."
 	icon_state = "sterile"
 	starts_with = list(/obj/item/clothing/mask/surgical = 7)
 
 /obj/item/weapon/storage/box/syringes
-	name = "box of syringes"
-	desc = "Коробка, полная шприцов."
+	name = "Коробка шприцов"
+	desc = "Коробка, доверху забитая шприцами."
 	icon_state = "syringe"
 	starts_with = list(/obj/item/weapon/reagent_containers/syringe = 7)
 
 /obj/item/weapon/storage/box/syringegun
-	name = "box of syringe gun cartridges"
-	desc = "Коробка, полная баллончиков со сжатым газом."
+	name = "Коробка картриджей для шприцемёта"
+	desc = "Коробка, доверху забитая картриджами сжатого газа."
 	icon_state = "syringe"
 	starts_with = list(/obj/item/weapon/syringe_cartridge = 7)
 
 /obj/item/weapon/storage/box/beakers
-	name = "box of beakers"
-	desc = "Коробка, полная мензурок."
+	name = "Коробка мензурок"
+	desc = "Коробка, доверху забитая мензурками."
 	icon_state = "beaker"
 	starts_with = list(/obj/item/weapon/reagent_containers/glass/beaker = 7)
 
 /obj/item/weapon/storage/box/injectors
-	name = "box of DNA injectors"
-	desc = "Кажется, в этой коробке находятся форсунки."
+	name = "Коробка инъекторов ДНК"
+	desc = "В этой коробке много инъекторов, видимо."
 	starts_with = list(
 		/obj/item/weapon/dnainjector/h2m = 3,
 		/obj/item/weapon/dnainjector/m2h = 3
 	)
 
 /obj/item/weapon/storage/box/blanks
-	name = "box of blank shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков."
+	name = "Коробка пустых патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов."
 	icon_state = "blankshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/blank = 8)
@@ -145,8 +145,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/blank = 16)
 
 /obj/item/weapon/storage/box/beanbags
-	name = "box of beanbag shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка пластиковых патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	icon_state = "beanshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 8)
@@ -157,8 +157,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/beanbag = 16)
 
 /obj/item/weapon/storage/box/shotgunammo
-	name = "box of shotgun slugs"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка ружейных жаканов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	icon_state = "lethalshellshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g = 8)
@@ -169,8 +169,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g = 16)
 
 /obj/item/weapon/storage/box/shotgunshells
-	name = "box of shotgun shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка ружейных патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	icon_state = "lethalslug_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/pellet = 8)
@@ -181,8 +181,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/pellet = 16)
 
 /obj/item/weapon/storage/box/flashshells
-	name = "box of illumination shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка световых патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	icon_state = "illumshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/flash = 8)
@@ -193,8 +193,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/flash = 16)
 
 /obj/item/weapon/storage/box/stunshells
-	name = "box of stun shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка оглушающих патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	icon_state = "stunshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/stunshell = 8)
@@ -205,8 +205,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/stunshell = 16)
 
 /obj/item/weapon/storage/box/practiceshells
-	name = "box of practice shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка учебных патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	icon_state = "blankshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/practice = 8)
@@ -217,8 +217,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/practice = 16)
 
 /obj/item/weapon/storage/box/empshells
-	name = "box of emp shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков."
+	name = "Коробка ЭМИ-патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов."
 	icon_state = "empshot_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/emp = 8)
@@ -229,8 +229,8 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/emp = 16)
 
 /obj/item/weapon/storage/box/flechetteshells
-	name = "box of shotgun flechettes"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка стреловидных патронов"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	icon_state = "lethalslug_box"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(/obj/item/ammo_casing/a12g/flechette = 8)
@@ -241,93 +241,93 @@
 	starts_with = list(/obj/item/ammo_casing/a12g/flechette = 16)
 
 /obj/item/weapon/storage/box/sniperammo
-	name = "box of 14.5mm shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка патронов 14.5 мм"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	starts_with = list(/obj/item/ammo_casing/a145 = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/sniperammo/highvel
-	name = "box of 14.5mm sabot shells"
-	desc = "На фронтальной части коробки имеется изображение оружия и несколько предупреждающих знаков.<br>ВНИМАНИЕ: Боевые патроны. Неправильное использование может привести к серьезным травмам или смерти."
+	name = "Коробка саботажных патронов 14.5 мм"
+	desc = "На ней изображение ружья и несколько предупреждающих символов.<br>ВНИМАНИЕ: Настоящие патроны. Неправильное использование может привести к травме или гибели."
 	starts_with = list(/obj/item/ammo_casing/a145/highvel = 7)
 
 /obj/item/weapon/storage/box/flashbangs
-	name = "box of flashbangs (WARNING)"
-	desc = "<B>ВНИМАНИЕ: Эти устройства чрезвычайно опасны и могут вызвать слепоту или глухоту при повторном использовании.</B>"
+	name = "Коробка светошумовых гранат (ОСТОРОЖНО)"
+	desc = "<B>ВНИМАНИЕ: Эти приспособления крайне опасны и могут привести к слепоте и глухоте при многократном использовании.</B>"
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/flashbang = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/emps
-	name = "box of emp grenades"
-	desc = "Коробка с 5 ЭМИ гранатами военного класса.<br> ВНИМАНИЕ: Не используйте рядом с неэкранированной электроникой или биомеханическими аугментациями, это может привести к смерти или необратимому параличу."
+	name = "Коробка ЭМИ-гранат"
+	desc = "Коробка, содержащая 5 ЭМИ-гранат военного качества.<br> ВНИМАНИЕ: Не использовать близи незащищенной электроники или биомеханических компонентов в связис с риском гибели или перманентного паралича."
 	icon_state = "emp"
 	starts_with = list(/obj/item/weapon/grenade/empgrenade = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/empslite
-	name = "box of low yield emp grenades"
-	desc = "Коробка, содержащий 5 ЭМИ-гранат малой мощности.<br> WARNING: Do not use near unshielded electronics or biomechanical augmentations, death or permanent paralysis may occur."
+	name = "Коробка слабых ЭМИ-гранат"
+	desc = "Коробка, содержащая 5 ЭМИ-гранат слабой мощности.<br> ВНИМАНИЕ: Не использовать близи незащищенной электроники или биомеханических компонентов в связис с риском гибели или перманентного паралича."
 	icon_state = "emp"
 	starts_with = list(/obj/item/weapon/grenade/empgrenade/low_yield = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/smokes
-	name = "box of smoke bombs"
-	desc = "Коробка с 7 дымовыми шашками."
+	name = "Коробка дымовых гранат"
+	desc = "Коробка, содержащая 7 дымовых гранат."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/smokebomb = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/anti_photons
-	name = "box of anti-photon grenades"
-	desc = "Коробка с 7 экспериментальными фотонными гранатами."
+	name = "Коробка антифотоновых гранат"
+	desc = "Коробка, содержащая 7 экспериментальных антифотоновых гранат."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/anti_photon = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/frags
-	name = "box of fragmentation grenades (WARNING)"
-	desc = "Коробка с 7 осколочными гранатами военного назначения.<br> ВНИМАНИЕ: Эти устройства чрезвычайно опасны и могут привести к потере конечности или смерти при повторном использовании."
+	name = "Коробка осколочных гранат (ОСТОРОЖНО)"
+	desc = "Коробка, содержащая 7 осколочных гранат военного качества. <br> ВНИМАНИЕ: Эти приспособления крайне опасны и могут привести к утрате конечностей или смерти при многократном использовании."
 	icon_state = "frag"
 	starts_with = list(/obj/item/weapon/grenade/explosive = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/frags_half_box
-	name = "box of fragmentation grenades (WARNING)"
-	desc = "Коробка с 4-мя осколочными гранатами военного назначения.<br> ВНИМАНИЕ: Эти устройства чрезвычайно опасны и могут привести к потере конечности или смерти при повторном использовании."
+	name = "Коробка осколочных гранат (ОСТОРОЖНО)"
+	desc = "Коробка, содержащая 4 осколочных гранат военного качества. <br> ВНИМАНИЕ: Эти приспособления крайне опасны и могут привести к утрате конечностей или смерти при многократном использовании."
 	icon_state = "frag"
 	starts_with = list(/obj/item/weapon/grenade/explosive = 4)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
 
 /obj/item/weapon/storage/box/metalfoam
-	name = "box of metal foam grenades."
-	desc = "Коробка с 7 гранатами из пенопласта."
+	name = "Коробка металлопенных гранат"
+	desc = "Коробка, содержащая 7 металлопенных гранат."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/chem_grenade/metalfoam = 7)
 
 /obj/item/weapon/storage/box/teargas
-	name = "box of teargas grenades"
-	desc = "Коробка с 7 гранатами со слезоточивым газом."
+	name = "Коробка гранат со слезоточивым газом"
+	desc = "Коробка, содержащая 7 гранат со слезоточивым газом."
 	icon_state = "flashbang"
 	starts_with = list(/obj/item/weapon/grenade/chem_grenade/teargas = 7)
 
 /obj/item/weapon/storage/box/flare
-	name = "box of flares"
-	desc = "Коробка с 4 ракетами."
+	name = "Коробка сигнальных ракет"
+	desc = "Коробка, содержащая 4 сигнальных ракеты."
 	starts_with = list(/obj/item/device/flashlight/flare = 4)
 
 /obj/item/weapon/storage/box/trackimp
-	name = "boxed tracking implant kit"
-	desc = "Коробка, полная вещей для слежения за подонками."
+	name = "Набор имплантантов отслеживания"
+	desc = "Коробка, забитая доверху приспособлениями для отслеживания отморозков."
 	icon_state = "implant"
 	starts_with = list(
 		/obj/item/weapon/implantcase/tracking = 4,
@@ -337,8 +337,8 @@
 	)
 
 /obj/item/weapon/storage/box/chemimp
-	name = "boxed chemical implant kit"
-	desc = "Коробка с вещами, используемыми для имплантации химикатов."
+	name = "Набор химических имплантантов"
+	desc = "Коробка приспособлений для вживления химических имплантантов."
 	icon_state = "implant"
 	starts_with = list(
 		/obj/item/weapon/implantcase/chem = 5,
@@ -347,8 +347,8 @@
 	)
 
 /obj/item/weapon/storage/box/camerabug
-	name = "mobile camera pod box"
-	desc = "Коробка с мобильными камерами."
+	name = "Коробка подвижных камер слежки"
+	desc = "Коробка, содержащая несколько подвижных камер слежки."
 	icon_state = "pda"
 	starts_with = list(
 		/obj/item/device/camerabug = 6,
@@ -356,14 +356,14 @@
 	)
 
 /obj/item/weapon/storage/box/rxglasses
-	name = "box of prescription glasses"
-	desc = "В этой коробке находятся очки для задротов."
+	name = "Коробка рецептурных очков"
+	desc = "Эта коробка содержит очки для ботанов."
 	icon_state = "glasses"
 	starts_with = list(/obj/item/clothing/glasses/regular = 7)
 
 /obj/item/weapon/storage/box/cdeathalarm_kit
-	name = "death alarm kit"
-	desc = "Коробка с вещами, которые используются для установки сигналов о смерти."
+	name = "Набор сигнализации о гибели"
+	desc = "Коробка с принадлежностями для вживления имплантанта, сигнализирующего о смерти."
 	icon_state = "implant"
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	starts_with = list(
@@ -372,97 +372,97 @@
 	)
 
 /obj/item/weapon/storage/box/condimentbottles
-	name = "box of condiment bottles"
-	desc = "На ней большой мазок кетчупа."
+	name = "Коробка бутылок для ингредиентов"
+	desc = "На ней огромный след от кетчупа."
 	starts_with = list(/obj/item/weapon/reagent_containers/food/condiment = 7)
 
 /obj/item/weapon/storage/box/cups
-	name = "box of paper cups"
-	desc = "На лицевой стороне изображены бумажные стаканчики."
+	name = "Коробка бумажных стаканчиков"
+	desc = "На ней картинки с бумажными стаканчиками."
 	starts_with = list(/obj/item/weapon/reagent_containers/food/drinks/sillycup = 7)
 
 /obj/item/weapon/storage/box/donkpockets
-	name = "box of donk-pockets"
-	desc = "<B>Инструкция:</B> <I>Нагрейте в микроволновой печи. Продукт остынет, если его не съесть в течение семи минут.</I>"
+	name = "Коробка донк-покетов"
+	desc = "<B>Инструкция по приготовлению:</B> <I>Разогрейте в микроволновке. Продукт остывает спустя семь минут.</I>"
 	icon_state = "donk_kit"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/donkpocket = 7)
 
 /obj/item/weapon/storage/box/sinpockets
-	name = "box of sin-pockets"
-	desc = "<B>Инструкция:</B> <I>Раздавите нижнюю часть упаковки, чтобы вызвать химический нагрев. Подождите 20 секунд перед употреблением. Продукт остынет, если его не съесть в течение семи минут.</I>"
+	name = "Коробка син-покетов"
+	desc = "<B>Инструкция:</B> <I>Придавите нижнюю часть коробки для активации химического разогрева. Подождите 20 секунд перед употреблением. Продукт остывает спустя семь минут.</I>"
 	icon_state = "donk_kit"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/donkpocket/sinpocket = 7)
 
 /obj/item/weapon/storage/box/buns
-	name = "box of bread buns"
-	desc = "Свежеиспеченный в какой-то момент хлеб, за последние несколько месяцев."
+	name = "Коробка хлебных булок"
+	desc = "Словно только что из духовки, месяц или два назад."
 	icon_state = "bun_box"
 	max_storage_space = ITEMSIZE_COST_NORMAL * 5
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/bun = 12)
 
 /obj/item/weapon/storage/box/monkeycubes
-	name = "monkey cube box"
-	desc = "Кубики обезьяны бренда Drymate. Просто добавьте воды!"
+	name = "Коробка обезьяньих кубов"
+	desc = "Обезьяньи кубы бренда Drymate. Просто добавьте воды!"
 	icon = 'icons/obj/food.dmi'
 	icon_state = "monkeycubebox"
 	can_hold = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube)
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped = 4)
 
 /obj/item/weapon/storage/box/monkeycubes/farwacubes
-	name = "farwa cube box"
-	desc = "Кубики фарвы марки Drymate, поставляемые с Мералара. Просто добавьте воды!"
+	name = "Коробка фарвовых кубов"
+	desc = "Фарвовые кубы бренда Drymate. Просто добавьте воды!"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/farwacube = 4)
 
 /obj/item/weapon/storage/box/monkeycubes/stokcubes
-	name = "stok cube box"
-	desc = "Кубики кочегарки марки Drymate, отгруженные с Могеса. Просто добавьте воды!"
+	name = "Коробка стоковых кубов"
+	desc = "Стоковые кубы бренда Drymate. Просто добавьте воды!"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/stokcube = 4)
 
 /obj/item/weapon/storage/box/monkeycubes/neaeracubes
-	name = "neaera cube box"
-	desc = "Кубики neaera марки Drymate, поставляемые с Керр'Балака. Просто добавьте воды!"
+	name = "Коробка нееровых кубов"
+	desc = "Нееровы кубы бренда Drymate. Просто добавьте воды!"
 	starts_with = list(/obj/item/weapon/reagent_containers/food/snacks/monkeycube/wrapped/neaeracube = 4)
 
 /obj/item/weapon/storage/box/ids
-	name = "box of spare IDs"
-	desc = "Внутри много пустых ID."
+	name = "Коробка запасных ID-карт"
+	desc = "В ней очень много пустых ID-карт."
 	icon_state = "id"
 	starts_with = list(/obj/item/weapon/card/id = 7)
 
 /obj/item/weapon/storage/box/seccarts
-	name = "box of spare R.O.B.U.S.T. Cartridges"
-	desc = "Коробка с R.O.B.U.S.T. Картриджами, используемые службой безопасности."
+	name = "Коробка запасных картриджей R.O.B.U.S.T."
+	desc = "Коробка, полная запасных картриджей R.O.B.U.S.T., используемых службой безопасности."
 	icon_state = "pda"
 	starts_with = list(/obj/item/weapon/cartridge/security = 7)
 
 /obj/item/weapon/storage/box/handcuffs
-	name = "box of spare handcuffs"
-	desc = "Коробка с наручниками."
+	name = "Коробка запасных наручников"
+	desc = "Коробка, забитая доверху наручниками."
 	icon_state = "handcuff"
 	starts_with = list(/obj/item/weapon/handcuffs = 7)
 
 /obj/item/weapon/storage/box/mousetraps
-	name = "box of Pest-B-Gon mousetraps"
-	desc = "<B><FONT color='red'>ВНИМАНИЕ:</FONT></B> <I>Храните в недоступном для детей месте</I>."
+	name = "Коробка мышеловок Pest-B-Gon"
+	desc = "<B><FONT color='red'>ВНИМАНИЕ:</FONT></B> <I>Хранить в недоступном для детей месте</I>."
 	icon_state = "mousetraps"
 	starts_with = list(/obj/item/device/assembly/mousetrap = 7)
 
 /obj/item/weapon/storage/box/pillbottles
-	name = "box of pill bottles"
-	desc = "На передней панели изображены баночки с таблетками."
+	name = "Коробка пузырьков для таблеток"
+	desc = "На ней нарисованы пузырьки для таблеток."
 	starts_with = list(/obj/item/weapon/storage/pill_bottle = 7)
 
 /obj/item/weapon/storage/box/snappops
-	name = "snap pop box"
-	desc = "Восемь фантиков веселья! Возраст от 8 лет и старше. Не подходит для детей."
+	name = "Коробка хлопушек"
+	desc = "Всего восемь хлопушек, зато сколько эмоций! Детям от восьми лет."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "spbox"
 	can_hold = list(/obj/item/toy/snappop)
 	starts_with = list(/obj/item/toy/snappop = 8)
 
 /obj/item/weapon/storage/box/matches
-	name = "коробок спичек"
-	desc = "Небольшая коробка спичек премиум-класса."
+	name = "Коробок спичек"
+	desc = "Маленький коробок космонепроницаемых спичек премиум-качества."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "matchbox"
 	w_class = ITEMSIZE_TINY
@@ -476,23 +476,23 @@
 	if(istype(W) && !W.lit && !W.burnt)
 		if(prob(25))
 			W.light(user)
-			user.visible_message("<span class='notice'>[user] manages to light the match on the matchbox.</span>")
+			user.visible_message("<span class='notice'>[user] зажигает спичку о коробок.</span>")
 		else
 			playsound(src, 'sound/items/cigs_lighters/matchstick_hit.ogg', 25, 0, -1)
 	W.update_icon()
 	return
 
 /obj/item/weapon/storage/box/autoinjectors
-	name = "box of injectors"
-	desc = "Содержит автоинжекторы."
+	name = "Коробка инъекторов"
+	desc = "Содержит автоинъекторы."
 	icon_state = "syringe"
 	starts_with = list(/obj/item/weapon/reagent_containers/hypospray/autoinjector = 7)
 
 /obj/item/weapon/storage/box/lights
-	name = "box of replacement bulbs"
+	name = "Коробка запасных лампочек"
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "light"
-	desc = "Эта коробка имеет форму внутри, так что туда подходят только световые трубки и лампочки."
+	desc = "В этой коробке подложка, в которую влезают только лампочки."
 	item_state_slots = list(slot_r_hand_str = "syringe_kit", slot_l_hand_str = "syringe_kit")
 	storage_slots = 24
 	can_hold = list(/obj/item/weapon/light/tube, /obj/item/weapon/light/bulb)
@@ -503,12 +503,12 @@
 	starts_with = list(/obj/item/weapon/light/bulb = 24)
 
 /obj/item/weapon/storage/box/lights/tubes
-	name = "box of replacement tubes"
+	name = "Коробка запасных лампочек"
 	icon_state = "lighttube"
 	starts_with = list(/obj/item/weapon/light/tube = 24)
 
 /obj/item/weapon/storage/box/lights/mixed
-	name = "box of replacement lights"
+	name = "Коробка запасных лампочек"
 	icon_state = "lightmixed"
 	starts_with = list(
 		/obj/item/weapon/light/tube = 16,
@@ -516,8 +516,8 @@
 	)
 
 /obj/item/weapon/storage/box/freezer
-	name = "portable freezer"
-	desc = "Это изящное ударопрочное устройство сохранит ваши \"продукты\" красивыми и не испорченными."
+	name = "Переносной морозильник"
+	desc = "Очень удобное и прочное приспособление, в котором Ваши 'продукты' точно не испортятся."
 	icon = 'icons/obj/storage.dmi'
 	icon_state = "portafreezer"
 	item_state_slots = list(slot_r_hand_str = "medicalpack", slot_l_hand_str = "medicalpack")
@@ -544,11 +544,11 @@
 	..()
 
 /obj/item/weapon/storage/box/ambrosia
-	name = "ambrosia seeds box"
-	desc = "Содержит семена, которые вам нужны, чтобы получить немного кайфа."
+	name = "Коробка семян амброзии"
+	desc = "Содержит все необходимые семена для того, чтобы словить немножко кайфа."
 	starts_with = list(/obj/item/seeds/ambrosiavulgarisseed = 7)
 
 /obj/item/weapon/storage/box/ambrosiadeus
-	name = "ambrosia deus seeds box"
-	desc = "Содержит семена, необходимые для получения правильного здорового кайфа."
+	name = "Коробка семян амброзии деус"
+	desc = "Содержит все необходимые семена для того, чтобы словить прилично кайфа."
 	starts_with = list(/obj/item/seeds/ambrosiadeusseed = 7)

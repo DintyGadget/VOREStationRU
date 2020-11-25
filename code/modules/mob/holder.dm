@@ -112,7 +112,7 @@ var/list/holder_mob_icon_cache = list()
 		var/obj/item/clothing/accessory/holster/holster = loc
 		if(holster.holstered == src)
 			holster.clear_holster()
-		to_chat(held, "<span class='warning'>Вы выползаете из [ru_getcase(holster, "gcase"].</span>")
+		to_chat(held, "<span class='warning'>Вы выползаете из [ru_getcase(holster, "gcase")].</span>")
 		held.forceMove(get_turf(held))
 	else if(isitem(loc))
 		to_chat(held, "<span class='warning'>Вы выбираетесь из [loc].</span>")

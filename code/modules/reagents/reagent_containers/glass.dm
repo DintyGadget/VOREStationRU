@@ -65,11 +65,11 @@
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(reagents && reagents.reagent_list.len)
-			. += "<span class='notice'>В [ru_g_obj(src, "нём", "ней", "нём", "них")] содержится [ru_countreagents(reagents.total_volume)] жидкости.</span>"
+			. += "<span class='notice'>В [ru_g_obj(src, "", "нём", "ней", "нём", "них")] содержится [ru_countreagents(reagents.total_volume)] жидкости.</span>"
 		else
-			. += "<span class='notice'>[ru_g_obj(src, "Он", "Она", "Оно", "Они")] пуст[ru_g_obj(src, "", "а", "о", "ы")].</span>"
+			. += "<span class='notice'>[ru_g_obj(src, "", "Он", "Она", "Оно", "Они")] пуст[ru_g_obj(src, "", "", "а", "о", "ы")].</span>"
 		if(!is_open_container())
-			. += "<span class='notice'>На [ru_g_obj(src, "нём", "ней", "нём", "них")] плотная крышка.</span>"
+			. += "<span class='notice'>На [ru_g_obj(src, "", "нём", "ней", "нём", "них")] плотная крышка.</span>"
 
 /obj/item/weapon/reagent_containers/glass/attack_self()
 	..()

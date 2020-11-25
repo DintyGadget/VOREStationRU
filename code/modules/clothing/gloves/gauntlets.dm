@@ -19,11 +19,11 @@
 	if(H.gloves)
 		gloves = H.gloves
 		if(!istype(gloves))
-			to_chat(user, "Вы не можете надеть [ru_getcase(src, "acase")], так как на Вас [ru_getcase(H.gloves. "ncase")].")
+			to_chat(user, "Вы не можете надеть [ru_getcase(src, "acase")], так как на Вас [ru_getcase(H.gloves, "ncase")].")
 			gloves = null
 			return 0
 		if(gloves.overgloves)
-			to_chat(user, "Вы не можете надеть [ru_getcase(src, "acase")], так как на Вас [ru_getcase(H.gloves. "ncase")]")
+			to_chat(user, "Вы не можете надеть [ru_getcase(src, "acase")], так как на Вас [ru_getcase(H.gloves, "ncase")]")
 			gloves = null
 			return 0
 		H.drop_from_inventory(gloves)

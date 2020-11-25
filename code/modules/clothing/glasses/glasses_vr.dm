@@ -4,10 +4,10 @@
 	//Look it's really not that fancy. It's not ACTUALLY unique scrip data.
 	if(prescription)
 		name = "[initial(name)] (близ.)"
-		user.visible_message("[user] заменяет линзы в [src.pcase] на новые рецептурные.")
+		user.visible_message("[user] заменяет линзы в [ru_getcase(src, "pcase")] на новые рецептурные.")
 	else
 		name = "[initial(name)]"
-		user.visible_message("[user] заменяет линзы в [src.pcase] на обыкновенные.")
+		user.visible_message("[user] заменяет линзы в [ru_getcase(src, "pcase")] на обыкновенные.")
 
 	playsound(src,'sound/items/screwdriver.ogg', 50, 1)
 

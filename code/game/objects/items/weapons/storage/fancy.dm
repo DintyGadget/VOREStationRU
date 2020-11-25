@@ -32,11 +32,11 @@
 	var/ru_counter = ru_countitems(contents, single_text = ru_icon_type_1, few_text = ru_icon_type_2, many_text = ru_icon_type_3)
 	if(Adjacent(user))
 		if(!contents.len)
-			. += "В [ru_getcase(src, "pcase"] не осталось [ru_icon_type_3]."
+			. += "В [ru_getcase(src, "pcase")] не осталось [ru_icon_type_3]."
 		else if(contents.len == 1)
-			. += "В [ru_getcase(src, "pcase"] [ru_icon_type_4]."
+			. += "В [ru_getcase(src, "pcase")] [ru_icon_type_4]."
 		else
-			. += "В [ru_getcase(src, "pcase"] [ru_counter]."
+			. += "В [ru_getcase(src, "pcase")] [ru_counter]."
 
 /*
  * Egg Box

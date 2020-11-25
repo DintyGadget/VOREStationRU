@@ -47,9 +47,9 @@
 			open = 1
 			icon_state = "[icon_state]_open"
 			flags_inv = HIDEHOLSTER
-			to_chat(usr, "Вы расстегиваете [ru_g_obj(src, "свой", "свою", "своё", "свои")] [ru_getcase(src, "acase")].")
+			to_chat(usr, "Вы расстегиваете [ru_g_obj(src, "сво", "й", "ю", "ё", "и")] [ru_getcase(src, "acase")].")
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "Вы пытаетесь застегнуть [ru_g_obj(src, "свой", "свою", "своё", "свои")] [ru_getcase(src, "acase")], прежде чем сразу понимаете, насколько Вы глупы.")
+			to_chat(usr, "Вы пытаетесь застегнуть [ru_g_obj(src, "сво", "й", "ю", "ё", "и")] [ru_getcase(src, "acase")], прежде чем сразу понимаете, насколько Вы глупы.")
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -68,14 +68,14 @@
 			open = 0
 			icon_state = initial(icon_state)
 			flags_inv = HIDETIE|HIDEHOLSTER
-			to_chat(usr, "Вы застегиваете [ru_g_obj(src, "свой", "свою", "своё", "свои")] [ru_getcase(src, "acase")].")
+			to_chat(usr, "Вы застегиваете [ru_g_obj(src, "сво", "й", "ю", "ё", "и")] [ru_getcase(src, "acase")].")
 		else if(open == 0)
 			open = 1
 			icon_state = "[icon_state]_open"
 			flags_inv = HIDEHOLSTER
 			to_chat(usr, "Вы расстегиваете верхнюю одежду.")
 		else //in case some goofy admin switches icon states around without switching the icon_open or icon_closed
-			to_chat(usr, "Вы пытаетесь застегнуть [ru_g_obj(src, "свой", "свою", "своё", "свои")] [ru_getcase(src, "acase")], прежде чем сразу понимаете, насколько Вы глупы.")
+			to_chat(usr, "Вы пытаетесь застегнуть [ru_g_obj(src, "сво", "й", "ю", "ё", "и")] [ru_getcase(src, "acase")], прежде чем сразу понимаете, насколько Вы глупы.")
 			return
 		update_clothing_icon()	//so our overlays update
 
@@ -99,12 +99,12 @@
 
 		if(icon_state == icon_badge)
 			icon_state = icon_nobadge
-			to_chat(usr, "Вы скрываете бейдж на [ru_g_obj(src, "своём", "своей", "своём", "своих")] [ru_getcase(src, "pcase")].")
+			to_chat(usr, "Вы скрываете бейдж на [ru_g_obj(src, "сво", "ём", "ей", "ём", "их")] [ru_getcase(src, "pcase")].")
 		else if(icon_state == icon_nobadge)
 			icon_state = icon_badge
-			to_chat(usr, "Вы показываете бейдж на [ru_g_obj(src, "своём", "своей", "своём", "своих")] [ru_getcase(src, "pcase")].")
+			to_chat(usr, "Вы показываете бейдж на [ru_g_obj(src, "сво", "ём", "ей", "ём", "их")] [ru_getcase(src, "pcase")].")
 		else
-			to_chat(usr, "[capitalize(ru_getcase(src, "ncase")] не имеет бейджа.")
+			to_chat(usr, "[capitalize(ru_getcase(src, "ncase"))] не имеет бейджа.")
 			return
 		update_clothing_icon()
 

@@ -18,7 +18,7 @@
 				return 0
 			for(var/obj/item/clothing/accessory/A in H.wear_suit)
 				if(A.body_parts_covered & LEGS)
-					to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(src, "acase")], так как Вам [ru_g_obj(H.wear_suit, "меша", "ет", "ет", "ет", "ют")] [ru_getcase(A, "ncase"] [ru_getcase(H.wear_suit, "gcase")].</span>")
+					to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(src, "acase")], так как Вам [ru_g_obj(H.wear_suit, "меша", "ет", "ет", "ет", "ют")] [ru_getcase(A, "ncase")] [ru_getcase(H.wear_suit, "gcase")].</span>")
 					return 0
 		return 1
 

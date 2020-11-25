@@ -52,7 +52,7 @@
 			icon_state = base_state
 			flash_protection = FLASH_PROTECTION_MAJOR
 			tint = initial(tint)
-			to_chat(usr, "Вы опускаете [src.acase] на лицо, защищая глаза.")
+			to_chat(usr, "Вы опускаете [ru_getcase(src, "acase")] на лицо, защищая глаза.")
 		else
 			src.up = !src.up
 			body_parts_covered &= ~(EYES|FACE)
@@ -60,7 +60,7 @@
 			icon_state = "[base_state]up"
 			flash_protection = FLASH_PROTECTION_NONE
 			tint = TINT_NONE
-			to_chat(usr, "Вы приподнимаете [src.acase] с лица.")
+			to_chat(usr, "Вы приподнимаете [ru_getcase(src, "acase")] с лица.")
 		update_clothing_icon()	//so our mob-overlays
 		if (ismob(src.loc)) //should allow masks to update when it is opened/closed
 			var/mob/M = src.loc

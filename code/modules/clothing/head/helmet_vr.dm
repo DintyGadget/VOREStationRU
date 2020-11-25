@@ -69,7 +69,7 @@
 			flags_inv |= (HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = base_state
 			tint = initial(tint)
-			to_chat(usr, "Вы опускаете забрало [src.gcase], дабы защитить свой взор от ужасов этой вселенной. Никто теперь не сможет ранить Вас лучами света!")
+			to_chat(usr, "Вы опускаете забрало [ru_getcase(src, "gcase")], дабы защитить свой взор от ужасов этой вселенной. Никто теперь не сможет ранить Вас лучами света!")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		else
 			src.up = !src.up
@@ -77,7 +77,7 @@
 			flags_inv &= ~(HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = "[base_state]_up"
 			tint = TINT_NONE
-			to_chat(usr, "Вы приподнимаете забрало [src.gcase].")
+			to_chat(usr, "Вы приподнимаете забрало [ru_getcase(src, "gcase")].")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		update_clothing_icon()	//so our mob-overlays
 		if (ismob(src.loc)) //should allow masks to update when it is opened/closed
@@ -126,7 +126,7 @@
 			flags_inv |= (HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = base_state
 			tint = initial(tint)
-			to_chat(usr, "Вы опускаете забрало [src.gcase], дабы защитить свой взор от ужасов этой вселенной. Никто теперь не сможет ранить Вас лучами света!")
+			to_chat(usr, "Вы опускаете забрало [ru_getcase(src, "gcase")], дабы защитить свой взор от ужасов этой вселенной. Никто теперь не сможет ранить Вас лучами света!")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		else
 			src.up = !src.up
@@ -134,7 +134,7 @@
 			flags_inv &= ~(HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE)
 			icon_state = "[base_state]_up"
 			tint = TINT_NONE
-			to_chat(usr, "Вы приподнимаете забрало [src.gcase].")
+			to_chat(usr, "Вы приподнимаете забрало [ru_getcase(src, "gcase")].")
 			playsound(src, 'sound/machines/hatch_open.ogg', 75, 1)
 		update_clothing_icon()	//so our mob-overlays
 		if (ismob(src.loc)) //should allow masks to update when it is opened/closed

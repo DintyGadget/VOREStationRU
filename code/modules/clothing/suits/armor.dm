@@ -13,10 +13,10 @@
 	if(..()) //This will only run if no other problems occured when equiping.
 		for(var/obj/item/clothing/I in list(H.gloves, H.shoes))
 			if(I && (src.body_parts_covered & ARMS && I.body_parts_covered & ARMS) )
-				to_chat(H, "<span class='warning'>Вы не можете надеть [src.acase == "acase" ? src : src.acase] поверх [I.gcase == "gcase" ? I : I.gcase].</span>")
+				to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(src, "acase")] поверх [ru_getcase(I, "gcase")].</span>")
 				return 0
 			if(I && (src.body_parts_covered & LEGS && I.body_parts_covered & LEGS) )
-				to_chat(H, "<span class='warning'>Вы не можете надеть [src.acase == "acase" ? src : src.acase] поверх [I.gcase == "gcase" ? I : I.gcase].</span>")
+				to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(src, "acase")] поверх [ru_getcase(I, "gcase")].</span>")
 				return 0
 		return 1
 
@@ -86,7 +86,7 @@
 		if(!(def_zone in list(BP_TORSO, BP_GROIN)))
 			reflectchance /= 2
 		if(P.starting && prob(reflectchance))
-			visible_message("<span class='danger'>[capitalize(src.name)] [user] отражает [attack_text]!</span>")
+			visible_message("<span class='danger'>[capitalize(ru_getcase(src, "ncase"))] [user] отражает [attack_text]!</span>")
 
 			// Find a turf near or on the original location to bounce to
 			var/new_x = P.starting.x + pick(0, 0, 0, 0, 0, -1, 1, -2, 2)
@@ -237,7 +237,7 @@
 
 /obj/item/clothing/suit/armor/alien/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(block_chance))
-		user.visible_message("<span class='danger'>[capitalize(src.ncase)] полностью поглощает [attack_text]!</span>")
+		user.visible_message("<span class='danger'>[capitalize(ru_getcase(src, "ncase"))] полностью поглощает [attack_text]!</span>")
 		return TRUE
 	return FALSE
 
@@ -529,13 +529,13 @@
 			if(H.gloves.body_parts_covered & ARMS)
 				for(var/obj/item/clothing/accessory/A in src)
 					if(A.body_parts_covered & ARMS)
-						to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(A, "acase")] поверх [ru_getcase(H.gloves. "gcase")], нужно сперва их снять.</span>")
+						to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(A, "acase")] поверх [ru_getcase(H.gloves, "gcase")], нужно сперва их снять.</span>")
 						return 0
 		if(H.shoes)
 			if(H.shoes.body_parts_covered & LEGS)
 				for(var/obj/item/clothing/accessory/A in src)
 					if(A.body_parts_covered & LEGS)
-						to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(A, "acase")] поверх [ru_getcase(H.shoes. "gcase")], нужно сперва их снять.</span>")
+						to_chat(H, "<span class='warning'>Вы не можете надеть [ru_getcase(A, "acase")] поверх [ru_getcase(H.shoes, "gcase")], нужно сперва их снять.</span>")
 						return 0
 		return 1
 

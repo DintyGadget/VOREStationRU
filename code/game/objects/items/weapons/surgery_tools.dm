@@ -75,8 +75,8 @@
 
 	suicide_act(mob/user)
 		var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-		to_chat(viewers(user),pick("<span class='danger'>[user] [ru_g_end(user, "прижал")] [ru_getcase(src, "acase")] к своим вискам и нажимает на кнопку! Похоже, [TU.ru_g_ncase] [ru_g_end(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>",
-		                       "<span class='danger'>[user] [ru_g_end(user, "прижал")] [ru_getcase(src, "acase")] к своей груди и нажимает на кнопку! Похоже, [TU.ru_g_ncase] [ru_g_end(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>"))
+		to_chat(viewers(user),pick("<span class='danger'>[user] [ru_g_mob(user, "прижал")] [ru_getcase(src, "acase")] к своим вискам и нажимает на кнопку! Похоже, [TU.ru_g_ncase] [ru_g_mob(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>",
+		                       "<span class='danger'>[user] [ru_g_mob(user, "прижал")] [ru_getcase(src, "acase")] к своей груди и нажимает на кнопку! Похоже, [TU.ru_g_ncase] [ru_g_mob(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>"))
 		return (BRUTELOSS)
 
 /*
@@ -101,9 +101,9 @@
 
 	suicide_act(mob/user)
 		var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-		to_chat(viewers(user),pick("<span class='danger'>[user] [ru_g_end(user, "перерезал")] свои запястья при помощи [ru_getcase(src, "gcase")]! Похоже, [TU.ru_g_ncase] [ru_g_end(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>", \
-		                      "<span class='danger'>[user] [ru_g_end(user, "перерезал")] себе глотку при помощи [ru_getcase(src, "gcase")]! Похоже, [TU.ru_g_ncase] [ru_g_end(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>", \
-		                      "<span class='danger'>[user] [ru_g_end(user, "вскрыл")] себе живот при помощи [ru_getcase(src, "gcase")]! Похоже, [TU.ru_g_ncase] [ru_g_end(user, "пыта", "ется", "ется", "ется", "ются")] совершить сеппуку.</span>"))
+		to_chat(viewers(user),pick("<span class='danger'>[user] [ru_g_mob(user, "перерезал")] свои запястья при помощи [ru_getcase(src, "gcase")]! Похоже, [TU.ru_g_ncase] [ru_g_mob(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>", \
+		                      "<span class='danger'>[user] [ru_g_mob(user, "перерезал")] себе глотку при помощи [ru_getcase(src, "gcase")]! Похоже, [TU.ru_g_ncase] [ru_g_mob(user, "пыта", "ется", "ется", "ется", "ются")] совершить самоубийство.</span>", \
+		                      "<span class='danger'>[user] [ru_g_mob(user, "вскрыл")] себе живот при помощи [ru_getcase(src, "gcase")]! Похоже, [TU.ru_g_ncase] [ru_g_mob(user, "пыта", "ется", "ется", "ется", "ются")] совершить сеппуку.</span>"))
 		return (BRUTELOSS)
 
 /*

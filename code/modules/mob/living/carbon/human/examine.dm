@@ -113,7 +113,7 @@
 
 	var/list/msg = list("<meta charset=\"utf-8\"><span class='info'>*---------*","Это [bicon(src)] <EM>[src.name]</EM>[name_ender]")
 
-	//uniform - lazily edited
+	//uniform
 	if(w_uniform && !(skip_gear & EXAMINE_SKIPJUMPSUIT) && w_uniform.show_examine)
 		//Ties
 		var/tie_msg
@@ -131,7 +131,7 @@
 							accessories_visible.Add(A)
 
 				if(accessories_visible.len)
-					tie_msg += " На [T.ru_g_gcase] одежде [english_list(accessories_visible)]."
+					tie_msg += "[capitalize(T.ru_g_gcase)] также носит [english_list(accessories_visible)]."
 
 		if(w_uniform.blood_DNA)
 			msg += "<span class='warning'>[capitalize(T.ru_g_gcase)] [bicon(w_uniform)] [w_uniform.name] в [(w_uniform.blood_color != SYNTH_BLOOD_COLOUR) ? "крови" : "масле"]![tie_msg]</span>"
@@ -141,52 +141,52 @@
 	//head -- XenosStation Edited for proper grammar
 	if(head && !(skip_gear & EXAMINE_SKIPHELMET) && head.show_examine)
 		if(head.blood_DNA)
-			msg += "<span class='warning'>[capitalize(T.ru_g_ncase)] ходит [bicon(head)] [(head.blood_color != SYNTH_BLOOD_COLOUR) ? "окровавлен" : "замаслен"][head.rugender == "male" ? "ном" : head.rugender == "female" ? "ной" : gloves.rugender == "plural" ? "ных" : "ном"] [head.pcase]!</span>"
+			msg += "<span class='warning'>[capitalize(T.ru_g_ncase)] [ru_g_mob(src, "ход", "ит", "ит", "ит", "ят")] в [bicon(head)] [(head.blood_color != SYNTH_BLOOD_COLOUR) ? "окровавлен" : "замаслен"][ru_g_obj(head, "", "ном", "ной", "ных", "ном")] [ru_getcase(head, "pcase")]!</span>"
 		else
-			msg += "[capitalize(T.ru_g_ncase)] ходит в [bicon(head)] [head.pcase]."
+			msg += "[capitalize(T.ru_g_ncase)] [ru_g_mob(src, "ход", "ит", "ит", "ит", "ят")] в [ru_getcase(head, "pcase")]."
 
-	//suit/armour -- lazily edited
+	//suit/armour
 	if(wear_suit)
 		var/tie_msg
 		if(istype(wear_suit,/obj/item/clothing/suit))
 			var/obj/item/clothing/suit/U = wear_suit
 			if(LAZYLEN(U.accessories))
-				tie_msg += " К нему прилагается [english_list(U.accessories)]."
+				tie_msg += " Вместе с [ru_g_obj(wear_suit, "", "ним", "ней", "ним", "ними")] [T.ru_g_ncase] [ru_g_mob(src, "нос", "ит", "ит", "ит", "ят")] [english_list(U.accessories)]."
 
 		if(wear_suit.blood_DNA)
 			msg += "<span class='warning'>На [T.ru_g_pcase] [bicon(wear_suit)] в [(wear_suit.blood_color != SYNTH_BLOOD_COLOUR) ? "крови" : "масле"] [wear_suit.name][tie_msg]!</span>"
 		else
 			msg += "На [T.ru_g_pcase] [bicon(wear_suit)], [wear_suit].[tie_msg]"
 
-		//suit/armour storage -- edited BADLY
+		//suit/armour storage
 		if(s_store && !(skip_gear & EXAMINE_SKIPSUITSTORAGE) && s_store.show_examine)
 			if(s_store.blood_DNA)
 				msg += "<span class='warning'>Поверх [T.ru_g_gcase] костюма [bicon(s_store)] [s_store.name] в [(s_store.blood_color != SYNTH_BLOOD_COLOUR) ? "крови" : "масле"]!</span>"
 			else
 				msg += "Поверх [wear_suit.name][T.ru_g_ncase] носит [bicon(s_store)] [s_store] поверх ."
 
-	//back -- lazily edited
+	//back --
 	if(back && !(skip_gear & EXAMINE_SKIPBACKPACK) && back.show_examine)
 		if(back.blood_DNA)
 			msg += "<span class='warning'>[bicon(back)] на [T.ru_g_gcase] спине в [(back.blood_color != SYNTH_BLOOD_COLOUR) ? "крови" : "масле"]!</span>"
 		else
 			msg += "На [T.ru_g_gcase] спине [bicon(back)] [back]."
 
-	//left hand -- lazily edited
+	//left hand -- XenosStation Edited for proper grammar
 	if(l_hand && l_hand.show_examine)
 		if(l_hand.blood_DNA)
-			msg += "<span class='warning'>[bicon(l_hand)] в [T.ru_g_gcase] левой руке в [(l_hand.blood_color != SYNTH_BLOOD_COLOUR) ? "крови" : "масле"]!</span>"
+			msg += "<span class='warning'>В [T.ru_g_gcase] правой руке [bicon(l_hand)] [(l_hand.blood_color != SYNTH_BLOOD_COLOUR) ? "окровавлен" : "замаслен"][ru_g_obj(l_hand, "", "ный", "ная", "ное", "ные")] [ru_getcase(l_hand, "ncase")]!</span>"
 		else
-			msg += "В [T.ru_g_gcase] левой руке [bicon(l_hand)] [l_hand]."
+			msg += "[capitalize(T.ru_g_ncase)] держит [bicon(l_hand)] [ru_getcase(l_hand, "acase")] в правой руке."
 
-	//right hand -- lazily edited
+	//right hand -- XenosStation Edited for proper grammar
 	if(r_hand && r_hand.show_examine)
 		if(r_hand.blood_DNA)
-			msg += "<span class='warning'>[bicon(r_hand)] в [T.ru_g_gcase] правой руке в [(r_hand.blood_color != SYNTH_BLOOD_COLOUR) ? "крови" : "масле"]!</span>"
+			msg += "<span class='warning'>В [T.ru_g_gcase] правой руке [bicon(r_hand)] [(r_hand.blood_color != SYNTH_BLOOD_COLOUR) ? "окровавлен" : "замаслен"][ru_g_obj(r_hand, "", "ный", "ная", "ное", "ные")] [ru_getcase(r_hand, "ncase")]!</span>"
 		else
-			msg += "В [T.ru_g_gcase] правой руке [bicon(r_hand)] [r_hand]."
+			msg += "[capitalize(T.ru_g_ncase)] держит [bicon(r_hand)] [ru_getcase(r_hand, "acase")] в правой руке."
 
-	//gloves -- XenosStation Edited for proper grammar
+	//gloves --
 	if(gloves && !(skip_gear & EXAMINE_SKIPGLOVES) && gloves.show_examine)
 		if(gloves.blood_DNA)
 			msg += "<span class='warning'>[capitalize(T.ru_g_gcase)] руки в [bicon(gloves)] [(gloves.blood_color != SYNTH_BLOOD_COLOUR) ? "окровавлен" : "замаслен"][gloves.rugender == "male" ? "ном" : gloves.rugender == "female" ? "ной" : gloves.rugender == "plural" ? "ных" : "ном"] [gloves.pcase]!</span>"
@@ -195,25 +195,25 @@
 	else if(blood_DNA && !(skip_body & EXAMINE_SKIPHANDS))
 		msg += "<span class='warning'>[capitalize(T.ru_g_gcase)] руки в [(hand_blood_color != SYNTH_BLOOD_COLOUR) ? "масле" : "крови"]!</span>"
 
-	//handcuffed? -- XenosStation Edited for proper grammar
+	//handcuffed? -- 
 	if(handcuffed && handcuffed.show_examine)
 		if(istype(handcuffed, /obj/item/weapon/handcuffs/cable))
 			msg += "<span class='warning'>[capitalize(T.ru_g_ncase)] [bicon(handcuffed)] связан[T.ru_g_ncase == "он" ? "" : T.ru_g_ncase == "она" ? "а" : T.ru_g_ncase == "они" ? "ы" : "о"] проводом!</span>"
 		else
 			msg += "<span class='warning'>[capitalize(T.ru_g_ncase)] [bicon(handcuffed)] в наручниках!</span>"
 
-	//buckled -- XenosStation Edited for proper grammar
+	//buckled -- 
 	if(buckled)
 		msg += "<span class='warning'>[capitalize(T.ru_g_ncase)] [bicon(buckled)] посажен[T.ru_g_ncase == "он" ? "" : T.ru_g_ncase == "она" ? "а" : T.ru_g_ncase == "они" ? "ы" : "о"] в [buckled]!</span>"
 
-	//belt -- lazily edited
+	//belt -- 
 	if(belt && !(skip_gear & EXAMINE_SKIPBELT) && belt.show_examine)
 		if(belt.blood_DNA)
 			msg += "<span class='warning'>[T.He] [T.has] [bicon(belt)] [belt.gender==PLURAL?"some":"a"] [(belt.blood_color != SYNTH_BLOOD_COLOUR) ? "blood" : "oil"]-stained [belt.name] about [T.his] waist!</span>"
 		else
 			msg += "На [T.ru_g_gcase] талии [bicon(belt)] [belt]."
 
-	//shoes -- lazily edited
+	//shoes -- 
 	if(shoes && !(skip_gear & EXAMINE_SKIPSHOES) && shoes.show_examine)
 		if(shoes.blood_DNA)
 			//msg += "<span class='warning'>[capitalize(T.ru_g_ncase)] [T.ru_g_ncase == "они" ? "носят" : "носит"] [bicon(shoes)] [(shoes.blood_color != SYNTH_BLOOD_COLOUR) ? "окровавлен" : "замаслен"][shoes.rugender == "male" ? "ный" : shoes.rugender == "female" ? "ная" : shoes.rugender == "plural" ? "ные" : "ное"] [shoes.ncase]!</span>"
@@ -223,7 +223,7 @@
 	else if(feet_blood_DNA && !(skip_body & EXAMINE_SKIPHANDS))
 		msg += "<span class='warning'>[capitalize(T.ru_g_gcase)] ступни в [(feet_blood_color != SYNTH_BLOOD_COLOUR) ? "крови" : "масле"]!</span>"
 
-	//mask -- XenosStation Edited for proper grammar
+	//mask -- 
 	if(wear_mask && !(skip_gear & EXAMINE_SKIPMASK) && wear_mask.show_examine)
 		/*var/descriptor = "on [T.his] face"
 		if(istype(wear_mask, /obj/item/weapon/grenade) && check_has_mouth())
@@ -247,22 +247,22 @@
 			else
 				msg += "[capitalize(T.ru_g_ncase)] [T.ru_g_ncase == "они" ? "ходят" : "ходит"] в [bicon(wear_mask)] [wear_mask.pcase]."
 
-	//eyes -- XenosStation Edited for proper grammar
+	//eyes -- 
 	if(glasses && !(skip_gear & EXAMINE_SKIPEYEWEAR) && glasses.show_examine)
 		if(glasses.blood_DNA)
 			msg += "<span class='warning'>На [T.ru_g_gcase] глазах [bicon(glasses)] [(glasses.blood_color != SYNTH_BLOOD_COLOUR) ? "окровавлен" : "замаслен"][glasses.rugender == "male" ? "ный" : glasses.rugender == "female" ? "ная" : gloves.rugender == "plural" ? "ные" : "ное"] [glasses.ncase]!</span>"
 		else
 			msg += "На [T.ru_g_gcase] глазах [bicon(glasses)] [glasses.ncase]"
 
-	//left ear - Edited lazily
+	//left ear - 
 	if(l_ear && !(skip_gear & EXAMINE_SKIPEARS) && l_ear.show_examine)
 		msg += "На [T.ru_g_gcase] левом ухе [bicon(l_ear)] [l_ear]."
 
-	//right ear - Edited lazily
+	//right ear - 
 	if(r_ear && !(skip_gear & EXAMINE_SKIPEARS) && r_ear.show_examine)
 		msg += "На [T.ru_g_gcase] правом ухе [bicon(r_ear)] [r_ear]."
 
-	//ID - Edited lazily
+	//ID - 
 	if(wear_id && wear_id.show_examine)
 		/*var/id
 		if(istype(wear_id, /obj/item/device/pda))
