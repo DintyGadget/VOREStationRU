@@ -68,7 +68,7 @@ var/datum/antagonist/rogue_ai/malf
 		sleep(50)
 		to_chat(malf, "<B>Проверка Памяти</B> Подтверждены поврежденные сектора. Рекомендуемое решение: Удалить. Продолжить? Д/Н: Д ")
 		sleep(10)
-		// this is so Travis doesn't complain about the backslash-B. Fixed at compile time (or should be).
+		// this is so CI doesn't complain about the backslash-B. Fixed at compile time (or should be).
 		to_chat(malf, "<span class='notice'>Поврежденные данные удалены: sys\\core\\users.dat sys\\core\\laws.dat sys\\core\\" + "backups.dat</span>")
 		sleep(20)
 		to_chat(malf, "<span class='notice'><b>ВНИМАНИЕ:</b>База данных законов не найдена! База данных пользователей не найдена! Невозможно восстановить резервные копии. Активация отказоустойчивого отключения ИИ52&&$#!##</span>")

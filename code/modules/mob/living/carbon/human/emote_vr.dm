@@ -247,7 +247,7 @@
 	set desc = "Сменить преобладающий слой хвоста."
 	tail_alt = !tail_alt
 	update_tail_showing()
-	
+
 /mob/living/carbon/human/verb/hide_wings_vr()
 	set name = "Спрятать/Показать Крылья"
 	set category = "IC"
@@ -260,4 +260,3 @@
 	else
 		message = "прячет свои крылья."
 	visible_message("[src] [message]")
-	
