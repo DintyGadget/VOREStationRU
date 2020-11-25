@@ -80,7 +80,7 @@
 
 /obj/item/weapon/storage/bag/ore
 	name = "Шахтёрская сумка"
-	desc = "Он позволяет хранить и переносить минералы."
+	desc = "Она позволяет хранить и переносить минералы."
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "satchel"
 	slot_flags = SLOT_BELT | SLOT_POCKET

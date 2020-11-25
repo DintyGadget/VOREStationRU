@@ -220,7 +220,7 @@
 			size = "крупного"
 		if(ITEMSIZE_HUGE)
 			size = "огромного"
-	return ..(user, "", "Этот предмет [size] размера.")
+	return ..(user, "", "[ru_g_obj(src, "", "Он", "Она", "Оно", "Они")] [size] размера.")
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
@@ -415,12 +415,12 @@ var/list/global/slot_flags_enumeration = list(
 		if(slot_wear_id)
 			if(!H.w_uniform && (slot_w_uniform in mob_equip))
 				if(!disable_warning)
-					to_chat(H, "<span class='warning'>You need a jumpsuit before you can attach this [name].</span>")
+					to_chat(H, "<span class='warning'>Чтобы надеть на себя [ru_getcase(src, "acase")], Вам сначала нужна одежда.</span>")
 				return 0
 		if(slot_l_store, slot_r_store)
 			if(!H.w_uniform && (slot_w_uniform in mob_equip))
 				if(!disable_warning)
-					to_chat(H, "<span class='warning'>You need a jumpsuit before you can attach this [name].</span>")
+					to_chat(H, "<span class='warning'>Чтобы надеть на себя [ru_getcase(src, "acase")], Вам сначала нужна одежда.</span>")
 				return 0
 			if(slot_flags & SLOT_DENYPOCKET)
 				return 0
@@ -429,11 +429,11 @@ var/list/global/slot_flags_enumeration = list(
 		if(slot_s_store)
 			if(!H.wear_suit && (slot_wear_suit in mob_equip))
 				if(!disable_warning)
-					to_chat(H, "<span class='warning'>You need a suit before you can attach this [name].</span>")
+					to_chat(H, "<span class='warning'>Чтобы надеть на себя [ru_getcase(src, "acase")], Вам сначала нужна верхняя одежда..</span>")
 				return 0
 			if(!H.wear_suit.allowed)
 				if(!disable_warning)
-					to_chat(usr, "<span class='warning'>You somehow have a suit with no defined allowed items for suit storage, stop that.</span>")
+					to_chat(usr, "<span class='warning'>Для Вашей верхней одежды не определены допустимые предметы, это как бы не хорошо.</span>")
 				return 0
 			if( !(istype(src, /obj/item/device/pda) || istype(src, /obj/item/weapon/pen) || is_type_in_list(src, H.wear_suit.allowed)) )
 				return 0
@@ -459,7 +459,7 @@ var/list/global/slot_flags_enumeration = list(
 					break
 			if(!allow)
 				if(!disable_warning)
-					to_chat(H, "<span class='warning'>You're not wearing anything you can attach this [name] to.</span>")
+					to_chat(H, "<span class='warning'>Вам не на что прикрепить [ru_getcase(src, "acase")].</span>")
 				return 0
 	return 1
 

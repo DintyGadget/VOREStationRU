@@ -1889,7 +1889,7 @@
 	extra_overlay = "wardtakahashi_vulp_dc_mark"
 
 /datum/sprite_accessory/tail/Easterntail
-	name = "Eastern Dragon (Animated)"
+	name = "Восточный дракон (виляющий)"
 	desc = ""
 	icon_state = "Easterntail"
 	do_colouration = 1
@@ -1899,14 +1899,14 @@
 	extra_overlay_w = "EasterntailColorTip_w"
 
 /datum/sprite_accessory/tail/synthtail_static
-	name = "Synthetic lizard tail"
+	name = "Синтетический ящер"
 	desc = ""
 	icon_state = "synthtail"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/synthtail_vwag
-	name = "Synthetic lizard tail (vwag)"
+	name = "Синтетический ящер (виляющий)"
 	desc = ""
 	icon_state = "synthtail"
 	ani_state = "synthtail_w"
@@ -1914,7 +1914,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/Plugtail
-	name = "Synthetic plug tail"
+	name = "Синтетическая вставка"
 	desc = ""
 	icon_state = "Plugtail"
 	do_colouration = 1
@@ -1923,7 +1923,7 @@
 	extra_overlay2 = "PlugtailMarking2"
 
 /datum/sprite_accessory/tail/Segmentedtail
-	name = "Segmented tail, animated"
+	name = "Сегментированный хвост (виляющий)"
 	desc = ""
 	icon_state = "Segmentedtail"
 	do_colouration = 1
@@ -1933,7 +1933,7 @@
 	extra_overlay_w = "Segmentedtailmarking_w"
 
 /datum/sprite_accessory/tail/Segmentedlights
-	name = "Segmented tail, animated synth"
+	name = "Сегментированный хвост, синт (виляющий)"
 	desc = ""
 	icon_state = "Segmentedtail"
 	do_colouration = 1
@@ -1943,63 +1943,63 @@
 	extra_overlay_w = "Segmentedlights_w"
 
 /datum/sprite_accessory/tail/fox_tail
-	name = "Fox tail"
+	name = "Лиса"
 	desc = ""
 	icon_state = "fox_tail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/fox_tail_plain
-	name = "Fox tail"
+	name = "Лиса, альт"
 	desc = ""
 	icon_state = "fox_tail_plain_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/fennec_tail
-	name = "Fennec tail"
+	name = "Фенёк"
 	desc = ""
 	icon_state = "fennec_tail_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/lizard_tail_smooth
-	name = "Lizard Tail (Smooth)"
+	name = "Ящер, гладкий"
 	desc = ""
 	icon_state = "lizard_tail_smooth"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/lizard_tail_dark_tiger
-	name = "Lizard Tail (Dark Tiger)"
+	name = "Ящер, светлый"
 	desc = ""
 	icon_state = "lizard_tail_dark_tiger"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/lizard_tail_light_tiger
-	name = "Lizard Tail (Light Tiger)"
+	name = "Ящер, светлый"
 	desc = ""
 	icon_state = "lizard_tail_light_tiger"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/lizard_tail_spiked
-	name = "Lizard Tail (Spiked)"
+	name = "Ящер, шипастый"
 	desc = ""
 	icon_state = "lizard_tail_spiked"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/xenotail_fullcolour
-	name = "xenomorph tail (fully colourable)"
+	name = "Ксеноморф (окрашиваемый)"
 	desc = ""
 	icon_state = "xenotail_fullcolour"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/xenotailalt_fullcolour
-	name = "xenomorph tail alt. (fully colourable)"
+	name = "Ксеноморф, альт (окрашиваемый)"
 	desc = ""
 	icon_state = "xenotailalt_fullcolour"
 	do_colouration = 1
