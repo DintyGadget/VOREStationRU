@@ -15,16 +15,16 @@
 	return TRUE
 
 /mob/living/carbon/human/verb/toggle_eyes_layer()
-	set name = "Switch Eyes/Monitor Layer"
-	set desc = "Toggle rendering of eyes/monitor above markings."
+	set name = "Сменить Слой Глаз/Монитора"
+	set desc = "Переключить отображение глаз/монитора поверх особенностей тела."
 	set category = "IC"
 
 	if(stat)
-		to_chat(src, "<span class='warning'>You must be awake and standing to perform this action!</span>")
+		to_chat(src, "<span class='warning'>Вам нужно быть на ногах, чтобы это сделать!</span>")
 		return
 	var/obj/item/organ/external/head/vr/H = organs_by_name[BP_HEAD]
 	if(!H)
-		to_chat(src, "<span class='warning'>You don't seem to have a head!</span>")
+		to_chat(src, "<span class='warning'>Похоже, у Вас нет головы!</span>")
 		return
 
 	H.eyes_over_markings = !H.eyes_over_markings
@@ -32,6 +32,6 @@
 
 	var/datum/robolimb/robohead = all_robolimbs[H.model]
 	if(robohead.monitor_styles && robohead.monitor_icon)
-		to_chat(src, "<span class='notice'>You reconfigure the rendering order of your facial display.</span>")
+		to_chat(src, "<span class='notice'>Вы перенастраиваете отображение своего лица.</span>")
 
 	return TRUE

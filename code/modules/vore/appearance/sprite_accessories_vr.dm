@@ -611,7 +611,7 @@
 	extra_overlay = "dragon-horns"
 
 /datum/sprite_accessory/ears/synthhorns_plain
-	name = "Synth horns, plain"
+	name = "Синтетик, рога простые"
 	desc = ""
 	icon_state = "synthhorns_plain"
 	do_colouration = 1
@@ -619,7 +619,7 @@
 	extra_overlay = "synthhorns_plain_light"
 
 /datum/sprite_accessory/ears/synthhorns_thick
-	name = "Synth horns, thick"
+	name = "Синтетик, рога толстые"
 	desc = ""
 	icon_state = "synthhorns_thick"
 	do_colouration = 1
@@ -627,7 +627,7 @@
 	extra_overlay = "synthhorns_thick_light"
 
 /datum/sprite_accessory/ears/synthhorns_curly
-	name = "Synth horns, curly"
+	name = "Синтетик, рога округлые"
 	desc = ""
 	icon_state = "synthhorns_curled"
 	do_colouration = 1
@@ -737,7 +737,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/wing/harpywings_alt
-	name = "harpy wings alt, archeopteryx"
+	name = "Гарпия, археоптерикс"
 	desc = ""
 	icon_state = "harpywings_alt"
 	do_colouration = 1
@@ -745,7 +745,7 @@
 	extra_overlay = "harpywings_altmarkings"
 
 /datum/sprite_accessory/wing/harpywings_alt_neckfur
-	name = "harpy wings alt, archeopteryx & neckfur"
+	name = "Гарпия, археоптерикс с воротом"
 	desc = ""
 	icon_state = "harpywings_alt"
 	do_colouration = 1
@@ -754,7 +754,7 @@
 	extra_overlay2 = "neckfur"
 
 /datum/sprite_accessory/wing/harpywings_bat
-	name = "harpy wings, bat"
+	name = "Гарпия, летучая мышь"
 	desc = ""
 	icon_state = "harpywings_bat"
 	do_colouration = 1
@@ -762,7 +762,7 @@
 	extra_overlay = "harpywings_batmarkings"
 
 /datum/sprite_accessory/wing/harpywings_bat_neckfur
-	name = "harpy wings, bat & neckfur"
+	name = "Гарпия, летучая мышь с воротом"
 	desc = ""
 	icon_state = "harpywings_bat"
 	do_colouration = 1
@@ -771,7 +771,7 @@
 	extra_overlay2 = "neckfur"
 
 /datum/sprite_accessory/wing/neckfur
-	name = "neck fur"
+	name = "Ворот из шерсти"
 	desc = ""
 	icon_state = "neckfur"
 	do_colouration = 1
@@ -862,7 +862,7 @@
 	do_colouration = 0
 
 /datum/sprite_accessory/wing/drago_wing
-	name = "Cybernetic Dragon wings"
+	name = "Драк-киборг"
 	desc = ""
 	icon_state = "drago_wing"
 	do_colouration = 1

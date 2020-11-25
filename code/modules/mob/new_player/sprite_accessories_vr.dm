@@ -1269,67 +1269,67 @@
 		species_allowed = list(SPECIES_TESHARI)
 
 	voxscales
-		name = "Vox Scales"
+		name = "Вокс: Чешуя"
 		icon_state = "Voxscales"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_HEAD)
 
 	voxclaws
-		name = "Vox Claws"
+		name = "Вокс: Когти"
 		icon_state = "Voxclaws"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_HAND,BP_R_HAND)
 
 	voxbeak
-		name = "Vox Beak"
+		name = "Вокс: Клюв"
 		icon_state = "Voxscales"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathihood
-		name = "Cobra Hood"
+		name = "Унати: Капюшон кобры"
 		icon_state = "unathihood"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathidoublehorns
-		name = "Double Unathi Horns"
+		name = "Унати: Двойные рога"
 		icon_state = "unathidoublehorns"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathihorns
-		name = "Unathi Horns"
+		name = "Унати: Рога средние"
 		icon_state = "unathihorns"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathiramhorns
-		name = "Unathi Ram Horns"
+		name = "Унати: Рога округлые"
 		icon_state = "unathiramhorns"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathishortspines
-		name = "Unathi Short Spines"
+		name = "Унати: Шипы короткие"
 		icon_state = "unathishortspines"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathilongspines
-		name = "Unathi Long Spines"
+		name = "Унати: Шипы длинные"
 		icon_state = "unathilongspines"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathishortfrills
-		name = "Unathi Short Frills"
+		name = "Унати: Плавники короткие"
 		icon_state = "unathishortfrills"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)
 
 	unathilongfrills
-		name = "Unathi Long Frills"
+		name = "Унати: Плавники длинные"
 		icon_state = "unathilongfrills"
 		color_blend_mode = ICON_MULTIPLY
 		body_parts = list(BP_HEAD)

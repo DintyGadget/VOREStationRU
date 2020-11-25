@@ -255,14 +255,14 @@
 				pretty_ear_styles[instance.name] = path
 
 		// Present choice to user
-		var/new_ear_style = input(user, "Подберите уши", "Настройка персонажа", pref.ear_style) as null|anything in pretty_ear_styles
+		var/new_ear_style = input(user, "Подберите уши", "Настройка Персонажа", pref.ear_style) as null|anything in pretty_ear_styles
 		if(new_ear_style)
 			pref.ear_style = pretty_ear_styles[new_ear_style]
 
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["ear_color"])
-		var/new_earc = input(user, "Выберите цвет ушей Вашего персонажа:", "Настройка персонажа",
+		var/new_earc = input(user, "Выберите цвет ушей Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_ears, pref.g_ears, pref.b_ears)) as color|null
 		if(new_earc)
 			pref.r_ears = hex2num(copytext_char(new_earc, 2, 4))
@@ -280,7 +280,7 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["ear_color3"])
-		var/new_earc3 = input(user, "Choose your character's tertiary ear colour:", "Character Preference",
+		var/new_earc3 = input(user, "Выберите третичный цвет ушей Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_ears3, pref.g_ears3, pref.b_ears3)) as color|null
 		if(new_earc3)
 			pref.r_ears3 = hex2num(copytext(new_earc3, 2, 4))
@@ -297,14 +297,14 @@
 				pretty_tail_styles[instance.name] = path
 
 		// Present choice to user
-		var/new_tail_style = input(user, "Выберите хвост", "Настройка персонажа", pref.tail_style) as null|anything in pretty_tail_styles
+		var/new_tail_style = input(user, "Выберите хвост", "Настройка Персонажа", pref.tail_style) as null|anything in pretty_tail_styles
 		if(new_tail_style)
 			pref.tail_style = pretty_tail_styles[new_tail_style]
 
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["tail_color"])
-		var/new_tailc = input(user, "Выберите цвет хвоста/таура вашего персонажа:", "Настройка персонажа",
+		var/new_tailc = input(user, "Выберите цвет хвоста/тавра Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_tail, pref.g_tail, pref.b_tail)) as color|null
 		if(new_tailc)
 			pref.r_tail = hex2num(copytext_char(new_tailc, 2, 4))
@@ -313,7 +313,7 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["tail_color2"])
-		var/new_tailc2 = input(user, "Выберите второстепенный цвет хвоста/таура вашего персонажа:", "Настройка персонажа",
+		var/new_tailc2 = input(user, "Выберите второстепенный цвет хвоста/тавра Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_tail2, pref.g_tail2, pref.b_tail2)) as color|null
 		if(new_tailc2)
 			pref.r_tail2 = hex2num(copytext_char(new_tailc2, 2, 4))
@@ -322,7 +322,7 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["tail_color3"])
-		var/new_tailc3 = input(user, "Choose your character's tertiary tail/taur colour:", "Character Preference",
+		var/new_tailc3 = input(user, "Выберите третичный цвет хвоста/тавра Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_tail3, pref.g_tail3, pref.b_tail3)) as color|null
 		if(new_tailc3)
 			pref.r_tail3 = hex2num(copytext(new_tailc3, 2, 4))
@@ -339,14 +339,14 @@
 				pretty_wing_styles[instance.name] = path
 
 		// Present choice to user
-		var/new_wing_style = input(user, "Выберите крылья", "Настройка персонажа", pref.wing_style) as null|anything in pretty_wing_styles
+		var/new_wing_style = input(user, "Выберите крылья", "Настройка Персонажа", pref.wing_style) as null|anything in pretty_wing_styles
 		if(new_wing_style)
 			pref.wing_style = pretty_wing_styles[new_wing_style]
 
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["wing_color"])
-		var/new_wingc = input(user, "Выберите цвет крыльев Вашего персонажа:", "Настройка персонажа",
+		var/new_wingc = input(user, "Выберите цвет крыльев Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_wing, pref.g_wing, pref.b_wing)) as color|null
 		if(new_wingc)
 			pref.r_wing = hex2num(copytext_char(new_wingc, 2, 4))
@@ -355,7 +355,7 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["wing_color2"])
-		var/new_wingc2 = input(user, "Выберите второстепенный цвет крыльев Вашего персонажа:", "Настройка персонажа",
+		var/new_wingc2 = input(user, "Выберите второстепенный цвет крыльев Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_wing2, pref.g_wing2, pref.b_wing2)) as color|null
 		if(new_wingc2)
 			pref.r_wing2 = hex2num(copytext_char(new_wingc2, 2, 4))
@@ -364,7 +364,7 @@
 			return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["wing_color3"])
-		var/new_wingc3 = input(user, "Choose your character's tertiary wing colour:", "Character Preference",
+		var/new_wingc3 = input(user, "Выберите третичный цвет крыльев Вашего персонажа:", "Настройка Персонажа",
 			rgb(pref.r_wing3, pref.g_wing3, pref.b_wing3)) as color|null
 		if(new_wingc3)
 			pref.r_wing3 = hex2num(copytext(new_wingc3, 2, 4))
