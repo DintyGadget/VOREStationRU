@@ -1,5 +1,5 @@
 /obj/item/clothing/accessory/storage
-	name = "аксессуар для переноски груза"
+	name = "Аксессуар для переноски груза"
 	desc = "Иногда двух рук бывает маловато."
 	icon_state = "webbing"
 	slot = ACCESSORY_SLOT_UTILITY
@@ -42,7 +42,7 @@
 	..()
 
 /obj/item/clothing/accessory/storage/attack_self(mob/user as mob)
-	to_chat(user, "<span class='notice'>Вы опустошаете [src].</span>")
+	to_chat(user, "<span class='notice'>Вы опустошаете [ru_getcase(src, "acase")].</span>")
 	var/turf/T = get_turf(src)
 	hold.hide_from(usr)
 	for(var/obj/item/I in hold.contents)
@@ -50,47 +50,47 @@
 	add_fingerprint(user)
 
 /obj/item/clothing/accessory/storage/webbing
-	name = "жилет из лямок"
+	name = "Жилет из лямок"
 	desc = "Куча различных ремешков и застёжек, готовых помочь Вам с грузом."
 	icon_state = "webbing"
 	slots = 3
 
 /obj/item/clothing/accessory/storage/black_vest
-	name = "черный жилет из лямок"
+	name = "Чёрный жилет из лямок"
 	desc = "Прочный синтехлопковый жилет из лямок с кучей карманов для всего, что не вмещается в руки."
 	icon_state = "vest_black"
 
 /obj/item/clothing/accessory/storage/brown_vest
-	name = "коричневый жилет из лямок"
+	name = "Коричневый жилет из лямок"
 	desc = "Поношенный синтехлопковый жилет из лямок коричневого цвета с кучей карманов."
 	icon_state = "vest_brown"
 
 /obj/item/clothing/accessory/storage/white_vest
-	name = "белый жилет из лямок"
+	name = "Белый жилет из лямок"
 	desc = "Надёжный синтехлопковый жилет белого цвета с карманами для всего необходимого."
 	icon_state = "vest_white"
 
 /obj/item/clothing/accessory/storage/black_drop_pouches
-	name = "черные сумочки"
+	name = "Чёрные сумочки"
 	gender = PLURAL
 	desc = "Прочные сумочки чёрного цвета для всего, что не вмещается в руки."
 	icon_state = "thigh_black"
 
 /obj/item/clothing/accessory/storage/brown_drop_pouches
-	name = "коричневые сумочки"
+	name = "Коричневые сумочки"
 	gender = PLURAL
 	desc = "Прочные сумочки коричневого цвета для всего, что не вмещается в руки."
 	icon_state = "thigh_brown"
 
 /obj/item/clothing/accessory/storage/white_drop_pouches
-	name = "белые сумочки"
+	name = "Белые сумочки"
 	gender = PLURAL
 	desc = "Надёжные сумочки белого цвета для всего, что не вмещается в руки."
 	icon_state = "thigh_white"
 
 /obj/item/clothing/accessory/storage/knifeharness
-	name = "украшенная упряжь"
-	desc = "Декорированная упряжь из сухожилий и кужо с двумя петельками для ножей."
+	name = "Украшенная упряжь"
+	desc = "Декорированная упряжь из сухожилий и кожи с двумя петельками для ножей."
 	icon_state = "unathiharness2"
 	slots = 2
 

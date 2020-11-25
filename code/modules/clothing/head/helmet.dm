@@ -78,7 +78,7 @@
 	update_clothing_icon()	//so our mob-overlays update
 
 /obj/item/clothing/head/helmet/laserproof
-	name = "Аблятивный шлем"
+	name = "Абляционный шлем"
 	desc = "Этот шлем предназначен для защиты от энергетических снарядов."
 	icon_state = "helmet_reflec"
 	item_state_slots = list(slot_r_hand_str = "helmet", slot_l_hand_str = "helmet")

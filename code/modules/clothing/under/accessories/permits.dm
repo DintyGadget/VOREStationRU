@@ -1,7 +1,7 @@
 //This'll be used for gun permits, such as for heads of staff, antags, and bartenders
 
 /obj/item/clothing/accessory/permit
-	name = "лицензия"
+	name = "Лицензия"
 	desc = "Лицензия на что-либо."
 	icon = 'icons/obj/card.dmi'
 	icon_state = "permit"
@@ -13,9 +13,9 @@
 	if(isliving(user))
 		if(!owner)
 			set_name(user.name)
-			to_chat(user, "[src] записывается на Ваше имя.")
+			to_chat(user, "[capitalize(ru_getcase(src, "ncase"))] записывается на Ваше имя.")
 		else
-			to_chat(user, "[src] уже имеет владельца!")
+			to_chat(user, "У [ru_getcase(src, "gcase")] уже есть владелец!")
 
 /obj/item/clothing/accessory/permit/proc/set_name(var/new_name)
 	owner = 1
@@ -28,18 +28,18 @@
 	owner = 0
 
 /obj/item/clothing/accessory/permit/gun
-	name = "лицензия на оружие"
+	name = "Лицензия на оружие"
 	desc = "Карточка, дающая владельцу право на ношение огнестрельного оружия."
 
 /obj/item/clothing/accessory/permit/gun/bar
-	name = "лицензия на барный дробовик"
-	desc = "Карточка, дающая владельцу право на ношение дробовика в баре."
+	name = "Лицензия на барный дробовик"
+	desc = "Карточка, дающая владельцу право на ношение ружья в баре."
 
 /obj/item/clothing/accessory/permit/gun/planetside
-	name = "лицензия на оружие на планете"
+	name = "Лицензия на оружие на планете"
 	desc = "Карточка, дающая владельцу право на ношение огнестрельного оружия при выходе на поверхность."
 
 /obj/item/clothing/accessory/permit/drone
-	name = "карта идентификации дрона"
+	name = "Карта идентификации дрона"
 	desc = "Карточка, изготавливаемая EIO. Означает, что носитель является дроном. По закону, дроны обязуются иметь при себе эту карту на территории Сол."
 	icon_state = "permit_drone"

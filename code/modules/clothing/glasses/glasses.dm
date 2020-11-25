@@ -293,8 +293,8 @@ BLIND     // can't see anything
 	body_parts_covered = 0
 
 /obj/item/clothing/glasses/gglasses
-	name = "Зеленые очки"
-	desc = "Очки зеленого цвета, придающие Вам довольно зловещий вид."
+	name = "Зелёные очки"
+	desc = "Очки зелёного цвета, придающие Вам довольно зловещий вид."
 	icon_state = "gglasses"
 	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
 	body_parts_covered = 0

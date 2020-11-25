@@ -2142,7 +2142,7 @@ obj/item/clothing/suit/kamishimo
 
 /obj/item/clothing/suit/storage/toggle/hoodie/yellow
 	name = "Жёлтое худи"
-	desc = "Тёплый свитшот желтого цвета."
+	desc = "Тёплый свитшот жёлтого цвета."
 	rugender = "male"
 	ncase = "жёлтое худи"
 	gcase = "жёлтого худи"

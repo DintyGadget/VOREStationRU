@@ -3,7 +3,7 @@
 //
 
 /obj/item/clothing/accessory/choker //A colorable, tagless choker
-	name = "обычный чокер"
+	name = "Чокер"
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	desc = "Простой, незамысловатый чокер. А может, это ошейник? Используйте в руке, чтобы настроить его."
 	icon = 'icons/obj/clothing/ties_vr.dmi'
@@ -52,9 +52,9 @@
 		name = "[design] [material] [type]"
 		desc = "Это [material] [type]. На вид вполне [design]."
 		customized = 1
-		to_chat(usr,"<span class='notice'>[src] уже был видозменен.</span>")
+		to_chat(usr,"<span class='notice'>Вы видоизменили [ru_getcase(src, "acase")].</span>")
 	else
-		to_chat(usr,"<span class='notice'>[src] уже был видоизменен!</span>")
+		to_chat(usr,"<span class='notice'>Вы уже видоизменzли [ru_getcase(src, "acase")]!</span>")
 
 /obj/item/clothing/accessory/collar
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
@@ -95,21 +95,21 @@
 	icon_override = icon_previous_override
 
 /obj/item/clothing/accessory/collar/silver
-	name = "серебряный ошейник с биркой"
+	name = "Серебряный ошейник с биркой"
 	desc = "Ошейник для ваших маленьких питомцев... или больших."
 	icon_state = "collar_blk"
 	item_state = "collar_blk"
 	overlay_state = "collar_blk"
 
 /obj/item/clothing/accessory/collar/gold
-	name = "золотой ошейник с биркой"
+	name = "Золотой ошейник с биркой"
 	desc = "Ошейник для ваших маленьких питомцев... или больших."
 	icon_state = "collar_gld"
 	item_state = "collar_gld"
 	overlay_state = "collar_gld"
 
 /obj/item/clothing/accessory/collar/bell
-	name = "ошейник с колокольчиком"
+	name = "Ошейник с колокольчиком"
 	desc = "Ошейник с прицепленным колокольчиком."
 	icon_state = "collar_bell"
 	item_state = "collar_bell"
@@ -117,14 +117,14 @@
 	var/jingled = 0
 
 /obj/item/clothing/accessory/collar/bell/verb/jinglebell()
-	set name = "Позвонить в Колокольчик"
-	set category = "Object"
+	set name = "Позвонить В Колокольчик"
+	set category = "Объект"
 	set src in usr
 	if(!istype(usr, /mob/living)) return
 	if(usr.stat) return
 
 	if(!jingled)
-		usr.audible_message("[usr] звонит в колокольчик [src].")
+		usr.audible_message("[usr] звонит в колокольчик [ru_getcase(src, "gcase")].")
 		playsound(src, 'sound/items/pickup/ring.ogg', 50, 1)
 		jingled = 1
 		addtimer(CALLBACK(src, .proc/jingledreset), 50)
@@ -134,7 +134,7 @@
 		jingled = 0
 
 /obj/item/clothing/accessory/collar/shock
-	name = "электрический ошейник"
+	name = "Электрический ошейник"
 	desc = "Ошейник, используемый для усмирения голодных хищников."
 	icon_state = "collar_shk0"
 	item_state = "collar_shk"
@@ -249,21 +249,21 @@
 	return
 
 /obj/item/clothing/accessory/collar/spike
-	name = "шипованный ошейник"
+	name = "Шипованный ошейник"
 	desc = "Ошейник с шипами. Острые, как и клыки хищника."
 	icon_state = "collar_spik"
 	item_state = "collar_spik"
 	overlay_state = "collar_spik"
 
 /obj/item/clothing/accessory/collar/pink
-	name = "розовый ошейник"
+	name = "Розовый ошейник"
 	desc = "Придаёт Вашим питомцам определенный шарм."
 	icon_state = "collar_pnk"
 	item_state = "collar_pnk"
 	overlay_state = "collar_pnk"
 
 /obj/item/clothing/accessory/collar/holo
-	name = "голо-ошейник"
+	name = "Голо-ошейник"
 	desc = "Дорогой голо-ошейник для современного питомца."
 	icon_state = "collar_holo"
 	item_state = "collar_holo"
@@ -278,7 +278,7 @@
 
 /obj/item/clothing/accessory/collar/attack_self(mob/user as mob)
 	if(istype(src,/obj/item/clothing/accessory/collar/holo))
-		to_chat(user,"<span class='notice'>Интерфейс ошейника проецируется Вам на руку.</span>")
+		to_chat(user,"<span class='notice'>Интерфейс [ru_getcase(src,"gcase")] проецируется Вам на руку.</span>")
 	else
 		if(writtenon)
 			to_chat(user,"<span class='notice'>Чтобы изменить текст на бирке, необходима отвертка или ручка.</span>")
@@ -288,7 +288,7 @@
 	var/str = copytext_char(reject_bad_text(input(user,"Текст на бирке?","Установите текст","")),1,MAX_NAME_LEN)
 
 	if(!str || !length(str))
-		to_chat(user,"<span class='notice'>Установлен пустой текст на бирке ошейника.</span>")
+		to_chat(user,"<span class='notice'>Установлен пустой текст на бирке [ru_getcase(src,"gcase")].</span>")
 		name = initial(name)
 		desc = initial(desc)
 	else
@@ -344,7 +344,7 @@
 
 //Machete Holsters
 /obj/item/clothing/accessory/holster/machete
-	name = "ножны для мачете"
+	name = "Ножны для мачете"
 	desc = "Красивые ножны из искусственной кожи с соответствующим поясом."
 	icon_state = "holster_machete"
 	slot = ACCESSORY_SLOT_WEAPON
@@ -356,7 +356,7 @@
 //Medals
 
 /obj/item/clothing/accessory/medal/silver/unity
-	name = "медаль единства"
+	name = "Медаль единства"
 	desc = "Данная серебряная медаль присуждается группе, которая проявила исключительную командную работу в совершении выдающегося подвига."
 
 /obj/item/clothing/accessory/medal/silver/unity/tabiranth

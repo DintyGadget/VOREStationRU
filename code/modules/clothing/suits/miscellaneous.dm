@@ -618,7 +618,7 @@ obj/item/clothing/suit/kamishimo
 
 /obj/item/clothing/suit/storage/toggle/hoodie/yellow
 	name = "Жёлтое худи"
-	desc = "Тёплый свитшот желтого цвета."
+	desc = "Тёплый свитшот жёлтого цвета."
 	icon_state = "yellow_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_yellow", slot_l_hand_str = "suit_yellow")
 

@@ -1,46 +1,46 @@
 /obj/item/clothing/accessory/armband
-	name = "красная повязка"
+	name = "Красная повязка"
 	desc = "Модная красная повязка!"
 	icon_state = "red"
 	slot = ACCESSORY_SLOT_ARMBAND
 	on_rolled = list("down" = "none")
 
 /obj/item/clothing/accessory/armband/cargo
-	name = "повязка отдела снабжения"
+	name = "Повязка отдела снабжения"
 	desc = "Повязка на руку, обозначающая принадлежность к какому-либо отделу. Эта коричневого цвета."
 	icon_state = "cargo"
 
 /obj/item/clothing/accessory/armband/engine
-	name = "повязка инженера"
+	name = "Повязка инженера"
 	desc = "Повязка на руку, обозначающая принадлежность к какому-либо отделу. Эта оранжевого цвета со светоотражающей полосой."
 	icon_state = "engie"
 
 /obj/item/clothing/accessory/armband/science
-	name = "повязка ученого"
+	name = "Повязка учёного"
 	desc = "Повязка на руку, обозначающая принадлежность к какому-либо отделу. Эта фиолетового цвета."
 	icon_state = "rnd"
 
 /obj/item/clothing/accessory/armband/hydro
-	name = "повязка ботаника"
+	name = "Повязка ботаника"
 	desc = "Повязка на руку, обозначающая принадлежность к какому-либо отделу. Эта зелёная с синим."
 	icon_state = "hydro"
 
 /obj/item/clothing/accessory/armband/med
-	name = "повязка медработника"
+	name = "Повязка медработника"
 	desc = "Повязка на руку, обозначающая принадлежность к какому-либо отделу. Эта белого цвета."
 	icon_state = "med"
 
 /obj/item/clothing/accessory/armband/med/cross
-	name = "повязка врача"
+	name = "Повязка врача"
 	desc = "Белая повязка на руку с синим крестом, предназначенная для врачей."
 	icon_state = "medicband"
 
 /obj/item/clothing/accessory/armband/med/color
-	name = "повязка"
+	name = "Повязка"
 	desc = "Модная повязка на руку."
 	addblends = "med_a"
 
 /obj/item/clothing/accessory/armband/medblue
-	name = "повязка парамедика"
+	name = "Повязка парамедика"
 	desc = "Повязка на руку, обозначающая принадлежность к какому-либо отделу. Эта белого-голубого цвета."
 	icon_state = "medblue"

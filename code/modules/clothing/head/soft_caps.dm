@@ -1,6 +1,6 @@
 /obj/item/clothing/head/soft
 	name = "Кепка грузчика"
-	desc = "Простая бейсболка скудного желтого цвета."
+	desc = "Простая бейсболка скудного жёлтого цвета."
 	icon_state = "cargosoft"
 	item_state_slots = list(slot_r_hand_str = "cargosoft", slot_l_hand_str = "cargosoft")
 	var/flipped = 0

@@ -420,15 +420,15 @@ obj/item/clothing/head/helmet/solgov
 	pcase = "милицейском шлеме"
 
 /obj/item/clothing/head/helmet/laserproof
-	name = "Аблятивный шлем"
+	name = "Абляционный шлем"
 	desc = "Этот шлем предназначен для защиты от энергетических снарядов."
 	rugender = "male"
-	ncase = "аблятивный шлем"
-	gcase = "аблятивного шлема"
-	dcase = "аблятивному шлему"
-	acase = "аблятивный шлем"
-	icase = "аблятивным шлемом"
-	pcase = "аблятивном шлеме"
+	ncase = "абляционный шлем"
+	gcase = "абляционного шлема"
+	dcase = "абляционному шлему"
+	acase = "абляционный шлем"
+	icase = "абляционным шлемом"
+	pcase = "абляционном шлеме"
 
 /obj/item/clothing/head/helmet/bulletproof
 	name = "Пуленепробиваемый шлем"
@@ -2208,7 +2208,7 @@ obj/item/clothing/head/helmet/solgov
 
 /obj/item/clothing/head/soft
 	name = "Кепка грузчика"
-	desc = "Простая бейсболка скудного желтого цвета."
+	desc = "Простая бейсболка скудного жёлтого цвета."
 	rugender = "female"
 	ncase = "кепка грузчика"
 	gcase = "кепки грузчика"
