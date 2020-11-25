@@ -320,12 +320,12 @@
 		if(!stop_messages)
 			if (istype(W, /obj/item/weapon/hand_labeler))
 				return 0
-			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] не [ru_g_obj(src, "мо", "жет", "жет", "жет", "гут")] содержать [ru_getcase(W, "acase)"].</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] не [ru_g_obj(src, "мо", "жет", "жет", "жет", "гут")] содержать [ru_getcase(W, "acase")].</span>")
 		return 0
 
 	if(cant_hold.len && is_type_in_list(W, cant_hold))
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] не [ru_g_obj(src, "мо", "жет", "жет", "жет", "гут")] содержать [ru_getcase(W, "acase)"].</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] не [ru_g_obj(src, "мо", "жет", "жет", "жет", "гут")] содержать [ru_getcase(W, "acase")].</span>")
 		return 0
 
 	if (max_w_class != null && W.w_class > max_w_class)
@@ -368,11 +368,11 @@
 		if(!prevent_warning)
 			for(var/mob/M in viewers(usr, null))
 				if (M == usr)
-					to_chat(usr, "<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase"].</span>")
+					to_chat(usr, "<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase")].</span>")
 				else if (M in range(1)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase"]..</span>")
+					M.show_message("<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase")]..</span>")
 				else if (W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase"]..</span>")
+					M.show_message("<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase")]..</span>")
 
 		src.orient2hud(usr)
 		if(usr.s_active)

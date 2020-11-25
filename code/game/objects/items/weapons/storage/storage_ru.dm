@@ -353,7 +353,7 @@
 	pcase = "кожаной поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/black
- 	name = "Чёрная поясная сумка"
+	name = "Чёрная поясная сумка"
 	rugender = "female"
 	ncase = "чёрная поясная сумка"
 	gcase = "чёрной поясной сумки"
@@ -363,7 +363,7 @@
 	pcase = "чёрной поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/blue
- 	name = "Синяя поясная сумка"
+	name = "Синяя поясная сумка"
 	rugender = "male"
 	ncase = "синяя поясная сумка"
 	gcase = "синей поясной сумки"
@@ -373,7 +373,7 @@
 	pcase = "синей поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/cyan
- 	name = "Голубая поясная сумка"
+	name = "Голубая поясная сумка"
 	rugender = "male"
 	ncase = "голубая поясная сумка"
 	gcase = "голубой поясной сумки"
@@ -383,7 +383,7 @@
 	pcase = "голубой поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/green
- 	name = "Зелёная поясная сумка"
+	name = "Зелёная поясная сумка"
 	rugender = "male"
 	ncase = "зелёная поясная сумка"
 	gcase = "зелёной поясной сумки"
@@ -393,7 +393,7 @@
 	pcase = "зелёной поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/orange
- 	name = "Оранжевая поясная сумка"
+	name = "Оранжевая поясная сумка"
 	rugender = "male"
 	ncase = "оранжевая поясная сумка"
 	gcase = "оранжевой поясной сумки"
@@ -403,7 +403,7 @@
 	pcase = "оранжевой поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/purple
- 	name = "Фиолетовая поясная сумка"
+	name = "Фиолетовая поясная сумка"
 	rugender = "male"
 	ncase = "фиолетовая поясная сумка"
 	gcase = "фиолетовой поясной сумки"
@@ -413,7 +413,7 @@
 	pcase = "фиолетовой поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/red
- 	name = "Красная поясная сумка"
+	name = "Красная поясная сумка"
 	rugender = "male"
 	ncase = "красная поясная сумка"
 	gcase = "красной поясной сумки"
@@ -423,7 +423,7 @@
 	pcase = "красной поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/white
- 	name = "Белая поясная сумка"
+	name = "Белая поясная сумка"
 	rugender = "male"
 	ncase = "белая поясная сумка"
 	gcase = "белой поясной сумки"
@@ -433,7 +433,7 @@
 	pcase = "белой поясной сумке"
 
 /obj/item/weapon/storage/belt/fannypack/yellow
- 	name = "Жёлтая поясная сумка"
+	name = "Жёлтая поясная сумка"
 	rugender = "male"
 	ncase = "жёлтая поясная сумка"
 	gcase = "жёлтой поясной сумки"

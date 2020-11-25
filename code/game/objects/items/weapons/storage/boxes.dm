@@ -59,10 +59,10 @@
 	//try to crush it
 	if(ispath(trash))
 		if(contents.len &&  user.a_intent == I_HURT)  // only crumple with things inside on harmintent.
-			user.visible_message(SPAN_DANGER("[user] [ru_g_end(user, "смина", "ет", "ет", "ет", "ют")] [ru_getcase(src, "acase")], выбрасывая содержимое!"), SPAN_DANGER("Вы сминаете [ru_getcase(src, "acase")], выбрасывая содержимое!"))
+			user.visible_message(SPAN_DANGER("[user] [ru_g_mob(user, "смина", "ет", "ет", "ет", "ют")] [ru_getcase(src, "acase")], выбрасывая содержимое!"), SPAN_DANGER("Вы сминаете [ru_getcase(src, "acase")], выбрасывая содержимое!"))
 			spill()
 		else
-			to_chat(user, SPAN_NOTICE("Вы сминаете [ru_getcase(src, "acase"].")) //make trash
+			to_chat(user, SPAN_NOTICE("Вы сминаете [ru_getcase(src, "acase")].")) //make trash
 		playsound(src.loc, 'sound/items/drop/wrapper.ogg', 30, 1)
 		var/obj/item/trash = new src.trash()
 		qdel(src)

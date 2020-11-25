@@ -20,7 +20,7 @@
 	set category = "Объект"
 
 	if(show_above_suit == -1)
-		to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "acase")] нельзя носить поверх верхней одежды!</span>")
+		to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "acase"))] нельзя носить поверх верхней одежды!</span>")
 		return
 	show_above_suit = !show_above_suit
 	update_icon()
