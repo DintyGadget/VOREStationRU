@@ -24,7 +24,7 @@
 	switch(act)
 		if("airguitar")
 			if(!restrained())
-				message = "играет на воображаемой гитаре и качает головой как обезъяна."
+				message = "играет на воображаемой гитаре и качает головой как обезьяна."
 				m_type = 1
 
 		//Machine-only emotes

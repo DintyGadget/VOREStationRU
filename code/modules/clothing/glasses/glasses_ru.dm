@@ -235,8 +235,8 @@
 	pcase = "3D-очках"
 
 /obj/item/clothing/glasses/gglasses
-	name = "Зеленые очки"
-	desc = "Очки зеленого цвета, придающие Вам довольно зловещий вид."
+	name = "Зелёные очки"
+	desc = "Очки зелёного цвета, придающие Вам довольно зловещий вид."
 	rugender = "plural"
 	ncase = "зелёные очки"
 	gcase = "зелёных очков"
@@ -367,7 +367,6 @@
 
 /obj/item/clothing/glasses/sunglasses/big
 	desc = "На удивление древняя технология, предоставляющая примитивную защиту глаз. Толстые линзы защищают от некоторых вспышек."
-	icon_state = "bigsunglasses"
 
 /obj/item/clothing/glasses/fakesunglasses //Sunglasses without flash immunity
 	name = "Солнечные очки"
@@ -501,6 +500,17 @@
 	acase = "имплантант с тепловым визором"
 	icase = "имплантантом с тепловым визором"
 	pcase = "имплантанте с тепловым визором"
+
+/obj/item/clothing/glasses/aerogelgoggles
+	name = "Оранжевые очки"
+	desc = "Легковесные очки, предназначенные для тешари."
+	rugender = "plural"
+	ncase = "оранжевые очки"
+	gcase = "оранжевых очков"
+	dcase = "оранжевым очкам"
+	acase = "оранжевые очки"
+	icase = "оранжевыми очками"
+	pcase = "оранжевых очках"
 
 //
 //glasses_vr.dm

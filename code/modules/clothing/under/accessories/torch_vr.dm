@@ -136,8 +136,8 @@ specialty pins
 	desc = "A golden pin denoting some special qualification."
 
 /obj/item/clothing/accessory/solgov/specialty/pilot
-	name = "pilot's qualification pin"
-	desc = "An iron pin denoting the qualification to fly TCG spacecraft."
+	name = "Значок квалифицированного пилота"
+	desc = "Железный значок, выдаваемый квалифицированным пилотам."
 
 /*****
 badges

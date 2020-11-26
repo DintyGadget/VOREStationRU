@@ -420,15 +420,15 @@ obj/item/clothing/head/helmet/solgov
 	pcase = "милицейском шлеме"
 
 /obj/item/clothing/head/helmet/laserproof
-	name = "Аблятивный шлем"
+	name = "Абляционный шлем"
 	desc = "Этот шлем предназначен для защиты от энергетических снарядов."
 	rugender = "male"
-	ncase = "аблятивный шлем"
-	gcase = "аблятивного шлема"
-	dcase = "аблятивному шлему"
-	acase = "аблятивный шлем"
-	icase = "аблятивным шлемом"
-	pcase = "аблятивном шлеме"
+	ncase = "абляционный шлем"
+	gcase = "абляционного шлема"
+	dcase = "абляционному шлему"
+	acase = "абляционный шлем"
+	icase = "абляционным шлемом"
+	pcase = "абляционном шлеме"
 
 /obj/item/clothing/head/helmet/bulletproof
 	name = "Пуленепробиваемый шлем"
@@ -1200,7 +1200,6 @@ obj/item/clothing/head/helmet/solgov
 
 /obj/item/clothing/head/centhat
 	name = "Головной убор ЦК"
-	icon_state = "centcom"
 	desc = "Приятно быть императором."
 	rugender = "male"
 	ncase = "головной убор ЦК"
@@ -2209,7 +2208,7 @@ obj/item/clothing/head/helmet/solgov
 
 /obj/item/clothing/head/soft
 	name = "Кепка грузчика"
-	desc = "Простая бейсболка скудного желтого цвета."
+	desc = "Простая бейсболка скудного жёлтого цвета."
 	rugender = "female"
 	ncase = "кепка грузчика"
 	gcase = "кепки грузчика"
@@ -2598,7 +2597,6 @@ obj/item/clothing/head/helmet/solgov
 /obj/item/clothing/head/beret/solgov/fleet/branch
 	name = "first fleet beret"
 	desc = "An TCG Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety."
-	icon_state = "beret_navy_first"
 
 /obj/item/clothing/head/beret/solgov/fleet/branch/second
 	name = "second fleet beret"

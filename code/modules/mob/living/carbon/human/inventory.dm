@@ -365,7 +365,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 			covering = src.wear_suit
 
 	if(covering && (covering.body_parts_covered & (I.body_parts_covered|check_flags)))
-		to_chat(user, "<span class='warning'>Вам мешается [covering.ncase == "ncase" ? covering : covering.ncase].</span>")
+		to_chat(user, "<span class='warning'>Вам мешается [ru_getcase(covering, "ncase")].</span>")
 		return 0
 	return 1
 

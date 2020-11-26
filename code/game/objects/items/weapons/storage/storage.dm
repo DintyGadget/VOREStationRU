@@ -313,24 +313,24 @@
 		return 0 //Means the item is already in the storage item
 	if(storage_slots != null && contents.len >= storage_slots)
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] полон, освободите немного места.</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] [ru_g_obj(src, "заполнен", "", "а", "о", "ы")], освободите немного места.</span>")
 		return 0 //Storage item is full
 
 	if(can_hold.len && !is_type_in_list(W, can_hold))
 		if(!stop_messages)
 			if (istype(W, /obj/item/weapon/hand_labeler))
 				return 0
-			to_chat(usr, "<span class='notice'>[src] не может содержать [W].</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] не [ru_g_obj(src, "мо", "жет", "жет", "жет", "гут")] содержать [ru_getcase(W, "acase")].</span>")
 		return 0
 
 	if(cant_hold.len && is_type_in_list(W, cant_hold))
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] не может содержать [W].</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] не [ru_g_obj(src, "мо", "жет", "жет", "жет", "гут")] содержать [ru_getcase(W, "acase")].</span>")
 		return 0
 
 	if (max_w_class != null && W.w_class > max_w_class)
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[W] слишком длинный для [src].</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(W,ncase))] слишком [ru_g_obj(W, "длинн", "ый", "ая", "ое", "ые")] для [ru_getcase(src, "gcase")].</span>")
 		return 0
 
 	var/total_storage_space = W.get_storage_cost()
@@ -339,12 +339,12 @@
 
 	if(total_storage_space > max_storage_space)
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] полон, освободите немного места.</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] [ru_g_obj(src, "заполнен", "", "а", "о", "ы")], освободите немного места.</span>")
 		return 0
 
 	if(W.w_class >= src.w_class && (istype(W, /obj/item/weapon/storage)))
 		if(!stop_messages)
-			to_chat(usr, "<span class='notice'>[src] не может содержать [W], так как это элемент хранения того же размера.</span>")
+			to_chat(usr, "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] не может содержать [ru_getcase(W, "acase")], так как это элемент хранения того же размера.</span>")
 		return 0 //To prevent the stacking of same sized storage items.
 
 	return 1
@@ -368,11 +368,11 @@
 		if(!prevent_warning)
 			for(var/mob/M in viewers(usr, null))
 				if (M == usr)
-					to_chat(usr, "<span class='notice'>Вы помещаете [W] в [src].</span>")
+					to_chat(usr, "<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase")].</span>")
 				else if (M in range(1)) //If someone is standing close enough, they can tell what it is...
-					M.show_message("<span class='notice'>[usr] помещает [W] в [src].</span>")
+					M.show_message("<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase")]..</span>")
 				else if (W && W.w_class >= 3) //Otherwise they can only see large or normal items from a distance...
-					M.show_message("<span class='notice'>[usr] помещает [W] в [src].</span>")
+					M.show_message("<span class='notice'>Вы помещаете [ru_getcase(W, "acase")] в [ru_getcase(src, "acase")]..</span>")
 
 		src.orient2hud(usr)
 		if(usr.s_active)
@@ -437,7 +437,7 @@
 					remove_from_storage(L, T)
 					qdel(L)
 		if(amt_inserted)
-			to_chat(user, "You inserted [amt_inserted] light\s into \the [LP.name]. You have [LP.uses] light\s remaining.")
+			to_chat(user, "Вы вставляете [ru_countreagents(amt_inserted, "лампочку", "лампочки", "лампочек")] в [ru_getcase(LP, "pcase")]. У Вас осталось [ru_countreagents(LP.uses, "лампочка", "лампочки", "лампочек")].")
 			return
 
 	if(!can_be_inserted(W))
@@ -447,7 +447,7 @@
 		var/obj/item/weapon/tray/T = W
 		if(T.calc_carry() > 0)
 			if(prob(85))
-				to_chat(user, "<span class='warning'>Лоток не поместится в [src].</span>")
+				to_chat(user, "<span class='warning'>Поднос не вместится в [ru_getcase(src, "acase")].</span>")
 				return
 			else
 				W.forceMove(get_turf(user))
@@ -499,27 +499,27 @@
 		success = 1
 		handle_item_insertion(I, 1)	//The 1 stops the "You put the [src] into [S]" insertion message from being displayed.
 	if(success && !failure)
-		to_chat(user, "<span class='notice'>Вы кладете все в [src].</span>")
+		to_chat(user, "<span class='notice'>Вы складываете содержимое в [ru_getcase(src, "acase")].</span>")
 	else if(success)
-		to_chat(user, "<span class='notice'>Вы кладете некоторые вещи в [src].</span>")
+		to_chat(user, "<span class='notice'>Вы кладете несколько предметов в [ru_getcase(src, "acase")].</span>")
 	else
-		to_chat(user, "<span class='notice'>Вы не можете ничего подобрать с помощью [src].</span>")
+		to_chat(user, "<span class='notice'>Вы не можете ничего подобрать с помощью [ru_getcase(src, "gcase")].</span>")
 
 /obj/item/weapon/storage/verb/toggle_gathering_mode()
-	set name = "Switch Gathering Method"
-	set category = "Object"
+	set name = "Сменить Способ Собирания"
+	set category = "Объект"
 
 	collection_mode = !collection_mode
 	switch (collection_mode)
 		if(1)
-			to_chat(usr, "[src] теперь поднимает все предметы на плитке сразу.")
+			to_chat(usr, "[capitalize(ru_getcase(src, "ncase"))] теперь поднимает все предметы на плитке сразу.")
 		if(0)
-			to_chat(usr, "[src] теперь поднимает по одному предмету за раз.")
+			to_chat(usr, "[capitalize(ru_getcase(src, "ncase"))] теперь поднимает по одному предмету за раз.")
 
 
 /obj/item/weapon/storage/verb/quick_empty()
-	set name = "Empty Contents"
-	set category = "Object"
+	set name = "Опустошить Содержимое"
+	set category = "Объект"
 
 	if(((!(ishuman(usr) || isrobot(usr))) && (src.loc != usr)) || usr.stat || usr.restrained())
 		return
@@ -679,8 +679,8 @@
  * Trinket Box - READDING SOON
  */
 /obj/item/weapon/storage/trinketbox
-	name = "trinket box"
-	desc = "Шкатулка, в которой можно хранить маленькие безделушки, например кольцо."
+	name = "Шкатулка для безделушек"
+	desc = "Шкатулка, в которой можно хранить маленькие безделушки -- например, кольцо."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "trinketbox"
 	var/open = 0
@@ -727,7 +727,7 @@
 	. = ..()
 	if(open && contents.len)
 		var/display_item = contents[1]
-		. += "<span class='notice'>\The [src] contains \the [display_item]!</span>"
+		. += "<span class='notice'>[capitalize(ru_getcase(src, "ncase"))] содержит в себе [ru_getcase(display_item, "acase")]!</span>"
 
 /obj/item/weapon/storage/AllowDrop()
 	return TRUE

@@ -1184,7 +1184,7 @@
 		verbs -= /mob/living/carbon/human/proc/bloody_doodle
 
 	if (src.gloves)
-		to_chat(src, "<span class='warning'>Вам мешаются [src.gloves.ncase] перчатки.</span>")
+		to_chat(src, "<span class='warning'>Вам мешаются [ru_getcase(src.gloves, "ncase")] перчатки.</span>")
 		return
 
 	var/turf/simulated/T = src.loc

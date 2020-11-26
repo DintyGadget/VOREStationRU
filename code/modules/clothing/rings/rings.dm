@@ -14,7 +14,7 @@
 	icon_state = "diamond"
 
 /obj/item/clothing/gloves/ring/engagement/attack_self(mob/user)
-	user.visible_message("<span class='warning'>[user] становится на колено, показывая [src.acase].</span>","<span class='warning'>Вы становитесь на колено, показывая [src.acase].</span>")
+	user.visible_message("<span class='warning'>[user] становится на колено, показывая [ru_getcase(src, "acase")].</span>","<span class='warning'>Вы становитесь на колено, показывая [ru_getcase(src, "acase")].</span>")
 
 /obj/item/clothing/gloves/ring/cti
 	name = "Кольцо CTI"
@@ -43,7 +43,7 @@
 	if(istype(H) && H.gloves==src)
 
 		if(reagents.total_volume)
-			to_chat(H, "<span class='danger'>Надевая [src.acase], Вы чувствуете укол.</span>")
+			to_chat(H, "<span class='danger'>Надевая [ru_getcase(src, "acase")], Вы чувствуете укол.</span>")
 			if(H.reagents)
 				var/contained = reagents.get_reagents()
 				var/trans = reagents.trans_to_mob(H, 15, CHEM_BLOOD)

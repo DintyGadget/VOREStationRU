@@ -191,16 +191,16 @@
 //All atoms
 /atom/proc/examine(mob/user, var/infix = "", var/suffix = "")
 	//This reformat names to get a/an properly working on item descriptions when they are bloody
-	var/f_name = "\a [src][infix]."
+	var/f_name = "[src][infix]."
 	if(src.blood_DNA && !istype(src, /obj/effect/decal))
 		if(gender == PLURAL)
-			f_name = "some "
+			f_name = ""
 		else
-			f_name = "a "
+			f_name = ""
 		if(blood_color != SYNTH_BLOOD_COLOUR)
-			f_name += "<span class='danger'>blood-stained</span> [name][infix]!"
+			f_name += "[name][infix] <span class='danger'>в крови</span>!</span>"
 		else
-			f_name += "oil-stained [name][infix]."
+			f_name += "[name][infix] в масле."
 
 	var/list/output = list("Это [bicon(src)] [f_name] [suffix]", desc)
 

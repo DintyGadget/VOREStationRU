@@ -1,24 +1,24 @@
 /obj/item/device/radio/headset/centcom
-	name = "centcom radio headset"
-	desc = "The headset of the boss's boss."
+	name = "Гарнитура ЦК"
+	desc = "Гарнитура босса Вашего босса."
 	icon_state = "cent_headset"
 	item_state = "headset"
 	centComm = 1
 	ks2type = /obj/item/device/encryptionkey/ert
 
 /obj/item/device/radio/headset/centcom/alt
-	name = "centcom bowman headset"
+	name = "Наушник ЦК"
 	icon_state = "com_headset_alt"
 
 /obj/item/device/radio/headset/nanotrasen
-	name = "\improper NT radio headset"
-	desc = "The headset of a Nanotrasen corporate employee."
+	name = "Гарнитура NT"
+	desc = "Гарнитура представителя NanoTrasen."
 	icon_state = "nt_headset"
 	centComm = 1
 	ks2type = /obj/item/device/encryptionkey/ert
 
 /obj/item/device/radio/headset/nanotrasen/alt
-	name = "\improper NT bowman headset"
+	name = "Наушник NT"
 	icon_state = "nt_headset_alt"
 
 /obj/item/device/radio/headset
@@ -26,8 +26,8 @@
 						SPECIES_WEREBEAST = 'icons/mob/species/werebeast/ears.dmi')
 
 /obj/item/device/radio/headset/mob_headset	//Adminbus headset for simplemob shenanigans.
-	name = "nonhuman radio receiver"
-	desc = "An updated, self-adhesive modular intercom that requires no hands to operate or ears to hold, just stick it on. Takes encryption keys"
+	name = "Нечеловеческий радио-приёмник"
+	desc = "Обновлённый клейкий модулярный интерком, который не требует ни рук, ни ушей -- достаточно просто прилепить. Поддерживает ключи шифрования."
 
 /obj/item/device/radio/headset/mob_headset/receive_range(freq, level)
 	if(ismob(src.loc))
@@ -51,80 +51,80 @@
 	..()
 
 /obj/item/device/radio/headset/headset_cargo
-	desc = "A headset used by the QM's slaves."
+	desc = "Гарнитура, используемая рабами Квартирмейстера."
 
 /obj/item/device/radio/headset/headset_cargo/alt
-	desc = "A bowman headset used by the QM's slaves."
+	desc = "Гарнитура, используемая рабами Квартирмейстера."
 
 /obj/item/device/radio/headset/headset_qm
-	name = "qm radio headset"
-	desc = "A headset used by the QM."
+	name = "Гарнитура Квартирмейстера"
+	desc = "Гарнитура, используемая Квартирмейстером."
 	icon_state = "cargo_headset"
 	ks2type = /obj/item/device/encryptionkey/qm
 
 /obj/item/device/radio/headset/headset_qm/alt
-	name = "qm bowman headset"
-	desc = "A bowman headset used by the QM."
+	name = "Наушник Квартирмейстера"
+	desc = "Гарнитура, используемая Квартирмейстером."
 	icon_state = "cargo_headset_alt"
 
 /obj/item/device/radio/headset/pathfinder
-	name = "pathfinder's headset"
-	desc = "Headset used by pathfinders for exploring. Access to the explorer and command channels."
+	name = "Гарнитура Первопроходца"
+	desc = "Гарнитура, используемая Первопроходцами. Имеет доступ к каналам экспедиции и Управления."
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/pathfinder
 
 /obj/item/device/radio/headset/pathfinder/alt
-	name = "pathfinder's bowman headset"
-	desc = "Bowman headset used by pathfinders for exploring. Access to the explorer and command channels."
+	name = "Наушник Первопроходца"
+	desc = "Гарнитура, используемая Первопроходцами. Имеет доступ к каналам экспедиции и Управления."
 	icon_state = "exp_headset_alt"
 
 /obj/item/device/radio/headset/pilot
-	name = "pilot's headset"
-	desc = "A headset used by pilots, has access to the explorer channel."
+	name = "Гарнитура пилота"
+	desc = "Гарнитура, используемая пилотами. Имеет доступ к экспедиционному каналу."
 	icon_state = "pilot_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/pilot
 
 /obj/item/device/radio/headset/pilot/alt
-	name = "pilot's bowman headset"
-	desc = "A bowman headset used by pilots, has access to the explorer channel."
+	name = "Наушник пилота"
+	desc = "Гарнитура, используемая пилотами. Имеет доступ к экспедиционному каналу."
 	icon_state = "pilot_headset_alt"
 
 /obj/item/device/radio/headset/explorer
-	name = "explorer's headset"
-	desc = "Headset used by explorers for exploring. Access to the explorer channel."
+	name = "Гарнитура искателя"
+	desc = "Гарнитура, используемая искателями. Имеет доступ к экспедиционному каналу."
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/explorer
 
 /obj/item/device/radio/headset/explorer/alt
-	name = "explorer's bowman headset"
-	desc = "Bowman headset used by explorers for exploring. Access to the explorer channel."
+	name = "Наушник искателя"
+	desc = "Гарнитура, используемая искателями. Имеет доступ к экспедиционному каналу."
 	icon_state = "exp_headset_alt"
 
 /obj/item/device/radio/headset/sar
-	name = "fm radio headset"
-	desc = "A headset for field medics."
+	name = "Гарнитура военврача"
+	desc = "Гарнитура для полевых врачей."
 	icon_state = "sar_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/sar
 
 /obj/item/device/radio/headset/sar/alt
-	name = "fm radio bowman headset"
-	desc = "A bowman headset for field medics."
+	name = "Наушник военврача"
+	desc = "Гарнитура для полевых врачей."
 	icon_state = "sar_headset_alt"
 
 /obj/item/device/radio/headset/volunteer
-	name = "volunteer's headset"
-	desc = "A headset used by volunteers to expedition teams, has access to the exploration channel."
+	name = "Гарнитура волонтёра"
+	desc = "Гарнитура, используемая волонтёрами в экспедициях. Имеет доступ к экспедиционному каналу."
 	icon_state = "pilot_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/pilot
 
 /obj/item/device/radio/headset/talon
-	name = "talon headset"
-	desc = "A headset for communication between the crew of the ITV Talon."
+	name = "Гарнитура Когтя"
+	desc = "Гарнитура для сообщения между экипажем фрегата Коготь."
 	adhoc_fallback = TRUE
 	icon_state = "pilot_headset"
 	ks2type = /obj/item/device/encryptionkey/talon

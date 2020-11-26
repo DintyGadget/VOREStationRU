@@ -74,9 +74,9 @@
 		else if(sides == 20 && result == 1)
 			comment = "Уф, не повезло."
 
-		user.visible_message("<span class='notice'>[user] бросает [src.acase]. Выпадает [result]. [comment]</span>", \
-							 "<span class='notice'>Вы бросаете [src.acase]. Выпадает [result]. [comment]</span>", \
-							 "<span class='notice'>Вы видите, как [src.acase] перекатывается цифрой [result] кверху. [comment]</span>")
+		user.visible_message("<span class='notice'>[user] бросает [ru_getcase(src, "acase")]. Выпадает [result]. [comment]</span>", \
+							 "<span class='notice'>Вы бросаете [ru_getcase(src, "acase")]. Выпадает [result]. [comment]</span>", \
+							 "<span class='notice'>Вы видите, как [ru_getcase(src, "acase")] перекатывается цифрой [result] кверху. [comment]</span>")
 
 /*
  * Dice packs
@@ -129,8 +129,8 @@
 		)
 
 /obj/item/weapon/storage/dicecup/attack_self(mob/user as mob)
-	user.visible_message("<span class='notice'>[user] встряхивает [src.acase].</span>", \
-							 "<span class='notice'>Вы встряхиваете [src.acase].</span>", \
+	user.visible_message("<span class='notice'>[user] встряхивает [ru_getcase(src, "acase")].</span>", \
+							 "<span class='notice'>Вы встряхиваете [ru_getcase(src, "acase")].</span>", \
 							 "<span class='notice'>Вы слышите звуки перекатывания кубиков.</span>")
 	rollCup(user)
 

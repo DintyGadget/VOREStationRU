@@ -13,4 +13,25 @@
 	to_chat(src, "<span class='notice'>Реагенты вычищены!</span>")
 
 	return TRUE
-	
+
+/mob/living/carbon/human/verb/toggle_eyes_layer()
+	set name = "Сменить Слой Глаз/Монитора"
+	set desc = "Переключить отображение глаз/монитора поверх особенностей тела."
+	set category = "IC"
+
+	if(stat)
+		to_chat(src, "<span class='warning'>Вам нужно быть на ногах, чтобы это сделать!</span>")
+		return
+	var/obj/item/organ/external/head/vr/H = organs_by_name[BP_HEAD]
+	if(!H)
+		to_chat(src, "<span class='warning'>Похоже, у Вас нет головы!</span>")
+		return
+
+	H.eyes_over_markings = !H.eyes_over_markings
+	update_icons_body()
+
+	var/datum/robolimb/robohead = all_robolimbs[H.model]
+	if(robohead.monitor_styles && robohead.monitor_icon)
+		to_chat(src, "<span class='notice'>Вы перенастраиваете отображение своего лица.</span>")
+
+	return TRUE

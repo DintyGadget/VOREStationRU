@@ -5,17 +5,17 @@
 	desc = "Блестящие! Похоже, их нужно к чему-то прицепить, иначе они попросту спадут."
 
 /obj/item/clothing/accessory/shiny/gloves
-	name = "блестящие перчатки"
+	name = "Блестящие перчатки"
 	icon_state = "gloves"
 
 /obj/item/clothing/accessory/shiny/gloves/poly
-	name = "полихромные блестящие перчатки"
+	name = "Полихромные блестящие перчатки"
 	polychromic = TRUE
 
 /obj/item/clothing/accessory/shiny/socks
-	name = "блестящие носки"
+	name = "Блестящие носки"
 	icon_state = "socks"
 
 /obj/item/clothing/accessory/shiny/socks/poly
-	name = "полихромные блестящие носки"
+	name = "Полихромные блестящие носки"
 	polychromic = TRUE

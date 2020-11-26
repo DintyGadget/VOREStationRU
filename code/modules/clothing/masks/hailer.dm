@@ -39,7 +39,7 @@
 
 
 /obj/item/clothing/mask/gas/sechailer/swat/warden
-	name = "Маска СОБР Надзирателя"
+	name = "Маска СОБР надзирателя"
 	desc = "Плотно прилегающая тактическая маска с на удивление агрессивным Утихомиривателем 3000. На ней голубая полоса."
 	icon_state = "wardenmask"
 
@@ -97,7 +97,7 @@
 /obj/item/clothing/mask/gas/sechailer/emag_act(mob/user)
 	if(safety)
 		safety = 0
-		to_chat(user, "<span class='warning'>Вы тихонечко замыкаете голосую микросхему [src.gcase] при помощи криптографического секвенсера.</span>")
+		to_chat(user, "<span class='warning'>Вы тихонечко замыкаете голосую микросхему [ru_getcase(src, "gcase")] при помощи криптографического секвенсера.</span>")
 	else
 		return
 

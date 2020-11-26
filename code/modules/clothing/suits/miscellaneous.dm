@@ -618,7 +618,7 @@ obj/item/clothing/suit/kamishimo
 
 /obj/item/clothing/suit/storage/toggle/hoodie/yellow
 	name = "Жёлтое худи"
-	desc = "Тёплый свитшот желтого цвета."
+	desc = "Тёплый свитшот жёлтого цвета."
 	icon_state = "yellow_hoodie"
 	item_state_slots = list(slot_r_hand_str = "suit_yellow", slot_l_hand_str = "suit_yellow")
 
@@ -782,11 +782,11 @@ obj/item/clothing/suit/kamishimo
 	if(rolled == 0)
 		rolled = 1
 		body_parts_covered &= ~(ARMS)
-		to_chat(usr, "<span class='notice'>Вы закатываете рукава [src.gcase].</span>")
+		to_chat(usr, "<span class='notice'>Вы закатываете рукава [ru_getcase(src, "gcase")].</span>")
 	else
 		rolled = 0
 		body_parts_covered = initial(body_parts_covered)
-		to_chat(usr, "<span class='notice'>Вы распускаете рукава [src.gcase].</span>")
+		to_chat(usr, "<span class='notice'>Вы распускаете рукава [ru_getcase(src, "gcase")].</span>")
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/verb/tuck()
@@ -798,10 +798,10 @@ obj/item/clothing/suit/kamishimo
 
 	if(tucked == 0)
 		tucked = 1
-		to_chat(usr, "<span class='notice'>Вы заправляете [src.acase].</span>")
+		to_chat(usr, "<span class='notice'>Вы заправляете [ru_getcase(src, "acase")].</span>")
 	else
 		tucked = 0
-		to_chat(usr, "<span class='notice'>Вы расправляете [src.acase].</span>")
+		to_chat(usr, "<span class='notice'>Вы расправляете [ru_getcase(src, "acase")].</span>")
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/verb/button()
@@ -814,11 +814,11 @@ obj/item/clothing/suit/kamishimo
 	if(buttoned == 0)
 		buttoned = 1
 		flags_inv = HIDETIE|HIDEHOLSTER
-		to_chat(usr, "<span class='notice'>Вы застегиваете [src.acase].</span>")
+		to_chat(usr, "<span class='notice'>Вы застёгиваете [ru_getcase(src, "acase")].</span>")
 	else
 		buttoned = 0
 		flags_inv = HIDEHOLSTER
-		to_chat(usr, "<span class='notice'>Вы расстегиваете [src.acase].</span>")
+		to_chat(usr, "<span class='notice'>Вы расстёгиваете [ru_getcase(src, "acase")].</span>")
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/update_icon()
